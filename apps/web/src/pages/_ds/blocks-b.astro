@@ -1,0 +1,189 @@
+---
+import type { ContactForm as ContactFormData, Faq as FaqData, Pricing as PricingData, PortableText as PortableTextValue, RichText as RichTextData, Testimonials as TestimonialsData } from '../../../../studio/sanity.types';
+import ContactForm from '../../components/blocks/ContactForm.astro';
+import Faq from '../../components/blocks/Faq.astro';
+import NewsletterSignup from '../../components/blocks/NewsletterSignup.astro';
+import Pricing from '../../components/blocks/Pricing.astro';
+import RichText from '../../components/blocks/RichText.astro';
+import Testimonials, { type ResolvedTestimonial } from '../../components/blocks/Testimonials.astro';
+import type { ResolvedImage } from '../../components/portable-text/types';
+import Base from '../../layouts/Base.astro';
+
+// Synthetic catalog data. Names, quotes and prices here are placeholders, never real testimonials or offers.
+let key = 0;
+const k = () => `k${++key}`;
+type Block = Extract<PortableTextValue[number], { _type: 'block' }>;
+type Span = { text: string; marks?: string[] };
+const p = (parts: string | Span[], extra: Partial<Block> = {}): Block => ({
+  _type: 'block',
+  _key: k(),
+  style: 'normal',
+  markDefs: [],
+  children: (typeof parts === 'string' ? [{ text: parts }] : parts).map((span) => ({ _type: 'span', _key: k(), marks: [], ...span })),
+  ...extra,
+});
+const li = (text: string, listItem: 'bullet' | 'number' = 'bullet', level = 1) => p(text, { listItem, level });
+
+const placeholder = (width: number, height: number, label: string, alt = ''): ResolvedImage => ({
+  src: `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}"><rect width="100%" height="100%" fill="#e6e8f8"/><text x="50%" y="50%" font-family="sans-serif" font-size="${Math.round(Math.min(height / 8, width / 14))}" fill="#3a48cc" text-anchor="middle" dominant-baseline="middle">${label}</text></svg>`)}`,
+  width,
+  height,
+  alt,
+});
+
+const longWord = 'Konstantynopolitańczykowianeczka'.repeat(3);
+
+const pricing: PricingData = {
+  _type: 'pricing',
+  tagline: 'Cennik',
+  heading: 'Wybierz zakres współpracy',
+  plans: [
+    { _type: 'pricePlan', _key: k(), name: 'Start', price: 4500, currency: 'PLN', unit: 'netto', priceNote: 'Jednorazowo, płatne po warsztacie.', features: ['Warsztat startowy', 'Konfiguracja lejka', 'Import danych z arkusza'], cta: { _type: 'link', label: 'Umów konsultację', href: '/kontakt' }, highlighted: false },
+    { _type: 'pricePlan', _key: k(), name: 'Pro', price: 6000, currency: 'PLN', unit: 'netto / mies.', priceNote: 'Minimum trzy miesiące.', features: ['Wszystko z pakietu Start, plus:', 'Automatyzacje', 'Szkolenie zespołu', 'Raporty sprzedażowe'], cta: { _type: 'link', label: 'Umów konsultację', href: '/kontakt' }, highlighted: true },
+    { _type: 'pricePlan', _key: k(), name: 'Enterprise', currency: 'PLN', priceNote: 'Wycena indywidualna', features: ['Wszystko z pakietu Pro, plus:', 'Integracje z ERP'], cta: { _type: 'link', label: 'Porozmawiajmy', href: '/kontakt' }, highlighted: false },
+  ],
+};
+const pricingWorst: PricingData = {
+  _type: 'pricing',
+  heading: 'Jeden plan z bardzo długą nazwą, ogromną kwotą i listą, która nie chce się skończyć, żeby sprawdzić łamanie nagłówka',
+  plans: [
+    { _type: 'pricePlan', _key: k(), name: `Pakiet ${longWord}`, price: 1234567.5, currency: 'PLN', unit: 'netto za każdy rozpoczęty miesiąc kalendarzowy współpracy', features: Array.from({ length: 12 }, (_, i) => (i === 3 ? longWord : `Punkt numer ${i + 1} z opisem zakresu`)), cta: { _type: 'link', label: 'Bardzo długa etykieta przycisku, która powinna się zawinąć, a nie wyjść poza kartę', href: '/kontakt' }, highlighted: true },
+  ],
+};
+
+const people: ResolvedTestimonial[] = [
+  { _id: 't1', name: 'Anna Przykładowa', role: 'Dyrektorka sprzedaży', company: 'Firma Demo sp. z o.o.', quote: 'Przykładowa opinia do katalogu komponentów. Pokazuje, jak wygląda cytat średniej długości w siatce dwóch kolumn.' },
+  { _id: 't2', name: 'Jan Testowy', company: 'Demo SA', quote: 'Drugi przykładowy cytat.\n\nMa dwa akapity, żeby sprawdzić odstępy w środku cytatu.', url: 'https://example.com' },
+  { _id: 't3', name: 'Ewa Wzorcowa', role: 'CEO', company: 'Logo Demo', quote: 'Krótki cytat z logo firmy.', image: placeholder(320, 80, 'LOGO DEMO') },
+  { _id: 't4', name: `Bartłomiej ${longWord}`, role: 'Prezes zarządu, pełnomocnik do spraw transformacji cyfrowej i jakości danych', company: 'Bardzo Długa Nazwa Spółki Przykładowej Komandytowo-Akcyjnej', quote: Array.from({ length: 6 }, () => 'Bardzo długi przykładowy cytat, który ma sprawdzić, czy tekst jest wyrównany do lewej i nie rozpycha karty.').join(' ') },
+  ...[1, 2, 3, 4].map((n) => ({ _id: `w${n}`, name: `Rekomendacja ${n}`, image: placeholder(480, 600, `REKOMENDACJA ${n}`, `Zrzut rekomendacji numer ${n}`) })),
+];
+const ref = (id: string) => ({ _type: 'reference' as const, _key: k(), _ref: id });
+const quotes: TestimonialsData = { _type: 'testimonials', variant: 'quotes', tagline: 'Opinie', heading: 'Co mówią klienci', items: [ref('t1'), ref('t2')] };
+const single: TestimonialsData = { _type: 'testimonials', variant: 'quotes', items: [ref('t3')] };
+const quotesWorst: TestimonialsData = { _type: 'testimonials', variant: 'quotes', heading: 'Brakujące odwołanie jest pomijane', items: [ref('t4'), ref('missing'), ref('t1'), ref('t2')] };
+const wall: TestimonialsData = { _type: 'testimonials', variant: 'imageWall', heading: 'Ściana rekomendacji', items: [ref('w1'), ref('w2'), ref('w3'), ref('w4')] };
+
+const linkDef = { _type: 'link' as const, _key: 'm1', href: 'https://example.com' };
+const internal = { _type: 'internalLink' as const, _key: 'm2', reference: { _type: 'reference' as const, _ref: 'page-kontakt' } };
+const links = { 'page-kontakt': '/kontakt' };
+const faq: FaqData = {
+  _type: 'faq',
+  tagline: 'FAQ',
+  heading: 'Najczęstsze pytania',
+  items: [
+    { _type: 'faqItem', _key: k(), question: 'Ile trwa wdrożenie?', answer: [p('Zwykle od dwóch do sześciu tygodni, zależnie od liczby procesów.')] },
+    { _type: 'faqItem', _key: k(), question: 'Czy pracujesz zdalnie?', answer: [p([{ text: 'Tak. Szczegóły ustalimy w ' }, { text: 'formularzu kontaktowym', marks: ['m2'] }, { text: '.' }], { markDefs: [internal] })] },
+    { _type: 'faqItem', _key: k(), question: 'Co jest w cenie?', answer: [p('W cenie jest:'), li('warsztat'), li('konfiguracja'), li('szkolenie')] },
+    { _type: 'faqItem', _key: k(), question: 'Pytanie bez odpowiedzi jest pomijane', answer: [] },
+  ],
+};
+const faqWorst: FaqData = {
+  _type: 'faq',
+  emitSchema: false,
+  items: [
+    { _type: 'faqItem', _key: k(), question: `Bardzo długie pytanie, które zajmuje kilka linii i zawiera nierozdzielne słowo ${longWord}?`, answer: [p([{ text: 'Odpowiedź ze ' }, { text: 'zewnętrznym linkiem', marks: ['m1'] }, { text: ` i słowem ${longWord}.` }], { markDefs: [linkDef] }), li('poziom pierwszy'), li('poziom drugi', 'number', 2), li('poziom drugi, punkt drugi', 'number', 2), li('znowu poziom pierwszy')] },
+  ],
+};
+
+const richBody: PortableTextValue = [
+  p('Regulamin świadczenia usług', { style: 'h2' }),
+  p([{ text: 'Akapit z ' }, { text: 'pogrubieniem', marks: ['strong'] }, { text: ', ' }, { text: 'kursywą', marks: ['em'] }, { text: ', ' }, { text: 'kodem', marks: ['code'] }, { text: ' i ' }, { text: 'linkiem wewnętrznym', marks: ['m2'] }, { text: '.' }], { markDefs: [internal] }),
+  p('Definicje', { style: 'h3' }),
+  li('Usługodawca'), li('Klient'), li('Usługa doradcza', 'bullet', 2), li('Usługa szkoleniowa', 'bullet', 2), li('Umowa'),
+  li('Pierwszy krok', 'number'), li('Drugi krok', 'number'),
+  p('Cytat z wyróżnieniem z lewej strony.', { style: 'blockquote' }),
+  { _type: 'table', _key: k(), hasHeader: true, rows: [['Pakiet', 'Cena', 'Czas'], ['Start', '4 500 zł', '2 tygodnie'], ['Pro', '6 000 zł', '3 miesiące']].map((cells) => ({ _type: 'tableRow' as const, _key: k(), cells })) },
+  { _type: 'codeBlock', _key: k(), language: 'js', code: "const lead = await crm.find({ email: 'anna@example.com' });\nif (!lead) await crm.create(lead);" },
+  { _type: 'callout', _key: k(), tone: 'info', body: 'Informacja: to jest przykładowa ramka z wyjaśnieniem.' },
+  { _type: 'callout', _key: k(), tone: 'warning', body: 'Uwaga: druga linia ostrzeżenia\nłamie się ręcznie.' },
+  { _type: 'download', _key: k(), label: 'Pobierz checklistę (PDF)', url: 'https://files.zawlodzki.com/przyklad.pdf' },
+  { _type: 'image', _key: k(), asset: { _type: 'reference', _ref: 'image-demo' }, alt: 'Przykładowy diagram procesu', caption: 'Podpis obrazu z CMS.' },
+  { _type: 'embed', _key: k(), kind: 'youtube', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', title: 'Przykładowe wideo' },
+];
+const images = { 'image-demo': placeholder(1200, 600, 'OBRAZ 1200×600') };
+const richWorst: RichTextData = {
+  _type: 'richText',
+  body: [
+    p(`Nierozdzielny adres https://example.com/${longWord}/${longWord} w treści akapitu.`),
+    { _type: 'table', _key: k(), hasHeader: true, rows: [Array.from({ length: 8 }, (_, i) => `Kolumna ${i + 1}`), Array.from({ length: 8 }, (_, i) => (i === 2 ? longWord : 'Długa treść komórki tabeli, która się zawija'))].map((cells) => ({ _type: 'tableRow' as const, _key: k(), cells })) },
+    { _type: 'codeBlock', _key: k(), language: 'txt', code: `${'x'.repeat(240)}` },
+    { _type: 'embed', _key: k(), kind: 'iframe', url: 'javascript:alert(1)', title: 'Niebezpieczny adres jest pomijany' },
+    { _type: 'download', _key: k(), label: 'Plik z adresem http jest pokazany, javascript: nie', url: 'javascript:alert(1)' },
+  ],
+};
+
+const contact = { email: 'kontakt@example.com', telephone: '+48 500 000 000', image: placeholder(480, 600, 'PORTRET', 'Grzegorz Zawłodzki') };
+const landing: ContactFormData = { _type: 'contactForm', variant: 'landing', tagline: 'Kontakt', heading: 'Skontaktuj się ze mną', showDetails: true, formId: 'landing-contact' };
+const full: ContactFormData = { _type: 'contactForm', variant: 'full', heading: 'Kontakt', showDetails: false, formId: 'main-contact' };
+
+const catalog = [
+  ['pricing', 'Pricing'], ['testimonials', 'Testimonials'], ['faq', 'Faq'], ['contact', 'ContactForm'], ['newsletter', 'NewsletterSignup'], ['richtext', 'RichText'],
+] as const;
+---
+<Base title="Bloki B: katalog" noindex>
+  <header class="content-grid section ds-head">
+    <div class="flow">
+      <p class="type-tagline">Katalog komponentów, noindex</p>
+      <p class="type-heading-l">Bloki B</p>
+      <p>Każdy blok w wariancie typowym i w najgorszym przypadku. Dane są syntetyczne.</p>
+      <nav aria-label="Bloki"><ul class="ds-nav" role="list">{catalog.map(([anchor, name]) => <li><a href={`#ds-${anchor}`}>{name}</a></li>)}</ul></nav>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="ds-label content-grid" id="ds-pricing"><span>Pricing: typowe dane</span></h2>
+    <Pricing data={pricing} />
+    <h2 class="ds-label content-grid"><span>Pricing: najgorszy przypadek (jeden plan, długie treści)</span></h2>
+    <Pricing data={pricingWorst} id="cennik-worst" />
+    <h2 class="ds-label content-grid"><span>Pricing: brak planów (nic się nie renderuje)</span></h2>
+    <Pricing data={{ _type: 'pricing', heading: 'Pusty', plans: [] }} id="cennik-empty" />
+
+    <h2 class="ds-label content-grid" id="ds-testimonials"><span>Testimonials: dwa cytaty</span></h2>
+    <Testimonials data={quotes} items={people} />
+    <h2 class="ds-label content-grid"><span>Testimonials: jeden krótki cytat z logo</span></h2>
+    <Testimonials data={single} items={people} id="opinie-single" />
+    <h2 class="ds-label content-grid"><span>Testimonials: najgorszy przypadek</span></h2>
+    <Testimonials data={quotesWorst} items={people} id="opinie-worst" />
+    <h2 class="ds-label content-grid"><span>Testimonials: imageWall</span></h2>
+    <Testimonials data={wall} items={people} id="opinie-wall" />
+
+    <h2 class="ds-label content-grid" id="ds-faq"><span>Faq: typowe dane (emitSchema)</span></h2>
+    <Faq data={faq} links={links} />
+    <h2 class="ds-label content-grid"><span>Faq: najgorszy przypadek (emitSchema: false)</span></h2>
+    <Faq data={faqWorst} id="faq-worst" />
+
+    <h2 class="ds-label content-grid" id="ds-contact"><span>ContactForm: landing z danymi kontaktowymi</span></h2>
+    <ContactForm data={landing} contact={contact} />
+    <h2 class="ds-label content-grid"><span>ContactForm: full, bez danych kontaktowych (H1 strony /kontakt)</span></h2>
+    <ContactForm data={full} id="kontakt-full" />
+    <h2 class="ds-label content-grid"><span>ContactForm: najgorszy przypadek (długi e-mail, bez nagłówka)</span></h2>
+    <ContactForm data={{ _type: 'contactForm', showDetails: true }} contact={{ email: `${longWord.toLowerCase()}@bardzo-dluga-domena-przykladowa.example.com`, telephone: '+48 000 000 000' }} id="kontakt-worst" />
+
+    <h2 class="ds-label content-grid" id="ds-newsletter"><span>NewsletterSignup: typowe dane</span></h2>
+    <NewsletterSignup data={{ _type: 'newsletterSignup', body: 'Raz w tygodniu dostaniesz bezpłatnie jedno gotowe rozwiązanie, jak wykorzystać nowoczesne technologie w sprzedaży B2B.' }} />
+    <h2 class="ds-label content-grid"><span>NewsletterSignup: bez opisu</span></h2>
+    <NewsletterSignup data={{ _type: 'newsletterSignup' }} id="newsletter-worst" />
+
+    <h2 class="ds-label content-grid" id="ds-richtext"><span>RichText: wszystkie typy treści</span></h2>
+    <RichText data={{ _type: 'richText', body: richBody }} links={links} images={images} id="rich" />
+    <h2 class="ds-label content-grid"><span>RichText: najgorszy przypadek</span></h2>
+    <RichText data={richWorst} id="rich-worst" />
+  </main>
+</Base>
+
+<style>
+  .ds-head { background: var(--surface-tint); }
+  .ds-nav { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-m); margin: 0; padding: 0; }
+  .ds-nav a { display: inline-flex; align-items: center; min-block-size: 44px; }
+  .ds-label {
+    padding-block: var(--space-s);
+    border-block: var(--border-width-hairline) dashed var(--border-strong);
+    font-family: var(--font-family-mono);
+    font-size: var(--typography-body-s-size);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    letter-spacing: 0;
+    color: var(--text-muted);
+  }
+</style>

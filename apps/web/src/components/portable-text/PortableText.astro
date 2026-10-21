@@ -1,0 +1,163 @@
+---
+import List, { type ListNode } from './List.astro';
+import Span from './Span.astro';
+import type { PortableTextItem, PortableTextValue, Resolved } from './types';
+import { embedSrc, safeHref } from './types';
+
+interface Props extends Resolved { value?: PortableTextValue; class?: string; }
+const { value = [], links = {}, images = {}, class: className } = Astro.props;
+
+type Node = { kind: 'list'; list: ListNode } | { kind: 'item'; item: PortableTextItem };
+const nodes: Node[] = [];
+let open: ListNode[] = [];
+for (const item of value) {
+  if (item._type !== 'block' || !item.listItem) {
+    open = [];
+    nodes.push({ kind: 'item', item });
+    continue;
+  }
+  const level = item.level ?? 1;
+  while (open.length && (open.at(-1)!.level > level || (open.at(-1)!.level === level && open.at(-1)!.type !== item.listItem))) open.pop();
+  let list = open.at(-1);
+  if (!list || list.level < level) {
+    const created: ListNode = { type: item.listItem, level, items: [] };
+    if (list) list.items.at(-1)!.sub.push(created);
+    else nodes.push({ kind: 'list', list: created });
+    open.push(created);
+    list = created;
+  }
+  list.items.push({ block: item, sub: [] });
+}
+
+const headingTags = { h2: 'h2', h3: 'h3', h4: 'h4', blockquote: 'blockquote', normal: 'p' } as const;
+---
+<div class:list={['pt', 'prose', 'flow', className]}>
+  {nodes.map((node) => {
+    if (node.kind === 'list') return <List list={node.list} links={links} />;
+    const item = node.item;
+    switch (item._type) {
+      case 'block': {
+        const Tag = headingTags[item.style ?? 'normal'];
+        return <Tag>{item.children?.map((span) => <Span span={span} definitions={item.markDefs} links={links} />)}</Tag>;
+      }
+      case 'image': {
+        const image = images[item.asset?._ref ?? ''];
+        if (!image) throw new Error(`Portable Text image "${item._key}" has no resolved asset. Pass it in the images map.`);
+        return (
+          <figure class="media">
+            <img src={image.src} width={image.width} height={image.height} alt={item.alt ?? ''} loading="lazy" decoding="async" />
+            {item.caption && <figcaption class="type-body-s">{item.caption}</figcaption>}
+          </figure>
+        );
+      }
+      case 'table': {
+        const rows = (item.rows ?? []).map((row) => row.cells ?? []);
+        const head = item.hasHeader ? rows[0] : undefined;
+        const body = item.hasHeader ? rows.slice(1) : rows;
+        return (
+          <div class="table-scroll" role="region" aria-label="Tabela, przewijana w poziomie" tabindex="0">
+            <table style={`--columns: ${Math.max(0, ...rows.map((cells) => cells.length))}`}>
+              {head && <thead><tr>{head.map((cell) => <th scope="col">{cell}</th>)}</tr></thead>}
+              <tbody>{body.map((cells) => <tr>{cells.map((cell) => <td>{cell}</td>)}</tr>)}</tbody>
+            </table>
+          </div>
+        );
+      }
+      case 'codeBlock':
+        return <pre class="code" tabindex="0" data-language={item.language}><code>{item.code}</code></pre>;
+      case 'embed': {
+        const src = embedSrc(item.kind, item.url);
+        return src && (
+          <div class="embed">
+            <iframe src={src} title={item.title ?? 'Osadzona treść'} loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen"></iframe>
+          </div>
+        );
+      }
+      case 'download': {
+        const href = safeHref(item.url);
+        return href && item.label && (
+          <p><a class="download with-icon" href={href} download>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M7 1h2v8.6l3-3 1.4 1.4L8 13.4 2.6 8 4 6.6l3 3zM2 14h12v2H2z" /></svg>
+            <span>{item.label}</span>
+          </a></p>
+        );
+      }
+      case 'callout':
+        return item.body && (
+          <aside class:list={['callout', item.tone ?? 'info']} role="note">
+            <p>{item.body.split('\n').map((line, index) => <>{index > 0 && <br />}{line}</>)}</p>
+          </aside>
+        );
+    }
+  })}
+</div>
+
+<style>
+  .pt { overflow-wrap: break-word; }
+  blockquote {
+    padding-inline-start: var(--space-s);
+    border-inline-start: var(--border-width-button) solid var(--border-accent);
+    color: var(--text-heading);
+  }
+  .pt :global(code) { font-size: 0.9em; padding-inline: 0.25em; border-radius: var(--radius-sm); background: var(--surface-soft); }
+  .media { display: grid; gap: var(--space-xs); }
+  .media img { inline-size: 100%; border-radius: var(--radius-lg); }
+  figcaption { color: var(--text-muted); }
+
+  .table-scroll {
+    --fade-end: 0px;
+    overflow-x: auto;
+    max-inline-size: 100%;
+    border: var(--border-width-hairline) solid var(--border-hairline);
+    border-radius: var(--radius-md);
+    animation: table-overflow linear;
+    animation-timeline: scroll(self inline);
+    mask-image: linear-gradient(to right, #000 calc(100% - var(--fade-end)), transparent);
+  }
+  @property --fade-end { syntax: "<length>"; inherits: false; initial-value: 0px; }
+  @keyframes table-overflow { from { --fade-end: 2.5rem; } 95% { --fade-end: 2.5rem; } to { --fade-end: 0px; } }
+  table { border-collapse: collapse; inline-size: 100%; min-inline-size: calc(var(--columns) * 9rem); }
+  th, td {
+    padding: var(--space-xs) var(--space-s);
+    text-align: start;
+    vertical-align: top;
+    border-block-end: var(--border-width-hairline) solid var(--border-hairline);
+  }
+  td { font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  th { font-weight: var(--font-weight-semibold); color: var(--text-heading); background: var(--surface-soft); }
+  tbody tr:last-child td { border-block-end: 0; }
+
+  .code {
+    overflow-x: auto;
+    padding: var(--space-s);
+    border-radius: var(--radius-md);
+    background: var(--surface-dark);
+    color: var(--text-on-dark);
+    font-size: var(--typography-body-s-size);
+    line-height: 1.6;
+  }
+  .code code { padding: 0; background: none; font-size: inherit; }
+
+  .embed { aspect-ratio: 16 / 9; }
+  .embed iframe { inline-size: 100%; block-size: 100%; border: 0; border-radius: var(--radius-lg); background: var(--surface-soft); }
+
+  .download {
+    min-block-size: 44px;
+    align-items: center;
+    padding-block: var(--space-2xs);
+    font-weight: var(--font-weight-medium);
+  }
+  .download > svg { block-size: 1.1cap; }
+
+  .callout {
+    padding: var(--space-s) var(--space-m);
+    border-radius: var(--radius-md);
+    border-inline-start: var(--border-width-button) solid var(--border-focus);
+    background: var(--surface-tint);
+    color: var(--text-heading);
+  }
+  .callout.warning {
+    border-inline-start-color: var(--border-error);
+    background: color-mix(in oklch, var(--color-status-error) 8%, var(--surface-page));
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+import type { RichText } from '../../../../studio/sanity.types';
+import PortableText from '../portable-text/PortableText.astro';
+import type { Resolved } from '../portable-text/types';
+
+interface Props extends Resolved { data: RichText; id?: string; }
+const { data, id, links, images } = Astro.props;
+---
+{(data.body?.length ?? 0) > 0 && (
+  <section id={id} class="content-grid section rich-text">
+    <div class="inner"><PortableText value={data.body} links={links} images={images} /></div>
+  </section>
+)}
+
+<style>
+  .inner { container-type: inline-size; }
+</style>
