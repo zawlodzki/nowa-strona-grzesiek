@@ -97,44 +97,36 @@ Na stronę przypada jeden `<script type="application/ld+json">` z jednym `@graph
 
 ## 4. Miejsce wymiany danych między agentami
 
-Repozytorium git `nowa-strona-grzesiek` (do założenia, dziś to nie jest repo). Zasada brzmi "każdy plik ma jednego pisarza". Linie nie piszą do wspólnych plików, więc nie potrzebują blokad.
+Równolegle mogą pracować różni, niezależni agenci (Claude Code, Codex, Cursor, Gemini albo człowiek), każdy w swoim tempie i na swoim limicie. Nie rozmawiają ze sobą. Koordynują się wyłącznie przez repozytorium. Protokół jest w `AGENTS.md`, który czyta każde narzędzie.
 
 ```
+AGENTS.md                protokół dla każdego agenta (CLAUDE.md go importuje)
 migration/
-  00-inventory/          tylko do odczytu po fazie 0 (zebrane 2026-10-21)
-  contracts/             pisze WYŁĄCZNIE koordynator; linie czytają
-    url-map.csv          stara ścieżka → nowa PL → nowa EN → typ → status → właściciel
-    blocks.json          rejestr bloków: webflow source → sanity type → astro component → jsonld
-    entities.json        Person/Organization/WebSite: @id, nazwy, sameAs (po decyzji o bycie głównym)
-    tokens.json          tokeny design systemu (kopiowane przez koordynatora z lanes/design)
-    decisions.md         rejestr decyzji z datą i autorem
-  lanes/<linia>/
-    STATUS.md            pisze tylko ta linia: stan, blokery, pytania do koordynatora
-    out/                 artefakty linii dla innych (np. ndjson, raporty crawli)
-  tools/                 dźwignie: crawl, diff, redirects, jsonld_audit (już są), importery
-apps/web/                Astro (linia Platform + Design + SEO, rozdzielone katalogami)
-apps/studio/             Sanity Studio (linia CMS)
+  tasks/T01..T25.md      tablica zadań: status, zależności, posiadane ścieżki, "done when", handoff
+  contracts/             umowy między zadaniami: url-map.csv, blocks.json, entities.json, tokens.json, decisions.md
+  lanes/<obszar>/out/    wyniki zadań czytane przez inne zadania (każdy plik ma jedno zadanie-właściciela)
+  tools/                 dźwignie: tasks.py, crawl, diff, redirects, jsonld_audit, check-contracts, importery
+  00-inventory/          prywatna inwentaryzacja, poza gitem (repo jest publiczne)
+apps/web/                Astro
+apps/studio/             Sanity Studio
 ```
 
-Przepływ zmian:
-1. Linia potrzebuje zmiany kontraktu. Wpisuje prośbę do swojego `STATUS.md` w sekcji "Do koordynatora".
-2. Koordynator aktualizuje `contracts/`, dopisuje wpis do `decisions.md` i robi commit na `main`.
-3. Każda linia pracuje na swojej gałęzi `lane/<nazwa>` w osobnym worktree. Przed startem kroku robi rebase na `main`, żeby mieć aktualne kontrakty.
-4. Koordynator scala gałęzie po zielonej weryfikacji linii.
+Zasady, które usuwają współdzielony zapis:
+1. Każde zadanie ma w front matter listę `owns`. Agent pisze tylko tam. `tasks.py check` odrzuca dwa aktywne zadania o nakładających się ścieżkach.
+2. Rezerwacja zadania to jeden commit `claim <id>` na `main`. Git robi tu compare-and-swap. Jeśli dwóch agentów rezerwuje to samo, drugi push zostaje odrzucony, a agent po `pull --rebase` widzi, że zadanie jest zajęte.
+3. Praca idzie na gałęzi `task/<id>-<slug>` i kończy się PR. Scala tylko użytkownik.
+4. Wynik zadania opisuje sekcja Handoff w jego pliku. Następne zadanie czyta ją z `main` po scaleniu.
+5. Kontrakt zmienia tylko zadanie, które ma go w `owns`. Inni zgłaszają "Contract request" w swoim Handoff.
+6. `python3 -I migration/tools/tasks.py ready` pokazuje zadania gotowe do wzięcia, czyli takie, których wszystkie zależności mają status done.
 
-Własność kodu w `apps/web/`:
-- Platform ma `astro.config.*`, `wrangler.*`, `src/worker/`, CI.
-- Design ma `src/styles/`, `src/components/blocks/`, `src/components/ui/`.
-- SEO ma `src/seo/` (buildGraph, meta, sitemap, hreflang) i `public/_redirects`.
-- i18n ma `src/i18n/`.
+## 5. Obszary pracy i ich zakres
 
-Uwaga praktyczna. W tej sesji subagenci mieli blokadę zapisu plików raportów. Dlatego linie startują jako osobne sesje Claude Code (każda z worktree), a nie jako subagenci jednej rozmowy.
+Obszary grupują zadania z `migration/tasks/` tematycznie. Nie są osobnymi agentami. P to T02, T14 i T19. C to T07. M to T15, T16 i T17. D to T03, T04, T08, T09, T10 i T11. S to T12, T13, T20 i T23. T to T05, T06, T21 i T22. E to T24 i T25. Szczegóły kroków i warunki zakończenia są w plikach zadań, a poniższy opis zostaje jako kontekst.
 
-## 5. Linie (agenci) i ich zakres
 
 | Linia | Właściciel | Wejście | Wyjście | Weryfikacja |
 |---|---|---|---|---|
-| **K. Koordynator** | `contracts/`, `main`, merge, bramki | inventory | kontrakty, decyzje, scalanie | każda bramka z sekcji 7 |
+| **K. Użytkownik** | scalanie PR, kroki z `human_gate`, decyzje | tablica zadań | scalone PR, decyzje w `decisions.md` | każda bramka z sekcji 7 |
 | **P. Platform** | `apps/web` szkielet, Cloudflare, CI, formularze | blocks.json (tylko nazwy) | repo, Worker prod + preview, endpoint formularzy → n8n | `wrangler deploy` na staging, test formularza dochodzi do n8n z polami atrybucji |
 | **C. CMS** | `apps/studio`, schematy, i18n plugin, Presentation, webhook | blocks.json, url-map.csv | wdrożony schemat, Studio, TypeGen | `sanity schema validate`, typy generują się, dokument PL i EN łączy się w Studio |
 | **M. Migracja treści** | `tools/import/*`, `lanes/migration/out/*.ndjson` | `00-inventory/webflow/`, schemat z C | idempotentny import (deterministyczne `_id`), assety w Sanity z alt | import 2× daje ten sam stan, 80/80 wpisów i 31/31 stron, 0 linków do CDN Webflow |
@@ -178,7 +170,7 @@ Uwaga praktyczna. W tej sesji subagenci mieli blokadę zapisu plików raportów.
 8. Animowane diagramy przechodzą na komponenty Astro z `prefers-reduced-motion` (skille `animate`, `animation-performance`).
 
 **S. SEO/AEO**
-1. `contracts/url-map.csv` jako propozycja dla koordynatora. Zawiera 105 URL, 6 starych 301 i nowe EN.
+1. `contracts/url-map.csv` jest gotowy (T01). Zawiera 104 indeksowalne URL, 9 przekierowań i oznaczenia EN. Ścieżki EN dopisuje T24.
 2. `src/seo/graph.ts` z `buildGraph` i testami snapshot na 6 typach stron, porównanymi z `00-inventory/live-site/jsonld/`.
 3. Meta generowane z Sanity. Jeden `og:type`, canonical na www, `hreflang` pl, en i `x-default` → pl tylko dla par.
 4. `sitemap.xml` (sitemap index per język), `robots.txt`, `/blog/rss.xml` pod tą samą ścieżką, `llms.txt` generowany z treści.
@@ -241,16 +233,14 @@ Najpierw migracja 1:1 dla PL, potem EN jako osobne wydanie. Dzięki temu każda 
 7. T0 + 48 h. Włączyć DNSSEC w Cloudflare i dodać DS w OVH.
 8. Plan Webflow trzymać aktywny co najmniej 14 dni po przełączeniu jako drogę odwrotu (powrót NS na OVH). Usunąć rekordy `proxy-ssl.webflow.com` i stare OVH mail dopiero po G5.
 
-## 9. Jak uruchomić linie
+## 9. Jak uruchomić pracę
 
-Każda linia to osobna sesja Claude Code w osobnym worktree, na gałęzi `lane/<nazwa>`. Brief każdej sesji zawiera:
-- ścieżkę do tego planu i do `contracts/`,
-- listę plików, których jest właścicielem (sekcja 4),
-- swoją bramkę i dowód (sekcja 7),
-- zakaz pisania poza swoimi katalogami i zakaz kroków nieodwracalnych (DNS, publikacja, usuwanie w Webflow),
-- wymóg użycia skilla `good-css` przy pisaniu lub zmianie jakiegokolwiek CSS.
+Każdy agent, w dowolnym narzędziu i w dowolnym momencie:
+1. `git clone https://github.com/zawlodzki/nowa-strona-grzesiek` (albo `git pull`).
+2. Czyta `AGENTS.md`.
+3. Uruchamia `python3 -I migration/tools/tasks.py ready`, rezerwuje jedno zadanie i realizuje je według protokołu.
 
-Maksymalna równoległość w fazie 2 to 5 linii (P, C, D, S, M). T działa w tle z niską intensywnością. E rusza po G5.
+Liczbą równoległych agentów steruje użytkownik, a nie koordynator. Jedno zadanie mieści się w jednej sesji, więc limit godzinowy jednego narzędzia blokuje najwyżej jedno zadanie. Zadania oznaczone `needs_inventory` wymagają lokalnej kopii `migration/00-inventory/`. Zadania z `human_gate` zatrzymują się przed każdym krokiem nieodwracalnym.
 
 ## 10. Decyzje dla użytkownika
 

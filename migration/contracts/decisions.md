@@ -15,3 +15,4 @@ Written only by the coordinator. Newest at the bottom.
 | 9 | 2026-10-21 | Animated diagrams are code components selected by key, not editable content | coordinator | C, D, M |
 | 10 | 2026-10-21 | `/401` removed; `/404` becomes the site 404 page; thank-you pages stay, noindex and out of the sitemap | coordinator | S, P |
 | 11 | 2026-10-21 | GSC data and unpublished drafts (`/narzedzia`, `/case-study-4hfix`) stay out of the public repo | coordinator | all |
+| 12 | 2026-10-21 | Work is split into a task board (`migration/tasks/`) that independent agents claim through git, per `AGENTS.md`. Lane sessions started by one coordinator are dropped | user | all |
