@@ -1,0 +1,100 @@
+---
+import Base from '../../layouts/Base.astro';
+import HeroBlock from '../../components/blocks/Hero.astro';
+import LogoStripBlock from '../../components/blocks/LogoStrip.astro';
+import FeatureBlock from '../../components/blocks/Feature.astro';
+import ContentSectionBlock from '../../components/blocks/ContentSection.astro';
+import CtaBandBlock from '../../components/blocks/CtaBand.astro';
+import PromoCardBlock from '../../components/blocks/PromoCard.astro';
+import type { Hero, LogoStrip, Feature, ContentSection, CtaBand, PromoCard, PortableText } from '../../../../studio/sanity.types';
+import type { ResolvedImage, ResolvedLogo, ResolvedPage } from '../../components/ui/block-types';
+
+function sampleImage(label: string, width = 480, height = 360): ResolvedImage {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><rect x="2" y="2" width="${width-4}" height="${height-4}" rx="20" fill="#f9fafb" stroke="#d0d4d9"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="24" fill="#1e2024">${label}</text></svg>`;
+  return { src: `data:image/svg+xml,${encodeURIComponent(svg)}`, width, height, alt: `${label}. Syntetyczny obraz do testów katalogu.` };
+}
+function paragraph(text: string): PortableText {
+  return [{ _type: 'block', _key: 'paragraph', style: 'normal', children: [{ _type: 'span', _key: 'span', text, marks: [] }], markDefs: [] }];
+}
+const states = [
+  { key: 'demo', label: 'Demo data' },
+  { key: 'worst', label: 'Worst case' },
+  { key: 'empty', label: 'Empty' },
+  { key: 'one', label: 'One item' },
+];
+const target: ResolvedPage = { _id: 'sample-sales-atlas', language: 'pl', slug: { _type: 'slug', current: '/sales-atlas-system' }, title: 'Sales Atlas System' };
+const longHeading = 'Wdrożenie procesu sprzedaży, CRM i automatyzacji dla zespołu pracującego w kilku krajach i językach';
+const longBody = 'Przykładowa treść katalogu. Aleksandra Wiśniewska-Kowalczyk koordynuje wdrożenie w firmie produkcyjno-usługowej. Zespół przekazuje zadania pomiędzy oddziałami, a informacje zapisuje w kilku aplikacjach. Sprawdzamy zawijanie długiej treści i znaków diakrytycznych.';
+const longLabel = 'Porozmawiaj o wdrożeniu CRM i automatyzacji w międzynarodowym zespole sprzedaży';
+const image = sampleImage('Obraz testowy');
+const badge = { ...sampleImage('Odznaka testowa', 240, 240), caption: 'Podpis odznaki testowej na ciemnym tle.' };
+const fixtures = states.map(({ key, label }) => {
+  const worst = key === 'worst';
+  const empty = key === 'empty';
+  const count = empty ? 0 : key === 'one' ? 1 : worst ? 12 : 8;
+  const heading = worst ? longHeading : 'Jeden system dla zespołu sprzedaży';
+  const body = worst ? longBody : 'Przykładowa treść katalogu. Proces, CRM i automatyzacje działają razem.';
+  const link = { _type: 'link', href: '/kontakt', label: worst ? longLabel : 'Porozmawiajmy o wdrożeniu' } satisfies NonNullable<Hero['cta']>;
+  const logos: ResolvedLogo[] = Array.from({ length: count }, (_, index) => ({ _id: `sample-logo-${index}`, name: `Test ${index + 1}`, image: sampleImage(`Test ${index + 1}`, index % 2 ? 320 : 100, index % 2 ? 80 : 100) }));
+  const hero = { _type: 'hero', heading, body, tagline: empty ? undefined : 'Katalog komponentów', badges: empty ? [] : worst ? ['Przykładowa odznaka z bardzo długą, przetłumaczoną nazwą programu partnerskiego', '日本語のテスト'] : ['Odznaka testowa'], cta: empty ? undefined : link } satisfies Hero;
+  const logoStrip = { _type: 'logoStrip', variant: 'clients', title: 'Logotypy testowe, bez rekomendacji klientów', logos: logos.map((logo) => ({ _type: 'reference', _ref: logo._id, _key: logo._id })) } satisfies LogoStrip;
+  const feature = { _type: 'feature', heading: worst ? longHeading : 'Proces dopasowany do zespołu', body: paragraph(body), mediaSide: 'right', bullets: empty ? [] : worst ? [longBody, 'bartholomew.fitzgerald@northwind-industries-holdings.example.com', 'Jo'] : ['Wspólne zasady pracy', 'Informacje w jednym miejscu'], cta: empty ? undefined : link } satisfies Feature;
+  const content = { _type: 'contentSection', heading: 'Co otrzymuje zespół', intro: paragraph(body), layout: 'list', items: Array.from({ length: empty ? 0 : key === 'one' ? 1 : 3 }, (_, index) => ({ _type: 'contentItem', _key: `item-${index}`, title: worst ? ['Aleksandra Wiśniewska-Kowalczyk', 'Jo', '日本語とjęzyk polski'][index] : ['Proces sprzedaży', 'Konfiguracja CRM', 'Zasady przekazania'][index], text: worst ? longBody : 'Przykładowy rezultat pracy zespołu.', icon: index === 2 ? 'close' : 'check', link })) } satisfies ContentSection;
+  const cta = { _type: 'ctaBand', heading, body: empty ? undefined : body, cta: empty ? undefined : link } satisfies CtaBand;
+  const promo = { _type: 'promoCard', title: 'Sales Atlas System', points: empty ? [] : worst ? [longBody, 'bartholomew.fitzgerald@northwind-industries-holdings.example.com'] : ['Przykładowa treść katalogu metody pracy.'], target: empty ? undefined : { _type: 'reference', _ref: target._id } } satisfies PromoCard;
+  return { key, label, hero, logoStrip, logos, feature, content, cta, promo, empty };
+});
+const layouts: NonNullable<ContentSection['layout']>[] = ['list', 'cards', 'twoColumn', 'checklist'];
+---
+<Base title="Bloki A | Katalog komponentów" noindex>
+  <main>
+    <header class="catalog-header content-grid section">
+      <div class="flow"><h1>Katalog bloków A</h1><p>Wyłącznie dane i obrazy testowe. Ta strona nie przedstawia oferty ani rekomendacji klientów.</p></div>
+    </header>
+    <nav class="controls" aria-label="Zestaw danych testowych">
+      {states.map(({ key, label }) => <button type="button" data-select={key} aria-pressed={key === 'demo'}>{label}</button>)}
+    </nav>
+    {fixtures.map((fixture) => <div data-dataset={fixture.key} hidden={fixture.key !== 'demo'}>
+      <p class="dataset-label">Zestaw {fixture.label}</p>
+      <HeroBlock data={fixture.hero} image={fixture.empty ? undefined : image} headingLevel="h2" />
+      <LogoStripBlock data={fixture.logoStrip} logos={fixture.logos} />
+      <LogoStripBlock data={{ ...fixture.logoStrip, variant: 'tools', title: 'Test narzędzi, podpis nad logotypami' }} logos={fixture.logos.slice(0, fixture.empty ? 0 : 4)} />
+      <FeatureBlock data={fixture.feature} image={fixture.empty ? undefined : image} />
+      <FeatureBlock data={{ ...fixture.feature, heading: 'Wariant z mediami po lewej', mediaSide: 'left' }} image={fixture.empty ? undefined : image} />
+      <FeatureBlock data={{ ...fixture.feature, heading: 'Wariant bez mediów' }} />
+      {!fixture.empty && <FeatureBlock data={{ ...fixture.feature, heading: 'Diagram i treść Portable Text', media: { _type: 'media', kind: 'diagram', key: 'crm-funnel' }, body: [...paragraph('Przykładowa treść z renderera T10 i diagramem T11.'), { _type: 'codeBlock', _key: 'catalog-code', language: 'text', code: 'Proces → CRM → automatyzacja' }] }} />}
+      {layouts.map((layout) => <ContentSectionBlock data={{ ...fixture.content, layout, heading: `Układ ${layout}` }} />)}
+      <CtaBandBlock data={fixture.cta} />
+      <CtaBandBlock data={fixture.cta} tone="soft" />
+      <PromoCardBlock data={fixture.promo} target={fixture.empty ? undefined : target} badge={fixture.empty ? undefined : badge} />
+    </div>)}
+  </main>
+</Base>
+<script>
+  const controls = document.querySelectorAll<HTMLButtonElement>('[data-select]');
+  const datasets = document.querySelectorAll<HTMLElement>('[data-dataset]');
+  function selectData(key: string) {
+    if (![...controls].some((button) => button.dataset.select === key)) return;
+    controls.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.select === key)));
+    datasets.forEach((dataset) => { dataset.hidden = dataset.dataset.dataset !== key; });
+  }
+  selectData(new URL(location.href).searchParams.get('data') ?? 'demo');
+  controls.forEach((button) => button.addEventListener('click', () => {
+    const key = button.dataset.select;
+    if (!key) return;
+    selectData(key);
+    const url = new URL(location.href);
+    url.searchParams.set('data', key);
+    history.replaceState(null, '', url);
+  }));
+</script>
+<style>
+  .catalog-header { background: var(--surface-soft); }
+  .catalog-header .flow { max-inline-size: 65ch; }
+  .controls { display: flex; flex-wrap: wrap; gap: var(--space-2xs); padding: var(--space-s) var(--layout-gutter); border-block-end: 1px solid var(--border-default); }
+  .controls button { min-block-size: 44px; padding: var(--space-2xs) var(--space-s); font: inherit; border: 1px solid var(--border-default); border-radius: var(--radius-pill); background: var(--surface-page); color: var(--text-body); cursor: pointer; }
+  .controls button[aria-pressed="true"] { background: var(--surface-accent); color: var(--text-on-accent); border-color: var(--surface-accent); }
+  .controls button:active { background: var(--surface-tint); color: var(--text-heading); }
+  @media (hover: hover) and (pointer: fine) { .controls button:hover { border-color: var(--border-focus); } }
+  .dataset-label { padding: var(--space-s) var(--layout-gutter); color: var(--text-muted); font-size: var(--typography-body-s-size); }
+</style>

@@ -1,0 +1,16 @@
+---
+import type { ResolvedImage } from './block-types';
+interface Props { image: ResolvedImage; eager?: boolean; portrait?: boolean; }
+const { image, eager = false, portrait = false } = Astro.props;
+---
+<figure class:list={{ portrait }}>
+  <img src={image.src} alt={image.alt ?? ''} width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+  {image.caption && <figcaption class="type-body-s">{image.caption}</figcaption>}
+</figure>
+<style>
+  figure { display: grid; gap: var(--space-xs); }
+  img { inline-size: 100%; block-size: auto; object-fit: contain; border-radius: var(--radius-lg); }
+  .portrait img { max-block-size: 40svh; }
+  figcaption { color: var(--media-caption-color, var(--text-muted)); }
+  @container (width >= 48rem) { .portrait img { max-block-size: 32rem; } }
+</style>

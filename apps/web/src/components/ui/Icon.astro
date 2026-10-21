@@ -1,0 +1,11 @@
+---
+interface Props { name?: 'arrow' | 'check' | 'close'; }
+const { name = 'arrow' } = Astro.props;
+const paths = {
+  arrow: 'M4 12h16m-6-6 6 6-6 6',
+  check: 'm5 12 4 4L19 6',
+  close: 'm6 6 12 12M18 6 6 18',
+};
+---
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d={paths[name]} /></svg>
+<style>svg { flex: none; inline-size: 1em; block-size: 1lh; }</style>

@@ -1,0 +1,34 @@
+---
+import type { Hero } from '../../../../studio/sanity.types';
+import type { ResolvedImage } from '../ui/block-types';
+import { consultation } from '../ui/block-types';
+import BlockSection from '../ui/BlockSection.astro';
+import Button from '../ui/Button.astro';
+import MediaImage from '../ui/MediaImage.astro';
+interface Props { data: Hero; image?: ResolvedImage; headingLevel?: 'h1' | 'h2'; }
+const { data, image, headingLevel: Heading = 'h1' } = Astro.props;
+---
+<BlockSection kind="hero">
+  <div class:list={['hero-layout', { 'has-image': image }]}>
+    <div class="copy">
+      {data.tagline && <p class="type-tagline">{data.tagline}</p>}
+      {data.heading && <Heading class="type-display">{data.heading}</Heading>}
+      {data.body && <p>{data.body}</p>}
+      <div class="actions"><Button link={data.cta ?? consultation} />
+        {(data.badges?.length ?? 0) > 0 && <ul class="badges type-body-s">{data.badges?.map((badge) => <li>{badge}</li>)}</ul>}
+      </div>
+    </div>
+    {image && <div class="portrait"><span class="monogram" aria-hidden="true">GZ</span><div class="portrait-image"><MediaImage image={image} eager portrait /></div></div>}
+  </div>
+</BlockSection>
+<style>
+  .hero-layout { display: grid; gap: var(--space-2xl); align-items: center; }
+  .copy { display: flex; flex-direction: column; align-items: start; gap: var(--space-m); max-inline-size: 65ch; }
+  .copy > * { overflow-wrap: anywhere; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-s); inline-size: 100%; }
+  .badges { display: flex; flex-wrap: wrap; gap: var(--space-xs); padding: 0; margin: 0; list-style: none; color: var(--text-muted); }
+  .portrait { display: grid; isolation: isolate; }
+  .portrait > * { grid-area: 1 / 1; }
+  .monogram { align-self: center; color: var(--text-link); font-family: var(--font-family-heading); font-size: clamp(6rem, 28cqi, 18rem); font-weight: var(--font-weight-bold); line-height: 1; }
+  @container (width >= 48rem) { .has-image { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); } }
+</style>

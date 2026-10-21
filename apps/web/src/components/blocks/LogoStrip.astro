@@ -1,0 +1,24 @@
+---
+import type { LogoStrip } from '../../../../studio/sanity.types';
+import type { ResolvedLogo } from '../ui/block-types';
+import { safeHref } from '../ui/block-types';
+import BlockSection from '../ui/BlockSection.astro';
+interface Props { data: LogoStrip; logos: ResolvedLogo[]; }
+const { data, logos } = Astro.props;
+const ordered = (data.logos ?? []).flatMap((ref) => { const logo = logos.find((item) => item._id === ref._ref); return logo ? [logo] : []; });
+---
+{ordered.length > 0 && <BlockSection kind="logo-strip"><div class="logos">
+  {data.title && (data.variant === 'tools' ? <p class="type-body-s">{data.title}</p> : <h2>{data.title}</h2>)}
+  <ul tabindex="0" aria-label={data.title ?? 'Logotypy'} class:list={['logo-grid', { tools: data.variant === 'tools' }]}>{ordered.map((logo) => <li>{safeHref(logo.url) ? <a href={safeHref(logo.url)}><img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" /></a> : <img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" />}</li>)}</ul>
+</div></BlockSection>}
+<style>
+  .logos { display: grid; gap: var(--space-l); }
+  .logo-grid { display: grid; grid-auto-flow: column; grid-template-rows: repeat(2, auto); grid-auto-columns: minmax(5rem, 1fr); overflow-x: auto; padding-block: var(--space-2xs); align-items: center; gap: var(--space-l) var(--space-m); padding: 0; margin: 0; list-style: none; }
+  .logo-grid.tools { grid-template-rows: auto; }
+  .logo-grid li { display: grid; align-items: center; min-block-size: 44px; }
+  .logo-grid img { inline-size: 100%; block-size: clamp(1.75rem, 3cqi, 2.5rem); object-fit: contain; filter: grayscale(1); opacity: .85; }
+  .logo-grid a { display: grid; align-items: center; min-block-size: 44px; border-radius: var(--radius-sm); }
+  .logo-grid a:active { opacity: .65; }
+  @media (hover: hover) and (pointer: fine) { .logo-grid a:hover { opacity: .7; } }
+  @container (width >= 40rem) { .logo-grid { grid-auto-flow: row; grid-template-rows: auto; grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr)); } }
+</style>
