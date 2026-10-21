@@ -1,0 +1,30 @@
+{
+  "language": "pl",
+  "path": "/kontakt",
+  "name": "Kontakt",
+  "seo": {
+    "title": "Kontakt | Grzegorz Zawłodzki",
+    "description": "Skontaktuj się ze mną. Doceniam że chcesz się do mnie odezwać. Odpisuje najczęściej tego samego dnia.",
+    "ogImage": {
+      "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64ac78c504cddb42676cd78b_Frame%2037_compressed.jpg"
+    }
+  },
+  "breadcrumbs": [
+    {
+      "name": "Strona główna",
+      "path": "/"
+    },
+    {
+      "name": "Kontakt",
+      "path": "/kontakt"
+    }
+  ],
+  "primaryImage": {
+    "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64ac78c504cddb42676cd78b_Frame%2037_compressed.jpg"
+  },
+  "kind": "contact",
+  "significantLinks": [
+    "/wspolpraca",
+    "/newsletter"
+  ]
+}

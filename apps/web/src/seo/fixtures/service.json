@@ -1,0 +1,103 @@
+{
+  "language": "pl",
+  "path": "/szkolenie-i-wdrozenie-pipedrive",
+  "name": "Szkolenie i wdrożenie Pipedrive",
+  "seo": {
+    "title": "Wdrożenie Pipedrive CRM z procesem i szkoleniem | Zawłodzki",
+    "description": "Wdrożenie Pipedrive CRM razem z procesem sprzedaży i szkoleniem zespołu. Do 5 handlowców: 6 tys. zł netto/mies. przez 3 miesiące (18 tys. łącznie).",
+    "ogImage": {
+      "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a6201cf122714edfbece405_Frame%2039.jpg"
+    }
+  },
+  "breadcrumbs": [
+    {
+      "name": "Strona główna",
+      "path": "/"
+    },
+    {
+      "name": "Szkolenie i wdrożenie Pipedrive",
+      "path": "/szkolenie-i-wdrozenie-pipedrive"
+    }
+  ],
+  "primaryImage": {
+    "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64ac7c90323794295feca74e_Frame%2039_compressed.jpg"
+  },
+  "faq": [
+    {
+      "question": "Czym różni się Twoje wdrożenie od konfiguracji Pipedrive za 3 500 zł?",
+      "answer": "Konfiguracja ustawia aplikację. Wdrożenie zmienia sposób pracy zespołu i to jest różnica, za którą płacisz. W moich 18 000 zł za trzy miesiące jest opracowanie procesu sprzedaży, uporządkowanie danych, 12 warsztatów, treningi 1:1 na realnych szansach handlowców i przygotowanie Waszego administratora. Po samej konfiguracji najczęściej dostajesz poprawnie ustawiony system, którego nikt nie używa i za rok płacisz drugi raz, tym razem za naprawę."
+    },
+    {
+      "question": "Ile kosztuje wdrożenie systemu CRM pipedrive.com?",
+      "answer": "Wdrożenie dla zespołu do 5 handlowców kosztuje 6 000 zł netto miesięcznie przy współpracy na 3 miesiące, czyli 18 000 zł netto łącznie. Zakres ustalamy na starcie i nie zmienia się w trakcie, płacisz w trzech ratach. W cenie jest opracowanie procesu sprzedaży, migracja i czyszczenie danych, konfiguracja, 12 warsztatów, treningi 1:1 z każdym handlowcem oraz przeszkolenie osoby, która będzie administrować systemem. Wdrożenia dla większych zespołów i kilku działów wyceniam indywidualnie, bo zakres automatyzacji i integracji za każdym razem wygląda inaczej."
+    },
+    {
+      "question": "Ile kosztuje szkolenie z obsługi CRM pipedrive.com?",
+      "answer": "Szkolenia nie sprzedaję osobno, warsztaty i treningi 1:1 z handlowcami są częścią każdego wdrożenia. Jeśli Twoja firma już pracuje w Pipedrive i potrzebujecie uporządkować system oraz doszkolić zespół, punktem startu jest audyt istniejącego CRM za 3 900 zł netto. Kończy się raportem z listą problemów i planem naprawy, a część poprawek robimy od razu podczas warsztatów."
+    },
+    {
+      "question": "Jak długo trwa wdrożenie CRM pipedrive.com do firmy?",
+      "answer": "Współpraca trwa 3 miesiące. W startupie, który dopiero rusza ze sprzedażą, gotowy system stoi po pierwszym miesiącu, a kolejne dwa idą na warsztaty i treningi z zespołem. W firmie z działającym działem handlowym tempo dopasowujemy tak, żeby nie zaburzyć bieżącej sprzedaży, bo oprócz konfiguracji zmieniamy nawyki pracy. Większe firmy i wdrożenia w kilku działach naraz wyceniam indywidualnie, razem z dłuższym harmonogramem."
+    },
+    {
+      "question": "Kogo trzeba zaangażować we wdrożenie CRM pipedrive.com?",
+      "answer": "W każdym wdrożeniu konieczny jest lider, który musi mieć wiedzę o procesach sprzedaży firmy. Ta osoba będzie koordynowała realizację warsztatów po stronie firmy, oraz zostanie przygotowana do bieżącego wsparcia reszty pracowników w codziennym korzystaniu z CRM pipedrive.com. Dodatkowo wymagana jest dostępność dyrektora sprzedaży lub właściciela firmy, który ma decyzyjność w ustalaniu poszczególnych kroków procesu sprzedaży implementowanego do CRM Pipedrive."
+    },
+    {
+      "question": "Moja firma korzysta już z CRM pipedrive.com, co zyskam?",
+      "answer": "Dla firm z działającym Pipedrive robię audyt za 3 900 zł netto. Przechodzę przez proces, dane, pracę handlowców i raporty tak, jak przygotowuję własne wdrożenia. Najczęstsze znaleziska: lejek nie odzwierciedla realnego procesu, dane są niepełne, więc raporty pokazują fikcję, a automatyzacje nie mają na czym pracować. Dostajesz listę problemów z priorytetami i wycenę tego, co warto naprawić i decydujesz, czy robimy to razem, czy Twój zespół samodzielnie."
+    },
+    {
+      "question": "Skąd mam wiedzieć co wybrać: Pipedrive czy Livespace, Hubspot, Salesforce, BERG System, FirmaO, Bitrix24?",
+      "answer": "Narzędzia są powierzchowne i musisz wiedzieć jaki problem mają rozwiązać. Być może w ogóle ich nie potrzebujesz lub potrzebujesz czegoś zupełnie innego. Jeśli masz wątpliwości napisz do mnie. E-mail w zakładce kontakt."
+    },
+    {
+      "question": "Czy dostanę fakturę VAT?",
+      "answer": "Tak, oczywiście."
+    },
+    {
+      "question": "Czy możemy podpisać umowę NDA?",
+      "answer": "Tak. Daj mi znać, że jest to konieczne, prześlę wzór. Umowę będziemy mogli podpisać elektronicznie."
+    },
+    {
+      "question": "Czy CRM pipedrive.com jest po polsku?",
+      "answer": "Interfejs CRM pipedrive.com w przeglądarce i aplikacji mobilnej jest całkowicie spolszczony. Oficjalny support działa w języku angielskim, natomiast ja odpowiem na wszystkie Twoje pytania w języku polskim."
+    },
+    {
+      "question": "Czy CRM pipedrive.com jest za darmo?",
+      "answer": "Pipedrive ma darmowy, 14 dniowy, okres testowy. Możesz w tym czasie testować system CRM bez podawania danych karty kredytowej. Odezwij się do mnie jeśli chcesz wypróbować pipedrive.com bezpłatnie przez 30 dni. E-mail w zakładce kontakt."
+    }
+  ],
+  "kind": "service",
+  "service": {
+    "name": "Szkolenie i wdrożenie Pipedrive",
+    "description": "Indywidualne szkolenia i wdrożenia systemu CRM Pipedrive dla zespołów handlowych. Profesjonalne wsparcie od konsultacji po pełne wdrożenie i szkolenie zespołu.",
+    "serviceType": "Wdrożenie i szkolenie CRM",
+    "areaServed": "Polska",
+    "offers": [
+      {
+        "name": "Wdrożenie Pipedrive dla zespołu do 5 osób",
+        "description": "Kompleksowe wdrożenie CRM Pipedrive dla zespołu handlowego do 5 osób: proces sprzedaży, migracja i czyszczenie danych, konfiguracja, 12 warsztatów, treningi 1:1 i przygotowanie administratora. Współpraca trwa 3 miesiące, rozliczana w ratach po 6 000 zł netto miesięcznie.",
+        "price": 18000,
+        "priceCurrency": "PLN",
+        "availability": "InStock",
+        "monthly": {
+          "price": 6000,
+          "billingDuration": 3
+        }
+      },
+      {
+        "name": "Audyt istniejącego CRM Pipedrive",
+        "description": "Audyt działającego wdrożenia Pipedrive zakończony raportem z listą problemów, priorytetami i planem naprawy. Płatność jednorazowa.",
+        "price": 3900,
+        "priceCurrency": "PLN",
+        "availability": "InStock"
+      },
+      {
+        "name": "Wdrożenie Pipedrive dla 5+ handlowców",
+        "description": "Wdrożenie Pipedrive od zera dla całej firmy lub kilku zespołów: zakres pakietu do 5 osób, integracje z systemami księgowymi i ERP, integracje z platformami e-commerce oraz zintegrowane raportowanie CRM i systemów księgowych. Wycena indywidualna.",
+        "availability": "InStock"
+      }
+    ]
+  }
+}

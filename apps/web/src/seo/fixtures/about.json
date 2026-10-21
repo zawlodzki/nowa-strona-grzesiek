@@ -1,0 +1,54 @@
+{
+  "language": "pl",
+  "path": "/o-mnie",
+  "name": "O mnie — Grzegorz Zawłodzki, konsultant CRM i automatyzacji sprzedaży B2B",
+  "seo": {
+    "title": "O mnie | Grzegorz Zawłodzki",
+    "description": "Konsultant CRM i automatyzacji sprzedaży B2B. Wdrażam Pipedrive, Asanę, n8n i AI - ponad 50 firm, od startupów po IAB. Zobacz, jak pracuję.",
+    "ogImage": {
+      "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64ac78c504cddb42676cd78b_Frame%2037_compressed.jpg"
+    }
+  },
+  "breadcrumbs": [],
+  "dateModified": "2026-07-25",
+  "kind": "about",
+  "occupation": {
+    "name": "Konsultant CRM / trener",
+    "location": "Polska",
+    "skills": "Pipedrive, HubSpot, Attio, Asana, n8n, AI dla sprzedaży, dashboardy raportowe"
+  },
+  "services": [
+    {
+      "name": "Szkolenie i wdrożenie Pipedrive",
+      "path": "/szkolenie-i-wdrozenie-pipedrive"
+    },
+    {
+      "name": "Audyt CRM Pipedrive i procesu sprzedaży",
+      "path": "/audyt-crm-pipedrive"
+    },
+    {
+      "name": "Automatyzacje dla Pipedrive",
+      "path": "/automatyzacje-dla-pipedrive"
+    },
+    {
+      "name": "Szkolenie i wdrożenie Asana",
+      "path": "/szkolenie-i-wdrozenie-asana"
+    },
+    {
+      "name": "Audyt procesów w Asanie",
+      "path": "/audyt-procesow-asana"
+    },
+    {
+      "name": "Wdrożenie AI w sprzedaży B2B",
+      "path": "/wdrozenie-ai-w-sprzedazy-b2b"
+    },
+    {
+      "name": "Audyt AI w sprzedaży",
+      "path": "/audyt-ai-sprzedaz"
+    },
+    {
+      "name": "Automatyzacja procesów biznesowych no-code",
+      "path": "/automatyzacja-procesow-biznesowych-nocode"
+    }
+  ]
+}
