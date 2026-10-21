@@ -1,0 +1,190 @@
+---
+// Ported from the Webflow embed #zw-crm-process (szkolenie-i-wdrozenie-pipedrive, szkolenie-i-wdrozenie-salesforce) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  Pipedrive implementation — step 1: sales process audit
+  Self-contained Webflow embed. Transparent, play-once, responsive.
+  Scope: zw-crm-process
+*/
+---
+
+<div class="dg" data-diagram="zw-crm-process" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="cp-panel">
+          <div class="cp-current">
+            <span class="cp-eyebrow">Current process</span>
+            <div class="cp-card cp-card--a"><b>Lead?</b><i></i><i></i><em>?</em></div>
+            <div class="cp-card cp-card--b"><b>Maybe</b><i></i><i></i><em>?</em></div>
+            <div class="cp-card cp-card--c"><b>Quote</b><i></i><i></i><em>?</em></div>
+            <span class="cp-scan"></span>
+          </div>
+          <div class="cp-final">
+            <span class="cp-eyebrow">Sales process</span>
+            <div class="cp-lane">
+              <span class="cp-label">Lead</span><span class="cp-chip">01</span>
+              <i></i><i></i><i></i>
+            </div>
+            <span class="cp-arrow cp-arrow--1">&rarr;</span>
+            <div class="cp-lane">
+              <span class="cp-label">Qualified</span><span class="cp-chip">02</span>
+              <i></i><i></i><i></i>
+            </div>
+            <span class="cp-arrow cp-arrow--2">&rarr;</span>
+            <div class="cp-lane">
+              <span class="cp-label">Proposal</span><span class="cp-chip">03</span>
+              <i></i><i></i><i></i>
+            </div>
+            <span class="cp-ready">
+              <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+[data-diagram="zw-crm-process"] {
+    --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
+    --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
+    --zw-border:#DDE1E6; --zw-border-soft:#EDF0F3; --zw-heading:#0E0F11;
+    --zw-text:#1E2024; --zw-muted:#838D95; --zw-card:#FFFFFF;
+    --zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --zw-serif:'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;
+    --zw-radius-card:10px; --zw-radius-lane:14px;
+    --zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);
+    --zw-shadow-lift:1px 8px 22px rgba(14,15,17,.14);
+    font-family:var(--zw-font); width:100%; max-width:440px; margin:0 auto;
+    box-sizing:border-box; -webkit-font-smoothing:antialiased;
+  }
+  [data-diagram="zw-crm-process"] *, [data-diagram="zw-crm-process"] *::before, [data-diagram="zw-crm-process"] *::after { box-sizing:border-box; }
+  [data-diagram="zw-crm-process"] .zw-stage { width:100%; overflow:hidden; }
+  [data-diagram="zw-crm-process"] .zw-fit { width:400px; transform-origin:top left; }
+  [data-diagram="zw-crm-process"] .zw-scene { position:relative; }
+  [data-diagram="zw-crm-process"] .zw-confetti { position:absolute; top:0; left:0; width:0; height:0; z-index:9; pointer-events:none; }
+  [data-diagram="zw-crm-process"] .zw-confetti i { position:absolute; width:8px; height:8px; border-radius:2px; will-change:transform,opacity; }
+
+  /* =================== SCENE:STYLE start =================== */
+  [data-diagram="zw-crm-process"] .cp-panel {
+    position:relative; width:360px; height:220px; margin:6px auto;
+    background:var(--zw-bg-soft); border:1px solid var(--zw-border);
+    border-radius:var(--zw-radius-lane); overflow:hidden;
+  }
+  [data-diagram="zw-crm-process"] .cp-current, [data-diagram="zw-crm-process"] .cp-final { position:absolute; inset:0; }
+  [data-diagram="zw-crm-process"] .cp-eyebrow {
+    position:absolute; top:18px; left:20px; font-size:12px; font-weight:700;
+    letter-spacing:.09em; text-transform:uppercase; color:var(--zw-muted);
+  }
+  [data-diagram="zw-crm-process"] .cp-card {
+    position:absolute; top:68px; width:94px; height:102px; padding:13px;
+    background:var(--zw-card); border:1px solid var(--zw-border);
+    border-radius:var(--zw-radius-card); box-shadow:var(--zw-shadow-rest);
+    opacity:0;
+  }
+  [data-diagram="zw-crm-process"] .cp-card--a { left:20px; transform:rotate(-3deg) translateY(7px); }
+  [data-diagram="zw-crm-process"] .cp-card--b { left:133px; transform:rotate(2deg) translateY(-5px); }
+  [data-diagram="zw-crm-process"] .cp-card--c { left:246px; transform:rotate(-1deg) translateY(5px); }
+  [data-diagram="zw-crm-process"] .cp-card b, [data-diagram="zw-crm-process"] .cp-label {
+    display:block; font-size:12px; font-weight:700; color:var(--zw-heading);
+  }
+  [data-diagram="zw-crm-process"] .cp-lane .cp-label { font-size:9px; letter-spacing:.01em; }
+  [data-diagram="zw-crm-process"] .cp-card i, [data-diagram="zw-crm-process"] .cp-lane i {
+    display:block; height:6px; margin-top:10px; border-radius:4px; background:var(--zw-border-soft);
+  }
+  [data-diagram="zw-crm-process"] .cp-card i:nth-of-type(1) { width:72%; }
+  [data-diagram="zw-crm-process"] .cp-card i:nth-of-type(2) { width:48%; }
+  [data-diagram="zw-crm-process"] .cp-card em {
+    position:absolute; right:10px; bottom:9px; width:18px; height:18px;
+    display:flex; align-items:center; justify-content:center; border-radius:50%;
+    background:var(--zw-border-soft); color:var(--zw-muted); font-size:11px;
+    font-style:normal; font-weight:700;
+  }
+  [data-diagram="zw-crm-process"] .cp-scan {
+    position:absolute; top:52px; left:18px; width:2px; height:132px;
+    background:var(--zw-secondary); box-shadow:0 0 0 5px rgba(10,207,254,.12);
+    opacity:0; will-change:transform,opacity;
+  }
+  [data-diagram="zw-crm-process"] .cp-final { opacity:0; }
+  [data-diagram="zw-crm-process"] .cp-lane {
+    position:absolute; top:67px; width:92px; height:114px; padding:13px 11px;
+    background:var(--zw-card); border:1px solid var(--zw-primary-30);
+    border-radius:var(--zw-radius-card); box-shadow:var(--zw-shadow-rest);
+    opacity:0;
+  }
+  [data-diagram="zw-crm-process"] .cp-lane:nth-of-type(1) { left:20px; }
+  [data-diagram="zw-crm-process"] .cp-lane:nth-of-type(2) { left:134px; }
+  [data-diagram="zw-crm-process"] .cp-lane:nth-of-type(3) { left:248px; }
+  [data-diagram="zw-crm-process"] .cp-chip {
+    position:absolute; top:10px; right:9px; min-width:20px; padding:2px 5px;
+    border-radius:999px; background:var(--zw-primary-10); color:var(--zw-primary);
+    font-size:10px; font-weight:700; text-align:center;
+  }
+  [data-diagram="zw-crm-process"] .cp-lane i { background:var(--zw-primary-10); }
+  [data-diagram="zw-crm-process"] .cp-lane i:nth-of-type(1) { width:74%; margin-top:18px; }
+  [data-diagram="zw-crm-process"] .cp-lane i:nth-of-type(2) { width:54%; }
+  [data-diagram="zw-crm-process"] .cp-lane i:nth-of-type(3) { width:66%; }
+  [data-diagram="zw-crm-process"] .cp-arrow {
+    position:absolute; top:112px; color:var(--zw-primary-30); font-size:16px; font-weight:700;
+    opacity:0;
+  }
+  [data-diagram="zw-crm-process"] .cp-arrow--1 { left:116px; }
+  [data-diagram="zw-crm-process"] .cp-arrow--2 { left:230px; }
+  [data-diagram="zw-crm-process"] .cp-ready {
+    position:absolute; right:12px; bottom:12px; width:27px; height:27px;
+    display:flex; align-items:center; justify-content:center; border-radius:50%;
+    background:var(--zw-success); color:#fff; transform:scale(0);
+  }
+  [data-diagram="zw-crm-process"] .cp-ready svg { width:15px; height:15px; }
+  [data-diagram="zw-crm-process"] .cp-ready path { fill:none; stroke:currentColor; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
+  /* ==================== SCENE:STYLE end ==================== */
+
+  @media (prefers-reduced-motion:reduce) {
+    [data-diagram="zw-crm-process"] .cp-current, [data-diagram="zw-crm-process"] .cp-card { opacity:0; }
+    [data-diagram="zw-crm-process"] .cp-final, [data-diagram="zw-crm-process"] .cp-lane, [data-diagram="zw-crm-process"] .cp-arrow { opacity:1; }
+    [data-diagram="zw-crm-process"] .cp-ready { transform:scale(1); }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-crm-process"]')) {
+(function(){
+  if(!root||root.dataset.zwInit)return; root.dataset.zwInit='1';
+  var DESIGN_W=400, stage=root.querySelector('.zw-stage'), fitEl=root.querySelector('.zw-fit'), scene=root.querySelector('.zw-scene');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var EASE_MOVE='cubic-bezier(0.645, 0.045, 0.355, 1)';
+  var EASE_OUT='cubic-bezier(0.22, 1, 0.36, 1)';
+  var EASE_POP='cubic-bezier(0.34, 1.56, 0.64, 1)';
+  function wait(ms){return new Promise(function(r){setTimeout(r,ms);});}
+  function settled(a){return a.finished.catch(function(){});}
+  function fit(){}
+  function confetti(at){var box=document.createElement('div');box.className='zw-confetti';box.style.left=(at.offsetLeft+at.offsetWidth/2)+'px';box.style.top=(at.offsetTop+at.offsetHeight/2)+'px';scene.appendChild(box);var colors=['#3A48CC','#0ACFFE','#52C41A','#8991E0','#FFC53D'];for(var i=0;i<28;i++){var p=document.createElement('i');p.style.background=colors[i%colors.length];box.appendChild(p);var a=Math.PI*2*i/28,d=45+Math.random()*70;p.animate([{transform:'translate(0,0) rotate(0)',opacity:1},{transform:'translate('+(Math.cos(a)*d)+'px,'+(Math.sin(a)*d-30)+'px) rotate(420deg) scale(.4)',opacity:0}],{duration:800+Math.random()*350,easing:EASE_OUT,fill:'forwards'});}setTimeout(function(){box.remove();},1400);}
+
+  async function play(){
+    fit(); if(reduce)return;
+    var current=scene.querySelector('.cp-current'), scan=scene.querySelector('.cp-scan'), final=scene.querySelector('.cp-final');
+    var cards=Array.prototype.slice.call(scene.querySelectorAll('.cp-card'));
+    cards.forEach(function(card,i){card.animate([{opacity:0,transform:'translateY(12px) rotate(0)'},{opacity:1,transform:getComputedStyle(card).transform}],{duration:420,delay:i*90,easing:EASE_OUT,fill:'backwards'});});
+    await wait(620);
+    scan.style.opacity=1;
+    await settled(scan.animate([{opacity:0,transform:'translateX(0)'},{opacity:1,transform:'translateX(150px)',offset:.45},{opacity:0,transform:'translateX(320px)'}],{duration:1050,easing:EASE_MOVE,fill:'forwards'}));
+    await wait(180);
+    await settled(current.animate([{opacity:1,transform:'scale(1)'},{opacity:0,transform:'scale(.96)'}],{duration:320,easing:EASE_OUT,fill:'forwards'}));
+    final.style.opacity=1;
+    var lanes=Array.prototype.slice.call(scene.querySelectorAll('.cp-lane')), arrows=Array.prototype.slice.call(scene.querySelectorAll('.cp-arrow'));
+    lanes.forEach(function(lane,i){lane.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:440,delay:i*110,easing:EASE_OUT,fill:'forwards'});lane.style.opacity=1;});
+    arrows.forEach(function(arrow,i){arrow.animate([{opacity:0,transform:'translateX(-6px)'},{opacity:1,transform:'translateX(0)'}],{duration:300,delay:240+i*110,easing:EASE_OUT,fill:'forwards'});arrow.style.opacity=1;});
+    await wait(720);
+    var ready=scene.querySelector('.cp-ready');
+    ready.animate([{transform:'scale(0)'},{transform:'scale(1)'}],{duration:380,easing:EASE_POP,fill:'forwards'});ready.style.transform='scale(1)';
+    confetti(ready);
+  }
+  fit(); if('ResizeObserver'in window)new ResizeObserver(fit).observe(stage);else window.addEventListener('resize',fit);
+  function arm(){if(!('IntersectionObserver'in window)){play();return;}var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){io.disconnect();requestAnimationFrame(function(){requestAnimationFrame(play);});}});},{threshold:.4});io.observe(root);}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',arm);else arm();
+})();
+  }
+</script>

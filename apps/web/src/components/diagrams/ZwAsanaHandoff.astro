@@ -1,0 +1,48 @@
+---
+// Ported from the Webflow embed #zw-asana-handoff (szkolenie-i-wdrozenie-asana) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  <!-- Asana implementation — step 5: hand ownership to the internal leader -->
+*/
+---
+
+<div class="dg" data-diagram="zw-asana-handoff" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;"><div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
+  <div class="as5-panel">
+    <div class="as5-card as5-card--1"><span>A</span><b>Admin</b><i></i></div>
+    <div class="as5-card as5-card--2"><span>D</span><b>Guides</b><i></i></div>
+    <div class="as5-card as5-card--3"><span>O</span><b>Onboarding</b><i></i></div>
+    <span class="as5-line as5-line--1"></span><span class="as5-line as5-line--2"></span><span class="as5-line as5-line--3"></span>
+    <div class="as5-leader"><span class="as5-avatar">L</span><b>Leader</b><div class="as5-dots"><i></i><i></i><i></i></div><em class="as5-owner">Owner</em><strong class="as5-ring"></strong></div>
+    <span class="as5-packet">A</span>
+  </div>
+</div></div></div></div>
+
+<style is:global>
+[data-diagram="zw-asana-handoff"]{--zw-primary:#3A48CC;--zw-primary-10:#EBEDFA;--zw-primary-30:#8991E0;--zw-secondary:#0ACFFE;--zw-success:#52C41A;--zw-bg-soft:#F9FAFB;--zw-border:#DDE1E6;--zw-border-soft:#EDF0F3;--zw-heading:#0E0F11;--zw-text:#1E2024;--zw-muted:#838D95;--zw-card:#FFFFFF;--zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;--zw-serif:'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;--zw-radius-card:10px;--zw-radius-lane:14px;--zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);--zw-shadow-lift:1px 8px 22px rgba(14,15,17,.14);font-family:var(--zw-font);width:100%;max-width:440px;margin:0 auto;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+[data-diagram="zw-asana-handoff"] *,[data-diagram="zw-asana-handoff"] *::before,[data-diagram="zw-asana-handoff"] *::after{box-sizing:border-box}[data-diagram="zw-asana-handoff"] .zw-stage{width:100%;overflow:hidden}[data-diagram="zw-asana-handoff"] .zw-fit{width:400px;transform-origin:top left}[data-diagram="zw-asana-handoff"] .zw-scene{position:relative}
+[data-diagram="zw-asana-handoff"] .as5-panel{position:relative;width:360px;height:220px;margin:6px auto;background:var(--zw-bg-soft);border:1px solid var(--zw-border);border-radius:var(--zw-radius-lane);overflow:hidden}
+[data-diagram="zw-asana-handoff"] .as5-card{position:absolute;top:20px;width:96px;height:52px;padding:9px 10px;background:var(--zw-card);border:1px solid var(--zw-border);border-radius:var(--zw-radius-card);box-shadow:var(--zw-shadow-rest);opacity:0;z-index:3}
+[data-diagram="zw-asana-handoff"] .as5-card--1{left:20px}[data-diagram="zw-asana-handoff"] .as5-card--2{left:132px}[data-diagram="zw-asana-handoff"] .as5-card--3{left:244px}
+[data-diagram="zw-asana-handoff"] .as5-card>span{float:left;width:22px;height:22px;margin-right:7px;display:flex;align-items:center;justify-content:center;border-radius:7px;background:var(--zw-primary-10);color:var(--zw-primary);font-size:9px;font-weight:800}[data-diagram="zw-asana-handoff"] .as5-card>b{font-size:10px;color:var(--zw-text)}
+[data-diagram="zw-asana-handoff"] .as5-card>i{display:block;width:42px;height:5px;margin:6px 0 0 29px;border-radius:3px;background:var(--zw-border-soft)}
+[data-diagram="zw-asana-handoff"] .as5-line{position:absolute;top:70px;width:2px;height:62px;background:var(--zw-primary-30);transform:scaleY(0);transform-origin:top;opacity:.7}
+[data-diagram="zw-asana-handoff"] .as5-line--1{left:68px;transform:rotate(-43deg) scaleY(0)}[data-diagram="zw-asana-handoff"] .as5-line--2{left:180px}[data-diagram="zw-asana-handoff"] .as5-line--3{left:292px;transform:rotate(43deg) scaleY(0)}
+[data-diagram="zw-asana-handoff"] .as5-leader{position:absolute;left:130px;top:114px;width:100px;height:82px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:var(--zw-card);border:1px solid var(--zw-primary-30);border-radius:var(--zw-radius-card);box-shadow:var(--zw-shadow-lift);opacity:0;z-index:4}
+[data-diagram="zw-asana-handoff"] .as5-avatar{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--zw-primary);color:#fff;font-size:11px;font-weight:800}[data-diagram="zw-asana-handoff"] .as5-leader>b{font-size:10px;color:var(--zw-heading)}
+[data-diagram="zw-asana-handoff"] .as5-dots{position:absolute;right:8px;top:8px;display:flex;gap:4px}[data-diagram="zw-asana-handoff"] .as5-dots i{width:6px;height:6px;border-radius:50%;background:var(--zw-border)}[data-diagram="zw-asana-handoff"] .as5-dots i.as5-on{background:var(--zw-primary)}
+[data-diagram="zw-asana-handoff"] .as5-owner{position:absolute;left:9px;right:9px;bottom:-12px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--zw-success);color:#fff;font-size:9px;font-weight:800;font-style:normal;letter-spacing:.06em;text-transform:uppercase;transform:scale(0)}
+[data-diagram="zw-asana-handoff"] .as5-ring{position:absolute;inset:-1px;border:2px solid var(--zw-success);border-radius:var(--zw-radius-card);opacity:0;pointer-events:none}
+[data-diagram="zw-asana-handoff"] .as5-packet{position:absolute;left:57px;top:57px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:7px;background:var(--zw-primary);color:#fff;font-size:9px;font-weight:800;box-shadow:var(--zw-shadow-lift);opacity:0;z-index:6;will-change:transform,opacity}
+@media(prefers-reduced-motion:reduce){[data-diagram="zw-asana-handoff"] .as5-card,[data-diagram="zw-asana-handoff"] .as5-leader{opacity:1}[data-diagram="zw-asana-handoff"] .as5-line{transform:scaleY(1)}[data-diagram="zw-asana-handoff"] .as5-line--1{transform:rotate(-43deg) scaleY(1)}[data-diagram="zw-asana-handoff"] .as5-line--3{transform:rotate(43deg) scaleY(1)}[data-diagram="zw-asana-handoff"] .as5-dots i{background:var(--zw-primary)}[data-diagram="zw-asana-handoff"] .as5-owner{transform:scale(1)}[data-diagram="zw-asana-handoff"] .as5-packet{opacity:0}}
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-asana-handoff"]')) {
+(function(){if(!root||root.dataset.zwInit)return;root.dataset.zwInit='1';var DESIGN_W=400,stage=root.querySelector('.zw-stage'),fitEl=root.querySelector('.zw-fit'),scene=root.querySelector('.zw-scene');var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;var EASE_MOVE='cubic-bezier(0.645, 0.045, 0.355, 1)',EASE_OUT='cubic-bezier(0.22, 1, 0.36, 1)',EASE_POP='cubic-bezier(0.34, 1.56, 0.64, 1)';function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}function settled(a){return a.finished.catch(function(){})}function fit(){}
+async function play(){fit();if(reduce)return;var cards=Array.prototype.slice.call(scene.querySelectorAll('.as5-card')),lines=Array.prototype.slice.call(scene.querySelectorAll('.as5-line')),leader=scene.querySelector('.as5-leader'),packet=scene.querySelector('.as5-packet'),dots=Array.prototype.slice.call(scene.querySelectorAll('.as5-dots i'));cards.forEach(function(c,i){c.animate([{opacity:0,transform:'translateY(-9px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,delay:i*90,easing:EASE_OUT,fill:'forwards'});c.style.opacity=1});leader.animate([{opacity:0,transform:'translateY(12px) scale(.94)'},{opacity:1,transform:'translateY(0) scale(1)'}],{duration:460,delay:260,easing:EASE_OUT,fill:'forwards'});leader.style.opacity=1;await wait(820);
+var angles=[-43,0,43],starts=[{x:57,y:57},{x:169,y:57},{x:281,y:57}];for(var i=0;i<cards.length;i++){var ang=angles[i];lines[i].animate([{transform:'rotate('+ang+'deg) scaleY(0)'},{transform:'rotate('+ang+'deg) scaleY(1)'}],{duration:440,easing:EASE_OUT,fill:'forwards'});packet.style.left=starts[i].x+'px';packet.style.top=starts[i].y+'px';packet.style.opacity=1;var dx=169-starts[i].x,dy=118-starts[i].y;await settled(packet.animate([{opacity:0,transform:'translate(0,0) scale(.8)'},{opacity:1,transform:'translate(0,0) scale(1)',offset:.18},{opacity:1,transform:'translate('+(dx/2)+'px,'+(dy-14)+'px)',offset:.55},{opacity:0,transform:'translate('+dx+'px,'+dy+'px) scale(.55)'}],{duration:680,easing:EASE_MOVE,fill:'forwards'}));packet.style.opacity=0;dots[i].classList.add('as5-on');dots[i].animate([{transform:'scale(.7)'},{transform:'scale(1.5)'},{transform:'scale(1)'}],{duration:300,easing:EASE_POP});await wait(260)}
+var owner=scene.querySelector('.as5-owner'),ring=scene.querySelector('.as5-ring');owner.animate([{transform:'scale(0)'},{transform:'scale(1)'}],{duration:380,easing:EASE_POP,fill:'forwards'});owner.style.transform='scale(1)';ring.animate([{opacity:.7,transform:'scale(1)'},{opacity:0,transform:'scale(1.28)'}],{duration:820,easing:EASE_OUT,fill:'forwards'})}
+fit();if('ResizeObserver'in window)new ResizeObserver(fit).observe(stage);else window.addEventListener('resize',fit);function arm(){if(!('IntersectionObserver'in window)){play();return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.disconnect();requestAnimationFrame(function(){requestAnimationFrame(play)})}})},{threshold:.4});io.observe(root)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',arm);else arm()})();
+  }
+</script>

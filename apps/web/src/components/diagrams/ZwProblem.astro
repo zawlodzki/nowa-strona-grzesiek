@@ -1,0 +1,206 @@
+---
+// Ported from the Webflow embed #zw-problem (audyt-ai-sprzedaz, kurs-ai-w-sprzedazy, program-ai-dla-zespolu-sprzedazy, wdrozenie-ai-w-sprzedazy-b2b) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  AI dla sprzedazy — landing "problem": the perception gap.
+  Two lines leave a shared origin: perceived speed shoots up,
+  business result stays flat. The reveal is the gap between them.
+  zawlodzki.pl · self-contained, no external dependencies.
+*/
+---
+
+<div class="dg" data-diagram="zw-problem" aria-hidden="true" style="--dg-w: 640; --dg-h: 360;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <svg class="pr-svg" viewBox="0 0 640 360" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <path class="pr-area" d="M64,250 C220,232 350,150 508,66 L520,244 C370,245 200,247 64,250 Z"/>
+
+          <g class="pr-axis">
+            <line x1="64" y1="24" x2="64" y2="300"/>
+            <line x1="64" y1="300" x2="606" y2="300"/>
+          </g>
+          <text class="pr-cap" x="604" y="328" text-anchor="end">Time since AI &rarr;</text>
+
+          <circle class="pr-origin" cx="64" cy="250" r="5"/>
+
+          <path class="pr-flat pr-line" d="M64,250 C200,247 370,245 520,244" pathLength="1"/>
+          <circle class="pr-flat-dot pr-enddot" cx="520" cy="244" r="5"/>
+          <text class="pr-lbl pr-lbl--flat" x="368" y="232" text-anchor="end">Business result</text>
+
+          <path class="pr-perc pr-line" d="M64,250 C220,232 350,150 508,66" pathLength="1"/>
+          <path class="pr-arrow" d="M-11,-7 L0,0 L-11,7" transform="translate(508,66) rotate(-28)"/>
+          <text class="pr-lbl pr-lbl--perc" x="150" y="120">Perceived speed</text>
+          <g class="pr-chip">
+            <rect x="524" y="34" width="66" height="30" rx="15"/>
+            <text x="557" y="54" text-anchor="middle">+40%</text>
+          </g>
+
+          <line class="pr-gapline" x1="514" y1="78" x2="514" y2="236"/>
+          <g class="pr-gaptag">
+            <rect x="522" y="142" width="86" height="30" rx="8"/>
+            <text x="565" y="162" text-anchor="middle">the gap</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+/* ---- Shared family layer: tokens + responsive shell ---- */
+  [data-diagram="zw-problem"] {
+    --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
+    --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
+    --zw-border:#DDE1E6; --zw-border-soft:#EDF0F3; --zw-heading:#0E0F11;
+    --zw-text:#1E2024; --zw-muted:#838D95; --zw-card:#FFFFFF;
+    --zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --zw-radius-card:10px; --zw-radius-lane:14px;
+    --zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);
+    font-family:var(--zw-font); width:100%; max-width:620px; margin:0 auto;
+    box-sizing:border-box; -webkit-font-smoothing:antialiased;
+  }
+  [data-diagram="zw-problem"] *, [data-diagram="zw-problem"] *::before, [data-diagram="zw-problem"] *::after { box-sizing:border-box; }
+  [data-diagram="zw-problem"] .zw-stage { width:100%; overflow:hidden; }
+  [data-diagram="zw-problem"] .zw-fit { width:640px; transform-origin:top left; }
+  [data-diagram="zw-problem"] .zw-scene { position:relative; }
+
+  /* =================== SCENE:STYLE start =================== */
+  [data-diagram="zw-problem"] .pr-svg { display:block; width:100%; height:auto; overflow:visible; }
+  [data-diagram="zw-problem"] .pr-svg text { font-family:var(--zw-font); }
+
+  /* axes + caption fade in */
+  [data-diagram="zw-problem"] .pr-axis { opacity:0; }
+  [data-diagram="zw-problem"] .pr-axis line { stroke:var(--zw-border); stroke-width:2; }
+  [data-diagram="zw-problem"] .pr-cap { fill:var(--zw-muted); font-size:15px; opacity:0; }
+  [data-diagram="zw-problem"] .pr-origin { fill:var(--zw-primary); opacity:0; }
+
+  /* the two lines draw via dashoffset */
+  [data-diagram="zw-problem"] .pr-line { fill:none; stroke-width:5; stroke-linecap:round; stroke-dasharray:1; stroke-dashoffset:1; }
+  [data-diagram="zw-problem"] .pr-flat { stroke:var(--zw-primary); }
+  [data-diagram="zw-problem"] .pr-perc { stroke:var(--zw-secondary); }
+  [data-diagram="zw-problem"] .pr-enddot { opacity:0; }
+  [data-diagram="zw-problem"] .pr-flat-dot { fill:var(--zw-primary); }
+
+  [data-diagram="zw-problem"] .pr-arrow { fill:none; stroke:var(--zw-secondary); stroke-width:5; stroke-linecap:round; stroke-linejoin:round; opacity:0; transform-box:fill-box; }
+
+  [data-diagram="zw-problem"] .pr-lbl { font-size:17px; font-weight:640; opacity:0; }
+  [data-diagram="zw-problem"] .pr-lbl--flat { fill:var(--zw-primary); }
+  [data-diagram="zw-problem"] .pr-lbl--perc { fill:var(--zw-secondary); }
+
+  [data-diagram="zw-problem"] .pr-chip { opacity:0; transform-box:fill-box; transform-origin:center; }
+  [data-diagram="zw-problem"] .pr-chip rect { fill:var(--zw-secondary); }
+  [data-diagram="zw-problem"] .pr-chip text { fill:#fff; font-size:16px; font-weight:700; }
+
+  /* the gap reveal */
+  [data-diagram="zw-problem"] .pr-area { fill:var(--zw-secondary); opacity:0; }
+  [data-diagram="zw-problem"] .pr-gapline { stroke:var(--zw-muted); stroke-width:2; stroke-dasharray:5 6; stroke-linecap:round; opacity:0; }
+  [data-diagram="zw-problem"] .pr-gaptag { opacity:0; transform-box:fill-box; transform-origin:center; }
+  [data-diagram="zw-problem"] .pr-gaptag rect { fill:var(--zw-card); stroke:var(--zw-border); stroke-width:1.5; }
+  [data-diagram="zw-problem"] .pr-gaptag text { fill:var(--zw-text); font-size:15px; font-weight:700; }
+  /* ==================== SCENE:STYLE end ==================== */
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-diagram="zw-problem"] .pr-axis, [data-diagram="zw-problem"] .pr-cap, [data-diagram="zw-problem"] .pr-origin,
+    [data-diagram="zw-problem"] .pr-enddot, [data-diagram="zw-problem"] .pr-arrow, [data-diagram="zw-problem"] .pr-lbl,
+    [data-diagram="zw-problem"] .pr-chip, [data-diagram="zw-problem"] .pr-gapline, [data-diagram="zw-problem"] .pr-gaptag { opacity:1; }
+    [data-diagram="zw-problem"] .pr-area { opacity:.10; }
+    [data-diagram="zw-problem"] .pr-line { stroke-dashoffset:0; }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-problem"]')) {
+(function () {
+  if (!root || root.dataset.zwInit) return;
+  root.dataset.zwInit = '1';
+
+  var DESIGN_W = 640;
+  var stage = root.querySelector('.zw-stage');
+  var fitEl = root.querySelector('.zw-fit');
+  var scene = root.querySelector('.zw-scene');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var EASE_OUT  = 'cubic-bezier(0.22, 1, 0.36, 1)';
+  var EASE_MOVE = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+  var EASE_POP  = 'cubic-bezier(0.34, 1.56, 0.64, 1)';
+  function wait(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+  function settled(a){ return a.finished.catch(function(){}); }
+
+  function fit(){}
+
+  var $ = function(s){ return scene.querySelector(s); };
+  var axis   = $('.pr-axis'),   cap  = $('.pr-cap'),   origin = $('.pr-origin');
+  var flat   = $('.pr-flat'),   perc = $('.pr-perc');
+  var flatDot= $('.pr-flat-dot'), arrow = $('.pr-arrow');
+  var lblFlat= $('.pr-lbl--flat'), lblPerc = $('.pr-lbl--perc'), chip = $('.pr-chip');
+  var area   = $('.pr-area'), gapLine = $('.pr-gapline'), gapTag = $('.pr-gaptag');
+
+  function fadeIn(el, dur, delay){
+    el.animate([{opacity:0},{opacity:1}], {duration:dur, delay:delay||0, easing:EASE_OUT, fill:'forwards'});
+    el.style.opacity = 1;
+  }
+  function drawLine(el, dur, easing){
+    var a = el.animate([{strokeDashoffset:1},{strokeDashoffset:0}], {duration:dur, easing:easing, fill:'forwards'});
+    el.style.strokeDashoffset = 0;
+    return settled(a);
+  }
+  function pop(el, toOpacity){
+    el.animate([{opacity:0, transform:'scale(0.4)'},{opacity:(toOpacity||1), transform:'scale(1)'}],
+      {duration:380, easing:EASE_POP, fill:'forwards'});
+    el.style.opacity = (toOpacity||1);
+  }
+
+  async function play(){
+    fit();
+    if (reduce) { return; }
+
+    // 1 · stage the chart frame
+    fadeIn(axis, 380);
+    fadeIn(cap, 380, 120);
+    pop(origin, 1);
+    await wait(460);
+
+    // 2 · business result draws flat, then perceived speed shoots up
+    drawLine(flat, 820, EASE_OUT);
+    fadeIn(lblFlat, 420, 260);
+    fadeIn(flatDot, 300, 700);
+    await wait(320);
+
+    await drawLine(perc, 1080, EASE_MOVE);
+    fadeIn(arrow, 300);   // opacity only — its translate/rotate transform must survive
+    fadeIn(lblPerc, 420, 0);
+    pop(chip, 1);
+    await wait(520);
+
+    // 3 · reveal the gap (the point of the slide — no celebration)
+    area.animate([{opacity:0},{opacity:.10}], {duration:620, easing:EASE_OUT, fill:'forwards'});
+    area.style.opacity = .10;
+    fadeIn(gapLine, 460);
+    await wait(220);
+    pop(gapTag, 1);
+    // one calm pulse on the tag
+    await wait(420);
+    gapTag.animate([{transform:'scale(1)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],
+      {duration:520, easing:EASE_POP});
+  }
+
+  fit();
+  if ('ResizeObserver' in window) { new ResizeObserver(fit).observe(stage); }
+  else { window.addEventListener('resize', fit); }
+
+  function arm(){
+    if (!('IntersectionObserver' in window)) { play(); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { io.disconnect(); requestAnimationFrame(function(){ requestAnimationFrame(play); }); }
+      });
+    }, { threshold: 0.4 });
+    io.observe(root);
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arm); }
+  else { arm(); }
+})();
+  }
+</script>

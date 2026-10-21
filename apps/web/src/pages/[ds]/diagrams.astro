@@ -1,0 +1,9 @@
+---
+// Astro never routes files under an underscore folder, so the /_ds catalogue
+// pages live in src/pages/_ds and this route serves them at /_ds/*.
+import Diagrams from '../_ds/diagrams.astro';
+
+export const getStaticPaths = () => [{ params: { ds: '_ds' } }];
+---
+
+<Diagrams />

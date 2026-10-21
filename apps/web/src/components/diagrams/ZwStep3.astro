@@ -1,0 +1,176 @@
+---
+// Ported from the Webflow embed #zw-step3 (program-ai-dla-zespolu-sprzedazy, wdrozenie-ai-w-sprzedazy-b2b) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  AI dla sprzedazy — landing step 3: "Narzedzia i integracje"
+  Minimal stage illustration. Sits next to the step description.
+  zawlodzki.pl · self-contained, no external dependencies.
+*/
+---
+
+<div class="dg" data-diagram="zw-step3" aria-hidden="true" style="--dg-w: 400; --dg-h: 200;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="s3-wrap">
+          <svg class="s3-links" viewBox="0 0 380 200" width="380" height="200" fill="none">
+            <path class="s3-link" d="M124 31 C 190 31, 200 100, 256 100"/>
+            <path class="s3-link" d="M124 100 L 256 100"/>
+            <path class="s3-link" d="M124 169 C 190 169, 200 100, 256 100"/>
+          </svg>
+          <div class="s3-node" style="top:8px">CRM</div>
+          <div class="s3-node" style="top:77px">Mail</div>
+          <div class="s3-node" style="top:146px">Calendar</div>
+          <div class="s3-ring" aria-hidden="true"></div>
+          <div class="s3-hub">AI</div>
+          <div class="s3-pill" aria-hidden="true">Read-only</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+[data-diagram="zw-step3"] {
+    --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
+    --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
+    --zw-border:#DDE1E6; --zw-border-soft:#EDF0F3; --zw-heading:#0E0F11;
+    --zw-text:#1E2024; --zw-muted:#838D95; --zw-card:#FFFFFF;
+    --zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --zw-radius-card:10px;
+    --zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);
+    font-family:var(--zw-font); width:100%; max-width:440px; margin:0 auto;
+    box-sizing:border-box; -webkit-font-smoothing:antialiased;
+  }
+  [data-diagram="zw-step3"] *, [data-diagram="zw-step3"] *::before, [data-diagram="zw-step3"] *::after { box-sizing:border-box; }
+  [data-diagram="zw-step3"] .zw-stage { width:100%; overflow:hidden; }
+  [data-diagram="zw-step3"] .zw-fit { width:400px; transform-origin:top left; }
+  [data-diagram="zw-step3"] .zw-scene { position:relative; }
+
+  /* =================== SCENE:STYLE start =================== */
+  [data-diagram="zw-step3"] .s3-wrap { position:relative; width:380px; height:200px; margin:4px auto; }
+  [data-diagram="zw-step3"] .s3-links { position:absolute; top:0; left:0; }
+  [data-diagram="zw-step3"] .s3-link {
+    stroke:var(--zw-primary-30); stroke-width:2.5; stroke-linecap:round;
+  }
+  [data-diagram="zw-step3"] .s3-node {
+    position:absolute; left:6px; width:118px; height:46px;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--zw-card); border:1px solid var(--zw-border);
+    border-radius:var(--zw-radius-card); box-shadow:var(--zw-shadow-rest);
+    font-size:13px; font-weight:700; letter-spacing:.05em; color:var(--zw-text);
+    opacity:0; transition:border-color .35s ease, color .35s ease;
+  }
+  [data-diagram="zw-step3"] .s3-node--on { border-color:var(--zw-primary-30); color:var(--zw-primary); }
+  [data-diagram="zw-step3"] .s3-hub {
+    position:absolute; left:256px; top:56px; width:88px; height:88px;
+    border-radius:50%; background:var(--zw-primary-10);
+    border:2px solid var(--zw-secondary);
+    display:flex; align-items:center; justify-content:center;
+    font-size:22px; font-weight:700; color:var(--zw-primary);
+    opacity:0; z-index:3;
+  }
+  [data-diagram="zw-step3"] .s3-ring {
+    position:absolute; left:256px; top:56px; width:88px; height:88px;
+    border-radius:50%; border:2px solid var(--zw-secondary);
+    opacity:0; z-index:2; pointer-events:none;
+  }
+  [data-diagram="zw-step3"] .s3-pill {
+    position:absolute; left:256px; top:150px; width:88px; text-align:center;
+    font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+    color:var(--zw-muted); opacity:0;
+  }
+  /* ==================== SCENE:STYLE end ==================== */
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-diagram="zw-step3"] .s3-node { opacity:1; border-color:var(--zw-primary-30); color:var(--zw-primary); }
+    [data-diagram="zw-step3"] .s3-hub { opacity:1; }
+    [data-diagram="zw-step3"] .s3-pill { opacity:1; }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-step3"]')) {
+(function () {
+  if (!root || root.dataset.zwInit) return;
+  root.dataset.zwInit = '1';
+
+  var DESIGN_W = 400;
+  var stage = root.querySelector('.zw-stage');
+  var fitEl = root.querySelector('.zw-fit');
+  var scene = root.querySelector('.zw-scene');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var EASE_OUT = 'cubic-bezier(0.22, 1, 0.36, 1)';
+  var EASE_MOVE = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+  function wait(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+  function settled(a){ return a.finished.catch(function(){}); }
+
+  function fit(){}
+
+  var nodes = Array.prototype.slice.call(scene.querySelectorAll('.s3-node'));
+  var links = Array.prototype.slice.call(scene.querySelectorAll('.s3-link'));
+  var hub   = scene.querySelector('.s3-hub');
+  var ring  = scene.querySelector('.s3-ring');
+  var pill  = scene.querySelector('.s3-pill');
+
+  // prime line-draw
+  links.forEach(function(p){
+    var len = p.getTotalLength();
+    p.style.strokeDasharray = len;
+    p.style.strokeDashoffset = reduce ? 0 : len;
+  });
+
+  async function play(){
+    fit();
+    if (reduce) { return; }
+
+    hub.animate([{opacity:0, transform:'scale(.85)'},{opacity:1, transform:'scale(1)'}],
+      {duration:420, easing:EASE_OUT, fill:'forwards'});
+    hub.style.opacity = 1;
+    nodes.forEach(function(n,i){
+      n.animate([{opacity:0, transform:'translateX(-10px)'},{opacity:1, transform:'translateX(0)'}],
+        {duration:400, delay:120 + i*90, easing:EASE_OUT, fill:'forwards'});
+      n.style.opacity = 1;
+    });
+    await wait(120 + nodes.length*90 + 300);
+
+    // draw each link, light its source node
+    for (var i=0; i<links.length; i++){
+      var p = links[i];
+      p.animate([{strokeDashoffset:p.getTotalLength()},{strokeDashoffset:0}],
+        {duration:520, easing:EASE_MOVE, fill:'forwards'});
+      p.style.strokeDashoffset = 0;
+      nodes[i].classList.add('s3-node--on');
+      await wait(300);
+    }
+
+    // read-only label + one calm ring pulse on the hub
+    await wait(120);
+    pill.animate([{opacity:0, transform:'translateY(4px)'},{opacity:1, transform:'translateY(0)'}],
+      {duration:340, easing:EASE_OUT, fill:'forwards'});
+    pill.style.opacity = 1;
+    ring.animate(
+      [{opacity:.55, transform:'scale(1)'},{opacity:0, transform:'scale(1.45)'}],
+      {duration:900, easing:EASE_OUT});
+  }
+
+  fit();
+  if ('ResizeObserver' in window) { new ResizeObserver(fit).observe(stage); }
+  else { window.addEventListener('resize', fit); }
+
+  function arm(){
+    if (!('IntersectionObserver' in window)) { play(); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { io.disconnect(); requestAnimationFrame(function(){ requestAnimationFrame(play); }); }
+      });
+    }, { threshold: 0.4 });
+    io.observe(root);
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arm); }
+  else { arm(); }
+})();
+  }
+</script>

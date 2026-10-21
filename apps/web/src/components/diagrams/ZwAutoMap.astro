@@ -1,0 +1,188 @@
+---
+// Ported from the Webflow embed #zw-auto-map (automatyzacje-dla-pipedrive) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  Automations for Pipedrive — step 1: map the flow, pick high-impact automations
+  Self-contained Webflow embed. Transparent, play-once, responsive.
+  Scope: zw-auto-map
+*/
+---
+
+<div class="dg" data-diagram="zw-auto-map" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
+    <div class="am-panel">
+      <span class="am-eyebrow">Lead &rarr; delivery</span>
+      <span class="am-wire am-wire--1"></span>
+      <span class="am-wire am-wire--2"></span>
+      <span class="am-wire am-wire--3"></span>
+
+      <div class="am-node am-node--1">
+        <span class="am-ico">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16M4 6l8 6 8-6M4 6v12h16V6"/></svg>
+        </span>
+        <b>Lead</b>
+      </div>
+      <div class="am-node am-node--2" data-pick="1">
+        <span class="am-bolt">&#9889;</span>
+        <span class="am-ico">
+          <svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v4h4"/></svg>
+        </span>
+        <b>Offer</b>
+        <span class="am-tag">Auto</span>
+      </div>
+      <div class="am-node am-node--3" data-pick="1">
+        <span class="am-bolt">&#9889;</span>
+        <span class="am-ico">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+        </span>
+        <b>Follow-up</b>
+        <span class="am-tag">Auto</span>
+      </div>
+      <div class="am-node am-node--4">
+        <span class="am-ico">
+          <svg viewBox="0 0 24 24"><path d="M4 12h13M13 7l5 5-5 5"/></svg>
+        </span>
+        <b>Handoff</b>
+      </div>
+
+      <span class="am-done">
+        <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
+      </span>
+    </div>
+  </div></div></div>
+</div>
+
+<style is:global>
+[data-diagram="zw-auto-map"] {
+    --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
+    --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
+    --zw-border:#DDE1E6; --zw-border-soft:#EDF0F3; --zw-heading:#0E0F11;
+    --zw-text:#1E2024; --zw-muted:#838D95; --zw-card:#FFFFFF;
+    --zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --zw-serif:'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;
+    --zw-radius-card:10px; --zw-radius-lane:14px;
+    --zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);
+    --zw-shadow-lift:1px 8px 22px rgba(14,15,17,.14);
+    font-family:var(--zw-font); width:100%; max-width:440px; margin:0 auto;
+    box-sizing:border-box; -webkit-font-smoothing:antialiased;
+  }
+  [data-diagram="zw-auto-map"] *, [data-diagram="zw-auto-map"] *::before, [data-diagram="zw-auto-map"] *::after { box-sizing:border-box; }
+  [data-diagram="zw-auto-map"] .zw-stage { width:100%; overflow:hidden; }
+  [data-diagram="zw-auto-map"] .zw-fit { width:400px; transform-origin:top left; }
+  [data-diagram="zw-auto-map"] .zw-scene { position:relative; }
+  [data-diagram="zw-auto-map"] .zw-confetti { position:absolute; top:0; left:0; width:0; height:0; z-index:9; pointer-events:none; }
+  [data-diagram="zw-auto-map"] .zw-confetti i { position:absolute; width:8px; height:8px; border-radius:2px; will-change:transform,opacity; }
+
+  /* =================== SCENE:STYLE start =================== */
+  [data-diagram="zw-auto-map"] .am-panel {
+    position:relative; width:360px; height:220px; margin:6px auto;
+    background:var(--zw-bg-soft); border:1px solid var(--zw-border);
+    border-radius:var(--zw-radius-lane); overflow:hidden;
+  }
+  [data-diagram="zw-auto-map"] .am-eyebrow {
+    position:absolute; top:18px; left:20px; font-size:12px; font-weight:700;
+    letter-spacing:.09em; text-transform:uppercase; color:var(--zw-muted);
+  }
+  [data-diagram="zw-auto-map"] .am-node {
+    position:absolute; top:78px; width:66px; height:82px; padding:11px 6px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
+    background:var(--zw-card); border:1px solid var(--zw-border);
+    border-radius:var(--zw-radius-card); box-shadow:var(--zw-shadow-rest);
+    z-index:2; opacity:0; transition:border-color .35s ease, box-shadow .35s ease;
+  }
+  [data-diagram="zw-auto-map"] .am-node--1 { left:20px; }
+  [data-diagram="zw-auto-map"] .am-node--2 { left:105px; }
+  [data-diagram="zw-auto-map"] .am-node--3 { left:190px; }
+  [data-diagram="zw-auto-map"] .am-node--4 { left:275px; }
+  [data-diagram="zw-auto-map"] .am-ico { color:var(--zw-primary); line-height:0; }
+  [data-diagram="zw-auto-map"] .am-ico svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+  [data-diagram="zw-auto-map"] .am-node b { font-size:10px; font-weight:700; color:var(--zw-text); }
+  [data-diagram="zw-auto-map"] .am-node--picked { border-color:var(--zw-primary-30); box-shadow:var(--zw-shadow-lift); }
+
+  [data-diagram="zw-auto-map"] .am-wire {
+    position:absolute; top:118px; height:2px; background:var(--zw-primary-30);
+    transform-origin:left center; transform:scaleX(0); opacity:.7; z-index:1;
+  }
+  [data-diagram="zw-auto-map"] .am-wire--1 { left:86px; width:19px; }
+  [data-diagram="zw-auto-map"] .am-wire--2 { left:171px; width:19px; }
+  [data-diagram="zw-auto-map"] .am-wire--3 { left:256px; width:19px; }
+
+  [data-diagram="zw-auto-map"] .am-bolt {
+    position:absolute; top:-9px; right:-9px; width:22px; height:22px;
+    display:flex; align-items:center; justify-content:center; border-radius:50%;
+    background:var(--zw-primary); color:#fff; font-size:11px; z-index:3;
+    box-shadow:var(--zw-shadow-rest); transform:scale(0);
+  }
+  [data-diagram="zw-auto-map"] .am-tag {
+    position:absolute; left:50%; bottom:-11px; transform:translateX(-50%) scale(0);
+    padding:2px 8px; border-radius:999px; background:var(--zw-primary-10);
+    color:var(--zw-primary); font-size:8px; font-weight:800;
+    letter-spacing:.07em; text-transform:uppercase; white-space:nowrap; z-index:3;
+  }
+  [data-diagram="zw-auto-map"] .am-done {
+    position:absolute; right:14px; bottom:14px; width:27px; height:27px;
+    display:flex; align-items:center; justify-content:center; border-radius:50%;
+    background:var(--zw-success); color:#fff; transform:scale(0); z-index:4;
+  }
+  [data-diagram="zw-auto-map"] .am-done svg { width:15px; height:15px; }
+  [data-diagram="zw-auto-map"] .am-done path { fill:none; stroke:currentColor; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
+  /* ==================== SCENE:STYLE end ==================== */
+
+  @media (prefers-reduced-motion:reduce) {
+    [data-diagram="zw-auto-map"] .am-node { opacity:1; }
+    [data-diagram="zw-auto-map"] .am-node--2, [data-diagram="zw-auto-map"] .am-node--3 { border-color:var(--zw-primary-30); box-shadow:var(--zw-shadow-lift); }
+    [data-diagram="zw-auto-map"] .am-wire { transform:scaleX(1); }
+    [data-diagram="zw-auto-map"] .am-bolt, [data-diagram="zw-auto-map"] .am-tag { transform:translateX(-50%) scale(1); }
+    [data-diagram="zw-auto-map"] .am-node--2 .am-bolt, [data-diagram="zw-auto-map"] .am-node--3 .am-bolt { transform:scale(1); }
+    [data-diagram="zw-auto-map"] .am-done { transform:scale(1); }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-auto-map"]')) {
+(function(){
+  if(!root||root.dataset.zwInit)return; root.dataset.zwInit='1';
+  var DESIGN_W=400, stage=root.querySelector('.zw-stage'), fitEl=root.querySelector('.zw-fit'), scene=root.querySelector('.zw-scene');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var EASE_MOVE='cubic-bezier(0.645, 0.045, 0.355, 1)', EASE_OUT='cubic-bezier(0.22, 1, 0.36, 1)', EASE_POP='cubic-bezier(0.34, 1.56, 0.64, 1)';
+  function wait(ms){return new Promise(function(r){setTimeout(r,ms);});}
+  function settled(a){return a.finished.catch(function(){});}
+  function fit(){}
+
+  async function play(){
+    fit(); if(reduce)return;
+    var nodes=Array.prototype.slice.call(scene.querySelectorAll('.am-node'));
+    var wires=Array.prototype.slice.call(scene.querySelectorAll('.am-wire'));
+    // 1. Flow builds: node, wire, node, wire...
+    for(var i=0;i<nodes.length;i++){
+      nodes[i].animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:360,easing:EASE_OUT,fill:'forwards'});
+      nodes[i].style.opacity=1;
+      if(i<wires.length){
+        await wait(130);
+        wires[i].animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:260,easing:EASE_MOVE,fill:'forwards'});
+        wires[i].style.transform='scaleX(1)';
+      }
+      await wait(150);
+    }
+    await wait(340);
+    // 2. Pick the high-impact steps for automation.
+    var picks=nodes.filter(function(n){return n.dataset.pick;});
+    for(var p=0;p<picks.length;p++){
+      var n=picks[p];
+      n.classList.add('am-node--picked');
+      var bolt=n.querySelector('.am-bolt'), tag=n.querySelector('.am-tag');
+      bolt.animate([{transform:'scale(0)'},{transform:'scale(1)'}],{duration:360,easing:EASE_POP,fill:'forwards'}); bolt.style.transform='scale(1)';
+      tag.animate([{transform:'translateX(-50%) scale(0)'},{transform:'translateX(-50%) scale(1)'}],{duration:340,delay:80,easing:EASE_POP,fill:'forwards'}); tag.style.transform='translateX(-50%) scale(1)';
+      await wait(430);
+    }
+    await wait(240);
+    var done=scene.querySelector('.am-done');
+    done.animate([{transform:'scale(0)'},{transform:'scale(1)'}],{duration:380,easing:EASE_POP,fill:'forwards'}); done.style.transform='scale(1)';
+  }
+  fit(); if('ResizeObserver'in window)new ResizeObserver(fit).observe(stage);else window.addEventListener('resize',fit);
+  function arm(){if(!('IntersectionObserver'in window)){play();return;}var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){io.disconnect();requestAnimationFrame(function(){requestAnimationFrame(play);});}});},{threshold:.4});io.observe(root);}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',arm);else arm();
+})();
+  }
+</script>
