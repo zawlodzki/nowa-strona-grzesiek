@@ -68,7 +68,7 @@ Observed 2026-10-21, after the inventory was taken:
 - `whois zawlodzki.pl` says `dnssec: Unsigned`.
 - OVH still serves DNSKEY for the zone (one KSK and one ZSK, TTL 3600). The key tag of the KSK matches the DS the inventory recorded.
 
-The inventory, taken earlier the same day, recorded a published DS and `dnssec: Signed`. So either DNSSEC was disabled at OVH between the two checks, or the registry dropped the DS for another reason. This task changed nothing at OVH. The user should confirm in OVH Manager what happened.
+The inventory, taken earlier the same day, recorded a published DS and `dnssec: Signed`. The user confirmed that they disabled DNSSEC in OVH Manager on 2026-10-21, after the inventory was taken. So runbook step 2 (PLAN.md section 8) is done. The exact time is not recorded. The DS was already gone from every `.pl` nameserver when this check ran.
 
 Consequence: the chain from `.pl` to the zone is already unsigned. A nameserver switch today would not break validation. Leftover DNSKEYs at OVH without a DS are harmless.
 
@@ -92,6 +92,8 @@ This replaces step 2 of the PLAN.md section 8 runbook with exact checks. Every s
 6. **Switch nameservers at OVH to the two Cloudflare NS** (runbook step 4). The `.pl` delegation NS TTL is 86400 (measured), so old and new nameservers both answer for up to a day. Keep the OVH zone untouched during that day.
 7. **After 48 h on Cloudflare** (runbook step 7): enable DNSSEC in Cloudflare, copy the DS it shows into OVH Manager, then confirm with the step 1 loop that the `.pl` nameservers return the new DS and that step 5 shows the `ad` flag.
 
+Status on 2026-10-21: steps 2 and 3 are done (DNSSEC disabled by the user, no DS at any `.pl` nameserver). Step 4 is satisfied 24 h after the DS disappeared. The exact time is unknown, so treat 2026-10-22 end of day as the earliest safe point for step 6, after rerunning steps 1 and 5.
+
 Never re-enable DNSSEC at OVH after step 2. A DS for OVH's key published while Cloudflare serves the zone would make the domain fail validation.
 
 ## Importing into Cloudflare
@@ -102,6 +104,5 @@ Never re-enable DNSSEC at OVH after step 2. A DS for OVH's key published while C
 
 ## Follow-ups
 
-- Confirm in OVH Manager whether DNSSEC was turned off on 2026-10-21, and by whom.
 - The `asv=` TXT owner is still unknown. It is kept.
 - The Webflow verification TXT and the dropped OVH helpers can be removed for good after gate G5 (PLAN.md section 8 step 8).
