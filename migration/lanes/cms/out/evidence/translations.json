@@ -1,0 +1,29 @@
+{
+  "projectId": "8u2zjhvn",
+  "dataset": "development",
+  "verification": "Created and switched translations through the Studio language menu, then read back documents with the Sanity connector in raw perspective.",
+  "documents": [
+    {
+      "_id": "drafts.819ff409-9ba6-4485-8882-62d63089245b",
+      "_type": "page",
+      "language": "pl",
+      "title": "T07 próba tłumaczeń PL"
+    },
+    {
+      "_id": "drafts.8c05a3fc-728d-43dd-8710-4ab81036b2f9",
+      "_type": "page",
+      "language": "en",
+      "title": "T07 translation test EN"
+    },
+    {
+      "_id": "c834763b-d1a4-45c5-bd43-6a45f245aa57",
+      "_type": "translation.metadata",
+      "references": [
+        "819ff409-9ba6-4485-8882-62d63089245b",
+        "8c05a3fc-728d-43dd-8710-4ab81036b2f9"
+      ]
+    }
+  ],
+  "productionContentDocuments": 0,
+  "productionNote": "Count excludes system.group and system.retention initialized by Sanity."
+}
