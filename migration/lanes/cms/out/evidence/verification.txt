@@ -1,0 +1,21 @@
+$ pnpm typegen && node scripts/verify-schema.mjs
+$ sanity schema extract --path schema.json --force && sanity typegen generate
+- Extracting schema
+✔ Extracted schema to /Users/grzesiek/.codex/worktrees/t07-sanity-studio/nowa-strona-grzesiek/apps/studio/schema.json
+- Loading config…
+✔ Config loaded from sanity.cli.ts
+- Loading schema…
+✔ Schema loaded from ./schema.json
+- Generating schema types…
+✔ Successfully generated types to ./sanity.types.ts in 305ms
+  └─ 0 queries and 58 schema types
+  └─ found queries in 0 files after evaluating 5 files
+  └─ formatted the generated code with prettier
+PASS contract blocks, fields, Portable Text members and styles
+PASS rejects language
+PASS rejects seo-title
+PASS rejects seo-description
+PASS rejects uppercase-path
+PASS rejects missing-alt
+PASS rejects unknown-diagram
+PASS PL and EN documents validate from files; no dataset writes

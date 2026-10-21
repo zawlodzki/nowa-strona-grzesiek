@@ -2,5 +2,25 @@
   "name": "studio",
   "private": true,
   "version": "0.0.0",
-  "description": "Sanity Studio, created by task T07"
+  "scripts": {
+    "dev": "sanity dev --host localhost",
+    "build": "sanity build",
+    "check": "tsc --noEmit && sanity schema validate",
+    "typegen": "sanity schema extract --path schema.json --force && sanity typegen generate",
+    "verify": "pnpm typegen && node scripts/verify-schema.mjs"
+  },
+  "dependencies": {
+    "sanity": "6.20.0",
+    "@sanity/document-internationalization": "6.2.43",
+    "sanity-plugin-internationalized-array": "5.3.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "styled-components": "6.6.0"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/node": "24.19.2"
+  }
 }

@@ -1,0 +1,24 @@
+PR #13 CI fix
+Failed GitHub Actions run: https://github.com/zawlodzki/nowa-strona-grzesiek/actions/runs/39642552716
+
+Before, original commit in a fresh directory outside the local home dependency tree:
+$ pnpm install --frozen-lockfile
+PASS
+$ pnpm --filter studio exec tsc --noEmit
+sanity.cli.ts(4,41): error TS2591: Cannot find name 'process'.
+sanity.config.ts(13,12): error TS2591: Cannot find name 'process'.
+Exit 1
+
+After, same directory with the package, tsconfig and lockfile fix:
+$ pnpm install --frozen-lockfile
+PASS
+$ pnpm check
+Studio TypeScript PASS. Sanity schema validation 0 errors and 0 warnings.
+Astro check 0 errors, 0 warnings and 0 hints.
+$ pnpm --filter web exec tsc --noEmit
+PASS
+$ pnpm build
+Web and Studio PASS.
+
+Root cause: undeclared Node types. The local home directory supplied ancestor @types/node, hiding the missing Studio dependency. CI had no such ancestor package.
+Fix: direct pinned @types/node@24.19.2 and explicit compilerOptions.types for node, react and react-dom.
