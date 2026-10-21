@@ -7,7 +7,7 @@
 - [x] Verify on the matching surface.
 - [x] Rebase into small, ordered commits. Stack follow-ups. One implementation commit followed by the PR handoff.
 - [x] If the design is contested, `interrogate` before shipping. Skip because neither schema candidate remains contested.
-- [ ] Run **Opening a PR**.
+- [x] Run **Opening a PR**. https://github.com/zawlodzki/nowa-strona-grzesiek/pull/13
 
 ## Throughput checkpoint
 
