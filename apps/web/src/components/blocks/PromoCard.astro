@@ -1,0 +1,29 @@
+---
+import type { PromoCard } from '../../../../studio/sanity.types';
+import type { ResolvedImage, ResolvedPage } from '../ui/block-types';
+import { pageHref } from '../ui/block-types';
+import BlockSection from '../ui/BlockSection.astro';
+import Button from '../ui/Button.astro';
+import MediaImage from '../ui/MediaImage.astro';
+interface Props { data: PromoCard; target?: ResolvedPage; badge?: ResolvedImage; }
+const { data, target, badge } = Astro.props;
+const href = target && target._id === data.target?._ref ? pageHref(target) : undefined;
+---
+<BlockSection kind="promo-card" tone="dark"><div class:list={['promo', { 'has-badge': badge }]}>
+  <div class="copy">
+    {data.title && <h2>{data.title}</h2>}
+    {(data.points?.length ?? 0) > 0 && <ul>{data.points?.map((point) => <li>{point}</li>)}</ul>}
+    {href && <Button link={{ _type: 'link', href, label: `Zobacz ${target?.title ?? data.title ?? 'szczegóły'}` }} variant="text" />}
+  </div>
+  {badge && <div class="badge"><MediaImage image={badge} /></div>}
+</div></BlockSection>
+<style>
+  .promo { display: grid; align-items: center; gap: var(--space-l); color: var(--text-on-dark); }
+  .copy { display: grid; justify-items: start; gap: var(--space-m); max-inline-size: 65ch; overflow-wrap: anywhere; }
+  h2 { color: var(--text-on-dark); }
+  ul { display: grid; gap: var(--space-xs); padding-inline-start: 1.2em; margin: 0; }
+  .promo :global(.action.text) { color: var(--text-link-on-dark); }
+  .promo :global(.action.text:active) { color: var(--text-on-dark); }
+  .badge { inline-size: min(100%, 10rem); }
+  @container (width >= 48rem) { .has-badge { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); } .badge { inline-size: min(100%, 18rem); justify-self: center; } }
+</style>

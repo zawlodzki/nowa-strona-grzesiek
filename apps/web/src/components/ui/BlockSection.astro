@@ -1,0 +1,6 @@
+---
+interface Props { id?: string; kind?: string; tone?: 'dark'; }
+const { id, kind, tone } = Astro.props;
+---
+<section id={id} class:list={['content-grid', 'section', kind, tone]}><div class="block-inner"><slot /></div></section>
+<style>.block-inner { container-type: inline-size; } .dark { background: var(--surface-dark); --media-caption-color: var(--text-on-dark-muted); }</style>
