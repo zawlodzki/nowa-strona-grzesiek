@@ -1,4 +1,5 @@
-// Run: node --test apps/web/src/worker/form.test.ts
+// Run: node --test apps/web/src/worker/form.test.mjs
+// Plain JS so the web app's type check needs no @types/node. Node strips the types from form.ts.
 import assert from 'node:assert/strict';
 import { after, before, beforeEach, test } from 'node:test';
 import { startMockReceiver } from './form-mock-receiver.mjs';
@@ -9,12 +10,12 @@ const realFetch = globalThis.fetch;
 globalThis.fetch = async (input, init) => {
   const url = String(input instanceof Request ? input.url : input);
   if (!url.startsWith('https://challenges.cloudflare.com/')) return realFetch(input, init);
-  const token = (init?.body as FormData).get('response');
+  const token = init?.body.get('response');
   return Response.json({ success: token === PASS_TOKEN });
 };
 
-let n8n: { url: string; received: { body: any }[]; close: () => Promise<void> };
-let failingN8n: typeof n8n;
+let n8n;
+let failingN8n;
 before(async () => {
   n8n = await startMockReceiver();
   failingN8n = await startMockReceiver({ status: 500 });
@@ -25,7 +26,7 @@ after(async () => {
 });
 beforeEach(() => (n8n.received.length = 0));
 
-function submit(form: string, fields: Record<string, string>, webhook = n8n.url, method = 'POST') {
+function submit(form, fields, webhook = n8n.url, method = 'POST') {
   const body = new FormData();
   for (const [name, value] of Object.entries(fields)) body.set(name, value);
   const request = new Request(`http://127.0.0.1/api/form?form=${form}`, method === 'POST' ? { method, body } : { method });
