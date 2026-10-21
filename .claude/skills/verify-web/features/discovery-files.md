@@ -24,7 +24,7 @@ Preconditions:
 - `web.sh doctor --port 8790` prints `doctor: healthy`.
 - The build fetched the Sanity `production` dataset. Until the importers (T15, T16) have run, it holds no pages or posts, so the urlset, the feed and the llms.txt sections are empty but valid. Record content claims as failed: precondition missing (T15/T16), and still prove routes, content types and shape.
 
-- **Routes and types.** Run `web.sh probe <path> --port 8790 --host www.zawlodzki.pl` for `/sitemap.xml`, `/sitemap-pl.xml`, `/robots.txt`, `/blog/rss.xml` and `/llms.txt`. Each gives `200`, with content types `application/xml`, `text/plain` or `application/rss+xml`, and `x-robots-tag` `-` on the production host.
+- **Routes and types.** Run `web.sh probe <path> --port 8790 --host www.zawlodzki.pl` for `/sitemap.xml`, `/sitemap-pl.xml`, `/robots.txt`, `/blog/rss.xml` and `/llms.txt`. Each gives `200`, with content type `application/xml` for the three XML files and `text/plain; charset=utf-8` for the two text files, and `x-robots-tag` `-` on the production host.
 - **Well-formed XML.** Run `xmllint --noout "$VERIFY_WEB_HOME/evidence/<run-id>/<label>.body"` on the three XML bodies. It prints nothing on success.
 - **Exclusions.** Run `grep -c 'podziekowanie\|lista-cookies' <sitemap-pl body>`. It prints `0`.
 - **Locs resolve.** Once content exists, extract every `<loc>` and probe its path with `--host www.zawlodzki.pl`. Each must give `200`, never a redirect, because a sitemap must list only canonical URLs.
@@ -34,5 +34,6 @@ Preconditions:
 
 - The files are static. A content change in Sanity does not show until the deploy hook rebuilds (T19). A stale sitemap after publishing is expected before T19.
 - A Sanity fetch error fails the build on purpose. An empty sitemap from a network blip would be worse than a failed deploy.
+- The RSS feed is served as `application/xml`, not `application/rss+xml`. Workers static assets pick the type from the file extension and ignore the header set in the Astro endpoint. Feed readers accept both.
 - `sitemap-en.xml` returns 404 until EN content exists. That is correct, not a missing route.
 - On staging, the files carry `X-Robots-Tag: noindex, nofollow` like every other response, and robots.txt still names the production sitemap.
