@@ -1,0 +1,425 @@
+{
+ "source": {
+  "items": 80,
+  "live": 80
+ },
+ "posts": 80,
+ "ndjsonSha256": "03715cf01086ad997bb2a7621653f4f0f65bf0d636feb0d10ded82ea78c2b6fb",
+ "images": {
+  "mapped": 0,
+  "pendingUpload": 332
+ },
+ "websiteFilesRefsOutsideUploads": 0,
+ "stats": {
+  "blocks": 4995,
+  "downloads": 2,
+  "embeds": 3,
+  "faqItems": 414,
+  "images": 172,
+  "links.external": 271,
+  "links.internal.page": 243,
+  "links.internal.post": 486,
+  "tables": 251,
+  "tables.cellMarksDropped": 189
+ },
+ "issuesByKind": {
+  "embed-title-derived": 3,
+  "image-alt-missing": 27,
+  "kind-defaulted": 15,
+  "schema-extras-dropped": 8,
+  "seo-description-too-long": 18,
+  "seo-title-too-long": 7
+ },
+ "issues": [
+  {
+   "slug": "crm-dla-sredniej-firmy",
+   "kind": "seo-description-too-long",
+   "detail": "163 > 160"
+  },
+  {
+   "slug": "crm-dla-firmy-od-czego-zaczac",
+   "kind": "schema-extras-dropped",
+   "detail": "HowTo"
+  },
+  {
+   "slug": "kryteria-etapow-lejka-sprzedazy",
+   "kind": "schema-extras-dropped",
+   "detail": "HowTo"
+  },
+  {
+   "slug": "kontekst-firmy-dla-ai",
+   "kind": "schema-extras-dropped",
+   "detail": "HowTo"
+  },
+  {
+   "slug": "transkrypcje-spotkan-handlowych",
+   "kind": "image-alt-missing",
+   "detail": "mainImage https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a97fcea51f90341d9819434_transkrypcje-spotkan-handlowych-og.png"
+  },
+  {
+   "slug": "transkrypcje-spotkan-handlowych",
+   "kind": "image-alt-missing",
+   "detail": "thumbnail https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a97fcea51f90341d9819434_transkrypcje-spotkan-handlowych-og.png"
+  },
+  {
+   "slug": "prognoza-sprzedazy",
+   "kind": "schema-extras-dropped",
+   "detail": "HowTo"
+  },
+  {
+   "slug": "asana-ai",
+   "kind": "seo-description-too-long",
+   "detail": "163 > 160"
+  },
+  {
+   "slug": "asana-cennik",
+   "kind": "schema-extras-dropped",
+   "detail": "SoftwareApplication.offers"
+  },
+  {
+   "slug": "proces-sprzedazy",
+   "kind": "schema-extras-dropped",
+   "detail": "HowTo"
+  },
+  {
+   "slug": "crm-a-erp",
+   "kind": "image-alt-missing",
+   "detail": "mainImage https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a8eac8cb715ffc671ca42d1_crm-a-erp-og.png"
+  },
+  {
+   "slug": "crm-a-erp",
+   "kind": "image-alt-missing",
+   "detail": "thumbnail https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a8eac8cb715ffc671ca42d1_crm-a-erp-og.png"
+  },
+  {
+   "slug": "cennik-pipedrive",
+   "kind": "schema-extras-dropped",
+   "detail": "SoftwareApplication.offers"
+  },
+  {
+   "slug": "ile-kosztuje-wdrozenie-crm",
+   "kind": "seo-description-too-long",
+   "detail": "162 > 160"
+  },
+  {
+   "slug": "wdrozenie-crm-krok-po-kroku",
+   "kind": "schema-extras-dropped",
+   "detail": "HowTo"
+  },
+  {
+   "slug": "spotkania-z-handlowcami",
+   "kind": "image-alt-missing",
+   "detail": "mainImage https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a7b2a37aa7a16a6e42fa7a2_spotkania-z-handlowcami-og.png"
+  },
+  {
+   "slug": "spotkania-z-handlowcami",
+   "kind": "image-alt-missing",
+   "detail": "thumbnail https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a7b2a37aa7a16a6e42fa7a2_spotkania-z-handlowcami-og.png"
+  },
+  {
+   "slug": "porownanie-api-crm-agent-ai",
+   "kind": "image-alt-missing",
+   "detail": "mainImage https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a71719bc51d203bd20b05b0_porownanie-api-crm-agent-ai-og.png"
+  },
+  {
+   "slug": "porownanie-api-crm-agent-ai",
+   "kind": "image-alt-missing",
+   "detail": "thumbnail https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a71719bc51d203bd20b05b0_porownanie-api-crm-agent-ai-og.png"
+  },
+  {
+   "slug": "porownanie-api-crm-agent-ai",
+   "kind": "seo-description-too-long",
+   "detail": "161 > 160"
+  },
+  {
+   "slug": "bezpieczne-przekazanie-danych",
+   "kind": "image-alt-missing",
+   "detail": "mainImage https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a60be9b2078016d7708c809_Bezpieczne%20przesy%C5%82anie%20poufnych%20danych.png"
+  },
+  {
+   "slug": "bezpieczne-przekazanie-danych",
+   "kind": "image-alt-missing",
+   "detail": "thumbnail https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a60be9b2078016d7708c809_Bezpieczne%20przesy%C5%82anie%20poufnych%20danych.png"
+  },
+  {
+   "slug": "bezpieczne-przekazanie-danych",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "aplikacje-ktore-sprawdzilem-w-4-biznesach",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "aplikacje-ktore-sprawdzilem-w-4-biznesach",
+   "kind": "seo-description-too-long",
+   "detail": "300 > 160"
+  },
+  {
+   "slug": "jak-automatycznie-przydzielac-leady-handlowcom-wedlug-branzy-klienta",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "jak-automatycznie-przydzielac-leady-handlowcom-wedlug-branzy-klienta",
+   "kind": "seo-title-too-long",
+   "detail": "68 > 60"
+  },
+  {
+   "slug": "jak-automatycznie-przydzielac-leady-handlowcom-wedlug-branzy-klienta",
+   "kind": "seo-description-too-long",
+   "detail": "192 > 160"
+  },
+  {
+   "slug": "automatyczne-przydzielanie-leadow-wedlug-specjalizacji-handlowca-dzieki-ai",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "automatyczne-przydzielanie-leadow-wedlug-specjalizacji-handlowca-dzieki-ai",
+   "kind": "seo-title-too-long",
+   "detail": "74 > 60"
+  },
+  {
+   "slug": "automatyczne-przydzielanie-leadow-wedlug-specjalizacji-handlowca-dzieki-ai",
+   "kind": "seo-description-too-long",
+   "detail": "237 > 160"
+  },
+  {
+   "slug": "skuteczne-instrukcje-dla-pracownikow-w-5-krokach",
+   "kind": "embed-title-derived",
+   "detail": "https://scribehow.com/embed/Zapisywanie_kryteriow_wyszukiwania_zaawansowanego_Asana__pXeuGjlvTAqC3oHq6ew2ow -> Zapisywanie kryteriow wyszukiwania zaawansowanego Asana (scribehow.com)"
+  },
+  {
+   "slug": "skuteczne-instrukcje-dla-pracownikow-w-5-krokach",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "skuteczne-instrukcje-dla-pracownikow-w-5-krokach",
+   "kind": "seo-description-too-long",
+   "detail": "243 > 160"
+  },
+  {
+   "slug": "jak-robic-lepsze-reklamy-dzieki-konwersjom-offline",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "jak-robic-lepsze-reklamy-dzieki-konwersjom-offline",
+   "kind": "seo-description-too-long",
+   "detail": "223 > 160"
+  },
+  {
+   "slug": "raporty-sprzedazowe",
+   "kind": "image-alt-missing",
+   "detail": "mainImage https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a9013ded2036c5185dc4ad2_raporty-sprzedazowe-og.png"
+  },
+  {
+   "slug": "raporty-sprzedazowe",
+   "kind": "image-alt-missing",
+   "detail": "thumbnail https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a9013ded2036c5185dc4ad2_raporty-sprzedazowe-og.png"
+  },
+  {
+   "slug": "jak-odsiac-leady-z-nieprawdziwymi-danymi-weryfikacja-adresu-email-i-numeru-telefonu",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8abb87f6343a703cb89e_64b629332000571e36093259_CleanShot%25202023-07-18%2520at%252007.51.27_compressed.webp"
+  },
+  {
+   "slug": "jak-odsiac-leady-z-nieprawdziwymi-danymi-weryfikacja-adresu-email-i-numeru-telefonu",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8abc87f6343a703cb8a1_64b629ce9dad7b80617cac8b_CleanShot%25202023-07-18%2520at%252007.56.26_compressed.png"
+  },
+  {
+   "slug": "jak-odsiac-leady-z-nieprawdziwymi-danymi-weryfikacja-adresu-email-i-numeru-telefonu",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "jak-odsiac-leady-z-nieprawdziwymi-danymi-weryfikacja-adresu-email-i-numeru-telefonu",
+   "kind": "seo-title-too-long",
+   "detail": "83 > 60"
+  },
+  {
+   "slug": "jak-odsiac-leady-z-nieprawdziwymi-danymi-weryfikacja-adresu-email-i-numeru-telefonu",
+   "kind": "seo-description-too-long",
+   "detail": "201 > 160"
+  },
+  {
+   "slug": "porownanie-4-aplikacji-do-sledzenia-wyslanych-ofert-smart-docs-pandadoc-sellizer-docsend",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "porownanie-4-aplikacji-do-sledzenia-wyslanych-ofert-smart-docs-pandadoc-sellizer-docsend",
+   "kind": "seo-title-too-long",
+   "detail": "91 > 60"
+  },
+  {
+   "slug": "porownanie-4-aplikacji-do-sledzenia-wyslanych-ofert-smart-docs-pandadoc-sellizer-docsend",
+   "kind": "seo-description-too-long",
+   "detail": "300 > 160"
+  },
+  {
+   "slug": "7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana",
+   "kind": "embed-title-derived",
+   "detail": "https://scribehow.com/embed/Dodanie_reguly__automatyczna_zmiana_sekcji_w_projekcie_w_zaleznosci_od_zblizajacej_sie_daty_wykonania_Asana__a1U6pvYsR0uFvTm-egJsBg -> Dodanie reguly automatyczna zmiana sekcji w projekcie w zaleznosci od zblizajacej sie daty wykonania Asana (scribehow.com)"
+  },
+  {
+   "slug": "7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana",
+   "kind": "embed-title-derived",
+   "detail": "https://scribehow.com/embed/Synchronizacja_zadan_z_Asany_do_kalendarza_GoogleOutlook__QbPlrSA1RgSD055Bhu4n7A -> Synchronizacja zadan z Asany do kalendarza GoogleOutlook (scribehow.com)"
+  },
+  {
+   "slug": "7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana",
+   "kind": "seo-description-too-long",
+   "detail": "290 > 160"
+  },
+  {
+   "slug": "skroc-o-50-cotygodniowe-spotkania-w-dziale-marketingu",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "skroc-o-50-cotygodniowe-spotkania-w-dziale-marketingu",
+   "kind": "seo-description-too-long",
+   "detail": "202 > 160"
+  },
+  {
+   "slug": "5-krokow-do-obslugi-kazdego-leada-w-5-minut",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aabb8a205a1097e0b7d_643bd451354c781d90727387_Xnapper-2023-04-16-12.07.47.webp"
+  },
+  {
+   "slug": "5-krokow-do-obslugi-kazdego-leada-w-5-minut",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aabb8a205a1097e0b7a_643bd481df0407397b5a7cdc_Xnapper-2023-04-16-12.08.05.webp"
+  },
+  {
+   "slug": "5-krokow-do-obslugi-kazdego-leada-w-5-minut",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aabb8a205a1097e0b77_643bd4b9354c788ca0727940_Xnapper-2023-04-16-12.08.25.webp"
+  },
+  {
+   "slug": "5-krokow-do-obslugi-kazdego-leada-w-5-minut",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aabb8a205a1097e0b74_643bd4f47467a12a8b4a300d_Xnapper-2023-04-16-12.08.37.webp"
+  },
+  {
+   "slug": "5-krokow-do-obslugi-kazdego-leada-w-5-minut",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aacb8a205a1097e0b84_643bd522777c7340f828832b_Xnapper-2023-04-16-12.08.52.webp"
+  },
+  {
+   "slug": "5-krokow-do-obslugi-kazdego-leada-w-5-minut",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "5-krokow-do-obslugi-kazdego-leada-w-5-minut",
+   "kind": "seo-description-too-long",
+   "detail": "300 > 160"
+  },
+  {
+   "slug": "prosty-system-do-elektronicznych-wnioskow-urlopowych-ktory-stworzysz-w-45-minut",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aa7de3855ba5d502432_643ae7c8d720328b49265662_Xnapper-2023-04-15-19.41.33.webp"
+  },
+  {
+   "slug": "prosty-system-do-elektronicznych-wnioskow-urlopowych-ktory-stworzysz-w-45-minut",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aa7de3855ba5d50242f_643ae7f9e7ee10a31375ec21_Xnapper-2023-04-15-19.39.40.webp"
+  },
+  {
+   "slug": "prosty-system-do-elektronicznych-wnioskow-urlopowych-ktory-stworzysz-w-45-minut",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aa7de3855ba5d502435_643ae827cbd2fd5bead63cff_Xnapper-2023-04-15-19.45.32.webp"
+  },
+  {
+   "slug": "prosty-system-do-elektronicznych-wnioskow-urlopowych-ktory-stworzysz-w-45-minut",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aa7de3855ba5d502438_643ae858eb8a181ca415e0c4_Xnapper-2023-04-15-19.47.32.webp"
+  },
+  {
+   "slug": "prosty-system-do-elektronicznych-wnioskow-urlopowych-ktory-stworzysz-w-45-minut",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "prosty-system-do-elektronicznych-wnioskow-urlopowych-ktory-stworzysz-w-45-minut",
+   "kind": "seo-title-too-long",
+   "detail": "80 > 60"
+  },
+  {
+   "slug": "prosty-system-do-elektronicznych-wnioskow-urlopowych-ktory-stworzysz-w-45-minut",
+   "kind": "seo-description-too-long",
+   "detail": "300 > 160"
+  },
+  {
+   "slug": "pisz-bloga-2x-szybciej-robiac-automatyczny-research-z-chatgpt",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aa3a696234af3329315_642878790cb3c8724d88dd4a_Xnapper-2023-04-01-17.47.36.webp"
+  },
+  {
+   "slug": "pisz-bloga-2x-szybciej-robiac-automatyczny-research-z-chatgpt",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aa3a696234af3329318_642878edb9ddc867e32899cb_Xnapper-2023-04-01-17.25.51.webp"
+  },
+  {
+   "slug": "pisz-bloga-2x-szybciej-robiac-automatyczny-research-z-chatgpt",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aa3a696234af332931b_64287935f47c9534bb4501df_Xnapper-2023-04-01-17.24.42.webp"
+  },
+  {
+   "slug": "pisz-bloga-2x-szybciej-robiac-automatyczny-research-z-chatgpt",
+   "kind": "image-alt-missing",
+   "detail": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a5e8aa3a696234af3329312_642879c56251933a964716ae_Xnapper-2023-04-01-17.43.50.webp"
+  },
+  {
+   "slug": "pisz-bloga-2x-szybciej-robiac-automatyczny-research-z-chatgpt",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "pisz-bloga-2x-szybciej-robiac-automatyczny-research-z-chatgpt",
+   "kind": "seo-title-too-long",
+   "detail": "61 > 60"
+  },
+  {
+   "slug": "pisz-bloga-2x-szybciej-robiac-automatyczny-research-z-chatgpt",
+   "kind": "seo-description-too-long",
+   "detail": "299 > 160"
+  },
+  {
+   "slug": "inbox-zero-5-krokow-do-odzyskania-kontroli-nad-twoja-skrzynka-pocztowa",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "inbox-zero-5-krokow-do-odzyskania-kontroli-nad-twoja-skrzynka-pocztowa",
+   "kind": "seo-title-too-long",
+   "detail": "73 > 60"
+  },
+  {
+   "slug": "inbox-zero-5-krokow-do-odzyskania-kontroli-nad-twoja-skrzynka-pocztowa",
+   "kind": "seo-description-too-long",
+   "detail": "240 > 160"
+  },
+  {
+   "slug": "co-zrobic-zeby-twoje-maile-nie-ladowaly-w-spamie",
+   "kind": "kind-defaulted",
+   "detail": "typ-wpisu empty, imported as blog"
+  },
+  {
+   "slug": "co-zrobic-zeby-twoje-maile-nie-ladowaly-w-spamie",
+   "kind": "seo-description-too-long",
+   "detail": "284 > 160"
+  }
+ ]
+}
