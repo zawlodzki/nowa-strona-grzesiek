@@ -1,0 +1,28 @@
+---
+import type { Link } from '../../../../studio/sanity.types';
+import Icon from './Icon.astro';
+import { safeHref } from './block-types';
+interface Props { link: Link; variant?: 'primary' | 'secondary' | 'on-dark' | 'text'; }
+const { link, variant = 'primary' } = Astro.props;
+const href = safeHref(link.href);
+---
+{href && link.label && <a class:list={['action', variant]} href={href}><span>{link.label}</span><Icon /></a>}
+<style>
+  .action { display: inline-flex; align-items: start; gap: .6em; justify-content: safe center; min-block-size: 44px; max-inline-size: 100%; padding: var(--space-2xs) var(--space-m); border-radius: var(--radius-pill); font-weight: var(--font-weight-medium); line-height: 1.5; text-decoration: none; overflow-wrap: anywhere; }
+  .action span { align-self: center; }
+  .primary { background: var(--surface-accent); color: var(--text-on-accent); }
+  .secondary, .on-dark { background: var(--surface-page); color: var(--text-link); }
+  .secondary { border: 3px solid var(--border-accent); }
+  .text { padding-inline: 0; color: var(--text-link); border-radius: var(--radius-sm); justify-content: start; text-decoration: underline; text-underline-offset: .2em; }
+  .action:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; box-shadow: 0 0 0 2px var(--surface-page); }
+  .primary:active { background: var(--text-link-active); color: var(--text-on-accent); }
+  :is(.secondary, .on-dark):active { background: var(--surface-tint); color: var(--text-link-active); }
+  .text:active { color: var(--text-link-active); }
+  @media (hover: hover) and (pointer: fine) {
+    .primary:hover { background: var(--text-link-hover); color: var(--text-on-accent); }
+    :is(.secondary, .on-dark):hover { background: var(--surface-cyan-tint); color: var(--text-link-hover); }
+    .text:hover { color: var(--text-link-hover); text-decoration-thickness: 3px; }
+  }
+  @media (prefers-reduced-motion: no-preference) { .action { transition: background-color 250ms, color 250ms; } }
+  @media (width < 30rem) { .action:not(.text) { inline-size: 100%; } }
+</style>

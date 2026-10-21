@@ -1,0 +1,44 @@
+---
+import type { ContentSection } from '../../../../studio/sanity.types';
+import type { ResolvedImage } from '../ui/block-types';
+import BlockSection from '../ui/BlockSection.astro';
+import BlockProse from '../ui/BlockProse.astro';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+import MediaImage from '../ui/MediaImage.astro';
+interface Props { data: ContentSection; image?: ResolvedImage; }
+const { data, image } = Astro.props;
+const { layout = 'list' } = data;
+---
+<BlockSection kind="content-section">
+  <div class="content-layout">
+    <header class="intro">
+      {data.tagline && <p class="type-tagline">{data.tagline}</p>}
+      {data.heading && <h2>{data.heading}</h2>}
+      <slot name="intro"><BlockProse body={data.intro} /></slot>
+    </header>
+    {(data.items?.length ?? 0) > 0 && <ul class:list={['items', layout]}>{data.items?.map((item) => <li class:list={{ negative: item.icon === 'close' }}>
+      {layout === 'checklist' && <Icon name={item.icon === 'close' ? 'close' : 'check'} />}
+      <div class="item-copy">
+        {item.title && <h3 class="type-heading-xs">{item.title}</h3>}
+        {item.text && <p>{item.text}</p>}
+        {item.link && <Button link={item.link} variant="text" />}
+      </div>
+    </li>)}</ul>}
+    <slot name="media">{image && <MediaImage image={image} />}</slot>
+  </div>
+</BlockSection>
+<style>
+  .content-layout { display: grid; gap: var(--space-l); }
+  .intro { display: grid; gap: var(--space-m); max-inline-size: 40rem; overflow-wrap: anywhere; }
+  .items { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-m); }
+  .items > li { min-inline-size: 0; }
+  .item-copy { display: grid; gap: var(--space-xs); max-inline-size: 65ch; overflow-wrap: anywhere; }
+  .cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+  .cards > li { background: var(--surface-soft); border-radius: var(--radius-lg); padding: var(--space-m); }
+  .twoColumn { grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); }
+  .checklist > li { display: flex; align-items: start; gap: var(--space-xs); }
+  .checklist :global(svg) { color: var(--text-link); }
+  .checklist li.negative :global(svg) { color: var(--text-error); }
+  .list > li { padding-block-end: var(--space-m); border-block-end: 1px solid var(--border-hairline); }
+</style>

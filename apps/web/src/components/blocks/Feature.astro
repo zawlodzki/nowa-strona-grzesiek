@@ -1,0 +1,37 @@
+---
+import type { Feature } from '../../../../studio/sanity.types';
+import type { ResolvedImage } from '../ui/block-types';
+import BlockSection from '../ui/BlockSection.astro';
+import BlockProse from '../ui/BlockProse.astro';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+import MediaImage from '../ui/MediaImage.astro';
+interface Props { data: Feature; image?: ResolvedImage; headingLevel?: 'h2' | 'h3'; }
+const { data, image, headingLevel: Heading = 'h2' } = Astro.props;
+const hasMedia = Astro.slots.has('media') || image;
+---
+<BlockSection id={data.anchorId?.current} kind="feature">
+  <div class:list={['feature-layout', { 'has-media': hasMedia, 'media-left': data.mediaSide === 'left' }]}>
+    <div class="copy">
+      {data.tagline && <p class="type-tagline">{data.tagline}</p>}
+      {data.heading && <Heading>{data.heading}</Heading>}
+      <slot name="body"><BlockProse body={data.body} /></slot>
+      {(data.bullets?.length ?? 0) > 0 && <ul class="bullets">{data.bullets?.map((text) => <li><Icon name="check" /><span>{text}</span></li>)}</ul>}
+      {data.cta && <Button link={data.cta} variant="text" />}
+    </div>
+    {hasMedia && <div class="media"><slot name="media">{image && <MediaImage image={image} />}</slot></div>}
+  </div>
+</BlockSection>
+<style>
+  .feature-layout { display: grid; gap: var(--space-2xl); align-items: center; }
+  .copy { display: flex; flex-direction: column; align-items: start; gap: var(--space-m); max-inline-size: 65ch; overflow-wrap: anywhere; }
+  .bullets { display: grid; gap: var(--space-xs); margin: 0; padding: 0; list-style: none; }
+  .bullets li { display: flex; gap: var(--space-xs); align-items: start; }
+  .bullets :global(svg) { color: var(--text-link); }
+  @container (width >= 48rem) {
+    .has-media { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+    .has-media.media-left { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); }
+    .media-left .media { grid-column: 1; grid-row: 1; }
+    .media-left .copy { grid-column: 2; grid-row: 1; }
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+import type { CtaBand } from '../../../../studio/sanity.types';
+import { consultation } from '../ui/block-types';
+import BlockSection from '../ui/BlockSection.astro';
+import Button from '../ui/Button.astro';
+interface Props { data: CtaBand; tone?: 'accent' | 'soft'; }
+const { data, tone = 'accent' } = Astro.props;
+---
+<BlockSection kind="cta-band"><div class:list={['band', tone]}>
+  <div class="copy">{data.heading && <h2>{data.heading}</h2>}{data.body && <p>{data.body}</p>}</div>
+  <Button link={data.cta ?? consultation} variant={tone === 'accent' ? 'on-dark' : 'primary'} />
+</div></BlockSection>
+<style>
+  .band { display: grid; align-items: center; gap: var(--space-l); padding: clamp(1.5rem, 5cqi, 4rem); border-radius: var(--radius-lg); background: var(--surface-accent); color: var(--text-on-accent); }
+  .band h2 { color: inherit; }
+  .copy { display: grid; gap: var(--space-s); max-inline-size: 65ch; overflow-wrap: anywhere; }
+  .soft { background: var(--surface-soft); color: var(--text-body); }
+  @container (width >= 48rem) { .band { grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); } }
+</style>

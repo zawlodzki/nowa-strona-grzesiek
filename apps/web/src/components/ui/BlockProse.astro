@@ -1,0 +1,37 @@
+---
+import type { PortableText } from '../../../../studio/sanity.types';
+import type { TextBlock } from './block-types';
+import { safeHref } from './block-types';
+import ProseSpan from './ProseSpan.astro';
+interface Props { body?: PortableText; links?: Record<string, string>; }
+const { body = [], links = {} } = Astro.props;
+type Group = { kind: 'bullet' | 'number'; blocks: TextBlock[] } | { kind: 'block'; block: TextBlock };
+const groups: Group[] = [];
+for (const block of body) {
+  if (block._type !== 'block' || (block.level ?? 1) > 1) {
+    throw new Error('Rich media or nested lists need the portable-text renderer in the body or intro slot. BlockProse handles text and flat lists only.');
+  }
+  for (const definition of block.markDefs ?? []) {
+    if (definition._type === 'internalLink' && block.children?.some((span) => span.marks?.includes(definition._key)) && !safeHref(links[definition.reference?._ref ?? ''])) {
+      throw new Error('Internal links need resolved URLs. Supply BlockProse with a links map through the body or intro slot.');
+    }
+  }
+  if (block.listItem) {
+    const last = groups.at(-1);
+    if (last?.kind === block.listItem) last.blocks.push(block);
+    else groups.push({ kind: block.listItem, blocks: [block] });
+  } else groups.push({ kind: 'block', block });
+}
+---
+<div class="prose flow">
+  {groups.map((group) => {
+    if (group.kind !== 'block') {
+      const List = group.kind === 'bullet' ? 'ul' : 'ol';
+      return <List>{group.blocks.map((block) => <li>{block.children?.map((span) => <ProseSpan span={span} definitions={block.markDefs} links={links} />)}</li>)}</List>;
+    }
+    const block = group.block;
+    const Tag = block.style === 'h2' ? 'h2' : block.style === 'h3' ? 'h3' : block.style === 'h4' ? 'h4' : block.style === 'blockquote' ? 'blockquote' : 'p';
+    return <Tag>{block.children?.map((span) => <ProseSpan span={span} definitions={block.markDefs} links={links} />)}</Tag>;
+  })}
+</div>
+<style>.prose { max-inline-size: 65ch; overflow-wrap: anywhere; }</style>

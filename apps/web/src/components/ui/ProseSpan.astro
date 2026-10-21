@@ -1,0 +1,17 @@
+---
+import type { TextBlock, TextSpan } from './block-types';
+import { safeHref } from './block-types';
+interface Props { span: TextSpan; marks?: string[]; definitions?: TextBlock['markDefs']; links?: Record<string, string>; }
+const { span, marks = span.marks ?? [], definitions = [], links = {} } = Astro.props;
+const [mark, ...remaining] = marks;
+const definition = definitions.find((item) => item._key === mark);
+const href = definition?._type === 'link' ? safeHref(definition.href) : definition?._type === 'internalLink' ? safeHref(links[definition.reference?._ref ?? '']) : undefined;
+---
+{mark === 'strong' ? <strong><Astro.self span={span} marks={remaining} definitions={definitions} links={links} /></strong>
+  : mark === 'em' ? <em><Astro.self span={span} marks={remaining} definitions={definitions} links={links} /></em>
+  : mark === 'code' ? <code><Astro.self span={span} marks={remaining} definitions={definitions} links={links} /></code>
+  : mark === 'underline' ? <u><Astro.self span={span} marks={remaining} definitions={definitions} links={links} /></u>
+  : mark === 'strike-through' ? <s><Astro.self span={span} marks={remaining} definitions={definitions} links={links} /></s>
+  : href ? <a href={href}><Astro.self span={span} marks={remaining} definitions={definitions} links={links} /></a>
+  : mark ? <Astro.self span={span} marks={remaining} definitions={definitions} links={links} />
+  : span.text?.split('\n').map((line, index) => <>{index > 0 && <br />}{line}</>)}
