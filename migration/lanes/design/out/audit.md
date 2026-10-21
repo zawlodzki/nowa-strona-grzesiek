@@ -190,7 +190,8 @@ Severity follows impeccable: P0 blocks the task, P1 is a major problem or a WCAG
 - Sales Atlas says the system is for B2B companies "do 250 osób" (meta description and copy), but every logo section says "od 2 do 500 pracowników".
 - The tier "WDROŻENIE 5+ HANDLOWCÓW" lists "Zakres pakietu do 5 osób". The tier "DLA FIRMY PRODUKCYJNEJ" lists "Zakres dla firmy usługowej".
 - "Od czego zacząć" names "Audyt CRM Pipedrive" but links to "Zobacz audyt sprzedaży".
-- Fix: the user decides which employee range is true. Reword the tiers as "Wszystko z pakietu …, plus:", and make the audit label match its link.
+- Decided by the user on 2026-10-21: the true range is 2 to 500. Sales Atlas changes "250" to "500" in its meta description, its "Czym nie jest" item and its FAQ answer, during the T16 import.
+- Fix: reword the tiers as "Wszystko z pakietu …, plus:", and make the audit label match its link.
 - Command: `clarify`. Source: A.
 
 **16. [P2] The blog index is a wall of identical thumbnails and heavy images**
