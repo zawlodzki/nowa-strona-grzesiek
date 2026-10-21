@@ -1,0 +1,25 @@
+.DS_Store
+node_modules/
+dist/
+.astro/
+.wrangler/
+.env*
+!.env.example
+
+# local agent tooling (reinstallable from skills-lock.json)
+.agent/
+.agents/
+.codex/
+.cursor/
+.gemini/
+.grok/
+.hermes/
+.opencode/
+.impeccable/config.local.json
+.claude/settings.local.json
+
+# inventory of the live site, taken with logged-in tools: local only
+migration/00-inventory/
+
+# downloaded on first run
+.claude/skills/impeccable/scripts/bin/

@@ -1,0 +1,7 @@
+# legacy URLs with GSC impressions (16m) not found in crawl
+/lista-wskazowek-podstawowego-wdrozenia-crm-pipedrive-com
+/blog/jak-ustawic-podstawowe-wskazniki-sprzedazowe-w-pipedrive
+/aplikacje-ktore-sprawdzilem-w-4-biznesach
+/podstawowe-zasady-jak-korzystac-z-asana-com
+/podziekowanie-newsletter
+/wdrozenie-ai-dla-sprzedazy-b2b

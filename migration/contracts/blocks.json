@@ -1,0 +1,127 @@
+{
+  "_contract": "Block registry for the page builder. Owner: coordinator. Lane C turns each entry into a Sanity object type, lane D into an Astro component at src/components/blocks/<Name>.astro, lane S reads `jsonld`, lane M maps Webflow sections with `match`. Every live Webflow section must match exactly one entry (check: python3 -I migration/tools/check-contracts.py). Change requests go through lanes/<lane>/STATUS.md.",
+  "layout": {
+    "_note": "Rendered by the layout, not stored as page sections.",
+    "match": [
+      {"component": "Custom Code (must be on every page)"},
+      {"component": "header zawlodzki"},
+      {"component": "zawlodzki footer"},
+      {"classes": "zaw-schema-slot"}
+    ]
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "component": "Hero",
+      "purpose": "Page opening with H1",
+      "fields": {"variant": "'default'|'badge'", "tagline": "string", "heading": "string (renders H1)", "body": "text", "image": "image", "badges": "string[]", "cta": "link?"},
+      "jsonld": "none (WebPage.name comes from page.seo)",
+      "match": [{"component": "hero zawlodzki"}, {"component": "Hero zawlodzki badge"}, {"classes": "Hero Section"}]
+    },
+    {
+      "type": "logoStrip",
+      "component": "LogoStrip",
+      "purpose": "Client or tool logos",
+      "fields": {"variant": "'clients'|'tools'", "title": "string?", "logos": "reference<logo>[]"},
+      "jsonld": "none",
+      "match": [{"component": "zawlodzki loga wspolprace"}, {"component": "zawlodzki loga aplikacji"}, {"component": "zawlodzki narzędzia"}]
+    },
+    {
+      "type": "feature",
+      "component": "Feature",
+      "purpose": "Tagline, heading, body with optional media. Covers Problem, Krok N, Moduł N, Tygodnie X-Y, Obszar N, Bonus N and home service anchors",
+      "fields": {"tagline": "string?", "heading": "string", "body": "portableText", "bullets": "string[]?", "media": "{kind:'image', image} | {kind:'diagram', key: DiagramKey} | null", "mediaSide": "'left'|'right'", "anchorId": "slug?", "cta": "link?"},
+      "jsonld": "none",
+      "match": [{"classes": "Feature Section"}, {"component": "Feature / Left 1 / Text Only"}]
+    },
+    {
+      "type": "contentSection",
+      "component": "ContentSection",
+      "purpose": "Tagline, heading and a list or grid of items. Covers Dla kogo, Jak pracuję, Efekty, Co dostajesz, Moje usługi, Granice, Zakres",
+      "fields": {"tagline": "string?", "heading": "string", "intro": "portableText?", "layout": "'list'|'cards'|'twoColumn'|'checklist'", "items": "{title, text, icon?, link?}[]", "media": "same as feature.media"},
+      "jsonld": "none",
+      "match": [{"classes": "Section"}, {"classes": "Cards Section"}, {"component": "Empty Section / Title Left"}, {"component": "Empty Section / Title Left Plus Tagline"}]
+    },
+    {
+      "type": "pricing",
+      "component": "Pricing",
+      "purpose": "Price plans",
+      "fields": {"tagline": "string?", "heading": "string", "plans": "{name, price:number, currency:'PLN', unit:string, priceNote?, features:string[], cta:link, highlighted:boolean}[]"},
+      "jsonld": "Offer nodes with UnitPriceSpecification, attached to the page's #service or #course",
+      "match": [{"classes": "Pricing Section"}]
+    },
+    {
+      "type": "ctaBand",
+      "component": "CtaBand",
+      "purpose": "Single call to action",
+      "fields": {"heading": "string", "body": "text?", "cta": "link"},
+      "jsonld": "none",
+      "match": [{"component": "zawlodzki CTA"}, {"classes": "CTA Section"}]
+    },
+    {
+      "type": "testimonials",
+      "component": "Testimonials",
+      "purpose": "Quotes or an image wall of recommendations",
+      "fields": {"variant": "'quotes'|'imageWall'", "tagline": "string?", "heading": "string?", "items": "reference<testimonial>[]"},
+      "jsonld": "none (no self-serving Review markup)",
+      "match": [{"classes": "Testimonials Section"}]
+    },
+    {
+      "type": "promoCard",
+      "component": "PromoCard",
+      "purpose": "Cross-link to another page, today always Sales Atlas System",
+      "fields": {"title": "string", "points": "string[]", "target": "reference<page>"},
+      "jsonld": "none",
+      "match": [{"component": "Sales atlas system info"}]
+    },
+    {
+      "type": "faq",
+      "component": "Faq",
+      "purpose": "Visible Q&A accordion",
+      "fields": {"tagline": "string?", "heading": "string", "items": "{question:string, answer:portableText}[]", "emitSchema": "boolean, default true"},
+      "jsonld": "FAQPage <url>#faq when emitSchema and the block is visible; at most one per page",
+      "match": [{"classes": "FAQ Section"}]
+    },
+    {
+      "type": "contactForm",
+      "component": "ContactForm",
+      "purpose": "Lead form posting to /api/form (Worker → n8n), with 32 attribution fields",
+      "fields": {"variant": "'landing'|'full'", "tagline": "string?", "heading": "string?", "showDetails": "boolean", "formId": "'landing-contact'|'main-contact'"},
+      "jsonld": "none (ContactPage comes from page type)",
+      "match": [{"component": "kontakt zawlodzki"}, {"classes": "Contact Section"}, {"component": "Contact Section Details"}]
+    },
+    {
+      "type": "newsletterSignup",
+      "component": "NewsletterSignup",
+      "purpose": "Newsletter form",
+      "fields": {"body": "text?"},
+      "jsonld": "none",
+      "match": [{"component": "newsletter zawlodzki"}]
+    },
+    {
+      "type": "richText",
+      "component": "RichText",
+      "purpose": "Long-form text on static pages (legal, about) using the same Portable Text as posts",
+      "fields": {"body": "portableText"},
+      "jsonld": "none",
+      "match": [{"classes": "blog-article"}]
+    }
+  ],
+  "diagramKeys": {
+    "_note": "Animated diagrams are code, not content. Editors pick a key; lane D implements src/components/diagrams/<Key>.astro. Keys come from the embed ids in Webflow. Lane M extends this list from live-site/html if it finds more.",
+    "keys": ["zw-manual-relay", "crm-funnel", "zw-ai-sales", "zw-automation", "zw-asana", "zw-pipedrive-problem", "zw-crm-process", "zw-crm-data", "zw-crm-setup", "zw-crm-training", "zw-crm-handoff"]
+  },
+  "portableText": {
+    "_note": "Shared by post.body and richText.body.",
+    "styles": ["normal", "h2", "h3", "h4", "blockquote"],
+    "marks": ["strong", "em", "code", "link", "internalLink"],
+    "objects": {
+      "image": "{asset, alt (required), caption?}",
+      "table": "{rows: string[][], hasHeader: boolean}",
+      "codeBlock": "{language, code}",
+      "embed": "{kind:'youtube'|'loom'|'iframe', url, title}",
+      "download": "{label, url (files.zawlodzki.com)}",
+      "callout": "{tone:'info'|'warning', body}"
+    }
+  }
+}
