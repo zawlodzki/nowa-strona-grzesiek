@@ -1,0 +1,165 @@
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  /*
+   * No scrollbar-gutter: stable. Chrome subtracts the reserved gutter from vw,
+   * which pulls every fluid type size off its 1440px value (DESIGN.md Fixed-Ends Rule).
+   */
+  :root {
+    color-scheme: light;
+    interpolate-size: allow-keywords;
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, figure, blockquote { margin: 0; }
+
+  h1, h2, h3, h4 { text-wrap: balance; }
+
+  img, svg, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  input, textarea, select { font-size: max(16px, 1rem); }
+
+  button, a, [role="button"] { touch-action: manipulation; }
+
+  button, [role="button"] {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+/*
+ * Type roles from DESIGN.md. Each heading element gets its role by default;
+ * the matching .type-* class lets a component pick the look without changing
+ * the outline level.
+ */
+@layer base {
+  body {
+    background: var(--surface-page);
+    color: var(--text-body);
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-size);
+    font-weight: var(--typography-body-weight);
+    line-height: var(--typography-body-leading);
+    letter-spacing: var(--typography-body-tracking);
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) { color: var(--text-heading); }
+
+  h1, .type-display {
+    font-family: var(--typography-display-family);
+    font-size: var(--typography-display-size);
+    font-weight: var(--typography-display-weight);
+    line-height: var(--typography-display-leading);
+    letter-spacing: var(--typography-display-tracking);
+  }
+
+  h2, .type-heading-l {
+    font-family: var(--typography-heading-l-family);
+    font-size: var(--typography-heading-l-size);
+    font-weight: var(--typography-heading-l-weight);
+    line-height: var(--typography-heading-l-leading);
+    letter-spacing: var(--typography-heading-l-tracking);
+  }
+
+  h3, .type-heading-m {
+    font-family: var(--typography-heading-m-family);
+    font-size: var(--typography-heading-m-size);
+    font-weight: var(--typography-heading-m-weight);
+    line-height: var(--typography-heading-m-leading);
+    letter-spacing: var(--typography-heading-m-tracking);
+  }
+
+  h4, .type-heading-s {
+    font-family: var(--typography-heading-s-family);
+    font-size: var(--typography-heading-s-size);
+    font-weight: var(--typography-heading-s-weight);
+    line-height: var(--typography-heading-s-leading);
+    letter-spacing: var(--typography-heading-s-tracking);
+  }
+
+  h5, h6, .type-heading-xs {
+    font-family: var(--typography-heading-xs-family);
+    font-size: var(--typography-heading-xs-size);
+    font-weight: var(--typography-heading-xs-weight);
+    line-height: var(--typography-heading-xs-leading);
+    letter-spacing: var(--typography-heading-xs-tracking);
+  }
+
+  .type-body {
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-size);
+    font-weight: var(--typography-body-weight);
+    line-height: var(--typography-body-leading);
+    letter-spacing: var(--typography-body-tracking);
+  }
+
+  small, .type-body-s {
+    font-family: var(--typography-body-s-family);
+    font-size: var(--typography-body-s-size);
+    font-weight: var(--typography-body-s-weight);
+    line-height: var(--typography-body-s-leading);
+    letter-spacing: var(--typography-body-s-tracking);
+  }
+
+  .type-tagline {
+    font-family: var(--typography-tagline-family);
+    font-size: var(--typography-tagline-size);
+    font-weight: var(--typography-tagline-weight);
+    line-height: var(--typography-tagline-leading);
+    letter-spacing: var(--typography-tagline-tracking);
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .type-price {
+    font-family: var(--typography-price-family);
+    font-size: var(--typography-price-size);
+    font-weight: var(--typography-price-weight);
+    line-height: var(--typography-price-leading);
+    letter-spacing: var(--typography-price-tracking);
+    font-variant-numeric: tabular-nums;
+  }
+
+  code, kbd, samp, pre { font-family: var(--font-family-mono); }
+
+  a {
+    color: var(--text-link);
+    text-underline-offset: 0.2em;
+  }
+
+  a:active { color: var(--text-link-active); }
+
+  @media (hover: hover) and (pointer: fine) {
+    a:hover { color: var(--text-link-hover); }
+  }
+
+  :focus-visible {
+    outline: var(--border-width-button) solid var(--border-focus);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--surface-tint);
+    color: var(--text-heading);
+  }
+}

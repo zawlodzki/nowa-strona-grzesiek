@@ -1,0 +1,59 @@
+@layer layout {
+  /*
+   * Page container. The live .container is 1248px wide including its gutter,
+   * so the content track is that width minus both gutters.
+   */
+  .content-grid {
+    --gutter: var(--layout-gutter);
+    --breakout: var(--layout-container-max);
+    --content: calc(var(--breakout) - 2 * var(--gutter));
+
+    display: grid;
+    grid-template-columns:
+      [full-width-start] minmax(var(--gutter), 1fr)
+      [breakout-start] minmax(0, calc((var(--breakout) - var(--content)) / 2))
+      [content-start] min(100% - var(--gutter) * 2, var(--content)) [content-end]
+      minmax(0, calc((var(--breakout) - var(--content)) / 2)) [breakout-end]
+      minmax(var(--gutter), 1fr) [full-width-end];
+  }
+
+  :is(.content-grid, .full-width) > * { grid-column: content; }
+  :is(.content-grid, .full-width) > .breakout { grid-column: breakout; }
+  :is(.content-grid, .full-width) > .full-width {
+    grid-column: full-width;
+    display: grid;
+    grid-template-columns: inherit;
+  }
+
+  .section { padding-block: var(--layout-section-y); }
+
+  .flow > * { margin-block: 0; }
+  .flow > * + * { margin-block-start: var(--flow-space, 1em); }
+
+  .prose { max-inline-size: var(--measure-prose); }
+  .prose > :is(h2, h3) {
+    --flow-space: 2em;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.25;
+  }
+  .prose > :is(h2, h3) + * { --flow-space: 0.5em; }
+
+  .auto-grid {
+    display: grid;
+    gap: var(--layout-grid-gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--auto-grid-min, 16rem)), 1fr));
+  }
+
+  .with-icon {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5em;
+  }
+
+  .with-icon > svg {
+    flex: none;
+    block-size: 1cap;
+    inline-size: auto;
+    fill: currentColor;
+  }
+}
