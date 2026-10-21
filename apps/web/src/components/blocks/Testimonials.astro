@@ -1,0 +1,94 @@
+---
+import type { Testimonial, Testimonials } from '../../../../studio/sanity.types';
+import type { ResolvedImage } from '../portable-text/types';
+import { safeHref } from '../portable-text/types';
+
+export type ResolvedTestimonial = Pick<Testimonial, '_id' | 'name' | 'role' | 'company' | 'quote' | 'url'> & { image?: ResolvedImage };
+
+interface Props {
+  data: Testimonials;
+  // The block's reference array owns the order. References missing from this list are skipped.
+  items: ResolvedTestimonial[];
+  id?: string;
+}
+const { data, items, id = 'opinie' } = Astro.props;
+const byId = new Map(items.map((item) => [item._id, item]));
+const quotes = (data.items ?? []).flatMap((ref) => byId.get(ref._ref) ?? []).filter((item) => item.quote || item.image);
+const wall = data.variant === 'imageWall';
+const byline = (item: ResolvedTestimonial) => [item.role, item.company].filter(Boolean).join(', ');
+---
+{quotes.length > 0 && (
+  <section id={id} class="content-grid section testimonials" aria-labelledby={data.heading ? `${id}-heading` : undefined} aria-label={data.heading ? undefined : 'Opinie klientów'}>
+    <div class="inner">
+      {(data.tagline || data.heading) && (
+        <header class="head">
+          {data.tagline && <p class="type-tagline">{data.tagline}</p>}
+          {data.heading && <h2 id={`${id}-heading`}>{data.heading}</h2>}
+        </header>
+      )}
+      <ul class:list={['list', { single: quotes.length === 1, wall }]} role="list">
+        {quotes.map((item) => {
+          const href = safeHref(item.url);
+          return (
+            <li>
+              <figure class:list={['quote', { short: quotes.length === 1 && (item.quote?.length ?? 0) <= 180 }]}>
+                {wall && item.image
+                  ? <img src={item.image.src} width={item.image.width} height={item.image.height} alt={item.image.alt || `Rekomendacja: ${item.name}`} loading="lazy" decoding="async" />
+                  : (
+                    <>
+                      {item.image && <img class="logo" src={item.image.src} width={item.image.width} height={item.image.height} alt={item.image.alt ?? ''} loading="lazy" decoding="async" />}
+                      <blockquote>{item.quote?.split(/\n{2,}/).map((paragraph) => <p>{paragraph}</p>)}</blockquote>
+                    </>
+                  )}
+                <figcaption>
+                  <span class="name">{href ? <a href={href} rel="noopener">{item.name}</a> : item.name}</span>
+                  {byline(item) && <span class="role type-body-s">{byline(item)}</span>}
+                </figcaption>
+              </figure>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </section>
+)}
+
+<style>
+  .inner { container-type: inline-size; display: grid; gap: var(--space-xl); }
+  .head { display: grid; gap: var(--space-2xs); max-inline-size: 44rem; }
+  .list {
+    display: grid;
+    gap: var(--layout-grid-gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .wall { grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+  .single { grid-template-columns: minmax(0, 52rem); justify-content: center; }
+
+  .quote {
+    display: grid;
+    gap: var(--space-m);
+    align-content: start;
+    block-size: 100%;
+    padding: var(--layout-box-pad);
+    border-radius: var(--radius-lg);
+    background: var(--surface-soft);
+  }
+  .wall .quote { padding: var(--space-s); gap: var(--space-s); }
+  .wall img { inline-size: 100%; border-radius: var(--radius-sm); }
+  .logo { block-size: 2.5rem; inline-size: auto; max-inline-size: 10rem; object-fit: contain; }
+
+  blockquote { display: grid; gap: 0.75em; color: var(--text-heading); max-inline-size: 65ch; }
+  blockquote p:first-child::before { content: "„"; }
+  blockquote p:last-child::after { content: "”"; }
+  figcaption { display: grid; gap: var(--space-3xs); }
+  .name { font-weight: var(--font-weight-semibold); color: var(--text-heading); overflow-wrap: anywhere; }
+  .role { color: var(--text-muted); overflow-wrap: anywhere; }
+
+  @container (width >= 48rem) {
+    .short { justify-items: center; text-align: center; }
+    .short blockquote { text-wrap: balance; }
+  }
+</style>

@@ -1,0 +1,21 @@
+---
+import Span from './Span.astro';
+import type { TextBlock } from './types';
+export interface ListNode { type: 'bullet' | 'number'; level: number; items: { block: TextBlock; sub: ListNode[] }[]; }
+interface Props { list: ListNode; links?: Record<string, string>; }
+const { list, links } = Astro.props;
+const Tag = list.type === 'number' ? 'ol' : 'ul';
+---
+<Tag>
+  {list.items.map(({ block, sub }) => (
+    <li>
+      {block.children?.map((span) => <Span span={span} definitions={block.markDefs} links={links} />)}
+      {sub.map((child) => <Astro.self list={child} links={links} />)}
+    </li>
+  ))}
+</Tag>
+<style>
+  ul, ol { margin: 0; padding-inline-start: 1.25em; }
+  li + li, li > :is(ul, ol) { margin-block-start: 0.35em; }
+  li::marker { color: var(--text-muted); }
+</style>

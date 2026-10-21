@@ -1,0 +1,23 @@
+---
+import type { MarkDefinition, TextSpan } from './types';
+import { isExternal, safeHref } from './types';
+interface Props { span: TextSpan; marks?: string[]; definitions?: MarkDefinition[]; links?: Record<string, string>; }
+const { span, marks = span.marks ?? [], definitions = [], links = {} } = Astro.props;
+const [mark, ...rest] = marks;
+const definition = definitions.find((item) => item._key === mark);
+let href: string | undefined;
+if (definition?._type === 'link') href = safeHref(definition.href);
+if (definition?._type === 'internalLink') {
+  const ref = definition.reference?._ref ?? '';
+  href = safeHref(links[ref]);
+  if (!href) throw new Error(`Portable Text internal link to "${ref}" has no resolved URL. Pass it in the links map.`);
+}
+const external = href !== undefined && isExternal(href);
+const inner = { span, marks: rest, definitions, links };
+---
+{mark === 'strong' ? <strong><Astro.self {...inner} /></strong>
+  : mark === 'em' ? <em><Astro.self {...inner} /></em>
+  : mark === 'code' ? <code><Astro.self {...inner} /></code>
+  : href ? <a href={href} rel={external ? 'noopener' : undefined}><Astro.self {...inner} /></a>
+  : mark ? <Astro.self {...inner} />
+  : span.text?.split('\n').map((line, index) => <>{index > 0 && <br />}{line}</>)}
