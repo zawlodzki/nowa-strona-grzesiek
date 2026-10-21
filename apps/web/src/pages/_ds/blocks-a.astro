@@ -62,6 +62,7 @@ const layouts: NonNullable<ContentSection['layout']>[] = ['list', 'cards', 'twoC
       <FeatureBlock data={fixture.feature} image={fixture.empty ? undefined : image} />
       <FeatureBlock data={{ ...fixture.feature, heading: 'Wariant z mediami po lewej', mediaSide: 'left' }} image={fixture.empty ? undefined : image} />
       <FeatureBlock data={{ ...fixture.feature, heading: 'Wariant bez mediów' }} />
+      {!fixture.empty && <FeatureBlock data={{ ...fixture.feature, heading: 'Diagram i treść Portable Text', media: { _type: 'media', kind: 'diagram', key: 'crm-funnel' }, body: [...paragraph('Przykładowa treść z renderera T10 i diagramem T11.'), { _type: 'codeBlock', _key: 'catalog-code', language: 'text', code: 'Proces → CRM → automatyzacja' }] }} />}
       {layouts.map((layout) => <ContentSectionBlock data={{ ...fixture.content, layout, heading: `Układ ${layout}` }} />)}
       <CtaBandBlock data={fixture.cta} />
       <CtaBandBlock data={fixture.cta} tone="soft" />

@@ -2,12 +2,14 @@
 import type { ContentSection } from '../../../../studio/sanity.types';
 import type { ResolvedImage } from '../ui/block-types';
 import BlockSection from '../ui/BlockSection.astro';
-import BlockProse from '../ui/BlockProse.astro';
+import PortableText from '../portable-text/PortableText.astro';
+import type { Resolved } from '../portable-text/types';
+import Diagram from '../diagrams/Diagram.astro';
 import Button from '../ui/Button.astro';
 import Icon from '../ui/Icon.astro';
 import MediaImage from '../ui/MediaImage.astro';
-interface Props { data: ContentSection; image?: ResolvedImage; }
-const { data, image } = Astro.props;
+interface Props extends Resolved { data: ContentSection; image?: ResolvedImage; }
+const { data, image, links, images } = Astro.props;
 const { layout = 'list' } = data;
 ---
 <BlockSection kind="content-section">
@@ -15,7 +17,7 @@ const { layout = 'list' } = data;
     <header class="intro">
       {data.tagline && <p class="type-tagline">{data.tagline}</p>}
       {data.heading && <h2>{data.heading}</h2>}
-      <slot name="intro"><BlockProse body={data.intro} /></slot>
+      <slot name="intro"><PortableText value={data.intro} links={links} images={images} /></slot>
     </header>
     {(data.items?.length ?? 0) > 0 && <ul class:list={['items', layout]}>{data.items?.map((item) => <li class:list={{ negative: item.icon === 'close' }}>
       {layout === 'checklist' && <Icon name={item.icon === 'close' ? 'close' : 'check'} />}
@@ -25,7 +27,7 @@ const { layout = 'list' } = data;
         {item.link && <Button link={item.link} variant="text" />}
       </div>
     </li>)}</ul>}
-    <slot name="media">{image && <MediaImage image={image} />}</slot>
+    <slot name="media">{data.media?.kind === 'diagram' && data.media.key ? <Diagram diagram={data.media.key} /> : image && <MediaImage image={image} />}</slot>
   </div>
 </BlockSection>
 <style>
