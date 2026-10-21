@@ -10,7 +10,7 @@ The migration of zawlodzki.pl from Webflow to Astro + Sanity, hosted on Cloudfla
 
 ## Working on a task
 
-1. **Pick.** Run `git pull` and then `python3 -I migration/tools/tasks.py ready`. Take one task from that list. Skip tasks marked `(needs inventory)` if `migration/00-inventory/` is missing on your machine.
+1. **Pick.** Run `git pull` and then `python3 -I migration/tools/tasks.py ready`. Take one task from that list. Tasks marked `(needs inventory)` need the private inventory clone (see "Inventory"). Skip them if you have no access.
 2. **Claim.** Make a single change to the task file's front matter: `status: claimed`, `claimed_by: <tool>-<model>-<4 chars>` (for example `codex-gpt-k3n9`), `claimed_at: <ISO date>`, `branch: task/<id>-<slug>`. Commit only that file on `main` with the message `claim <id>` and push.
    - If the push is rejected, run `git pull --rebase`. If someone else has claimed the task in the meantime, drop your change and pick another task.
    - Claim commits are the only direct commits to `main`.
@@ -31,7 +31,13 @@ Size: one task should fit in one working session. If it doesn't, split it. Split
 
 ## Inventory (private, not in git)
 
-`migration/00-inventory/` is a read-only snapshot of the live site, Webflow, GTM, DNS and GSC, taken 2026-10-21. It is gitignored because the repo is public. On the owner's machine it lives at `/Users/grzesiek/Github/nowa-strona-grzesiek/migration/00-inventory/`. Never commit it, never copy its raw files into tracked paths, and never paste record values, keys, tokens or webhook URLs into tracked files. Each folder has a `SUMMARY.md`.
+`migration/00-inventory/` is a read-only snapshot of the live site, Webflow, GTM, DNS and GSC, taken 2026-10-21. It is gitignored because this repo is public. It lives in the private repo `zawlodzki/nowa-strona-grzesiek-inventory` (about 24 MB), which needs read access granted by the owner. Clone it into place from the root of this repo:
+
+```bash
+git clone https://github.com/zawlodzki/nowa-strona-grzesiek-inventory.git migration/00-inventory
+```
+
+In a worktree, clone it into the worktree's own `migration/00-inventory/`. A symlink to an existing clone also works. Run `git -C migration/00-inventory pull` before starting a task that needs it. The snapshot does not change except through a task that says so. Never commit it to this repo, never copy its raw files into tracked paths, and never paste record values, keys, tokens or webhook URLs into tracked files. Each folder has a `SUMMARY.md`.
 
 ## Commands
 
