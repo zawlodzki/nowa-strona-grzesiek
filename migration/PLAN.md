@@ -43,7 +43,8 @@ Stan na 2026-10-21. Plan do realizacji równoległej przez kilku agentów. Źró
 
 ### DNS (`dns/zone-zawlodzki.pl.csv`, `dns/SUMMARY.md`)
 - 33 rekordy. Poczta to Google Workspace, do tego Mailgun (`email.`), Resend/SES (`tech.`), n8n na Railway, `secure` na Vercel.
-- **DNSSEC jest włączony w OVH.** Trzeba go wyłączyć i odczekać TTL rekordu DS przed zmianą NS. Inaczej padnie strona i poczta.
+- Stan po inwentaryzacji, potwierdzony przez użytkownika 2026-10-21. Serwery nazw zawlodzki.pl są już przepięte do Cloudflare. Rekordy strony nadal wskazują Webflow. DNSSEC wyłączono wcześniej w OVH, co odnotowano w T05. Bieżący stan DNSSEC wymaga sprawdzenia przed kolejną zmianą.
+- Użytkownik zezwolił na tworzenie nowych subdomen, np. dla preview, oraz podpinanie ich do odpowiednich usług. Zgoda nie obejmuje zmiany istniejących rekordów, przełączenia apex ani www z Webflow, ani zmian DNSSEC.
 - zawlodzki.com jest już na Cloudflare i robi 301 na www.zawlodzki.pl.
 
 ### Ryzyka wykryte przy okazji
@@ -224,14 +225,16 @@ Najpierw migracja 1:1 dla PL, potem EN jako osobne wydanie. Dzięki temu każda 
 
 ## 8. Runbook przełączenia (każdy krok nieodwracalny wymaga zgody użytkownika)
 
-1. T-7 dni. W OVH obniżyć TTL rekordów `@` i `www` do 300 s.
-2. T-3 dni. **Wyłączyć DNSSEC w OVH** i odczekać, aż rekord DS zniknie z rejestru `.pl` (sprawdzać `dig DS zawlodzki.pl`).
+Stan wejściowy, potwierdzenie użytkownika z 2026-10-21. Delegacja NS do Cloudflare jest wykonana, a produkcja nadal działa na Webflow. Nowe subdomeny i ich podpięcie do usług, np. preview, mają zgodę użytkownika. Przełączenie produkcji pozostaje osobnym krokiem wymagającym zgody.
+
+1. T-7 dni. W Cloudflare sprawdzić TTL rekordów `@` i `www` i po zgodzie użytkownika obniżyć do 300 s, jeśli potrzeba.
+2. Delegacja wykonana. DNSSEC wyłączono w OVH przed zmianą NS, według T05. Sprawdzić bieżący stan przez `dig DS zawlodzki.pl` przed planowaniem zmian DNSSEC.
 3. T-1 dzień. Strefa w Cloudflare gotowa i zweryfikowana rekord po rekordzie przez `dig @<ns-cloudflare>`. Custom domain dla Workera przygotowana.
-4. T0. Zmiana NS w OVH na Cloudflare. Następnie podpięcie `www.zawlodzki.pl` i `zawlodzki.pl` do Workera (apex → www 301).
+4. T0. Po zgodzie użytkownika podpiąć `www.zawlodzki.pl` i `zawlodzki.pl` do Workera (apex → www 301). Delegacja NS do Cloudflare jest już wykonana.
 5. T0 + 1 h. `tools/redirects.mjs` i `tools/crawl.mjs` na produkcji, test poczty, test formularza, Tag Assistant.
 6. T0 + 1 h. W GSC zgłosić sitemapę i sprawdzić URL Inspection dla 20 najważniejszych stron.
 7. T0 + 48 h. Włączyć DNSSEC w Cloudflare i dodać DS w OVH.
-8. Plan Webflow trzymać aktywny co najmniej 14 dni po przełączeniu jako drogę odwrotu (powrót NS na OVH). Usunąć rekordy `proxy-ssl.webflow.com` i stare OVH mail dopiero po G5.
+8. Plan Webflow trzymać aktywny co najmniej 14 dni po przełączeniu jako drogę odwrotu (przywrócenie rekordów strony wskazujących Webflow w Cloudflare po zgodzie użytkownika). Usunąć rekordy `proxy-ssl.webflow.com` i stare OVH mail dopiero po G5.
 
 ## 9. Jak uruchomić pracę
 
