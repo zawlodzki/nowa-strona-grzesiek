@@ -16,3 +16,4 @@ Written only by the coordinator. Newest at the bottom.
 | 10 | 2026-10-21 | `/401` removed; `/404` becomes the site 404 page; thank-you pages stay, noindex and out of the sitemap | coordinator | S, P |
 | 11 | 2026-10-21 | GSC data and unpublished drafts (`/narzedzia`, `/case-study-4hfix`) stay out of the public repo | coordinator | all |
 | 12 | 2026-10-21 | Work is split into a task board (`migration/tasks/`) that independent agents claim through git, per `AGENTS.md`. Lane sessions started by one coordinator are dropped | user | all |
+| 13 | 2026-10-21 | `tokens.json` promoted from `lanes/design/out/` to `contracts/`. `apps/web/src/styles/build-tokens.mjs` compiles it to `tokens.css`, with hex written as oklch that round-trips to the same hex. Root font size stays 100%; no `scrollbar-gutter: stable`, because Chrome subtracts it from `vw` and breaks the Fixed-Ends Rule | T08 | D, every lane writing CSS |
