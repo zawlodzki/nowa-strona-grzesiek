@@ -1,0 +1,43 @@
+---
+import type { NewsletterSignup } from '../../../../studio/sanity.types';
+import LeadForm from '../forms/LeadForm.astro';
+
+interface Props { data: NewsletterSignup; id?: string; }
+const { data, id = 'newsletter' } = Astro.props;
+const f = (name: string) => `${id}-${name}`;
+---
+<section id={id} class="content-grid section newsletter" aria-labelledby={f('heading')}>
+  <div class="inner">
+    <h2 id={f('heading')} class="type-heading-l">Newsletter Sales <span class="accent">Atlas</span></h2>
+    {data.body && <p class="body">{data.body}</p>}
+    <LeadForm form="newsletter" id={f('form')} visible={['email', 'newsletter']} submitLabel="Zapisuję się" tone="dark" class="signup">
+      <div class="field">
+        <label for={f('email')}>Adres e-mail</label>
+        <input id={f('email')} name="email" type="email" autocomplete="email" maxlength="256" required />
+      </div>
+      <label class="check type-body-s"><input type="checkbox" name="newsletter" checked /><span>Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.</span></label>
+    </LeadForm>
+    <p class="legal type-body-s">Zapisując się, zamawiasz newsletter Wellbiz sp. z o.o. i zgadzasz się na otrzymywanie e-maili z poradami i ofertami. Wypiszesz się jednym kliknięciem. Link jest w każdej wiadomości. <a href="/regulamin-newslettera">Regulamin newslettera</a>, <a href="/polityka-prywatnosci">Polityka prywatności</a>.</p>
+  </div>
+</section>
+
+<style>
+  .newsletter { background: var(--surface-dark); color: var(--text-on-dark); }
+  .inner {
+    container-type: inline-size;
+    display: grid;
+    gap: var(--space-s);
+    justify-items: start;
+    max-inline-size: 44rem;
+  }
+  h2 { color: var(--text-on-dark); }
+  .accent { color: var(--color-secondary-60); }
+  .body { color: var(--text-on-dark-muted); max-inline-size: 60ch; }
+  .inner > :global(.signup) { inline-size: 100%; }
+  .legal { color: var(--text-on-dark-muted); max-inline-size: 60ch; }
+  .legal a { color: var(--text-link-on-dark); }
+  .legal a:active { color: var(--text-on-dark); }
+  @media (hover: hover) and (pointer: fine) {
+    .legal a:hover { color: var(--text-on-dark); }
+  }
+</style>

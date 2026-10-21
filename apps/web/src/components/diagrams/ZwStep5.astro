@@ -1,0 +1,185 @@
+---
+// Ported from the Webflow embed #zw-step5 (program-ai-dla-zespolu-sprzedazy, wdrozenie-ai-w-sprzedazy-b2b) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  AI dla sprzedazy — landing step 5: "Szkolenia i przekazanie"
+  Minimal stage illustration. Sits next to the step description.
+  zawlodzki.pl · self-contained, no external dependencies.
+*/
+---
+
+<div class="dg" data-diagram="zw-step5" aria-hidden="true" style="--dg-w: 400; --dg-h: 150;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="s5-wrap">
+          <svg class="s5-guide" viewBox="0 0 380 150" width="380" height="150" fill="none">
+            <path d="M70 40 C 150 6, 230 6, 310 40" stroke="#DDE1E6" stroke-width="2" stroke-dasharray="5 6" stroke-linecap="round"/>
+          </svg>
+          <div class="s5-node s5-node--me">Me</div>
+          <div class="s5-node s5-node--team">
+            Team
+            <span class="s5-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="12" height="12"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <div class="s5-token" aria-hidden="true">AI</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+[data-diagram="zw-step5"] {
+    --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
+    --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
+    --zw-border:#DDE1E6; --zw-border-soft:#EDF0F3; --zw-heading:#0E0F11;
+    --zw-text:#1E2024; --zw-muted:#838D95; --zw-card:#FFFFFF;
+    --zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --zw-radius-card:10px;
+    --zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);
+    --zw-shadow-lift:1px 8px 22px rgba(14,15,17,.14);
+    font-family:var(--zw-font); width:100%; max-width:440px; margin:0 auto;
+    box-sizing:border-box; -webkit-font-smoothing:antialiased;
+  }
+  [data-diagram="zw-step5"] *, [data-diagram="zw-step5"] *::before, [data-diagram="zw-step5"] *::after { box-sizing:border-box; }
+  [data-diagram="zw-step5"] .zw-stage { width:100%; overflow:hidden; }
+  [data-diagram="zw-step5"] .zw-fit { width:400px; transform-origin:top left; }
+  [data-diagram="zw-step5"] .zw-scene { position:relative; }
+
+  /* =================== SCENE:STYLE start =================== */
+  [data-diagram="zw-step5"] .s5-wrap { position:relative; width:380px; height:150px; margin:10px auto; }
+  [data-diagram="zw-step5"] .s5-guide { position:absolute; top:0; left:0; opacity:0; }
+  [data-diagram="zw-step5"] .s5-node {
+    position:absolute; top:57px; width:110px; height:56px;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--zw-card); border:1px solid var(--zw-border);
+    border-radius:var(--zw-radius-card); box-shadow:var(--zw-shadow-rest);
+    font-size:14px; font-weight:700; color:var(--zw-text);
+    opacity:0; transition:opacity .4s ease, border-color .4s ease, color .4s ease;
+  }
+  [data-diagram="zw-step5"] .s5-node--me   { left:10px; }
+  [data-diagram="zw-step5"] .s5-node--team { left:260px; }
+  [data-diagram="zw-step5"] .s5-node--dim  { opacity:.45 !important; }
+  [data-diagram="zw-step5"] .s5-node--live { border-color:var(--zw-primary-30); color:var(--zw-primary); }
+  [data-diagram="zw-step5"] .s5-check {
+    position:absolute; top:-8px; right:-8px; width:22px; height:22px; border-radius:50%;
+    background:var(--zw-success); color:#fff; display:flex; align-items:center;
+    justify-content:center; transform:scale(0); transform-origin:center;
+  }
+  [data-diagram="zw-step5"] .s5-token {
+    position:absolute; left:41px; top:12px; width:48px; height:30px;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--zw-primary); color:#fff; font-size:12px; font-weight:700;
+    letter-spacing:.04em; border-radius:8px; box-shadow:var(--zw-shadow-rest);
+    opacity:0; z-index:4; will-change:transform, opacity;
+  }
+  /* ==================== SCENE:STYLE end ==================== */
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-diagram="zw-step5"] .s5-guide { opacity:1; }
+    [data-diagram="zw-step5"] .s5-node { opacity:1; }
+    [data-diagram="zw-step5"] .s5-node--me { opacity:.45; }
+    [data-diagram="zw-step5"] .s5-node--team { border-color:var(--zw-primary-30); color:var(--zw-primary); }
+    [data-diagram="zw-step5"] .s5-check { transform:scale(1); }
+    [data-diagram="zw-step5"] .s5-token { opacity:0; }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-step5"]')) {
+(function () {
+  if (!root || root.dataset.zwInit) return;
+  root.dataset.zwInit = '1';
+
+  var DESIGN_W = 400;
+  var stage = root.querySelector('.zw-stage');
+  var fitEl = root.querySelector('.zw-fit');
+  var scene = root.querySelector('.zw-scene');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var EASE_OUT  = 'cubic-bezier(0.22, 1, 0.36, 1)';
+  var EASE_MOVE = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+  var EASE_POP  = 'cubic-bezier(0.34, 1.56, 0.64, 1)';
+  function wait(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+  function settled(a){ return a.finished.catch(function(){}); }
+
+  function fit(){}
+
+  var guide = scene.querySelector('.s5-guide');
+  var me    = scene.querySelector('.s5-node--me');
+  var team  = scene.querySelector('.s5-node--team');
+  var check = scene.querySelector('.s5-check');
+  var token = scene.querySelector('.s5-token');
+  var DX = 250; // Me -> Team horizontal travel
+
+  async function play(){
+    fit();
+    if (reduce) { return; }
+
+    // stage in
+    guide.animate([{opacity:0},{opacity:1}], {duration:360, easing:EASE_OUT, fill:'forwards'});
+    guide.style.opacity = 1;
+    [me, team].forEach(function(n,i){
+      n.animate([{opacity:0, transform:'translateY(10px)'},{opacity:1, transform:'translateY(0)'}],
+        {duration:420, delay:120 + i*100, easing:EASE_OUT, fill:'forwards'});
+      n.style.opacity = 1;
+    });
+    await wait(700);
+
+    // token appears on "Me"
+    await settled(token.animate([{opacity:0, transform:'translate(0,0) scale(.9)'},{opacity:1, transform:'translate(0,0) scale(1)'}],
+      {duration:300, easing:EASE_OUT, fill:'forwards'}));
+    token.style.opacity = 1;
+    await wait(320);
+
+    // lift
+    token.animate([{transform:'translate(0,0) scale(1)'},{transform:'translate(0,0) scale(1.08)'}],
+      {duration:170, easing:EASE_OUT, fill:'forwards'});
+    token.style.transform = 'translate(0,0) scale(1.08)';
+    await wait(150);
+
+    // travel Me -> Team with a gentle upward arc
+    await settled(token.animate(
+      [{transform:'translate(0,0) scale(1.08)'},
+       {transform:'translate(' + (DX/2) + 'px,-16px) scale(1.08)', offset:0.5},
+       {transform:'translate(' + DX + 'px,0) scale(1.08)'}],
+      {duration:640, easing:EASE_MOVE, fill:'forwards'}));
+    token.style.transform = 'translate(' + DX + 'px,0) scale(1.08)';
+
+    // settle onto Team, hand it over
+    await settled(token.animate(
+      [{transform:'translate(' + DX + 'px,0) scale(1.08)'},
+       {transform:'translate(' + DX + 'px,26px) scale(1)'}],
+      {duration:260, easing:EASE_OUT, fill:'forwards'}));
+    token.animate([{opacity:1},{opacity:0}], {duration:260, easing:EASE_OUT, fill:'forwards'});
+    token.style.opacity = 0;
+
+    team.classList.add('s5-node--live');
+    me.classList.add('s5-node--dim');
+    check.animate([{transform:'scale(0)'},{transform:'scale(1)'}], {duration:360, easing:EASE_POP, fill:'forwards'});
+    check.style.transform = 'scale(1)';
+    team.animate([{transform:'scale(1)'},{transform:'scale(1.04)'},{transform:'scale(1)'}],
+      {duration:400, easing:EASE_POP});
+  }
+
+  fit();
+  if ('ResizeObserver' in window) { new ResizeObserver(fit).observe(stage); }
+  else { window.addEventListener('resize', fit); }
+
+  function arm(){
+    if (!('IntersectionObserver' in window)) { play(); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { io.disconnect(); requestAnimationFrame(function(){ requestAnimationFrame(play); }); }
+      });
+    }, { threshold: 0.4 });
+    io.observe(root);
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arm); }
+  else { arm(); }
+})();
+  }
+</script>

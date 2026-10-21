@@ -1,0 +1,175 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://www.zawlodzki.pl/kontakt#webpage",
+      "url": "https://www.zawlodzki.pl/kontakt",
+      "name": "Kontakt",
+      "description": "Skontaktuj się ze mną. Doceniam że chcesz się do mnie odezwać. Odpisuje najczęściej tego samego dnia.",
+      "inLanguage": "pl-PL",
+      "isPartOf": {
+        "@id": "https://www.zawlodzki.pl/#website"
+      },
+      "about": {
+        "@id": "https://www.zawlodzki.pl/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://www.zawlodzki.pl/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.zawlodzki.pl/kontakt#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64ac78c504cddb42676cd78b_Frame%2037_compressed.jpg"
+      },
+      "significantLink": [
+        "https://www.zawlodzki.pl/wspolpraca",
+        "https://www.zawlodzki.pl/newsletter"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.zawlodzki.pl/kontakt#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://www.zawlodzki.pl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kontakt",
+          "item": "https://www.zawlodzki.pl/kontakt"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.zawlodzki.pl/o-mnie#person",
+      "name": "Grzegorz Zawłodzki",
+      "jobTitle": "Konsultant CRM i automatyzacji sprzedaży B2B",
+      "description": "Konsultant i trener. Wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę oraz procesy sprzedaży wspierane przez AI. Pracował z ponad 50 firmami, od startupów po globalne marki jak IAB.",
+      "url": "https://www.zawlodzki.pl/o-mnie",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/62ffd2315786d32f5dc7a1ee_zawlodzki%20front%20450_compressed.webp",
+        "caption": "Grzegorz Zawłodzki"
+      },
+      "email": "grzesiek@zawlodzki.pl",
+      "telephone": "+48571088338",
+      "worksFor": {
+        "@id": "https://www.zawlodzki.pl/#organization"
+      },
+      "knowsLanguage": [
+        "pl",
+        "en"
+      ],
+      "knowsAbout": [
+        "Wdrożenia CRM",
+        "Pipedrive",
+        "HubSpot",
+        "Attio",
+        "Asana",
+        "AI w sprzedaży B2B",
+        "Agenty AI",
+        "Automatyzacja procesów biznesowych",
+        "n8n",
+        "Integracje API",
+        "Dashboardy sprzedażowe",
+        "Zarządzanie projektami"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/zawlodzki/",
+        "https://x.com/zawlodzki",
+        "https://www.youtube.com/@GrzesiekZawlodzki",
+        "https://www.instagram.com/zawlodzki/",
+        "https://github.com/zawlodzki"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.zawlodzki.pl/#organization",
+      "name": "Wellbiz",
+      "legalName": "Wellbiz sp. z o.o.",
+      "alternateName": [
+        "zawlodzki.pl"
+      ],
+      "description": "Wellbiz to firma doradcza z Krakowa, która wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę, automatyzacje w n8n oraz procesy sprzedaży wspierane przez AI w firmach B2B. Prowadzi ją Grzegorz Zawłodzki, a serwis firmy działa pod adresem zawlodzki.pl.",
+      "url": "https://www.zawlodzki.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64a693ccc05e941533cfb506_Group%204.svg"
+      },
+      "foundingDate": "2025-02-26",
+      "vatID": "PL6793323800",
+      "taxID": "6793323800",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "KRS",
+          "value": "0001158341"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "REGON",
+          "value": "541006624"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Lipowa 3d",
+        "postalCode": "30-702",
+        "addressLocality": "Kraków",
+        "addressCountry": "PL"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Polska"
+      },
+      "knowsAbout": [
+        "Wdrożenia CRM",
+        "Pipedrive",
+        "Asana",
+        "AI w sprzedaży B2B",
+        "Automatyzacja procesów biznesowych",
+        "n8n"
+      ],
+      "founder": {
+        "@id": "https://www.zawlodzki.pl/o-mnie#person"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "grzesiek@zawlodzki.pl",
+        "telephone": "+48571088338",
+        "contactType": "sales",
+        "availableLanguage": [
+          "pl",
+          "en"
+        ]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/zawlodzki-pl/",
+        "https://rejestr.io/krs/1158341/wellbiz",
+        "https://aleo.com/pl/firma/wellbiz-spolka-z-ograniczona-odpowiedzialnoscia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.zawlodzki.pl/#website",
+      "url": "https://www.zawlodzki.pl",
+      "name": "Grzegorz Zawłodzki — wdrożenia CRM i automatyzacja sprzedaży B2B",
+      "alternateName": "zawlodzki.pl",
+      "inLanguage": [
+        "pl-PL",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://www.zawlodzki.pl/o-mnie#person"
+      }
+    }
+  ]
+}

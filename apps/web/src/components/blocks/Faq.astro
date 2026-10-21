@@ -1,0 +1,69 @@
+---
+import type { Faq } from '../../../../studio/sanity.types';
+import PortableText from '../portable-text/PortableText.astro';
+import type { Resolved } from '../portable-text/types';
+import { emitsFaqPage, visibleFaqItems } from './faq';
+
+interface Props extends Resolved { data: Faq; id?: string; }
+const { data, id = 'faq', links, images } = Astro.props;
+const items = visibleFaqItems(data);
+---
+{items.length > 0 && (
+  <section id={id} class="content-grid section faq" aria-labelledby={`${id}-heading`} data-faq-schema={emitsFaqPage(data) ? 'FAQPage' : undefined}>
+    <div class="inner">
+      <header class="head">
+        {data.tagline && <p class="type-tagline">{data.tagline}</p>}
+        <h2 id={`${id}-heading`}>{data.heading || 'Najczęstsze pytania'}</h2>
+      </header>
+      <div class="list">
+        {items.map((item) => (
+          <details name={id}>
+            <summary>
+              <span class="question type-heading-xs">{item.question}</span>
+              <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 11.4 2.3 5.7l1.4-1.4L8 8.6l4.3-4.3 1.4 1.4z" /></svg>
+            </summary>
+            <div class="answer"><PortableText value={item.answer} links={links} images={images} /></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+  .inner { display: grid; gap: var(--space-xl); }
+  .head { display: grid; gap: var(--space-2xs); max-inline-size: 44rem; }
+  .list { border-radius: var(--radius-lg); background: var(--surface-soft); overflow: clip; }
+  details + details { border-block-start: var(--border-width-hairline) solid var(--border-hairline); }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-s);
+    min-block-size: 44px;
+    padding: var(--space-s) var(--space-m);
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary:focus-visible { outline-offset: -3px; border-radius: var(--radius-lg); }
+  summary:active { background: var(--surface-alt); }
+  .question { overflow-wrap: anywhere; }
+  .chevron { flex: none; inline-size: 1.25rem; fill: var(--text-link); }
+  [open] .chevron { rotate: 180deg; }
+  @media (hover: hover) and (pointer: fine) {
+    summary:hover .question { color: var(--text-link); }
+  }
+
+  .answer { padding: 0 var(--space-m) var(--space-m); }
+
+  details::details-content { block-size: 0; overflow: clip; }
+  details[open]::details-content { block-size: auto; }
+  @media (prefers-reduced-motion: no-preference) {
+    details::details-content {
+      transition: block-size var(--motion-duration-slow) var(--motion-easing-out), content-visibility var(--motion-duration-slow) allow-discrete;
+    }
+    .chevron { transition: rotate var(--motion-duration-base) var(--motion-easing-out); }
+  }
+</style>

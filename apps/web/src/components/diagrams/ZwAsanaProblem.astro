@@ -1,0 +1,79 @@
+---
+// Ported from the Webflow embed #zw-asana-problem (audyt-procesow-asana, szkolenie-i-wdrozenie-asana) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  <!-- Asana implementation — problem: project knowledge trapped in one person's head -->
+*/
+---
+
+<div class="dg" data-diagram="zw-asana-problem" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
+    <div class="ap-panel">
+      <div class="ap-channel ap-channel--1"><span>E</span><b>Email</b><i></i><i></i></div>
+      <div class="ap-channel ap-channel--2"><span>C</span><b>Chat</b><i></i><i></i></div>
+      <div class="ap-channel ap-channel--3"><span>N</span><b>Notes</b><i></i><i></i></div>
+      <div class="ap-project">
+        <div class="ap-project-head"><span class="ap-logo">A</span><b>Project</b><em class="ap-status">Open</em></div>
+        <div class="ap-task"><i></i><span></span><b>?</b></div>
+        <div class="ap-task"><i></i><span></span><b>?</b></div>
+        <div class="ap-task"><i></i><span></span><b>?</b></div>
+        <span class="ap-stalled">Stalled</span>
+      </div>
+      <div class="ap-owner"><span class="ap-avatar">PM</span><b>Owner</b><span class="ap-memory"><i></i><i></i><i></i></span></div>
+      <span class="ap-packet ap-packet--1"></span><span class="ap-packet ap-packet--2"></span><span class="ap-packet ap-packet--3"></span>
+      <span class="ap-warning">!</span>
+    </div>
+  </div></div></div>
+</div>
+
+<style is:global>
+[data-diagram="zw-asana-problem"]{--zw-primary:#3A48CC;--zw-primary-10:#EBEDFA;--zw-primary-30:#8991E0;--zw-secondary:#0ACFFE;--zw-success:#52C41A;--zw-bg-soft:#F9FAFB;--zw-border:#DDE1E6;--zw-border-soft:#EDF0F3;--zw-heading:#0E0F11;--zw-text:#1E2024;--zw-muted:#838D95;--zw-card:#FFFFFF;--zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;--zw-serif:'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;--zw-radius-card:10px;--zw-radius-lane:14px;--zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);--zw-shadow-lift:1px 8px 22px rgba(14,15,17,.14);font-family:var(--zw-font);width:100%;max-width:440px;margin:0 auto;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+[data-diagram="zw-asana-problem"] *,[data-diagram="zw-asana-problem"] *::before,[data-diagram="zw-asana-problem"] *::after{box-sizing:border-box}
+[data-diagram="zw-asana-problem"] .zw-stage{width:100%;overflow:hidden}[data-diagram="zw-asana-problem"] .zw-fit{width:400px;transform-origin:top left}[data-diagram="zw-asana-problem"] .zw-scene{position:relative}
+[data-diagram="zw-asana-problem"] .ap-panel{position:relative;width:360px;height:220px;margin:6px auto;background:var(--zw-bg-soft);border:1px solid var(--zw-border);border-radius:var(--zw-radius-lane);overflow:hidden}
+[data-diagram="zw-asana-problem"] .ap-channel{position:absolute;top:16px;width:96px;height:54px;padding:9px 10px;background:var(--zw-card);border:1px solid var(--zw-border);border-radius:var(--zw-radius-card);box-shadow:var(--zw-shadow-rest);opacity:0}
+[data-diagram="zw-asana-problem"] .ap-channel--1{left:20px}[data-diagram="zw-asana-problem"] .ap-channel--2{left:132px}[data-diagram="zw-asana-problem"] .ap-channel--3{left:244px}
+[data-diagram="zw-asana-problem"] .ap-channel>span{float:left;width:20px;height:20px;margin-right:7px;display:flex;align-items:center;justify-content:center;border-radius:6px;background:var(--zw-border-soft);color:var(--zw-muted);font-size:9px;font-weight:800}
+[data-diagram="zw-asana-problem"] .ap-channel>b{font-size:10px;color:var(--zw-text)}[data-diagram="zw-asana-problem"] .ap-channel>i{display:block;height:4px;border-radius:3px;background:var(--zw-border-soft);margin-top:6px}
+[data-diagram="zw-asana-problem"] .ap-channel>i:first-of-type{width:62%}[data-diagram="zw-asana-problem"] .ap-channel>i:last-of-type{width:42%;margin-left:27px}
+[data-diagram="zw-asana-problem"] .ap-project{position:absolute;left:20px;top:90px;width:202px;height:112px;padding:12px;background:var(--zw-card);border:1px solid var(--zw-border);border-radius:var(--zw-radius-card);box-shadow:var(--zw-shadow-rest);opacity:0}
+[data-diagram="zw-asana-problem"] .ap-project-head{display:flex;align-items:center;gap:7px;margin-bottom:10px}
+[data-diagram="zw-asana-problem"] .ap-logo{width:22px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:7px;background:var(--zw-primary);color:#fff;font-size:10px;font-weight:800}
+[data-diagram="zw-asana-problem"] .ap-project-head>b{font-size:11px;color:var(--zw-heading)}[data-diagram="zw-asana-problem"] .ap-status{margin-left:auto;padding:2px 7px;border-radius:999px;background:var(--zw-border-soft);color:var(--zw-muted);font-size:8px;font-weight:800;font-style:normal;text-transform:uppercase}
+[data-diagram="zw-asana-problem"] .ap-task{height:18px;display:flex;align-items:center;gap:7px;margin-bottom:5px;padding:0 6px;border-radius:5px;background:var(--zw-bg-soft)}
+[data-diagram="zw-asana-problem"] .ap-task>i{width:7px;height:7px;border:1px solid var(--zw-border);border-radius:3px}[data-diagram="zw-asana-problem"] .ap-task>span{width:94px;height:4px;border-radius:3px;background:var(--zw-border-soft)}
+[data-diagram="zw-asana-problem"] .ap-task>b{margin-left:auto;color:var(--zw-muted);font-size:9px}
+[data-diagram="zw-asana-problem"] .ap-stalled{position:absolute;right:10px;top:10px;padding:3px 7px;border-radius:999px;background:var(--zw-border-soft);color:var(--zw-muted);font-size:8px;font-weight:800;text-transform:uppercase;transform:scale(0)}
+[data-diagram="zw-asana-problem"] .ap-owner{position:absolute;right:19px;top:103px;width:92px;height:86px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:var(--zw-card);border:1px solid var(--zw-primary-30);border-radius:var(--zw-radius-card);box-shadow:var(--zw-shadow-rest);opacity:0}
+[data-diagram="zw-asana-problem"] .ap-avatar{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--zw-primary-10);color:var(--zw-primary);font-size:10px;font-weight:800}
+[data-diagram="zw-asana-problem"] .ap-owner>b{font-size:9px;color:var(--zw-text)}[data-diagram="zw-asana-problem"] .ap-memory{display:flex;gap:4px;position:absolute;top:8px;right:8px}
+[data-diagram="zw-asana-problem"] .ap-memory i{width:5px;height:5px;border-radius:50%;background:var(--zw-border)}
+[data-diagram="zw-asana-problem"] .ap-memory i.ap-memory--on{background:var(--zw-primary)}
+[data-diagram="zw-asana-problem"] .ap-packet{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--zw-secondary);box-shadow:0 0 0 4px rgba(10,207,254,.16);opacity:0;z-index:5}
+[data-diagram="zw-asana-problem"] .ap-packet--1{left:63px;top:58px}[data-diagram="zw-asana-problem"] .ap-packet--2{left:175px;top:58px}[data-diagram="zw-asana-problem"] .ap-packet--3{left:287px;top:58px}
+[data-diagram="zw-asana-problem"] .ap-warning{position:absolute;right:11px;bottom:11px;width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px dashed var(--zw-secondary);color:var(--zw-secondary);font-size:13px;font-weight:800;transform:scale(0)}
+@media(prefers-reduced-motion:reduce){[data-diagram="zw-asana-problem"] .ap-channel,[data-diagram="zw-asana-problem"] .ap-project{opacity:1}[data-diagram="zw-asana-problem"] .ap-owner{opacity:.25}[data-diagram="zw-asana-problem"] .ap-packet{opacity:0}[data-diagram="zw-asana-problem"] .ap-stalled,[data-diagram="zw-asana-problem"] .ap-warning{transform:scale(1)}[data-diagram="zw-asana-problem"] .ap-status{opacity:0}}
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-asana-problem"]')) {
+(function(){if(!root||root.dataset.zwInit)return;root.dataset.zwInit='1';
+var DESIGN_W=400,stage=root.querySelector('.zw-stage'),fitEl=root.querySelector('.zw-fit'),scene=root.querySelector('.zw-scene');
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var EASE_MOVE='cubic-bezier(0.645, 0.045, 0.355, 1)',EASE_OUT='cubic-bezier(0.22, 1, 0.36, 1)',EASE_POP='cubic-bezier(0.34, 1.56, 0.64, 1)';
+function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}function settled(a){return a.finished.catch(function(){})}
+function fit(){}
+async function play(){fit();if(reduce)return;var channels=Array.prototype.slice.call(scene.querySelectorAll('.ap-channel')),project=scene.querySelector('.ap-project'),owner=scene.querySelector('.ap-owner');
+channels.forEach(function(el,i){el.animate([{opacity:0,transform:'translateY(-10px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,delay:i*90,easing:EASE_OUT,fill:'forwards'});el.style.opacity=1});
+project.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:460,delay:220,easing:EASE_OUT,fill:'forwards'});project.style.opacity=1;
+owner.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:460,delay:310,easing:EASE_OUT,fill:'forwards'});owner.style.opacity=1;await wait(900);
+var packets=Array.prototype.slice.call(scene.querySelectorAll('.ap-packet')),mem=Array.prototype.slice.call(scene.querySelectorAll('.ap-memory i'));
+for(var i=0;i<packets.length;i++){var p=packets[i],dx=294-p.offsetLeft,dy=132-p.offsetTop;p.style.opacity=1;await settled(p.animate([{opacity:0,transform:'translate(0,0) scale(.8)'},{opacity:1,transform:'translate(0,0) scale(1)',offset:.18},{opacity:1,transform:'translate('+(dx/2)+'px,'+(dy-14)+'px)',offset:.55},{opacity:0,transform:'translate('+dx+'px,'+dy+'px) scale(.55)'}],{duration:720,easing:EASE_MOVE,fill:'forwards'}));p.style.opacity=0;mem[i].classList.add('ap-memory--on');mem[i].animate([{transform:'scale(.7)'},{transform:'scale(1.5)'},{transform:'scale(1)'}],{duration:300,easing:EASE_POP});await wait(150)}
+await wait(520);owner.animate([{opacity:1,transform:'translateY(0)'},{opacity:.25,transform:'translateY(8px)'}],{duration:460,easing:EASE_OUT,fill:'forwards'});await wait(360);
+scene.querySelector('.ap-status').animate([{opacity:1},{opacity:0}],{duration:220,easing:EASE_OUT,fill:'forwards'});var stalled=scene.querySelector('.ap-stalled'),warning=scene.querySelector('.ap-warning');stalled.animate([{transform:'scale(0)'},{transform:'scale(1)'}],{duration:360,easing:EASE_POP,fill:'forwards'});stalled.style.transform='scale(1)';warning.animate([{transform:'scale(0)'},{transform:'scale(1)'}],{duration:420,delay:120,easing:EASE_POP,fill:'forwards'});warning.style.transform='scale(1)'}
+fit();if('ResizeObserver'in window)new ResizeObserver(fit).observe(stage);else window.addEventListener('resize',fit);
+function arm(){if(!('IntersectionObserver'in window)){play();return}var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){io.disconnect();requestAnimationFrame(function(){requestAnimationFrame(play)})}})},{threshold:.4});io.observe(root)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',arm);else arm()})();
+  }
+</script>

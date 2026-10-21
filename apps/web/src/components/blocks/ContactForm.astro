@@ -1,0 +1,90 @@
+---
+import type { ContactForm } from '../../../../studio/sanity.types';
+import LeadForm from '../forms/LeadForm.astro';
+import type { ResolvedImage } from '../portable-text/types';
+
+interface Props {
+  data: ContactForm;
+  // From the person document. The details column renders only when showDetails is on and an email or phone is present.
+  contact?: { email?: string; telephone?: string; image?: ResolvedImage };
+  id?: string;
+}
+const { data, contact = {}, id = 'kontakt' } = Astro.props;
+const variant = data.variant ?? 'landing';
+const form = data.formId ?? (variant === 'full' ? 'main-contact' : 'landing-contact');
+// /kontakt has no hero, so the full variant carries the page's H1.
+const Heading = variant === 'full' ? 'h1' : 'h2';
+const details = data.showDetails !== false && (contact.email || contact.telephone);
+const tel = contact.telephone?.replace(/[^\d+]/g, '');
+const f = (name: string) => `${id}-${name}`;
+---
+<section id={id} class="content-grid section contact" aria-labelledby={data.heading ? f('heading') : undefined}>
+  <div class="inner">
+    {(data.tagline || data.heading) && (
+      <header class="head">
+        {data.tagline && <p class="type-tagline">{data.tagline}</p>}
+        {data.heading && <Heading id={f('heading')} class="type-heading-l">{data.heading}</Heading>}
+      </header>
+    )}
+    <div class:list={['card', { split: details }]}>
+      <LeadForm form={form} id={f('form')} visible={['email', 'phone', 'message', 'newsletter', 'marketing-emails']} submitLabel="Wyślij zapytanie">
+        <div class="field">
+          <label for={f('email')}>E-mail <span class="required">(wymagane)</span></label>
+          <input id={f('email')} name="email" type="email" autocomplete="email" maxlength="256" required />
+        </div>
+        <div class="field">
+          <label for={f('phone')}>Telefon</label>
+          <input id={f('phone')} name="phone" type="tel" autocomplete="tel" maxlength="256" />
+        </div>
+        <div class="field">
+          <label for={f('message')}>Temat rozmowy</label>
+          <textarea id={f('message')} name="message" maxlength="5000"></textarea>
+        </div>
+        <p class="note type-body-s">Twoich danych użyjemy tylko po to, żeby odpowiedzieć na zgłoszenie i umówić rozmowę. Administratorem danych jest Wellbiz sp. z o.o. Szczegóły: <a href="/polityka-prywatnosci">Polityka prywatności</a>.</p>
+        <label class="check type-body-s"><input type="checkbox" name="newsletter" /><span>Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.</span></label>
+        <label class="check type-body-s"><input type="checkbox" name="marketing-emails" /><span>Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.</span></label>
+      </LeadForm>
+      {details && (
+        <aside class="details" aria-labelledby={f('details')}>
+          {contact.image && <img class="portrait" src={contact.image.src} width={contact.image.width} height={contact.image.height} alt={contact.image.alt ?? ''} loading="lazy" decoding="async" />}
+          <h3 id={f('details')} class="type-heading-s">Bezpośredni kontakt</h3>
+          <p>Wyślij e-mail, napisz SMS lub zadzwoń.</p>
+          <ul class="channels" role="list">
+            {contact.email && (
+              <li><a class="with-icon" href={`mailto:${contact.email}`}>
+                <svg viewBox="0 0 20 16" aria-hidden="true"><path d="M2 0h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2m0 3v.5l8 5 8-5V3l-8 5z" /></svg>
+                <span>{contact.email}</span>
+              </a></li>
+            )}
+            {contact.telephone && tel && (
+              <li><a class="with-icon" href={`tel:${tel}`}>
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3.6 7.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V17a1 1 0 0 1-1 1A17 17 0 0 1 0 1a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" /></svg>
+                <span>{contact.telephone}</span>
+              </a></li>
+            )}
+          </ul>
+        </aside>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .inner { container-type: inline-size; display: grid; gap: var(--space-l); }
+  .head { display: grid; gap: var(--space-2xs); max-inline-size: 40rem; }
+  .card {
+    display: grid;
+    gap: var(--space-xl);
+    padding: var(--layout-box-pad);
+    border-radius: var(--radius-lg);
+    background: var(--surface-soft);
+  }
+  @container (width >= 48rem) {
+    .split { grid-template-columns: 1.4fr 1fr; gap: var(--space-2xl); }
+  }
+  .details { display: grid; gap: var(--space-xs); align-content: start; }
+  .portrait { inline-size: min(100%, 14rem); border-radius: var(--radius-lg); margin-block-end: var(--space-xs); }
+  .channels { display: grid; gap: var(--space-3xs); margin: 0; padding: 0; list-style: none; }
+  .channels a { min-block-size: 44px; align-items: center; font-weight: var(--font-weight-medium); overflow-wrap: anywhere; }
+  .channels svg { block-size: 1cap; }
+</style>

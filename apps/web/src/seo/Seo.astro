@@ -1,0 +1,21 @@
+---
+import { serializeGraph } from './graph.ts';
+import { buildMeta } from './meta.ts';
+import type { SeoPage } from './types.ts';
+
+interface Props {
+  page: SeoPage;
+}
+
+const { page } = Astro.props;
+const meta = buildMeta(page);
+---
+
+<title>{meta.title}</title>
+<meta name="description" content={meta.description} />
+{meta.robots && <meta name="robots" content={meta.robots} />}
+<link rel="canonical" href={meta.canonical} />
+{meta.alternates.map(({ hreflang, href }) => <link rel="alternate" hreflang={hreflang} href={href} />)}
+{meta.properties.map(([property, content]) => <meta property={property} content={content} />)}
+{meta.names.map(([name, content]) => <meta name={name} content={content} />)}
+<script type="application/ld+json" set:html={serializeGraph(page)} />

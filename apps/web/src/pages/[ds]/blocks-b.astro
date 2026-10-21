@@ -1,0 +1,8 @@
+---
+// Astro skips underscore folders, so this route serves src/pages/_ds/blocks-b.astro at /_ds/blocks-b.
+import BlocksB from '../_ds/blocks-b.astro';
+
+export const getStaticPaths = () => [{ params: { ds: '_ds' } }];
+---
+
+<BlocksB />

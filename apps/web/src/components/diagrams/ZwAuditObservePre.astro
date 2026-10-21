@@ -1,0 +1,153 @@
+---
+// Ported from the Webflow embed #zw-audit-observe-pre (audyt-ai-sprzedaz) by port/port-diagrams.mjs.
+import './diagram.css';
+---
+
+<div class="dg" data-diagram="zw-audit-observe-pre" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+<div class="zw-stage dg-stage">
+<div class="zw-fit dg-fit">
+<div class="zw-scene">
+<div class="ao-panel">
+<span class="ao-eyebrow">Open deals</span>
+<div class="ao-row"><span class="ao-av"></span><i class="ao-name"></i><i class="ao-val"></i><em class="ao-flag"></em></div>
+<div class="ao-row ao-row--hit"><span class="ao-av"></span><i class="ao-name"></i><i class="ao-val"></i><em class="ao-flag"></em></div>
+<div class="ao-row ao-row--hit"><span class="ao-av"></span><i class="ao-name"></i><i class="ao-val"></i><em class="ao-flag"></em></div>
+<div class="ao-row"><span class="ao-av"></span><i class="ao-name"></i><i class="ao-val"></i><em class="ao-flag"></em></div>
+<div class="ao-row ao-row--hit"><span class="ao-av"></span><i class="ao-name"></i><i class="ao-val"></i><em class="ao-flag"></em></div>
+<span class="ao-scan"></span>
+<span class="ao-chip"><b>3</b> findings</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<style is:global>
+[data-diagram="zw-audit-observe-pre"] {
+--zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
+--zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
+--zw-border:#DDE1E6; --zw-border-soft:#EDF0F3; --zw-heading:#0E0F11;
+--zw-text:#1E2024; --zw-muted:#838D95; --zw-card:#FFFFFF;
+--zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+--zw-serif:'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;
+--zw-radius-card:10px; --zw-radius-lane:14px;
+--zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);
+--zw-shadow-lift:1px 8px 22px rgba(14,15,17,.14);
+font-family:var(--zw-font); width:100%; max-width:440px; margin:0 auto;
+box-sizing:border-box; -webkit-font-smoothing:antialiased;
+}
+[data-diagram="zw-audit-observe-pre"] *, [data-diagram="zw-audit-observe-pre"] *::before, [data-diagram="zw-audit-observe-pre"] *::after { box-sizing:border-box; }
+[data-diagram="zw-audit-observe-pre"] .zw-stage { width:100%; overflow:hidden; }
+[data-diagram="zw-audit-observe-pre"] .zw-fit { width:400px; transform-origin:top left; }
+[data-diagram="zw-audit-observe-pre"] .zw-scene { position:relative; }
+[data-diagram="zw-audit-observe-pre"] .ao-panel {
+position:relative; width:360px; height:220px; margin:6px auto;
+background:var(--zw-bg-soft); border:1px solid var(--zw-border);
+border-radius:var(--zw-radius-lane); overflow:hidden;
+}
+[data-diagram="zw-audit-observe-pre"] .ao-eyebrow {
+position:absolute; top:14px; left:20px; font-size:11px; font-weight:700;
+letter-spacing:.09em; text-transform:uppercase; color:var(--zw-muted); opacity:0;
+}
+[data-diagram="zw-audit-observe-pre"] .ao-row {
+position:absolute; left:20px; width:320px; height:28px; padding:0 12px;
+display:flex; align-items:center; gap:10px;
+background:var(--zw-card); border:1px solid var(--zw-border-soft);
+border-radius:8px; box-shadow:var(--zw-shadow-rest); opacity:0;
+}
+[data-diagram="zw-audit-observe-pre"] .ao-row:nth-of-type(1) { top:44px; }
+[data-diagram="zw-audit-observe-pre"] .ao-row:nth-of-type(2) { top:78px; }
+[data-diagram="zw-audit-observe-pre"] .ao-row:nth-of-type(3) { top:112px; }
+[data-diagram="zw-audit-observe-pre"] .ao-row:nth-of-type(4) { top:146px; }
+[data-diagram="zw-audit-observe-pre"] .ao-row:nth-of-type(5) { top:180px; }
+[data-diagram="zw-audit-observe-pre"] .ao-av {
+flex:none; width:14px; height:14px; border-radius:50%; background:var(--zw-primary-10);
+}
+[data-diagram="zw-audit-observe-pre"] .ao-name { flex:1; height:6px; border-radius:4px; background:var(--zw-border-soft); }
+[data-diagram="zw-audit-observe-pre"] .ao-val  { flex:none; width:46px; height:6px; border-radius:4px; background:var(--zw-primary-10); }
+[data-diagram="zw-audit-observe-pre"] .ao-flag {
+flex:none; width:9px; height:9px; border-radius:50%;
+background:var(--zw-secondary); box-shadow:0 0 0 4px rgba(10,207,254,.16);
+transform:scale(0); transform-origin:center;
+}
+[data-diagram="zw-audit-observe-pre"] .ao-scan {
+position:absolute; left:14px; top:40px; width:332px; height:2px;
+background:var(--zw-secondary); box-shadow:0 0 0 5px rgba(10,207,254,.10);
+opacity:0; will-change:transform,opacity;
+}
+[data-diagram="zw-audit-observe-pre"] .ao-chip {
+position:absolute; right:14px; top:6px; padding:3px 9px; border-radius:999px;
+background:var(--zw-card); border:1px solid var(--zw-secondary);
+color:var(--zw-text); font-size:10px; font-weight:700; line-height:1.4;
+transform:scale(0); transform-origin:center;
+}
+[data-diagram="zw-audit-observe-pre"] .ao-chip b { color:var(--zw-secondary); font-weight:800; }
+@media (prefers-reduced-motion:reduce) {
+[data-diagram="zw-audit-observe-pre"] .ao-eyebrow, [data-diagram="zw-audit-observe-pre"] .ao-row { opacity:1; }
+[data-diagram="zw-audit-observe-pre"] .ao-flag, [data-diagram="zw-audit-observe-pre"] .ao-chip { transform:scale(1); }
+}
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-audit-observe-pre"]')) {
+(function(){
+if(!root||root.dataset.zwInit)return; root.dataset.zwInit='1';
+var DESIGN_W=400, stage=root.querySelector('.zw-stage'), fitEl=root.querySelector('.zw-fit'), scene=root.querySelector('.zw-scene');
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var EASE_MOVE='cubic-bezier(0.645, 0.045, 0.355, 1)';
+var EASE_OUT='cubic-bezier(0.22, 1, 0.36, 1)';
+var EASE_POP='cubic-bezier(0.34, 1.56, 0.64, 1)';
+function wait(ms){return new Promise(function(r){setTimeout(r,ms);});}
+function settled(a){return a.finished.catch(function(){});}
+function fit(){}
+function $$(sel){return Array.prototype.slice.call(scene.querySelectorAll(sel));}
+async function play(){
+fit(); if(reduce)return;
+var eyebrow=scene.querySelector('.ao-eyebrow');
+eyebrow.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],
+{duration:380,easing:EASE_OUT,fill:'forwards'});
+eyebrow.style.opacity=1;
+var rows=$$('.ao-row');
+rows.forEach(function(r,i){
+r.animate([{opacity:0,transform:'translateY(10px)'},{opacity:1,transform:'translateY(0)'}],
+{duration:400,delay:100+i*90,easing:EASE_OUT,fill:'forwards'});
+r.style.opacity=1;
+});
+await wait(760);
+var scan=scene.querySelector('.ao-scan');
+scan.style.opacity=1;
+var sweep=scan.animate(
+[{opacity:0,transform:'translateY(0)'},
+{opacity:1,transform:'translateY(60px)',offset:.3},
+{opacity:1,transform:'translateY(140px)',offset:.8},
+{opacity:0,transform:'translateY(172px)'}],
+{duration:1600,easing:EASE_MOVE,fill:'forwards'});
+var hits=$$('.ao-row--hit');
+var at=[430,760,1330];   
+hits.forEach(function(row,i){
+setTimeout(function(){
+var flag=row.querySelector('.ao-flag');
+flag.animate([{transform:'scale(0)'},{transform:'scale(1)'}],
+{duration:340,easing:EASE_POP,fill:'forwards'});
+flag.style.transform='scale(1)';
+row.animate([{transform:'translateX(0)'},{transform:'translateX(4px)'},{transform:'translateX(0)'}],
+{duration:420,easing:EASE_OUT});
+}, at[i]);
+});
+await settled(sweep);
+await wait(260);
+var chip=scene.querySelector('.ao-chip');
+chip.animate([{transform:'scale(0)'},{transform:'scale(1)'}],
+{duration:380,easing:EASE_POP,fill:'forwards'});
+chip.style.transform='scale(1)';
+await wait(420);
+chip.animate([{transform:'scale(1)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],
+{duration:520,easing:EASE_POP});
+}
+fit(); if('ResizeObserver'in window)new ResizeObserver(fit).observe(stage);else window.addEventListener('resize',fit);
+function arm(){if(!('IntersectionObserver'in window)){play();return;}var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){io.disconnect();requestAnimationFrame(function(){requestAnimationFrame(play);});}});},{threshold:.4});io.observe(root);}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',arm);else arm();
+})();
+  }
+</script>

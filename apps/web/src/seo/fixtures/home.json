@@ -1,0 +1,51 @@
+{
+  "language": "pl",
+  "path": "/",
+  "name": "CRM, automatyzacja i AI dla sprzedaży B2B",
+  "seo": {
+    "title": "CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki",
+    "description": "Wdrażam CRM, automatyzacje n8n i agentów AI w zespołach sprzedaży B2B. Porządkuję proces, łączę narzędzia i szkolę handlowców.",
+    "ogImage": {
+      "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a61dd7c6f5d6ab22f14d27f_preview%20home.avif"
+    }
+  },
+  "breadcrumbs": [],
+  "primaryImage": {
+    "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a61dd7c6f5d6ab22f14d27f_preview%20home.avif"
+  },
+  "kind": "home",
+  "services": [
+    {
+      "name": "Szkolenie i wdrożenie Pipedrive",
+      "path": "/szkolenie-i-wdrozenie-pipedrive"
+    },
+    {
+      "name": "Audyt CRM Pipedrive i procesu sprzedaży",
+      "path": "/audyt-crm-pipedrive"
+    },
+    {
+      "name": "Automatyzacje dla Pipedrive",
+      "path": "/automatyzacje-dla-pipedrive"
+    },
+    {
+      "name": "Szkolenie i wdrożenie Asana",
+      "path": "/szkolenie-i-wdrozenie-asana"
+    },
+    {
+      "name": "Audyt procesów w Asanie",
+      "path": "/audyt-procesow-asana"
+    },
+    {
+      "name": "Wdrożenie AI w sprzedaży B2B",
+      "path": "/wdrozenie-ai-w-sprzedazy-b2b"
+    },
+    {
+      "name": "Audyt AI w sprzedaży",
+      "path": "/audyt-ai-sprzedaz"
+    },
+    {
+      "name": "Automatyzacja procesów biznesowych no-code",
+      "path": "/automatyzacja-procesow-biznesowych-nocode"
+    }
+  ]
+}

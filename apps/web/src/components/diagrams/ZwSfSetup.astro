@@ -1,0 +1,164 @@
+---
+// Ported from the Webflow embed #zw-sf-setup (szkolenie-i-wdrozenie-salesforce) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  Salesforce implementation — step 3: setup, automation, integrations
+  Self-contained Webflow embed. Transparent, play-once, responsive.
+  Scope: zw-sf-setup
+*/
+---
+
+<div class="dg" data-diagram="zw-sf-setup" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
+    <div class="cs-panel">
+      <span class="cs-line cs-line--1"></span><span class="cs-line cs-line--2"></span>
+      <span class="cs-line cs-line--3"></span><span class="cs-line cs-line--4"></span>
+      <span class="cs-line cs-line--5"></span><span class="cs-line cs-line--6"></span>
+      <div class="cs-node cs-node--1"><span>P</span><b>Pipeline</b></div>
+      <div class="cs-node cs-node--2"><span>A</span><b>Access</b></div>
+      <div class="cs-node cs-node--3"><span>R</span><b>Reports</b></div>
+      <div class="cs-node cs-node--4"><span>&#9889;</span><b>Automation</b></div>
+      <div class="cs-node cs-node--5"><span>M</span><b>Mail</b></div>
+      <div class="cs-node cs-node--6"><span>31</span><b>Calendar</b></div>
+      <div class="cs-core">
+        <span class="cs-core-mark">S</span>
+        <strong>Salesforce</strong>
+        <span class="cs-core-check">
+          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
+        </span>
+        <i class="cs-pulse"></i>
+      </div>
+    </div>
+  </div></div></div>
+</div>
+
+<style is:global>
+[data-diagram="zw-sf-setup"] {
+    --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
+    --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
+    --zw-border:#DDE1E6; --zw-border-soft:#EDF0F3; --zw-heading:#0E0F11;
+    --zw-text:#1E2024; --zw-muted:#838D95; --zw-card:#FFFFFF;
+    --zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --zw-serif:'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;
+    --zw-radius-card:10px; --zw-radius-lane:14px;
+    --zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);
+    --zw-shadow-lift:1px 8px 22px rgba(14,15,17,.14);
+    font-family:var(--zw-font);width:100%;max-width:440px;margin:0 auto;
+    box-sizing:border-box;-webkit-font-smoothing:antialiased;
+  }
+  [data-diagram="zw-sf-setup"] *,[data-diagram="zw-sf-setup"] *::before,[data-diagram="zw-sf-setup"] *::after{box-sizing:border-box}
+  [data-diagram="zw-sf-setup"] .zw-stage{width:100%;overflow:hidden}
+  [data-diagram="zw-sf-setup"] .zw-fit{width:400px;transform-origin:top left}
+  [data-diagram="zw-sf-setup"] .zw-scene{position:relative}
+  [data-diagram="zw-sf-setup"] .zw-confetti{position:absolute;top:0;left:0;width:0;height:0;z-index:9;pointer-events:none}
+  [data-diagram="zw-sf-setup"] .zw-confetti i{position:absolute;width:8px;height:8px;border-radius:2px;will-change:transform,opacity}
+
+  /* =================== SCENE:STYLE start =================== */
+  [data-diagram="zw-sf-setup"] .cs-panel{
+    position:relative;width:360px;height:220px;margin:6px auto;
+    background:var(--zw-bg-soft);border:1px solid var(--zw-border);
+    border-radius:var(--zw-radius-lane);overflow:hidden;
+  }
+  [data-diagram="zw-sf-setup"] .cs-line{
+    position:absolute;left:180px;top:109px;height:2px;background:var(--zw-primary-30);
+    transform-origin:left center;z-index:1;opacity:.75;will-change:transform;
+  }
+  [data-diagram="zw-sf-setup"] .cs-line--1{width:124px;transform:rotate(-159deg) scaleX(0)}
+  [data-diagram="zw-sf-setup"] .cs-line--2{width:124px;transform:rotate(-21deg) scaleX(0)}
+  [data-diagram="zw-sf-setup"] .cs-line--3{width:115px;transform:rotate(0deg) scaleX(0)}
+  [data-diagram="zw-sf-setup"] .cs-line--4{width:124px;transform:rotate(21deg) scaleX(0)}
+  [data-diagram="zw-sf-setup"] .cs-line--5{width:124px;transform:rotate(159deg) scaleX(0)}
+  [data-diagram="zw-sf-setup"] .cs-line--6{width:116px;transform:rotate(180deg) scaleX(0)}
+  [data-diagram="zw-sf-setup"] .cs-node{
+    position:absolute;width:88px;height:38px;padding:7px 9px;display:flex;align-items:center;gap:7px;
+    background:var(--zw-card);border:1px solid var(--zw-border);border-radius:var(--zw-radius-card);
+    box-shadow:var(--zw-shadow-rest);z-index:2;opacity:0;
+  }
+  [data-diagram="zw-sf-setup"] .cs-node--1{left:20px;top:31px}
+  [data-diagram="zw-sf-setup"] .cs-node--2{right:20px;top:31px}
+  [data-diagram="zw-sf-setup"] .cs-node--3{right:20px;top:90px}
+  [data-diagram="zw-sf-setup"] .cs-node--4{right:20px;top:149px}
+  [data-diagram="zw-sf-setup"] .cs-node--5{left:20px;top:149px}
+  [data-diagram="zw-sf-setup"] .cs-node--6{left:20px;top:90px}
+  [data-diagram="zw-sf-setup"] .cs-node>span{
+    flex:0 0 auto;width:22px;height:22px;display:flex;align-items:center;justify-content:center;
+    border-radius:6px;background:var(--zw-border-soft);color:var(--zw-muted);
+    font-size:9px;font-weight:800;
+  }
+  [data-diagram="zw-sf-setup"] .cs-node b{font-size:10px;font-weight:700;color:var(--zw-text)}
+  [data-diagram="zw-sf-setup"] .cs-node--on{border-color:var(--zw-primary-30)}
+  [data-diagram="zw-sf-setup"] .cs-node--on>span{background:var(--zw-primary-10);color:var(--zw-primary)}
+  [data-diagram="zw-sf-setup"] .cs-core{
+    position:absolute;left:134px;top:73px;width:92px;height:74px;display:flex;
+    flex-direction:column;align-items:center;justify-content:center;gap:4px;
+    background:var(--zw-card);border:1px solid var(--zw-primary-30);
+    border-radius:var(--zw-radius-card);box-shadow:var(--zw-shadow-lift);z-index:4;opacity:0;
+  }
+  [data-diagram="zw-sf-setup"] .cs-core-mark{
+    width:27px;height:27px;display:flex;align-items:center;justify-content:center;border-radius:8px;
+    background:var(--zw-primary);color:#fff;font-size:13px;font-weight:800;
+  }
+  [data-diagram="zw-sf-setup"] .cs-core strong{font-size:11px;color:var(--zw-heading)}
+  [data-diagram="zw-sf-setup"] .cs-core-check{
+    position:absolute;right:-8px;top:-8px;width:23px;height:23px;display:flex;
+    align-items:center;justify-content:center;border-radius:50%;background:var(--zw-success);
+    color:#fff;transform:scale(0);z-index:3;
+  }
+  [data-diagram="zw-sf-setup"] .cs-core-check svg{width:13px;height:13px}
+  [data-diagram="zw-sf-setup"] .cs-core-check path{fill:none;stroke:currentColor;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round}
+  [data-diagram="zw-sf-setup"] .cs-pulse{
+    position:absolute;inset:-1px;border:2px solid var(--zw-primary-30);
+    border-radius:var(--zw-radius-card);opacity:0;pointer-events:none;
+  }
+  /* ==================== SCENE:STYLE end ==================== */
+
+  @media(prefers-reduced-motion:reduce){
+    [data-diagram="zw-sf-setup"] .cs-core,[data-diagram="zw-sf-setup"] .cs-node{opacity:1}
+    [data-diagram="zw-sf-setup"] .cs-node{border-color:var(--zw-primary-30)}
+    [data-diagram="zw-sf-setup"] .cs-node>span{background:var(--zw-primary-10);color:var(--zw-primary)}
+    [data-diagram="zw-sf-setup"] .cs-line--1{transform:rotate(-159deg) scaleX(1)}
+    [data-diagram="zw-sf-setup"] .cs-line--2{transform:rotate(-21deg) scaleX(1)}
+    [data-diagram="zw-sf-setup"] .cs-line--3{transform:rotate(0deg) scaleX(1)}
+    [data-diagram="zw-sf-setup"] .cs-line--4{transform:rotate(21deg) scaleX(1)}
+    [data-diagram="zw-sf-setup"] .cs-line--5{transform:rotate(159deg) scaleX(1)}
+    [data-diagram="zw-sf-setup"] .cs-line--6{transform:rotate(180deg) scaleX(1)}
+    [data-diagram="zw-sf-setup"] .cs-core-check{transform:scale(1)}
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-sf-setup"]')) {
+(function(){
+  if(!root||root.dataset.zwInit)return;root.dataset.zwInit='1';
+  var DESIGN_W=400,stage=root.querySelector('.zw-stage'),fitEl=root.querySelector('.zw-fit'),scene=root.querySelector('.zw-scene');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var EASE_MOVE='cubic-bezier(0.645, 0.045, 0.355, 1)',EASE_OUT='cubic-bezier(0.22, 1, 0.36, 1)',EASE_POP='cubic-bezier(0.34, 1.56, 0.64, 1)';
+  function wait(ms){return new Promise(function(r){setTimeout(r,ms);});}
+  function settled(a){return a.finished.catch(function(){});}
+  function fit(){}
+  function confetti(){}
+
+  async function play(){
+    fit();if(reduce)return;
+    var core=scene.querySelector('.cs-core'),nodes=Array.prototype.slice.call(scene.querySelectorAll('.cs-node')),lines=Array.prototype.slice.call(scene.querySelectorAll('.cs-line'));
+    await settled(core.animate([{opacity:0,transform:'scale(.88)'},{opacity:1,transform:'scale(1)'}],{duration:460,easing:EASE_OUT,fill:'forwards'}));core.style.opacity=1;
+    for(var i=0;i<nodes.length;i++){
+      var angle=['-159','-21','0','21','159','180'][i];
+      lines[i].animate([{transform:'rotate('+angle+'deg) scaleX(0)'},{transform:'rotate('+angle+'deg) scaleX(1)'}],{duration:420,easing:EASE_MOVE,fill:'forwards'});
+      await wait(190);
+      nodes[i].animate([{opacity:0,transform:'scale(.9)'},{opacity:1,transform:'scale(1)'}],{duration:340,easing:EASE_OUT,fill:'forwards'});
+      nodes[i].style.opacity=1;nodes[i].classList.add('cs-node--on');
+      await wait(130);
+    }
+    await wait(180);
+    var check=scene.querySelector('.cs-core-check'),pulse=scene.querySelector('.cs-pulse');
+    check.animate([{transform:'scale(0)'},{transform:'scale(1)'}],{duration:380,easing:EASE_POP,fill:'forwards'});check.style.transform='scale(1)';
+    pulse.animate([{opacity:.7,transform:'scale(1)'},{opacity:0,transform:'scale(1.28)'}],{duration:780,easing:EASE_OUT,fill:'forwards'});
+  }
+  fit();if('ResizeObserver'in window)new ResizeObserver(fit).observe(stage);else window.addEventListener('resize',fit);
+  function arm(){if(!('IntersectionObserver'in window)){play();return;}var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){io.disconnect();requestAnimationFrame(function(){requestAnimationFrame(play);});}});},{threshold:.4});io.observe(root);}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',arm);else arm();
+})();
+  }
+</script>

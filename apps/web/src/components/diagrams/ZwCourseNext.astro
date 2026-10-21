@@ -1,0 +1,219 @@
+---
+// Ported from the Webflow embed #zw-course-next (kurs-ai-w-sprzedazy) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  Kurs AI w sprzedazy — landing "co dalej": the ladder.
+  Three ascending tiers (Course, Group, 1:1). What you paid for the
+  course lifts off it and rides up the ladder as a credit, lighting
+  each tier it reaches. Calm resolution — a check, no confetti.
+  zawlodzki.pl · self-contained, no external dependencies.
+*/
+---
+
+<div class="dg" data-diagram="zw-course-next" aria-hidden="true" style="--dg-w: 400; --dg-h: 231;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="nx-panel">
+          <span class="nx-eyebrow">Next step</span>
+          <div class="nx-wrap">
+            <svg class="nx-guide" viewBox="0 0 380 200" width="380" height="200" fill="none">
+              <path d="M60,163 C 120,148 140,128 190,113 C 240,98 270,78 320,63"
+                    stroke="#DDE1E6" stroke-width="2" stroke-dasharray="5 6" stroke-linecap="round"/>
+            </svg>
+
+            <div class="nx-card nx-card--course">Course</div>
+            <div class="nx-card nx-card--group">Group</div>
+            <div class="nx-card nx-card--solo">
+              1:1
+              <span class="nx-check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="12" height="12"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+
+            <div class="nx-chip" aria-hidden="true">Credit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+/* ---- Shared family layer: tokens + responsive shell ---- */
+  [data-diagram="zw-course-next"] {
+    --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
+    --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
+    --zw-border:#DDE1E6; --zw-border-soft:#EDF0F3; --zw-heading:#0E0F11;
+    --zw-text:#1E2024; --zw-muted:#838D95; --zw-card:#FFFFFF;
+    --zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --zw-radius-card:10px; --zw-radius-lane:14px;
+    --zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);
+    --zw-shadow-lift:1px 8px 22px rgba(14,15,17,.14);
+    font-family:var(--zw-font); width:100%; max-width:440px; margin:0 auto;
+    box-sizing:border-box; -webkit-font-smoothing:antialiased;
+  }
+  [data-diagram="zw-course-next"] *, [data-diagram="zw-course-next"] *::before, [data-diagram="zw-course-next"] *::after { box-sizing:border-box; }
+  [data-diagram="zw-course-next"] .zw-stage { width:100%; overflow:hidden; }
+  [data-diagram="zw-course-next"] .zw-fit { width:400px; transform-origin:top left; }
+  [data-diagram="zw-course-next"] .zw-scene { position:relative; }
+
+  /* =================== SCENE:STYLE start =================== */
+  [data-diagram="zw-course-next"] .nx-panel { width:380px; margin:6px auto; }
+  [data-diagram="zw-course-next"] .nx-eyebrow {
+    display:block; font-size:12px; font-weight:700; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--zw-muted); margin:0 2px 10px; opacity:0;
+  }
+  [data-diagram="zw-course-next"] .nx-wrap { position:relative; width:380px; height:200px; }
+  [data-diagram="zw-course-next"] .nx-guide { position:absolute; top:0; left:0; opacity:0; }
+
+  [data-diagram="zw-course-next"] .nx-card {
+    position:absolute; width:104px; height:50px;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--zw-card); border:1px solid var(--zw-border);
+    border-radius:var(--zw-radius-card); box-shadow:var(--zw-shadow-rest);
+    font-size:14px; font-weight:700; color:var(--zw-text);
+    opacity:0; transition:border-color .4s ease, color .4s ease;
+  }
+  [data-diagram="zw-course-next"] .nx-card--course { left:8px;   top:138px; }
+  [data-diagram="zw-course-next"] .nx-card--group  { left:138px; top:88px; }
+  [data-diagram="zw-course-next"] .nx-card--solo   { left:268px; top:38px; }
+  [data-diagram="zw-course-next"] .nx-card--live { border-color:var(--zw-primary-30); color:var(--zw-primary); }
+
+  [data-diagram="zw-course-next"] .nx-check {
+    position:absolute; top:-8px; right:-8px; width:22px; height:22px; border-radius:50%;
+    background:var(--zw-success); color:#fff; display:flex; align-items:center;
+    justify-content:center; transform:scale(0); transform-origin:center;
+  }
+
+  [data-diagram="zw-course-next"] .nx-chip {
+    position:absolute; left:29px; top:108px; width:62px; height:28px;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--zw-primary); color:#fff; font-size:12px; font-weight:700;
+    letter-spacing:.04em; border-radius:8px; box-shadow:var(--zw-shadow-rest);
+    opacity:0; z-index:4; will-change:transform, opacity;
+  }
+  /* ==================== SCENE:STYLE end ==================== */
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-diagram="zw-course-next"] .nx-eyebrow { opacity:1; }
+    [data-diagram="zw-course-next"] .nx-guide { opacity:1; }
+    [data-diagram="zw-course-next"] .nx-card { opacity:1; border-color:var(--zw-primary-30); color:var(--zw-primary); }
+    [data-diagram="zw-course-next"] .nx-check { transform:scale(1); }
+    [data-diagram="zw-course-next"] .nx-chip { opacity:1; transform:translate(260px,-100px); }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-course-next"]')) {
+(function () {
+  if (!root || root.dataset.zwInit) return;
+  root.dataset.zwInit = '1';
+
+  var DESIGN_W = 400;
+  var stage = root.querySelector('.zw-stage');
+  var fitEl = root.querySelector('.zw-fit');
+  var scene = root.querySelector('.zw-scene');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var EASE_OUT  = 'cubic-bezier(0.22, 1, 0.36, 1)';
+  var EASE_MOVE = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+  var EASE_POP  = 'cubic-bezier(0.34, 1.56, 0.64, 1)';
+  function wait(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+  function settled(a){ return a.finished.catch(function(){}); }
+
+  function fit(){}
+
+  var $ = function(s){ return scene.querySelector(s); };
+  var eyebrow = $('.nx-eyebrow');
+  var guide   = $('.nx-guide');
+  var course  = $('.nx-card--course');
+  var group   = $('.nx-card--group');
+  var solo    = $('.nx-card--solo');
+  var check   = $('.nx-check');
+  var chip    = $('.nx-chip');
+
+  var DX = 130, DY = -50;   /* one rung of the ladder, in design px */
+
+  /* lift -> travel (with a gentle upward arc) -> settle */
+  async function hop(el, fromX, fromY, toX, toY){
+    var from = 'translate(' + fromX + 'px,' + fromY + 'px)';
+    var to   = 'translate(' + toX   + 'px,' + toY   + 'px)';
+    el.animate([{transform:from + ' scale(1)'},{transform:from + ' scale(1.08)'}],
+      {duration:170, easing:EASE_OUT, fill:'forwards'});
+    el.style.boxShadow = 'var(--zw-shadow-lift)';
+    await wait(150);
+
+    await settled(el.animate(
+      [{transform:from + ' scale(1.08)'},
+       {transform:'translate(' + ((fromX+toX)/2) + 'px,' + ((fromY+toY)/2 - 16) + 'px) scale(1.08)', offset:0.5},
+       {transform:to + ' scale(1.08)'}],
+      {duration:640, easing:EASE_MOVE, fill:'forwards'}));
+
+    await settled(el.animate([{transform:to + ' scale(1.08)'},{transform:to + ' scale(1)'}],
+      {duration:220, easing:EASE_OUT, fill:'forwards'}));
+    el.style.transform = to + ' scale(1)';
+    el.style.boxShadow = 'var(--zw-shadow-rest)';
+  }
+
+  async function play(){
+    fit();
+    if (reduce) { return; }
+
+    /* 1 · stage the ladder */
+    eyebrow.animate([{opacity:0},{opacity:1}], {duration:300, easing:EASE_OUT, fill:'forwards'});
+    eyebrow.style.opacity = 1;
+    guide.animate([{opacity:0},{opacity:1}], {duration:360, delay:120, easing:EASE_OUT, fill:'forwards'});
+    guide.style.opacity = 1;
+    [course, group, solo].forEach(function(n,i){
+      n.animate([{opacity:0, transform:'translateY(10px)'},{opacity:1, transform:'translateY(0)'}],
+        {duration:420, delay:180 + i*90, easing:EASE_OUT, fill:'forwards'});
+      n.style.opacity = 1;
+    });
+    await wait(760);
+
+    /* 2 · the course is the rung you are on */
+    course.classList.add('nx-card--live');
+    await wait(320);
+
+    /* 3 · what you paid becomes a credit and rides up */
+    chip.animate([{opacity:0, transform:'translate(0,0) scale(.9)'},{opacity:1, transform:'translate(0,0) scale(1)'}],
+      {duration:300, easing:EASE_OUT, fill:'forwards'});
+    chip.style.opacity = 1;
+    await wait(420);
+
+    await hop(chip, 0, 0, DX, DY);
+    group.classList.add('nx-card--live');
+    await wait(520);
+
+    await hop(chip, DX, DY, DX*2, DY*2);
+    solo.classList.add('nx-card--live');
+
+    /* 4 · calm resolution — a check, no confetti */
+    await wait(180);
+    check.animate([{transform:'scale(0)'},{transform:'scale(1)'}],
+      {duration:360, easing:EASE_POP, fill:'forwards'});
+    check.style.transform = 'scale(1)';
+    solo.animate([{transform:'scale(1)'},{transform:'scale(1.04)'},{transform:'scale(1)'}],
+      {duration:420, easing:EASE_POP});
+  }
+
+  fit();
+  if ('ResizeObserver' in window) { new ResizeObserver(fit).observe(stage); }
+  else { window.addEventListener('resize', fit); }
+
+  function arm(){
+    if (!('IntersectionObserver' in window)) { play(); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { io.disconnect(); requestAnimationFrame(function(){ requestAnimationFrame(play); }); }
+      });
+    }, { threshold: 0.4 });
+    io.observe(root);
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arm); }
+  else { arm(); }
+})();
+  }
+</script>

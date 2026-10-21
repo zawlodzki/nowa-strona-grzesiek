@@ -1,0 +1,159 @@
+---
+import { FORMS } from '../../worker/form';
+
+type FormKey = keyof typeof FORMS;
+interface Props {
+  form: FormKey;
+  id: string;
+  // Names of the fields the slot renders. Every other field of the form is rendered here as a hidden attribution input.
+  visible: string[];
+  submitLabel: string;
+  tone?: 'light' | 'dark';
+  class?: string;
+}
+const { form, id, visible, submitLabel, tone = 'light', class: className } = Astro.props;
+const names = FORMS[form].fields.map(([name]) => name);
+const unknown = visible.filter((name) => !names.includes(name));
+if (unknown.length) throw new Error(`LeadForm "${form}" has no field ${unknown.join(', ')}. Field names come from worker/form.ts.`);
+const hidden = names.filter((name) => !visible.includes(name));
+// Cloudflare's published always-pass test key keeps local builds working. Staging and production builds set the live key.
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x00000000000000000000AA';
+---
+<form
+  id={id}
+  class:list={['lead-form', tone, className]}
+  action={`/api/form?form=${form}`}
+  method="post"
+  data-lead-form
+  data-form={form}
+  data-name={FORMS[form].name}
+>
+  <slot />
+  <div class="cf-turnstile" data-sitekey={siteKey} data-language="pl" data-theme={tone === 'dark' ? 'dark' : 'light'} data-size="flexible"></div>
+  <button type="submit" class="submit" data-wait="Zaczekaj chwilę…">{submitLabel}</button>
+  <p class="status type-body-s" role="status" aria-live="polite"></p>
+  <div data-zaw-attribution-fields="v1" hidden>
+    {hidden.map((name) => <input type="hidden" name={name} data-zaw-attribution={name} value="" />)}
+  </div>
+</form>
+
+<script>
+  const TURNSTILE = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+  type Turnstile = { reset(widget: Element): void };
+
+  if (!document.querySelector(`script[src="${TURNSTILE}"]`)) {
+    const script = Object.assign(document.createElement('script'), { src: TURNSTILE, async: true, defer: true });
+    document.head.appendChild(script);
+  }
+
+  // Without this script the form still posts and the Worker answers with a 303 to the thank-you page.
+  for (const form of document.querySelectorAll<HTMLFormElement>('form[data-lead-form]')) {
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    const status = form.querySelector<HTMLElement>('.status')!;
+    const label = button.textContent;
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (form.getAttribute('aria-busy') === 'true') return;
+      form.setAttribute('aria-busy', 'true');
+      button.textContent = button.dataset.wait ?? label;
+      status.textContent = '';
+      const response = await fetch(form.action, { method: 'POST', body: new FormData(form) }).catch(() => null);
+      if (response?.redirected) {
+        location.assign(response.url);
+        return;
+      }
+      status.textContent = response
+        ? (await response.text()) || 'Nie udało się wysłać formularza. Spróbuj ponownie.'
+        : 'Brak połączenia. Sprawdź internet i spróbuj ponownie.';
+      status.dataset.state = 'error';
+      button.textContent = label;
+      form.removeAttribute('aria-busy');
+      const widget = form.querySelector('.cf-turnstile');
+      const turnstile = (window as { turnstile?: Turnstile }).turnstile;
+      if (widget && turnstile) turnstile.reset(widget);
+    });
+  }
+</script>
+
+<style>
+  .lead-form {
+    --field-label: var(--text-heading);
+    --field-note: var(--text-muted);
+    display: grid;
+    gap: var(--space-s);
+    align-content: start;
+  }
+  .dark {
+    --field-label: var(--text-on-dark);
+    --field-note: var(--text-on-dark-muted);
+  }
+
+  .lead-form :global(.field) { display: grid; gap: var(--space-3xs); }
+  .lead-form :global(.field > label) { color: var(--field-label); font-weight: var(--font-weight-medium); }
+  .lead-form :global(.required) { color: var(--field-note); font-weight: var(--font-weight-regular); }
+  .lead-form :global(:is(input:not([type="checkbox"]), textarea)) {
+    inline-size: 100%;
+    min-block-size: 48px;
+    padding: var(--space-xs) var(--space-s);
+    border: var(--border-width-hairline) solid var(--border-default);
+    border-radius: var(--radius-sm);
+    background: var(--surface-page);
+    color: var(--text-heading);
+    font: inherit;
+    box-shadow: var(--shadow-input);
+  }
+  .lead-form :global(textarea) { field-sizing: content; min-block-size: 4lh; max-block-size: 12lh; resize: vertical; }
+  .lead-form :global(::placeholder) { color: var(--text-muted); opacity: 1; }
+  .lead-form :global(:is(input, textarea):focus-visible) { outline: var(--border-width-button) solid var(--border-focus); outline-offset: 2px; }
+  .dark :global(:is(input, textarea):focus-visible) { outline-color: var(--border-accent); }
+  .lead-form :global(:is(input, textarea):user-invalid) { border-color: var(--border-error); }
+  @media (hover: hover) and (pointer: fine) {
+    .lead-form :global(:is(input:not([type="checkbox"]), textarea):hover) { border-color: var(--border-hover); }
+  }
+
+  .lead-form :global(.check) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-xs);
+    align-items: start;
+    min-block-size: 44px;
+    color: var(--field-note);
+    cursor: pointer;
+  }
+  .lead-form :global(.check input) { inline-size: 1.25rem; block-size: 1.25rem; margin: 0.1lh 0 0; accent-color: var(--surface-accent); }
+  .lead-form :global(.note) { color: var(--field-note); }
+  .dark :global(a) { color: var(--text-link-on-dark); }
+
+  .cf-turnstile:empty { display: none; }
+
+  .submit {
+    justify-self: start;
+    min-block-size: 48px;
+    max-inline-size: 100%;
+    padding: var(--space-2xs) var(--space-l);
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: var(--surface-accent);
+    color: var(--text-on-accent);
+    font: inherit;
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+  }
+  .dark .submit { background: var(--surface-page); color: var(--text-link); }
+  .submit:focus-visible { outline: var(--border-width-button) solid var(--border-focus); outline-offset: 3px; }
+  .dark .submit:focus-visible { outline-color: var(--border-accent); }
+  .submit:active { scale: 0.97; }
+  [aria-busy="true"] .submit { cursor: progress; opacity: 0.8; }
+  @media (hover: hover) and (pointer: fine) {
+    .submit:hover { background: var(--text-link-hover); }
+    .dark .submit:hover { background: var(--surface-cyan-tint); color: var(--text-link-hover); }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .submit { transition: background-color var(--motion-duration-base) var(--motion-easing-out), scale var(--motion-duration-fast) var(--motion-easing-out); }
+  }
+  @container (width < 30rem) { .submit { justify-self: stretch; } }
+
+  .status:empty { display: none; }
+  .status[data-state="error"] { color: var(--text-error); font-weight: var(--font-weight-medium); }
+  .dark .status[data-state="error"] { color: var(--text-on-dark); }
+</style>

@@ -1,0 +1,46 @@
+---
+// Ported from the Webflow embed #zw-asana-process (szkolenie-i-wdrozenie-asana) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  <!-- Asana implementation — step 1: choose one valuable repeatable process -->
+*/
+---
+
+<div class="dg" data-diagram="zw-asana-process" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;"><div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
+  <div class="as1-panel">
+    <span class="as1-eyebrow">Choose one</span>
+    <div class="as1-grid">
+      <div class="as1-process">Sales</div><div class="as1-process">Support</div><div class="as1-process">Hiring</div>
+      <div class="as1-process">Finance</div><div class="as1-process as1-process--pick">Delivery<span class="as1-check">&#10003;</span></div><div class="as1-process">Ops</div>
+    </div>
+    <span class="as1-focus"></span>
+    <div class="as1-minimum"><span>Owner</span><span>Brief</span><span>Due</span><b>Minimum</b></div>
+  </div>
+</div></div></div></div>
+
+<style is:global>
+[data-diagram="zw-asana-process"]{--zw-primary:#3A48CC;--zw-primary-10:#EBEDFA;--zw-primary-30:#8991E0;--zw-secondary:#0ACFFE;--zw-success:#52C41A;--zw-bg-soft:#F9FAFB;--zw-border:#DDE1E6;--zw-border-soft:#EDF0F3;--zw-heading:#0E0F11;--zw-text:#1E2024;--zw-muted:#838D95;--zw-card:#FFFFFF;--zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;--zw-serif:'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;--zw-radius-card:10px;--zw-radius-lane:14px;--zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);--zw-shadow-lift:1px 8px 22px rgba(14,15,17,.14);font-family:var(--zw-font);width:100%;max-width:440px;margin:0 auto;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+[data-diagram="zw-asana-process"] *,[data-diagram="zw-asana-process"] *::before,[data-diagram="zw-asana-process"] *::after{box-sizing:border-box}[data-diagram="zw-asana-process"] .zw-stage{width:100%;overflow:hidden}[data-diagram="zw-asana-process"] .zw-fit{width:400px;transform-origin:top left}[data-diagram="zw-asana-process"] .zw-scene{position:relative}
+[data-diagram="zw-asana-process"] .as1-panel{position:relative;width:360px;height:220px;margin:6px auto;padding:18px 20px;background:var(--zw-bg-soft);border:1px solid var(--zw-border);border-radius:var(--zw-radius-lane);overflow:hidden}
+[data-diagram="zw-asana-process"] .as1-eyebrow{display:block;font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--zw-muted);opacity:0}
+[data-diagram="zw-asana-process"] .as1-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+[data-diagram="zw-asana-process"] .as1-process{position:relative;height:42px;display:flex;align-items:center;justify-content:center;background:var(--zw-card);border:1px solid var(--zw-border);border-radius:var(--zw-radius-card);box-shadow:var(--zw-shadow-rest);color:var(--zw-muted);font-size:11px;font-weight:700;opacity:0}
+[data-diagram="zw-asana-process"] .as1-process--chosen{border-color:var(--zw-primary-30);background:var(--zw-primary-10);color:var(--zw-primary)}
+[data-diagram="zw-asana-process"] .as1-check{position:absolute;right:6px;top:6px;width:16px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--zw-success);color:#fff;font-size:10px;transform:scale(0)}
+[data-diagram="zw-asana-process"] .as1-focus{position:absolute;left:20px;top:48px;width:100px;height:42px;border:2px solid var(--zw-secondary);border-radius:var(--zw-radius-card);box-shadow:0 0 0 4px rgba(10,207,254,.13);opacity:0;will-change:transform,opacity}
+[data-diagram="zw-asana-process"] .as1-minimum{position:absolute;left:63px;right:63px;bottom:16px;height:36px;display:flex;align-items:center;justify-content:center;gap:8px;opacity:0}
+[data-diagram="zw-asana-process"] .as1-minimum span{padding:5px 10px;border-radius:999px;background:var(--zw-primary-10);color:var(--zw-primary);font-size:9px;font-weight:800}
+[data-diagram="zw-asana-process"] .as1-minimum b{position:absolute;top:-14px;font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--zw-muted)}
+@media(prefers-reduced-motion:reduce){[data-diagram="zw-asana-process"] .as1-eyebrow,[data-diagram="zw-asana-process"] .as1-process,[data-diagram="zw-asana-process"] .as1-minimum{opacity:1}[data-diagram="zw-asana-process"] .as1-process:not(.as1-process--pick){opacity:.25}[data-diagram="zw-asana-process"] .as1-process--pick{border-color:var(--zw-primary-30);background:var(--zw-primary-10);color:var(--zw-primary)}[data-diagram="zw-asana-process"] .as1-check{transform:scale(1)}[data-diagram="zw-asana-process"] .as1-focus{opacity:0}}
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-asana-process"]')) {
+(function(){if(!root||root.dataset.zwInit)return;root.dataset.zwInit='1';var DESIGN_W=400,stage=root.querySelector('.zw-stage'),fitEl=root.querySelector('.zw-fit'),scene=root.querySelector('.zw-scene');var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;var EASE_MOVE='cubic-bezier(0.645, 0.045, 0.355, 1)',EASE_OUT='cubic-bezier(0.22, 1, 0.36, 1)',EASE_POP='cubic-bezier(0.34, 1.56, 0.64, 1)';function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}function settled(a){return a.finished.catch(function(){})}function fit(){}
+async function play(){fit();if(reduce)return;var eyebrow=scene.querySelector('.as1-eyebrow'),tiles=Array.prototype.slice.call(scene.querySelectorAll('.as1-process')),focus=scene.querySelector('.as1-focus');eyebrow.animate([{opacity:0},{opacity:1}],{duration:300,easing:EASE_OUT,fill:'forwards'});eyebrow.style.opacity=1;tiles.forEach(function(t,i){t.animate([{opacity:0,transform:'translateY(10px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,delay:100+i*70,easing:EASE_OUT,fill:'forwards'});t.style.opacity=1});await wait(760);
+focus.style.opacity=1;var spots=[[0,0],[110,0],[220,0],[0,52],[110,52]];for(var i=0;i<spots.length;i++){var from=i?spots[i-1]:spots[0],to=spots[i];await settled(focus.animate([{transform:'translate('+from[0]+'px,'+from[1]+'px)',opacity:i?1:0},{transform:'translate('+to[0]+'px,'+to[1]+'px)',opacity:1}],{duration:i?360:280,easing:i?EASE_MOVE:EASE_OUT,fill:'forwards'}));focus.style.transform='translate('+to[0]+'px,'+to[1]+'px)';await wait(160)}
+await wait(260);var pick=scene.querySelector('.as1-process--pick');tiles.forEach(function(t){if(t!==pick)t.animate([{opacity:1},{opacity:.25}],{duration:360,easing:EASE_OUT,fill:'forwards'})});focus.animate([{opacity:1},{opacity:0}],{duration:240,easing:EASE_OUT,fill:'forwards'});pick.classList.add('as1-process--chosen');var check=pick.querySelector('.as1-check');check.animate([{transform:'scale(0)'},{transform:'scale(1)'}],{duration:360,easing:EASE_POP,fill:'forwards'});check.style.transform='scale(1)';await wait(420);var minimum=scene.querySelector('.as1-minimum');minimum.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,easing:EASE_OUT,fill:'forwards'});minimum.style.opacity=1}
+fit();if('ResizeObserver'in window)new ResizeObserver(fit).observe(stage);else window.addEventListener('resize',fit);function arm(){if(!('IntersectionObserver'in window)){play();return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.disconnect();requestAnimationFrame(function(){requestAnimationFrame(play)})}})},{threshold:.4});io.observe(root)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',arm);else arm()})();
+  }
+</script>

@@ -1,0 +1,350 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy#webpage",
+      "url": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy",
+      "name": "AI w sprzedaży B2B — osiem modułów na waszych danych z CRM",
+      "description": "Osiem modułów do samodzielnego przejścia: proces, kontekst firmy, podpięcie CRM, pierwszy skill, transkrypcje, oferty. Na końcu każdego zostaje gotowe rozwiązanie. 2 200 zł netto na rok, w przedsprzedaży 1 100 zł.",
+      "inLanguage": "pl-PL",
+      "isPartOf": {
+        "@id": "https://www.zawlodzki.pl/#website"
+      },
+      "about": {
+        "@id": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy#course"
+      },
+      "mainEntity": {
+        "@id": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy#course"
+      },
+      "breadcrumb": {
+        "@id": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy#breadcrumb"
+      },
+      "dateModified": "2026-08-10",
+      "author": {
+        "@id": "https://www.zawlodzki.pl/o-mnie#person"
+      }
+    },
+    {
+      "@type": "Course",
+      "@id": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy#course",
+      "name": "AI w sprzedaży B2B — kurs online",
+      "url": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy",
+      "description": "Osiem modułów wideo do samodzielnego przejścia na danych własnej firmy: rozpisanie procesu sprzedaży pod AI, repozytorium kontekstu firmy i podpięcie systemów przez MCP, REST i CLI, pierwszy skill z testami, audyt i higiena CRM, bazy prospectingowe na polskich rejestrach, transkrypcje spotkań, oferta jako interaktywna strona oraz wdrożenie w zespole. Każdy moduł kończy się gotowym rozwiązaniem, które zostaje w firmie. Do tego dwa bonusy: zestaw skilli do widoczności strony usługowej i landingu w Google oraz w odpowiedziach AI, i zestaw skilli do produkcji treści na bloga, LinkedIna i X wraz z karuzelami. W cenie zamknięte forum: społeczność uczestników i pytania wprost do mnie.",
+      "inLanguage": "pl-PL",
+      "provider": {
+        "@id": "https://www.zawlodzki.pl/#organization"
+      },
+      "author": {
+        "@id": "https://www.zawlodzki.pl/o-mnie#person"
+      },
+      "educationalLevel": "Średnio zaawansowany",
+      "isAccessibleForFree": false,
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Firmy B2B prowadzące sprzedaż doradczą"
+      },
+      "teaches": [
+        "Proces sprzedaży pod AI — mapa procesu i scoring, gdzie AI zarobi",
+        "Kontekst, integracje i ontologia — repozytorium kontekstu firmy i podpięcie systemów przez MCP, REST i CLI",
+        "Pierwszy skill w Claude albo ChatGPT — budowa, testy i poprawianie",
+        "Automatyzacje CRM i porządek w danych — audyt, higiena, dwie automatyzacje",
+        "Bazy prospectingowe — ICP jako filtry, dane z KRS, CEIDG i REGON",
+        "Transkrypcje jako materiał do sprzedaży — obieg do CRM, bank języka klienta, RODO i AI Act",
+        "Oferta jako interaktywna strona zamiast PDF-a",
+        "Wdrożenie w zespole — opiekun procesu, mierniki, polityka użycia AI",
+        "Bonus: audyt strony usługowej i landingu pod widoczność w Google i w odpowiedziach AI oraz pisanie artykułów na podstawie żywych wyników wyszukiwania",
+        "Bonus: system produkcji treści na bloga, LinkedIna i X wraz z karuzelami"
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "@id": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy#course-instance",
+        "name": "Kurs AI w sprzedaży B2B — dostęp na rok",
+        "courseMode": "online",
+        "courseWorkload": "PT9H",
+        "startDate": "2026-10-01",
+        "inLanguage": "pl-PL",
+        "instructor": {
+          "@id": "https://www.zawlodzki.pl/o-mnie#person"
+        }
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Kurs, dostęp na rok — cena przedsprzedażowa",
+          "description": "Przedsprzedaż: 50% taniej niż cena katalogowa. Kupując teraz rezerwujesz dostęp i tę cenę, materiały dostajesz w dniu startu, 1 października 2026. Osiem modułów wideo (około dziewięciu godzin), szablony i gotowe procesy, instrukcje podpięcia narzędzi przez MCP, REST i CLI, dokumenty RODO i polityka użycia AI, nowe lekcje przez rok, dwa bonusowe zestawy skilli: widoczność w Google i w odpowiedziach AI oraz produkcja treści na bloga i LinkedIna. Dostęp do zamkniętego forum: społeczność uczestników i pytania wprost do mnie. Licencja obejmuje całą firmę, nie jedną osobę. Na koniec weryfikowalny certyfikat z odznaką na LinkedIna.",
+          "price": "1100",
+          "priceCurrency": "PLN",
+          "availability": "https://schema.org/PreOrder",
+          "validThrough": "2026-09-30",
+          "seller": {
+            "@id": "https://www.zawlodzki.pl/#organization"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Kurs, dostęp na rok — cena katalogowa",
+          "description": "Cena po zakończeniu przedsprzedaży, obowiązuje od startu materiałów 1 października 2026. Zakres bez zmian: osiem modułów wideo, szablony i gotowe procesy, instrukcje podpięcia narzędzi, dokumenty RODO i polityka użycia AI, nowe lekcje i aktualizacje przez rok, dwa bonusowe zestawy skilli: widoczność w Google i w odpowiedziach AI oraz produkcja treści na bloga i LinkedIna. Dostęp do zamkniętego forum: społeczność uczestników i pytania wprost do mnie. Licencja obejmuje całą firmę, nie jedną osobę. Na koniec weryfikowalny certyfikat z odznaką na LinkedIna.",
+          "price": "2200",
+          "priceCurrency": "PLN",
+          "availability": "https://schema.org/InStock",
+          "availabilityStarts": "2026-10-01",
+          "seller": {
+            "@id": "https://www.zawlodzki.pl/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://www.zawlodzki.pl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI w sprzedaży B2B — kurs online",
+          "item": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy#faq",
+      "isPartOf": {
+        "@id": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy#webpage"
+      },
+      "about": {
+        "@id": "https://www.zawlodzki.pl/kurs-ai-w-sprzedazy#course"
+      },
+      "inLanguage": "pl-PL",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Czym to się różni od kursu AI za 200 złotych?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tamte uczą promptów w oknie czatu, na wklejonym pliku. Tu podpinacie swój CRM, budujecie bazę wiedzy o firmie i wychodzicie z gotowymi rozwiązaniami, które zostają w firmie. Różnicę widać w module drugim: to jedyne miejsce, w którym ktoś pokazuje, jak podpiąć Pipedrive albo HubSpota, a nie jak wkleić tabelkę."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mamy e-commerce albo sprzedaż transakcyjną. To dla nas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Raczej nie. Kurs jest zbudowany pod sprzedaż doradczą: jest rozmowa, jest diagnoza potrzeby, oferta powstaje pod konkretnego klienta. Jeśli klient kupuje sam, a handlowiec ledwo dotyka transakcji — e-commerce, sprzedaż transakcyjna, PLG SaaS w self-service — większość modułów nie ma się o co zaczepić. Napisz przed zakupem, powiem wprost, czy w waszym przypadku to ma sens."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Nasz CRM jest zaniedbany. To nas dyskwalifikuje?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie, moduł czwarty jest dokładnie o tym. Ale jeśli w CRM nie ma nic poza nazwami firm, zacznijcie od uporządkowania danych — bez tego reszta nie zadziała."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Potrzebuję dostępu administratora do CRM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "W praktyce tak, przy module drugim i czwartym. Bez uprawnień podepniecie tylko eksport, a wtedy tracicie największą część wartości. Jeśli nie macie dostępu, przerabiajcie kurs z osobą, która go ma."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ile to trwa i ile czasu muszę na to poświęcić?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Około dziewięciu godzin materiału plus praca na swoich danych. Realnie: dwa–trzy tygodnie po godzinie dziennie. Dostęp macie na rok, więc można wracać."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Na jakich narzędziach to pokazujesz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Claude i ChatGPT w wersji Business/Team, Pipedrive i HubSpot po stronie CRM, n8n do automatyzacji. Jeśli macie inne narzędzia, metoda zostaje ta sama — pokazuję, na co patrzeć."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak wygląda kwestia RODO i AI Act?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Moduł szósty. Ustalacie, które dane mogą iść do zewnętrznego API, a które nie. W materiałach są gotowe dokumenty: klauzula o nagrywaniu, zgoda na transkrypcję, polityka użycia AI. Do weryfikacji przez wasz dział prawny."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy dostanę bibliotekę promptów?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie i to jest świadome. Prompty starzeją się w miesiąc. Dostajecie procesy z opisanym wyzwalaczem, wejściami i kryterium akceptacji oraz sposób sprawdzenia, czy działają."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Co to są te dwa bonusy i czy trzeba za nie dopłacać?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie, są w cenie kursu. Pierwszy to skille do widoczności: audytujesz nimi swoją stronę usługową i landing, a potem piszesz artykuł na podstawie tego, co realnie wyświetla się w Google na daną frazę. Drugi to skille do treści: z jednego artykułu robisz posty na LinkedIna i X, a karuzelę renderujesz z pliku, zamiast składać ją slajd po slajdzie. Jedno zastrzeżenie: skille z pierwszego bonusu sięgają po płatne API danych wyszukiwania i konto zakładasz u siebie. Bez niego napiszesz artykuł, ale bez sprawdzenia, co siedzi w wynikach."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy jest certyfikat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak. Dostajesz weryfikowalny certyfikat i odznakę na profil na LinkedInie. Do tego osiem gotowych rozwiązań i jeden działający proces, które na spotkaniu z zarządem znaczą więcej niż sam certyfikat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kiedy startuje i co dostaję teraz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 października. To przedsprzedaż — kurs kosztuje w niej 1100 zł netto zamiast 2200. Kupując teraz, rezerwujecie dostęp i tę cenę, a materiały dostajecie w dniu startu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Co, jeśli wolimy, żeby ktoś przeprowadził nas przez to za rękę?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wtedy program grupowy albo wdrożenie. Cenę kursu odliczam od obu, jeśli zaczynacie w ciągu 90 dni. Prowadzę je osobiście — od pierwszej rozmowy do końca rozmawiacie ze mną."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.zawlodzki.pl/o-mnie#person",
+      "name": "Grzegorz Zawłodzki",
+      "jobTitle": "Konsultant CRM i automatyzacji sprzedaży B2B",
+      "description": "Konsultant i trener. Wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę oraz procesy sprzedaży wspierane przez AI. Pracował z ponad 50 firmami, od startupów po globalne marki jak IAB.",
+      "url": "https://www.zawlodzki.pl/o-mnie",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/62ffd2315786d32f5dc7a1ee_zawlodzki%20front%20450_compressed.webp",
+        "caption": "Grzegorz Zawłodzki"
+      },
+      "email": "grzesiek@zawlodzki.pl",
+      "telephone": "+48571088338",
+      "worksFor": {
+        "@id": "https://www.zawlodzki.pl/#organization"
+      },
+      "knowsLanguage": [
+        "pl",
+        "en"
+      ],
+      "knowsAbout": [
+        "Wdrożenia CRM",
+        "Pipedrive",
+        "HubSpot",
+        "Attio",
+        "Asana",
+        "AI w sprzedaży B2B",
+        "Agenty AI",
+        "Automatyzacja procesów biznesowych",
+        "n8n",
+        "Integracje API",
+        "Dashboardy sprzedażowe",
+        "Zarządzanie projektami"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/zawlodzki/",
+        "https://x.com/zawlodzki",
+        "https://www.youtube.com/@GrzesiekZawlodzki",
+        "https://www.instagram.com/zawlodzki/",
+        "https://github.com/zawlodzki"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.zawlodzki.pl/#organization",
+      "name": "Wellbiz",
+      "legalName": "Wellbiz sp. z o.o.",
+      "alternateName": [
+        "zawlodzki.pl"
+      ],
+      "description": "Wellbiz to firma doradcza z Krakowa, która wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę, automatyzacje w n8n oraz procesy sprzedaży wspierane przez AI w firmach B2B. Prowadzi ją Grzegorz Zawłodzki, a serwis firmy działa pod adresem zawlodzki.pl.",
+      "url": "https://www.zawlodzki.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64a693ccc05e941533cfb506_Group%204.svg"
+      },
+      "foundingDate": "2025-02-26",
+      "vatID": "PL6793323800",
+      "taxID": "6793323800",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "KRS",
+          "value": "0001158341"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "REGON",
+          "value": "541006624"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Lipowa 3d",
+        "postalCode": "30-702",
+        "addressLocality": "Kraków",
+        "addressCountry": "PL"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Polska"
+      },
+      "knowsAbout": [
+        "Wdrożenia CRM",
+        "Pipedrive",
+        "Asana",
+        "AI w sprzedaży B2B",
+        "Automatyzacja procesów biznesowych",
+        "n8n"
+      ],
+      "founder": {
+        "@id": "https://www.zawlodzki.pl/o-mnie#person"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "grzesiek@zawlodzki.pl",
+        "telephone": "+48571088338",
+        "contactType": "sales",
+        "availableLanguage": [
+          "pl",
+          "en"
+        ]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/zawlodzki-pl/",
+        "https://rejestr.io/krs/1158341/wellbiz",
+        "https://aleo.com/pl/firma/wellbiz-spolka-z-ograniczona-odpowiedzialnoscia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.zawlodzki.pl/#website",
+      "url": "https://www.zawlodzki.pl",
+      "name": "Grzegorz Zawłodzki — wdrożenia CRM i automatyzacja sprzedaży B2B",
+      "alternateName": "zawlodzki.pl",
+      "inLanguage": [
+        "pl-PL",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://www.zawlodzki.pl/o-mnie#person"
+      }
+    }
+  ]
+}
