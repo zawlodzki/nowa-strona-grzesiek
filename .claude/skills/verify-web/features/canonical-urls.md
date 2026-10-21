@@ -10,7 +10,8 @@ Every page has one canonical URL: no trailing slash, no `.html`, lowercase, on `
 - `query-kept` means `/index.html?x=1` gives 301 to `/?x=1`.
 - `uppercase-404` means `/O-MNIE` and `/Index.html` return 404, not a redirect.
 - `same-origin` means the redirect `Location` keeps the request host. Production gives `www.zawlodzki.pl`.
-- `legacy-301` means each `redirect-301` row sends `old_path` to its target. This needs T13.
+- `legacy-301` means each `redirect-301` row sends `old_path` to its target in one 301, keeping the query string. The rules live in `src/worker/redirects.data.ts`, generated from `url-map.csv` by `node apps/web/src/worker/redirects.gen.mjs`.
+- `pagination-param` means `/blog?f95bbc04_page=<n>` gives 301 to `/blog` with that parameter removed and any other parameter kept.
 
 ## How to get to it (user POV)
 
@@ -23,7 +24,7 @@ Every page has one canonical URL: no trailing slash, no `.html`, lowercase, on `
 Preconditions:
 
 - `web.sh doctor --port 8790` prints `doctor: healthy`.
-- For `legacy-301`, T13 is merged. Until then, record it as failed: precondition missing (T13).
+- For `legacy-301`, the target pages exist only after T18. Until then the redirect hop is provable and the target answers 404, so record the target step as failed: precondition missing (T18).
 
 - **.html.** Run `web.sh probe /index.html --port 8790`. You get `301` with location `http://127.0.0.1:8790/`.
 - **/index.** Run `web.sh probe /index --port 8790`. You get `301` to `/`.
@@ -31,7 +32,9 @@ Preconditions:
 - **Query kept.** Run `web.sh probe '/index.html?x=1' --port 8790 --label index-query`. You get `301` to `/?x=1`.
 - **Uppercase.** Run `web.sh probe /O-MNIE --port 8790` and `web.sh probe /Index.html --port 8790`. Both give `404` with location `-`.
 - **Production host.** Run `web.sh probe /index.html --port 8790 --host www.zawlodzki.pl --label index-prod`. You get `301` to `http://www.zawlodzki.pl/`, so the host is kept and not rewritten to localhost.
-- **Legacy rows** (T13+). Probe each `redirect-301` row's `old_path`. The location must equal its target, and probing the target must give `200`. Compare with the GSC legacy cases using `node migration/tools/redirects.mjs --host <staging host> --cases migration/tools/cases-gsc-legacy.txt --out <evidence>/redirects.csv` against staging.
+- **Legacy rows.** Probe each `redirect-301` row's `old_path`. The location must equal its target, and probing the target must give `200`. Compare with the GSC legacy cases using `node migration/tools/redirects.mjs --host <staging host> --cases migration/tools/cases-gsc-legacy.txt --out <evidence>/redirects.csv` against staging.
+- **Legacy rows locally.** `redirects.mjs` always resolves paths with `https://`, so against wrangler write a cases file of full `http://127.0.0.1:8790/<path>` URLs into the evidence dir and pass it with `--cases`.
+- **Pagination.** Run `web.sh probe '/blog?f95bbc04_page=2&utm_source=x' --port 8790 --label blog-page`. You get `301` to `/blog?utm_source=x`.
 
 ## Gotchas
 

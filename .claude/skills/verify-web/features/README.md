@@ -35,5 +35,6 @@ Each feature file starts with an H1 and one paragraph describing the user-visibl
 - [Canonical URLs and redirects](./canonical-urls.md) covers 301 canonicalization of `.html`, `/index` and trailing slashes, uppercase paths that stay 404, and `redirect-301` rows.
 - [Not found page](./not-found.md) covers unknown paths returning 404 with the branded page.
 - [Robots by host](./robots-by-host.md) covers `noindex` on staging and local hosts, and indexable output on `www.zawlodzki.pl`.
+- [Discovery files](./discovery-files.md) covers the sitemap index and per-language sitemaps, robots.txt, the blog RSS feed and llms.txt.
 - [Lead forms](./forms.md) covers contact and newsletter forms: field names against `forms.json`, Turnstile, delivery to a local n8n stand-in and the error message.
 - [Crawl diff gate](./crawl-diff.md) covers the site-wide crawl compared with the live-site inventory, which is the cutover gate.
