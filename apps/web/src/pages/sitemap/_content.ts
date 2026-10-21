@@ -1,4 +1,5 @@
-// Build-time read of everything the discovery files list. T18 absorbs this into its Sanity layer.
+// Build-time read of everything the discovery files list, through the same client and dataset as the page routes.
+import { sanityQuery } from '../../lib/sanity/client.ts';
 import type { Language, SitePath } from '../../seo/types.ts';
 
 interface DiscoveryDocBase {
@@ -27,8 +28,6 @@ export interface Discovery {
   docs: DiscoveryDoc[];
   services: DiscoveryService[];
 }
-
-const QUERY_URL = 'https://8u2zjhvn.apicdn.sanity.io/v2025-02-19/data/query/production';
 
 const QUERY = `{
   "person": *[_type == "person"][0]{name, description},
@@ -129,13 +128,7 @@ export function parseDiscovery(result: unknown): Discovery {
 }
 
 async function fetchDiscovery(): Promise<Discovery> {
-  const url = new URL(QUERY_URL);
-  url.searchParams.set('query', QUERY);
-  url.searchParams.set('perspective', 'published');
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`Sanity discovery query: HTTP ${response.status} ${await response.text()}`);
-  const body = record(await response.json(), 'response');
-  return parseDiscovery(body.result);
+  return parseDiscovery(await sanityQuery(QUERY));
 }
 
 let pending: Promise<Discovery> | undefined;

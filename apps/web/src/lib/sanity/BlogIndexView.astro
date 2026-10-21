@@ -1,0 +1,94 @@
+---
+import { blogPagePath, type Route } from './routes.ts';
+import { localHref, resolveImage, type Site } from './site.ts';
+
+interface Props { site: Site; route: Extract<Route, { kind: 'blogIndex' }>; description: string; }
+const { site, route, description } = Astro.props;
+const { language, pageNumber, pageCount, posts } = route;
+const pl = language === 'pl';
+const pageHref = (n: number) => localHref(language, blogPagePath(n));
+const dateLabel = (iso: string) => new Intl.DateTimeFormat(pl ? 'pl-PL' : 'en-GB', { dateStyle: 'long', timeZone: 'Europe/Warsaw' }).format(new Date(iso));
+---
+<main>
+  <header class="content-grid section blog-head">
+    <div class="inner">
+      <h1>Blog</h1>
+      <p class="type-body">{description}</p>
+      {pageCount > 1 && <p class="type-body-s muted">{pl ? `Strona ${pageNumber} z ${pageCount}` : `Page ${pageNumber} of ${pageCount}`}</p>}
+    </div>
+  </header>
+  <section class="content-grid section" aria-label={pl ? 'Wpisy' : 'Posts'}>
+    <ul class="posts" role="list">
+      {posts.map((post, index) => {
+        const image = resolveImage(site, post.thumbnail ?? post.mainImage);
+        return (
+          <li class="card">
+            {image ? <img src={image.src} width={image.width} height={image.height} alt="" loading={index < 3 ? 'eager' : 'lazy'} decoding="async" /> : <span class="thumb-empty" />}
+            <h2 class="type-heading-xs"><a class="card-link" href={localHref(post.language, post.path)}>{post.title}</a></h2>
+            <p class="type-body-s excerpt">{post.excerpt}</p>
+            <time class="type-body-s muted" datetime={post.publishedAt}>{dateLabel(post.publishedAt)}</time>
+          </li>
+        );
+      })}
+    </ul>
+    {pageCount > 1 && (
+      <nav class="pagination" aria-label={pl ? 'Strony bloga' : 'Blog pages'}>
+        {pageNumber > 1 && <a rel="prev" href={pageHref(pageNumber - 1)}>{pl ? 'Nowsze wpisy' : 'Newer posts'}</a>}
+        <ol role="list">
+          {Array.from({ length: pageCount }, (_, i) => i + 1).map((n) => (
+            <li>{n === pageNumber ? <span aria-current="page">{n}</span> : <a href={pageHref(n)}>{n}</a>}</li>
+          ))}
+        </ol>
+        {pageNumber < pageCount && <a rel="next" href={pageHref(pageNumber + 1)}>{pl ? 'Starsze wpisy' : 'Older posts'}</a>}
+      </nav>
+    )}
+  </section>
+</main>
+<style>
+  .blog-head .inner { display: grid; gap: var(--space-s); max-inline-size: var(--measure-prose); }
+  .muted { color: var(--text-muted); }
+  .posts {
+    display: grid;
+    gap: var(--space-2xl) var(--space-l);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    position: relative;
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    row-gap: var(--space-xs);
+    align-content: start;
+  }
+  .card img, .thumb-empty {
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    background-color: var(--surface-soft);
+  }
+  .card h2 { overflow-wrap: break-word; }
+  .card-link { color: var(--text-heading); text-decoration: none; }
+  .card-link::after { content: ""; position: absolute; inset: 0; }
+  .card-link:focus-visible { outline: 2px solid transparent; }
+  .card:has(.card-link:focus-visible) { outline: 2px solid var(--border-focus); outline-offset: 4px; border-radius: var(--radius-md); }
+  .card:active .card-link { color: var(--text-link-active); }
+  @media (hover: hover) and (pointer: fine) {
+    .card:hover .card-link { color: var(--text-link-hover); text-decoration: underline; }
+  }
+  .excerpt {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    color: var(--text-body);
+  }
+  .pagination { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-s); margin-block-start: var(--space-3xl); }
+  .pagination ol { display: flex; flex-wrap: wrap; gap: var(--space-2xs); margin: 0; padding: 0; }
+  .pagination :is(a, span) { display: inline-grid; place-items: center; min-inline-size: 2.75rem; min-block-size: 2.75rem; padding-inline: var(--space-2xs); border-radius: var(--radius-sm); }
+  .pagination a:active { color: var(--text-link-active); }
+  .pagination [aria-current] { background: var(--surface-tint); color: var(--text-heading); font-weight: 600; }
+</style>

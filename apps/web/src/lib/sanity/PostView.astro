@@ -1,0 +1,44 @@
+---
+import CtaBand from '../../components/blocks/CtaBand.astro';
+import Faq from '../../components/blocks/Faq.astro';
+import RichText from '../../components/blocks/RichText.astro';
+import MediaImage from '../../components/ui/MediaImage.astro';
+import { BLOG_PATH } from './routes.ts';
+import { localHref, resolveImage, type PostDoc, type Site } from './site.ts';
+
+interface Props { site: Site; post: PostDoc; }
+const { site, post } = Astro.props;
+const { links, images } = site;
+const pl = post.language === 'pl';
+const image = resolveImage(site, post.mainImage);
+const dateLabel = (iso: string) => new Intl.DateTimeFormat(pl ? 'pl-PL' : 'en-GB', { dateStyle: 'long', timeZone: 'Europe/Warsaw' }).format(new Date(iso));
+const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _type: 'faqItem' as const, _key, question: q, answer: a }] : []);
+---
+<main>
+  <article>
+    <header class="content-grid section post-head">
+      <div class="inner">
+        <p class="type-tagline"><a href={localHref(post.language, BLOG_PATH)}>Blog</a></p>
+        <h1>{post.title}</h1>
+        <p class="type-body-s meta">
+          <time datetime={post.publishedAt}>{dateLabel(post.publishedAt)}</time>
+          {post.updatedAt && post.updatedAt.slice(0, 10) !== post.publishedAt.slice(0, 10) && (
+            <span>{pl ? 'Aktualizacja' : 'Updated'}: <time datetime={post.updatedAt}>{dateLabel(post.updatedAt)}</time></span>
+          )}
+          {post.readingTime && <span>{post.readingTime} {pl ? 'min czytania' : 'min read'}</span>}
+        </p>
+        {image && <MediaImage image={image} eager />}
+      </div>
+    </header>
+    <RichText data={{ _type: 'richText', body: post.body }} links={links} images={images} />
+    {faq.length > 0 && <Faq data={{ _type: 'faq', heading: pl ? 'Najczęściej zadawane pytania' : 'Frequently asked questions', items: faq }} links={links} images={images} />}
+    {post.cta?.label && (
+      <CtaBand data={{ _type: 'ctaBand', heading: post.cta.label, cta: { _type: 'link', label: pl ? 'Umów konsultację' : 'Book a consultation', href: post.cta.href ?? '/kontakt' } }} />
+    )}
+  </article>
+</main>
+<style>
+  .post-head .inner { display: grid; justify-items: start; gap: var(--space-m); max-inline-size: var(--measure-prose); }
+  .post-head :global(figure) { justify-self: stretch; }
+  .meta { display: flex; flex-wrap: wrap; column-gap: var(--space-s); row-gap: var(--space-3xs); color: var(--text-muted); }
+</style>

@@ -2,24 +2,29 @@
 import '../styles/global.css';
 import erode from '../styles/fonts/Erode-Variable.woff2?url';
 import satoshi from '../styles/fonts/Satoshi-Variable.woff2?url';
+import Seo from '../seo/Seo.astro';
+import type { SeoPage } from '../seo/types.ts';
 
-interface Props {
-  title: string;
-  description?: string;
-  noindex?: boolean;
-}
+// Routed pages pass `seo`, which owns the title, description, robots and JSON-LD. Utility pages pass a bare title.
+type Props =
+  | { seo: SeoPage }
+  | { seo?: undefined; title: string; description?: string; noindex?: boolean };
 
-const { title, description, noindex = false } = Astro.props;
+const props = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pl">
+<html lang={props.seo?.language ?? 'pl'}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    {description && <meta name="description" content={description} />}
-    {noindex && <meta name="robots" content="noindex" />}
+    {props.seo ? <Seo page={props.seo} /> : (
+      <>
+        <title>{props.title}</title>
+        {props.description && <meta name="description" content={props.description} />}
+        {props.noindex && <meta name="robots" content="noindex" />}
+      </>
+    )}
     <link rel="preload" href={satoshi} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={erode} as="font" type="font/woff2" crossorigin />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

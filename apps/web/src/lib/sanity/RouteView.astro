@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import BlogIndexView from './BlogIndexView.astro';
+import PostView from './PostView.astro';
+import Sections from './Sections.astro';
+import type { Route } from './routes.ts';
+import { seoPage } from './seo.ts';
+import { loadSite } from './site.ts';
+
+interface Props { route: Route; }
+const { route } = Astro.props;
+const site = await loadSite();
+const seo = seoPage(site, route);
+---
+<Base seo={seo}>
+  {route.kind === 'page' && <main><Sections site={site} sections={route.page.sections ?? []} /></main>}
+  {route.kind === 'post' && <PostView site={site} post={route.post} />}
+  {route.kind === 'blogIndex' && <BlogIndexView site={site} route={route} description={seo.kind === 'blogIndex' ? seo.blog.description : ''} />}
+</Base>
