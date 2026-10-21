@@ -1,0 +1,39 @@
+{
+  "language": "pl",
+  "path": "/blog/ai-w-sprzedazy",
+  "name": "AI w sprzedaży działa dopiero wtedy, gdy zmienia cały proces",
+  "seo": {
+    "title": "AI w sprzedaży: od czego zacząć | Grzegorz Zawłodzki",
+    "description": "AI w sprzedaży to więcej niż narzędzie. Sprawdź, jak połączyć proces, dane, kontekst firmy, integracje, kontrolę człowieka i pomiar wyniku pracy.",
+    "ogImage": {
+      "url": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a960028f019c2eff8865e32_6a95fc1726eb1b402354150a_ai-w-sprzedazy-og.png"
+    }
+  },
+  "breadcrumbs": [
+    {
+      "name": "Strona główna",
+      "path": "/"
+    },
+    {
+      "name": "Blog",
+      "path": "/blog"
+    },
+    {
+      "name": "AI w sprzedaży działa dopiero wtedy, gdy zmienia cały proces",
+      "path": "/blog/ai-w-sprzedazy"
+    }
+  ],
+  "kind": "post",
+  "post": {
+    "headline": "AI w sprzedaży działa dopiero wtedy, gdy zmienia cały proces",
+    "blog": {
+      "name": "Blog Grzegorza Zawłodzkiego",
+      "path": "/blog"
+    },
+    "image": {
+      "url": "https://cdn.prod.website-files.com/6a5e86920abd7b640ce8fad2/6a960028f019c2eff8865e32_6a95fc1726eb1b402354150a_ai-w-sprzedazy-og.png"
+    },
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-29"
+  }
+}

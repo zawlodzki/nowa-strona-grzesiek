@@ -1,0 +1,324 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive#webpage",
+      "url": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive",
+      "name": "Szkolenie i wdrożenie Pipedrive",
+      "description": "Wdrożenie Pipedrive CRM razem z procesem sprzedaży i szkoleniem zespołu. Do 5 handlowców: 6 tys. zł netto/mies. przez 3 miesiące (18 tys. łącznie).",
+      "inLanguage": "pl-PL",
+      "isPartOf": {
+        "@id": "https://www.zawlodzki.pl/#website"
+      },
+      "about": {
+        "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive#service"
+      },
+      "mainEntity": {
+        "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive#service"
+      },
+      "breadcrumb": {
+        "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64ac7c90323794295feca74e_Frame%2039_compressed.jpg"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive#service",
+      "name": "Szkolenie i wdrożenie Pipedrive",
+      "description": "Indywidualne szkolenia i wdrożenia systemu CRM Pipedrive dla zespołów handlowych. Profesjonalne wsparcie od konsultacji po pełne wdrożenie i szkolenie zespołu.",
+      "serviceType": "Wdrożenie i szkolenie CRM",
+      "url": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive",
+      "provider": {
+        "@id": "https://www.zawlodzki.pl/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Polska"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Wdrożenie Pipedrive dla zespołu do 5 osób",
+          "description": "Kompleksowe wdrożenie CRM Pipedrive dla zespołu handlowego do 5 osób: proces sprzedaży, migracja i czyszczenie danych, konfiguracja, 12 warsztatów, treningi 1:1 i przygotowanie administratora. Współpraca trwa 3 miesiące, rozliczana w ratach po 6 000 zł netto miesięcznie.",
+          "price": "18000",
+          "priceCurrency": "PLN",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "6000",
+            "priceCurrency": "PLN",
+            "billingDuration": 3,
+            "billingIncrement": 1,
+            "unitCode": "MON",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": 1,
+              "unitCode": "MON"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Audyt istniejącego CRM Pipedrive",
+          "description": "Audyt działającego wdrożenia Pipedrive zakończony raportem z listą problemów, priorytetami i planem naprawy. Płatność jednorazowa.",
+          "price": "3900",
+          "priceCurrency": "PLN",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Wdrożenie Pipedrive dla 5+ handlowców",
+          "description": "Wdrożenie Pipedrive od zera dla całej firmy lub kilku zespołów: zakres pakietu do 5 osób, integracje z systemami księgowymi i ERP, integracje z platformami e-commerce oraz zintegrowane raportowanie CRM i systemów księgowych. Wycena indywidualna.",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://www.zawlodzki.pl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Szkolenie i wdrożenie Pipedrive",
+          "item": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive#faq",
+      "isPartOf": {
+        "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive#webpage"
+      },
+      "about": {
+        "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-pipedrive#service"
+      },
+      "inLanguage": "pl-PL",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Czym różni się Twoje wdrożenie od konfiguracji Pipedrive za 3 500 zł?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Konfiguracja ustawia aplikację. Wdrożenie zmienia sposób pracy zespołu i to jest różnica, za którą płacisz. W moich 18 000 zł za trzy miesiące jest opracowanie procesu sprzedaży, uporządkowanie danych, 12 warsztatów, treningi 1:1 na realnych szansach handlowców i przygotowanie Waszego administratora. Po samej konfiguracji najczęściej dostajesz poprawnie ustawiony system, którego nikt nie używa i za rok płacisz drugi raz, tym razem za naprawę."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ile kosztuje wdrożenie systemu CRM pipedrive.com?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wdrożenie dla zespołu do 5 handlowców kosztuje 6 000 zł netto miesięcznie przy współpracy na 3 miesiące, czyli 18 000 zł netto łącznie. Zakres ustalamy na starcie i nie zmienia się w trakcie, płacisz w trzech ratach. W cenie jest opracowanie procesu sprzedaży, migracja i czyszczenie danych, konfiguracja, 12 warsztatów, treningi 1:1 z każdym handlowcem oraz przeszkolenie osoby, która będzie administrować systemem. Wdrożenia dla większych zespołów i kilku działów wyceniam indywidualnie, bo zakres automatyzacji i integracji za każdym razem wygląda inaczej."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ile kosztuje szkolenie z obsługi CRM pipedrive.com?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Szkolenia nie sprzedaję osobno, warsztaty i treningi 1:1 z handlowcami są częścią każdego wdrożenia. Jeśli Twoja firma już pracuje w Pipedrive i potrzebujecie uporządkować system oraz doszkolić zespół, punktem startu jest audyt istniejącego CRM za 3 900 zł netto. Kończy się raportem z listą problemów i planem naprawy, a część poprawek robimy od razu podczas warsztatów."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak długo trwa wdrożenie CRM pipedrive.com do firmy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Współpraca trwa 3 miesiące. W startupie, który dopiero rusza ze sprzedażą, gotowy system stoi po pierwszym miesiącu, a kolejne dwa idą na warsztaty i treningi z zespołem. W firmie z działającym działem handlowym tempo dopasowujemy tak, żeby nie zaburzyć bieżącej sprzedaży, bo oprócz konfiguracji zmieniamy nawyki pracy. Większe firmy i wdrożenia w kilku działach naraz wyceniam indywidualnie, razem z dłuższym harmonogramem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kogo trzeba zaangażować we wdrożenie CRM pipedrive.com?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "W każdym wdrożeniu konieczny jest lider, który musi mieć wiedzę o procesach sprzedaży firmy. Ta osoba będzie koordynowała realizację warsztatów po stronie firmy, oraz zostanie przygotowana do bieżącego wsparcia reszty pracowników w codziennym korzystaniu z CRM pipedrive.com. Dodatkowo wymagana jest dostępność dyrektora sprzedaży lub właściciela firmy, który ma decyzyjność w ustalaniu poszczególnych kroków procesu sprzedaży implementowanego do CRM Pipedrive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Moja firma korzysta już z CRM pipedrive.com, co zyskam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dla firm z działającym Pipedrive robię audyt za 3 900 zł netto. Przechodzę przez proces, dane, pracę handlowców i raporty tak, jak przygotowuję własne wdrożenia. Najczęstsze znaleziska: lejek nie odzwierciedla realnego procesu, dane są niepełne, więc raporty pokazują fikcję, a automatyzacje nie mają na czym pracować. Dostajesz listę problemów z priorytetami i wycenę tego, co warto naprawić i decydujesz, czy robimy to razem, czy Twój zespół samodzielnie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Skąd mam wiedzieć co wybrać: Pipedrive czy Livespace, Hubspot, Salesforce, BERG System, FirmaO, Bitrix24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Narzędzia są powierzchowne i musisz wiedzieć jaki problem mają rozwiązać. Być może w ogóle ich nie potrzebujesz lub potrzebujesz czegoś zupełnie innego. Jeśli masz wątpliwości napisz do mnie. E-mail w zakładce kontakt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy dostanę fakturę VAT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak, oczywiście."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy możemy podpisać umowę NDA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak. Daj mi znać, że jest to konieczne, prześlę wzór. Umowę będziemy mogli podpisać elektronicznie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy CRM pipedrive.com jest po polsku?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interfejs CRM pipedrive.com w przeglądarce i aplikacji mobilnej jest całkowicie spolszczony. Oficjalny support działa w języku angielskim, natomiast ja odpowiem na wszystkie Twoje pytania w języku polskim."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy CRM pipedrive.com jest za darmo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pipedrive ma darmowy, 14 dniowy, okres testowy. Możesz w tym czasie testować system CRM bez podawania danych karty kredytowej. Odezwij się do mnie jeśli chcesz wypróbować pipedrive.com bezpłatnie przez 30 dni. E-mail w zakładce kontakt."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.zawlodzki.pl/o-mnie#person",
+      "name": "Grzegorz Zawłodzki",
+      "jobTitle": "Konsultant CRM i automatyzacji sprzedaży B2B",
+      "description": "Konsultant i trener. Wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę oraz procesy sprzedaży wspierane przez AI. Pracował z ponad 50 firmami, od startupów po globalne marki jak IAB.",
+      "url": "https://www.zawlodzki.pl/o-mnie",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/62ffd2315786d32f5dc7a1ee_zawlodzki%20front%20450_compressed.webp",
+        "caption": "Grzegorz Zawłodzki"
+      },
+      "email": "grzesiek@zawlodzki.pl",
+      "telephone": "+48571088338",
+      "worksFor": {
+        "@id": "https://www.zawlodzki.pl/#organization"
+      },
+      "knowsLanguage": [
+        "pl",
+        "en"
+      ],
+      "knowsAbout": [
+        "Wdrożenia CRM",
+        "Pipedrive",
+        "HubSpot",
+        "Attio",
+        "Asana",
+        "AI w sprzedaży B2B",
+        "Agenty AI",
+        "Automatyzacja procesów biznesowych",
+        "n8n",
+        "Integracje API",
+        "Dashboardy sprzedażowe",
+        "Zarządzanie projektami"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/zawlodzki/",
+        "https://x.com/zawlodzki",
+        "https://www.youtube.com/@GrzesiekZawlodzki",
+        "https://www.instagram.com/zawlodzki/",
+        "https://github.com/zawlodzki"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.zawlodzki.pl/#organization",
+      "name": "Wellbiz",
+      "legalName": "Wellbiz sp. z o.o.",
+      "alternateName": [
+        "zawlodzki.pl"
+      ],
+      "description": "Wellbiz to firma doradcza z Krakowa, która wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę, automatyzacje w n8n oraz procesy sprzedaży wspierane przez AI w firmach B2B. Prowadzi ją Grzegorz Zawłodzki, a serwis firmy działa pod adresem zawlodzki.pl.",
+      "url": "https://www.zawlodzki.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64a693ccc05e941533cfb506_Group%204.svg"
+      },
+      "foundingDate": "2025-02-26",
+      "vatID": "PL6793323800",
+      "taxID": "6793323800",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "KRS",
+          "value": "0001158341"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "REGON",
+          "value": "541006624"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Lipowa 3d",
+        "postalCode": "30-702",
+        "addressLocality": "Kraków",
+        "addressCountry": "PL"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Polska"
+      },
+      "knowsAbout": [
+        "Wdrożenia CRM",
+        "Pipedrive",
+        "Asana",
+        "AI w sprzedaży B2B",
+        "Automatyzacja procesów biznesowych",
+        "n8n"
+      ],
+      "founder": {
+        "@id": "https://www.zawlodzki.pl/o-mnie#person"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "grzesiek@zawlodzki.pl",
+        "telephone": "+48571088338",
+        "contactType": "sales",
+        "availableLanguage": [
+          "pl",
+          "en"
+        ]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/zawlodzki-pl/",
+        "https://rejestr.io/krs/1158341/wellbiz",
+        "https://aleo.com/pl/firma/wellbiz-spolka-z-ograniczona-odpowiedzialnoscia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.zawlodzki.pl/#website",
+      "url": "https://www.zawlodzki.pl",
+      "name": "Grzegorz Zawłodzki — wdrożenia CRM i automatyzacja sprzedaży B2B",
+      "alternateName": "zawlodzki.pl",
+      "inLanguage": [
+        "pl-PL",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://www.zawlodzki.pl/o-mnie#person"
+      }
+    }
+  ]
+}
