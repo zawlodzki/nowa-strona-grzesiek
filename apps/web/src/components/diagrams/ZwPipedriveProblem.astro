@@ -1,0 +1,499 @@
+---
+// Ported from the Webflow embed #zw-pipedrive-problem (audyt-crm-pipedrive, szkolenie-i-wdrozenie-pipedrive) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  Pipedrive — "the problem starts later" animation.
+  The pipeline is configured and tidy, but empty: the real
+  selling leaks OUT into email, notes and chat, so the CRM
+  record stays hollow and the reports are fiction. Ends on the
+  problem, not a win — no celebration, no confetti.
+  zawlodzki.pl · self-contained, no external dependencies.
+*/
+---
+
+<div class="dg" data-diagram="zw-pipedrive-problem" aria-hidden="true" style="--dg-w: 760; --dg-h: 364;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="pp-board">
+
+          <div class="pp-pipe">
+            <div class="pp-lane">
+              <div class="pp-lane-head"><span class="pp-eyebrow">Lead</span><span class="pp-chip">0</span></div>
+              <div class="pp-empty"></div>
+            </div>
+            <div class="pp-lane">
+              <div class="pp-lane-head"><span class="pp-eyebrow">Qualified</span><span class="pp-chip">0</span></div>
+              <div class="pp-empty"></div>
+            </div>
+            <div class="pp-lane">
+              <div class="pp-lane-head"><span class="pp-eyebrow">Proposal</span><span class="pp-chip">0</span></div>
+              <div class="pp-empty"></div>
+            </div>
+          </div>
+
+          <svg class="pp-trail" viewBox="0 0 760 340" width="760" height="340" fill="none" aria-hidden="true">
+            <path class="pp-trail-line" d="" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 7" stroke-dashoffset="1" pathLength="1"/>
+          </svg>
+
+          <div class="pp-reality">
+            <div class="pp-chan pp-chan--email">
+              <div class="pp-chan-head">
+                <span class="pp-chan-ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 6 8-6"/></svg>
+                </span>
+                <span class="pp-eyebrow">Email</span>
+              </div>
+              <div class="pp-chan-body"></div>
+            </div>
+            <div class="pp-chan pp-chan--note">
+              <div class="pp-chan-head">
+                <span class="pp-chan-ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/><path d="M9 12h6M9 16h4"/></svg>
+                </span>
+                <span class="pp-eyebrow">Note</span>
+              </div>
+              <div class="pp-chan-body"><div class="pp-frag"><span></span><span></span></div><div class="pp-frag"><span></span><span></span></div></div>
+            </div>
+            <div class="pp-chan pp-chan--chat">
+              <div class="pp-chan-head">
+                <span class="pp-chan-ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-4 4z"/><path d="M8 10h8M8 13h5"/></svg>
+                </span>
+                <span class="pp-eyebrow">Chat</span>
+              </div>
+              <div class="pp-chan-body"><div class="pp-frag"><span></span><span></span></div><div class="pp-frag"><span></span><span></span></div></div>
+            </div>
+          </div>
+
+          <div class="pp-report">
+            <span class="pp-eyebrow pp-report-lbl">Reports</span>
+            <span class="pp-report-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <span class="pp-report-warn" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
+            </span>
+          </div>
+
+          <div class="pp-deal" aria-hidden="true">
+            <div class="pp-deal-top">
+              <span class="pp-avatar">A</span>
+              <span class="pp-deal-name">Acme</span>
+              <span class="pp-miss" aria-hidden="true">?</span>
+            </div>
+            <div class="pp-deal-value">&euro;24,000</div>
+            <div class="pp-deal-foot"><span class="pp-tag">New deal</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+/* ---- Shared family layer: tokens + responsive shell (verbatim). ---- */
+  [data-diagram="zw-pipedrive-problem"] {
+    --zw-primary:    #3A48CC;
+    --zw-primary-10: #EBEDFA;
+    --zw-primary-30: #8991E0;
+    --zw-secondary:  #0ACFFE;
+    --zw-success:    #52C41A;
+    --zw-bg-soft:    #F9FAFB;
+    --zw-border:     #DDE1E6;
+    --zw-border-soft:#EDF0F3;
+    --zw-heading:    #0E0F11;
+    --zw-text:       #1E2024;
+    --zw-muted:      #838D95;
+    --zw-card:       #FFFFFF;
+    --zw-font: 'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --zw-serif: 'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;
+    --zw-radius-card: 10px;
+    --zw-radius-lane: 14px;
+    --zw-shadow-rest: 0 1px 3px rgba(0,0,0,.08);
+    --zw-shadow-lift: 1px 8px 22px rgba(14,15,17,.14);
+
+    font-family: var(--zw-font);
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  [data-diagram="zw-pipedrive-problem"] *, [data-diagram="zw-pipedrive-problem"] *::before, [data-diagram="zw-pipedrive-problem"] *::after { box-sizing: border-box; }
+
+  [data-diagram="zw-pipedrive-problem"] .zw-stage { width: 100%; overflow: hidden; }
+  [data-diagram="zw-pipedrive-problem"] .zw-fit   { width: 760px; transform-origin: top left; }
+  [data-diagram="zw-pipedrive-problem"] .zw-scene { position: relative; }
+
+  /* =================== SCENE:STYLE start =================== */
+  [data-diagram="zw-pipedrive-problem"] .pp-board { position: relative; width: 760px; }
+
+  [data-diagram="zw-pipedrive-problem"] .pp-eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: .07em;
+    text-transform: uppercase; color: var(--zw-muted);
+  }
+
+  /* ---- The configured (empty) pipeline ---- */
+  [data-diagram="zw-pipedrive-problem"] .pp-pipe { display: flex; gap: 16px; align-items: stretch; }
+  [data-diagram="zw-pipedrive-problem"] .pp-lane {
+    flex: 1 1 0; min-width: 0;
+    background: var(--zw-bg-soft);
+    border: 1px solid var(--zw-border);
+    border-radius: var(--zw-radius-lane);
+    padding: 13px 14px 14px;
+    opacity: 0;                        /* revealed on play */
+    transform: translateY(14px);
+    transition: background-color .4s ease, border-color .4s ease;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-lane--eyeing { border-color: var(--zw-primary-30); background: var(--zw-primary-10); }
+  [data-diagram="zw-pipedrive-problem"] .pp-lane-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-chip {
+    font-size: 12px; font-weight: 600; color: #636B75;
+    background: var(--zw-border-soft); border-radius: 999px;
+    padding: 1px 8px; min-width: 22px; text-align: center;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-empty {
+    height: 34px; border-radius: 8px;
+    border: 1.5px dashed var(--zw-border);
+  }
+
+  /* ---- The scattered channels (where deals really live) ---- */
+  [data-diagram="zw-pipedrive-problem"] .pp-reality { display: flex; gap: 16px; align-items: stretch; margin-top: 40px; }
+  [data-diagram="zw-pipedrive-problem"] .pp-chan {
+    flex: 1 1 0; min-width: 0;
+    background: var(--zw-card);
+    border: 1.5px dashed var(--zw-border);
+    border-radius: var(--zw-radius-lane);
+    padding: 13px 14px 14px;
+    opacity: 0;                        /* revealed on play */
+    transform: translateY(14px);
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-chan-head { display: flex; align-items: center; gap: 7px; margin-bottom: 12px; }
+  [data-diagram="zw-pipedrive-problem"] .pp-chan-ic { color: var(--zw-muted); display: flex; }
+  [data-diagram="zw-pipedrive-problem"] .pp-chan-body { min-height: 116px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+
+  /* faint fragments — other deals already scattered off-CRM */
+  [data-diagram="zw-pipedrive-problem"] .pp-frag {
+    background: var(--zw-bg-soft);
+    border: 1px solid var(--zw-border-soft);
+    border-radius: 8px; padding: 11px 12px; opacity: .85;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-frag span { display: block; height: 7px; border-radius: 4px; background: #E6E9ED; }
+  [data-diagram="zw-pipedrive-problem"] .pp-frag span:first-child { width: 66%; margin-bottom: 7px; }
+  [data-diagram="zw-pipedrive-problem"] .pp-frag span:last-child  { width: 40%; background: #EEF0F3; }
+
+  /* ---- Reports on hollow data ---- */
+  [data-diagram="zw-pipedrive-problem"] .pp-report {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    margin-top: 22px;
+    opacity: 0;                        /* revealed at the end */
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-report-bars { display: inline-flex; align-items: flex-end; gap: 5px; height: 26px; }
+  [data-diagram="zw-pipedrive-problem"] .pp-report-bars i {
+    width: 9px; border-radius: 3px;
+    border: 1.5px dashed var(--zw-border);
+    background: transparent;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-report-bars i:nth-child(1) { height: 14px; }
+  [data-diagram="zw-pipedrive-problem"] .pp-report-bars i:nth-child(2) { height: 22px; }
+  [data-diagram="zw-pipedrive-problem"] .pp-report-bars i:nth-child(3) { height: 10px; }
+  [data-diagram="zw-pipedrive-problem"] .pp-report-bars i:nth-child(4) { height: 18px; }
+  [data-diagram="zw-pipedrive-problem"] .pp-report-warn { color: var(--zw-secondary); display: flex; }
+
+  /* ---- The deal we follow ---- */
+  [data-diagram="zw-pipedrive-problem"] .pp-deal {
+    position: absolute; top: 0; left: 0; z-index: 6;
+    width: 208px;
+    background: var(--zw-card);
+    border: 1px solid var(--zw-border);
+    border-radius: var(--zw-radius-card);
+    padding: 12px 12px 12px 14px;
+    box-shadow: var(--zw-shadow-rest);
+    opacity: 0;
+    overflow: hidden;
+    will-change: transform, opacity;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-deal::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: var(--zw-primary);
+    transition: background-color .4s ease;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-deal--lost { box-shadow: var(--zw-shadow-rest); }
+  [data-diagram="zw-pipedrive-problem"] .pp-deal--lost::before { background: var(--zw-border); }
+
+  [data-diagram="zw-pipedrive-problem"] .pp-deal-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  [data-diagram="zw-pipedrive-problem"] .pp-avatar {
+    flex: 0 0 auto; width: 22px; height: 22px; border-radius: 999px;
+    background: var(--zw-primary-10); color: var(--zw-primary);
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    transition: background-color .4s ease, color .4s ease;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-deal--lost .pp-avatar { background: var(--zw-border-soft); color: var(--zw-muted); }
+  [data-diagram="zw-pipedrive-problem"] .pp-deal-name {
+    font-size: 13px; font-weight: 600; color: var(--zw-heading);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    transition: color .4s ease;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-deal--lost .pp-deal-name { color: var(--zw-muted); }
+  [data-diagram="zw-pipedrive-problem"] .pp-miss {
+    margin-left: auto; flex: 0 0 auto;
+    width: 20px; height: 20px; border-radius: 999px;
+    border: 1.5px dashed var(--zw-muted);
+    color: var(--zw-muted);
+    font-size: 12px; font-weight: 700; line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+    transform: scale(0); opacity: 0;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-deal-value {
+    font-size: 19px; font-weight: 700; color: var(--zw-heading);
+    letter-spacing: -0.01em; line-height: 1.1;
+    transition: color .4s ease;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-deal--lost .pp-deal-value { color: var(--zw-muted); }
+  [data-diagram="zw-pipedrive-problem"] .pp-deal-foot { margin-top: 10px; }
+  [data-diagram="zw-pipedrive-problem"] .pp-tag {
+    display: inline-block; font-size: 10px; font-weight: 600;
+    letter-spacing: .04em; text-transform: uppercase;
+    color: var(--zw-primary); background: var(--zw-primary-10);
+    border-radius: 6px; padding: 3px 8px;
+    transition: color .4s ease, background-color .4s ease;
+  }
+  [data-diagram="zw-pipedrive-problem"] .pp-deal--lost .pp-tag { color: var(--zw-muted); background: var(--zw-border-soft); }
+
+  /* ---- Leak trail ---- */
+  [data-diagram="zw-pipedrive-problem"] .pp-trail {
+    position: absolute; left: 0; top: 0;
+    width: 760px; height: 340px;
+    color: var(--zw-secondary);
+    z-index: 3; overflow: visible; pointer-events: none;
+  }
+  /* ==================== SCENE:STYLE end ==================== */
+
+  /* Accessibility: land on the resolved problem state, no motion. */
+  @media (prefers-reduced-motion: reduce) {
+    [data-diagram="zw-pipedrive-problem"] .pp-lane { opacity: 1; transform: none; transition: none; }
+    [data-diagram="zw-pipedrive-problem"] .pp-chan { opacity: 1; transform: none; }
+    [data-diagram="zw-pipedrive-problem"] .pp-report { opacity: 1; }
+    [data-diagram="zw-pipedrive-problem"] .pp-trail-line { stroke-dashoffset: 0; }
+    [data-diagram="zw-pipedrive-problem"] .pp-deal { opacity: 1; }
+    [data-diagram="zw-pipedrive-problem"] .pp-deal { border-color: var(--zw-border); }
+    [data-diagram="zw-pipedrive-problem"] .pp-deal::before { background: var(--zw-border); }
+    [data-diagram="zw-pipedrive-problem"] .pp-deal .pp-avatar { background: var(--zw-border-soft); color: var(--zw-muted); }
+    [data-diagram="zw-pipedrive-problem"] .pp-deal .pp-deal-name,
+    [data-diagram="zw-pipedrive-problem"] .pp-deal .pp-deal-value { color: var(--zw-muted); }
+    [data-diagram="zw-pipedrive-problem"] .pp-deal .pp-tag { color: var(--zw-muted); background: var(--zw-border-soft); }
+    [data-diagram="zw-pipedrive-problem"] .pp-miss { transform: scale(1); opacity: 1; }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-pipedrive-problem"]')) {
+(function () {
+  if (!root || root.dataset.zwInit) return;   /* guard against double-init */
+  root.dataset.zwInit = '1';
+
+  var DESIGN_W = 760;
+
+  var stage   = root.querySelector('.zw-stage');
+  var fitEl   = root.querySelector('.zw-fit');
+  var scene   = root.querySelector('.zw-scene');
+
+  var reduce = window.matchMedia &&
+               window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var EASE_MOVE = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+  var EASE_OUT  = 'cubic-bezier(0.22, 1, 0.36, 1)';
+  var EASE_POP  = 'cubic-bezier(0.34, 1.56, 0.64, 1)';
+
+  function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+  function settled(anim) { return anim.finished.catch(function () {}); }
+
+  function fit(){}
+
+  /* Position of an element in design-space px, relative to the scene
+     (getBoundingClientRect divided by the live scale, so it's correct
+     after fit()). */
+  function rectIn(el) {
+    var sb = scene.getBoundingClientRect();
+    var scale = sb.width / scene.offsetWidth || 1;
+    var rb = el.getBoundingClientRect();
+    return {
+      x: (rb.left - sb.left) / scale,
+      y: (rb.top  - sb.top)  / scale,
+      w: rb.width  / scale,
+      h: rb.height / scale
+    };
+  }
+
+  /* =================== SCENE:LOGIC start =================== */
+  var lanes   = Array.prototype.slice.call(scene.querySelectorAll('.pp-lane'));
+  var chans   = Array.prototype.slice.call(scene.querySelectorAll('.pp-chan'));
+  var emailBody = scene.querySelector('.pp-chan--email .pp-chan-body');
+  var report  = scene.querySelector('.pp-report');
+  var reportWarn = scene.querySelector('.pp-report-warn');
+  var deal    = scene.querySelector('.pp-deal');
+  var miss    = scene.querySelector('.pp-miss');
+  var trail   = scene.querySelector('.pp-trail-line');
+
+  function riseIn(el, delay) {
+    el.animate(
+      [{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'translateY(0)' }],
+      { duration: 460, delay: delay || 0, easing: EASE_OUT, fill: 'forwards' }
+    );
+    el.style.opacity = 1; el.style.transform = 'translateY(0)';
+  }
+
+  function placeDeal(x, y, scale) {
+    deal.style.transform = 'translate(' + x + 'px,' + y + 'px) scale(' + (scale == null ? 1 : scale) + ')';
+  }
+
+  // Deal centered above a target's top edge (design px), given a vertical offset.
+  function dealAt(target, cx, topY) {
+    var d = rectIn(deal);
+    return { x: cx - d.w / 2, y: topY };
+  }
+
+  function markLost() {
+    deal.classList.add('pp-deal--lost');
+    deal.querySelector('.pp-tag').textContent = 'Off CRM';
+  }
+
+  function showMiss() {
+    miss.animate([{ transform: 'scale(0)', opacity: 0 }, { transform: 'scale(1)', opacity: 1 }],
+      { duration: 320, easing: EASE_POP, fill: 'forwards' });
+    miss.style.transform = 'scale(1)'; miss.style.opacity = 1;
+  }
+
+  function buildTrail(fromX, fromY, toX, toY) {
+    var midY = (fromY + toY) / 2;
+    // bow slightly left — the deal veers away from the pipeline
+    return 'M ' + fromX + ' ' + fromY +
+           ' C ' + (fromX - 46) + ' ' + midY +
+           ', ' + (toX - 46) + ' ' + midY +
+           ', ' + toX + ' ' + toY;
+  }
+
+  function setFinal() {
+    lanes.forEach(function (l) { l.style.opacity = 1; l.style.transform = 'none'; });
+    chans.forEach(function (c) { c.style.opacity = 1; c.style.transform = 'none'; });
+    report.style.opacity = 1;
+    var lead = rectIn(lanes[0]);
+    var email = rectIn(emailBody);
+    var fromX = lead.x + lead.w / 2, fromY = lead.y + lead.h;
+    var toX = email.x + email.w / 2, toY = email.y - 6;
+    trail.setAttribute('d', buildTrail(fromX, fromY, toX, toY));
+    trail.style.strokeDashoffset = 0;
+    var d = rectIn(deal);
+    placeDeal(toX - d.w / 2, email.y + email.h / 2 - d.h / 2, 1);
+    deal.style.opacity = 1;
+    markLost();
+    miss.style.transform = 'scale(1)'; miss.style.opacity = 1;
+  }
+
+  async function play() {
+    fit();
+    if (reduce) { setFinal(); return; }
+
+    // 1 · the pipeline builds — tidy, configured, but empty
+    lanes.forEach(function (l, i) { riseIn(l, i * 90); });
+    await wait(520);
+
+    // 2 · the scattered channels appear (work already lives here)
+    chans.forEach(function (c, i) { riseIn(c, i * 90); });
+    await wait(560);
+
+    // 3 · the deal appears above the Lead lane, ready to enter
+    var lead = rectIn(lanes[0]);
+    var leadCx = lead.x + lead.w / 2;
+    var d0 = rectIn(deal);
+    var startY = lead.y - d0.h - 6;
+    placeDeal(leadCx - d0.w / 2, startY, 0.97);
+    await settled(deal.animate(
+      [{ opacity: 0, transform: 'translate(' + (leadCx - d0.w / 2) + 'px,' + (startY - 8) + 'px) scale(.94)' },
+       { opacity: 1, transform: 'translate(' + (leadCx - d0.w / 2) + 'px,' + startY + 'px) scale(.97)' }],
+      { duration: 380, easing: EASE_OUT, fill: 'forwards' }));
+    deal.style.opacity = 1;
+    placeDeal(leadCx - d0.w / 2, startY, 0.97);
+    await wait(360);
+
+    // 4 · it dips toward Lead as if to enter — the lane lights up...
+    lanes[0].classList.add('pp-lane--eyeing');
+    deal.animate(
+      [{ transform: 'translate(' + (leadCx - d0.w / 2) + 'px,' + startY + 'px) scale(.97)' },
+       { transform: 'translate(' + (leadCx - d0.w / 2) + 'px,' + (lead.y + 6) + 'px) scale(1)' }],
+      { duration: 300, easing: EASE_OUT, fill: 'forwards' });
+    placeDeal(leadCx - d0.w / 2, lead.y + 6, 1);
+    await wait(420);
+
+    // 5 · ...but it never registers — the lane releases, the deal leaks out
+    lanes[0].classList.remove('pp-lane--eyeing');
+    var email = rectIn(emailBody);
+    var emailCx = email.x + email.w / 2;
+    var fromX = leadCx, fromY = lead.y + lead.h;
+    var toX = emailCx, toY = email.y - 6;
+
+    // draw the leak trail
+    trail.setAttribute('d', buildTrail(fromX, fromY, toX, toY));
+    trail.animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }],
+      { duration: 620, easing: EASE_OUT, fill: 'forwards' });
+    trail.style.strokeDashoffset = 0;
+
+    // the deal veers away from the pipeline down into the Email channel
+    var dEnd = rectIn(deal);
+    var landX = emailCx - dEnd.w / 2;
+    var landY = email.y + email.h / 2 - dEnd.h / 2;
+    var bowX = ((leadCx - dEnd.w / 2) + landX) / 2 - 40;
+    var bowY = (lead.y + 6 + landY) / 2;
+    await settled(deal.animate(
+      [{ transform: 'translate(' + (leadCx - dEnd.w / 2) + 'px,' + (lead.y + 6) + 'px) scale(1)' },
+       { transform: 'translate(' + bowX + 'px,' + bowY + 'px) scale(.98)', offset: 0.5 },
+       { transform: 'translate(' + landX + 'px,' + landY + 'px) scale(.96)' }],
+      { duration: 720, easing: EASE_MOVE, fill: 'forwards' }));
+    placeDeal(landX, landY, 0.96);
+
+    // 6 · the deal lands off-CRM — desaturated, context missing
+    markLost();
+    await wait(140);
+    showMiss();
+    await wait(360);
+
+    // 7 · the consequence: reports on hollow data (calm, no celebration)
+    report.animate([{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }],
+      { duration: 460, easing: EASE_OUT, fill: 'forwards' });
+    report.style.opacity = 1;
+    await wait(420);
+    reportWarn.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.18)' }, { transform: 'scale(1)' }],
+      { duration: 560, easing: EASE_POP });
+  }
+  /* ==================== SCENE:LOGIC end ==================== */
+
+  fit();
+  if ('ResizeObserver' in window) { new ResizeObserver(fit).observe(stage); }
+  else { window.addEventListener('resize', fit); }
+
+  function arm() {
+    if (!('IntersectionObserver' in window)) { play(); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          io.disconnect();
+          requestAnimationFrame(function () { requestAnimationFrame(play); });
+        }
+      });
+    }, { threshold: 0.4 });
+    io.observe(root);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', arm);
+  } else {
+    arm();
+  }
+})();
+  }
+</script>

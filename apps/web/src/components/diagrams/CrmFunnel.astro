@@ -1,0 +1,516 @@
+---
+// Ported from the Webflow embed #crm-funnel (index) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  CRM — Sales funnel kanban animation (product 1: CRM implementation)
+  zawlodzki.pl · self-contained, no external dependencies.
+
+  The board is laid out at a fixed design width (760px) and scaled
+  to fit its container, so proportions stay identical on every screen
+  (desktop down to mobile). Honors prefers-reduced-motion.
+*/
+---
+
+<div class="dg" data-diagram="crm-funnel" aria-hidden="true" style="--dg-w: 760; --dg-h: 177;">
+  <div class="cf-stage dg-stage">
+    <div class="cf-fit dg-fit">
+      <div class="cf-lanes">
+        <div class="cf-lane" data-count="5">
+          <div class="cf-lane-head">
+            <span class="cf-lane-label">Lead</span>
+            <span class="cf-chip">5</span>
+          </div>
+          <div class="cf-ghost"><span></span><span></span></div>
+          <div class="cf-ghost"><span></span><span></span></div>
+        </div>
+        <div class="cf-lane" data-count="3">
+          <div class="cf-lane-head">
+            <span class="cf-lane-label">Qualified</span>
+            <span class="cf-chip">3</span>
+          </div>
+          <div class="cf-ghost"><span></span><span></span></div>
+          <div class="cf-ghost"><span></span><span></span></div>
+        </div>
+        <div class="cf-lane" data-count="2">
+          <div class="cf-lane-head">
+            <span class="cf-lane-label">Proposal</span>
+            <span class="cf-chip">2</span>
+          </div>
+          <div class="cf-ghost"><span></span><span></span></div>
+        </div>
+        <div class="cf-lane cf-lane--won" data-count="0">
+          <div class="cf-lane-head">
+            <span class="cf-lane-label">Won</span>
+            <span class="cf-chip">0</span>
+          </div>
+        </div>
+
+        <div class="cf-mover">
+          <div class="cf-deal">
+            <div class="cf-deal-top">
+              <span class="cf-avatar">A</span>
+              <span class="cf-deal-name">Acme</span>
+              <span class="cf-deal-check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+            <div class="cf-deal-value">&euro;24,000</div>
+            <div class="cf-deal-foot"><span class="cf-tag">New deal</span></div>
+          </div>
+        </div>
+
+        <div class="cf-confetti"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+/* Scoped to [data-diagram="crm-funnel"] so nothing leaks into the Webflow page.
+     Sizes are fixed px (design space); the .cf-fit wrapper scales the
+     whole board to its container width. */
+  [data-diagram="crm-funnel"] {
+    --cf-primary:   #3A48CC;
+    --cf-primary-10:#EBEDFA;
+    --cf-primary-30:#8991E0;
+    --cf-secondary: #0ACFFE;            /* cyan accent — "active / in motion" */
+    --cf-secondary-10:#E7FAFF;          /* cyan tint — soft fills */
+    --cf-secondary-soft:rgba(10,207,254,.5); /* soft cyan outline */
+    --cf-success:   #52C41A;
+    --cf-bg-lane:   #F9FAFB;
+    --cf-border:    #DDE1E6;
+    --cf-border-soft:#EDF0F3;
+    --cf-heading:   #0E0F11;
+    --cf-muted:     #838D95;
+    --cf-card:      #FFFFFF;
+    --cf-font: 'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --cf-shadow-rest: 0 1px 3px rgba(0,0,0,.08);
+    --cf-shadow-lift: 0 0 0 3px rgba(10,207,254,.20), 1px 8px 22px rgba(14,15,17,.14); /* cyan halo while travelling */
+
+    font-family: var(--cf-font);
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  [data-diagram="crm-funnel"] *, [data-diagram="crm-funnel"] *::before, [data-diagram="crm-funnel"] *::after { box-sizing: border-box; }
+
+  [data-diagram="crm-funnel"] .cf-stage { width: 100%; overflow: hidden; }
+  [data-diagram="crm-funnel"] .cf-fit {
+    width: 760px;                /* design width — scaled by JS to fit */
+    transform-origin: top left;
+  }
+
+  [data-diagram="crm-funnel"] .cf-lanes {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  /* ---- Lane ---- */
+  [data-diagram="crm-funnel"] .cf-lane {
+    flex: 1 1 0;
+    min-width: 0;
+    background: var(--cf-bg-lane);
+    border: 1px solid var(--cf-border);
+    border-radius: 14px;
+    padding: 14px;
+    min-height: 176px;
+    opacity: 0;                       /* revealed on play */
+    transform: translateY(14px);
+    transition: background-color .4s ease, border-color .4s ease;
+  }
+  [data-diagram="crm-funnel"] .cf-lane--active {
+    background: var(--cf-primary-10);
+    border-color: var(--cf-secondary-soft);   /* cyan outline on the lane being entered */
+  }
+  [data-diagram="crm-funnel"] .cf-lane--won.cf-lane--cleared {
+    background: rgba(82,196,26,.08);
+    border-color: rgba(82,196,26,.45);
+  }
+
+  [data-diagram="crm-funnel"] .cf-lane-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  [data-diagram="crm-funnel"] .cf-lane-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--cf-muted);
+  }
+  [data-diagram="crm-funnel"] .cf-lane--won .cf-lane-label { color: var(--cf-primary); }
+  [data-diagram="crm-funnel"] .cf-chip {
+    font-size: 12px;
+    font-weight: 600;
+    color: #636B75;
+    background: var(--cf-border-soft);
+    border-radius: 999px;
+    padding: 1px 8px;
+    min-width: 22px;
+    text-align: center;
+    transition: color .3s ease, background-color .3s ease;
+  }
+  [data-diagram="crm-funnel"] .cf-lane--won .cf-chip--hit {
+    color: #fff;
+    background: var(--cf-success);
+  }
+
+  /* ---- Ghost (other deals) ---- */
+  [data-diagram="crm-funnel"] .cf-ghost {
+    background: var(--cf-card);
+    border: 1px solid var(--cf-border-soft);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
+    opacity: .9;
+  }
+  [data-diagram="crm-funnel"] .cf-ghost span {
+    display: block;
+    height: 7px;
+    border-radius: 4px;
+    background: #EAEDF1;
+  }
+  [data-diagram="crm-funnel"] .cf-ghost span:first-child { width: 62%; margin-bottom: 7px; }
+  [data-diagram="crm-funnel"] .cf-ghost span:last-child  { width: 38%; background:#F0F2F5; }
+
+  /* ---- The travelling deal ---- */
+  [data-diagram="crm-funnel"] .cf-mover {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 5;
+    opacity: 0;
+    will-change: transform;
+  }
+  [data-diagram="crm-funnel"] .cf-deal {
+    position: relative;
+    width: 100%;
+    background: var(--cf-card);
+    border: 1px solid var(--cf-border);
+    border-radius: 10px;
+    padding: 12px 12px 12px 14px;
+    box-shadow: var(--cf-shadow-rest);
+    overflow: hidden;
+    will-change: transform, box-shadow;
+  }
+  [data-diagram="crm-funnel"] .cf-deal::before {        /* left accent bar */
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--cf-primary);
+    transition: background-color .35s ease;
+  }
+  [data-diagram="crm-funnel"] .cf-deal--won { border-color: rgba(82,196,26,.5); }
+  [data-diagram="crm-funnel"] .cf-deal--won::before { background: var(--cf-success); }
+
+  [data-diagram="crm-funnel"] .cf-deal-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  [data-diagram="crm-funnel"] .cf-avatar {
+    flex: 0 0 auto;
+    width: 22px; height: 22px;
+    border-radius: 999px;
+    background: var(--cf-primary-10);
+    color: var(--cf-primary);
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    transition: background-color .35s ease, color .35s ease;
+  }
+  [data-diagram="crm-funnel"] .cf-deal-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cf-heading);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  [data-diagram="crm-funnel"] .cf-deal-check {
+    margin-left: auto;
+    flex: 0 0 auto;
+    width: 20px; height: 20px;
+    border-radius: 999px;
+    background: var(--cf-success);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    transform: scale(0);
+    transition: transform .32s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  [data-diagram="crm-funnel"] .cf-deal--won .cf-deal-check { transform: scale(1); }
+  [data-diagram="crm-funnel"] .cf-deal--won .cf-avatar {
+    background: rgba(82,196,26,.16);
+    color: var(--cf-success);
+  }
+  [data-diagram="crm-funnel"] .cf-deal-value {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--cf-heading);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  [data-diagram="crm-funnel"] .cf-deal-foot { margin-top: 10px; }
+  [data-diagram="crm-funnel"] .cf-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--cf-primary);
+    background: var(--cf-primary-10);
+    border-radius: 6px;
+    padding: 3px 8px;
+    transition: color .35s ease, background-color .35s ease;
+  }
+  [data-diagram="crm-funnel"] .cf-deal--won .cf-tag {
+    color: var(--cf-success);
+    background: rgba(82,196,26,.12);
+  }
+
+  /* ---- Confetti ---- */
+  [data-diagram="crm-funnel"] .cf-confetti {
+    position: absolute;
+    top: 0; left: 0;
+    width: 0; height: 0;
+    z-index: 6;
+    pointer-events: none;
+  }
+  [data-diagram="crm-funnel"] .cf-confetti i {
+    position: absolute;
+    width: 8px; height: 8px;
+    border-radius: 2px;
+    will-change: transform, opacity;
+  }
+
+  /* ---- Reduced motion: show resolved state, no movement ---- */
+  @media (prefers-reduced-motion: reduce) {
+    [data-diagram="crm-funnel"] .cf-lane { opacity: 1; transform: none; transition: none; }
+    [data-diagram="crm-funnel"] .cf-mover { transition: none; }
+    [data-diagram="crm-funnel"] .cf-deal, [data-diagram="crm-funnel"] .cf-deal-check,
+    [data-diagram="crm-funnel"] .cf-deal::before, [data-diagram="crm-funnel"] .cf-tag,
+    [data-diagram="crm-funnel"] .cf-avatar, [data-diagram="crm-funnel"] .cf-chip { transition: none; }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="crm-funnel"]')) {
+(function () {
+  if (!root || root.dataset.cfInit) return;
+  root.dataset.cfInit = '1';
+
+  var DESIGN_W = 760;
+
+  var stage   = root.querySelector('.cf-stage');
+  var fitEl   = root.querySelector('.cf-fit');
+  var lanesEl = root.querySelector('.cf-lanes');
+  var lanes   = Array.prototype.slice.call(root.querySelectorAll('.cf-lane'));
+  var mover   = root.querySelector('.cf-mover');
+  var deal    = root.querySelector('.cf-deal');
+  var tag     = root.querySelector('.cf-tag');
+  var confettiBox = root.querySelector('.cf-confetti');
+
+  var reduce = window.matchMedia &&
+               window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var EASE_MOVE = 'cubic-bezier(0.645, 0.045, 0.355, 1)'; // ease-in-out (on-screen travel)
+  var EASE_OUT  = 'cubic-bezier(0.22, 1, 0.36, 1)';       // settle / enter
+
+  // Scale the fixed-width board down to fit the available container width.
+  function fit(){}
+
+  // Mover x/y for each lane (design-space px; the wrapper scale handles DPR).
+  function layout() {
+    var pad = parseFloat(getComputedStyle(lanes[0]).paddingLeft) || 14;
+    var head = lanes[0].querySelector('.cf-lane-head');
+    var headH = head.offsetHeight;
+    var headMb = parseFloat(getComputedStyle(head).marginBottom) || 14;
+    var y = lanes[0].offsetTop + pad + headH + headMb;
+    var w = lanes[0].clientWidth - pad * 2;
+    mover.style.width = w + 'px';
+    return lanes.map(function (l) { return { x: l.offsetLeft + pad, y: y }; });
+  }
+
+  function setMover(pos, dip, scale) {
+    mover.style.transform = 'translate(' + pos.x + 'px,' + (pos.y - (dip || 0)) + 'px)';
+    if (scale != null) deal.style.transform = 'scale(' + scale + ')';
+  }
+
+  function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+  function settled(anim) { return anim.finished.catch(function () {}); }
+
+  function moveCount(fromLane, toLane) {
+    [fromLane, toLane].forEach(function (lane, i) {
+      var chip = lane.querySelector('.cf-chip');
+      var n = parseInt(lane.dataset.count, 10) + (i === 0 ? -1 : 1);
+      lane.dataset.count = n;
+      chip.textContent = n;
+      chip.animate(
+        [{ transform: 'scale(1)' }, { transform: 'scale(1.3)' }, { transform: 'scale(1)' }],
+        { duration: 320, easing: EASE_OUT }
+      );
+    });
+  }
+
+  function highlight(lane, on) { lane.classList.toggle('cf-lane--active', on); }
+
+  function fireConfetti(originLane) {
+    var pad = parseFloat(getComputedStyle(originLane).paddingLeft) || 14;
+    var ox = originLane.offsetLeft + originLane.clientWidth / 2;
+    var oy = originLane.offsetTop + pad + 42;
+    confettiBox.style.left = ox + 'px';
+    confettiBox.style.top  = oy + 'px';
+    var colors = ['#3A48CC', '#0ACFFE', '#52C41A', '#8991E0', '#FFC53D'];
+    for (var i = 0; i < 46; i++) {
+      var p = document.createElement('i');
+      p.style.background = colors[i % colors.length];
+      if (i % 3 === 0) p.style.borderRadius = '50%';
+      confettiBox.appendChild(p);
+      var ang = (Math.PI * 2 * i) / 46 + (Math.random() - 0.5) * 0.5;
+      var dist = 70 + Math.random() * 120;
+      var dx = Math.cos(ang) * dist;
+      var dy = Math.sin(ang) * dist - 60;          // bias upward
+      var rot = (Math.random() - 0.5) * 720;
+      p.animate(
+        [
+          { transform: 'translate(0,0) rotate(0deg) scale(1)', opacity: 1 },
+          { transform: 'translate(' + dx + 'px,' + dy + 'px) rotate(' + rot + 'deg) scale(.4)', opacity: 0 }
+        ],
+        { duration: 900 + Math.random() * 500, easing: 'cubic-bezier(0.18, 0.7, 0.3, 1)', fill: 'forwards' }
+      );
+    }
+    setTimeout(function () { confettiBox.innerHTML = ''; }, 1700);
+  }
+
+  function markWon(lane) {
+    deal.classList.add('cf-deal--won');
+    tag.textContent = 'Won';
+    lane.classList.add('cf-lane--cleared');
+    lane.querySelector('.cf-chip').classList.add('cf-chip--hit');
+  }
+
+  // ---- Final (reduced-motion / fallback) state ----
+  function showFinal() {
+    fit();
+    var pos = layout();
+    lanes.forEach(function (l) { l.style.opacity = 1; l.style.transform = 'none'; });
+    var last = lanes.length - 1;
+    moveCount(lanes[0], lanes[last]);
+    setMover(pos[last], 0, 1);
+    mover.style.opacity = 1;
+    markWon(lanes[last]);
+  }
+
+  // ---- Full choreography ----
+  async function play() {
+    fit();
+    if (reduce) { showFinal(); return; }
+
+    var pos = layout();
+
+    // 1. Lanes rise in, left to right
+    lanes.forEach(function (l, i) {
+      l.animate(
+        [{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'translateY(0)' }],
+        { duration: 460, delay: i * 90, easing: EASE_OUT, fill: 'forwards' }
+      );
+    });
+    await wait(560);
+
+    // 2. The deal appears in Lead
+    setMover(pos[0], 0, 0.96);
+    await settled(mover.animate([{ opacity: 0 }, { opacity: 1 }],
+      { duration: 260, easing: EASE_OUT, fill: 'forwards' }));
+    mover.style.opacity = 1;
+    await settled(deal.animate([{ transform: 'scale(0.96)' }, { transform: 'scale(1)' }],
+      { duration: 260, easing: EASE_OUT, fill: 'forwards' }));
+    deal.style.transform = 'scale(1)';
+    await wait(620);
+
+    // 3. Hop through Qualified -> Proposal -> Won
+    for (var i = 1; i < lanes.length; i++) {
+      var from = pos[i - 1], to = pos[i];
+      var isWon = (i === lanes.length - 1);
+
+      highlight(lanes[i], true);
+
+      // lift
+      deal.animate(
+        [{ transform: 'scale(1)', boxShadow: 'var(--cf-shadow-rest)' },
+         { transform: 'scale(1.04)', boxShadow: 'var(--cf-shadow-lift)' }],
+        { duration: 200, easing: EASE_OUT, fill: 'forwards' }
+      );
+      deal.style.transform = 'scale(1.04)';
+      deal.style.boxShadow = 'var(--cf-shadow-lift)';
+      await wait(120);
+
+      // travel with a gentle upward arc
+      await settled(mover.animate(
+        [
+          { transform: 'translate(' + from.x + 'px,' + from.y + 'px)' },
+          { transform: 'translate(' + ((from.x + to.x) / 2) + 'px,' + (from.y - 16) + 'px)', offset: 0.5 },
+          { transform: 'translate(' + to.x + 'px,' + to.y + 'px)' }
+        ],
+        { duration: 640, easing: EASE_MOVE, fill: 'forwards' }
+      ));
+      setMover(to, 0, null);
+      moveCount(lanes[i - 1], lanes[i]);
+
+      // settle down
+      deal.animate(
+        [{ transform: 'scale(1.04)', boxShadow: 'var(--cf-shadow-lift)' },
+         { transform: 'scale(1)', boxShadow: 'var(--cf-shadow-rest)' }],
+        { duration: 220, easing: EASE_OUT, fill: 'forwards' }
+      );
+      deal.style.transform = 'scale(1)';
+      deal.style.boxShadow = 'var(--cf-shadow-rest)';
+
+      highlight(lanes[i], false);
+
+      if (isWon) {
+        await wait(120);
+        markWon(lanes[i]);
+        deal.animate(
+          [{ transform: 'scale(1)' }, { transform: 'scale(1.06)' }, { transform: 'scale(1)' }],
+          { duration: 420, easing: 'cubic-bezier(0.34,1.56,0.64,1)' }
+        );
+        fireConfetti(lanes[i]);
+      } else {
+        await wait(440);
+      }
+    }
+  }
+
+  // Keep the board scaled to its container.
+  fit();
+  if ('ResizeObserver' in window) { new ResizeObserver(fit).observe(stage); }
+  else { window.addEventListener('resize', fit); }
+
+  // Play once, when the board scrolls into view.
+  function arm() {
+    if (!('IntersectionObserver' in window)) { play(); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          io.disconnect();
+          requestAnimationFrame(function () { requestAnimationFrame(play); });
+        }
+      });
+    }, { threshold: 0.4 });
+    io.observe(root);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', arm);
+  } else {
+    arm();
+  }
+})();
+  }
+</script>

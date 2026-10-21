@@ -1,0 +1,488 @@
+---
+// Ported from the Webflow embed #zw-sf-problem (szkolenie-i-wdrozenie-salesforce) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  Salesforce — "easy to build too much" problem animation.
+  A deal record swells with modules and fields until nobody can
+  work in it: the deal lifts out of Salesforce and lands in a
+  spreadsheet, the record goes grey, reports sit unopened and the
+  licence keeps charging. Ends on the problem — no celebration.
+  zawlodzki.pl · self-contained, no external dependencies.
+*/
+---
+
+<div class="dg" data-diagram="zw-sf-problem" aria-hidden="true" style="--dg-w: 760; --dg-h: 439.5;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="sp-board">
+
+          <div class="sp-rec">
+            <div class="sp-head">
+              <span class="sp-eyebrow">Opportunity</span>
+              <span class="sp-chip"><span class="sp-chip-lbl">Fields</span> <b class="sp-count">0</b></span>
+            </div>
+            <div class="sp-tabs">
+              <span class="sp-tab">Sales</span>
+              <span class="sp-tab">Service</span>
+              <span class="sp-tab">Marketing</span>
+              <span class="sp-tab">CPQ</span>
+              <span class="sp-tab">Tasks</span>
+            </div>
+            <div class="sp-slot"></div>
+            <div class="sp-fields">
+              <div class="sp-field"><i></i><span></span></div>
+              <div class="sp-field"><i></i><span></span></div>
+              <div class="sp-field"><i></i><span></span></div>
+              <div class="sp-field"><i></i><span></span></div>
+              <div class="sp-field"><i></i><span></span></div>
+              <div class="sp-field"><i></i><span></span></div>
+              <div class="sp-field"><i></i><span></span></div>
+              <div class="sp-field"><i></i><span></span></div>
+              <div class="sp-field"><i></i><span></span></div>
+              <div class="sp-field"><i></i><span></span></div>
+              <div class="sp-field"><i></i><span></span></div>
+              <div class="sp-field"><i></i><span></span></div>
+            </div>
+            <div class="sp-fade"></div>
+          </div>
+
+          <div class="sp-side">
+            <div class="sp-sheet">
+              <div class="sp-sheet-head">
+                <span class="sp-ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 10h18M3 15h18M9 4v16"/></svg>
+                </span>
+                <span class="sp-eyebrow">Sheet</span>
+              </div>
+              <div class="sp-grid"><i></i><i></i><i></i></div>
+              <div class="sp-land"></div>
+              <div class="sp-grid"><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="sp-stats">
+              <div class="sp-stat sp-stat--rep">
+                <span class="sp-eyebrow">Reports</span>
+                <div class="sp-stat-row">
+                  <span class="sp-stat-num">0</span>
+                  <span class="sp-stat-sub">opened</span>
+                  <span class="sp-warn" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
+                  </span>
+                </div>
+              </div>
+              <div class="sp-stat sp-stat--lic">
+                <span class="sp-eyebrow">Licence</span>
+                <div class="sp-stat-row">
+                  <span class="sp-stat-num">&euro;1,000</span>
+                  <span class="sp-stat-sub">/mo</span>
+                </div>
+                <i class="sp-tick"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="sp-deal" aria-hidden="true">
+            <div class="sp-deal-top">
+              <span class="sp-avatar">A</span>
+              <span class="sp-deal-name">Acme</span>
+            </div>
+            <div class="sp-deal-value">&euro;24,000</div>
+            <div class="sp-deal-foot"><span class="sp-tag">Open</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+/* ---- Shared family layer: tokens + responsive shell (verbatim). ---- */
+  [data-diagram="zw-sf-problem"] {
+    --zw-primary:    #3A48CC;
+    --zw-primary-10: #EBEDFA;
+    --zw-primary-30: #8991E0;
+    --zw-secondary:  #0ACFFE;
+    --zw-success:    #52C41A;
+    --zw-bg-soft:    #F9FAFB;
+    --zw-border:     #DDE1E6;
+    --zw-border-soft:#EDF0F3;
+    --zw-heading:    #0E0F11;
+    --zw-text:       #1E2024;
+    --zw-muted:      #838D95;
+    --zw-card:       #FFFFFF;
+    --zw-font: 'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --zw-serif: 'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;
+    --zw-radius-card: 10px;
+    --zw-radius-lane: 14px;
+    --zw-shadow-rest: 0 1px 3px rgba(0,0,0,.08);
+    --zw-shadow-lift: 1px 8px 22px rgba(14,15,17,.14);
+
+    font-family: var(--zw-font);
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  [data-diagram="zw-sf-problem"] *, [data-diagram="zw-sf-problem"] *::before, [data-diagram="zw-sf-problem"] *::after { box-sizing: border-box; }
+
+  [data-diagram="zw-sf-problem"] .zw-stage { width: 100%; overflow: hidden; }
+  [data-diagram="zw-sf-problem"] .zw-fit   { width: 760px; transform-origin: top left; }
+  [data-diagram="zw-sf-problem"] .zw-scene { position: relative; }
+
+  /* =================== SCENE:STYLE start =================== */
+  [data-diagram="zw-sf-problem"] .sp-board { position: relative; width: 760px; display: flex; gap: 24px; align-items: flex-start; }
+
+  [data-diagram="zw-sf-problem"] .sp-eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: .07em;
+    text-transform: uppercase; color: var(--zw-muted);
+  }
+
+  /* ---- The overbuilt record ---- */
+  [data-diagram="zw-sf-problem"] .sp-rec {
+    position: relative; flex: 0 0 440px;
+    background: var(--zw-bg-soft);
+    border: 1px solid var(--zw-border);
+    border-radius: var(--zw-radius-lane);
+    padding: 14px 16px 16px;
+    overflow: hidden;
+    opacity: 0; transform: translateY(14px);
+  }
+  [data-diagram="zw-sf-problem"] .sp-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  [data-diagram="zw-sf-problem"] .sp-chip {
+    font-size: 12px; font-weight: 600; color: #636B75;
+    background: var(--zw-border-soft); border-radius: 999px;
+    padding: 2px 10px; transition: color .4s ease, background-color .4s ease;
+  }
+  [data-diagram="zw-sf-problem"] .sp-chip b { font-weight: 700; color: var(--zw-primary); transition: color .4s ease; }
+  [data-diagram="zw-sf-problem"] .sp-chip--heavy { background: var(--zw-primary-10); }
+
+  [data-diagram="zw-sf-problem"] .sp-tabs { display: flex; gap: 6px; margin-bottom: 12px; }
+  [data-diagram="zw-sf-problem"] .sp-tab {
+    font-size: 10px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    color: var(--zw-primary); background: var(--zw-primary-10);
+    border-radius: 6px; padding: 4px 8px;
+    opacity: 0; transform: scale(.8);
+    transition: color .4s ease, background-color .4s ease;
+  }
+
+  [data-diagram="zw-sf-problem"] .sp-slot {
+    height: 88px; border-radius: 8px;
+    border: 1.5px dashed var(--zw-border);
+    margin-bottom: 14px;
+  }
+
+  [data-diagram="zw-sf-problem"] .sp-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 14px; }
+  [data-diagram="zw-sf-problem"] .sp-field { opacity: 0; transform: translateY(6px); transition: opacity .4s ease; }
+  [data-diagram="zw-sf-problem"] .sp-field i { display: block; width: 42%; height: 6px; border-radius: 3px; background: #E3E6EA; margin-bottom: 5px; }
+  [data-diagram="zw-sf-problem"] .sp-field:nth-child(3n+2) i { width: 58%; }
+  [data-diagram="zw-sf-problem"] .sp-field:nth-child(4n+3) i { width: 34%; }
+  [data-diagram="zw-sf-problem"] .sp-field span {
+    display: block; height: 20px; border-radius: 6px;
+    background: var(--zw-card); border: 1px solid var(--zw-border-soft);
+  }
+  [data-diagram="zw-sf-problem"] .sp-fade {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 46px;
+    background: linear-gradient(to bottom, rgba(249,250,251,0), var(--zw-bg-soft));
+    pointer-events: none;
+  }
+  /* the record after the seller leaves */
+  [data-diagram="zw-sf-problem"] .sp-rec--idle .sp-field { opacity: .6 !important; }
+  [data-diagram="zw-sf-problem"] .sp-rec--idle .sp-tab { color: var(--zw-muted); background: var(--zw-border-soft); }
+  [data-diagram="zw-sf-problem"] .sp-rec--idle .sp-chip { background: var(--zw-border-soft); }
+  [data-diagram="zw-sf-problem"] .sp-rec--idle .sp-chip b { color: var(--zw-muted); }
+
+  /* ---- Right column: sheet + consequences ---- */
+  [data-diagram="zw-sf-problem"] .sp-side { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+  [data-diagram="zw-sf-problem"] .sp-sheet {
+    background: var(--zw-card);
+    border: 1.5px dashed var(--zw-border);
+    border-radius: var(--zw-radius-lane);
+    padding: 13px 14px 14px;
+    opacity: 0; transform: translateY(14px);
+  }
+  [data-diagram="zw-sf-problem"] .sp-sheet-head { display: flex; align-items: center; gap: 7px; margin-bottom: 12px; }
+  [data-diagram="zw-sf-problem"] .sp-ic { color: var(--zw-muted); display: flex; }
+  [data-diagram="zw-sf-problem"] .sp-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 6px; }
+  [data-diagram="zw-sf-problem"] .sp-grid i { display: block; height: 14px; border-radius: 3px; background: var(--zw-bg-soft); border: 1px solid var(--zw-border-soft); }
+  [data-diagram="zw-sf-problem"] .sp-land {
+    height: 96px; margin: 8px 0; border-radius: 8px;
+    border: 1.5px dashed var(--zw-border-soft);
+    transition: border-color .4s ease, background-color .4s ease;
+  }
+  [data-diagram="zw-sf-problem"] .sp-land--eyeing { border-color: var(--zw-primary-30); background: var(--zw-primary-10); }
+
+  [data-diagram="zw-sf-problem"] .sp-stats { display: flex; gap: 12px; }
+  [data-diagram="zw-sf-problem"] .sp-stat {
+    position: relative; flex: 1 1 0; min-width: 0;
+    background: var(--zw-card);
+    border: 1px solid var(--zw-border);
+    border-radius: var(--zw-radius-card);
+    box-shadow: var(--zw-shadow-rest);
+    padding: 11px 12px 12px;
+    opacity: 0; transform: translateY(10px);
+  }
+  [data-diagram="zw-sf-problem"] .sp-stat-row { display: flex; align-items: baseline; gap: 5px; margin-top: 6px; }
+  [data-diagram="zw-sf-problem"] .sp-stat-num { font-size: 19px; font-weight: 700; color: var(--zw-heading); letter-spacing: -0.01em; line-height: 1.1; }
+  [data-diagram="zw-sf-problem"] .sp-stat-sub { font-size: 11px; font-weight: 600; color: var(--zw-muted); }
+  [data-diagram="zw-sf-problem"] .sp-warn { margin-left: auto; color: var(--zw-secondary); display: flex; align-self: center; }
+  [data-diagram="zw-sf-problem"] .sp-tick {
+    position: absolute; inset: -1px; border: 2px solid var(--zw-secondary);
+    border-radius: var(--zw-radius-card); opacity: 0; pointer-events: none;
+  }
+
+  /* ---- The deal we follow ---- */
+  [data-diagram="zw-sf-problem"] .sp-deal {
+    position: absolute; top: 0; left: 0; z-index: 6;
+    width: 208px;
+    background: var(--zw-card);
+    border: 1px solid var(--zw-border);
+    border-radius: var(--zw-radius-card);
+    padding: 12px 12px 12px 14px;
+    box-shadow: var(--zw-shadow-rest);
+    opacity: 0;
+    overflow: hidden;
+    will-change: transform, opacity;
+  }
+  [data-diagram="zw-sf-problem"] .sp-deal::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: var(--zw-primary);
+    transition: background-color .4s ease;
+  }
+  [data-diagram="zw-sf-problem"] .sp-deal--off::before { background: var(--zw-border); }
+  [data-diagram="zw-sf-problem"] .sp-deal-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  [data-diagram="zw-sf-problem"] .sp-avatar {
+    flex: 0 0 auto; width: 22px; height: 22px; border-radius: 999px;
+    background: var(--zw-primary-10); color: var(--zw-primary);
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  [data-diagram="zw-sf-problem"] .sp-deal-name { font-size: 13px; font-weight: 600; color: var(--zw-heading); }
+  [data-diagram="zw-sf-problem"] .sp-deal-value { font-size: 19px; font-weight: 700; color: var(--zw-heading); letter-spacing: -0.01em; line-height: 1.1; }
+  [data-diagram="zw-sf-problem"] .sp-deal-foot { margin-top: 10px; }
+  [data-diagram="zw-sf-problem"] .sp-tag {
+    display: inline-block; font-size: 10px; font-weight: 600;
+    letter-spacing: .04em; text-transform: uppercase;
+    color: var(--zw-primary); background: var(--zw-primary-10);
+    border-radius: 6px; padding: 3px 8px;
+    transition: color .4s ease, background-color .4s ease;
+  }
+  [data-diagram="zw-sf-problem"] .sp-deal--off .sp-tag { color: var(--zw-muted); background: var(--zw-border-soft); }
+  /* ==================== SCENE:STYLE end ==================== */
+
+  /* Accessibility: land on the resolved problem state, no motion. */
+  @media (prefers-reduced-motion: reduce) {
+    [data-diagram="zw-sf-problem"] .sp-rec,
+    [data-diagram="zw-sf-problem"] .sp-sheet,
+    [data-diagram="zw-sf-problem"] .sp-stat { opacity: 1; transform: none; }
+    [data-diagram="zw-sf-problem"] .sp-tab { opacity: 1; transform: none; color: var(--zw-muted); background: var(--zw-border-soft); }
+    [data-diagram="zw-sf-problem"] .sp-field { opacity: .6; transform: none; }
+    [data-diagram="zw-sf-problem"] .sp-deal { opacity: 1; }
+    [data-diagram="zw-sf-problem"] .sp-deal::before { background: var(--zw-border); }
+    [data-diagram="zw-sf-problem"] .sp-deal .sp-tag { color: var(--zw-muted); background: var(--zw-border-soft); }
+    [data-diagram="zw-sf-problem"] .sp-chip b { color: var(--zw-muted); }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-sf-problem"]')) {
+(function () {
+  if (!root || root.dataset.zwInit) return;   /* guard against double-init */
+  root.dataset.zwInit = '1';
+
+  var DESIGN_W = 760;
+
+  var stage   = root.querySelector('.zw-stage');
+  var fitEl   = root.querySelector('.zw-fit');
+  var scene   = root.querySelector('.zw-scene');
+
+  var reduce = window.matchMedia &&
+               window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var EASE_MOVE = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+  var EASE_OUT  = 'cubic-bezier(0.22, 1, 0.36, 1)';
+  var EASE_POP  = 'cubic-bezier(0.34, 1.56, 0.64, 1)';
+
+  function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+  function settled(anim) { return anim.finished.catch(function () {}); }
+
+  function fit(){}
+
+  /* Position of an element in design-space px, relative to the scene. */
+  function rectIn(el) {
+    var sb = scene.getBoundingClientRect();
+    var scale = sb.width / scene.offsetWidth || 1;
+    var rb = el.getBoundingClientRect();
+    return {
+      x: (rb.left - sb.left) / scale,
+      y: (rb.top  - sb.top)  / scale,
+      w: rb.width  / scale,
+      h: rb.height / scale
+    };
+  }
+
+  /* =================== SCENE:LOGIC start =================== */
+  var rec    = scene.querySelector('.sp-rec');
+  var tabs   = Array.prototype.slice.call(scene.querySelectorAll('.sp-tab'));
+  var fields = Array.prototype.slice.call(scene.querySelectorAll('.sp-field'));
+  var chip   = scene.querySelector('.sp-chip');
+  var count  = scene.querySelector('.sp-count');
+  var slot   = scene.querySelector('.sp-slot');
+  var sheet  = scene.querySelector('.sp-sheet');
+  var land   = scene.querySelector('.sp-land');
+  var stats  = Array.prototype.slice.call(scene.querySelectorAll('.sp-stat'));
+  var warn   = scene.querySelector('.sp-warn');
+  var tick   = scene.querySelector('.sp-tick');
+  var deal   = scene.querySelector('.sp-deal');
+  var FIELDS_TOTAL = 48;
+
+  function riseIn(el, delay, dy) {
+    dy = dy == null ? 14 : dy;
+    el.animate(
+      [{ opacity: 0, transform: 'translateY(' + dy + 'px)' }, { opacity: 1, transform: 'translateY(0)' }],
+      { duration: 460, delay: delay || 0, easing: EASE_OUT, fill: 'forwards' }
+    );
+    el.style.opacity = 1; el.style.transform = 'translateY(0)';
+  }
+
+  function placeDeal(x, y, s) {
+    deal.style.transform = 'translate(' + x + 'px,' + y + 'px) scale(' + (s == null ? 1 : s) + ')';
+  }
+
+  function centerIn(target) {
+    var t = rectIn(target), d = rectIn(deal);
+    return { x: t.x + (t.w - d.w) / 2, y: t.y + (t.h - d.h) / 2 };
+  }
+
+  function countTo(n, ms) {
+    var start = performance.now();
+    return new Promise(function (resolve) {
+      function step(now) {
+        var p = Math.min(1, (now - start) / ms);
+        var e = 1 - Math.pow(1 - p, 3);
+        count.textContent = Math.round(n * e);
+        if (p < 1) requestAnimationFrame(step); else resolve();
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  function markOff() {
+    deal.classList.add('sp-deal--off');
+    deal.querySelector('.sp-tag').textContent = 'Off CRM';
+  }
+
+  function setFinal() {
+    rec.style.opacity = 1; rec.style.transform = 'none';
+    sheet.style.opacity = 1; sheet.style.transform = 'none';
+    tabs.forEach(function (t) { t.style.opacity = 1; t.style.transform = 'none'; });
+    fields.forEach(function (f) { f.style.opacity = 1; f.style.transform = 'none'; });
+    stats.forEach(function (s) { s.style.opacity = 1; s.style.transform = 'none'; });
+    count.textContent = FIELDS_TOTAL;
+    rec.classList.add('sp-rec--idle');
+    var p = centerIn(land);
+    placeDeal(p.x, p.y, 1);
+    deal.style.opacity = 1;
+    markOff();
+  }
+
+  async function play() {
+    fit();
+    if (reduce) { setFinal(); return; }
+
+    // 1 · the record and the side column arrive
+    riseIn(rec, 0);
+    riseIn(sheet, 90);
+    await wait(380);
+
+    // 2 · the deal sits in its record — a clean start
+    var p0 = centerIn(slot);
+    placeDeal(p0.x, p0.y, 1);
+    await settled(deal.animate(
+      [{ opacity: 0, transform: 'translate(' + p0.x + 'px,' + (p0.y + 8) + 'px) scale(.96)' },
+       { opacity: 1, transform: 'translate(' + p0.x + 'px,' + p0.y + 'px) scale(1)' }],
+      { duration: 380, easing: EASE_OUT, fill: 'forwards' }));
+    deal.style.opacity = 1;
+    await wait(420);
+
+    // 3 · modules pile on
+    tabs.forEach(function (t, i) {
+      t.animate([{ opacity: 0, transform: 'scale(.8)' }, { opacity: 1, transform: 'scale(1)' }],
+        { duration: 320, delay: i * 90, easing: EASE_POP, fill: 'forwards' });
+      t.style.opacity = 1; t.style.transform = 'scale(1)';
+    });
+    await wait(300);
+
+    // 4 · ...and fields keep coming, the counter runs away
+    chip.classList.add('sp-chip--heavy');
+    fields.forEach(function (f, i) { riseIn(f, i * 55, 6); });
+    await countTo(FIELDS_TOTAL, 12 * 55 + 420);
+    await wait(460);
+
+    // 5 · the seller gives up: the deal lifts out of the record...
+    var from = centerIn(slot);
+    await settled(deal.animate(
+      [{ transform: 'translate(' + from.x + 'px,' + from.y + 'px) scale(1)', boxShadow: 'var(--zw-shadow-rest)' },
+       { transform: 'translate(' + from.x + 'px,' + from.y + 'px) scale(1.04)', boxShadow: 'var(--zw-shadow-lift)' }],
+      { duration: 180, easing: EASE_OUT, fill: 'forwards' }));
+    land.classList.add('sp-land--eyeing');
+
+    // ...and travels into the spreadsheet
+    var to = centerIn(land);
+    var midX = (from.x + to.x) / 2, midY = Math.min(from.y, to.y) - 16;
+    await settled(deal.animate(
+      [{ transform: 'translate(' + from.x + 'px,' + from.y + 'px) scale(1.04)' },
+       { transform: 'translate(' + midX + 'px,' + midY + 'px) scale(1.04)', offset: 0.5 },
+       { transform: 'translate(' + to.x + 'px,' + to.y + 'px) scale(1.04)' }],
+      { duration: 720, easing: EASE_MOVE, fill: 'forwards' }));
+    await settled(deal.animate(
+      [{ transform: 'translate(' + to.x + 'px,' + to.y + 'px) scale(1.04)', boxShadow: 'var(--zw-shadow-lift)' },
+       { transform: 'translate(' + to.x + 'px,' + to.y + 'px) scale(1)', boxShadow: 'var(--zw-shadow-rest)' }],
+      { duration: 220, easing: EASE_OUT, fill: 'forwards' }));
+    placeDeal(to.x, to.y, 1);
+    land.classList.remove('sp-land--eyeing');
+    markOff();
+
+    // 6 · the record goes quiet
+    rec.classList.add('sp-rec--idle');
+    await wait(420);
+
+    // 7 · the consequences: nobody opens reports, the licence keeps charging
+    stats.forEach(function (s, i) { riseIn(s, i * 90, 10); });
+    await wait(560);
+    warn.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.18)' }, { transform: 'scale(1)' }],
+      { duration: 560, easing: EASE_POP });
+    await wait(260);
+    tick.animate([{ opacity: .7, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(1.12)' }],
+      { duration: 780, easing: EASE_OUT, fill: 'forwards' });
+  }
+  /* ==================== SCENE:LOGIC end ==================== */
+
+  fit();
+  if ('ResizeObserver' in window) { new ResizeObserver(fit).observe(stage); }
+  else { window.addEventListener('resize', fit); }
+
+  function arm() {
+    if (!('IntersectionObserver' in window)) { play(); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          io.disconnect();
+          requestAnimationFrame(function () { requestAnimationFrame(play); });
+        }
+      });
+    }, { threshold: 0.4 });
+    io.observe(root);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', arm);
+  } else {
+    arm();
+  }
+})();
+  }
+</script>

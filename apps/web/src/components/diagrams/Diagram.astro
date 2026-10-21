@@ -1,0 +1,11 @@
+---
+import { diagrams, type DiagramKey } from './registry';
+
+interface Props {
+  diagram: DiagramKey;
+}
+
+const Component = diagrams[Astro.props.diagram];
+---
+
+<Component />

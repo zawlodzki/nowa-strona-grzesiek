@@ -1,0 +1,419 @@
+---
+// Ported from the Webflow embed #zw-automation (index) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  zawlodzki.pl — product animation SCAFFOLD
+  Copy this file to marketing/assety/www animations/<scope>.html and
+  build one product animation inside the SCENE regions. Everything
+  OUTSIDE the SCENE markers is the shared family layer — keep it
+  identical across animations so they read as siblings on the page.
+
+  Before editing, replace zw-automation everywhere with a UNIQUE id for
+  this animation, e.g. zw-crm, zw-automation, zw-ai-sales. The scope
+  keeps each embed's CSS/JS from colliding when several sit on one page.
+*/
+---
+
+<div class="dg" data-diagram="zw-automation" aria-hidden="true" style="--dg-w: 760; --dg-h: 235;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="zw-flow">
+          <svg class="zw-wires" viewBox="0 0 760 235" width="760" height="235" aria-hidden="true">
+            <path class="zw-wire-base" d="M100 100 L272 100"/>
+            <path class="zw-wire-base" d="M272 100 L468 48"/>
+            <path class="zw-wire-base" d="M272 100 L468 168"/>
+            <path class="zw-wire-base" d="M468 48 L660 100"/>
+            <path class="zw-wire-base" d="M468 168 L660 100"/>
+            <path class="zw-wire-fill" data-wire="0" pathLength="1" d="M100 100 L272 100"/>
+            <path class="zw-wire-fill" data-wire="1" pathLength="1" d="M272 100 L468 48"/>
+            <path class="zw-wire-fill" data-wire="2" pathLength="1" d="M272 100 L468 168"/>
+            <path class="zw-wire-fill" data-wire="3" pathLength="1" d="M468 48 L660 100"/>
+            <path class="zw-wire-fill" data-wire="4" pathLength="1" d="M468 168 L660 100"/>
+          </svg>
+
+          <span class="zw-done-ring" style="left:660px;top:100px"></span>
+
+          <div class="zw-node" data-node="trigger" style="left:40px;top:63px">
+            <span class="zw-node-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="zw-node-label">Trigger</span>
+          </div>
+          <div class="zw-node" data-node="enrich" style="left:212px;top:63px">
+            <span class="zw-node-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18"><ellipse cx="12" cy="6" rx="7" ry="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 6v12c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6V6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 12c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </span>
+            <span class="zw-node-label">Enrich</span>
+          </div>
+          <div class="zw-node" data-node="sync" style="left:408px;top:11px">
+            <span class="zw-node-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8M20 3v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 16M4 21v-5h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="zw-node-label">Sync</span>
+          </div>
+          <div class="zw-node" data-node="notify" style="left:408px;top:131px">
+            <span class="zw-node-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10.5 21a2 2 0 0 0 3 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <span class="zw-node-label">Notify</span>
+          </div>
+          <div class="zw-node zw-node--goal" data-node="done" style="left:600px;top:63px">
+            <span class="zw-node-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="zw-node-label">Done</span>
+          </div>
+
+          <div class="zw-packet" data-packet="a"><span class="zw-packet-dot"></span></div>
+          <div class="zw-packet" data-packet="b"><span class="zw-packet-dot"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+/* ---- Shared family layer: tokens + responsive shell.
+     Copy the :root block verbatim into every animation (same names, same
+     values) so the whole set shares one palette, type, radius and shadow
+     language. Only zw-automation changes per animation. ---- */
+  [data-diagram="zw-automation"] {
+    --zw-primary:    #3A48CC;   /* brand — CTA / accent / active state   */
+    --zw-primary-10: #EBEDFA;   /* primary tint — soft fills             */
+    --zw-primary-30: #8991E0;
+    --zw-secondary:  #0ACFFE;   /* cyan accent — "active / in motion"    */
+    --zw-secondary-10:#E7FAFF;  /* cyan tint — soft fills                */
+    --zw-secondary-soft:rgba(10,207,254,.22); /* cyan halo / ring        */
+    --zw-success:    #52C41A;   /* win / resolved                        */
+    --zw-bg-soft:    #F9FAFB;   /* lane / track surface                  */
+    --zw-border:     #DDE1E6;   /* base border                           */
+    --zw-border-soft:#EDF0F3;
+    --zw-heading:    #0E0F11;   /* headings / values                     */
+    --zw-text:       #1E2024;
+    --zw-muted:      #838D95;   /* eyebrow / metadata                    */
+    --zw-card:       #FFFFFF;
+    --zw-font: 'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --zw-serif: 'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;
+    --zw-radius-card: 10px;
+    --zw-radius-lane: 14px;
+    --zw-shadow-rest: 0 1px 3px rgba(0,0,0,.08);
+    --zw-shadow-lift: 1px 8px 22px rgba(14,15,17,.14);
+
+    font-family: var(--zw-font);
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  [data-diagram="zw-automation"] *, [data-diagram="zw-automation"] *::before, [data-diagram="zw-automation"] *::after { box-sizing: border-box; }
+
+  /* The scale-to-fit shell: the scene is laid out at a fixed design width
+     (DESIGN_W in JS) and scaled down to the container, so proportions stay
+     identical from desktop to a 375px phone and cards never overflow. */
+  [data-diagram="zw-automation"] .zw-stage { width: 100%; overflow: hidden; }
+  [data-diagram="zw-automation"] .zw-fit   { width: 760px; transform-origin: top left; }
+  [data-diagram="zw-automation"] .zw-scene { position: relative; }
+
+  /* Confetti (created on demand by the shared confetti() helper) */
+  [data-diagram="zw-automation"] .zw-confetti { position: absolute; top: 0; left: 0; width: 0; height: 0; z-index: 9; pointer-events: none; }
+  [data-diagram="zw-automation"] .zw-confetti i { position: absolute; width: 8px; height: 8px; border-radius: 2px; will-change: transform, opacity; }
+
+  /* =================== SCENE:STYLE start =================== */
+  /* Branching node-flow. Same component DNA as the CRM kanban (white cards,
+     --zw-border, eyebrow labels, primary accent, success on the goal), but a
+     forked 2D structure instead of a single row. Laid out in a fixed
+     760x235 design space; the shell scales it to fit. */
+  [data-diagram="zw-automation"] .zw-flow {
+    position: relative;
+    width: 760px;
+    height: 235px;
+  }
+
+  /* SVG connectors sit behind the (opaque) node cards */
+  [data-diagram="zw-automation"] .zw-wires { position: absolute; top: 0; left: 0; z-index: 1; overflow: visible; opacity: 0; }
+  [data-diagram="zw-automation"] .zw-wire-base {
+    fill: none; stroke: var(--zw-border); stroke-width: 3; stroke-linecap: round;
+  }
+  [data-diagram="zw-automation"] .zw-wire-fill {
+    fill: none; stroke: var(--zw-primary); stroke-width: 3; stroke-linecap: round;
+    stroke-dasharray: 1; stroke-dashoffset: 1;   /* hidden until drawn */
+  }
+
+  /* node = a card placed by left/top so its icon center hits a wire endpoint */
+  [data-diagram="zw-automation"] .zw-node {
+    position: absolute;
+    z-index: 2;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 10px 14px;
+    background: var(--zw-card);
+    border: 1px solid var(--zw-border);
+    border-radius: var(--zw-radius-lane);
+    box-shadow: var(--zw-shadow-rest);
+    opacity: 0;                        /* revealed by play() */
+    transition: border-color .35s ease, box-shadow .35s ease;
+  }
+  [data-diagram="zw-automation"] .zw-node--active {
+    border-color: var(--zw-primary);
+    box-shadow: 0 0 0 3px var(--zw-primary-10);
+  }
+  [data-diagram="zw-automation"] .zw-node--done {
+    border-color: var(--zw-success);
+    box-shadow: 0 0 0 3px rgba(82,196,26,.14);
+  }
+  [data-diagram="zw-automation"] .zw-node-icon {
+    width: 38px; height: 38px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 999px;
+    background: var(--zw-bg-soft);
+    color: var(--zw-muted);
+    transition: background-color .35s ease, color .35s ease;
+  }
+  [data-diagram="zw-automation"] .zw-node--active .zw-node-icon { background: var(--zw-primary-10); color: var(--zw-primary); }
+  [data-diagram="zw-automation"] .zw-node--done   .zw-node-icon { background: rgba(82,196,26,.16); color: var(--zw-success); }
+  [data-diagram="zw-automation"] .zw-node-label {
+    font-size: 12px; font-weight: 700; letter-spacing: .07em;
+    text-transform: uppercase; color: var(--zw-muted);
+    transition: color .35s ease;
+  }
+  [data-diagram="zw-automation"] .zw-node--active .zw-node-label { color: var(--zw-primary); }
+  [data-diagram="zw-automation"] .zw-node--done   .zw-node-label { color: var(--zw-success); }
+
+  /* packet = a task moving along a wire */
+  [data-diagram="zw-automation"] .zw-packet {
+    position: absolute; top: 0; left: 0;
+    z-index: 6;
+    opacity: 0;
+    will-change: transform;
+  }
+  [data-diagram="zw-automation"] .zw-packet-dot {
+    display: block;
+    width: 14px; height: 14px;
+    margin: -7px 0 0 -7px;             /* center on the travel point */
+    border-radius: 999px;
+    background: var(--zw-primary);
+    box-shadow: 0 0 0 4px var(--zw-secondary-soft), var(--zw-shadow-lift);  /* cyan halo: data in motion */
+  }
+
+  /* completion pulse — a single calm ring from Done (replaces confetti) */
+  [data-diagram="zw-automation"] .zw-done-ring {
+    position: absolute; z-index: 3;
+    width: 56px; height: 56px;
+    margin: -28px 0 0 -28px;
+    border-radius: 999px;
+    border: 2px solid var(--zw-success);
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* ==================== SCENE:STYLE end ==================== */
+
+  /* Accessibility: never move for users who asked not to.
+     List every scene element that animates here so it lands resolved. */
+  @media (prefers-reduced-motion: reduce) {
+    [data-diagram="zw-automation"] .zw-node { opacity: 1; }
+    [data-diagram="zw-automation"] .zw-wires { opacity: 1; }
+    [data-diagram="zw-automation"] .zw-wire-fill { stroke-dashoffset: 0; }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-automation"]')) {
+(function () {
+  if (!root || root.dataset.zwInit) return;   /* guard against double-init */
+  root.dataset.zwInit = '1';
+
+  var DESIGN_W = 760;   /* design-space width; the shell scales it to fit */
+
+  var stage   = root.querySelector('.zw-stage');
+  var fitEl   = root.querySelector('.zw-fit');
+  var scene   = root.querySelector('.zw-scene');
+
+  var reduce = window.matchMedia &&
+               window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Shared motion vocabulary — the same eases/feel for every animation.
+     EASE_MOVE: on-screen travel (accelerate then brake, like a real object).
+     EASE_OUT : entrances and settles (responsive, snaps then eases in). */
+  var EASE_MOVE = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+  var EASE_OUT  = 'cubic-bezier(0.22, 1, 0.36, 1)';
+  var EASE_POP  = 'cubic-bezier(0.34, 1.56, 0.64, 1)'; /* tiny overshoot for wins */
+
+  function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+  function settled(anim) { return anim.finished.catch(function () {}); }
+
+  /* Scale the fixed-width scene to its container and center it when there's
+     room to spare, so the animation has the same visual weight in any column. */
+  function fit(){}
+
+  /* Shared celebration: a brand-colored confetti burst at a point inside the
+     scene. Pass an element to burst from its center, or {x, y} in scene px. */
+  function confetti(at) {
+    var box = document.createElement('div');
+    box.className = 'zw-confetti';
+    var x, y;
+    if (at && at.nodeType) { x = at.offsetLeft + at.offsetWidth / 2; y = at.offsetTop + at.offsetHeight / 2; }
+    else { x = (at && at.x) || scene.offsetWidth / 2; y = (at && at.y) || scene.offsetHeight / 2; }
+    box.style.left = x + 'px'; box.style.top = y + 'px';
+    scene.appendChild(box);
+    var colors = ['#3A48CC', '#0ACFFE', '#52C41A', '#8991E0', '#FFC53D'];
+    for (var i = 0; i < 46; i++) {
+      var p = document.createElement('i');
+      p.style.background = colors[i % colors.length];
+      if (i % 3 === 0) p.style.borderRadius = '50%';
+      box.appendChild(p);
+      var ang = (Math.PI * 2 * i) / 46 + (Math.random() - 0.5) * 0.5;
+      var dist = 70 + Math.random() * 120;
+      var dx = Math.cos(ang) * dist, dy = Math.sin(ang) * dist - 60;
+      var rot = (Math.random() - 0.5) * 720;
+      p.animate(
+        [{ transform: 'translate(0,0) rotate(0) scale(1)', opacity: 1 },
+         { transform: 'translate(' + dx + 'px,' + dy + 'px) rotate(' + rot + 'deg) scale(.4)', opacity: 0 }],
+        { duration: 900 + Math.random() * 500, easing: 'cubic-bezier(0.18, 0.7, 0.3, 1)', fill: 'forwards' }
+      );
+    }
+    setTimeout(function () { box.remove(); }, 1800);
+  }
+
+  /* =================== SCENE:LOGIC start ===================
+     Build the choreography here. Compose with EASE_*, wait(), settled(),
+     confetti() and the Web Animations API (el.animate). Measure positions
+     live so they stay correct after fit(). Keep the rhythm consistent with
+     the rest of the set: gentle entrance -> purposeful movement -> a clear,
+     celebrated resolution. See references/motion-and-style.md. */
+  async function play() {
+    fit();
+
+    // node cards keyed by name, plus wires/packets/ring
+    var nodeEls = {};
+    Array.prototype.slice.call(scene.querySelectorAll('.zw-node'))
+      .forEach(function (n) { nodeEls[n.dataset.node] = n; });
+    var order = ['trigger', 'enrich', 'sync', 'notify', 'done'];
+    var wiresSvg = scene.querySelector('.zw-wires');
+    var fills = {};
+    Array.prototype.slice.call(scene.querySelectorAll('.zw-wire-fill'))
+      .forEach(function (f) { fills[f.dataset.wire] = f; });
+    var pA = scene.querySelector('.zw-packet[data-packet="a"]');
+    var pB = scene.querySelector('.zw-packet[data-packet="b"]');
+    var ring = scene.querySelector('.zw-done-ring');
+
+    // Travel point = a node's icon center (measured live, after layout settles).
+    function pt(name) {
+      var n = nodeEls[name], icon = n.querySelector('.zw-node-icon');
+      return {
+        x: n.offsetLeft + icon.offsetLeft + icon.offsetWidth / 2,
+        y: n.offsetTop + icon.offsetTop + icon.offsetHeight / 2
+      };
+    }
+    function activate(name) {
+      var n = nodeEls[name];
+      n.classList.add(n.classList.contains('zw-node--goal') ? 'zw-node--done' : 'zw-node--active');
+      n.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.05)' }, { transform: 'scale(1)' }],
+        { duration: 340, easing: EASE_OUT });
+    }
+    function place(p, name) { var q = pt(name); p.style.transform = 'translate(' + q.x + 'px,' + q.y + 'px)'; }
+    function drawWire(idx, dur) {           // "data flowing" along a connector
+      var f = fills[idx];
+      f.animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }],
+        { duration: dur, easing: EASE_MOVE, fill: 'forwards' });
+      f.style.strokeDashoffset = '0';
+    }
+    function travel(p, fromName, toName, dur) {  // straight-line move along a wire
+      var a = pt(fromName), b = pt(toName);
+      return settled(p.animate(
+        [{ transform: 'translate(' + a.x + 'px,' + a.y + 'px)' },
+         { transform: 'translate(' + b.x + 'px,' + b.y + 'px)' }],
+        { duration: dur, easing: EASE_MOVE, fill: 'forwards' }
+      )).then(function () { p.style.transform = 'translate(' + b.x + 'px,' + b.y + 'px)'; });
+    }
+
+    if (reduce) {                 /* resolved state, no motion */
+      wiresSvg.style.opacity = 1;
+      order.forEach(function (name) { nodeEls[name].style.opacity = 1; activate(name); });
+      Object.keys(fills).forEach(function (k) { fills[k].style.strokeDashoffset = '0'; });
+      return;
+    }
+
+    var HOP = 600;
+
+    // 1. Wires and nodes fade in
+    wiresSvg.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 360, easing: EASE_OUT, fill: 'forwards' });
+    wiresSvg.style.opacity = 1;
+    order.forEach(function (name, i) {
+      nodeEls[name].animate([{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }],
+        { duration: 420, delay: i * 90, easing: EASE_OUT, fill: 'forwards' });
+    });
+    await wait(660);
+
+    // 2. The task enters at Trigger
+    place(pA, 'trigger');
+    await settled(pA.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 240, easing: EASE_OUT, fill: 'forwards' }));
+    pA.style.opacity = 1;
+    activate('trigger');
+    await wait(380);
+
+    // 3. Trigger -> Enrich (single path)
+    drawWire(0, HOP);
+    await travel(pA, 'trigger', 'enrich', HOP);
+    activate('enrich');
+    await wait(340);
+
+    // 4. FORK — a second task spawns; the two branches run in parallel
+    place(pB, 'enrich');
+    pB.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 200, easing: EASE_OUT, fill: 'forwards' });
+    pB.style.opacity = 1;
+    drawWire(1, HOP); drawWire(2, HOP);
+    await Promise.all([ travel(pA, 'enrich', 'sync', HOP), travel(pB, 'enrich', 'notify', HOP) ]);
+    activate('sync'); activate('notify');
+    await wait(380);
+
+    // 5. CONVERGE — both branches feed back into Done
+    drawWire(3, HOP); drawWire(4, HOP);
+    await Promise.all([ travel(pA, 'sync', 'done', HOP), travel(pB, 'notify', 'done', HOP) ]);
+
+    // 6. Calm completion (no confetti): node turns green, one soft ring pulse,
+    //    the two tasks merge into the node.
+    activate('done');
+    await wait(80);
+    nodeEls['done'].animate([{ transform: 'scale(1)' }, { transform: 'scale(1.06)' }, { transform: 'scale(1)' }],
+      { duration: 420, easing: EASE_POP });
+    ring.animate([{ opacity: 0.5, transform: 'scale(0.6)' }, { opacity: 0, transform: 'scale(1.9)' }],
+      { duration: 780, easing: EASE_OUT, fill: 'forwards' });
+    [pA, pB].forEach(function (p) {
+      p.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 340, easing: EASE_OUT, fill: 'forwards' });
+      p.style.opacity = 0;
+    });
+  }
+  /* ==================== SCENE:LOGIC end ==================== */
+
+  /* Shared lifecycle: keep scaled, play exactly once on view, never reset. */
+  fit();
+  if ('ResizeObserver' in window) { new ResizeObserver(fit).observe(stage); }
+  else { window.addEventListener('resize', fit); }
+
+  function arm() {
+    if (!('IntersectionObserver' in window)) { play(); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          io.disconnect();
+          requestAnimationFrame(function () { requestAnimationFrame(play); });
+        }
+      });
+    }, { threshold: 0.4 });
+    io.observe(root);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', arm);
+  } else {
+    arm();
+  }
+})();
+  }
+</script>

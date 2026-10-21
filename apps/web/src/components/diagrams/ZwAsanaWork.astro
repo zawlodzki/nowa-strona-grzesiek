@@ -1,0 +1,157 @@
+---
+// Ported from the Webflow embed #zw-asana-work (audyt-procesow-asana) by port/port-diagrams.mjs.
+import './diagram.css';
+---
+
+<div class="dg" data-diagram="zw-asana-work" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+<div class="zw-stage dg-stage">
+<div class="zw-fit dg-fit">
+<div class="zw-scene">
+<div class="aw-panel">
+<span class="aw-eyebrow">Open project</span>
+<div class="aw-col aw-c1">
+<span class="aw-head">To do</span>
+<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
+<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
+<span class="aw-task"><i></i><u></u></span>
+<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
+</div>
+<div class="aw-col aw-c2">
+<span class="aw-head">Doing</span>
+<span class="aw-task"><i></i><u></u></span>
+<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
+</div>
+<div class="aw-col aw-c3">
+<span class="aw-head">Done</span>
+<span class="aw-task"><i></i><u></u></span>
+</div>
+<span class="aw-chip"><b>4</b> idle</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<style is:global>
+[data-diagram="zw-asana-work"] {
+--zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
+--zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
+--zw-border:#DDE1E6; --zw-border-soft:#EDF0F3; --zw-heading:#0E0F11;
+--zw-text:#1E2024; --zw-muted:#838D95; --zw-card:#FFFFFF;
+--zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+--zw-serif:'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;
+--zw-radius-card:10px; --zw-radius-lane:14px;
+--zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);
+--zw-shadow-lift:1px 8px 22px rgba(14,15,17,.14);
+font-family:var(--zw-font); width:100%; max-width:440px; margin:0 auto;
+box-sizing:border-box; -webkit-font-smoothing:antialiased;
+}
+[data-diagram="zw-asana-work"] *, [data-diagram="zw-asana-work"] *::before, [data-diagram="zw-asana-work"] *::after { box-sizing:border-box; }
+[data-diagram="zw-asana-work"] .zw-stage { width:100%; overflow:hidden; }
+[data-diagram="zw-asana-work"] .zw-fit { width:400px; transform-origin:top left; }
+[data-diagram="zw-asana-work"] .zw-scene { position:relative; }
+[data-diagram="zw-asana-work"] .aw-panel {
+position:relative; width:360px; height:220px; margin:6px auto;
+background:var(--zw-bg-soft); border:1px solid var(--zw-border);
+border-radius:var(--zw-radius-lane); overflow:hidden;
+}
+[data-diagram="zw-asana-work"] .aw-eyebrow {
+position:absolute; left:20px; top:10px; font-size:11px; font-weight:700;
+letter-spacing:.09em; text-transform:uppercase; color:var(--zw-muted); opacity:0;
+}
+[data-diagram="zw-asana-work"] .aw-col {
+position:absolute; top:34px; width:104px; height:174px; padding:8px;
+border-radius:var(--zw-radius-lane); background:rgba(255,255,255,.55);
+border:1px solid var(--zw-border-soft); opacity:0;
+}
+[data-diagram="zw-asana-work"] .aw-c1 { left:20px; }
+[data-diagram="zw-asana-work"] .aw-c2 { left:131px; }
+[data-diagram="zw-asana-work"] .aw-c3 { left:242px; }
+[data-diagram="zw-asana-work"] .aw-head {
+display:block; margin-bottom:8px; font-size:10px; font-weight:700;
+letter-spacing:.07em; text-transform:uppercase; color:var(--zw-muted);
+}
+[data-diagram="zw-asana-work"] .aw-task {
+position:relative; display:flex; align-items:center; gap:6px;
+height:26px; margin-bottom:6px; padding:0 8px;
+background:var(--zw-card); border:1px solid var(--zw-border);
+border-radius:8px; box-shadow:var(--zw-shadow-rest); opacity:0;
+}
+[data-diagram="zw-asana-work"] .aw-task i {
+display:block; flex:1; height:5px; border-radius:4px; background:var(--zw-primary-10);
+}
+[data-diagram="zw-asana-work"] .aw-task u {
+display:block; flex:none; width:14px; height:14px; border-radius:50%;
+background:var(--zw-primary-10); border:1px solid var(--zw-primary-30);
+}
+[data-diagram="zw-asana-work"] .aw-task u.aw-ghost { background:transparent; border:1px dashed var(--zw-border); }
+[data-diagram="zw-asana-work"] .aw-task.is-flagged { border-color:var(--zw-secondary); box-shadow:none; }
+[data-diagram="zw-asana-work"] .aw-task.is-flagged i { background:var(--zw-border-soft); }
+[data-diagram="zw-asana-work"] .aw-task.is-flagged::after {
+content:''; position:absolute; left:-3px; top:50%; margin-top:-3px;
+width:6px; height:6px; border-radius:50%; background:var(--zw-secondary);
+}
+[data-diagram="zw-asana-work"] .aw-chip {
+position:absolute; right:14px; top:6px; padding:3px 9px; border-radius:999px;
+background:var(--zw-card); border:1px solid var(--zw-secondary);
+color:var(--zw-text); font-size:10px; font-weight:700; line-height:1.4;
+transform:scale(0); transform-origin:center;
+}
+[data-diagram="zw-asana-work"] .aw-chip b { color:var(--zw-secondary); font-weight:800; }
+@media (prefers-reduced-motion:reduce) {
+[data-diagram="zw-asana-work"] .aw-eyebrow, [data-diagram="zw-asana-work"] .aw-col, [data-diagram="zw-asana-work"] .aw-task { opacity:1; }
+[data-diagram="zw-asana-work"] .aw-chip { transform:scale(1); }
+[data-diagram="zw-asana-work"] .aw-idle { border-color:var(--zw-secondary); box-shadow:none; }
+}
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-asana-work"]')) {
+(function(){
+if(!root||root.dataset.zwInit)return; root.dataset.zwInit='1';
+var DESIGN_W=400, stage=root.querySelector('.zw-stage'), fitEl=root.querySelector('.zw-fit'), scene=root.querySelector('.zw-scene');
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var EASE_MOVE='cubic-bezier(0.645, 0.045, 0.355, 1)';
+var EASE_OUT='cubic-bezier(0.22, 1, 0.36, 1)';
+var EASE_POP='cubic-bezier(0.34, 1.56, 0.64, 1)';
+function wait(ms){return new Promise(function(r){setTimeout(r,ms);});}
+function fit(){}
+function $$(sel){return Array.prototype.slice.call(scene.querySelectorAll(sel));}
+function riseIn(el,delay){
+el.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],
+{duration:420,delay:delay||0,easing:EASE_OUT,fill:'forwards'});
+el.style.opacity=1;
+}
+function popIn(el,delay){
+el.animate([{transform:'scale(0)'},{transform:'scale(1)'}],
+{duration:380,delay:delay||0,easing:EASE_POP,fill:'forwards'});
+el.style.transform='scale(1)';
+}
+async function play(){
+fit(); if(reduce)return;
+riseIn(scene.querySelector('.aw-eyebrow'));
+$$('.aw-col').forEach(function(c,i){ riseIn(c,100+i*90); });
+await wait(520);
+$$('.aw-task').forEach(function(t,i){ riseIn(t,i*80); });
+await wait(820);
+var idle=$$('.aw-idle');
+for (var i=0;i<idle.length;i++){
+idle[i].classList.add('is-flagged');
+idle[i].animate([{transform:'translateX(0)'},{transform:'translateX(3px)'},{transform:'translateX(0)'}],
+{duration:320,easing:EASE_MOVE});
+await wait(200);
+}
+await wait(360);
+var chip=scene.querySelector('.aw-chip');
+popIn(chip);
+await wait(420);
+chip.animate([{transform:'scale(1)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],
+{duration:520,easing:EASE_POP});
+}
+fit(); if('ResizeObserver'in window)new ResizeObserver(fit).observe(stage);else window.addEventListener('resize',fit);
+function arm(){if(!('IntersectionObserver'in window)){play();return;}var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){io.disconnect();requestAnimationFrame(function(){requestAnimationFrame(play);});}});},{threshold:.4});io.observe(root);}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',arm);else arm();
+})();
+  }
+</script>

@@ -1,0 +1,71 @@
+---
+import Base from '../../layouts/Base.astro';
+import Diagram from '../../components/diagrams/Diagram.astro';
+import { diagramKeys, diagramPages } from '../../components/diagrams/registry';
+---
+
+<Base title="Diagramy · design system" noindex>
+  <main class="ds">
+    <h1>Diagramy</h1>
+    <p>{diagramKeys.length} kluczy. Każdy diagram w pełnej szerokości i w wąskim slocie 320 px.</p>
+    {
+      diagramKeys.map((key) => (
+        <section class="ds-item" data-key={key}>
+          <h2>{key}</h2>
+          <p class="ds-pages">{diagramPages[key].join(', ')}</p>
+          <div class="ds-slots">
+            <div class="ds-slot ds-slot--wide">
+              <Diagram diagram={key} />
+            </div>
+            <div class="ds-slot ds-slot--narrow">
+              <Diagram diagram={key} />
+            </div>
+          </div>
+        </section>
+      ))
+    }
+  </main>
+</Base>
+
+<style>
+  .ds {
+    max-inline-size: 80rem;
+    margin-inline: auto;
+    padding: 2rem 1rem 6rem;
+  }
+
+  .ds-item {
+    padding-block: 3rem;
+    border-block-end: 1px solid var(--border-hairline);
+  }
+
+  .ds-item h2 {
+    font-family: var(--font-family-mono);
+    font-size: 1rem;
+  }
+
+  .ds-pages {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+  }
+
+  .ds-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: start;
+    margin-block-start: 1.5rem;
+  }
+
+  .ds-slot {
+    outline: 1px dashed var(--border-default);
+  }
+
+  .ds-slot--wide {
+    flex: 1 1 min(100%, 30rem);
+  }
+
+  .ds-slot--narrow {
+    flex: 0 1 min(100%, 320px);
+  }
+</style>

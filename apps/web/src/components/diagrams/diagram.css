@@ -1,0 +1,37 @@
+/* Each diagram is drawn at a fixed design width (--dg-w, px) and scaled down
+   to its slot. --dg-h is the scene's measured height at that width, so the
+   slot reserves its final height before any script runs (CLS 0). The type
+   settings pin the inherited Webflow body text, which the measurement used,
+   and undo the site reset rules that change how the scenes wrap and shrink. */
+@layer components {
+  .dg {
+    font-size: 1rem;
+    line-height: 1.75;
+    letter-spacing: -0.011em;
+    text-wrap: wrap;
+    overflow-wrap: normal;
+  }
+
+  .dg * {
+    min-width: auto;
+  }
+
+  .dg svg {
+    display: inline;
+    max-width: none;
+  }
+
+  .dg li {
+    margin-block-end: 0.25rem;
+  }
+
+  .dg-stage {
+    container-type: inline-size;
+  }
+
+  .dg-fit {
+    block-size: min(var(--dg-h) * 1px, 100cqi * var(--dg-h) / var(--dg-w));
+    margin-inline: auto;
+    scale: min(1, tan(atan2(100cqi, var(--dg-w) * 1px)));
+  }
+}

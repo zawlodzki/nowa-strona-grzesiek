@@ -1,0 +1,179 @@
+---
+// Ported from the Webflow embed #zw-step2 (program-ai-dla-zespolu-sprzedazy, wdrozenie-ai-w-sprzedazy-b2b) by port/port-diagrams.mjs.
+import './diagram.css';
+/*
+  AI dla sprzedazy — landing step 2: "Kontekst firmy"
+  Minimal stage illustration. Sits next to the step description.
+  zawlodzki.pl · self-contained, no external dependencies.
+*/
+---
+
+<div class="dg" data-diagram="zw-step2" aria-hidden="true" style="--dg-w: 400; --dg-h: 146;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="s2-chips">
+          <span class="s2-chip">Offer</span>
+          <span class="s2-chip">Pricing</span>
+          <span class="s2-chip">ICP</span>
+          <span class="s2-chip">Tone</span>
+        </div>
+        <div class="s2-base">
+          <span class="s2-bar"></span>
+          <span class="s2-label">Context</span>
+          <span class="s2-dots">
+            <i class="s2-dot"></i><i class="s2-dot"></i><i class="s2-dot"></i><i class="s2-dot"></i>
+          </span>
+          <span class="s2-check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+[data-diagram="zw-step2"] {
+    --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
+    --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
+    --zw-border:#DDE1E6; --zw-border-soft:#EDF0F3; --zw-heading:#0E0F11;
+    --zw-text:#1E2024; --zw-muted:#838D95; --zw-card:#FFFFFF;
+    --zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    --zw-radius-card:10px;
+    --zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);
+    font-family:var(--zw-font); width:100%; max-width:440px; margin:0 auto;
+    box-sizing:border-box; -webkit-font-smoothing:antialiased;
+  }
+  [data-diagram="zw-step2"] *, [data-diagram="zw-step2"] *::before, [data-diagram="zw-step2"] *::after { box-sizing:border-box; }
+  [data-diagram="zw-step2"] .zw-stage { width:100%; overflow:hidden; }
+  [data-diagram="zw-step2"] .zw-fit { width:400px; transform-origin:top left; }
+  [data-diagram="zw-step2"] .zw-scene { position:relative; }
+
+  /* =================== SCENE:STYLE start =================== */
+  [data-diagram="zw-step2"] .s2-chips {
+    width:360px; margin:6px auto 0; display:flex; flex-wrap:wrap; gap:10px;
+    justify-content:center; min-height:76px; align-content:flex-start;
+  }
+  [data-diagram="zw-step2"] .s2-chip {
+    font-size:13px; font-weight:600; color:var(--zw-primary);
+    background:var(--zw-primary-10); border:1px solid var(--zw-primary-30);
+    border-radius:999px; padding:7px 15px; opacity:0; will-change:transform,opacity;
+  }
+  [data-diagram="zw-step2"] .s2-base {
+    width:360px; margin:14px auto 6px; display:flex; align-items:center; gap:12px;
+    background:var(--zw-card); border:1px solid var(--zw-border);
+    border-radius:var(--zw-radius-card); box-shadow:var(--zw-shadow-rest);
+    padding:16px 16px 16px 0; position:relative; overflow:hidden;
+    transition:border-color .4s ease;
+  }
+  [data-diagram="zw-step2"] .s2-bar {
+    flex:0 0 auto; width:4px; align-self:stretch; border-radius:4px 0 0 4px;
+    background:var(--zw-border); transition:background-color .4s ease;
+  }
+  [data-diagram="zw-step2"] .s2-label {
+    font-size:12px; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--zw-muted);
+  }
+  [data-diagram="zw-step2"] .s2-dots { display:flex; gap:7px; margin-left:2px; }
+  [data-diagram="zw-step2"] .s2-dot {
+    width:9px; height:9px; border-radius:50%; background:var(--zw-border-soft);
+    transition:background-color .3s ease, transform .3s ease;
+  }
+  [data-diagram="zw-step2"] .s2-dot--on { background:var(--zw-primary); }
+  [data-diagram="zw-step2"] .s2-check {
+    margin-left:auto; width:22px; height:22px; border-radius:50%;
+    background:var(--zw-success); color:#fff; display:flex; align-items:center;
+    justify-content:center; transform:scale(0); transform-origin:center;
+  }
+  [data-diagram="zw-step2"] .s2-base--done { border-color:rgba(82,196,26,.5); }
+  [data-diagram="zw-step2"] .s2-base--done .s2-bar { background:var(--zw-success); }
+  [data-diagram="zw-step2"] .s2-base--done .s2-dot { background:var(--zw-success); }
+  /* ==================== SCENE:STYLE end ==================== */
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-diagram="zw-step2"] .s2-chip { opacity:0; }
+    [data-diagram="zw-step2"] .s2-base { border-color:rgba(82,196,26,.5); }
+    [data-diagram="zw-step2"] .s2-bar { background:var(--zw-success); }
+    [data-diagram="zw-step2"] .s2-dot { background:var(--zw-success); }
+    [data-diagram="zw-step2"] .s2-check { transform:scale(1); }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  for (const root of document.querySelectorAll('[data-diagram="zw-step2"]')) {
+(function () {
+  if (!root || root.dataset.zwInit) return;
+  root.dataset.zwInit = '1';
+
+  var DESIGN_W = 400;
+  var stage = root.querySelector('.zw-stage');
+  var fitEl = root.querySelector('.zw-fit');
+  var scene = root.querySelector('.zw-scene');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var EASE_OUT = 'cubic-bezier(0.22, 1, 0.36, 1)';
+  var EASE_MOVE = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+  var EASE_POP = 'cubic-bezier(0.34, 1.56, 0.64, 1)';
+  function wait(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+  function settled(a){ return a.finished.catch(function(){}); }
+
+  function fit(){}
+
+  var chips = Array.prototype.slice.call(scene.querySelectorAll('.s2-chip'));
+  var dots  = Array.prototype.slice.call(scene.querySelectorAll('.s2-dot'));
+  var base  = scene.querySelector('.s2-base');
+  var check = scene.querySelector('.s2-check');
+
+  async function play(){
+    fit();
+    if (reduce) { return; }
+
+    // chips appear
+    chips.forEach(function(c,i){
+      c.animate([{opacity:0, transform:'translateY(-8px) scale(.94)'},{opacity:1, transform:'translateY(0) scale(1)'}],
+        {duration:360, delay:120 + i*90, easing:EASE_OUT, fill:'forwards'});
+      c.style.opacity = 1;
+    });
+    await wait(120 + chips.length*90 + 320);
+
+    // each chip drops into the context card, lighting a dot
+    for (var i=0; i<chips.length; i++){
+      var chip = chips[i], dot = dots[i];
+      await settled(chip.animate(
+        [{opacity:1, transform:'translateY(0) scale(1)'},
+         {opacity:0, transform:'translateY(52px) scale(.72)'}],
+        {duration:380, easing:EASE_MOVE, fill:'forwards'}));
+      chip.style.opacity = 0;
+      dot.classList.add('s2-dot--on');
+      dot.animate([{transform:'scale(1)'},{transform:'scale(1.5)'},{transform:'scale(1)'}],
+        {duration:300, easing:EASE_OUT});
+      await wait(120);
+    }
+
+    // resolved: context ready
+    await wait(160);
+    base.classList.add('s2-base--done');
+    check.animate([{transform:'scale(0)'},{transform:'scale(1)'}], {duration:360, easing:EASE_POP, fill:'forwards'});
+    check.style.transform = 'scale(1)';
+  }
+
+  fit();
+  if ('ResizeObserver' in window) { new ResizeObserver(fit).observe(stage); }
+  else { window.addEventListener('resize', fit); }
+
+  function arm(){
+    if (!('IntersectionObserver' in window)) { play(); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { io.disconnect(); requestAnimationFrame(function(){ requestAnimationFrame(play); }); }
+      });
+    }, { threshold: 0.4 });
+    io.observe(root);
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arm); }
+  else { arm(); }
+})();
+  }
+</script>
