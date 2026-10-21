@@ -23,3 +23,6 @@ migration/00-inventory/
 
 # downloaded on first run
 .claude/skills/impeccable/scripts/bin/
+
+# DNS zone with record values (T05): local only
+migration/lanes/tracking/private/
