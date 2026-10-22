@@ -1,0 +1,8 @@
+---
+import RouteView from '../../lib/sanity/RouteView.astro';
+import { loadRoutes } from '../../lib/sanity/routes.ts';
+
+const route = (await loadRoutes()).find((item) => item.kind === 'blogIndex' && item.language === 'pl' && item.pageNumber === 1);
+if (!route) throw new Error('The route table has no PL blog index');
+---
+<RouteView route={route} />

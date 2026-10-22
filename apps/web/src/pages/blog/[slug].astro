@@ -1,0 +1,12 @@
+---
+import type { GetStaticPaths } from 'astro';
+import RouteView from '../../lib/sanity/RouteView.astro';
+import { loadRoutes, type Route } from '../../lib/sanity/routes.ts';
+
+export const getStaticPaths = (async () => (await loadRoutes())
+  .filter((route) => route.language === 'pl' && route.kind === 'post')
+  .map((route) => ({ params: { slug: route.path.slice('/blog/'.length) }, props: { route } }))) satisfies GetStaticPaths;
+
+const { route } = Astro.props as { route: Route };
+---
+<RouteView route={route} />

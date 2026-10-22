@@ -1,0 +1,13 @@
+---
+import type { GetStaticPaths } from 'astro';
+import RouteView from '../lib/sanity/RouteView.astro';
+import { loadRoutes, restParam, type Route } from '../lib/sanity/routes.ts';
+
+// PL pages and blog listing pages after the first. The home, the blog index and posts have their own route files.
+export const getStaticPaths = (async () => (await loadRoutes())
+  .filter((route) => route.language === 'pl' && ((route.kind === 'page' && route.href !== '/') || (route.kind === 'blogIndex' && route.pageNumber > 1)))
+  .map((route) => ({ params: { slug: restParam(route.href) }, props: { route } }))) satisfies GetStaticPaths;
+
+const { route } = Astro.props as { route: Route };
+---
+<RouteView route={route} />

@@ -1,0 +1,13 @@
+---
+import type { GetStaticPaths } from 'astro';
+import RouteView from '../../lib/sanity/RouteView.astro';
+import { loadRoutes, restParam, type Route } from '../../lib/sanity/routes.ts';
+
+// Every EN route. Empty until EN documents are published (T25).
+export const getStaticPaths = (async () => (await loadRoutes())
+  .filter((route) => route.language === 'en')
+  .map((route) => ({ params: { slug: restParam(route.href, '/en') }, props: { route } }))) satisfies GetStaticPaths;
+
+const { route } = Astro.props as { route: Route };
+---
+<RouteView route={route} />

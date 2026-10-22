@@ -1,0 +1,72 @@
+---
+import ContactForm from '../../components/blocks/ContactForm.astro';
+import ContentSection from '../../components/blocks/ContentSection.astro';
+import CtaBand from '../../components/blocks/CtaBand.astro';
+import Faq from '../../components/blocks/Faq.astro';
+import Feature from '../../components/blocks/Feature.astro';
+import Hero from '../../components/blocks/Hero.astro';
+import LogoStrip from '../../components/blocks/LogoStrip.astro';
+import NewsletterSignup from '../../components/blocks/NewsletterSignup.astro';
+import Pricing from '../../components/blocks/Pricing.astro';
+import PromoCard from '../../components/blocks/PromoCard.astro';
+import RichText from '../../components/blocks/RichText.astro';
+import Testimonials from '../../components/blocks/Testimonials.astro';
+import type { Media } from '../../../../studio/sanity.types';
+import type { ResolvedLogo } from '../../components/ui/block-types';
+import { resolveImage, type PageDoc, type Site } from './site.ts';
+
+interface Props { site: Site; sections: NonNullable<PageDoc['sections']>; }
+const { site, sections } = Astro.props;
+const { links, images } = site;
+const mediaImage = (media: Media | undefined) => (media?.kind === 'image' ? resolveImage(site, media.image) : undefined);
+const firstHero = sections.findIndex((section) => section._type === 'hero');
+const person = site.person;
+const contact = {
+  ...(person?.email && { email: person.email }),
+  ...(person?.telephone && { telephone: person.telephone }),
+  ...(person?.image && { image: resolveImage(site, person.image) }),
+};
+---
+{sections.map((section, index) => {
+  switch (section._type) {
+    case 'hero':
+      return <Hero data={section} image={resolveImage(site, section.image)} headingLevel={index === firstHero ? 'h1' : 'h2'} />;
+    case 'logoStrip': {
+      const logos = (section.logos ?? []).flatMap((ref): ResolvedLogo[] => {
+        const logo = site.logos.get(ref._ref);
+        const image = resolveImage(site, logo?.image);
+        return logo && image ? [{ _id: logo._id, name: logo.name, url: logo.url, image }] : [];
+      });
+      return <LogoStrip data={section} logos={logos} />;
+    }
+    case 'feature':
+      return <Feature data={section} image={mediaImage(section.media)} links={links} images={images} />;
+    case 'contentSection':
+      return <ContentSection data={section} image={mediaImage(section.media)} links={links} images={images} />;
+    case 'pricing':
+      return <Pricing data={section} />;
+    case 'ctaBand':
+      return <CtaBand data={section} />;
+    case 'testimonials': {
+      const items = (section.items ?? []).flatMap((ref) => {
+        const item = site.testimonials.get(ref._ref);
+        if (!item) return [];
+        const image = resolveImage(site, item.image);
+        return [{ _id: item._id, name: item.name, role: item.role, company: item.company, quote: item.quote, url: item.url, ...(image && { image }) }];
+      });
+      return <Testimonials data={section} items={items} />;
+    }
+    case 'promoCard': {
+      const target = section.target?._ref ? site.byId.get(section.target._ref) : undefined;
+      return <PromoCard data={section} target={target && { _id: target._id, language: target.language, slug: target.slug, title: target.title }} />;
+    }
+    case 'faq':
+      return <Faq data={section} links={links} images={images} />;
+    case 'contactForm':
+      return <ContactForm data={section} contact={contact} />;
+    case 'newsletterSignup':
+      return <NewsletterSignup data={section} />;
+    case 'richText':
+      return <RichText data={section} links={links} images={images} />;
+  }
+})}

@@ -1,10 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
----
+import RouteView from '../lib/sanity/RouteView.astro';
+import { loadRoutes } from '../lib/sanity/routes.ts';
 
-<Base title="Grzegorz Zawłodzki" noindex>
-  <main>
-    <h1>Grzegorz Zawłodzki</h1>
-    <p>Nowa wersja strony w budowie.</p>
-  </main>
-</Base>
+// Until the importers publish the PL home page, `/` keeps the noindex placeholder instead of a 404.
+const route = (await loadRoutes()).find((item) => item.language === 'pl' && item.href === '/');
+---
+{route ? <RouteView route={route} /> : (
+  <Base title="Grzegorz Zawłodzki" noindex>
+    <main>
+      <h1>Grzegorz Zawłodzki</h1>
+      <p>Nowa wersja strony w budowie.</p>
+    </main>
+  </Base>
+)}
