@@ -1,0 +1,986 @@
+{
+ "pages": 28,
+ "logos": 36,
+ "testimonials": 2,
+ "ndjsonSha256": "05fae27dc893e30385dd9b1fd565da24569e51df2f031b12785126921be0fec8",
+ "images": {
+  "mapped": 0,
+  "sanityAssetPlaceholders": 435
+ },
+ "blocks": {
+  "contactForm": 16,
+  "contentSection": 49,
+  "ctaBand": 13,
+  "faq": 14,
+  "feature": 100,
+  "hero": 16,
+  "logoStrip": 21,
+  "newsletterSignup": 6,
+  "pricing": 11,
+  "promoCard": 10,
+  "richText": 10,
+  "testimonials": 7
+ },
+ "contactDetailsMerged": 1,
+ "issueCounts": {
+  "alt-missing": 11,
+  "contentSection-cta-dropped": 5,
+  "price-on-request": 9,
+  "pricing-intro-dropped": 11,
+  "seo-description-missing": 3,
+  "seo-description-too-long": 5,
+  "seo-title-too-long": 6,
+  "tab-link-dropped": 6,
+  "table-lifted-from-list": 1,
+  "tabs-flattened": 1,
+  "testimonial-logo-dropped": 6,
+  "testimonials-as-logos": 4,
+  "tree-section-not-rendered": 1
+ },
+ "issues": [
+  {
+   "path": "/",
+   "kind": "alt-missing",
+   "detail": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64a6b73eda56ba547b5bfe96_Frame%2028_compressed.webp"
+  },
+  {
+   "path": "/",
+   "kind": "seo-title-too-long",
+   "detail": "62 > 60"
+  },
+  {
+   "path": "/404",
+   "kind": "seo-description-missing",
+   "detail": ""
+  },
+  {
+   "path": "/audyt-ai-sprzedaz",
+   "kind": "alt-missing",
+   "detail": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a61338e2581c8dcdf7afed9_Frame%2051.avif"
+  },
+  {
+   "path": "/audyt-ai-sprzedaz",
+   "kind": "testimonials-as-logos",
+   "detail": "logo row matched as Testimonials Section, imported as logoStrip"
+  },
+  {
+   "path": "/audyt-ai-sprzedaz",
+   "kind": "contentSection-cta-dropped",
+   "detail": "Umów audyt AI"
+  },
+  {
+   "path": "/audyt-ai-sprzedaz",
+   "kind": "pricing-intro-dropped",
+   "detail": "Stała cena za dwa tygodnie. Jeśli po audycie rozpoczniecie wdrożenie, odliczam p"
+  },
+  {
+   "path": "/audyt-crm-pipedrive",
+   "kind": "price-on-request",
+   "detail": "Wdrożenie 5+ handlowców: Wycena indywidualna"
+  },
+  {
+   "path": "/audyt-crm-pipedrive",
+   "kind": "pricing-intro-dropped",
+   "detail": "Audyt kosztuje 3900 zł netto i kończy się raportem oraz wyceną tego, co trzeba n"
+  },
+  {
+   "path": "/audyt-crm-pipedrive",
+   "kind": "testimonial-logo-dropped",
+   "detail": "Łukasz Kruszewski-Zelman"
+  },
+  {
+   "path": "/audyt-procesow-asana",
+   "kind": "price-on-request",
+   "detail": "Firmy 15+ osób: Wycena indywidualna"
+  },
+  {
+   "path": "/audyt-procesow-asana",
+   "kind": "pricing-intro-dropped",
+   "detail": "Audyt kosztuje 3900 zł netto i kończy się raportem oraz wyceną tego, co trzeba n"
+  },
+  {
+   "path": "/audyt-procesow-asana",
+   "kind": "testimonial-logo-dropped",
+   "detail": "Bart Gryndzia"
+  },
+  {
+   "path": "/audyt-sprzedazy",
+   "kind": "price-on-request",
+   "detail": "Wdrożenie po audycie: Wycena osobna"
+  },
+  {
+   "path": "/audyt-sprzedazy",
+   "kind": "pricing-intro-dropped",
+   "detail": "Audyt sprzedaży B2B kosztuje 6 900 zł netto. Cena obejmuje przygotowanie, analiz"
+  },
+  {
+   "path": "/audyt-sprzedazy",
+   "kind": "testimonial-logo-dropped",
+   "detail": "Łukasz Kruszewski-Zelman"
+  },
+  {
+   "path": "/automatyzacja-procesow-biznesowych-nocode",
+   "kind": "alt-missing",
+   "detail": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64aa6e5b83280cff033a722c_Educational_compressed.webp"
+  },
+  {
+   "path": "/automatyzacja-procesow-biznesowych-nocode",
+   "kind": "alt-missing",
+   "detail": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64a7e8977c7fc8bae46f89b5_To%20Do%20List_compressed.webp"
+  },
+  {
+   "path": "/automatyzacja-procesow-biznesowych-nocode",
+   "kind": "alt-missing",
+   "detail": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64aa6e59096cb13826242901_Roadmap_compressed.webp"
+  },
+  {
+   "path": "/automatyzacja-procesow-biznesowych-nocode",
+   "kind": "alt-missing",
+   "detail": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64aa6e59c8b96cd4008e6c6c_Balance_compressed.webp"
+  },
+  {
+   "path": "/automatyzacja-procesow-biznesowych-nocode",
+   "kind": "price-on-request",
+   "detail": "Newsletter: Dowiedz się więcej"
+  },
+  {
+   "path": "/automatyzacja-procesow-biznesowych-nocode",
+   "kind": "price-on-request",
+   "detail": "Program partnerski: Polecaj i zarabiaj co miesiąc"
+  },
+  {
+   "path": "/automatyzacja-procesow-biznesowych-nocode",
+   "kind": "pricing-intro-dropped",
+   "detail": "Cyfrowej transformacji firmy nie zrobisz w jeden wieczór. Koszty zmieścisz w swo"
+  },
+  {
+   "path": "/automatyzacja-procesow-biznesowych-nocode",
+   "kind": "testimonial-logo-dropped",
+   "detail": "Bart Gryndzia"
+  },
+  {
+   "path": "/automatyzacja-procesow-biznesowych-nocode",
+   "kind": "seo-title-too-long",
+   "detail": "63 > 60"
+  },
+  {
+   "path": "/automatyzacje-dla-pipedrive",
+   "kind": "seo-description-too-long",
+   "detail": "162 > 160"
+  },
+  {
+   "path": "/darmowe-materialy-dla-biznesow-uslugowych",
+   "kind": "seo-title-too-long",
+   "detail": "62 > 60"
+  },
+  {
+   "path": "/kurs-ai-w-sprzedazy",
+   "kind": "alt-missing",
+   "detail": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a61338e2581c8dcdf7afed9_Frame%2051.avif"
+  },
+  {
+   "path": "/kurs-ai-w-sprzedazy",
+   "kind": "testimonials-as-logos",
+   "detail": "logo row matched as Testimonials Section, imported as logoStrip"
+  },
+  {
+   "path": "/kurs-ai-w-sprzedazy",
+   "kind": "contentSection-cta-dropped",
+   "detail": "Kup w przedsprzedaży"
+  },
+  {
+   "path": "/kurs-ai-w-sprzedazy",
+   "kind": "pricing-intro-dropped",
+   "detail": "To przedsprzedaż — kurs jest w niej 50% taniej. Materiały i pierwsza grupa rusza"
+  },
+  {
+   "path": "/kurs-ai-w-sprzedazy",
+   "kind": "seo-description-too-long",
+   "detail": "213 > 160"
+  },
+  {
+   "path": "/podziekowanie-konsultacja",
+   "kind": "seo-description-missing",
+   "detail": ""
+  },
+  {
+   "path": "/podziekowanie-newsletter",
+   "kind": "seo-description-missing",
+   "detail": ""
+  },
+  {
+   "path": "/polityka-prywatnosci",
+   "kind": "table-lifted-from-list",
+   "detail": "Kategoria Narzędzia Cel Podstawa Niezbędne Webflow, c15t dzi"
+  },
+  {
+   "path": "/program-ai-dla-zespolu-sprzedazy",
+   "kind": "alt-missing",
+   "detail": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a61338e2581c8dcdf7afed9_Frame%2051.avif"
+  },
+  {
+   "path": "/program-ai-dla-zespolu-sprzedazy",
+   "kind": "testimonials-as-logos",
+   "detail": "logo row matched as Testimonials Section, imported as logoStrip"
+  },
+  {
+   "path": "/program-ai-dla-zespolu-sprzedazy",
+   "kind": "contentSection-cta-dropped",
+   "detail": "Zapytaj, czy to dla was"
+  },
+  {
+   "path": "/program-ai-dla-zespolu-sprzedazy",
+   "kind": "pricing-intro-dropped",
+   "detail": "To przedsprzedaż. Kurs i pierwsza grupa ruszają 1 października. Kwotę z niższego"
+  },
+  {
+   "path": "/program-ai-dla-zespolu-sprzedazy",
+   "kind": "seo-description-too-long",
+   "detail": "174 > 160"
+  },
+  {
+   "path": "/program-partnerski",
+   "kind": "alt-missing",
+   "detail": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64a6b73eda56ba547b5bfe96_Frame%2028_compressed.webp"
+  },
+  {
+   "path": "/program-partnerski",
+   "kind": "alt-missing",
+   "detail": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/64aa6e5b83280cff033a722c_Educational_compressed.webp"
+  },
+  {
+   "path": "/program-partnerski",
+   "kind": "seo-title-too-long",
+   "detail": "76 > 60"
+  },
+  {
+   "path": "/sales-atlas-system",
+   "kind": "tab-link-dropped",
+   "detail": "Umów bezpłatną konsultację"
+  },
+  {
+   "path": "/sales-atlas-system",
+   "kind": "tab-link-dropped",
+   "detail": "Umów bezpłatną konsultację"
+  },
+  {
+   "path": "/sales-atlas-system",
+   "kind": "tab-link-dropped",
+   "detail": "Umów bezpłatną konsultację"
+  },
+  {
+   "path": "/sales-atlas-system",
+   "kind": "tab-link-dropped",
+   "detail": "Umów bezpłatną konsultację"
+  },
+  {
+   "path": "/sales-atlas-system",
+   "kind": "tab-link-dropped",
+   "detail": "Umów bezpłatną konsultację"
+  },
+  {
+   "path": "/sales-atlas-system",
+   "kind": "tab-link-dropped",
+   "detail": "Umów bezpłatną konsultację"
+  },
+  {
+   "path": "/sales-atlas-system",
+   "kind": "tabs-flattened",
+   "detail": "9 tabs"
+  },
+  {
+   "path": "/sales-atlas-system",
+   "kind": "seo-title-too-long",
+   "detail": "71 > 60"
+  },
+  {
+   "path": "/szkolenie-i-wdrozenie-asana",
+   "kind": "price-on-request",
+   "detail": "Firmy 15+ osób: Wycena indywidualna"
+  },
+  {
+   "path": "/szkolenie-i-wdrozenie-asana",
+   "kind": "pricing-intro-dropped",
+   "detail": "Różne rodzaje współpracy dla różnych potrzeb przy poznawaniu i wdrażaniu Asana."
+  },
+  {
+   "path": "/szkolenie-i-wdrozenie-asana",
+   "kind": "testimonial-logo-dropped",
+   "detail": "Bart Gryndzia"
+  },
+  {
+   "path": "/szkolenie-i-wdrozenie-asana",
+   "kind": "seo-title-too-long",
+   "detail": "61 > 60"
+  },
+  {
+   "path": "/szkolenie-i-wdrozenie-asana",
+   "kind": "seo-description-too-long",
+   "detail": "162 > 160"
+  },
+  {
+   "path": "/szkolenie-i-wdrozenie-pipedrive",
+   "kind": "price-on-request",
+   "detail": "Wdrożenie 5+ handlowców: Wycena indywidualna"
+  },
+  {
+   "path": "/szkolenie-i-wdrozenie-pipedrive",
+   "kind": "pricing-intro-dropped",
+   "detail": "Na rynku kupisz konfigurację Pipedrive od 3 500 zł. Ja robię co innego: wdrożeni"
+  },
+  {
+   "path": "/szkolenie-i-wdrozenie-pipedrive",
+   "kind": "testimonial-logo-dropped",
+   "detail": "Łukasz Kruszewski-Zelman"
+  },
+  {
+   "path": "/szkolenie-i-wdrozenie-salesforce",
+   "kind": "tree-section-not-rendered",
+   "detail": "['Testimonials Section'] (not in live HTML)"
+  },
+  {
+   "path": "/szkolenie-i-wdrozenie-salesforce",
+   "kind": "price-on-request",
+   "detail": "Wdrożenie powyżej 15 osób: Wycena indywidualna"
+  },
+  {
+   "path": "/szkolenie-i-wdrozenie-salesforce",
+   "kind": "pricing-intro-dropped",
+   "detail": "Salesforce łatwo przewdrożyć, a każdy zbędny moduł to wyższa licencja i system, "
+  },
+  {
+   "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+   "kind": "alt-missing",
+   "detail": "https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a61338e2581c8dcdf7afed9_Frame%2051.avif"
+  },
+  {
+   "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+   "kind": "testimonials-as-logos",
+   "detail": "logo row matched as Testimonials Section, imported as logoStrip"
+  },
+  {
+   "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+   "kind": "contentSection-cta-dropped",
+   "detail": "Sprawdźmy to na rozmowie"
+  },
+  {
+   "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+   "kind": "price-on-request",
+   "detail": "dla firmy produkcyjnej: Wycena indywidualna"
+  },
+  {
+   "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+   "kind": "pricing-intro-dropped",
+   "detail": "Różne rodzaje współpracy dla różnych potrzeb i etapów we wdrażaniu AI."
+  },
+  {
+   "path": "/wspolpraca",
+   "kind": "contentSection-cta-dropped",
+   "detail": "Porozmawiajmy o waszej sytuacji"
+  },
+  {
+   "path": "/wspolpraca",
+   "kind": "seo-description-too-long",
+   "detail": "168 > 160"
+  }
+ ],
+ "textLoss": {
+  "/": [
+   {
+    "section": 1,
+    "type": "logoStrip",
+    "heading": "Firmy które korzystają już z mojego doświadczenia",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 3,
+    "type": "logoStrip",
+    "heading": null,
+    "words": 7,
+    "sample": "łączę narzędzia z których zespół już korzysta"
+   },
+   {
+    "section": 5,
+    "type": "contentSection",
+    "heading": "Zacznijmy od miejsca, które dziś najbardziej blokuje pracę zespołu",
+    "words": 2,
+    "sample": "crmai sprzedażyautomatyzacjaasana"
+   },
+   {
+    "section": 13,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   },
+   {
+    "section": 14,
+    "type": "newsletterSignup",
+    "heading": null,
+    "words": 36,
+    "sample": "newsletter sales atlas zapisując się zamawiasz newsletter wellbiz sp z o o i zgadzasz się na otrzymywanie e maili z poradami i ofertami wypiszesz się"
+   }
+  ],
+  "/audyt-ai-sprzedaz": [
+   {
+    "section": 2,
+    "type": "logoStrip",
+    "heading": "Doświadczenie z wdrożeń CRM i automatyzacji w ponad 50 firmach",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 4,
+    "type": "contentSection",
+    "heading": "Dla kogo jest audyt AI w sprzedaży",
+    "words": 3,
+    "sample": "umów ai audyt"
+   },
+   {
+    "section": 12,
+    "type": "pricing",
+    "heading": "Audyt AI: 6 000 zł netto",
+    "words": 33,
+    "sample": "stała cena za jeśli po audycie rozpoczniecie wdrożenie odliczam jego ceny 6 000 dwa tygodnie po audycie macie pełne 6 000 zł od potrzebujecie od"
+   },
+   {
+    "section": 16,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/audyt-crm-pipedrive": [
+   {
+    "section": 1,
+    "type": "logoStrip",
+    "heading": "Firmy które korzystają już z mojego doświadczenia",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 11,
+    "type": "pricing",
+    "heading": "Ile to kosztuje",
+    "words": 38,
+    "sample": "kosztuje kończy się raportem oraz naprawić co tym zrobicie dalej to wasza decyzja poniżej ceny wdrożenia gdybyście chcieli żeby poprowadziłem je ja 3900 tego co"
+   },
+   {
+    "section": 13,
+    "type": "contentSection",
+    "heading": "Raport to nie koniec, tylko początek porządków",
+    "words": 2,
+    "sample": "pipedriveautomatyzacjaai sprzedażyaudyt"
+   },
+   {
+    "section": 17,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/audyt-procesow-asana": [
+   {
+    "section": 1,
+    "type": "logoStrip",
+    "heading": "Firmy które korzystają już z mojego doświadczenia",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 11,
+    "type": "pricing",
+    "heading": "Ile to kosztuje",
+    "words": 38,
+    "sample": "kosztuje kończy się raportem oraz tego naprawić tym zrobicie to wasza decyzja niżej ceny wdrożenia gdybyście chcieli żebym poprowadził je ja 3900 co pakiecie audyt"
+   },
+   {
+    "section": 13,
+    "type": "contentSection",
+    "heading": "Raport to nie koniec, tylko początek porządków",
+    "words": 1,
+    "sample": "asanyautomatyzacjapipedrive"
+   },
+   {
+    "section": 16,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/audyt-sprzedazy": [
+   {
+    "section": 1,
+    "type": "logoStrip",
+    "heading": "Firmy które korzystają już z mojego doświadczenia",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 11,
+    "type": "pricing",
+    "heading": "Ile kosztuje audyt sprzedaży",
+    "words": 35,
+    "sample": "b2b kosztuje 6 900 cena obejmuje przygotowanie analizę materiałów rozmowy zespołem czterech oraz cenie danych raport z zł netto w w cenie sprzedaży do warsztatów"
+   },
+   {
+    "section": 13,
+    "type": "contentSection",
+    "heading": "Dwa różne pytania, dwa punkty startu",
+    "words": 2,
+    "sample": "pipedrivesales systemumów"
+   },
+   {
+    "section": 17,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/automatyzacja-procesow-biznesowych-nocode": [
+   {
+    "section": 1,
+    "type": "logoStrip",
+    "heading": "Firmy które korzystają już z mojego doświadczenia",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 7,
+    "type": "pricing",
+    "heading": "Współpraca dopasowana do Ciebie",
+    "words": 18,
+    "sample": "cyfrowej transformacji firmy nie zrobisz jeden wieczór koszty zmieścisz swoim miesięcznym budżecie pakiecie pakiecie w w w w"
+   },
+   {
+    "section": 12,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/automatyzacje-dla-pipedrive": [
+   {
+    "section": 1,
+    "type": "logoStrip",
+    "heading": "Firmy które korzystają już z mojego doświadczenia",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 3,
+    "type": "logoStrip",
+    "heading": null,
+    "words": 7,
+    "sample": "łączę narzędzia z których zespół już korzysta"
+   },
+   {
+    "section": 14,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/blog": [
+   {
+    "section": 1,
+    "type": "newsletterSignup",
+    "heading": null,
+    "words": 36,
+    "sample": "newsletter sales atlas zapisując się zamawiasz newsletter wellbiz sp z o o i zgadzasz się na otrzymywanie e maili z poradami i ofertami wypiszesz się"
+   }
+  ],
+  "/darmowe-materialy-dla-biznesow-uslugowych": [
+   {
+    "section": 2,
+    "type": "newsletterSignup",
+    "heading": null,
+    "words": 36,
+    "sample": "newsletter sales atlas zapisując się zamawiasz newsletter wellbiz sp z o o i zgadzasz się na otrzymywanie e maili z poradami i ofertami wypiszesz się"
+   }
+  ],
+  "/kontakt": [
+   {
+    "section": 0,
+    "type": "contactForm",
+    "heading": "Umów się na bezpłatną konsultację",
+    "words": 80,
+    "sample": "współpracę najlepiej zacząć od rozmowy na pierwsze spotkanie on line zarezerwuj 25 min dostęp do mojego kalendarza wypełnij formularz i jeśli chcesz od razu wybierz"
+   },
+   {
+    "section": 1,
+    "type": "contactForm",
+    "heading": null,
+    "words": 26,
+    "sample": "social media najlepsze dla krótkich wiadomości odpowiadam najszybciej bezpośredni kontakt lepszy dla dłuższych pytań i propozycji współpracy grzesiek zawlodzki pl 48 571 088 338 signal"
+   },
+   {
+    "section": 1,
+    "type": "newsletterSignup",
+    "heading": null,
+    "words": 36,
+    "sample": "newsletter sales atlas zapisując się zamawiasz newsletter wellbiz sp z o o i zgadzasz się na otrzymywanie e maili z poradami i ofertami wypiszesz się"
+   }
+  ],
+  "/kurs-ai-w-sprzedazy": [
+   {
+    "section": 2,
+    "type": "logoStrip",
+    "heading": "Metoda z ponad 50 wdrożeń CRM i automatyzacji",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 4,
+    "type": "contentSection",
+    "heading": "Sprawdź, czy ten kurs jest dla ciebie",
+    "words": 3,
+    "sample": "kup w przedsprzedaży"
+   },
+   {
+    "section": 7,
+    "type": "feature",
+    "heading": "Proces sprzedaży pod AI",
+    "words": 2,
+    "sample": "co dostajesz"
+   },
+   {
+    "section": 8,
+    "type": "feature",
+    "heading": "Kontekst, integracje i ontologia",
+    "words": 2,
+    "sample": "co dostajesz"
+   },
+   {
+    "section": 9,
+    "type": "feature",
+    "heading": "Pierwszy skill w Claude albo ChatGPT",
+    "words": 2,
+    "sample": "co dostajesz"
+   },
+   {
+    "section": 10,
+    "type": "feature",
+    "heading": "Automatyzacje CRM i porządek w danych",
+    "words": 2,
+    "sample": "co dostajesz"
+   },
+   {
+    "section": 11,
+    "type": "feature",
+    "heading": "Bazy prospectingowe",
+    "words": 2,
+    "sample": "co dostajesz"
+   },
+   {
+    "section": 12,
+    "type": "feature",
+    "heading": "Transkrypcje jako materiał do sprzedaży",
+    "words": 2,
+    "sample": "co dostajesz"
+   },
+   {
+    "section": 13,
+    "type": "feature",
+    "heading": "Oferta jako interaktywna strona",
+    "words": 2,
+    "sample": "co dostajesz"
+   },
+   {
+    "section": 14,
+    "type": "feature",
+    "heading": "Wdrożenie w zespole",
+    "words": 2,
+    "sample": "dostajesz co"
+   },
+   {
+    "section": 15,
+    "type": "feature",
+    "heading": "Widoczność w Google i w AI",
+    "words": 2,
+    "sample": "dostajesz co"
+   },
+   {
+    "section": 16,
+    "type": "feature",
+    "heading": "Treści na bloga i LinkedIna",
+    "words": 2,
+    "sample": "co dostajesz"
+   },
+   {
+    "section": 20,
+    "type": "pricing",
+    "heading": "Trzy poziomy, każdy odliczany od następnego",
+    "words": 39,
+    "sample": "przedsprzedaż jest niej 50 taniej materiały pierwsza grupa ruszają niższego poziomu wyższego jeśli zdecydujesz się współpracować dalej kurs przedsprzedaż 50 taniej 1100 pakiecie października w"
+   },
+   {
+    "section": 24,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/newsletter": [
+   {
+    "section": 0,
+    "type": "newsletterSignup",
+    "heading": null,
+    "words": 36,
+    "sample": "newsletter sales atlas zapisując się zamawiasz newsletter wellbiz sp z o o i zgadzasz się na otrzymywanie e maili z poradami i ofertami wypiszesz się"
+   }
+  ],
+  "/o-mnie": [
+   {
+    "section": 0,
+    "type": "feature",
+    "heading": "Grzegorz Zawłodzki - konsultant CRM i automatyzacji sprzedaży B2B",
+    "words": 5,
+    "sample": "zaczynałem social media bezpośredni kontakt"
+   },
+   {
+    "section": 9,
+    "type": "newsletterSignup",
+    "heading": null,
+    "words": 36,
+    "sample": "newsletter sales atlas zapisując się zamawiasz newsletter wellbiz sp z o o i zgadzasz się na otrzymywanie e maili z poradami i ofertami wypiszesz się"
+   }
+  ],
+  "/program-ai-dla-zespolu-sprzedazy": [
+   {
+    "section": 2,
+    "type": "logoStrip",
+    "heading": "Doświadczenie z wdrożeń CRM i automatyzacji w ponad 50 firmach",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 4,
+    "type": "contentSection",
+    "heading": "Sprawdź, czy ten program pasuje do twojej firmy",
+    "words": 5,
+    "sample": "zapytaj czy to dla was"
+   },
+   {
+    "section": 13,
+    "type": "pricing",
+    "heading": "Współpraca przejrzysta od początku",
+    "words": 31,
+    "sample": "przedsprzedaż pierwsza grupa ruszają niższego poziomu wyższego jeśli idziecie dalej przedsprzedaż 50 taniej 1100 kurs pakiecie października pakiecie w i kwotę odliczam od 1 zł"
+   },
+   {
+    "section": 17,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/program-partnerski": [
+   {
+    "section": 1,
+    "type": "logoStrip",
+    "heading": "Firmy które korzystają już z mojego doświadczenia",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 3,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/sales-atlas-system": [
+   {
+    "section": 2,
+    "type": "contentSection",
+    "heading": "01 Diagnoza",
+    "words": 18,
+    "sample": "umów bezpłatną konsultację umów bezpłatną konsultację umów bezpłatną konsultację umów bezpłatną konsultację umów bezpłatną konsultację umów bezpłatną konsultację"
+   }
+  ],
+  "/szkolenie-i-wdrozenie-asana": [
+   {
+    "section": 1,
+    "type": "logoStrip",
+    "heading": "Firmy które korzystają już z mojego doświadczenia",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 11,
+    "type": "pricing",
+    "heading": "Współpraca przejrzysta od początku",
+    "words": 17,
+    "sample": "różne rodzaje współpracy różnych potrzeb przy poznawaniu wdrażaniu asana pakiecie pakiecie w dla i w pakiecie w"
+   },
+   {
+    "section": 13,
+    "type": "contentSection",
+    "heading": "Wygrana szansa w Pipedrive może sama uruchomić projekt w Asanie",
+    "words": 1,
+    "sample": "sprzedażyautomatyzacjapipedrive"
+   },
+   {
+    "section": 16,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/szkolenie-i-wdrozenie-pipedrive": [
+   {
+    "section": 1,
+    "type": "logoStrip",
+    "heading": "Firmy które korzystają już z mojego doświadczenia",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 11,
+    "type": "pricing",
+    "heading": "Współpraca przejrzysta od początku",
+    "words": 42,
+    "sample": "rynku kupisz konfigurację 500 ja robię innego kończy się gdy zespół pracuje manager ufa raportom a wygrana szansa ma komplet realizacji stąd cena co w"
+   },
+   {
+    "section": 13,
+    "type": "contentSection",
+    "heading": "Dobrze wdrożony Pipedrive to fundament, nie koniec",
+    "words": 1,
+    "sample": "sprzedażyautomatyzacjaasana"
+   },
+   {
+    "section": 17,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/szkolenie-i-wdrozenie-salesforce": [
+   {
+    "section": 1,
+    "type": "logoStrip",
+    "heading": "Firmy które korzystają już z mojego doświadczenia",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 11,
+    "type": "pricing",
+    "heading": "Współpraca przejrzysta od początku",
+    "words": 43,
+    "sample": "łatwo przewdrożyć każdy zbędny moduł to wyższa licencja którego nikt rozumie u mnie kończy się gdy zespół pracuje manager ufa raportom a wygrana szansa ma"
+   },
+   {
+    "section": 13,
+    "type": "contentSection",
+    "heading": "Dobrze wdrożony Salesforce to fundament, nie koniec",
+    "words": 1,
+    "sample": "sprzedażyautomatyzacjaasana"
+   },
+   {
+    "section": 16,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/wdrozenie-ai-w-sprzedazy-b2b": [
+   {
+    "section": 2,
+    "type": "logoStrip",
+    "heading": "Doświadczenie z wdrożeń CRM i automatyzacji w ponad 50 firmach",
+    "words": 14,
+    "sample": "kim współpracuję z dotąd współpracowałem z firmami które zatrudniają od 2 do 500 pracowników"
+   },
+   {
+    "section": 4,
+    "type": "contentSection",
+    "heading": "Sprawdź czy moja usługa pasuje do Twojej firmy",
+    "words": 4,
+    "sample": "sprawdźmy to rozmowie na"
+   },
+   {
+    "section": 12,
+    "type": "pricing",
+    "heading": "Współpraca przejrzysta od początku",
+    "words": 17,
+    "sample": "różne rodzaje współpracy różnych potrzeb etapów we wdrażaniu pakiecie pakiecie w ai w w pakiecie dla i"
+   },
+   {
+    "section": 16,
+    "type": "contactForm",
+    "heading": "Skontaktuj się ze mną",
+    "words": 23,
+    "sample": "współpracę najlepiej zacząć od rozmowy formularz kontaktowy bezpośredni kontakt wyślij e mail napisz sms lub zadzwoń grzesiek zawlodzki pl 48 571 088 338"
+   }
+  ],
+  "/wspolpraca": [
+   {
+    "section": 1,
+    "type": "contentSection",
+    "heading": "Wsparcie w cyfrowej transformacji",
+    "words": 4,
+    "sample": "porozmawiajmy o waszej sytuacji"
+   },
+   {
+    "section": 7,
+    "type": "logoStrip",
+    "heading": "Doradzam jak efektywnie korzystać z narzędzi biznesowych",
+    "words": 2,
+    "sample": "co robię"
+   },
+   {
+    "section": 9,
+    "type": "contactForm",
+    "heading": "Umów się na wstępną rozmowę",
+    "words": 13,
+    "sample": "doceniam że chcesz się do mnie odezwać na rozmowę rozpoznawczą zarezerwuj 30 min"
+   }
+  ]
+ },
+ "pagesById": {
+  "/": "page-634daaa2c8ceab0fea939fe6",
+  "/404": "page-634daaa2c8ceab8021939feb",
+  "/audyt-ai-sprzedaz": "page-6a6525137109a67a895f5e80",
+  "/audyt-crm-pipedrive": "page-6a659c9d68d93d23daef5822",
+  "/audyt-procesow-asana": "page-6a6650c971f470cf8a5110d4",
+  "/audyt-sprzedazy": "page-6a93c20ca47c5a15d5c2fce7",
+  "/automatyzacja-procesow-biznesowych-nocode": "page-65364c7d554535d3e4141668",
+  "/automatyzacje-dla-pipedrive": "page-64aae5153be5dab60a907e5c",
+  "/blog": "page-6a5e981dbb5b85f2e70aa1fd",
+  "/darmowe-materialy-dla-biznesow-uslugowych": "page-63dfea350c95fc855e2647ed",
+  "/kontakt": "page-634daaa2c8ceab10fa93a044",
+  "/kurs-ai-w-sprzedazy": "page-6a65a09038ad0c6d6d0a1aa3",
+  "/lista-cookies-i-identyfikatorow": "page-6a662ce1aaab25ed183324c4",
+  "/newsletter": "page-634daaa2c8ceab761a93a050",
+  "/o-mnie": "page-634daaa2c8ceab1df293a051",
+  "/podziekowanie-konsultacja": "page-64c3a01fba15c5942cda4479",
+  "/podziekowanie-newsletter": "page-64077f8246074408c44c392c",
+  "/polityka-prywatnosci": "page-634daaa2c8ceab75e793a055",
+  "/program-ai-dla-zespolu-sprzedazy": "page-6a6524cc429bff76b57cc347",
+  "/program-partnerski": "page-65369078d23fa9556206c3cb",
+  "/regulamin": "page-634daaa2c8ceab668a93a057",
+  "/regulamin-newslettera": "page-6a60d9ec87a190a51d263896",
+  "/sales-atlas-system": "page-6a82cef512f2263890a42ee2",
+  "/szkolenie-i-wdrozenie-asana": "page-64a7d3814f84e9058b6f6dad",
+  "/szkolenie-i-wdrozenie-pipedrive": "page-64a963565ffd73e869eafd91",
+  "/szkolenie-i-wdrozenie-salesforce": "page-6abac9e3fe23660c83e62014",
+  "/wdrozenie-ai-w-sprzedazy-b2b": "page-6a4e60735114259a5cd425c5",
+  "/wspolpraca": "page-634daaa2c8ceab408393a043"
+ }
+}

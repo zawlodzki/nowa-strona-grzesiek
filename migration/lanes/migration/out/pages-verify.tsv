@@ -1,0 +1,65 @@
+# T16 verify-web run 20261021-230528-p8816, wrangler dev at 61e11b8 plus a throwaway route /t16-preview/<path> (deleted, never committed) rendering development-dataset pages with the T09/T10 block components.
+# probes: host path status location x-robots-tag content-type title
+127.0.0.1	/t16-preview/home	200	-	noindex, nofollow	text/html; charset=utf-8	CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/404	200	-	noindex, nofollow	text/html; charset=utf-8	Not Found
+127.0.0.1	/t16-preview/audyt-ai-sprzedaz	200	-	noindex, nofollow	text/html; charset=utf-8	Audyt AI w sprzedaży — 2 tygodnie, konkretny plan wdrożenia
+127.0.0.1	/t16-preview/audyt-crm-pipedrive	200	-	noindex, nofollow	text/html; charset=utf-8	Audyt CRM Pipedrive i procesu sprzedaży | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/audyt-procesow-asana	200	-	noindex, nofollow	text/html; charset=utf-8	Audyt procesów w Asanie | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/audyt-sprzedazy	200	-	noindex, nofollow	text/html; charset=utf-8	Audyt sprzedaży B2B — zakres i cena | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/automatyzacja-procesow-biznesowych-nocode	200	-	noindex, nofollow	text/html; charset=utf-8	Automatyzacja procesów biznesowych no-code | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/automatyzacje-dla-pipedrive	200	-	noindex, nofollow	text/html; charset=utf-8	Automatyzacje dla Pipedrive | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/blog	200	-	noindex, nofollow	text/html; charset=utf-8	Blog | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/darmowe-materialy-dla-biznesow-uslugowych	200	-	noindex, nofollow	text/html; charset=utf-8	Darmowe materiały dla biznesów usługowych | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/kontakt	200	-	noindex, nofollow	text/html; charset=utf-8	Kontakt | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/kurs-ai-w-sprzedazy	200	-	noindex, nofollow	text/html; charset=utf-8	AI w sprzedaży B2B — osiem modułów na waszych danych z CRM
+127.0.0.1	/t16-preview/lista-cookies-i-identyfikatorow	200	-	noindex, nofollow	text/html; charset=utf-8	Lista cookies i identyfikatorów | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/newsletter	200	-	noindex, nofollow	text/html; charset=utf-8	Newsletter Sales Atlas | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/o-mnie	200	-	noindex, nofollow	text/html; charset=utf-8	O mnie | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/podziekowanie-konsultacja	200	-	noindex, nofollow	text/html; charset=utf-8	Podziekowanie bezpłatna konsultacja
+127.0.0.1	/t16-preview/podziekowanie-newsletter	200	-	noindex, nofollow	text/html; charset=utf-8	Podziekowanie newsletter
+127.0.0.1	/t16-preview/polityka-prywatnosci	200	-	noindex, nofollow	text/html; charset=utf-8	Polityka prywatności - Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/program-ai-dla-zespolu-sprzedazy	200	-	noindex, nofollow	text/html; charset=utf-8	Sztuczna inteligencja w sprzedaży - program dla zespołów B2B
+127.0.0.1	/t16-preview/program-partnerski	200	-	noindex, nofollow	text/html; charset=utf-8	Program partnerski - automatyzacja procesów biznesowych | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/regulamin	200	-	noindex, nofollow	text/html; charset=utf-8	Regulamin | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/regulamin-newslettera	200	-	noindex, nofollow	text/html; charset=utf-8	Regulamin newslettera | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/sales-atlas-system	200	-	noindex, nofollow	text/html; charset=utf-8	Sales Atlas System - system sprzedaży dla firm B2B | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/szkolenie-i-wdrozenie-asana	200	-	noindex, nofollow	text/html; charset=utf-8	Szkolenie i wdrożenie Asany na Waszych projektach | Zawłodzki
+127.0.0.1	/t16-preview/szkolenie-i-wdrozenie-pipedrive	200	-	noindex, nofollow	text/html; charset=utf-8	Wdrożenie Pipedrive CRM z procesem i szkoleniem | Zawłodzki
+127.0.0.1	/t16-preview/szkolenie-i-wdrozenie-salesforce	200	-	noindex, nofollow	text/html; charset=utf-8	Wdrożenie Salesforce i szkolenie zespołu handlowego
+127.0.0.1	/t16-preview/wdrozenie-ai-w-sprzedazy-b2b	200	-	noindex, nofollow	text/html; charset=utf-8	Wdrożenie AI w sprzedaży B2B | Grzegorz Zawłodzki
+127.0.0.1	/t16-preview/wspolpraca	200	-	noindex, nofollow	text/html; charset=utf-8	Grzegorz Zawłodzki | Współpraca Way Forward
+# served <main> text vs live HTML sections, word multiset: page, words found/live, rendered blocks
+home	584/634 = 92.1%	15
+404	no live html	1
+audyt-ai-sprzedaz	867/936 = 92.6%	17
+audyt-crm-pipedrive	1334/1414 = 94.3%	18
+audyt-procesow-asana	1352/1430 = 94.5%	17
+audyt-sprzedazy	1239/1314 = 94.3%	18
+automatyzacja-procesow-biznesowych-nocode	770/836 = 92.1%	13
+automatyzacje-dla-pipedrive	687/731 = 94.0%	15
+blog	68/228 = 29.8%	2
+darmowe-materialy-dla-biznesow-uslugowych	156/156 = 100.0%	3
+kontakt	59/171 = 34.5%	2
+kurs-ai-w-sprzedazy	2394/2493 = 96.0%	25
+lista-cookies-i-identyfikatorow	577/581 = 99.3%	1
+newsletter	54/86 = 62.8%	2
+o-mnie	712/742 = 96.0%	10
+podziekowanie-konsultacja	no live html	1
+podziekowanie-newsletter	no live html	1
+polityka-prywatnosci	3920/3925 = 99.9%	1
+program-ai-dla-zespolu-sprzedazy	1356/1428 = 95.0%	18
+program-partnerski	102/139 = 73.4%	4
+regulamin	3835/3840 = 99.9%	1
+regulamin-newslettera	1262/1267 = 99.6%	1
+sales-atlas-system	1714/1731 = 99.0%	8
+szkolenie-i-wdrozenie-asana	1522/1582 = 96.2%	17
+szkolenie-i-wdrozenie-pipedrive	1517/1601 = 94.8%	18
+szkolenie-i-wdrozenie-salesforce	1459/1544 = 94.5%	17
+wdrozenie-ai-w-sprzedazy-b2b	1063/1123 = 94.7%	17
+wspolpraca	487/504 = 96.6%	10
+TOTAL 29090/30436 = 95.58%
+# snapshot development after import N and N+1
+ "documents": 66,
+ "sha256": "526ae5a08b2a7dfde58848eddb46c6c5ba5ee9507fae0aaee21df83592429abd",
+ "documents": 66,
+ "sha256": "526ae5a08b2a7dfde58848eddb46c6c5ba5ee9507fae0aaee21df83592429abd",
