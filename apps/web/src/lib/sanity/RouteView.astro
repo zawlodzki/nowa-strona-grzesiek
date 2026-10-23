@@ -5,12 +5,13 @@ import PostView from './PostView.astro';
 import Sections from './Sections.astro';
 import type { Route } from './routes.ts';
 import { seoPage } from './seo.ts';
-import { loadSite } from './site.ts';
+import { type Site, loadSite } from './site.ts';
 
-interface Props { route: Route; }
-const { route } = Astro.props;
-const site = await loadSite();
-const seo = seoPage(site, route);
+interface Props { route: Route; site?: Site; preview?: boolean; }
+const { route, site: suppliedSite, preview = false } = Astro.props;
+const site = suppliedSite ?? await loadSite();
+const metadata = seoPage(site, route);
+const seo = preview ? { ...metadata, seo: { ...metadata.seo, noindex: true } } : metadata;
 // A page that opens with article text is a document (legal pages); its title is the H1, as on the live site.
 const titled = route.kind === 'page' && route.page.sections?.[0]?._type === 'richText';
 ---
@@ -23,6 +24,7 @@ const titled = route.kind === 'page' && route.page.sections?.[0]?._type === 'ric
   )}
   {route.kind === 'post' && <PostView site={site} post={route.post} />}
   {route.kind === 'blogIndex' && <BlogIndexView site={site} route={route} description={seo.kind === 'blogIndex' ? seo.blog.description : ''} />}
+  <slot />
 </Base>
 <style>
   .page-title { padding-block-end: 0; }

@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "zawlodzki-web-preview",
+  "main": "./src/preview/worker.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "workers_dev": true,
+  "preview_urls": false,
+  "vars": {
+    "SANITY_DATASET": "production",
+    "SANITY_STUDIO_URL": "https://zawlodzki.sanity.studio"
+  }
+}

@@ -1,0 +1,39 @@
+---
+import { env } from 'cloudflare:workers';
+import Base from '../../layouts/Base.astro';
+import RouteView from '../../lib/sanity/RouteView.astro';
+import { buildRoutes } from '../../lib/sanity/routes.ts';
+import { readEnvironment } from '../security.ts';
+import { loadPreviewSite, PreviewUnavailableError } from '../site.ts';
+
+const config = readEnvironment(env);
+if (!config) throw new Error('Preview configuration is incomplete.');
+let site;
+let route;
+let invalid = false;
+let unavailable = false;
+try {
+  if (!/^(\/|\/[a-z0-9]+(?:[a-z0-9/-]*[a-z0-9])?)$/.test(Astro.url.pathname) || Astro.url.pathname.includes('//')) throw new URIError('Invalid route path.');
+  site = await loadPreviewSite(config, Astro.url.pathname);
+  route = buildRoutes(site).find((item) => item.href === Astro.url.pathname);
+} catch (error) {
+  unavailable = error instanceof PreviewUnavailableError;
+  invalid = !unavailable && !(error instanceof URIError);
+}
+Astro.response.status = unavailable ? 502 : invalid ? 422 : route ? 200 : 404;
+const errorTitle = unavailable ? 'Podgląd jest chwilowo niedostępny' : invalid ? 'Podgląd wymaga poprawnych danych' : 'Nie znaleziono strony';
+---
+{site && route ? (
+  <RouteView route={route} site={site} preview>
+    <script>
+      import { enableVisualEditing } from '@sanity/visual-editing/enable-visual-editing';
+      enableVisualEditing({ refresh: async () => { window.location.reload(); } });
+    </script>
+  </RouteView>
+) : (
+  <Base title={errorTitle} noindex>
+    <main><h1>{errorTitle}</h1>
+      {invalid && <p>Sprawdź wymagane pola stron i wpisów w Studio. Niepełny szkic może uniemożliwić podgląd. Szczegóły danych nie są wyświetlane publicznie.</p>}
+    </main>
+  </Base>
+)}
