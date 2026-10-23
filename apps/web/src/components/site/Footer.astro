@@ -1,7 +1,79 @@
 ---
+import { chromeView } from './settings.ts';
+
 interface Props {
   language: 'pl' | 'en';
   pathname: string;
 }
+
+const { language, pathname } = Astro.props;
+const chrome = await chromeView(language, pathname);
 ---
-<footer></footer>
+{chrome.kind === 'empty' && <footer></footer>}
+{chrome.kind === 'ready' && (
+  <footer class="site-footer">
+    <div class="content-grid">
+      <nav aria-label={chrome.footerLabel}>
+        <ul>
+          {chrome.footer.before.map((link) => (
+            <li><a class="footer-link" href={link.href}>{link.label}</a></li>
+          ))}
+          {chrome.footer.consent.kind === 'on-link' ? (
+            <li><a class="footer-link" href={chrome.footer.consent.link.href} data-c15t-open>{chrome.footer.consent.link.label}</a></li>
+          ) : (
+            <li><button type="button" class="footer-link" data-c15t-open>{chrome.footer.consent.label}</button></li>
+          )}
+          {chrome.footer.after.map((link) => (
+            <li><a class="footer-link" href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  </footer>
+)}
+
+<style>
+  .site-footer {
+    padding-block: var(--space-l);
+    background: var(--surface-page);
+  }
+
+  .site-footer nav { min-inline-size: 0; }
+
+  .site-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2xs) var(--space-s);
+    margin-block: 0;
+    margin-inline: 0;
+    padding-block: 0;
+    padding-inline: 0;
+    list-style: none;
+  }
+
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    max-inline-size: 100%;
+    min-block-size: 44px;
+    padding-block: 8px;
+    padding-inline: 16px;
+    overflow-wrap: anywhere;
+    border-block: 0;
+    border-inline: 0;
+    background: transparent;
+    color: var(--text-muted);
+    font: inherit;
+    line-height: var(--typography-body-leading);
+    text-align: start;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .footer-link:hover { color: var(--text-link); }
+  }
+
+  .footer-link:active { color: var(--text-link-hover); }
+</style>
