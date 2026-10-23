@@ -69,3 +69,13 @@ The enabled Sanity webhook targets production with create, update, and delete ev
 ## Live acceptance still required
 
 Automatic approval review rejected creating a test draft in the production dataset because deployment approval did not explicitly authorize that content write. A noindex test page is prepared locally, but has not been uploaded. Draft editing with automatic iframe refresh and an approved publish reaching staging within five minutes still require verification. The T19 acceptance box remains unchecked.
+
+## Recheck after merging main, 2026-10-23
+
+`origin/main` (`852825f`, T20) was merged. The shared renderer keeps preview props and T20's heading level. No production Sanity write and no Cloudflare account change.
+
+CI run 39915696220 failed at 07:07:29Z on Portable Text block `0de630e270aa` in `/blog/asana-vs-jira`. The published post was updated at 07:09:02Z and now points that block at `image-7a12119b31531cfd5d78e4c6ce626803e1171c34-1920x2276-webp`. A fresh `pnpm build` rendered the page. verify-web run `20261023-082758-p8790` served it through `wrangler dev --local`. The body image request to `cdn.sanity.io` returned 200 and decoded at 1600 by 1897. Screenshots and `probes.tsv` are in `/tmp/t19-verify-web/evidence/20261023-082758-p8790/`.
+
+Live `https://preview.zawlodzki.pl/` is 401 before a session. The framing policy names `https://zawlodzki.sanity.studio` and `https://www.sanity.io`. The hosted Studio URL redirects into `www.sanity.io` and asks for a login, so this pass did not open Presentation. A local Worker with dummy credentials accepts a session cookie that the client actually sends, then returns the safe 502 page because the token cannot read Sanity. The token is not in the HTML.
+
+Workers Builds Git connection was not inspected. The dashboard client for this run is unauthenticated. The connection steps remain in `apps/web/src/preview/README.md`.
