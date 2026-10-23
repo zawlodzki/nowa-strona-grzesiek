@@ -1,6 +1,7 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {documentInternationalization} from '@sanity/document-internationalization'
+import {presentation} from './presentation'
 import {schemaTypes, singletonIds} from './schemaTypes'
 
 const localizedTypes = ['page', 'post', 'siteSettings']
@@ -12,6 +13,7 @@ export default defineConfig({
   projectId: '8u2zjhvn',
   dataset: process.env.SANITY_STUDIO_DATASET || 'production',
   plugins: [
+    presentation,
     structureTool({
       structure: (S) => S.list().title('Treści').items([
         ...singletonTypes.map((type) => S.listItem()

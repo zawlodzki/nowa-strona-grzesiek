@@ -172,6 +172,11 @@ let pending: Promise<Site> | undefined;
 
 /** One request per build, shared by every route. */
 export function loadSite(): Promise<Site> {
-  pending ??= sanityQuery(QUERY).then((result) => parseSite(result as Raw));
+  pending ??= fetchSite(sanityQuery);
   return pending;
+}
+
+/** A request-scoped reader can share the build parser without sharing its cache. */
+export async function fetchSite(query: (query: string) => Promise<unknown>): Promise<Site> {
+  return parseSite(await query(QUERY) as Raw);
 }
