@@ -1,0 +1,472 @@
+{
+  "lighthouseVersion": "13.5.0",
+  "method": "Default mobile simulation; one run per sample for initial/final deployment; five runs each for Pipedrive and AI in the reverted experiment. Sequential runs, not an alternating controlled comparison.",
+  "environment": "Shared macOS host; observed load averages 17.62,20.36,22.88 on previously observed 10 logical CPUs. No general speedup claim.",
+  "limiter": "Initial traces show H1 LCP with render delay; shared render-blocking CSS and fonts are on the loading path. TBT and CLS are recorded per run. Inlining did not establish a reliable pass and was reverted.",
+  "finalSampleGatePass": true,
+  "stages": [
+    {
+      "stage": "initial",
+      "workerVersion": "f70113e3-00d8-4597-9269-873a969de927",
+      "sourceCommit": "3192b2bc0b1446690351efbdbfb9fd2efa2a0de7",
+      "runs": [
+        {
+          "sample": "ai",
+          "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+          "fetchTime": "2026-10-23T07:14:47.036Z",
+          "scores": {
+            "performance": 87,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 2292.10325,
+          "lcpMs": 3660.5835,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "atlas",
+          "path": "/sales-atlas-system",
+          "fetchTime": "2026-10-23T07:15:04.304Z",
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1590.0850000000005,
+          "lcpMs": 2251.9135,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "blog",
+          "path": "/blog",
+          "fetchTime": "2026-10-23T07:15:20.559Z",
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1625.959,
+          "lcpMs": 2114.7435,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "home",
+          "path": "/",
+          "fetchTime": "2026-10-23T07:13:50.598Z",
+          "scores": {
+            "performance": 93,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1584.6365,
+          "lcpMs": 3066.1775,
+          "tbtMs": 108,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "pipedrive",
+          "path": "/szkolenie-i-wdrozenie-pipedrive",
+          "fetchTime": "2026-10-23T07:14:20.788Z",
+          "scores": {
+            "performance": 87,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 2352.376,
+          "lcpMs": 3594.1420000000007,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "post",
+          "path": "/blog/salesforce-cena",
+          "fetchTime": "2026-10-23T07:15:36.952Z",
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1618.349,
+          "lcpMs": 2099.906,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        }
+      ]
+    },
+    {
+      "stage": "revertedInlineExperiment",
+      "workerVersion": "1f1a47f5-6178-4f87-9f50-272078f57d89",
+      "sourceCommit": "ae6f589356c1c5047c2bbdc6fd72c9b6f2079f89",
+      "runs": [
+        {
+          "sample": "ai-2",
+          "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+          "fetchTime": "2026-10-23T07:31:47.888Z",
+          "scores": {
+            "performance": 89,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 2041.8484999999998,
+          "lcpMs": 3465.6845000000003,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "ai-3",
+          "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+          "fetchTime": "2026-10-23T07:32:21.472Z",
+          "scores": {
+            "performance": 89,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 2100.703,
+          "lcpMs": 3369.8210000000004,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "ai-4",
+          "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+          "fetchTime": "2026-10-23T07:33:05.983Z",
+          "scores": {
+            "performance": 90,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 2257.97,
+          "lcpMs": 3331.746,
+          "tbtMs": 8,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "ai-5",
+          "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+          "fetchTime": "2026-10-23T07:33:51.802Z",
+          "scores": {
+            "performance": 88,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 2117.424,
+          "lcpMs": 3538.612,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "ai",
+          "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+          "fetchTime": "2026-10-23T07:29:47.783Z",
+          "scores": {
+            "performance": 99,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1311.46,
+          "lcpMs": 1853.362,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "atlas",
+          "path": "/sales-atlas-system",
+          "fetchTime": "2026-10-23T07:30:47.913Z",
+          "scores": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1041.475,
+          "lcpMs": 2015.214,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "blog",
+          "path": "/blog",
+          "fetchTime": "2026-10-23T07:31:01.264Z",
+          "scores": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1005.9460000000001,
+          "lcpMs": 2146.812,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "home",
+          "path": "/",
+          "fetchTime": "2026-10-23T07:30:32.292Z",
+          "scores": {
+            "performance": 81,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 2673.365,
+          "lcpMs": 4211.8915,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "pipedrive-2",
+          "path": "/szkolenie-i-wdrozenie-pipedrive",
+          "fetchTime": "2026-10-23T07:31:31.239Z",
+          "scores": {
+            "performance": 89,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1877.6685000000002,
+          "lcpMs": 3600.3925,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "pipedrive-3",
+          "path": "/szkolenie-i-wdrozenie-pipedrive",
+          "fetchTime": "2026-10-23T07:32:04.333Z",
+          "scores": {
+            "performance": 98,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1343.98,
+          "lcpMs": 2230.475,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "pipedrive-4",
+          "path": "/szkolenie-i-wdrozenie-pipedrive",
+          "fetchTime": "2026-10-23T07:32:42.473Z",
+          "scores": {
+            "performance": 89,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 2062.369,
+          "lcpMs": 3445.4990000000007,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "pipedrive-5",
+          "path": "/szkolenie-i-wdrozenie-pipedrive",
+          "fetchTime": "2026-10-23T07:33:32.629Z",
+          "scores": {
+            "performance": 97,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1478.3250000000003,
+          "lcpMs": 2400.1429999999996,
+          "tbtMs": 8,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "pipedrive",
+          "path": "/szkolenie-i-wdrozenie-pipedrive",
+          "fetchTime": "2026-10-23T07:29:25.397Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1381.382,
+          "lcpMs": 1538.382,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "post",
+          "path": "/blog/salesforce-cena",
+          "fetchTime": "2026-10-23T07:31:18.402Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1051.7980000000002,
+          "lcpMs": 1607.5960000000005,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        }
+      ]
+    },
+    {
+      "stage": "final",
+      "workerVersion": "9d098050-1822-4d84-945f-ac03d671f3a7",
+      "sourceCommit": "ec8f801a74796243d2745e8fcf74c4be662c8562",
+      "runs": [
+        {
+          "sample": "ai",
+          "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+          "fetchTime": "2026-10-23T07:37:49.325Z",
+          "scores": {
+            "performance": 97,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1739.1830000000002,
+          "lcpMs": 2305.849,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "atlas",
+          "path": "/sales-atlas-system",
+          "fetchTime": "2026-10-23T07:38:08.912Z",
+          "scores": {
+            "performance": 95,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 2094.712,
+          "lcpMs": 2590.344,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "blog",
+          "path": "/blog",
+          "fetchTime": "2026-10-23T07:38:22.487Z",
+          "scores": {
+            "performance": 97,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1683.5879999999997,
+          "lcpMs": 2488.419,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "home",
+          "path": "/",
+          "fetchTime": "2026-10-23T07:37:19.879Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1239.1485,
+          "lcpMs": 1539.1485,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "pipedrive",
+          "path": "/szkolenie-i-wdrozenie-pipedrive",
+          "fetchTime": "2026-10-23T07:37:32.365Z",
+          "scores": {
+            "performance": 98,
+            "accessibility": 97,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1774.5869999999998,
+          "lcpMs": 2094.8689999999997,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        },
+        {
+          "sample": "post",
+          "path": "/blog/salesforce-cena",
+          "fetchTime": "2026-10-23T07:38:39.409Z",
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 69
+          },
+          "fcpMs": 1580.1960000000001,
+          "lcpMs": 2048.64,
+          "tbtMs": 0,
+          "cls": 0,
+          "httpStatusPass": true,
+          "runtimeError": null
+        }
+      ]
+    }
+  ]
+}

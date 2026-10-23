@@ -1,6 +1,6 @@
 # Import and frontend readiness repairs
 
-The reported code and data-preparation blockers are repaired. The local Worker now serves every keep path. Production Sanity and the deployed staging Worker have not been changed. G3 is not complete.
+The reported code and data-preparation blockers are repaired. The local Worker now serves every keep path. This report records the local preparation before approval. The user subsequently approved the production import and staging deployment; both are complete. See [the deployed-staging report](g3-staging.md) for current evidence. G3 is not complete.
 
 The user authorized repairs after the initial preflight. T20's owns list was expanded to the importer and frontend files needed for those repairs. T19 and T21 files were left to their owners.
 
@@ -66,7 +66,7 @@ Audit from the repository root:
 python3 -B -I migration/tools/import/bundle.py /tmp/production-import.tar.gz --report /tmp/production-import-summary.json
 ```
 
-The future production operation is the native import of the reviewed archive with `--dataset production --replace`. It includes actual asset bytes and local asset references, so it does not leave production pointing at development asset documents. Neither `--allow-assets-in-different-dataset` nor skipped/failing asset flags are needed. Existing importer production guards remain intact.
+The subsequently approved production operation used the native import of the reviewed archive with `--dataset production --replace`. It includes actual asset bytes and local asset references, so it does not leave production pointing at development asset documents. Neither `--allow-assets-in-different-dataset` nor skipped/failing asset flags are needed. Existing importer production guards remain intact.
 
 ## Remaining G3 work and approval
 
@@ -76,7 +76,7 @@ The local rows are 105 language-token changes from `pl-PL` to `pl`, 15 sitemap a
 
 The 22 word-count changes still need content/layout review. The existing static-page report also contains mapping-loss findings that this repair does not silently clear. Missing global navigation/footer rendering and source-template content need their own parity work. The new settings document prepares the existing menu data; it does not claim those layout components were implemented here.
 
-Before G3 can pass, obtain explicit approval for the first production Sanity write and the staging deployment, import the package, build against production, deploy to the staging Worker and repeat all checks there. Review and fix or accept every remaining content difference. T21 separately owns consent, Tag Assistant and form-delivery QA. Production `www` remains on Webflow throughout these staging operations; cutover is a separate gate.
+The user subsequently approved the first production Sanity write and staging deployment. The package was imported, built against production and deployed. The repeated staging checks are in [g3-staging.md](g3-staging.md). Before G3 can pass, review and fix or accept every remaining content difference and meet the mobile performance threshold. T21 separately owns consent, Tag Assistant and form-delivery QA. Production `www` remains on Webflow throughout these staging operations; cutover is a separate gate.
 
 ## Decisions
 
