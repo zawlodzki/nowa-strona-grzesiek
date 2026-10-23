@@ -86,4 +86,15 @@ The owner approved one throwaway production document on 2026-10-23. No token wit
 
 A dry-run mutation, `createIfNotExists` of `_id` `t19-test-permission-probe` with `_type` `page`, was sent to `https://8u2zjhvn.api.sanity.io/v2025-02-19/data/mutate/production?dryRun=true` with no Authorization header. The response was HTTP 403, `Insufficient permissions; permission "create" required`. A query at the same second returned count 0 for that id, `drafts.t19-test-permission-probe`, and titles matching `[T19 TEST]`. The dry run did not commit. No production document was created or deleted, and no deploy, DNS, or GSC action was taken.
 
-Draft iframe refresh and the five-minute publish check remain open. They need a production token that can create, update, publish, unpublish, and delete, plus an interactive Sanity session for Presentation.
+## Owner's published-page test, Europe/Warsaw 2026-10-23
+
+Grzesiek ran this test. Times below are Europe/Warsaw.
+
+| Time | Event | Result |
+|---|---|---|
+| 11:03:37 | Published page `t19-test-20261023090331`, title `[T19 TEST]`, noindex, created | Recorded by the owner |
+| 11:04:38 | First HTTP 200 at `https://zawlodzki-web.zawlodzki.workers.dev/t19-test-20261023090331` | Pass, about 61 seconds. Response had a noindex meta and `X-Robots-Tag`. The path was absent from `sitemap-pl.xml` |
+| 11:04:44 | Published id and `drafts.` id deleted. GROQ count 0 on `api` and `apicdn` | Dataset no longer has the document |
+| 11:20:04 | Same staging URL fetched again | Fail. HTTP 200, more than 15 minutes after the delete. No successful rebuild had removed it |
+
+There is no webhook receiver in the repository. Staging serves the last deployed assets, so the page remains until a later build completes. The README filter now matches a published delete through `before()._type` and `_id` and does not dereference `after()`. The required Sanity webhook settings are in the T19 Handoff. Draft iframe refresh remains unverified. The five-minute publish leg passed. The delete leg did not.

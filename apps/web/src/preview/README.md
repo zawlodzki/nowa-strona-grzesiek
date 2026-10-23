@@ -60,16 +60,27 @@ The destination is the static staging Worker `zawlodzki-web`. The preview Worker
 
 Workers Builds connects this repository to `zawlodzki-web` on `main`. Preview branch builds are disabled. The build environment sets `NODE_VERSION=24`. The deployment token has only Workers Scripts Edit for the selected account. For a replacement installation, connect the repository and deployment branch after owner approval. Configure the repository root as the build root, `pnpm --filter web build` as the build command, and `pnpm --filter web exec wrangler deploy` as the deployment command. Build from the selected published dataset. Treat the Workers Builds hook URL as a secret.
 
-Create a Workers Builds deploy hook for that branch. Create a Sanity GROQ webhook in the same dataset, with POST as the method and the hook URL as its target. Enable create, update and delete events. Disable draft and content-release version events. Use this filter to cover published routed content and dependencies, including removals.
+Create a Workers Builds deploy hook for that branch. Create a Sanity GROQ webhook in the same dataset, with POST as the method and the hook URL as its target. There is no deploy-hook handler in this repository. The webhook's HTTP request is the rebuild. Enable create, update, and delete. Leave draft events and content-release version events disabled. Sanity already ignores `drafts.` and `versions.` documents while those two settings are off.
+
+On a delete, `after()` is null. A filter that reads only `_type` or `after()._type` does not match, so the hook never runs and the previous static deploy keeps serving the page. Read the type from `before()` first, and test the id that Sanity still exposes as `_id`.
 
 ```groq
-coalesce(after()._type, before()._type) in [
+!(_id in path("drafts.**"))
+&& !(_id in path("versions.**"))
+&& coalesce(before()._type, _type) in [
   "page", "post", "person", "organization", "siteSettings",
   "service", "logo", "testimonial", "translation.metadata", "sanity.imageAsset"
-] && !(coalesce(after()._id, before()._id) in path("drafts.**"))
-  && !(coalesce(after()._id, before()._id) in path("versions.**"))
+]
 ```
 
-A minimal projection is `{ "documentId": coalesce(after()._id, before()._id), "operation": delta::operation() }`. The hook target needs no content payload and must not receive a Sanity token. Use Sanity's webhook preview to confirm that a draft edit is excluded, published dependency updates are included, and deletion is included. Keep the hook URL only in the Sanity webhook configuration, never in source, screenshots or handoff text. A direct Workers Builds hook uses its unguessable URL for authorization. If signature verification is required later, add a separately reviewed relay that verifies Sanity signatures before forwarding to the secret URL.
+The Workers Builds hook ignores the body. The projection only has to evaluate, including when `after()` is null. Do not call `delta::operation()`.
+
+```groq
+{"_id": _id, "_type": coalesce(before()._type, _type)}
+```
+
+In the webhook preview, a published page create, update, and delete match. A draft edit and a `versions.` document do not. Keep the hook URL only in the Sanity webhook configuration, never in source, screenshots or handoff text. A direct Workers Builds hook uses its unguessable URL for authorization. If signature verification is required later, add a separately reviewed relay that verifies Sanity signatures before forwarding to the secret URL.
+
+The staging Worker serves the last deployed asset set. It does not read Sanity on the request. A delete that does not produce a later successful build leaves the old HTML in place. Cloudflare also folds a second POST into the current build while that build is still queued or initializing, and Sanity treats the HTTP 200 as delivered. The attempts log for the webhook is the record of whether a delete was sent. The build history for `zawlodzki-web` is the record of whether a new deploy happened.
 
 After setup, publish a harmless approved content change, record its Sanity timestamp and the Cloudflare build result, then fetch the staging page until the new text appears. Record the elapsed time and confirm it is below five minutes. Repeat with one referenced dependency. Editing only a draft must not create a production build. These are live acceptance checks. This code and local tests do not establish that the hook exists or that the five-minute target has passed.
