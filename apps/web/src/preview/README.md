@@ -28,7 +28,7 @@ Presentation opens `/api/preview` with a Sanity preview secret. The GET endpoint
 
 The handshake requires a browser that supports partitioned cookies in cross-site iframes. Use `localhost` for local browser testing so secure cookies are accepted. Direct access remains available through Basic Auth. Rotating `PREVIEW_AUTH_PASSWORD` invalidates existing editor sessions.
 
-`SANITY_STUDIO_PREVIEW_URL` configures the Studio build. Its default is `https://preview.zawlodzki.pl`. Set it to the local preview URL when testing locally. The default Studio URL in `wrangler.preview.jsonc` is a proposed target and must be replaced with the actual deployed Studio URL before deployment.
+`SANITY_STUDIO_PREVIEW_URL` configures the Studio build. Its default is `https://preview.zawlodzki.pl`. Set it to the local preview URL when testing locally. The deployed Studio is `https://zawlodzki.sanity.studio`. Hosted Studio also runs inside `https://www.sanity.io`; the preview framing policy permits both ancestors.
 
 ## Verify the running Worker
 
@@ -58,7 +58,7 @@ The entrypoint rejects non-GET/HEAD requests. Preview cannot submit the producti
 
 The destination is the static staging Worker `zawlodzki-web`. The preview Worker reads drafts on requests and does not need a rebuild when drafts change.
 
-The initial Git connection must be configured in Cloudflare Workers Builds. At the time of this implementation, `zawlodzki-web` has no repository connected. Connect this repository and the deployment branch after owner approval. Configure the repository root as the build root, `pnpm --filter web build` as the build command, and `pnpm --filter web exec wrangler deploy` as the deployment command. Build from the selected published dataset. Treat the Workers Builds hook URL as a secret.
+Workers Builds connects this repository to `zawlodzki-web` on `main`. Preview branch builds are disabled. The build environment sets `NODE_VERSION=24`. The deployment token has only Workers Scripts Edit for the selected account. For a replacement installation, connect the repository and deployment branch after owner approval. Configure the repository root as the build root, `pnpm --filter web build` as the build command, and `pnpm --filter web exec wrangler deploy` as the deployment command. Build from the selected published dataset. Treat the Workers Builds hook URL as a secret.
 
 Create a Workers Builds deploy hook for that branch. Create a Sanity GROQ webhook in the same dataset, with POST as the method and the hook URL as its target. Enable create, update and delete events. Disable draft and content-release version events. Use this filter to cover published routed content and dependencies, including removals.
 

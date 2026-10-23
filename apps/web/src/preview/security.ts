@@ -52,7 +52,8 @@ export function privateResponse(response: Response, studioUrl?: string): Respons
   result.headers.set('Referrer-Policy', 'no-referrer');
   result.headers.set('X-Content-Type-Options', 'nosniff');
   const origin = studioUrl ? new URL(studioUrl).origin : undefined;
-  result.headers.set('Content-Security-Policy', `frame-ancestors 'self'${origin ? ` ${origin}` : ''}`);
+  const hostedStudio = studioUrl && new URL(studioUrl).hostname.endsWith('.sanity.studio');
+  result.headers.set('Content-Security-Policy', `frame-ancestors 'self'${origin ? ` ${origin}` : ''}${hostedStudio ? ' https://www.sanity.io' : ''}`);
   return result;
 }
 

@@ -63,3 +63,8 @@ test('preview refuses form submissions before any side effect', async () => {
   assert.equal(response.status, 405);
   privateHeaders(response);
 });
+
+test('hosted Studio also allows its Sanity application ancestor', async () => {
+  const response = await servePreview(request('/', {headers: auth}), {...bindings, SANITY_STUDIO_URL: 'https://zawlodzki.sanity.studio'}, async () => new Response('draft'));
+  assert.equal(response.headers.get('content-security-policy'), "frame-ancestors 'self' https://zawlodzki.sanity.studio https://www.sanity.io");
+});

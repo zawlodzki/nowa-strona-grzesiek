@@ -13,5 +13,11 @@
   "vars": {
     "SANITY_DATASET": "production",
     "SANITY_STUDIO_URL": "https://zawlodzki.sanity.studio"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "preview.zawlodzki.pl",
+      "custom_domain": true
+    }
+  ]
 }

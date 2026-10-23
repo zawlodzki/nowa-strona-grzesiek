@@ -1,6 +1,6 @@
 # T19 verification
 
-Verified locally on 2026-10-22 and rechecked on 2026-10-23. Deployment and publishing were not performed.
+Verified locally on 2026-10-22 and rechecked on 2026-10-23. Preview and Studio were deployed with owner approval on 2026-10-23. No content was published.
 
 ## Running Worker
 
@@ -48,12 +48,24 @@ The static home remained the empty-production placeholder with title `Grzegorz Z
 
 ## Automated checks and review
 
-`pnpm --filter web preview:test` passed 14 tests. These include actual WebCrypto signatures, expiration, tampering, origin and dataset binding, key rotation, redirect boundaries, access to assets and request-scoped loading. `pnpm check` passed with zero schema errors or warnings and zero Astro errors or warnings. `pnpm --filter web exec tsc --noEmit` passed. `pnpm build` built the static web app and Studio. Existing Worker and SEO tests passed 33 tests; one parity test was skipped because this worktree has no private inventory.
+`pnpm --filter web preview:test` passed 15 tests. These include actual WebCrypto signatures, expiration, tampering, origin and dataset binding, key rotation, redirect boundaries, access to assets and request-scoped loading. `pnpm check` passed with zero schema errors or warnings and zero Astro errors or warnings. `pnpm --filter web exec tsc --noEmit` passed. `pnpm build` built the static web app and Studio. Existing Worker and SEO tests passed 33 tests; one parity test was skipped because this worktree has no private inventory.
 
 Independent source reviews found missing visible fields in the stega filter; those fields and string-array items were added. The session review found no actionable auth bypass, token leak or open redirect. The optional deslop skill was unavailable; the diff was checked manually and by the independent reviewer.
 
+## Deployed verification on 2026-10-23
+
+The deployed Studio is https://zawlodzki.sanity.studio. Preview is https://preview.zawlodzki.pl and uses the production dataset. Cloudflare stores the Viewer token and Basic Auth credentials as Worker secrets. Sanity CORS allows the Studio origin with credentials.
+
+The custom-domain changeset contained one addition and no updates, removals, or conflicts. Attachment explicitly disabled replacement of existing origins and DNS records. Public DNS and HTTPS resolved correctly. The local resolver retained a negative response, so the full Worker probe used the public A record while preserving the hostname and TLS certificate verification. Every probe in the table above passed on both workers.dev and the custom domain. The read token was absent from HTML and browser JavaScript.
+
+Hosted Studio opens inside www.sanity.io. The preview framing policy now includes that ancestor only for hosted sanity.studio origins. Presentation loaded the real home page, detected its page and logo documents, and enabled Edit. Clicking the rendered hero heading opened its corresponding heading field and focused it. No field value was changed.
+
+Workers Builds connects only zawlodzki/nowa-strona-grzesiek to the static zawlodzki-web Worker on main. It builds from the repository root with `pnpm --filter web build`, deploys with `pnpm --filter web exec wrangler deploy`, and sets NODE_VERSION=24. Preview branch builds are disabled. The owner approved the GitHub App permissions for this repository. The first installation did not register with Cloudflare. An approved reinstall completed the connection.
+
+The owner approved creating the default build token while builds were disabled, then restricting it before enabling builds. Its saved policy contains only Workers Scripts Edit for the selected account. No zone, storage, or user permissions remain.
+
+The enabled Sanity webhook targets production with create, update, and delete events. Draft and version events are disabled. It uses the README filter and minimal projection. A direct POST to the secret deploy hook returned HTTP 200 and success true. Cloudflare build 5128aea8-bf64-4838-9fad-c580af8f27bc completed and deployed version bbd0c375. Deployment activity reported Ready 43s. This direct-hook check does not measure publication-to-page latency.
+
 ## Live acceptance still required
 
-The Cloudflare dashboard showed that `zawlodzki-web` had no Git repository connected to Workers Builds. Its OAuth API token also returned 403 for the Builds endpoints. Sanity reported no deployed Studio for this project.
-
-Owner approval is required before deployment. Configure the real Studio URL, a least-privilege Viewer token, preview authentication and the new preview domain. Then connect Workers Builds, create its secret deploy hook and configure the published-content Sanity webhook using README.md. Verify Presentation field navigation and automatic refresh on the deployed origins. Measure an approved publish appearing on staging within five minutes before checking T19's acceptance box.
+Automatic approval review rejected creating a test draft in the production dataset because deployment approval did not explicitly authorize that content write. A noindex test page is prepared locally, but has not been uploaded. Draft editing with automatic iframe refresh and an approved publish reaching staging within five minutes still require verification. The T19 acceptance box remains unchecked.
