@@ -1,7 +1,254 @@
 ---
+import { chromeView } from './settings.ts';
+import LogoMark from './LogoMark.astro';
+
 interface Props {
   language: 'pl' | 'en';
   pathname: string;
 }
+
+const { language, pathname } = Astro.props;
+const chrome = await chromeView(language, pathname);
+const logoCurrent = chrome.kind === 'ready' && chrome.logoCurrent;
 ---
-<header></header>
+{chrome.kind === 'empty' && <header></header>}
+{chrome.kind === 'ready' && (
+  <header class="site-header" data-site-header>
+    <div class="content-grid">
+      <div class="bar">
+        <a class="logo" href={chrome.home} aria-current={logoCurrent ? 'page' : undefined}>
+          <LogoMark />
+          <span class="visually-hidden">{chrome.logoLabel}</span>
+        </a>
+        {chrome.nav.kind === 'ready' && (
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+            <svg class="bars" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+            </svg>
+            <span class="visually-hidden">{chrome.menuLabel}</span>
+          </button>
+        )}
+        {chrome.nav.kind === 'ready' && (
+          <nav id="site-nav" class="site-nav" aria-label={chrome.navLabel}>
+            <ul>
+              {chrome.nav.links.map((link) => (
+                <li><a class="nav-link" href={link.href} aria-current={link.current ? 'page' : undefined}>{link.label}</a></li>
+              ))}
+              <li class="pill"><a class="pill-link" href={chrome.nav.pill.href} aria-current={chrome.nav.pill.current ? 'page' : undefined}>{chrome.nav.pill.label}</a></li>
+            </ul>
+          </nav>
+        )}
+      </div>
+    </div>
+  </header>
+)}
+
+<script>
+  import { bindNavDisclosure } from './disclosure.ts';
+
+  for (const header of document.querySelectorAll('[data-site-header]')) {
+    if (header instanceof HTMLElement) bindNavDisclosure(header);
+  }
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 2;
+    background: var(--surface-page);
+    border-block-end: var(--border-width-hairline) solid var(--border-hairline);
+    box-shadow: var(--shadow-nav);
+  }
+
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    padding-block: var(--space-2xs);
+  }
+
+  .logo {
+    position: relative;
+    display: flex;
+    flex: none;
+    align-items: center;
+    min-block-size: 44px;
+    color: var(--text-heading);
+    text-decoration: none;
+  }
+
+  .logo :global(svg) {
+    display: block;
+    block-size: 44px;
+    inline-size: auto;
+    aspect-ratio: 215 / 82;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    padding-block: 0;
+    padding-inline: 0;
+    margin-block: -1px;
+    margin-inline: -1px;
+    overflow: clip;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-block: 0;
+    border-inline: 0;
+  }
+
+  .nav-toggle {
+    position: relative;
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    margin-block: 0;
+    margin-inline-start: auto;
+    margin-inline-end: 0;
+    min-inline-size: 44px;
+    min-block-size: 44px;
+    padding-block: 0;
+    padding-inline: 0;
+    border-block: 0;
+    border-inline: 0;
+    background: transparent;
+    color: var(--text-heading);
+    cursor: pointer;
+  }
+
+  .bars {
+    display: block;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+  }
+
+  .site-nav { display: none; }
+
+  .nav-toggle[aria-expanded='true'] + .site-nav {
+    display: flex;
+    position: absolute;
+    inset-inline: 0;
+    inset-block-start: 100%;
+    padding-block: var(--space-2xs);
+    padding-inline: var(--layout-gutter);
+    background: var(--surface-page);
+    border-block-end: var(--border-width-hairline) solid var(--border-hairline);
+    box-shadow: var(--shadow-nav);
+  }
+
+  .site-nav ul {
+    margin-block: 0;
+    margin-inline: 0;
+    padding-block: 0;
+    padding-inline: 0;
+    list-style: none;
+  }
+
+  .nav-toggle[aria-expanded='true'] + .site-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3xs);
+    inline-size: 100%;
+  }
+
+  .nav-link,
+  .pill-link {
+    display: flex;
+    align-items: center;
+    min-block-size: 44px;
+    padding-block: 8px;
+    padding-inline: 16px;
+    overflow-wrap: anywhere;
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-size);
+    font-weight: var(--typography-body-weight);
+    line-height: var(--typography-body-leading);
+    letter-spacing: var(--typography-body-tracking);
+    text-decoration: none;
+  }
+
+  .nav-link {
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+  }
+
+  .nav-link[aria-current='page'] { color: var(--text-heading); }
+
+  .pill-link {
+    justify-content: center;
+    border-radius: var(--radius-pill);
+    background: var(--surface-accent);
+    color: var(--text-on-accent);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .nav-toggle[aria-expanded='true'] + .site-nav .pill,
+  .nav-toggle[aria-expanded='true'] + .site-nav .pill-link {
+    inline-size: 100%;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .nav-link:hover { color: var(--text-link); }
+    .pill-link:hover {
+      background: var(--text-link-hover);
+      color: var(--text-on-accent);
+    }
+    .nav-toggle:hover { color: color-mix(in oklch, var(--text-heading) 80%, black); }
+  }
+
+  .nav-link:active { color: var(--text-link-hover); }
+  .pill-link:active {
+    background: var(--text-link-active);
+    color: var(--text-on-accent);
+  }
+  .logo:active,
+  .nav-toggle:active { color: color-mix(in oklch, var(--text-heading) 75%, black); }
+
+  /* Stands in for --breakpoint-lg. */
+  @media (width >= 992px) {
+    .nav-toggle { display: none; }
+
+    .logo :global(svg) { block-size: 55px; }
+
+    .site-nav,
+    .nav-toggle[aria-expanded='true'] + .site-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: static;
+      inset-inline: auto;
+      inset-block: auto;
+      flex: 1 1 auto;
+      min-inline-size: 0;
+      padding-block: 0;
+      padding-inline: 0;
+      background: transparent;
+      border-block-end: 0;
+      box-shadow: none;
+    }
+
+    .site-nav ul,
+    .nav-toggle[aria-expanded='true'] + .site-nav ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-3xs);
+      inline-size: 100%;
+    }
+
+    .site-nav .pill,
+    .nav-toggle[aria-expanded='true'] + .site-nav .pill {
+      margin-inline-start: auto;
+      inline-size: auto;
+    }
+
+    .site-nav .pill-link,
+    .nav-toggle[aria-expanded='true'] + .site-nav .pill-link { inline-size: auto; }
+  }
+</style>
