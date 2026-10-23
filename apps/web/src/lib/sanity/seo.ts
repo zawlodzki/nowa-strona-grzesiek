@@ -37,7 +37,7 @@ function translation(site: Site, doc: PageDoc | PostDoc): SeoPage['translation']
 function serviceStubs(site: Site, language: Language): ServiceStub[] {
   return site.services.flatMap((service) => {
     const page = service.page?._ref ? site.byId.get(service.page._ref) : undefined;
-    return page && page.language === language && service.name ? [{ name: service.name, path: page.path }] : [];
+    return page && page.language === language && service.name && service.description ? [{ name: service.name, description: service.description, path: page.path }] : [];
   });
 }
 
@@ -78,6 +78,15 @@ function crumbs(language: Language, ...trail: Crumb[]): Crumb[] {
 }
 
 export function seoPage(site: Site, route: Route): SeoPage {
+  const page = routeSeoPage(site, route);
+  const person = seoImage(site, site.person?.image);
+  const organization = seoImage(site, site.organization?.logo);
+  if (!site.pages.length && !site.posts.length) return page;
+  if (!person || !organization) throw new Error('Site entity images are missing. Import person, organization and their assets before building content routes.');
+  return { ...page, entityImages: { person, organization } };
+}
+
+function routeSeoPage(site: Site, route: Route): SeoPage {
   const { language, path } = route;
   if (route.kind === 'page') {
     const { page } = route;
@@ -110,7 +119,7 @@ export function seoPage(site: Site, route: Route): SeoPage {
         blog: { name: blog.name, path: BLOG_PATH },
         ...(image && { image }),
         datePublished: post.publishedAt,
-        ...(post.updatedAt && { dateModified: post.updatedAt }),
+        dateModified: post.updatedAt ?? post.publishedAt,
       },
       language, path,
       name: post.title,

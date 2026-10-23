@@ -18,6 +18,8 @@ const props = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href={satoshi} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={erode} as="font" type="font/woff2" crossorigin />
     {props.seo ? <Seo page={props.seo} /> : (
       <>
         <title>{props.title}</title>
@@ -25,8 +27,6 @@ const props = Astro.props;
         {props.noindex && <meta name="robots" content="noindex" />}
       </>
     )}
-    <link rel="preload" href={satoshi} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={erode} as="font" type="font/woff2" crossorigin />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>

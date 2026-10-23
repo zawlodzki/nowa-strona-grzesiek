@@ -53,6 +53,7 @@ function stub(language: Language, s: ServiceStub): Node {
     '@id': nodeId(language, s.path, entity),
     name: s.name,
     url: pageUrl(language, s.path),
+    ...(s.description && { description: s.description, provider: ORGANIZATION }),
   };
 }
 
@@ -250,8 +251,8 @@ export function buildGraph(page: SeoPage): { '@context': 'https://schema.org'; '
     ...part.nodes,
     breadcrumb,
     faqNode(page, part.about === PERSON || part.about === ORGANIZATION ? undefined : part.about),
-    { ...entities.person, ...part.person },
-    entities.organization,
+    { ...entities.person, ...(page.entityImages && { image: imageObject(page.entityImages.person) }), ...part.person },
+    { ...entities.organization, ...(page.entityImages && { logo: imageObject(page.entityImages.organization) }) },
     entities.website,
   ].filter((node): node is Node => node !== undefined);
   return { '@context': 'https://schema.org', '@graph': graph };

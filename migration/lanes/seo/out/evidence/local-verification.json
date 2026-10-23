@@ -1,0 +1,29 @@
+{
+  "crawlUrls": 111,
+  "statusCounts": {
+    "200": 111
+  },
+  "h1Counts": {
+    "1": 111
+  },
+  "sitemapUrls": 104,
+  "jsonldPages": 111,
+  "jsonldIssueCounts": [
+    [
+      "FAQPage: FAQ rich results limited to authoritative gov/health sites since 2023. Still useful for AEO parsing.",
+      80
+    ]
+  ],
+  "jsonldVariantDefinitions": 14,
+  "diffFields": {
+    "lang": 105,
+    "word_count": 22,
+    "in_sitemap": 15,
+    "NEW_ONLY": 6,
+    "h1": 2,
+    "meta_description": 1,
+    "MISSING_IN_NEW": 1
+  },
+  "deployedToStaging": false,
+  "productionImported": false
+}

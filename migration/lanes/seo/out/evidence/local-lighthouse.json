@@ -1,0 +1,74 @@
+[
+  {
+    "url": "http://127.0.0.1:8796/",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-22T18:51:38.632Z",
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "performance": 0.99,
+    "accessibility": 1,
+    "bestPractices": 1,
+    "seo": 0.69,
+    "runtimeError": null
+  },
+  {
+    "url": "http://127.0.0.1:8796/wdrozenie-ai-w-sprzedazy-b2b",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-22T18:52:59.348Z",
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "performance": 0.99,
+    "accessibility": 0.97,
+    "bestPractices": 1,
+    "seo": 0.69,
+    "runtimeError": null
+  },
+  {
+    "url": "http://127.0.0.1:8796/sales-atlas-system",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-22T18:53:15.229Z",
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "performance": 0.99,
+    "accessibility": 1,
+    "bestPractices": 1,
+    "seo": 0.69,
+    "runtimeError": null
+  },
+  {
+    "url": "http://127.0.0.1:8796/blog",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-22T18:53:25.732Z",
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "performance": 0.99,
+    "accessibility": 1,
+    "bestPractices": 1,
+    "seo": 0.69,
+    "runtimeError": null
+  },
+  {
+    "url": "http://127.0.0.1:8796/szkolenie-i-wdrozenie-pipedrive",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-22T18:52:48.696Z",
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "performance": 0.99,
+    "accessibility": 0.97,
+    "bestPractices": 1,
+    "seo": 0.69,
+    "runtimeError": null
+  },
+  {
+    "url": "http://127.0.0.1:8796/blog/salesforce-cena",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-22T18:53:36.279Z",
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "performance": 1,
+    "accessibility": 1,
+    "bestPractices": 1,
+    "seo": 0.69,
+    "runtimeError": null
+  }
+]

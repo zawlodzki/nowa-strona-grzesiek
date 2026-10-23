@@ -2,13 +2,13 @@
 import type { NewsletterSignup } from '../../../../studio/sanity.types';
 import LeadForm from '../forms/LeadForm.astro';
 
-interface Props { data: NewsletterSignup; id?: string; }
-const { data, id = 'newsletter' } = Astro.props;
+interface Props { data: NewsletterSignup; id?: string; headingLevel?: 'h1' | 'h2'; }
+const { data, id = 'newsletter', headingLevel: Heading = 'h2' } = Astro.props;
 const f = (name: string) => `${id}-${name}`;
 ---
 <section id={id} class="content-grid section newsletter" aria-labelledby={f('heading')}>
   <div class="inner">
-    <h2 id={f('heading')} class="type-heading-l">Newsletter Sales <span class="accent">Atlas</span></h2>
+    <Heading id={f('heading')} class="type-heading-l">Newsletter Sales <span class="accent">Atlas</span></Heading>
     {data.body && <p class="body">{data.body}</p>}
     <LeadForm form="newsletter" id={f('form')} visible={['email', 'newsletter']} submitLabel="Zapisuję się" tone="dark" class="signup">
       <div class="field">
@@ -30,7 +30,7 @@ const f = (name: string) => `${id}-${name}`;
     justify-items: start;
     max-inline-size: 44rem;
   }
-  h2 { color: var(--text-on-dark); }
+  :is(h1, h2) { color: var(--text-on-dark); }
   .accent { color: var(--color-secondary-60); }
   .body { color: var(--text-on-dark-muted); max-inline-size: 60ch; }
   .inner > :global(.signup) { inline-size: 100%; }

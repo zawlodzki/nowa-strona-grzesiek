@@ -15,6 +15,9 @@ const args = Object.fromEntries(
   }, []),
 );
 const ORIGIN = new URL(args.origin || 'https://www.zawlodzki.pl').origin;
+const CANONICAL_ORIGIN = new URL(args['canonical-origin'] || ORIGIN).origin;
+const SITE_HOSTS = new Set([ORIGIN, CANONICAL_ORIGIN].map((origin) => new URL(origin).hostname.replace(/^www\./, '')));
+const onTarget = (url) => new URL(`${url.pathname}${url.search}`, ORIGIN).href;
 const OUT = args.out || './crawl-out';
 const MAX = Number(args.max || 2000);
 const SAVE_HTML = !args['no-html'];
@@ -100,7 +103,7 @@ function parse(html, pageUrl) {
     const u = normalize(a, pageUrl);
     if (!u) continue;
     const host = u.hostname.replace(/^www\./, '');
-    if (host === new URL(ORIGIN).hostname.replace(/^www\./, '')) internal.add(u.href);
+    if (SITE_HOSTS.has(host)) internal.add(onTarget(u));
     else external.add(u.origin);
   }
   return {
@@ -125,7 +128,10 @@ async function sitemapUrls(url, seen = new Set()) {
   const { res, status } = await fetchChain(url);
   if (!res || status !== 200) return [];
   const xml = await res.text();
-  const locs = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => decode(m[1]));
+  const locs = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)]
+    .map((m) => normalize(decode(m[1]), url))
+    .filter((location) => location && SITE_HOSTS.has(location.hostname.replace(/^www\./, '')))
+    .map(onTarget);
   if (/<sitemapindex/i.test(xml)) {
     const nested = await Promise.all(locs.map((l) => sitemapUrls(l, seen)));
     return nested.flat();
