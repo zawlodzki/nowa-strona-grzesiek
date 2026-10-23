@@ -98,11 +98,13 @@ Loader nie ginie na etapie wdrożenia. `apps/web/src/layouts/Base.astro` wypisuj
 
 PR #32 to poprzedni raport QA, nie implementacja snippetu. Deploy stagingu po T20 serwuje dokładnie ten HTML, który buduje się z obecnego `main`.
 
-Żadne otwarte zadanie nie ma tego snippetu w `owns`. Układ `apps/web/src/layouts/**` należy do T02, a T02 jest `done`. `apps/web/src/seo/**` należy do T12, też `done`, i obejmuje meta oraz JSON-LD. T21 posiada wyłącznie ten raport i nie może dopisać loadera.
+Żadne zadanie nie ma kroku, który wstawia snippet. `Base.astro` jest w `owns` u T18 (`done`) i nadal u T20 (`blocked`, PR #31 zmergowany, bramka G3 otwarta na 22 różnicach treści). T02 utworzyło `apps/web/src/layouts/**` i jest `done`. T12 posiada `apps/web/src/seo/**` i też jest `done`. To są meta i JSON-LD, nie zgody. T21 posiada wyłącznie ten raport i nie może dopisać loadera.
+
+`Base` nie ma slotu w `<head>`. Dopisek musi trafić do `Base.astro`, przed późniejszymi skryptami. `Seo.astro` i Worker są złym miejscem. Worker nie przepisuje HTML. `tasks.py check` pilnuje nakładania się `owns` tylko przy statusach claimed i review. Dziś T20 jest blocked, więc samo sprawdzenie tablicy nowego claimu by przeszło. Gdy T20 wróci do claimed albo review i nadal będzie posiadać `Base.astro`, check padnie. Nowe zadanie ma najpierw dostać ten plik, a T20 ma go oddać.
 
 ## Wznowienie
 
-1. Nowe zadanie, z prawem zapisu do layoutu, dodaje w `<head>` inline Consent Mode v2 i jeden loader `https://consent.zawlodzki.com/assets/cmp-v1.js`. Bez drugiego snippetu GTM. Sygnały startowe mają być takie jak na produkcji w dniu tego odczytu.
+1. Nowe zadanie dostaje `Base.astro` w `owns`. T20 oddaje ten plik, zanim oba będą claimed albo review. Zadanie dodaje w `<head>`, przed innymi skryptami, inline Consent Mode v2 i jeden loader `https://consent.zawlodzki.com/assets/cmp-v1.js`. Bez drugiego snippetu GTM. Sygnały startowe mają być takie jak na produkcji w dniu tego odczytu.
 2. Po wdrożeniu na staging powtórzyć tę checklistę w przeglądarce z Tag Assistant. Wysłać formularz tylko do mocka albo do osobno zatwierdzonego flow testowego.
 3. Do tego czasu nie traktować macierzy zgód jako zaliczonej. Pole Done when w T21 zostaje puste.
 
