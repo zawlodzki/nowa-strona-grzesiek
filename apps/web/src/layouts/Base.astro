@@ -3,7 +3,9 @@ import '../styles/global.css';
 import erode from '../styles/fonts/Erode-Variable.woff2?url';
 import satoshi from '../styles/fonts/Satoshi-Variable.woff2?url';
 import Seo from '../seo/Seo.astro';
-import type { SeoPage } from '../seo/types.ts';
+import type { Language, SeoPage } from '../seo/types.ts';
+import Header from '../components/site/Header.astro';
+import Footer from '../components/site/Footer.astro';
 
 // Routed pages pass `seo`, which owns the title, description, robots and JSON-LD. Utility pages pass a bare title.
 type Props =
@@ -11,13 +13,30 @@ type Props =
   | { seo?: undefined; title: string; description?: string; noindex?: boolean };
 
 const props = Astro.props;
+const language: Language = props.seo?.language ?? 'pl';
+const pathname = Astro.url.pathname;
 ---
 
 <!doctype html>
-<html lang={props.seo?.language ?? 'pl'}>
+<html lang={language}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline id="zawlodzki-consent-default">
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag('consent', 'default', {
+    security_storage: 'granted',
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+    </script>
+    <link rel="preconnect" href="https://consent.zawlodzki.com" crossorigin>
+    <script is:inline defer src="https://consent.zawlodzki.com/assets/cmp-v1.js?v=20260821-1"></script>
     <link rel="preload" href={satoshi} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={erode} as="font" type="font/woff2" crossorigin />
     {props.seo ? <Seo page={props.seo} /> : (
@@ -30,6 +49,8 @@ const props = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
+    <Header language={language} pathname={pathname} />
     <slot />
+    <Footer language={language} pathname={pathname} />
   </body>
 </html>
