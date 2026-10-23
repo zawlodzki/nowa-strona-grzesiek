@@ -5,7 +5,7 @@ export default defineConfig({
   site: 'https://www.zawlodzki.pl',
   output: 'static',
   trailingSlash: 'never',
-  build: { format: 'file', inlineStylesheets: 'always' },
+  build: { format: 'file' },
   integrations: [{
     name: 'block-catalog',
     hooks: {
