@@ -79,3 +79,11 @@ CI run 39915696220 failed at 07:07:29Z on Portable Text block `0de630e270aa` in 
 Live `https://preview.zawlodzki.pl/` is 401 before a session. The framing policy names `https://zawlodzki.sanity.studio` and `https://www.sanity.io`. The hosted Studio URL redirects into `www.sanity.io` and asks for a login, so this pass did not open Presentation. A local Worker with dummy credentials accepts a session cookie that the client actually sends, then returns the safe 502 page because the token cannot read Sanity. The token is not in the HTML.
 
 Workers Builds Git connection was not inspected. The dashboard client for this run is unauthenticated. The connection steps remain in `apps/web/src/preview/README.md`.
+
+## Approved production test, blocked at 2026-10-23T08:47:16Z
+
+The owner approved one throwaway production document on 2026-10-23. No token with write rights is present. The Sanity CLI is not logged in and Wrangler is not authenticated.
+
+A dry-run mutation, `createIfNotExists` of `_id` `t19-test-permission-probe` with `_type` `page`, was sent to `https://8u2zjhvn.api.sanity.io/v2025-02-19/data/mutate/production?dryRun=true` with no Authorization header. The response was HTTP 403, `Insufficient permissions; permission "create" required`. A query at the same second returned count 0 for that id, `drafts.t19-test-permission-probe`, and titles matching `[T19 TEST]`. The dry run did not commit. No production document was created or deleted, and no deploy, DNS, or GSC action was taken.
+
+Draft iframe refresh and the five-minute publish check remain open. They need a production token that can create, update, publish, unpublish, and delete, plus an interactive Sanity session for Presentation.
