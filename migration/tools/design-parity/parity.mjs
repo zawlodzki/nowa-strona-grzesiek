@@ -151,7 +151,7 @@ export function pixelFact(fields) {
   if (!fields || (fields.plane != null && fields.plane !== 'pixels')) throw new Error('plane');
   const slot = slotById(fields.slot);
   if (!Array.isArray(fields.regions)) throw new Error('regions');
-  if (typeof fields.sbs !== 'string' || !/^img\/[0-9a-f]{16}\.png$/.test(fields.sbs)) throw new Error('sbs');
+  if (typeof fields.sbs !== 'string' || !/(?:^|\/)[0-9a-f]{16}\.png$/.test(fields.sbs)) throw new Error('sbs');
   if (typeof fields.leftHash !== 'string' || fields.leftHash === '') throw new Error('leftHash');
   if (typeof fields.rightHash !== 'string' || fields.rightHash === '') throw new Error('rightHash');
   return freeze({

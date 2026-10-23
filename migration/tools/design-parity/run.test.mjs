@@ -55,6 +55,8 @@ async function stop(server) {
 test('main publishes a report, reprojects without the server, and leaves it on worker-down', { timeout: 120_000 }, async () => {
   const root = await mkdtemp(join(tmpdir(), 'parity-run-'));
   const out = join(root, 'out');
+  const previousHome = process.env.VERIFY_WEB_HOME;
+  process.env.VERIFY_WEB_HOME = join(root, 'verify-web');
   const scratch = join(root, 'scratch');
   const urlMap = join(root, 'url-map.csv');
   const t27 = join(root, 'T27.md');
@@ -95,10 +97,12 @@ test('main publishes a report, reprojects without the server, and leaves it on w
       .find(row => row.plane === 'pixels' && row.width === 1280 && row.slot === 'live-local');
     assert.ok(pixel);
     assert.ok(Array.isArray(pixel.regions));
-    assert.match(pixel.sbs, /^img\/[0-9a-f]{16}\.png$/);
-    const images = readdirSync(join(out, 'img'));
-    assert.ok(images.some(name => /^img\/[0-9a-f]{16}\.png$/.test(`img/${name}`)));
-    assert.equal(existsSync(join(out, pixel.sbs)), true);
+    const shotDir = join(process.env.VERIFY_WEB_HOME, 'evidence', `adhoc-${new URL(origin).port}`, 'design-parity');
+    assert.equal(pixel.sbs.startsWith(`${shotDir}/`), true);
+    assert.match(pixel.sbs, /\/[0-9a-f]{16}\.png$/);
+    assert.equal(existsSync(pixel.sbs), true);
+    assert.equal(existsSync(join(out, 'img')), false);
+    assert.equal(existsSync(join(out, pixel.sbs)), false);
     if (existsSync(scratch)) {
       assert.deepEqual(readdirSync(scratch).filter(name => name.endsWith('.png')), []);
     }
@@ -133,6 +137,8 @@ test('main publishes a report, reprojects without the server, and leaves it on w
     assert.equal(downOut.text().includes('parity: complete'), false);
     assert.deepEqual(readFileSync(join(out, 'report.json')), before);
   } finally {
+    if (previousHome == null) delete process.env.VERIFY_WEB_HOME;
+    else process.env.VERIFY_WEB_HOME = previousHome;
     if (server.listening) await stop(server);
     await rm(root, { recursive: true, force: true });
   }

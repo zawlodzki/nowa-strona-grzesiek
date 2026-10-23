@@ -780,8 +780,23 @@ function reportBody(report, ledger) {
   return Buffer.from(`${JSON.stringify(sortKeys({ ...report, factsHash }))}\n`);
 }
 
-function contentPath(bytes) {
-  return `img/${createHash('sha256').update(bytes).digest('hex').slice(0, 16)}.png`;
+function contentBase(bytes) {
+  return `${createHash('sha256').update(bytes).digest('hex').slice(0, 16)}.png`;
+}
+
+function imageBase(name) {
+  const base = String(name).slice(String(name).lastIndexOf('/') + 1);
+  if (!/^[0-9a-f]{16}\.png$/.test(base)) throw new Error(`image name ${name}`);
+  return base;
+}
+
+function outsideRepo(name) {
+  return name.startsWith('/');
+}
+
+function stagedImage(nextDir, name) {
+  if (outsideRepo(name)) return join(nextDir, 'abs', imageBase(name));
+  return join(nextDir, name);
 }
 
 function collectNames(value, names) {
@@ -812,10 +827,9 @@ function resolveImages(facts, report, images) {
   }
   const resolved = new Map();
   for (const name of names) {
-    if (!/^img\/[0-9a-f]{16}\.png$/.test(name)) throw new Error(`image name ${name}`);
     const bytes = provided.get(name);
     if (!bytes) throw new Error(`missing image ${name}`);
-    if (contentPath(bytes) !== name) throw new Error(`image name ${name}`);
+    if (imageBase(name) !== contentBase(bytes)) throw new Error(`image name ${name}`);
     resolved.set(name, bytes);
   }
   return resolved;
@@ -833,7 +847,13 @@ function treeBytes(dir) {
 
 function deleteUnnamed(outDir, named) {
   const imgDir = join(outDir, 'img');
-  for (const name of readdirSync(imgDir)) {
+  let names = [];
+  try {
+    names = readdirSync(imgDir);
+  } catch (error) {
+    if (!error || error.code !== 'ENOENT') throw error;
+  }
+  for (const name of names) {
     if (!named.has(`img/${name}`)) unlinkSync(join(imgDir, name));
   }
   for (const entry of readdirSync(outDir, { withFileTypes: true })) {
@@ -852,17 +872,27 @@ function stage(outDir, facts, report, images) {
   const ledger = ledgerBytes(facts);
   const body = reportBody(report, ledger);
   try {
-    mkdirSync(join(nextDir, 'img'), { recursive: true });
     for (const [name, bytes] of named) {
-      const file = join(nextDir, name);
+      const file = stagedImage(nextDir, name);
       mkdirSync(dirname(file), { recursive: true });
       writeFileSync(file, bytes);
     }
     writeFileSync(join(nextDir, 'facts.jsonl'), ledger);
     writeFileSync(join(nextDir, 'report.json'), body);
     if (treeBytes(nextDir) > BUDGET) throw fail('budget');
-    mkdirSync(join(outDir, 'img'), { recursive: true });
-    for (const name of named.keys()) copyFileSync(join(nextDir, name), join(outDir, name));
+    const relative = new Set();
+    for (const name of named.keys()) {
+      const from = stagedImage(nextDir, name);
+      if (outsideRepo(name)) {
+        mkdirSync(dirname(name), { recursive: true });
+        copyFileSync(from, name);
+      } else {
+        const dest = join(outDir, name);
+        mkdirSync(dirname(dest), { recursive: true });
+        copyFileSync(from, dest);
+        relative.add(name);
+      }
+    }
     // The published report is the commit point. The previous facts.jsonl stays until this rename lands.
     renameSync(join(nextDir, 'report.json'), join(outDir, 'report.json'));
     renameSync(join(nextDir, 'facts.jsonl'), join(outDir, 'facts.jsonl'));

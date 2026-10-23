@@ -140,19 +140,23 @@ function readLedger(file) {
   return facts;
 }
 
-function loadImages(outDir) {
+function loadImages(outDir, facts) {
   const images = new Map();
   const dir = join(outDir, 'img');
-  let names;
+  let names = [];
   try {
     names = readdirSync(dir);
   } catch (error) {
-    if (error && error.code === 'ENOENT') return images;
-    throw error;
+    if (!error || error.code !== 'ENOENT') throw error;
   }
   for (const name of names) {
     if (!/^[0-9a-f]{16}\.png$/.test(name)) continue;
     images.set(`img/${name}`, readFileSync(join(dir, name)));
+  }
+  for (const fact of facts) {
+    if (!fact || typeof fact.sbs !== 'string' || !fact.sbs.startsWith('/')) continue;
+    if (images.has(fact.sbs)) continue;
+    images.set(fact.sbs, readFileSync(fact.sbs));
   }
   return images;
 }
@@ -173,8 +177,36 @@ async function preflight(origins) {
   }
 }
 
-function imageName(bytes) {
-  return `img/${createHash('sha256').update(bytes).digest('hex').slice(0, 16)}.png`;
+function verifyHome() {
+  const home = process.env.VERIFY_WEB_HOME;
+  if (typeof home === 'string' && home.trim() !== '') return home.replace(/\/$/, '');
+  return join(process.env.TMPDIR || '/tmp', 'verify-web');
+}
+
+function evidenceRunId(local) {
+  let port = '8790';
+  try {
+    const parsed = new URL(local);
+    if (parsed.port) port = parsed.port;
+  } catch {
+    port = '8790';
+  }
+  try {
+    const id = readFileSync(join(verifyHome(), 'runs', port, 'run-id'), 'utf8').trim();
+    if (id) return id;
+  } catch {
+    return `adhoc-${port}`;
+  }
+  return `adhoc-${port}`;
+}
+
+function imageDir(local) {
+  return join(verifyHome(), 'evidence', evidenceRunId(local), 'design-parity');
+}
+
+function imageName(bytes, local) {
+  const file = `${createHash('sha256').update(bytes).digest('hex').slice(0, 16)}.png`;
+  return join(imageDir(local), file);
 }
 
 function pageHash(shot) {
@@ -204,7 +236,7 @@ function comparable(left, right) {
   ];
 }
 
-function factsAtWidth(path, width, pathShots, images) {
+function factsAtWidth(path, width, pathShots, images, local) {
   const diffs = SLOTS.map(slot => {
     const [left, right] = comparable(pathShots[slot.left][width], pathShots[slot.right][width]);
     return { slot, diff: diffPage(left, right) };
@@ -212,7 +244,7 @@ function factsAtWidth(path, width, pathShots, images) {
   const facts = [];
   for (const { slot, diff } of diffs) {
     const bytes = encodeSideBySide(diff);
-    const sbs = imageName(bytes);
+    const sbs = imageName(bytes, local);
     images.set(sbs, bytes);
     facts.push(pixelFact({
       path,
@@ -279,14 +311,14 @@ function removeScratch(dir) {
   }
 }
 
-function buildFacts(paths, captured, images) {
+function buildFacts(paths, captured, images, local) {
   const styles = indexStyle(captured.styleFacts ?? []);
   const facts = [];
   const scratch = scratchDir(captured.shots?.[paths[0]]);
   try {
     for (const path of paths) {
       const pathShots = captured.shots[path];
-      for (const width of SHOTS) facts.push(...factsAtWidth(path, width, pathShots, images));
+      for (const width of SHOTS) facts.push(...factsAtWidth(path, width, pathShots, images, local));
       for (const rule of RULES) {
         for (const origin of ORIGINS) {
           const fact = styles.get(`${path}\0${rule.id}\0${origin}`);
@@ -357,7 +389,7 @@ async function run(argv) {
   const status = readStatus(opts.t27);
   if (opts.reproject) {
     const facts = readLedger(join(opts.out, 'facts.jsonl'));
-    return seal(opts.out, paths, status, facts, loadImages(opts.out));
+    return seal(opts.out, paths, status, facts, loadImages(opts.out, facts));
   }
   await preflight(opts.origins);
   const images = new Map();
@@ -376,7 +408,7 @@ async function run(argv) {
       process.stderr.write(`parity: retry ${path} ${message.split('\n')[0]}\n`);
       captured = await capturePath(captureOpts);
     }
-    facts.push(...buildFacts([path], captured, images));
+    facts.push(...buildFacts([path], captured, images, opts.origins.local));
   }
   return seal(opts.out, paths, status, facts, images);
 }
