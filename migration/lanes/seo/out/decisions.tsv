@@ -1,0 +1,6 @@
+ts	phase	decision	why	evidence	result
+2026-10-23T05:21:06.539774+00:00	verification	Confirmed exact document readback after the network recovered	The immediate import read was incomplete	evidence/development-import-readback.json	161 document contents identical
+2026-10-23T05:21:06.539985+00:00	import	Kept production writes pending explicit approval	AGENTS.md requires approval for the first production write	evidence/production-import-summary.json	production not imported
+2026-10-23T05:21:06.539991+00:00	measurement	Kept the 22 word-count changes open	HTTP and schema checks do not prove content parity	evidence/local-verification.json	G3 incomplete
+2026-10-23T05:21:06.539994+00:00	structure	Kept runtime schema validation strict and repaired utility documents	Noindex input was missing data required by the existing contract	../../../tools/import/pages.py	development build passes
+2026-10-23T05:21:06.539997+00:00	measurement	Localized canonical sitemap links to the target Worker	A local measurement must not fetch the live Webflow site	../../../tools/crawl.test.mjs	regression passes

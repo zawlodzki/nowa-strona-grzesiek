@@ -102,7 +102,7 @@ case "$cmd" in
     [ -z "$newer" ] && say ok "dist is newer than src" || say WARN "dist is stale, rebuild (down + up): $newer"
     code="$(curl -s -o "$RUN/doctor-body.html" -w '%{http_code}' "$BASE/" || true)"
     [ "$code" = 200 ] && say ok "GET / -> 200" || say FAIL "GET / -> $code"
-    grep -q '<title>Grzegorz Zawłodzki</title>' "$RUN/doctor-body.html" 2>/dev/null \
+    grep -Eq '<title>[^<]*(Grzegorz Zawłodzki|Zawłodzki)[^<]*</title>' "$RUN/doctor-body.html" 2>/dev/null \
       && say ok "home page title is this site" || say FAIL "home page title not found; wrong app on this port?"
     [ "$ok" = 1 ] && echo "doctor: healthy ($BASE, run $(run_id))" || { echo "doctor: unhealthy"; exit 1; }
     ;;

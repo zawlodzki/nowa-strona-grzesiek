@@ -156,7 +156,7 @@ def build_post(item, kinds, links, assets, issues, stats):
     extras = schema_extras(f.get('json-ld-extra'), issue)
     if extras:
         post['schemaExtras'] = extras
-    seo = {'_type': 'seo', 'title': squash(f.get('seo-title') or f['name']).strip(), 'description': squash(f.get('seo-description') or f.get('excerpt') or '').strip(), 'noindex': False}
+    seo = {'_type': 'seo', 'title': links.rows[path]['title'], 'description': squash(f.get('seo-description') or f.get('excerpt') or '').strip(), 'noindex': False}
     for field, limit in SEO_LIMITS.items():
         if len(seo[field]) > limit:
             issue(f'seo-{field}-too-long', f'{len(seo[field])} > {limit}')

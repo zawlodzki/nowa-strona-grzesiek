@@ -1,5 +1,7 @@
 # G3 is blocked before production import
 
+This is the initial 2026-10-22 baseline. [The repair report](g3-repairs.md) supersedes its local-readiness findings. Production import and staging deployment remain unperformed.
+
 Verified on 2026-10-22 against `https://zawlodzki-web.zawlodzki.workers.dev` and public Sanity read APIs. Source revision is `a0997ed`. This report does not approve import, deployment or cutover.
 
 ## Result

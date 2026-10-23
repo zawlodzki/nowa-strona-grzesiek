@@ -51,6 +51,7 @@ export interface Offer {
 /** Reference to a service or course defined on its own page. Emitted as a typed stub. */
 export interface ServiceStub {
   name: string;
+  description?: string;
   path: SitePath;
   entity?: 'service' | 'course';
 }
@@ -116,6 +117,7 @@ export type SeoPage = PageKind & {
   /** Trail from home to this page, home included. Fewer than two crumbs emits no BreadcrumbList. */
   breadcrumbs: Crumb[];
   primaryImage?: Image;
+  entityImages?: { person: Image; organization: Image };
   dateModified?: string;
   faq?: FaqEntry[];
   /** The same page in the other language. Only real pairs, so hreflang never points at a missing page. */

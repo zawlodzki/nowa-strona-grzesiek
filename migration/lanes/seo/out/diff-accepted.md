@@ -9,3 +9,7 @@ These are outstanding differences, not an approved migration result. See [the G3
 Staging's `X-Robots-Tag: noindex, nofollow` is required by the host policy. `diff-crawls.mjs` does not compare that header, so it does not account for any of these 115 rows. Evaluate meta robots again on the complete build before accepting a robots difference.
 
 Earlier tasks describe candidate intentional changes, including the Sales Atlas company-size correction, typed JSON-LD and path-based blog pagination. Those changes still need verification on the complete staging build. Listing them here does not accept unseen output.
+
+## Full-content local repair result
+
+The repaired local comparison is separate from the initial placeholder baseline. It has 152 rows, including 22 word-count changes that still need review. The 80 title and 80 OG-title mismatches from the first full-content build were fixed. [The repair report](g3-repairs.md) lists the remaining categories and their evidence. None of these local results substitutes for the deployed-staging gate.

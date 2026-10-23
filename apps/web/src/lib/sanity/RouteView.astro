@@ -11,14 +11,13 @@ interface Props { route: Route; }
 const { route } = Astro.props;
 const site = await loadSite();
 const seo = seoPage(site, route);
-// A page that opens with article text is a document (legal pages); its title is the H1, as on the live site.
-const titled = route.kind === 'page' && route.page.sections?.[0]?._type === 'richText';
+const titled = route.kind === 'page' && !['hero', 'feature', 'newsletterSignup', 'contactForm'].includes(route.page.sections?.[0]?._type ?? '');
 ---
 <Base seo={seo}>
   {route.kind === 'page' && (
     <main>
       {titled && <header class="content-grid section page-title"><h1>{route.page.title}</h1></header>}
-      <Sections site={site} sections={route.page.sections ?? []} />
+      <Sections site={site} sections={route.page.sections ?? []} headingLevel={titled ? 'h2' : 'h1'} />
     </main>
   )}
   {route.kind === 'post' && <PostView site={site} post={route.post} />}

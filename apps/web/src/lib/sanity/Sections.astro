@@ -15,11 +15,11 @@ import type { Media } from '../../../../studio/sanity.types';
 import type { ResolvedLogo } from '../../components/ui/block-types';
 import { resolveImage, type PageDoc, type Site } from './site.ts';
 
-interface Props { site: Site; sections: NonNullable<PageDoc['sections']>; }
-const { site, sections } = Astro.props;
+interface Props { site: Site; sections: NonNullable<PageDoc['sections']>; headingLevel: 'h1' | 'h2'; }
+const { site, sections, headingLevel } = Astro.props;
 const { links, images } = site;
 const mediaImage = (media: Media | undefined) => (media?.kind === 'image' ? resolveImage(site, media.image) : undefined);
-const firstHero = sections.findIndex((section) => section._type === 'hero');
+const firstHeading = sections.findIndex((section) => section._type === 'hero' || section._type === 'feature' || section._type === 'newsletterSignup' || section._type === 'contactForm');
 const person = site.person;
 const contact = {
   ...(person?.email && { email: person.email }),
@@ -30,7 +30,7 @@ const contact = {
 {sections.map((section, index) => {
   switch (section._type) {
     case 'hero':
-      return <Hero data={section} image={resolveImage(site, section.image)} headingLevel={index === firstHero ? 'h1' : 'h2'} />;
+      return <Hero data={section} image={resolveImage(site, section.image)} headingLevel={index === firstHeading ? headingLevel : 'h2'} />;
     case 'logoStrip': {
       const logos = (section.logos ?? []).flatMap((ref): ResolvedLogo[] => {
         const logo = site.logos.get(ref._ref);
@@ -40,7 +40,7 @@ const contact = {
       return <LogoStrip data={section} logos={logos} />;
     }
     case 'feature':
-      return <Feature data={section} image={mediaImage(section.media)} links={links} images={images} />;
+      return <Feature data={section} image={mediaImage(section.media)} links={links} images={images} headingLevel={index === firstHeading ? headingLevel : 'h2'} />;
     case 'contentSection':
       return <ContentSection data={section} image={mediaImage(section.media)} links={links} images={images} />;
     case 'pricing':
@@ -65,7 +65,7 @@ const contact = {
     case 'contactForm':
       return <ContactForm data={section} contact={contact} />;
     case 'newsletterSignup':
-      return <NewsletterSignup data={section} />;
+      return <NewsletterSignup data={section} headingLevel={index === firstHeading ? headingLevel : 'h2'} />;
     case 'richText':
       return <RichText data={section} links={links} images={images} />;
   }

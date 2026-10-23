@@ -9,7 +9,7 @@ origin=https://zawlodzki-web.zawlodzki.workers.dev
 printf 'Private evidence directory: %s\n' "$scratch"
 git rev-parse HEAD > "$scratch/revision.txt"
 
-node migration/tools/crawl.mjs --origin "$origin" --out "$scratch/staging"
+node migration/tools/crawl.mjs --origin "$origin" --canonical-origin https://www.zawlodzki.pl --out "$scratch/staging"
 diff_status=0
 node migration/tools/diff-crawls.mjs migration/00-inventory/live-site "$scratch/staging" --out "$scratch/diff.csv" || diff_status=$?
 test "$diff_status" -le 1

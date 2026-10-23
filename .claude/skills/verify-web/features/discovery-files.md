@@ -22,7 +22,7 @@ Crawlers and AI agents find the site's content through four generated files: the
 Preconditions:
 
 - `web.sh doctor --port 8790` prints `doctor: healthy`.
-- The build fetched the Sanity `production` dataset. Until the importers (T15, T16) have run, it holds no pages or posts, so the urlset, the feed and the llms.txt sections are empty but valid. Record content claims as failed: precondition missing (T15/T16), and still prove routes, content types and shape.
+- The build fetched the intended Sanity dataset. For local integration use `SANITY_DATASET=development` on `web.sh up`; production remains the default. Until the importers (T15, T16) have run, it holds no pages or posts, so the urlset, the feed and the llms.txt sections are empty but valid. Record content claims as failed: precondition missing (T15/T16), and still prove routes, content types and shape.
 
 - **Routes and types.** Run `web.sh probe <path> --port 8790 --host www.zawlodzki.pl` for `/sitemap.xml`, `/sitemap-pl.xml`, `/robots.txt`, `/blog/rss.xml` and `/llms.txt`. Each gives `200`, with content type `application/xml` for the three XML files and `text/plain; charset=utf-8` for the two text files, and `x-robots-tag` `-` on the production host.
 - **Well-formed XML.** Run `xmllint --noout "$VERIFY_WEB_HOME/evidence/<run-id>/<label>.body"` on the three XML bodies. It prints nothing on success.
