@@ -1,4 +1,5 @@
-// Build-time GROQ over the public CDN API. Every page, post and discovery file reads through here.
+// Build-time GROQ over the live public API. Every page, post and discovery file reads through here.
+// Not apicdn: a webhook build starts seconds after a publish or delete, and the CDN can still serve the old result.
 
 const PROJECT_ID = '8u2zjhvn';
 const API_VERSION = 'v2025-02-19';
@@ -7,7 +8,7 @@ const API_VERSION = 'v2025-02-19';
 export const dataset = process.env.SANITY_DATASET || 'production';
 
 export async function sanityQuery(query: string): Promise<unknown> {
-  const url = new URL(`https://${PROJECT_ID}.apicdn.sanity.io/${API_VERSION}/data/query/${dataset}`);
+  const url = new URL(`https://${PROJECT_ID}.api.sanity.io/${API_VERSION}/data/query/${dataset}`);
   url.searchParams.set('query', query);
   url.searchParams.set('perspective', 'published');
   const response = await fetch(url);

@@ -95,6 +95,10 @@ Grzesiek ran this test. Times below are Europe/Warsaw.
 | 11:03:37 | Published page `t19-test-20261023090331`, title `[T19 TEST]`, noindex, created | Recorded by the owner |
 | 11:04:38 | First HTTP 200 at `https://zawlodzki-web.zawlodzki.workers.dev/t19-test-20261023090331` | Pass, about 61 seconds. Response had a noindex meta and `X-Robots-Tag`. The path was absent from `sitemap-pl.xml` |
 | 11:04:44 | Published id and `drafts.` id deleted. GROQ count 0 on `api` and `apicdn` | Dataset no longer has the document |
-| 11:20:04 | Same staging URL fetched again | Fail. HTTP 200, more than 15 minutes after the delete. No successful rebuild had removed it |
+| 11:04:44 | Webhook attempt `atm-3L5aGIAjBhhwSaSIWo5QH0qR20U`, HTTP 200 | Delete was delivered. Cloudflare queued build `4e6a09d2`, `already_exists: false` |
+| 11:05:08 | Build `4e6a09d2` generated `/t19-test-20261023090331.html`, then succeeded at 11:05:18 | The build read the deleted page from `apicdn.sanity.io` |
+| 11:20:04 | Same staging URL fetched again | Fail. HTTP 200, more than 15 minutes after the delete |
+| 11:34:56 | Manual build `3754da65` from `main` started through the Workers Builds API | Succeeded at 11:36:30, version `b080811a`, no `t19` route in the log |
+| 11:36:36 | Same staging URL fetched again | HTTP 404. `/` still 200 |
 
-There is no webhook receiver in the repository. Staging serves the last deployed assets, so the page remains until a later build completes. The README filter now matches a published delete through `before()._type` and `_id` and does not dereference `after()`. The required Sanity webhook settings are in the T19 Handoff. Draft iframe refresh remains unverified. The five-minute publish leg passed. The delete leg did not.
+The webhook was not the cause. Its trigger and filter sent the delete, and Cloudflare started a fresh build. That build queried the API CDN 24 seconds after the delete. The CDN caches each query on its own, so the owner's count query could return 0 while the build's route query still returned the page. The build then deployed the stale route and reported success. `apps/web/src/lib/sanity/client.ts` now queries `api.sanity.io`. A local `pnpm --filter web build` with that change built 117 pages with no `t19` route. The webhook settings were left unchanged. Draft iframe refresh remains unverified. The five-minute publish leg passed. The delete leg needs a rerun after this branch merges, because Workers Builds builds `main`.

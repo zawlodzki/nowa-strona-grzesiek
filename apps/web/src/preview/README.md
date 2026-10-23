@@ -62,7 +62,7 @@ Workers Builds connects this repository to `zawlodzki-web` on `main`. Preview br
 
 Create a Workers Builds deploy hook for that branch. Create a Sanity GROQ webhook in the same dataset, with POST as the method and the hook URL as its target. There is no deploy-hook handler in this repository. The webhook's HTTP request is the rebuild. Enable create, update, and delete. Leave draft events and content-release version events disabled. Sanity already ignores `drafts.` and `versions.` documents while those two settings are off.
 
-On a delete, `after()` is null. A filter that reads only `_type` or `after()._type` does not match, so the hook never runs and the previous static deploy keeps serving the page. Read the type from `before()` first, and test the id that Sanity still exposes as `_id`.
+On a delete, `after()` is null. Read the type from `before()` first, and test the id that Sanity still exposes as `_id`.
 
 ```groq
 !(_id in path("drafts.**"))
@@ -82,5 +82,7 @@ The Workers Builds hook ignores the body. The projection only has to evaluate, i
 In the webhook preview, a published page create, update, and delete match. A draft edit and a `versions.` document do not. Keep the hook URL only in the Sanity webhook configuration, never in source, screenshots or handoff text. A direct Workers Builds hook uses its unguessable URL for authorization. If signature verification is required later, add a separately reviewed relay that verifies Sanity signatures before forwarding to the secret URL.
 
 The staging Worker serves the last deployed asset set. It does not read Sanity on the request. A delete that does not produce a later successful build leaves the old HTML in place. Cloudflare also folds a second POST into the current build while that build is still queued or initializing, and Sanity treats the HTTP 200 as delivered. The attempts log for the webhook is the record of whether a delete was sent. The build history for `zawlodzki-web` is the record of whether a new deploy happened.
+
+The static build queries `api.sanity.io`, not `apicdn.sanity.io` (`apps/web/src/lib/sanity/client.ts`). A webhook build starts within seconds of the change. The API CDN caches each query separately and can still return the result from before a publish or delete. A build that reads it then deploys the old content and reports success. That happened on 2026-10-23: the delete at 09:04:44Z was delivered, build `4e6a09d2` ran at 09:05:08Z, and it still generated the deleted page. When a deploy succeeds but the content is old, check the build log for the generated routes before changing the webhook.
 
 After setup, publish a harmless approved content change, record its Sanity timestamp and the Cloudflare build result, then fetch the staging page until the new text appears. Record the elapsed time and confirm it is below five minutes. Repeat with one referenced dependency. Editing only a draft must not create a production build. These are live acceptance checks. This code and local tests do not establish that the hook exists or that the five-minute target has passed.
