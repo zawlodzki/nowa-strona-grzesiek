@@ -1,0 +1,12 @@
+{
+  "verifiedAt": "2026-10-23T07:10:02.526669+00:00",
+  "dataset": "production",
+  "documents": 161,
+  "images": 1489,
+  "files": 21,
+  "identicalToReviewedContent": true,
+  "contentSha256": "4147ac02294dfae9b5ea4679e95b82e4bc4d6ff987c09519c8e57f3a34a48669",
+  "allAssetUrlsTargetProduction": true,
+  "productionMapUrls": 1838,
+  "approvedArchiveSha256": "56ab5d498b61406f9f96f9c5f0f6d5c9337c6d2d835f0a41e267ab5bca6db846"
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": "text/html",
+    "title": "CRM, automatyzacja i AI dla sprzeda\u017cy B2B | Grzegorz Zaw\u0142odzki",
+    "metaNoindex": false
+  },
+  {
+    "path": "/blog",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": "text/html",
+    "title": "Blog | Grzegorz Zaw\u0142odzki",
+    "metaNoindex": false
+  },
+  {
+    "path": "/podziekowanie-newsletter",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": "text/html",
+    "title": "Podziekowanie newsletter",
+    "metaNoindex": true
+  },
+  {
+    "path": "/index.html",
+    "status": 301,
+    "location": "https://zawlodzki-web.zawlodzki.workers.dev/",
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": null,
+    "title": null,
+    "metaNoindex": false
+  },
+  {
+    "path": "/search",
+    "status": 301,
+    "location": "https://zawlodzki-web.zawlodzki.workers.dev/blog",
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": null,
+    "title": null,
+    "metaNoindex": false
+  },
+  {
+    "path": "/O-MNIE",
+    "status": 404,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": "text/html",
+    "title": "Nie znaleziono strony",
+    "metaNoindex": true
+  },
+  {
+    "path": "/no-such-page",
+    "status": 404,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": "text/html",
+    "title": "Nie znaleziono strony",
+    "metaNoindex": true
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": "application/xml",
+    "title": null,
+    "metaNoindex": false
+  },
+  {
+    "path": "/sitemap-pl.xml",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": "application/xml",
+    "title": null,
+    "metaNoindex": false
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": "text/plain",
+    "title": null,
+    "metaNoindex": false
+  },
+  {
+    "path": "/blog/rss.xml",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": "application/xml",
+    "title": "Grzegorz Zaw\u0142odzki",
+    "metaNoindex": false
+  },
+  {
+    "path": "/llms.txt",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow",
+    "contentType": "text/plain",
+    "title": null,
+    "metaNoindex": false
+  }
+]

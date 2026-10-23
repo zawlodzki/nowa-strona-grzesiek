@@ -8,7 +8,7 @@ import Diagram from '../diagrams/Diagram.astro';
 import Button from '../ui/Button.astro';
 import Icon from '../ui/Icon.astro';
 import MediaImage from '../ui/MediaImage.astro';
-interface Props extends Resolved { data: Feature; image?: ResolvedImage; headingLevel?: 'h2' | 'h3'; }
+interface Props extends Resolved { data: Feature; image?: ResolvedImage; headingLevel?: 'h1' | 'h2' | 'h3'; }
 const { data, image, links, images, headingLevel: Heading = 'h2' } = Astro.props;
 const hasMedia = Astro.slots.has('media') || image || (data.media?.kind === 'diagram' && data.media.key);
 ---

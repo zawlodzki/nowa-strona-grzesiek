@@ -1,0 +1,60 @@
+{
+  "verifiedAt": "2026-10-23T07:37:16.520114+00:00",
+  "origin": "https://zawlodzki-web.zawlodzki.workers.dev",
+  "worker": "zawlodzki-web",
+  "version": "9d098050-1822-4d84-945f-ac03d671f3a7",
+  "sourceCommit": "ec8f801a74796243d2745e8fcf74c4be662c8562",
+  "dataset": "production",
+  "keepPaths200": 108,
+  "crawlUrls": 111,
+  "statusCounts": {
+    "200": 111
+  },
+  "h1Counts": {
+    "1": 111
+  },
+  "sitemapUrls": 104,
+  "jsonldPages": 111,
+  "jsonldIssueCounts": [
+    [
+      "FAQPage: FAQ rich results limited to authoritative gov/health sites since 2023. Still useful for AEO parsing.",
+      80
+    ]
+  ],
+  "jsonldVariantDefinitions": 14,
+  "webflowCdnReferencesInHtml": 0,
+  "indexableTitlesMatchContract": true,
+  "gscCasesEnding200": 6,
+  "diffFields": {
+    "lang": 105,
+    "word_count": 22,
+    "in_sitemap": 15,
+    "NEW_ONLY": 6,
+    "h1": 2,
+    "meta_description": 1,
+    "MISSING_IN_NEW": 1
+  },
+  "publicWwwStillWebflow": true,
+  "diffDisposition": {
+    "accepted": 130,
+    "open": 22
+  },
+  "mobileBrowser": {
+    "surface": "Final deployed Pipedrive page",
+    "width": 375,
+    "scrollWidth": 375,
+    "h1": 1,
+    "failedLoadedImages": 0,
+    "unloadedLazyImages": 4,
+    "externalStylesheets": 4
+  },
+  "lighthouseFinalScores": {
+    "ai": 97,
+    "atlas": 95,
+    "blog": 97,
+    "home": 100,
+    "pipedrive": 98,
+    "post": 98
+  },
+  "lighthouseFinalSampleGatePass": true
+}

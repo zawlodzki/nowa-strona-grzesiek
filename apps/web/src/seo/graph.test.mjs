@@ -14,6 +14,23 @@ const SAMPLES = ['home', 'service', 'course', 'post', 'contact', 'about'];
 const fixture = (name) => JSON.parse(readFileSync(here(`./fixtures/${name}.json`), 'utf8'));
 const HAS_INVENTORY = existsSync(here('../../../../migration/00-inventory/live-site/jsonld'));
 
+test('imported entity images replace legacy CDN URLs while preserving entity identities', () => {
+  const page = fixture('home');
+  page.entityImages = {
+    person: { url: 'https://cdn.sanity.io/images/project/production/person.webp', alt: 'Person' },
+    organization: { url: 'https://cdn.sanity.io/images/project/production/logo.svg', alt: 'Organization' },
+  };
+  page.primaryImage = page.entityImages.person;
+  page.services = [{ name: 'Example service', path: '/example', description: 'Service description.' }];
+  const graph = buildGraph(page)['@graph'];
+  assert.equal(graph.find((node) => node['@id'] === entities.person['@id']).image.url, page.entityImages.person.url);
+  assert.equal(graph.find((node) => node['@id'] === entities.organization['@id']).logo.url, page.entityImages.organization.url);
+  assert.ok(!JSON.stringify(graph).includes('website-files.com'));
+  const offered = graph[0].mainEntity.itemListElement[0].itemOffered;
+  assert.equal(offered.description, 'Service description.');
+  assert.deepEqual(offered.provider, { '@id': entities.organization['@id'] });
+});
+
 function walk(value, visit) {
   if (Array.isArray(value)) return value.forEach((v) => walk(v, visit));
   if (value && typeof value === 'object') {

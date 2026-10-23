@@ -695,8 +695,14 @@ def build_page(row, meta, plan, keys, links, assets, issues, stats, docs, regist
         if lost:
             losses.append({'section': start, 'type': kind, 'heading': sections[start].get('heading') or sections[start].get('title') if start < len(sections) else None, 'words': len(lost), 'sample': ' '.join(lost[:25])})
     heading = next((s.get('heading') for s in sections if s['_type'] == 'hero'), None) or page.h1
+    description = meta.get('seoDescription')
+    if not description and row['indexable'] != 'yes':
+        description = clean(' '.join([plan_title(heading, meta, row)] + [text(node) for _, _, node in plan]))
+        if len(description) > SEO_LIMITS['description']:
+            description = description[:SEO_LIMITS['description'] + 1].rsplit(' ', 1)[0].rstrip(' ,;:')
+        issues.append({'path': path, 'kind': 'seo-description-derived', 'detail': 'Noindex page; derived from visible content.'})
     seo = compact({
-        '_type': 'seo', 'title': meta.get('seoTitle') or row['title'], 'description': meta.get('seoDescription'),
+        '_type': 'seo', 'title': meta.get('seoTitle') or row['title'], 'description': description,
         'ogImage': assets.image('contentImage', meta['ogImage'], meta.get('seoTitle') or row['title']) if (meta.get('ogImage') or '').startswith('https://') else None,
         'noindex': row['indexable'] != 'yes',
     })
