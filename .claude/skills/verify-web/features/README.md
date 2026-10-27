@@ -31,6 +31,9 @@ Each feature file starts with an H1 and one paragraph describing the user-visibl
 
 ## Features
 
+- [Consent loader and defaults (T26)](../../../../migration/tasks/T26.md) covers script order, the five Consent Mode signals, a single c15t loader, and banner choices. The Handoff records the local-origin CORS limitation. Use the [consent QA checklist](../../../../migration/lanes/tracking/out/consent-qa.md) for T21 tracking checks.
+- [Navigation and footer (T27)](../../../../migration/tasks/T27.md) covers desktop and mobile navigation, keyboard open and close, current links, language-specific `siteSettings`, and exactly one consent-management control.
+- [Design parity](./design-parity.md) compares every keep URL on live, local, and staging at 1280px and 375px, and checks computed styles against the refine rules.
 - [Pages render](./pages.md) covers the home page and every `keep` URL from `contracts/url-map.csv` once routes exist.
 - [Canonical URLs and redirects](./canonical-urls.md) covers 301 canonicalization of `.html`, `/index` and trailing slashes, uppercase paths that stay 404, and `redirect-301` rows.
 - [Not found page](./not-found.md) covers unknown paths returning 404 with the branded page.
