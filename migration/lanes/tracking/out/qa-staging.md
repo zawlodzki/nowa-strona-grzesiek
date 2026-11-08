@@ -1,119 +1,140 @@
 # T21. Wyniki QA zgód na stagingu
 
-Stan z 2026-10-23, odczyty od 08:47 do 08:55 UTC. Wynik całego zadania jest **blocked**. Witryna na stagingu jest już pełnym serwisem, a `/kontakt` zwraca 200. Brakuje skryptu zgód i GTM, więc macierz Tag Assistant, baner, zapis wyboru i wypełnienie atrybucji nie mają czego sprawdzać.
+Stan z 2026-11-08, przebieg od 21:10 do 21:17 UTC. Wynik całego zadania jest **blocked** z dwóch powodów:
 
-Origin c15t dopuszczony 2026-10-22 nadal odpowiada. Szczegóły tamtej zmiany i ścieżka cofnięcia są w sekcji przebiegu 2026-10-22.
+1. **Dostarczenie formularza.** `POST /api/form` zwraca 403. Worker `zawlodzki-web` nie ma żadnych sekretów: brakuje `TURNSTILE_SECRET_KEY` i `N8N_FORM_WEBHOOK`. Build nie dostał też `PUBLIC_TURNSTILE_SITE_KEY`, więc widget używa testowego klucza Cloudflare.
+2. **Czyszczenie przy cofnięciu zgody.** Albacross i piksel Meta zapisują swoje cookies ponownie w starym dokumencie, już po czyszczeniu przez loader. Szczegóły są w sekcji „Cofnięcie zgody”.
+
+Pozostałe punkty checklisty T06 przechodzą: inicjalizacja, macierz czterech stanów, zachowanie wyboru, dialog z klawiatury i kontrakt pól 6/26/12/32.
 
 ## Sesja
 
 | Pole | Wartość |
 |---|---|
 | Origin | `https://zawlodzki-web.zawlodzki.workers.dev` |
-| Rewizja źródła | `99c0c33`, ten sam kod witryny co merge T20 (`852825f`) |
-| Przeglądarka | Playwright 1.56.1, headless Chromium, binarka `/usr/bin/google-chrome-stable`, nowy kontekst na każdy przypadek |
-| Okno po `DOMContentLoaded` | 4 s, bez `networkidle` (poprzednia próba z `networkidle` przekroczyła 45 s) |
-| Tag Assistant | Rozszerzenie nie było podłączone. Zastępstwem jest log żądań, `dataLayer` i `window.__zawlodzkiConsentState` |
-| Zrzuty | `/tmp/t21-evidence/*.png`. Nie wchodzą do repozytorium, bo T21 posiada tylko ten plik |
+| Kod | `main` na `06dc06f`, zawiera T26 (loader zgód) i T27 (nawigacja, stopka, `[data-c15t-open]`) |
+| Wdrożenie | Wersja Workera `7be7767b`, utworzona 2026-11-08 21:06:51 UTC, minutę po pushu do `main`. Ten przebieg niczego nie wdrażał |
+| Przeglądarka | Chrome 157 przez chrome-devtools MCP. Każdy stan w osobnym izolowanym kontekście (`t21-deny`, `t21-meas`, `t21-mkt`, `t21-full`, `t21-kbd`), bez rozszerzeń |
+| Tag Assistant | Nieużyty. Izolowany profil nie ma konta Google. Zastępstwem są: `dataLayer`, `window.__zawlodzkiConsentState`, `performance` (hosty zasobów), `cookieStore` (nazwy i domeny cookies) i lista żądań DevTools |
+| GTM | `GTM-P5V3CJ5`, opublikowana wersja `54`. Odczyt z `gtm.js` jest zgodny ze snapshotem T06, więc tabela tagów obowiązuje bez zmian |
+| Loader | `cmp-v1.js?v=20260821-1`, bajt w bajt taki sam jak `00-inventory/live-site/third-party-raw/cmp-v1.js` |
+| Dane testowe | UTM `qa-t21` i syntetyczne `QA-SYNTH-*` dla `gclid`, `fbclid`, `li_fat_id` i `msclkid`. Formularz wysłany z adresem `qa-t21@example.com` |
+| Zrzuty | `migration/lanes/tracking/private/t21-20261108/` (gitignored, poza repozytorium) |
 
-Nie wysłano formularza do n8n. Żądanie `POST /api/form` przeglądarka przerwała lokalnie, zanim doszło do Workera.
-
-## Strony
-
-Trzy odpowiedzi stagingu są bajt w bajt tym samym HTML-em co lokalny Worker `wrangler dev` z rewizji `99c0c33` (`web.sh doctor` zdrowy, port 8790).
-
-| Ścieżka | HTTP | Title | SHA-256 (12) | Długość |
-|---|---|---|---|---|
-| `/` | 200 | CRM, automatyzacja i AI dla sprzedaży B2B \| Grzegorz Zawłodzki | `1e2045811a17` | 86622 |
-| `/szkolenie-i-wdrozenie-pipedrive` | 200 | Wdrożenie Pipedrive CRM z procesem i szkoleniem \| Zawłodzki | `4fe5ada976e2` | 94485 |
-| `/kontakt` | 200 | Kontakt \| Grzegorz Zawłodzki | `a1c1b155be7e` | 27297 |
-
-Nagłówek stagingu na każdej z tych ścieżek to `x-robots-tag: noindex, nofollow`. Fraza szkieletu `Nowa wersja strony w budowie.` nie występuje. `/uslugi` zwraca 404. To nie jest ścieżka `keep` w `url-map.csv`.
-
-Lokalne sondy `web.sh probe`:
-
-```text
-127.0.0.1  /  200  -  noindex, nofollow  text/html; charset=utf-8  CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki
-127.0.0.1  /kontakt  200  -  noindex, nofollow  text/html; charset=utf-8  Kontakt | Grzegorz Zawłodzki
-127.0.0.1  /szkolenie-i-wdrozenie-pipedrive  200  -  noindex, nofollow  text/html; charset=utf-8  Wdrożenie Pipedrive CRM z procesem i szkoleniem | Zawłodzki
-```
+Zgodę na ten przebieg użytkownik dał 2026-11-08 w czacie. Obejmowała macierz zgód z zapisami do c15t i odsłonami u dostawców z hosta `workers.dev` oraz jedną testową wysyłkę formularza do n8n.
 
 ## Inicjalizacja
 
-Sprawdzone na `/`, na stronie usługowej i na `/kontakt`, oraz na `/` z testowym `utm_source`, `utm_medium` i syntetycznym `gclid`.
+Strony `/`, `/szkolenie-i-wdrozenie-pipedrive` i `/kontakt` sprawdzone w źródle HTML (`curl`) i w przeglądarce.
 
 | Punkt checklisty | Wynik | Stan rzeczywisty |
 |---|---|---|
-| Inline `#zawlodzki-consent-default` przed loaderem | Fail | Brak elementu w HTML i w DOM |
-| `security_storage: granted` | Fail | Brak skryptu, który mógłby ustawić sygnał |
-| `analytics_storage`, `ad_storage`, `ad_user_data`, `ad_personalization` równe `denied` | Fail | J.w. |
-| Loader `https://consent.zawlodzki.com/assets/cmp-v1.js` raz, bez drugiego snippetu GTM | Fail | Zero żądań do `consent.zawlodzki.com` i do `googletagmanager.com` |
-| `/api/c15t/init` z originu stagingu, bez błędu CORS | Pass dla samego API | `GET` z nagłówkiem `Origin` zwraca 200 i `access-control-allow-origin` równy dokładnie originowi stagingu. Strona tego adresu nie woła |
-| GTM jako skrypt necessary, także przed wyborem | Fail | Brak żądania kontenera. `gtag` jest `undefined` |
-| `__zawlodzkiConsentState` na starcie | Fail | Wartość jest `null`, nie `{necessary: true, measurement: false, marketing: false}` |
-| Zmiana preferencji, potem Consent Mode, potem `consent-update` | Blocked | Nie ma banera ani przycisku preferencji |
-| `[data-c15t-open]` i dialog z klawiatury | Fail / blocked | Liczba węzłów `[data-c15t-open]` to 0. Dialogów i węzłów `c15t` też jest 0. Nie ma czego otworzyć z klawiatury |
+| Inline `#zawlodzki-consent-default` przed loaderem i GTM | Pass | Inline jest na bajcie 135, loader na 638. Snippetu GTM w HTML nie ma |
+| `security_storage: granted` | Pass | W inline i w `consent default` w `dataLayer` |
+| Cztery sygnały analityczne i reklamowe `denied` | Pass | J.w. |
+| Loader raz, bez drugiego GTM | Pass | Jeden `cmp-v1.js` z `defer`. Jeden `gtm.js?id=GTM-P5V3CJ5`, wstrzyknięty przez loader |
+| `/api/c15t/init` bez CORS | Pass | `GET` 200, preflight `OPTIONS` 204. W konsoli nie ma błędu CORS |
+| GTM jako `necessary` przed wyborem | Pass | `gtm.js`, `gtm.dom` i `gtm.load` są w `dataLayer` przy otwartym banerze |
+| `__zawlodzkiConsentState` na starcie | Pass | `necessary: true`, `measurement: false`, `marketing: false`, `policyId: zawlodzki_global_opt_in_v2`, `schemaVersion: 1` |
+| Najpierw Consent Mode, potem `consent-update` | Pass | Kolejność w każdym stanie: `consent update`, potem `event consent-update` (gtag), potem obiekt `{event: 'consent-update', c15t_consent_update: true}` |
+| Zapisany wybór przed tagami | Pass | Po przeładowaniu w stanie measurement drugie `consent default` ma `analytics_storage=granted` przed `gtm.js` |
 
-Tekst DOM strony głównej, kontaktowej i lokalnego zrzutu po skryptach nie zawiera `Akceptuj`, `cookie`, `plików` ani `c15t`. Dolne 220 pikseli zrzutów `/`, strony usługowej i `/kontakt` mają jasne tło (średnia około 240, 240, 240). To nie jest ciemny baner.
-
-Produkcja `https://www.zawlodzki.pl/` w tym samym oknie czasu nadal ma jeden loader `cmp-v1.js`, jeden `[data-c15t-open]` i inline ze sygnałami `security_storage=granted` oraz czterema pozostałymi `denied`. Snippetu `googletagmanager.com/gtm.js` w HTML produkcji nie ma. GTM ma ładować loader, zgodnie z planem.
-
-Hosty żądań na stagingu, przed jakąkolwiek zgodą, to tylko `zawlodzki-web.zawlodzki.workers.dev`, `cdn.sanity.io` i `challenges.cloudflare.com`. Liczba żądań do hostów pomiaru i reklam (GTM, GA, Ads, DoubleClick, Meta, Clarity, Albacross, Leadfeeder, LinkedIn, Bing) wynosi 0. Ciasteczka i `localStorage` są puste.
-
-Sam brak żądań nie zalicza bramki. Trzy tagi z tabeli (łączący konwersje, GA4, Google Ads) mają wystartować jeszcze przy odmowie, w trybie denied. One też nie wystartowały, bo kontenera nie ma.
+Baner to `role="dialog"`, `aria-modal="true"`, z nazwą „Ciasteczka na tej stronie”. Ma przyciski „Dostosuj”, „Odrzucam opcjonalne” i „Akceptuję wszystkie”. Zrzut: `01-deny-banner.png`.
 
 ## Macierz 11 tagów
 
-| Stan | Wynik | Dowód |
-|---|---|---|
-| Przed zgodą i przy odmowie | Fail | Kontener GTM nie przychodzi. Nie da się porównać Fired i Not fired z tabelą T06 |
-| Sama zgoda measurement | Blocked | Brak banera i brak `dataLayer` |
-| Sama zgoda marketing | Blocked | J.w. |
-| Obie zgody | Blocked | J.w. |
-| Odświeżenie i zachowany wybór | Blocked | Po wejściu z UTM i syntetycznym click ID magazyn zostaje pusty. Nie ma zapisanego wyboru do odtworzenia |
-| Cofnięcie measurement, potem marketing, potem obu | Blocked | Brak UI i brak ciasteczek `_ga*`, `_fbp`, `_gcl*` do skasowania |
+Hosty zasobów po wyborze (bez `cdn.sanity.io` i własnego originu):
 
-Wersji opublikowanego kontenera GTM nie odczytano, bo kontener się nie ładuje. Snapshot T06 mówi o wersji 54. Tego nie potwierdzono ani nie obalono na stagingu.
+| Stan | GTM, GA4, Ads | Clarity | Albacross | Leadfeeder (2 skrypty) | Meta | Cookies | Wynik |
+|---|---|---|---|---|---|---|---|
+| Przed zgodą i odmowa | GA4 tylko z `gcs=G100`, bez cookies | Brak | Brak | Brak | Brak | tylko `zawlodzki-consent` | Pass |
+| Sam measurement | GA4 analytics granted, reklamy denied | `clarity.ms/tag/gjd8ua7x7t` | `serve.albacross.com`, `new-collect.albacross.com` | `lftracker_v1_Xbp1…`, `lftracker_v1_p1e0…` | Brak | `_ga`, `_ga_FPQCV0H550`, `nQ_*` | Pass |
+| Sam marketing | Ads, remarketing, DoubleClick. Brak `_ga` | Brak | Brak | Brak | `fbevents.js`, config piksela | `_gcl_au`, `_gcl_aw`, `_fbp`, `_fbc` | Pass |
+| Obie zgody | GA4 z `gcs=G111`, Ads | Tak | Tak | Tak, oba | Tak | Wszystkie powyższe | Pass |
 
-## Formularz
+To zgadza się z tabelą T06, z dwoma zastrzeżeniami:
 
-`/kontakt` ma dwa formularze, `main-contact` i `newsletter`. Strona główna i usługowa mają formularz landingowy. W HTML jest komplet 32 nazw atrybucji z checklisty T06. Nie ma braków ani nazw spoza listy. Wartości tych pól są puste także po wejściu z UTM i syntetycznym click ID.
+- Trzy tagi Attribution oceniono po efekcie, czyli po polach formularza i kluczach `zaw_attribution_*`, a nie po statusie Fired.
+- Oba skrypty Leadfeeder ładują się razem pod measurement. Mapowanie nazw tagów na identyfikatory pozostaje niepotwierdzone, bo nie było UI Tag Assistant.
 
-Widoczny widget to Turnstile (`challenges.cloudflare.com/turnstile/v0/api.js`). Pole tokenu jest niepuste przed kliknięciem. Wartości tokenu nie zapisano.
+Żądania `pagead2.googlesyndication.com/ccm/collect` w tym środowisku kończyły się `ERR_CONNECTION_REFUSED` po stronie lokalnej sieci. To nie jest błąd stagingu.
 
-Próba wysłania formularza kontaktowego użyła syntetycznego adresu i tematu. Playwright przerwał `POST /api/form` w przeglądarce (metoda POST, host stagingu, ścieżka `/api/form`, 3801 bajtów treści). Do Workera i do n8n żądanie nie wyszło. Strona została na `/kontakt`. Tekst regionu statusu to `Brak połączenia. Sprawdź internet i spróbuj ponownie.` To jest gałąź błędu klienta, nie dowód dostarczenia.
-
-| Punkt | Wynik |
+| Punkt per stan | Wynik |
 |---|---|
-| 32 nazwy pól w formularzu | Pass |
-| Przy odmowie brak utrwalenia UTM i click ID | Niezaliczone jako ścieżka CMP. Pola zostały puste, bo filler `cmp-v1.js` nie działa, a nie dlatego, że użytkownik odmówił |
-| Wypełnienie po measurement i po marketing | Blocked |
-| `conversion_timestamp` i flagi z chwili wysłania | Blocked. Przed kliknięciem pola atrybucji były puste. Treści POST nie dekodowano, żeby nie zapisywać tokenu Turnstile |
-| `attribution_policy_id` i schemat `1` | Blocked |
-| TTL 90 dni, sesja 30 minut, wygasłe rekordy testowe | Blocked |
-| Turnstile i dostarczenie do n8n | Blocked dla dostarczenia. Widget się ładuje. Wysyłki do produkcyjnego webhooka nie wykonano |
+| Fired / Not fired względem tabeli | Pass, przez hosty i skrypty. Bez statusów Tag Assistant |
+| Brak niezamierzonych duplikatów | Pass. Jeden `gtm.js`, jeden loader, po jednym `fbevents.js` i `clarity` |
+| Odmowa: brak opcjonalnych cookies i atrybucji | Pass. `gclid` i `fbclid` z URL nie trafiły do storage |
+| Zgoda: tylko dozwolone kategorie | Pass |
+| Odświeżenie i nowa karta zachowują wybór | Pass. Sprawdzone przeładowaniem i nową kartą w tym samym kontekście. Zamknięcia całej przeglądarki nie symulowano |
+| `[data-c15t-open]` i dialog z klawiatury | Pass. Przycisk „Zarządzaj zgodami” w stopce otwiera preferencje. Przełączniki to `role="switch"` z `aria-checked`. Space przełącza „Analityka”, Enter na „Zapisuję wybór” zapisuje. Tab krąży wewnątrz banera |
 
-## Przyczyna
+## Kontrakt 32 pól formularza
 
-Loader nie ginie na etapie wdrożenia. `apps/web/src/layouts/Base.astro` wypisuje charset, viewport, fonty, SEO i favicon. Nie wypisuje `#zawlodzki-consent-default` ani `cmp-v1.js`. `apps/web/src/worker/index.ts` nie przepisuje HTML. `wrangler.jsonc` nie ma zmiennej GTM ani CMP. `git log -S cmp-v1` nie ma commitu, który dodaje loader pod `apps/web`. Jedyny kod zgód w aplikacji to nazwy pól w `apps/web/src/worker/form.ts` i puste inputy w `LeadForm.astro`.
+| Stan | Pola atrybucji | Wynik |
+|---|---|---|
+| Odmowa | 6 (grupa „Zawsze”) | Pass |
+| Sam measurement | 26, bez grupy marketing | Pass |
+| Sam marketing | 12, bez grupy measurement | Pass |
+| Obie zgody | 32 | Pass |
 
-PR #32 to poprzedni raport QA, nie implementacja snippetu. Deploy stagingu po T20 serwuje dokładnie ten HTML, który buduje się z obecnego `main`.
+- Po measurement `first_touch_*` i `last_touch_*` mają źródło `qa-t21` i kampanię z URL. Po przejściu `/` → `/kontakt` jest `previous_page=/`, `current_page=/kontakt` i `session_page_count=2`. Pass.
+- Po marketing wypełnione są `gclid`, `fbclid`, `li_fat_id` i `msclkid` z URL. `gbraid` i `wbraid` są puste, bo nie było ich w URL. Pass.
+- `conversion_timestamp` jest pusty do chwili wysłania. W payloadzie ma wartość `21:13:46.773Z`, czyli moment submitu, a nie wejścia na stronę (`21:13:12`). Flagi zgody to `granted`/`granted`, `attribution_policy_id=zawlodzki_global_opt_in_v2`, `attribution_schema_version=1`. Pass.
+- Payload `POST /api/form?form=main-contact` (multipart) ma 36 kluczy: 32 pola atrybucji, `email`, `phone`, `message` i `cf-turnstile-response`. Pass.
+- TTL 90 dni, reset sesji po 30 minutach i rekordy wygasłe nie były testowane. Blocked, do dopisania w kolejnym przebiegu z ręcznie postarzonymi rekordami storage.
 
-Żadne zadanie nie ma kroku, który wstawia snippet. `Base.astro` jest w `owns` u T18 (`done`) i nadal u T20 (`blocked`, PR #31 zmergowany, bramka G3 otwarta na 22 różnicach treści). T02 utworzyło `apps/web/src/layouts/**` i jest `done`. T12 posiada `apps/web/src/seo/**` i też jest `done`. To są meta i JSON-LD, nie zgody. T21 posiada wyłącznie ten raport i nie może dopisać loadera.
+## Dostarczenie formularza: blocked
 
-`Base` nie ma slotu w `<head>`. Dopisek musi trafić do `Base.astro`, przed późniejszymi skryptami. `Seo.astro` i Worker są złym miejscem. Worker nie przepisuje HTML. `tasks.py check` pilnuje nakładania się `owns` tylko przy statusach claimed i review. Dziś T20 jest blocked, więc samo sprawdzenie tablicy nowego claimu by przeszło. Gdy T20 wróci do claimed albo review i nadal będzie posiadać `Base.astro`, check padnie. Nowe zadanie ma najpierw dostać ten plik, a T20 ma go oddać.
+`POST /api/form?form=main-contact` zwrócił **403** z treścią „Weryfikacja antyspamowa nie powiodła się…”. Nic nie trafiło do n8n.
+
+Przyczyna leży w konfiguracji stagingu, nie w kodzie:
+
+- `LeadForm.astro` bierze klucz witryny z `PUBLIC_TURNSTILE_SITE_KEY` w czasie buildu. Gdy go brak, używa testowego klucza Cloudflare `1x00000000000000000000AA`. Widget pokazuje pasek „Tylko do testowania”, a token ma postać `XXXX.DUMMY.TOKEN.XXXX`.
+- `wrangler secret list --name zawlodzki-web` zwraca `[]`. Bez `TURNSTILE_SECRET_KEY` weryfikacja w `apps/web/src/worker/form.ts` odrzuca każdy token. Bez `N8N_FORM_WEBHOOK` nie ma dokąd przekazać zgłoszenia.
+
+Żeby odblokować staging, trzeba (z decyzją użytkownika):
+
+1. Mieć widget Turnstile z hostem `zawlodzki-web.zawlodzki.workers.dev`, a przed cutoverem także `www.zawlodzki.pl` i apex.
+2. Ustawić klucz witryny jako `PUBLIC_TURNSTILE_SITE_KEY` w buildzie stagingu i produkcji.
+3. Ustawić `TURNSTILE_SECRET_KEY` i `N8N_FORM_WEBHOOK` jako sekrety Workera.
+4. Powtórzyć jedną testową wysyłkę i sprawdzić 303 na `/podziekowanie-konsultacja` oraz wpis w n8n.
+
+Ten sam brak zablokowałby formularze po cutoverze. To warunek T22.
+
+## Cofnięcie zgody
+
+Sesja `t21-full`: najpierw cofnięty measurement, potem marketing, oba przez „Zarządzaj zgodami” w stopce.
+
+| Punkt | Wynik | Stan rzeczywisty |
+|---|---|---|
+| Cofnięcie measurement przeładowuje stronę i zachowuje odmowę | Pass | Po przeładowaniu `analytics_storage=denied`, a Clarity, Albacross i Leadfeeder się nie ładują |
+| Usunięcie `_ga*`, `_gid`, `_gat*`, `_clck`, `_clsk`, `nQ_*`, `_lfa*` | **Fail** | Zostały `_ga`, `_ga_FPQCV0H550`, `nQ_cookieId` i `nQ_userVisitId` |
+| Usunięcie `zaw_attribution_measurement_v1` i sesji atrybucji | Pass | Klucze zniknęły. Formularz ma 12 pól i nie odtwarza measurement |
+| Cofnięcie marketing: przeładowanie, sygnały reklamowe denied, tagi zatrzymane | Pass | Meta i Ads się nie ładują. Formularz ma 6 pól |
+| Usunięcie `_gcl*`, `_fbp`, `_fbc`, `zaw_attribution_marketing_v1`, `_gcl_ls` | **Fail** dla cookies, pass dla storage | Klucze `localStorage` zniknęły, łącznie z `lastExternalReferrer*`. Zostały cookies `_gcl_aw`, `_gcl_au`, `_fbp`, `_fbc` |
+| Brak starych click ID w payloadzie | Pass | Po cofnięciu formularz ma tylko 6 pól |
+| Ponowne otwarcie | Pass | Nowa karta: stan denied, nowy `gclid` z URL się nie zapisał |
+
+Przyczyny, ustalone z kodu loadera i z dat ważności cookies:
+
+- **Domena `workers.dev` (tylko staging).** GA i Google Ads ustawiają cookies na `zawlodzki.workers.dev`. Lista domen czyszczenia w loaderze (`g5()`) to host, `.host` oraz `zawlodzki.pl` i `zawlodzki.com` z kropką i bez. `zawlodzki.workers.dev` na niej nie ma, więc tych cookies nie da się usunąć ze stagingu. Na `www.zawlodzki.pl` GA używa `.zawlodzki.pl`, które jest na liście. To artefakt stagingu, a nie dowód błędu na produkcji.
+- **Ponowny zapis po czyszczeniu (prawdopodobnie także produkcja).** Czyszczenie działa w `onBeforeConsentRevocationReload`, tuż przed `location.reload()`. `nQ_userVisitId` (host-only) dostał ważność 30 minut od chwili cofnięcia, a `nQ_cookieId` 365 dni od tej chwili. Ręczne `document.cookie` z wygaśnięciem usuwa `nQ_*` od razu. Wniosek: Albacross zapisał cookies ponownie w starym dokumencie, po czyszczeniu i przed przeładowaniem. Tak samo `_fbp` i `_fbc` przy cofnięciu marketing dostały znacznik czasu z chwili cofnięcia. Przy drugim cofnięciu `nQ_cookieId` zniknął, bo Albacross już się nie ładował.
+
+Ten sam loader i ten sam kontener GTM działają na produkcji. Nie da się tego naprawić w `apps/web`. Poprawka należy do loadera c15t: na przykład wyłączyć `fbq`/Albacross przed czyszczeniem albo ponowić czyszczenie po przeładowaniu, gdy kategoria jest `false`. Loader to zewnętrzny system, tylko do odczytu w tej migracji. Zalecany krok to ten sam test na `https://www.zawlodzki.pl` po osobnej zgodzie użytkownika (zapisuje zgodę w produkcyjnym c15t i wysyła odsłony). To potwierdzi, czy różnica jest regresją migracji, czy istniejącym zachowaniem.
 
 ## Wznowienie
 
-1. Nowe zadanie dostaje `Base.astro` w `owns`. T20 oddaje ten plik, zanim oba będą claimed albo review. Zadanie dodaje w `<head>`, przed innymi skryptami, inline Consent Mode v2 i jeden loader `https://consent.zawlodzki.com/assets/cmp-v1.js`. Bez drugiego snippetu GTM. Sygnały startowe mają być takie jak na produkcji w dniu tego odczytu.
-2. Po wdrożeniu na staging powtórzyć tę checklistę w przeglądarce z Tag Assistant. Wysłać formularz tylko do mocka albo do osobno zatwierdzonego flow testowego.
-3. Do tego czasu nie traktować macierzy zgód jako zaliczonej. Pole Done when w T21 zostaje puste.
+1. Konfiguracja Turnstile i n8n dla `zawlodzki-web`, opisana wyżej. Wymaga decyzji użytkownika, bo to sekrety i klucz widgetu.
+2. Po niej jedna testowa wysyłka formularza i dopisanie wyniku tutaj.
+3. Decyzja użytkownika co do ponownego zapisu cookies po cofnięciu: test porównawczy na produkcji i zgłoszenie do loadera c15t albo świadoma akceptacja.
+4. Opcjonalnie: TTL i rekordy wygasłe przez postarzone wpisy storage, statusy Tag Assistant w profilu z kontem Google.
 
-## Przebieg 2026-10-22
+## Przebieg 2026-10-23 (nieaktualny)
 
-Poprzedni agent (`codex-gpt61-q7m2`) zapisał zmianę originu c15t i zablokował zadanie, bo staging był wtedy szkieletem, a `/kontakt` zwracał 404. Ten opis szkieletu i 404 jest nieaktualny od redeployu po T20. Reszta tamtego przebiegu zostaje aktualna.
+Staging nie miał wtedy loadera zgód ani GTM, bo `Base.astro` ich nie emitował. Naprawiło to T26 (loader w `<head>`), zmergowane przed tym przebiegiem. Wnioski z 2026-10-23 o braku inline Consent Mode, loadera i `[data-c15t-open]` są nieaktualne.
 
-Użytkownik zezwolił wtedy na dopisanie `https://zawlodzki-web.zawlodzki.workers.dev` do `trustedOrigins` i `legacyOrigins` na VPS. Bez wildcardu i bez localhost. Obraz `zawlodzki/c15t:2.3.0-t21-origin-20261022`. Kopia do cofnięcia jest na VPS pod `/opt/stacks/update-backups/20261022T183233Z-t21-c15t-origin`.
+## Przebieg 2026-10-22: origin c15t
 
-Odczyty `/api/c15t/init` po zmianie to 200 z dokładnym ACAO dla stagingu, `www` i apex. Obcy origin zostaje na 403. Preflight `OPTIONS /api/c15t/subjects` zwrócił 204. Zapisy i odczyty czterech stanów oraz cofnięcia zwróciły 200. Powstały syntetyczne podmioty. Nie usuwano ich. Ten przebieg nie powtarzał zapisów.
+Ta zmiana jest nadal aktualna. Użytkownik zezwolił na dopisanie `https://zawlodzki-web.zawlodzki.workers.dev` do `trustedOrigins` i `legacyOrigins` na VPS, bez wildcardu i bez localhost. Obraz `zawlodzki/c15t:2.3.0-t21-origin-20261022`. Kopia do cofnięcia jest na VPS pod `/opt/stacks/update-backups/20261022T183233Z-t21-c15t-origin`.
 
-Wtedy HTML strony głównej nie miał żadnego `script`, a `/kontakt` zwracał 404. Test API nie zastępował checklisty przeglądarkowej. Tego zdania ten przebieg nie odwołuje.
+Odczyty `/api/c15t/init` po zmianie zwracały 200 z dokładnym ACAO dla stagingu, `www` i apex. Obcy origin zostawał na 403. Powstały wtedy syntetyczne podmioty, których nie usuwano. Przebieg 2026-11-08 dopisał kolejne zapisy zgód z izolowanych kontekstów (`POST /api/c15t/subjects` 200).
