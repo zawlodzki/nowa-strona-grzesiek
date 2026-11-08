@@ -1,0 +1,11 @@
+---
+import source from './logo-mark.svg?raw';
+
+const graphic = source.replace('<svg ', '<svg aria-hidden="true" focusable="false" ');
+---
+<span class="logo-mark" aria-hidden="true" set:html={graphic} />
+<style>
+  .logo-mark { display: flex; }
+  .logo-mark :global(svg) { display: block; fill: currentColor; }
+  .logo-mark :global(path) { fill: currentColor; }
+</style>
