@@ -1,8 +1,9 @@
 ---
-import type { ContactForm as ContactFormData, Faq as FaqData, Pricing as PricingData, PortableText as PortableTextValue, RichText as RichTextData, Testimonials as TestimonialsData } from '../../../../studio/sanity.types';
+import type { ContactForm as ContactFormData, Faq as FaqData, Pricing as PricingData, PortableText as PortableTextValue, PostList as PostListData, RichText as RichTextData, Testimonials as TestimonialsData } from '../../../../studio/sanity.types';
 import ContactForm from '../../components/blocks/ContactForm.astro';
 import Faq from '../../components/blocks/Faq.astro';
 import NewsletterSignup from '../../components/blocks/NewsletterSignup.astro';
+import PostList, { type PostListItem } from '../../components/blocks/PostList.astro';
 import Pricing from '../../components/blocks/Pricing.astro';
 import RichText from '../../components/blocks/RichText.astro';
 import Testimonials, { type ResolvedTestimonial } from '../../components/blocks/Testimonials.astro';
@@ -116,9 +117,46 @@ const richWorst: RichTextData = {
 const contact = { email: 'kontakt@example.com', telephone: '+48 500 000 000', image: placeholder(480, 600, 'PORTRET', 'Grzegorz Zawłodzki') };
 const landing: ContactFormData = { _type: 'contactForm', variant: 'landing', tagline: 'Kontakt', heading: 'Skontaktuj się ze mną', showDetails: true, formId: 'landing-contact' };
 const full: ContactFormData = { _type: 'contactForm', variant: 'full', heading: 'Kontakt', showDetails: false, formId: 'main-contact' };
+// T30: the full variant with every optional field. Addresses are example.com placeholders.
+const channel = (kind: NonNullable<NonNullable<NonNullable<NonNullable<ContactFormData['channels']>['groups']>[number]['items']>[number]['kind']>, label: string, href: string) => ({ _type: 'contactChannel' as const, _key: k(), kind, label, href });
+const fullRich: ContactFormData = {
+  _type: 'contactForm', variant: 'full', tagline: 'Formularz kontaktowy', heading: 'Umów się na rozmowę testową', formId: 'main-contact', showDetails: true,
+  intro: 'Wstęp testowy w pierwszej linii.\nDruga linia wstępu po znaku nowej linii.',
+  calendar: { heading: 'Kalendarz testowy', text: 'Tekst testowy przed odnośnikiem do kalendarza -', link: { _type: 'link', label: 'przejdź do kalendarza ↗︎', href: 'https://example.com/kalendarz' } },
+  consultation: { heading: 'Jak działa rozmowa testowa?', body: 'Pierwsza linia opisu rozmowy testowej.\nDruga linia opisu.\nTrzecia linia opisu.' },
+  channels: { tagline: 'Kontakt', heading: 'Wolisz napisać bezpośrednio?', groups: [
+    { _type: 'contactChannelGroup', _key: k(), title: 'Serwisy społecznościowe', note: 'Opis testowy grupy ikon.', items: [channel('github', 'GitHub', 'https://example.com/github'), channel('linkedin', 'LinkedIn', 'https://example.com/linkedin'), channel('x', 'X', 'https://example.com/x'), channel('youtube', 'YouTube', 'https://example.com/youtube'), channel('instagram', 'Instagram', 'https://example.com/instagram')] },
+    { _type: 'contactChannelGroup', _key: k(), title: 'Bezpośredni kontakt', note: 'Opis testowy grupy z adresami.', items: [channel('email', 'kontakt@example.com', 'mailto:kontakt@example.com'), channel('phone', '+48 500 000 000', 'tel:+48500000000'), channel('signal', 'Signal', 'https://example.com/signal'), channel('whatsapp', 'WhatsApp', 'https://example.com/whatsapp')] },
+  ] },
+};
+const fullWorst: ContactFormData = {
+  ...fullRich, tagline: undefined, heading: `Nagłówek ze słowem ${longWord}`,
+  intro: `Bardzo długi wstęp z nierozdzielnym słowem ${longWord}.`,
+  calendar: { heading: 'Odnośnik bez tekstu wstępnego', link: { _type: 'link', label: `etykieta ${longWord}`, href: 'https://example.com/kalendarz' } },
+  consultation: { heading: 'Brak treści ukrywa ten blok', body: '' },
+  channels: { groups: [
+    { _type: 'contactChannelGroup', _key: k(), title: `Grupa ${longWord}`, items: [channel('email', `${longWord.toLowerCase()}@bardzo-dluga-domena-przykladowa.example.com`, `mailto:${longWord.toLowerCase()}@example.com`), channel('phone', 'Niepoprawny adres jest pomijany', 'javascript:alert(1)')] },
+    { _type: 'contactChannelGroup', _key: k(), title: 'Grupa bez poprawnych kanałów jest pomijana', items: [channel('signal', 'Signal', 'javascript:alert(1)')] },
+  ] },
+};
+const landingRich: ContactFormData = { ...landing, intro: 'Wstęp testowy pod nagłówkiem wariantu landing.', calendar: fullRich.calendar, channels: fullRich.channels };
+
+const posts: PostListItem[] = [
+  { _id: 'p1', title: 'Wpis testowy numer jeden o procesie sprzedaży', href: '/blog/wpis-testowy-1', publishedAt: '2026-09-08', image: placeholder(1200, 630, 'WPIS 1') },
+  { _id: 'p2', title: 'Wpis testowy numer dwa', href: '/blog/wpis-testowy-2', publishedAt: '2026-09-02', image: placeholder(1200, 630, 'WPIS 2') },
+  { _id: 'p3', title: 'Wpis testowy bez miniatury', href: '/blog/wpis-testowy-3', publishedAt: '2026-08-25' },
+  { _id: 'p4', title: 'Czwarty wpis jest ucinany przez limit 3', href: '/blog/wpis-testowy-4', publishedAt: '2026-08-20', image: placeholder(1200, 630, 'WPIS 4') },
+];
+const postsWorst: PostListItem[] = [
+  { _id: 'w1', title: `Bardzo długi tytuł wpisu ze słowem ${longWord}, który musi się zawinąć w karcie`, href: '/blog/dlugi', image: placeholder(400, 900, 'PIONOWY') },
+  { _id: 'w2', title: 'Jo', href: '/blog/jo', image: placeholder(1600, 300, 'PANORAMA') },
+  { _id: 'w3', title: '   ', href: '/blog/pusty-tytul' },
+  { _id: 'w4', title: '日本語のタイトルとpolski tytuł', href: '/en/blog/mixed' },
+];
+const postList: PostListData = { _type: 'postList', tagline: 'Newsletter', heading: 'Ostatnie wpisy', kind: 'newsletter', limit: 3 };
 
 const catalog = [
-  ['pricing', 'Pricing'], ['testimonials', 'Testimonials'], ['faq', 'Faq'], ['contact', 'ContactForm'], ['newsletter', 'NewsletterSignup'], ['richtext', 'RichText'],
+  ['pricing', 'Pricing'], ['testimonials', 'Testimonials'], ['faq', 'Faq'], ['contact', 'ContactForm'], ['newsletter', 'NewsletterSignup'], ['posts', 'PostList'], ['richtext', 'RichText'],
 ] as const;
 ---
 <Base title="Bloki B: katalog" noindex>
@@ -159,6 +197,22 @@ const catalog = [
     <ContactForm data={full} id="kontakt-full" />
     <h2 class="ds-label content-grid"><span>ContactForm: najgorszy przypadek (długi e-mail, bez nagłówka)</span></h2>
     <ContactForm data={{ _type: 'contactForm', showDetails: true }} contact={{ email: `${longWord.toLowerCase()}@bardzo-dluga-domena-przykladowa.example.com`, telephone: '+48 000 000 000' }} id="kontakt-worst" />
+
+    <h2 class="ds-label content-grid"><span>ContactForm: full ze wstępem, kalendarzem, opisem konsultacji i kanałami (T30)</span></h2>
+    <ContactForm data={fullRich} contact={contact} id="kontakt-full-rich" />
+    <h2 class="ds-label content-grid"><span>ContactForm: full, najgorszy przypadek pól T30 (pusta treść, zły adres, długie słowa)</span></h2>
+    <ContactForm data={fullWorst} contact={contact} id="kontakt-full-worst" />
+    <h2 class="ds-label content-grid"><span>ContactForm: landing ze wstępem; kalendarz i kanały są tylko dla full, więc się nie renderują</span></h2>
+    <ContactForm data={landingRich} contact={contact} id="kontakt-landing-rich" />
+
+    <h2 class="ds-label content-grid" id="ds-posts"><span>PostList: typowe dane (limit 3 z 4 wpisów)</span></h2>
+    <PostList data={postList} posts={posts} id="wpisy" />
+    <h2 class="ds-label content-grid"><span>PostList: bez nadtytułu i nagłówka, limit 12</span></h2>
+    <PostList data={{ _type: 'postList', kind: 'blog', limit: 12 }} posts={posts} id="wpisy-bare" />
+    <h2 class="ds-label content-grid"><span>PostList: najgorszy przypadek (długi tytuł, dziwne proporcje, pusty tytuł pomijany)</span></h2>
+    <PostList data={{ ...postList, heading: `Nagłówek ${longWord}`, limit: 12 }} posts={postsWorst} id="wpisy-worst" />
+    <h2 class="ds-label content-grid"><span>PostList: brak wpisów (nic się nie renderuje)</span></h2>
+    <PostList data={postList} posts={[]} id="wpisy-empty" />
 
     <h2 class="ds-label content-grid" id="ds-newsletter"><span>NewsletterSignup: typowe dane</span></h2>
     <NewsletterSignup data={{ _type: 'newsletterSignup', body: 'Raz w tygodniu dostaniesz bezpłatnie jedno gotowe rozwiązanie, jak wykorzystać nowoczesne technologie w sprzedaży B2B.' }} />

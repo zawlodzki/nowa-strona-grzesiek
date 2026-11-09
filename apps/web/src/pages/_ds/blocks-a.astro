@@ -37,12 +37,15 @@ const fixtures = states.map(({ key, label }) => {
   const link = { _type: 'link', href: '/kontakt', label: worst ? longLabel : 'Porozmawiajmy o wdrożeniu' } satisfies NonNullable<Hero['cta']>;
   const logos: ResolvedLogo[] = Array.from({ length: count }, (_, index) => ({ _id: `sample-logo-${index}`, name: `Test ${index + 1}`, image: sampleImage(`Test ${index + 1}`, index % 2 ? 320 : 100, index % 2 ? 80 : 100) }));
   const hero = { _type: 'hero', heading, body, tagline: empty ? undefined : 'Katalog komponentów', badges: empty ? [] : worst ? ['Przykładowa odznaka z bardzo długą, przetłumaczoną nazwą programu partnerskiego', '日本語のテスト'] : ['Odznaka testowa'], cta: empty ? undefined : link } satisfies Hero;
-  const logoStrip = { _type: 'logoStrip', variant: 'clients', title: 'Logotypy testowe, bez rekomendacji klientów', logos: logos.map((logo) => ({ _type: 'reference', _ref: logo._id, _key: logo._id })) } satisfies LogoStrip;
+  // T30: tagline and intro appear in demo and worst; the one-item set keeps the title only, to show the block without them.
+  const withIntro = key === 'demo' || worst;
+  const logoStrip = { _type: 'logoStrip', variant: 'clients', tagline: withIntro ? (worst ? 'Nadtytuł testowy z bardzo długą nazwą grupy klientów w kilku branżach' : 'Nadtytuł testowy') : undefined, title: 'Logotypy testowe, bez rekomendacji klientów', intro: withIntro ? (worst ? `${longBody}\nDruga linia wstępu po znaku nowej linii.` : 'Wstęp testowy: jedno zdanie o skali firm, z którymi pracuje zespół.') : undefined, logos: logos.map((logo) => ({ _type: 'reference', _ref: logo._id, _key: logo._id })) } satisfies LogoStrip;
+  const toolsStrip = { ...logoStrip, variant: 'tools', tagline: undefined, title: withIntro ? undefined : 'Test narzędzi, podpis nad logotypami', intro: withIntro ? (worst ? longBody : 'Wstęp testowy nad logotypami narzędzi') : undefined } satisfies LogoStrip;
   const feature = { _type: 'feature', heading: worst ? longHeading : 'Proces dopasowany do zespołu', body: paragraph(body), mediaSide: 'right', bullets: empty ? [] : worst ? [longBody, 'bartholomew.fitzgerald@northwind-industries-holdings.example.com', 'Jo'] : ['Wspólne zasady pracy', 'Informacje w jednym miejscu'], cta: empty ? undefined : link } satisfies Feature;
   const content = { _type: 'contentSection', heading: 'Co otrzymuje zespół', intro: paragraph(body), layout: 'list', items: Array.from({ length: empty ? 0 : key === 'one' ? 1 : 3 }, (_, index) => ({ _type: 'contentItem', _key: `item-${index}`, title: worst ? ['Aleksandra Wiśniewska-Kowalczyk', 'Jo', '日本語とjęzyk polski'][index] : ['Proces sprzedaży', 'Konfiguracja CRM', 'Zasady przekazania'][index], text: worst ? longBody : 'Przykładowy rezultat pracy zespołu.', icon: index === 2 ? 'close' : 'check', link })) } satisfies ContentSection;
   const cta = { _type: 'ctaBand', heading, body: empty ? undefined : body, cta: empty ? undefined : link } satisfies CtaBand;
   const promo = { _type: 'promoCard', title: 'Sales Atlas System', points: empty ? [] : worst ? [longBody, 'bartholomew.fitzgerald@northwind-industries-holdings.example.com'] : ['Przykładowa treść katalogu metody pracy.'], target: empty ? undefined : { _type: 'reference', _ref: target._id } } satisfies PromoCard;
-  return { key, label, hero, logoStrip, logos, feature, content, cta, promo, empty };
+  return { key, label, hero, logoStrip, toolsStrip, logos, feature, content, cta, promo, empty };
 });
 const layouts: NonNullable<ContentSection['layout']>[] = ['list', 'cards', 'twoColumn', 'checklist'];
 ---
@@ -58,7 +61,7 @@ const layouts: NonNullable<ContentSection['layout']>[] = ['list', 'cards', 'twoC
       <p class="dataset-label">Zestaw {fixture.label}</p>
       <HeroBlock data={fixture.hero} image={fixture.empty ? undefined : image} headingLevel="h2" />
       <LogoStripBlock data={fixture.logoStrip} logos={fixture.logos} />
-      <LogoStripBlock data={{ ...fixture.logoStrip, variant: 'tools', title: 'Test narzędzi, podpis nad logotypami' }} logos={fixture.logos.slice(0, fixture.empty ? 0 : 4)} />
+      <LogoStripBlock data={fixture.toolsStrip} logos={fixture.logos.slice(0, fixture.empty ? 0 : 4)} />
       <FeatureBlock data={fixture.feature} image={fixture.empty ? undefined : image} />
       <FeatureBlock data={{ ...fixture.feature, heading: 'Wariant z mediami po lewej', mediaSide: 'left' }} image={fixture.empty ? undefined : image} />
       <FeatureBlock data={{ ...fixture.feature, heading: 'Wariant bez mediów' }} />

@@ -1,0 +1,77 @@
+---
+import type { PostList } from '../../../../studio/sanity.types';
+import type { ResolvedImage } from '../portable-text/types';
+import Icon from '../ui/Icon.astro';
+import BlockSection from '../ui/BlockSection.astro';
+
+/** One post card. The page query picks posts of `data.kind`, newest `publishedAt` first, and resolves the URL and thumbnail. */
+export interface PostListItem {
+  _id: string;
+  title: string;
+  /** Site-relative URL, with the /en prefix for EN posts. */
+  href: string;
+  publishedAt?: string;
+  image?: ResolvedImage;
+}
+interface Props { data: PostList; posts: PostListItem[]; id?: string; }
+const { data, posts, id } = Astro.props;
+const limit = Math.min(Math.max(Math.trunc(data.limit ?? 3), 1), 12);
+const items = posts.filter((post) => post.title.trim() && post.href).slice(0, limit);
+const headingId = id ? `${id}-heading` : undefined;
+---
+{items.length > 0 && <BlockSection id={id} kind="post-list"><div class="posts-block">
+  {(data.tagline || data.heading) && (
+    <header class="head">
+      {data.tagline && <p class="type-tagline">{data.tagline}</p>}
+      {data.heading && <h2 id={headingId} class="type-heading-m">{data.heading}</h2>}
+    </header>
+  )}
+  <ul class="cards" role="list" aria-labelledby={data.heading ? headingId : undefined} aria-label={data.heading ? undefined : 'Ostatnie wpisy'}>
+    {items.map((post) => (
+      <li class="card">
+        {post.image ? <img src={post.image.src} width={post.image.width} height={post.image.height} alt="" loading="lazy" decoding="async" /> : <span class="thumb-empty" />}
+        <h3 class="type-heading-xs"><a class="card-link" href={post.href}>{post.title}</a></h3>
+        <span class="more with-icon type-body-s" aria-hidden="true">Czytaj więcej<Icon /></span>
+      </li>
+    ))}
+  </ul>
+</div></BlockSection>}
+<style>
+  .posts-block { display: grid; gap: var(--space-l); }
+  .head { display: grid; gap: var(--space-2xs); max-inline-size: 40rem; }
+  .cards {
+    display: grid;
+    gap: var(--space-xl) var(--space-l);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .card {
+    position: relative;
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    row-gap: var(--space-xs);
+    align-content: start;
+  }
+  .card img, .thumb-empty {
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    background-color: var(--surface-soft);
+  }
+  .card h3 { overflow-wrap: break-word; }
+  .card-link { color: var(--text-heading); text-decoration: none; }
+  .card-link::after { content: ""; position: absolute; inset: 0; }
+  .card-link:focus-visible { outline: 2px solid transparent; }
+  .card:has(.card-link:focus-visible) { outline: 2px solid var(--border-focus); outline-offset: 4px; border-radius: var(--radius-md); }
+  .more { align-self: end; color: var(--text-link); font-weight: var(--font-weight-medium); }
+  .card:active :is(.card-link, .more) { color: var(--text-link-active); }
+  @media (hover: hover) and (pointer: fine) {
+    .card:hover .card-link { color: var(--text-link-hover); text-decoration: underline; }
+    .card:hover .more { color: var(--text-link-hover); }
+  }
+</style>
