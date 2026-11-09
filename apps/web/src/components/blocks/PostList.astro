@@ -68,7 +68,8 @@ const headingId = id ? `${id}-heading` : undefined;
   .card-link::after { content: ""; position: absolute; inset: 0; }
   .card-link:focus-visible { outline: 2px solid transparent; }
   .card:has(.card-link:focus-visible) { outline: 2px solid var(--border-focus); outline-offset: 4px; border-radius: var(--radius-md); }
-  .more { align-self: end; color: var(--text-link); font-weight: var(--font-weight-medium); }
+  /* One short line that never wraps, so the icon centers on it. */
+  .more { align-self: end; align-items: center; color: var(--text-link); font-weight: var(--font-weight-medium); }
   .card:active :is(.card-link, .more) { color: var(--text-link-active); }
   @media (hover: hover) and (pointer: fine) {
     .card:hover .card-link { color: var(--text-link-hover); text-decoration: underline; }
