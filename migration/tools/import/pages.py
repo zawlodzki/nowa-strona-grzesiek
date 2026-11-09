@@ -52,8 +52,8 @@ COMPONENT_HTML_CLASS = {
     'Feature / Left 1 / Text Only': 'feature-section',
 }
 LAYOUT_CLASSES = {'custom-code-embeds', 'navbar', 'footer-2', 'zaw-schema-slot'}
-# User decision 2026-10-21 (T03 finding 15): Sales Atlas serves companies of 2 to 500 people.
-CONTENT_FIXES = {'/sales-atlas-system': [('do 250 osób', 'do 500 osób', 1), ('powyżej 250 osób', 'powyżej 500 osób', 1), ('Powyżej 250 osób', 'Powyżej 500 osób', 1)]}
+# User decision 2026-11-09 (T20): Sales Atlas keeps the live "250 osób"; the 2026-10-21 correction to 500 is withdrawn.
+CONTENT_FIXES = {}
 # The inventory has no 404 content (Webflow's default page); this is the copy apps/web serves today.
 NOT_FOUND = {'title': 'Nie znaleziono strony', 'html': '<p><a href="/">Wróć na stronę główną</a></p>'}
 
@@ -275,9 +275,11 @@ def feature(page, node, component):
     tagline, heading, head = section_title(page, content)
     media, media_node = diagram_or_image(page, node, content)
     button = first(content, is_button)
-    nodes = [n for n in all_of(content, lambda n: is_paragraph(n) or n.tag in ('ul', 'ol', 'h3', 'h4'))
+    nodes = [n for n in all_of(content, lambda n: is_paragraph(n) or n.tag in ('ul', 'ol', 'h2', 'h3', 'h4'))
              if n is not head and not (button is not None and inside(n, button)) and not any(a.tag in ('ul', 'ol') for a in ancestors(n, content))]
-    nodes += [p for p in paragraphs(node) if not inside(p, content) and not any(inside(p, b) for b in list_items(node))]
+    # Without a content wrapper, `content` is the section itself and its paragraphs are already in `nodes`.
+    if content is not node:
+        nodes += [p for p in paragraphs(node) if not inside(p, content) and not any(inside(p, b) for b in list_items(node))]
     block = {'tagline': tagline, 'heading': heading, 'body': page.blocks(nodes), 'mediaSide': media_side(node, content, media_node)}
     bullets = [page.string(b) for b in list_items(node) if not any(inside(b, n) for n in nodes)]
     if bullets:
@@ -321,7 +323,15 @@ def items_of(page, node, exclude):
 
 
 def item(page, n):
-    title_node = first(n, lambda x: x.tag in ('h3', 'h4', 'strong') or x.classes() & {'countup-title', 'collapse-title', 'card-title', 'heading'})
+    if 'testimonial-box' in n.classes():
+        # A quote card: the bold line under the quote is the attribution, "- Name, Company".
+        by = first(n, lambda x: x.tag == 'div' and 'bold' in x.classes())
+        quote = ' '.join(page.string(p) for p in all_of(n, lambda x: x.tag == 'p') if by is None or not inside(p, by))
+        name = page.keep(re.sub(r'^[-–—\s]+', '', clean(text(by)))) if by is not None else None
+        return {'_type': 'contentItem', '_key': page.key(), 'title': name or quote, 'text': quote if name else None, 'icon': None}
+    # A <strong> inside a sentence is emphasis, not the item's title.
+    title_node = first(n, lambda x: x.tag in ('h3', 'h4') or (x.tag == 'strong' and getattr(x.parent, 'tag', None) != 'p')
+                       or x.classes() & {'countup-title', 'collapse-title', 'card-title', 'heading'})
     number = first(n, lambda x: 'countup-number' in x.classes())
     title = page.string(title_node)
     if number is not None:
@@ -478,7 +488,9 @@ def faq(page, node, component):
 def contact_form(page, node, component):
     tagline, heading, _ = section_title(page, node)
     full = page.path == '/kontakt'
-    return {'variant': 'full' if full else 'landing', 'tagline': tagline, 'heading': heading, 'showDetails': False, 'formId': 'main-contact' if full else 'landing-contact'}
+    # Live landing forms carry a "Bezpośredni kontakt" column; the block renders it from the person document.
+    details = full or 'Bezpośredni kontakt' in clean(text(node))
+    return {'variant': 'full' if full else 'landing', 'tagline': tagline, 'heading': heading, 'showDetails': details, 'formId': 'main-contact' if full else 'landing-contact'}
 
 
 def newsletter(page, node, component):

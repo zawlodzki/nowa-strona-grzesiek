@@ -24,7 +24,7 @@ Accepted differences, verified on staging:
 - 15 sitemap additions follow the existing URL contract: each path is indexable and marked for sitemap inclusion.
 - Six `/blog/strona/2` through `/blog/strona/7` routes are T18 pagination and have noindex meta.
 - Two missing H1s are restored on newsletter and free-material pages.
-- One Sales Atlas description applies the user's earlier company-size correction from 250 to 500 people.
+- Sales Atlas keeps the live "250 osób" (user decision 2026-11-09, withdrawing the 2026-10-21 correction to 500). Staging matches live after the T20 re-import.
 - `/search` is a contract 301 to `/blog`; its absence as a standalone crawled page is expected and the redirect is verified.
 
 The 22 word-count differences remain open. A count alone cannot prove whether a template section, navigation/footer or article content was omitted. They are not approved content removals. G3 remains blocked on those content differences. The final six Lighthouse samples pass. See [the staging report](g3-staging.md).
