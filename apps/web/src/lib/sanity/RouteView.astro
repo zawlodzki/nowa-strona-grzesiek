@@ -18,7 +18,7 @@ const titled = route.kind === 'page' && !['hero', 'feature', 'newsletterSignup',
   {route.kind === 'page' && (
     <main>
       {titled && <header class="content-grid section page-title"><h1>{route.page.title}</h1></header>}
-      <Sections site={site} sections={route.page.sections ?? []} headingLevel={titled ? 'h2' : 'h1'} />
+      <Sections site={site} sections={route.page.sections ?? []} headingLevel={titled ? 'h2' : 'h1'} language={route.language} />
     </main>
   )}
   {route.kind === 'post' && <PostView site={site} post={route.post} />}
