@@ -2,7 +2,9 @@
 import CtaBand from '../../components/blocks/CtaBand.astro';
 import Faq from '../../components/blocks/Faq.astro';
 import RichText from '../../components/blocks/RichText.astro';
+import NewsletterSignup from '../../components/blocks/NewsletterSignup.astro';
 import MediaImage from '../../components/ui/MediaImage.astro';
+import PostCards from './PostCards.astro';
 import { BLOG_PATH } from './routes.ts';
 import { localHref, resolveImage, type PostDoc, type Site } from './site.ts';
 
@@ -12,13 +14,27 @@ const { links, images } = site;
 const pl = post.language === 'pl';
 const image = resolveImage(site, post.mainImage);
 const dateLabel = (iso: string) => new Intl.DateTimeFormat(pl ? 'pl-PL' : 'en-GB', { dateStyle: 'long', timeZone: 'Europe/Warsaw' }).format(new Date(iso));
+const person = site.person;
+const avatar = resolveImage(site, person?.image);
+const linkedIn = person?.sameAs?.find((url) => url.includes('linkedin.com'));
+const related = site.posts
+  .filter((other) => other.language === post.language && other.kind === post.kind && other._id !== post._id)
+  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+  .slice(0, 3);
+const contactHref = post.cta?.href ?? localHref(post.language, '/kontakt');
 const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _type: 'faqItem' as const, _key, question: q, answer: a }] : []);
 ---
 <main>
   <article>
     <header class="content-grid section post-head">
       <div class="inner">
-        <p class="type-tagline"><a href={localHref(post.language, BLOG_PATH)}>Blog</a></p>
+        <nav class="type-body-s crumbs" aria-label={pl ? 'Ścieżka nawigacji' : 'Breadcrumbs'}>
+          <ol role="list">
+            <li><a href={localHref(post.language, '/')}>{pl ? 'Strona główna' : 'Home'}</a></li>
+            <li><a href={localHref(post.language, BLOG_PATH)}>Blog</a></li>
+            <li><span aria-current="page">{post.title}</span></li>
+          </ol>
+        </nav>
         <h1>{post.title}</h1>
         <p class="type-body-s meta">
           <time datetime={post.publishedAt}>{dateLabel(post.publishedAt)}</time>
@@ -32,13 +48,66 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
     </header>
     <RichText data={{ _type: 'richText', body: post.body }} links={links} images={images} />
     {faq.length > 0 && <Faq data={{ _type: 'faq', heading: pl ? 'Najczęściej zadawane pytania' : 'Frequently asked questions', items: faq }} links={links} images={images} />}
+    {person?.name && (
+      <aside class="content-grid section author-section" aria-labelledby="author-heading">
+        <div class="author">
+          <p id="author-heading" class="type-body-s muted">{pl ? 'O autorze' : 'About the author'}</p>
+          <div class="who">
+            {avatar && <img class="avatar" src={avatar.src} width={avatar.width} height={avatar.height} alt="" loading="lazy" decoding="async" />}
+            <p><strong>{person.name}</strong>{person.jobTitle && <span>{person.jobTitle}</span>}</p>
+          </div>
+          {pl && <p>Wdrażam CRM, AI w sprzedaży i automatyzacje w firmach.</p>}
+          <p class="links">
+            <a rel="author" href={localHref(post.language, '/o-mnie')}>{pl ? 'O mnie' : 'About me'}</a>
+            {linkedIn && <a rel="me noopener" target="_blank" href={linkedIn}>LinkedIn</a>}
+          </p>
+          {post.cta?.label && (
+            <div class="nudge">
+              <p class="type-body-s">{post.cta.label}</p>
+              <a class="type-body-s" href={contactHref}>{pl ? 'Porozmawiajmy' : "Let's talk"}</a>
+            </div>
+          )}
+        </div>
+      </aside>
+    )}
     {post.cta?.label && (
       <CtaBand data={{ _type: 'ctaBand', heading: post.cta.label, cta: { _type: 'link', label: pl ? 'Umów konsultację' : 'Book a consultation', href: post.cta.href ?? '/kontakt' } }} />
     )}
   </article>
+  {related.length > 0 && (
+    <section class="content-grid section" aria-labelledby="related-heading">
+      <h2 id="related-heading" class="type-heading-m related-heading">{pl ? 'Powiązane wpisy' : 'Related posts'}</h2>
+      <PostCards site={site} posts={related} headingLevel="h3" />
+    </section>
+  )}
+  {pl && <NewsletterSignup data={{ _type: 'newsletterSignup', body: 'Raz w tygodniu dostaniesz bezpłatnie, jedno gotowe rozwiązanie, jak skutecznie wykorzystać nowoczesne technologie w sprzedaży B2B.' }} />}
 </main>
 <style>
   .post-head .inner { display: grid; justify-items: start; gap: var(--space-m); max-inline-size: var(--measure-prose); }
   .post-head :global(figure) { justify-self: stretch; }
+  .crumbs ol { display: flex; flex-wrap: wrap; gap: var(--space-3xs) var(--space-2xs); margin: 0; padding: 0; color: var(--text-muted); }
+  .crumbs li { display: flex; gap: var(--space-2xs); min-inline-size: 0; }
+  .crumbs li + li::before { content: "/"; color: var(--text-muted); }
+  .crumbs [aria-current] { overflow-wrap: anywhere; }
+  .crumbs a:active { color: var(--text-link-active); }
+  .author-section { padding-block-start: 0; }
+  .author {
+    display: grid;
+    gap: var(--space-s);
+    justify-items: start;
+    max-inline-size: var(--measure-prose);
+    padding: var(--space-l);
+    border: 1px solid var(--border-hairline);
+    border-radius: var(--radius-lg);
+  }
+  .who { display: flex; align-items: center; gap: var(--space-s); }
+  .who p { display: grid; overflow-wrap: anywhere; }
+  .who strong { color: var(--text-heading); }
+  .avatar { inline-size: 4rem; block-size: 4rem; flex: none; object-fit: cover; border-radius: var(--radius-round); }
+  .links { display: flex; flex-wrap: wrap; gap: var(--space-m); }
+  .author a:active { color: var(--text-link-active); }
+  .nudge { display: grid; gap: var(--space-2xs); justify-self: stretch; padding: var(--space-s); border-radius: var(--radius-md); background: var(--surface-tint); }
+  .muted { color: var(--text-muted); }
+  .related-heading { margin-block-end: var(--space-l); }
   .meta { display: flex; flex-wrap: wrap; column-gap: var(--space-s); row-gap: var(--space-3xs); color: var(--text-muted); }
 </style>
