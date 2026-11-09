@@ -22,7 +22,7 @@
       "type": "logoStrip",
       "component": "LogoStrip",
       "purpose": "Client or tool logos",
-      "fields": {"variant": "'clients'|'tools'", "title": "string?", "logos": "reference<logo>[]"},
+      "fields": {"variant": "'clients'|'tools'", "tagline": "string?", "title": "string?", "intro": "text? (line under the title; for tools, the caption above the logos)", "logos": "reference<logo>[]"},
       "jsonld": "none",
       "match": [{"component": "zawlodzki loga wspolprace"}, {"component": "zawlodzki loga aplikacji"}, {"component": "zawlodzki narzędzia"}]
     },
@@ -86,7 +86,7 @@
       "type": "contactForm",
       "component": "ContactForm",
       "purpose": "Lead form posting to /api/form (Worker → n8n), with 32 attribution fields",
-      "fields": {"variant": "'landing'|'full'", "tagline": "string?", "heading": "string?", "showDetails": "boolean", "formId": "'landing-contact'|'main-contact'"},
+      "fields": {"variant": "'landing'|'full'", "tagline": "string?", "heading": "string?", "intro": "text? (newlines kept)", "showDetails": "boolean", "calendar": "{heading, text?, link}? (full only)", "consultation": "{heading, body:text}? (full only)", "channels": "{tagline?, heading?, groups: {title, note?, items: {kind:'linkedin'|'github'|'x'|'youtube'|'instagram'|'email'|'phone'|'signal'|'whatsapp', label, href:https|mailto|tel}[]}[]}? (full only; replaces the person-based details column)", "formId": "'landing-contact'|'main-contact'"},
       "jsonld": "none (ContactPage comes from page type)",
       "match": [{"component": "kontakt zawlodzki"}, {"classes": "Contact Section"}, {"component": "Contact Section Details"}]
     },
@@ -97,6 +97,15 @@
       "fields": {"body": "text?"},
       "jsonld": "none",
       "match": [{"component": "newsletter zawlodzki"}]
+    },
+    {
+      "type": "postList",
+      "component": "PostList",
+      "purpose": "Latest N posts of one kind, e.g. 'Ostatnie wpisy' on /newsletter and /o-mnie. The page query resolves the posts",
+      "fields": {"tagline": "string?", "heading": "string?", "kind": "'blog'|'newsletter'", "limit": "number 1-12, default 3"},
+      "jsonld": "none (no ItemList; the posts carry their own BlogPosting on their pages)",
+      "match": [],
+      "_note": "No match rule: on live the list is a w-dyn-list inside a blog-article section, which matches richText. The page importer (T20) splits that list off into a postList."
     },
     {
       "type": "richText",

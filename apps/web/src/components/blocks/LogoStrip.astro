@@ -5,14 +5,22 @@ import { safeHref } from '../ui/block-types';
 import BlockSection from '../ui/BlockSection.astro';
 interface Props { data: LogoStrip; logos: ResolvedLogo[]; }
 const { data, logos } = Astro.props;
+const tools = data.variant === 'tools';
+const hasHead = Boolean(data.tagline || data.title || data.intro);
 const ordered = (data.logos ?? []).flatMap((ref) => { const logo = logos.find((item) => item._id === ref._ref); return logo ? [logo] : []; });
 ---
 {ordered.length > 0 && <BlockSection kind="logo-strip"><div class="logos">
-  {data.title && (data.variant === 'tools' ? <p class="type-body-s">{data.title}</p> : <h2>{data.title}</h2>)}
-  <ul tabindex="0" aria-label={data.title ?? 'Logotypy'} class:list={['logo-grid', { tools: data.variant === 'tools' }]}>{ordered.map((logo) => <li>{safeHref(logo.url) ? <a href={safeHref(logo.url)}><img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" /></a> : <img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" />}</li>)}</ul>
+  {hasHead && <header class="head">
+    {data.tagline && <p class="type-tagline">{data.tagline}</p>}
+    {data.title && (tools ? <p class="type-body-s">{data.title}</p> : <h2>{data.title}</h2>)}
+    {data.intro && <p class="type-body intro">{data.intro}</p>}
+  </header>}
+  <ul tabindex="0" aria-label={data.title || data.intro || 'Logotypy'} class:list={['logo-grid', { tools: data.variant === 'tools' }]}>{ordered.map((logo) => <li>{safeHref(logo.url) ? <a href={safeHref(logo.url)}><img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" /></a> : <img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" />}</li>)}</ul>
 </div></BlockSection>}
 <style>
   .logos { display: grid; gap: var(--space-l); }
+  .head { display: grid; gap: var(--space-2xs); justify-items: center; max-inline-size: 48rem; margin-inline: auto; text-align: center; }
+  .intro { white-space: pre-line; }
   .logo-grid { display: grid; grid-auto-flow: column; grid-template-rows: repeat(2, auto); grid-auto-columns: minmax(5rem, 1fr); overflow-x: auto; padding-block: var(--space-2xs); align-items: center; gap: var(--space-l) var(--space-m); padding: 0; margin: 0; list-style: none; }
   .logo-grid.tools { grid-template-rows: auto; }
   .logo-grid li { display: grid; align-items: center; min-block-size: 44px; }

@@ -15,6 +15,44 @@
 export declare const internalGroqTypeReferenceTo: unique symbol;
 
 // Source: schema.json
+export type Calendar = {
+  heading?: string;
+  text?: string;
+  link?: Link;
+};
+
+export type Consultation = {
+  heading?: string;
+  body?: string;
+};
+
+export type Channels = {
+  tagline?: string;
+  heading?: string;
+  groups?: Array<{
+    title?: string;
+    note?: string;
+    items?: Array<{
+      kind?:
+        | "linkedin"
+        | "github"
+        | "x"
+        | "youtube"
+        | "instagram"
+        | "email"
+        | "phone"
+        | "signal"
+        | "whatsapp";
+      label?: string;
+      href?: string;
+      _type: "contactChannel";
+      _key: string;
+    }>;
+    _type: "contactChannelGroup";
+    _key: string;
+  }>;
+};
+
 export type PageReference = {
   _ref: string;
   _type: "reference";
@@ -218,6 +256,14 @@ export type RichText = {
   body?: PortableText;
 };
 
+export type PostList = {
+  _type: "postList";
+  tagline?: string;
+  heading?: string;
+  kind?: "blog" | "newsletter";
+  limit?: number;
+};
+
 export type NewsletterSignup = {
   _type: "newsletterSignup";
   body?: string;
@@ -228,7 +274,11 @@ export type ContactForm = {
   variant?: "landing" | "full";
   tagline?: string;
   heading?: string;
+  intro?: string;
   showDetails?: boolean;
+  calendar?: Calendar;
+  consultation?: Consultation;
+  channels?: Channels;
   formId?: "landing-contact" | "main-contact";
 };
 
@@ -334,7 +384,9 @@ export type LogoReference = {
 export type LogoStrip = {
   _type: "logoStrip";
   variant?: "clients" | "tools";
+  tagline?: string;
   title?: string;
+  intro?: string;
   logos?: Array<
     {
       _key: string;
@@ -562,6 +614,9 @@ export type Page = {
       } & NewsletterSignup)
     | ({
         _key: string;
+      } & PostList)
+    | ({
+        _key: string;
       } & RichText)
   >;
 };
@@ -714,6 +769,9 @@ export type Geopoint = {
 };
 
 export type AllSanitySchemaTypes =
+  | Calendar
+  | Consultation
+  | Channels
   | PageReference
   | PostReference
   | SanityImageAssetReference
@@ -733,6 +791,7 @@ export type AllSanitySchemaTypes =
   | Link
   | ContentImage
   | RichText
+  | PostList
   | NewsletterSignup
   | ContactForm
   | Faq
