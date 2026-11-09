@@ -1,0 +1,51 @@
+{
+ "date": "2026-11-09",
+ "dataset": "production",
+ "approvedBy": "Grzesiek (chat, 2026-11-09)",
+ "command": "npx sanity dataset import <17 changed pages>.ndjson production --replace",
+ "sourceCommit": "6ede48b",
+ "buildNdjsonDocuments": 66,
+ "unchangedDocuments": 49,
+ "importedDocuments": 17,
+ "importedPaths": [
+  "/",
+  "/audyt-ai-sprzedaz",
+  "/audyt-crm-pipedrive",
+  "/audyt-procesow-asana",
+  "/audyt-sprzedazy",
+  "/automatyzacja-procesow-biznesowych-nocode",
+  "/automatyzacje-dla-pipedrive",
+  "/kurs-ai-w-sprzedazy",
+  "/o-mnie",
+  "/program-ai-dla-zespolu-sprzedazy",
+  "/program-partnerski",
+  "/sales-atlas-system",
+  "/szkolenie-i-wdrozenie-asana",
+  "/szkolenie-i-wdrozenie-pipedrive",
+  "/szkolenie-i-wdrozenie-salesforce",
+  "/wdrozenie-ai-w-sprzedazy-b2b",
+  "/wspolpraca"
+ ],
+ "assetRefsChecked": 28,
+ "assetRefsFoundInProduction": 28,
+ "readbackMismatches": 0,
+ "previousVersionsBackup": "kept outside the repo (scratchpad), not committed",
+ "deploys": [
+  {
+   "version": "c2c5953e-f1ea-4ce1-9161-8d9f425cd27c",
+   "source": "manual wrangler deploy of task/T20-g3-recheck",
+   "at": "2026-11-09T20:03:53Z"
+  },
+  {
+   "version": "19c091f1-f04d-442f-98e0-b5288e5503f4",
+   "source": "Sanity webhook -> Workers Builds (main)",
+   "at": "2026-11-09T20:04:00Z"
+  },
+  {
+   "version": "c284a597-4615-496c-8b97-ba1ab045e166",
+   "source": "Sanity webhook -> Workers Builds (main)",
+   "at": "2026-11-09T20:04:44Z",
+   "servingPercent": 100
+  }
+ ]
+}
