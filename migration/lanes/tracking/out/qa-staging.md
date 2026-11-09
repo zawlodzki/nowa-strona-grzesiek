@@ -1,11 +1,8 @@
 # T21. Wyniki QA zgód na stagingu
 
-Stan z 2026-11-08, przebieg od 21:10 do 21:17 UTC. Wynik całego zadania jest **blocked** z dwóch powodów:
+Stan z 2026-11-08, przebieg od 21:10 do 21:17 UTC, uzupełniony 2026-11-09 o konfigurację formularzy i dostarczenie do n8n. Wynik całego zadania jest **blocked** z jednego powodu: **czyszczenie przy cofnięciu zgody**. Albacross i piksel Meta zapisują swoje cookies ponownie w starym dokumencie, już po czyszczeniu przez loader. Szczegóły są w sekcji „Cofnięcie zgody”.
 
-1. **Dostarczenie formularza.** `POST /api/form` zwraca 403. Worker `zawlodzki-web` nie ma żadnych sekretów: brakuje `TURNSTILE_SECRET_KEY` i `N8N_FORM_WEBHOOK`. Build nie dostał też `PUBLIC_TURNSTILE_SITE_KEY`, więc widget używa testowego klucza Cloudflare.
-2. **Czyszczenie przy cofnięciu zgody.** Albacross i piksel Meta zapisują swoje cookies ponownie w starym dokumencie, już po czyszczeniu przez loader. Szczegóły są w sekcji „Cofnięcie zgody”.
-
-Pozostałe punkty checklisty T06 przechodzą: inicjalizacja, macierz czterech stanów, zachowanie wyboru, dialog z klawiatury i kontrakt pól 6/26/12/32.
+Pozostałe punkty checklisty T06 przechodzą: inicjalizacja, macierz czterech stanów, zachowanie wyboru, dialog z klawiatury, kontrakt pól 6/26/12/32 oraz Turnstile i dostarczenie formularza do n8n (od 2026-11-09).
 
 ## Sesja
 
@@ -83,23 +80,25 @@ To zgadza się z tabelą T06, z dwoma zastrzeżeniami:
 - Payload `POST /api/form?form=main-contact` (multipart) ma 36 kluczy: 32 pola atrybucji, `email`, `phone`, `message` i `cf-turnstile-response`. Pass.
 - TTL 90 dni, reset sesji po 30 minutach i rekordy wygasłe nie były testowane. Blocked, do dopisania w kolejnym przebiegu z ręcznie postarzonymi rekordami storage.
 
-## Dostarczenie formularza: blocked
+## Dostarczenie formularza
 
-`POST /api/form?form=main-contact` zwrócił **403** z treścią „Weryfikacja antyspamowa nie powiodła się…”. Nic nie trafiło do n8n.
+**Pass od 2026-11-09.**
 
-Przyczyna leży w konfiguracji stagingu, nie w kodzie:
+Pierwsza próba 2026-11-08 dała 403. Worker `zawlodzki-web` nie miał wtedy żadnych sekretów, a build nie miał `PUBLIC_TURNSTILE_SITE_KEY`, więc `LeadForm.astro` użył testowego klucza Cloudflare `1x00000000000000000000AA` (pasek „Tylko do testowania”, token `XXXX.DUMMY.TOKEN.XXXX`).
 
-- `LeadForm.astro` bierze klucz witryny z `PUBLIC_TURNSTILE_SITE_KEY` w czasie buildu. Gdy go brak, używa testowego klucza Cloudflare `1x00000000000000000000AA`. Widget pokazuje pasek „Tylko do testowania”, a token ma postać `XXXX.DUMMY.TOKEN.XXXX`.
-- `wrangler secret list --name zawlodzki-web` zwraca `[]`. Bez `TURNSTILE_SECRET_KEY` weryfikacja w `apps/web/src/worker/form.ts` odrzuca każdy token. Bez `N8N_FORM_WEBHOOK` nie ma dokąd przekazać zgłoszenia.
+Konfiguracja 2026-11-09, na polecenie użytkownika:
 
-Żeby odblokować staging, trzeba (z decyzją użytkownika):
+- Nowy widget Turnstile „zawlodzki.pl formularze”, tryb managed, hosty `zawlodzki.pl` (obejmuje `www`) i `zawlodzki-web.zawlodzki.workers.dev`. Klucz witryny jest publiczny: `0x4AAAAAAF5IqU8PTBfaBji9`.
+- Sekrety Workera `TURNSTILE_SECRET_KEY` i `N8N_FORM_WEBHOOK`. Wartości nie są w repozytorium. Adres webhooka w `00-inventory/webflow-settings/SUMMARY.md` jest ucięty (`…/webhook/6710778b-...`), więc nie nadaje się do konfiguracji. Pełny adres podał użytkownik.
+- Zmienna `PUBLIC_TURNSTILE_SITE_KEY` w Workers Builds (trigger na `main`, build `pnpm --filter web build`), potem nowy build.
 
-1. Mieć widget Turnstile z hostem `zawlodzki-web.zawlodzki.workers.dev`, a przed cutoverem także `www.zawlodzki.pl` i apex.
-2. Ustawić klucz witryny jako `PUBLIC_TURNSTILE_SITE_KEY` w buildzie stagingu i produkcji.
-3. Ustawić `TURNSTILE_SECRET_KEY` i `N8N_FORM_WEBHOOK` jako sekrety Workera.
-4. Powtórzyć jedną testową wysyłkę i sprawdzić 303 na `/podziekowanie-konsultacja` oraz wpis w n8n.
+Wynik:
 
-Ten sam brak zablokowałby formularze po cutoverze. To warunek T22.
+- Bez prawdziwego widgetu Turnstile przeglądarka sterowana przez narzędzia (chrome-devtools, panel aplikacji) dostaje interaktywne wyzwanie albo błąd `600010`. To zachowanie antybotowe Cloudflare, nie błąd konfiguracji. Błędny host dałby `110200`. Zrzut: `02-turnstile-live-key.png`.
+- Wysyłka z Chrome użytkownika z poprawnym webhookiem: przekierowanie na `/podziekowanie-konsultacja` i udane wykonanie w n8n z `qa-t21@example.com`. Potwierdził to użytkownik.
+- Wcześniejsza próba z uciętym webhookiem dała 502 i komunikat „Nie udało się wysłać formularza”. Ścieżka błędu klienta działa.
+
+**Przed cutoverem (T22):** zmienna buildu i sekrety obowiązują dla Workera `zawlodzki-web`. Jeśli produkcja będzie innym Workerem albo innym triggerem buildu, trzeba je przenieść. Widget obejmuje już `zawlodzki.pl`.
 
 ## Cofnięcie zgody
 
@@ -124,10 +123,8 @@ Ten sam loader i ten sam kontener GTM działają na produkcji. Nie da się tego 
 
 ## Wznowienie
 
-1. Konfiguracja Turnstile i n8n dla `zawlodzki-web`, opisana wyżej. Wymaga decyzji użytkownika, bo to sekrety i klucz widgetu.
-2. Po niej jedna testowa wysyłka formularza i dopisanie wyniku tutaj.
-3. Decyzja użytkownika co do ponownego zapisu cookies po cofnięciu: test porównawczy na produkcji i zgłoszenie do loadera c15t albo świadoma akceptacja.
-4. Opcjonalnie: TTL i rekordy wygasłe przez postarzone wpisy storage, statusy Tag Assistant w profilu z kontem Google.
+1. Decyzja użytkownika co do ponownego zapisu cookies po cofnięciu: test porównawczy na produkcji i zgłoszenie do loadera c15t albo świadoma akceptacja.
+2. Opcjonalnie: TTL i rekordy wygasłe przez postarzone wpisy storage, statusy Tag Assistant w profilu z kontem Google.
 
 ## Przebieg 2026-10-23 (nieaktualny)
 
