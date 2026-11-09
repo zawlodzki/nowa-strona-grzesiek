@@ -267,7 +267,9 @@ def logo_strip(page, node, component, docs):
         _id = 'logo-' + hashlib.sha1(url.encode()).hexdigest()[:16]
         docs.setdefault(_id, {'_id': _id, '_type': 'logo', 'name': name, 'kind': kind, 'image': page.image(img)})
         refs.append({'_type': 'reference', '_key': page.key(), '_ref': _id})
-    return {'variant': 'clients' if kind == 'client' else 'tools', 'title': heading, 'logos': refs}
+    intro = '\n'.join(page.string(p) for p in paragraphs(node))
+    return {'variant': 'clients' if kind == 'client' else 'tools', 'tagline': page.string(first(node, has_class('tagline'))),
+            'title': heading, 'intro': intro or None, 'logos': refs}
 
 
 def feature(page, node, component):
@@ -485,12 +487,62 @@ def faq(page, node, component):
     return {'tagline': tagline, 'heading': heading, 'items': entries, 'emitSchema': True}
 
 
+def lines(page, node):
+    """Text of an inline node with each <br> kept as a newline."""
+    parts, run = [], []
+    for c in node.children:
+        if not isinstance(c, str) and c.tag == 'br':
+            parts.append(clean(' '.join(run)))
+            run = []
+        else:
+            run.append(c if isinstance(c, str) else text(c))
+    parts.append(clean(' '.join(run)))
+    return page.keep('\n'.join(p for p in parts if p)) or None
+
+
 def contact_form(page, node, component):
-    tagline, heading, _ = section_title(page, node)
+    tagline, heading, head = section_title(page, node)
     full = page.path == '/kontakt'
     # Live landing forms carry a "Bezpośredni kontakt" column; the block renders it from the person document.
     details = full or 'Bezpośredni kontakt' in clean(text(node))
-    return {'variant': 'full' if full else 'landing', 'tagline': tagline, 'heading': heading, 'showDetails': details, 'formId': 'main-contact' if full else 'landing-contact'}
+    intro = next((p for p in (head.parent.elements() if head is not None and head.parent is not None else []) if p.tag == 'p'), None)
+    block = {'variant': 'full' if full else 'landing', 'tagline': tagline, 'heading': heading, 'intro': lines(page, intro) if intro is not None else None,
+             'showDetails': details, 'formId': 'main-contact' if full else 'landing-contact'}
+    if full:
+        for h in all_of(node, tag_in('h2')):
+            para = next((p for p in h.parent.elements() if p.tag == 'p'), None) if h.parent is not None else None
+            if para is None:
+                continue
+            link = first(para, tag_in('a'))
+            if link is not None:
+                rest = clean(text(para)).replace(clean(text(link)), '', 1).strip()
+                block['calendar'] = {'heading': page.string(h), 'text': page.keep(rest) or None, 'link': page.link(link)}
+            else:
+                block['consultation'] = {'heading': page.string(h), 'body': lines(page, para)}
+    return block
+
+
+CHANNEL_KINDS = [('github.com', 'github', 'GitHub'), ('linkedin.com', 'linkedin', 'LinkedIn'), ('x.com', 'x', 'X'), ('youtube.com', 'youtube', 'YouTube'),
+                 ('instagram.com', 'instagram', 'Instagram'), ('mailto:', 'email', None), ('tel:', 'phone', None), ('signal.me', 'signal', None), ('wa.me', 'whatsapp', None)]
+
+
+def contact_channels(page, node):
+    """The /kontakt "Wolisz sam/a się odezwać?" section: one group per column, one item per link."""
+    tagline, heading, _ = section_title(page, node)
+    groups = []
+    for title in all_of(node, tag_in('h3')):
+        box = title.parent
+        note = next((p for p in box.elements() if is_paragraph(p)), None)
+        items = []
+        for a in all_of(box, tag_in('a')):
+            href = a.attrs.get('href') or ''
+            kind = next(((k, label) for needle, k, label in CHANNEL_KINDS if needle in href), None)
+            if kind is None:
+                page.issue('contact-channel-unknown', href)
+                continue
+            items.append({'_type': 'contactChannel', '_key': page.key(), 'kind': kind[0], 'label': page.keep(kind[1] or clean(text(a))), 'href': href})
+        groups.append({'_type': 'contactChannelGroup', '_key': page.key(), 'title': page.string(title), 'note': page.string(note), 'items': items})
+    return {'tagline': tagline, 'heading': heading, 'groups': groups}
 
 
 def newsletter(page, node, component):
@@ -500,6 +552,15 @@ def newsletter(page, node, component):
 
 def rich_text(page, node, component):
     box = first(node, has_class('container')) or node
+    listing = first(node, has_class('w-dyn-list'))
+    if listing is not None:
+        # A Webflow CMS list of recent posts ("Ostatnie wpisy"): the route renders it from Sanity posts.
+        head = first(node, tag_in('h2', 'h3'))
+        rest = [p for p in paragraphs(node) if not inside(p, listing)]
+        if not rest:
+            page.keep(clean(text(listing)))
+            # /newsletter lists newsletter issues; other pages list blog posts (live inventory 2026-10-21).
+            return {'_type': 'postList', 'heading': page.string(head), 'kind': 'newsletter' if page.path == '/newsletter' else 'blog', 'limit': 3}
     out = []
     flow(page, box, out)
     for b in out:
@@ -695,6 +756,8 @@ def build_page(row, meta, plan, keys, links, assets, issues, stats, docs, regist
                 previous = next((s for s in reversed(sections) if s['_type'] == 'contactForm'), None)
                 if previous:
                     previous['showDetails'] = True
+                    if previous.get('variant') == 'full':
+                        previous['channels'] = contact_channels(page, part)
                     stats['contactDetailsMerged'] = stats.get('contactDetailsMerged', 0) + 1
                     continue
                 block['showDetails'] = True

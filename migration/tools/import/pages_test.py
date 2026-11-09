@@ -67,6 +67,22 @@ class SectionExtractTests(unittest.TestCase):
         self.assertTrue(self.sections('contactForm', with_details)[0]['showDetails'])
         self.assertFalse(self.sections('contactForm', '<div class="contact-section"><h2>Kontakt</h2><form></form></div>')[0]['showDetails'])
 
+    def test_logo_strip_keeps_tagline_and_intro(self):
+        html = ('<div class="testimonials-section"><div class="section-title"><div class="tagline">Z kim współpracuję</div>'
+                '<h2>Firmy</h2><p class="body-text m">Od 2 do 500 osób.</p></div><div class="grid"></div></div>')
+        [section] = self.sections('logoStrip', html)
+        self.assertEqual((section['tagline'], section['title'], section['intro']), ('Z kim współpracuję', 'Firmy', 'Od 2 do 500 osób.'))
+
+    def test_contact_form_intro_keeps_line_breaks(self):
+        html = '<div class="contact-section"><div><h2>Kontakt</h2><p>Zacznijmy od rozmowy.<br/>Zarezerwuj 25 min.</p></div><form></form></div>'
+        self.assertEqual(self.sections('contactForm', html)[0]['intro'], 'Zacznijmy od rozmowy.\nZarezerwuj 25 min.')
+
+    def test_recent_posts_list_becomes_a_post_list(self):
+        html = '<section class="blog-article"><div class="container"><h2>Ostatnie wpisy</h2><div class="w-dyn-list"><a href="/blog/a">A</a></div></div></section>'
+        self.assertEqual(self.sections('richText', html, '/newsletter'),
+                         [{'_type': 'postList', '_key': self.sections('richText', html, '/newsletter')[0]['_key'], 'heading': 'Ostatnie wpisy', 'kind': 'newsletter', 'limit': 3}])
+        self.assertEqual(self.sections('richText', html, '/o-mnie')[0]['kind'], 'blog')
+
 
 if __name__ == '__main__':
     unittest.main()
