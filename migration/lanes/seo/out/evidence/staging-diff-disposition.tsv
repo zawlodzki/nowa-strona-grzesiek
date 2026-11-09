@@ -1,6 +1,6 @@
 path	field	disposition	reason
 /	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/	word_count	open	Content/layout parity still requires review; not accepted.
+/	word_count	accepted	Webflow noise only: about 200 words of developer HTML comments inside the live diagram embeds, the expired promo bar, hidden form states, icon ligatures and the copyright line. Without them live has about 826 words against 832; every content block is present (T20 2026-11-09).
 /audyt-ai-sprzedaz	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /audyt-crm-pipedrive	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /audyt-procesow-asana	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
@@ -8,16 +8,13 @@ path	field	disposition	reason
 /automatyzacja-procesow-biznesowych-nocode	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /automatyzacje-dla-pipedrive	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog	word_count	open	Content/layout parity still requires review; not accepted.
+/blog	word_count	accepted	New index shows excerpts, dates and pagination; approved by Grzesiek 2026-11-09.
 /blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/agent-ai-co-to-jest	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/agent-ai-w-sprzedazy-przyklady	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/ai-w-sprzedazy	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/aplikacje-ktore-sprawdzilem-w-4-biznesach	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/aplikacje-ktore-sprawdzilem-w-4-biznesach	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/asana-ai	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/asana-cennik	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/asana-microsoft-365	in_sitemap	accepted	Indexable keep path included as required by the URL contract.
@@ -34,15 +31,12 @@ path	field	disposition	reason
 /blog/audyt-crm-wnioski-z-danych	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/audyt-wdrozonego-crm	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/automatyczne-przydzielanie-leadow-wedlug-specjalizacji-handlowca-dzieki-ai	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/automatyczne-przydzielanie-leadow-wedlug-specjalizacji-handlowca-dzieki-ai	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/automatyzacja-sprzedazy	in_sitemap	accepted	Indexable keep path included as required by the URL contract.
 /blog/automatyzacja-sprzedazy	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/bezpieczne-przekazanie-danych	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/bezpieczne-przekazanie-danych	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/cennik-pipedrive	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/chatgpt-work-czy-codex	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/co-zrobic-zeby-twoje-maile-nie-ladowaly-w-spamie	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/co-zrobic-zeby-twoje-maile-nie-ladowaly-w-spamie	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/crm-a-erp	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/crm-dla-biura-rachunkowego	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/crm-dla-deweloperow	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
@@ -57,15 +51,11 @@ path	field	disposition	reason
 /blog/hurtownia-danych-w-malej-firmie	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/ile-kosztuje-wdrozenie-crm	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/inbox-zero-5-krokow-do-odzyskania-kontroli-nad-twoja-skrzynka-pocztowa	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/inbox-zero-5-krokow-do-odzyskania-kontroli-nad-twoja-skrzynka-pocztowa	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/jak-automatycznie-przydzielac-leady-handlowcom-wedlug-branzy-klienta	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/jak-automatycznie-przydzielac-leady-handlowcom-wedlug-branzy-klienta	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/jak-odsiac-leady-z-nieprawdziwymi-danymi-weryfikacja-adresu-email-i-numeru-telefonu	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/jak-odsiac-leady-z-nieprawdziwymi-danymi-weryfikacja-adresu-email-i-numeru-telefonu	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/jak-przekonac-zespol-do-asany	in_sitemap	accepted	Indexable keep path included as required by the URL contract.
 /blog/jak-przekonac-zespol-do-asany	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/jak-robic-lepsze-reklamy-dzieki-konwersjom-offline	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/jak-robic-lepsze-reklamy-dzieki-konwersjom-offline	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/jak-zwiekszyc-sprzedaz-b2b	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/jaki-crm-dla-malej-firmy	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/jakosc-danych-w-crm	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
@@ -83,16 +73,13 @@ path	field	disposition	reason
 /blog/pipedrive-czy-salesforce	in_sitemap	accepted	Indexable keep path included as required by the URL contract.
 /blog/pipedrive-czy-salesforce	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/pisz-bloga-2x-szybciej-robiac-automatyczny-research-z-chatgpt	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/pisz-bloga-2x-szybciej-robiac-automatyczny-research-z-chatgpt	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/podstawowe-zasady-jak-korzystac-z-asana-com	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/porownanie-4-aplikacji-do-sledzenia-wyslanych-ofert-smart-docs-pandadoc-sellizer-docsend	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/porownanie-4-aplikacji-do-sledzenia-wyslanych-ofert-smart-docs-pandadoc-sellizer-docsend	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/porownanie-api-crm-agent-ai	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/proces-sprzedazy	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/prognoza-sprzedazy	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/program-do-zarzadzania-projektami	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/prosty-system-do-elektronicznych-wnioskow-urlopowych-ktory-stworzysz-w-45-minut	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/prosty-system-do-elektronicznych-wnioskow-urlopowych-ktory-stworzysz-w-45-minut	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/raporty-sprzedazowe	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/salesforce-agentforce	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/salesforce-cena	in_sitemap	accepted	Indexable keep path included as required by the URL contract.
@@ -105,9 +92,7 @@ path	field	disposition	reason
 /blog/salesforce-starter-czy-pro-suite	in_sitemap	accepted	Indexable keep path included as required by the URL contract.
 /blog/salesforce-starter-czy-pro-suite	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/skroc-o-50-cotygodniowe-spotkania-w-dziale-marketingu	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/skroc-o-50-cotygodniowe-spotkania-w-dziale-marketingu	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/skuteczne-instrukcje-dla-pracownikow-w-5-krokach	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/blog/skuteczne-instrukcje-dla-pracownikow-w-5-krokach	word_count	open	Content/layout parity still requires review; not accepted.
 /blog/spotkania-z-handlowcami	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /blog/strona/2	NEW_ONLY	accepted	T18 path-based blog pagination; explicitly noindex.
 /blog/strona/3	NEW_ONLY	accepted	T18 path-based blog pagination; explicitly noindex.
@@ -127,24 +112,18 @@ path	field	disposition	reason
 /blog/zarzadzanie-wieloma-projektami-asana	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /darmowe-materialy-dla-biznesow-uslugowych	h1	accepted	Missing source H1 repaired using the existing visible heading or page title.
 /darmowe-materialy-dla-biznesow-uslugowych	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/darmowe-materialy-dla-biznesow-uslugowych	word_count	open	Content/layout parity still requires review; not accepted.
 /kontakt	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/kontakt	word_count	open	Content/layout parity still requires review; not accepted.
 /kurs-ai-w-sprzedazy	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /lista-cookies-i-identyfikatorow	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /newsletter	h1	accepted	Missing source H1 repaired using the existing visible heading or page title.
 /newsletter	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/newsletter	word_count	open	Content/layout parity still requires review; not accepted.
 /o-mnie	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/o-mnie	word_count	open	Content/layout parity still requires review; not accepted.
 /polityka-prywatnosci	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /program-ai-dla-zespolu-sprzedazy	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /program-partnerski	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/program-partnerski	word_count	open	Content/layout parity still requires review; not accepted.
 /regulamin	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /regulamin-newslettera	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /sales-atlas-system	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
-/sales-atlas-system	meta_description	accepted	User-approved company-size correction recorded in T16.
 /search	MISSING_IN_NEW	accepted	Search replaced by the contract 301 to the working blog index.
 /szkolenie-i-wdrozenie-asana	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.
 /szkolenie-i-wdrozenie-pipedrive	lang	accepted	Equivalent Polish language tag emitted from the typed PL language model.

@@ -47,5 +47,38 @@
    "at": "2026-11-09T20:04:44Z",
    "servingPercent": 100
   }
- ]
+ ],
+ "secondImport": {
+  "date": "2026-11-09",
+  "approvedBy": "Grzesiek (chat, 2026-11-09, after #46 and #47 merged)",
+  "sourceCommit": "d6fbe43",
+  "importedDocuments": 18,
+  "importedPaths": [
+   "/",
+   "/audyt-ai-sprzedaz",
+   "/audyt-crm-pipedrive",
+   "/audyt-procesow-asana",
+   "/audyt-sprzedazy",
+   "/automatyzacja-procesow-biznesowych-nocode",
+   "/automatyzacje-dla-pipedrive",
+   "/kontakt",
+   "/kurs-ai-w-sprzedazy",
+   "/newsletter",
+   "/o-mnie",
+   "/program-ai-dla-zespolu-sprzedazy",
+   "/program-partnerski",
+   "/szkolenie-i-wdrozenie-asana",
+   "/szkolenie-i-wdrozenie-pipedrive",
+   "/szkolenie-i-wdrozenie-salesforce",
+   "/wdrozenie-ai-w-sprzedazy-b2b",
+   "/wspolpraca"
+  ],
+  "note": "The NDJSON was byte-identical to the development trial. The import ran twice: an immediate readback still showed the old documents, so it was repeated, and identical data makes the repeat a no-op. The final readback matches all 66 documents.",
+  "readbackMismatches": 0,
+  "stagingDeploy": {
+   "version": "a8acfd7f-7663-4ed2-83e5-4880f89ff00f",
+   "source": "Sanity webhook -> Workers Builds (main d6fbe43)",
+   "at": "2026-11-09T20:42:00Z"
+  }
+ }
 }

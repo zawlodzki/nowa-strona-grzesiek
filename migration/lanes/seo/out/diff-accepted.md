@@ -28,3 +28,8 @@ Accepted differences, verified on staging:
 - `/search` is a contract 301 to `/blog`; its absence as a standalone crawled page is expected and the redirect is verified.
 
 The 22 word-count differences remain open. A count alone cannot prove whether a template section, navigation/footer or article content was omitted. They are not approved content removals. G3 remains blocked on those content differences. The final six Lighthouse samples pass. See [the staging report](g3-staging.md).
+
+## Accepted 2026-11-09 (T20 recheck)
+
+- `/` word count, 1086 on live and 832 on staging. Live counts about 200 words of developer HTML comments inside its diagram embeds ("build one product animation inside the SCENE regions…") as text. It also counts the expired promo bar, hidden form success and error messages, Material icon ligatures and the copyright line. Without them live has about 826 words. Every content block is present on staging, including both testimonials, the logo-strip intros and the contact intro.
+- `/blog` word count, 350 on live and 516 on staging. The new index shows excerpts, dates and paginated pages. Grzesiek approved this on 2026-11-09.
