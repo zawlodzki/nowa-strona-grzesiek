@@ -121,9 +121,27 @@ Przyczyny, ustalone z kodu loadera i z dat ważności cookies:
 
 Ten sam loader i ten sam kontener GTM działają na produkcji. Nie da się tego naprawić w `apps/web`. Poprawka należy do loadera c15t: na przykład wyłączyć `fbq`/Albacross przed czyszczeniem albo ponowić czyszczenie po przeładowaniu, gdy kategoria jest `false`. Loader to zewnętrzny system, tylko do odczytu w tej migracji. Zalecany krok to ten sam test na `https://www.zawlodzki.pl` po osobnej zgodzie użytkownika (zapisuje zgodę w produkcyjnym c15t i wysyła odsłony). To potwierdzi, czy różnica jest regresją migracji, czy istniejącym zachowaniem.
 
+## Porównanie z produkcją, 2026-11-09
+
+Na polecenie użytkownika ten sam test cofnięcia przeprowadzono na `https://www.zawlodzki.pl/`, który nadal serwuje Webflow z tym samym loaderem i kontenerem GTM v54. Izolowany kontekst `t21-prod`, od 05:34 do 05:36 UTC. Zapisane zostały trzy zgody w produkcyjnym c15t i odsłony u dostawców z `www`.
+
+| Krok | Cookies po przeładowaniu |
+|---|---|
+| Pełna zgoda, 05:34:42 | `_ga`, `_ga_FPQCV0H550`, `_gcl_au` i `_fbp` na `zawlodzki.pl`; `nQ_cookieId` i `nQ_userVisitId` host-only |
+| Cofnięty measurement, 05:35:16 | `_ga` usunięte. Zostały `_ga_FPQCV0H550` (ważne do 2027-12-14 05:35:16), `nQ_cookieId` (2027-11-09 05:35:16) i `nQ_userVisitId` (06:05:16) |
+| Cofnięty marketing, 05:35:47 | Zostało tylko `zawlodzki-consent`. `localStorage` ma tylko klucz zgody |
+
+Wnioski:
+
+- **Ponowny zapis występuje już na produkcji.** Ważność `_ga_FPQCV0H550` i `nQ_*` po cofnięciu measurement liczy się od sekundy cofnięcia. GA4 i Albacross zapisują je ponownie w starym dokumencie, po czyszczeniu w `onBeforeConsentRevocationReload`. To nie jest regresja migracji, bo staging zachowuje się tak samo.
+- **Resztki znikają przy następnym cofnięciu.** Po kolejnym zapisie preferencji (tu: cofnięcie marketing) `h5()` czyści znowu kategorię measurement. GA i Albacross już się wtedy nie ładują, więc niczego nie zapisują ponownie.
+- **Na stagingu dochodzi artefakt domeny.** Na `www` cookies Google mają domenę `zawlodzki.pl`, którą loader czyści. Na `workers.dev` mają `zawlodzki.workers.dev`, której loader nie zna, dlatego na stagingu zostawały też `_ga`, `_gcl*`, `_fbp` i `_fbc`.
+
+Poprawka należy do loadera c15t, który jest poza zakresem `apps/web`. Na przykład: po przeładowaniu, gdy kategoria jest `false`, uruchomić czyszczenie jeszcze raz, zanim załadują się tagi. Albo wyłączyć tagi dostawców przed czyszczeniem.
+
 ## Wznowienie
 
-1. Decyzja użytkownika co do ponownego zapisu cookies po cofnięciu: test porównawczy na produkcji i zgłoszenie do loadera c15t albo świadoma akceptacja.
+1. Decyzja użytkownika co do ponownego zapisu cookies po cofnięciu. Test porównawczy na produkcji jest zrobiony: to istniejące zachowanie loadera, nie regresja migracji. Do wyboru: zaakceptować na czas migracji i zgłosić poprawkę loadera osobno albo naprawić loader przed cutoverem.
 2. Opcjonalnie: TTL i rekordy wygasłe przez postarzone wpisy storage, statusy Tag Assistant w profilu z kontem Google.
 
 ## Przebieg 2026-10-23 (nieaktualny)
