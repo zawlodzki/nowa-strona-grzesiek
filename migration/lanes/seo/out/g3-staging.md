@@ -63,3 +63,12 @@ Final deployment performance scores, one mobile run per sample: home 100, Pipedr
 Review and repair the 22 content/layout differences and repeat G3, including the performance samples, on the resulting deployment. T21 owns consent, Tag Assistant and form-delivery QA. Neither PR merge nor completion of this import/deployment alone marks G3 passed.
 
 Prove It Works required native import readback and deployed Worker checks. Explain the Number kept failed measurements and rejected a speedup claim. Separate Before Serializing Shared State kept the work in its isolated T20 checkout.
+
+## Recheck, 2026-11-09 (T20 takeover)
+
+Staging runs Worker `a8acfd7f-7663-4ed2-83e5-4880f89ff00f`, a Workers Builds deploy of `main` at `d6fbe43`, triggered by the approved production re-import of 18 pages. [Import evidence](evidence/recheck-import-2026-11-09.json).
+
+- The crawl reaches 111 pages, all 200, each with one H1 and one JSON-LD graph. The sitemap lists 104 URLs. All 108 keep paths return 200. `/Kontakt` and a missing path return 404; `/index.html` and `/search` return 301. All six GSC legacy cases end at 200. Staging sends `X-Robots-Tag: noindex, nofollow`. The HTML has no Webflow CDN references. www still serves Webflow.
+- JSON-LD has no errors. The 80 FAQPage notes are informational. The 13 repeated `#service` and `#person` definitions are the documented stubs (14 before).
+- The diff has 131 rows, and [the disposition](evidence/staging-diff-disposition.tsv) accepts all 131. Only two word-count rows remain: `/blog`, with approved excerpts and pagination, and `/`, whose gap is Webflow noise (see [diff-accepted.md](diff-accepted.md)).
+- Lighthouse mobile results are in [the Lighthouse evidence](evidence/staging-lighthouse.json), stage `recheck-2026-11-09`, all runs kept. The first runs scored home 50, Pipedrive 94, AI 95, Atlas 94, blog 79 and post 99. The cold home and blog runs were dominated by two Turnstile challenges and GTM/gtag (T26/T21). Repeats scored home 94, 98 and 91, and blog 93 and 93. This is not a stable-score claim. Turnstile and tag loading are the next performance lever if a cold run must pass.
