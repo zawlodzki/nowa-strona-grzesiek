@@ -1,6 +1,6 @@
 # T21. Wyniki QA zgód na stagingu
 
-Stan z 2026-11-08, przebieg od 21:10 do 21:17 UTC, uzupełniony 2026-11-09 o konfigurację formularzy i dostarczenie do n8n. Wynik całego zadania jest **blocked** z jednego powodu: **czyszczenie przy cofnięciu zgody**. Albacross i piksel Meta zapisują swoje cookies ponownie w starym dokumencie, już po czyszczeniu przez loader. Szczegóły są w sekcji „Cofnięcie zgody”.
+Stan z 2026-11-08, przebieg od 21:10 do 21:17 UTC, uzupełniony 2026-11-09 o konfigurację formularzy i dostarczenie do n8n. Wynik całego zadania: **review** z wyjątkiem zaakceptowanym przez użytkownika 2026-11-09. Wyjątek dotyczy **czyszczenia przy cofnięciu zgody**, które tak samo nie działa na produkcji. Albacross i piksel Meta zapisują swoje cookies ponownie w starym dokumencie, już po czyszczeniu przez loader. Szczegóły są w sekcji „Cofnięcie zgody”.
 
 Pozostałe punkty checklisty T06 przechodzą: inicjalizacja, macierz czterech stanów, zachowanie wyboru, dialog z klawiatury, kontrakt pól 6/26/12/32 oraz Turnstile i dostarczenie formularza do n8n (od 2026-11-09).
 
@@ -141,7 +141,7 @@ Poprawka należy do loadera c15t, który jest poza zakresem `apps/web`. Na przyk
 
 ## Wznowienie
 
-1. Decyzja użytkownika co do ponownego zapisu cookies po cofnięciu. Test porównawczy na produkcji jest zrobiony: to istniejące zachowanie loadera, nie regresja migracji. Do wyboru: zaakceptować na czas migracji i zgłosić poprawkę loadera osobno albo naprawić loader przed cutoverem.
+1. Ponowny zapis cookies po cofnięciu: użytkownik 2026-11-09 zaakceptował go na czas migracji. Poprawka loadera c15t to osobna praca poza tym repozytorium.
 2. Opcjonalnie: TTL i rekordy wygasłe przez postarzone wpisy storage, statusy Tag Assistant w profilu z kontem Google.
 
 ## Przebieg 2026-10-23 (nieaktualny)
