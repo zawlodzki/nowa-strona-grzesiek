@@ -1,12 +1,12 @@
 $ astro check
-18:59:24 [types] Generated 28ms
-18:59:24 [check] Getting diagnostics for Astro files in /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T32-sales-atlas-parity/apps/web...
-[96msrc/preview/worker.ts[0m:[93m5[0m:[93m3[0m - [93mwarning[0m[90m ts(80006): [0mThis may be converted to an async function.
+19:12:02 [types] Generated 28ms
+19:12:02 [check] Getting diagnostics for Astro files in /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T32-sales-atlas-parity/apps/web...
+src/preview/worker.ts:5:3 - warning ts(80006): This may be converted to an async function.
 
-[7m5[0m   fetch(request: Request, env: Parameters<typeof handle>[1], context: Parameters<typeof handle>[2]): Promise<Response> {
-[7m [0m [93m  ~~~~~[0m
+5   fetch(request: Request, env: Parameters<typeof handle>[1], context: Parameters<typeof handle>[2]): Promise<Response> {
+    ~~~~~
 
-Result (160 files): 
+Result (159 files):
 - 0 errors
 - 0 warnings
 - 1 hint

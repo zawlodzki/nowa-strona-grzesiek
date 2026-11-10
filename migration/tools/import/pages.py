@@ -392,7 +392,7 @@ def content_section(page, node, component):
                     wrapper = Node('p', {})
                     wrapper.children = [n]
                     body[i] = wrapper
-            entries.append({'_key': page.key(), 'title': page.string(first(link, tag_in('h3', 'h4'))),
+            entries.append({'_type': 'tabItem', '_key': page.key(), 'title': page.string(first(link, tag_in('h3', 'h4'))),
                             'summary': '\n\n'.join(page.string(p) for p in paragraphs(link)),
                             'positive': page.blocks(all_of(positive, tag_in('h4', 'p'))) if positive is not None else None,
                             'negative': page.blocks(all_of(negative, tag_in('h4', 'p'))) if negative is not None else None,

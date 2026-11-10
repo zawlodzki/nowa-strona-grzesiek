@@ -10,7 +10,7 @@ $ astro build
 18:58:00 [vite] ✓ built in 38ms
 18:58:00 [build] Rearranging server assets...
 
- generating static routes 
+ generating static routes
 T32_LOCAL_DOCUMENTS is only allowed in explicit local proof builds
   Location:
     /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T32-sales-atlas-parity/node_modules/.pnpm/astro@7.4.1_@types+node@24.19.2_esbuild@0.28.2_jiti@2.7.0_yaml@2.9.1/node_modules/astro/dist/core/render/route-cache.js:64:16

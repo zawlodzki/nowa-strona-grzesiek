@@ -16,7 +16,7 @@
        "body": "Powtarzalny system sprzedaży dla firm B2B, które sprzedają na spotkaniach. Dziewięć warstw, od diagnozy po pomiar, opisuje, jak ma działać sprzedaż i gdzie każda decyzja zostaje zapisana w narzędziach, żeby dało się ją potem sprawdzić.",
        "heading": "Sales Atlas System",
        "image": {
-@@ -37,102 +46,1044 @@
+@@ -37,102 +46,1053 @@
        "tagline": "Zawartość"
      },
      {
@@ -32,6 +32,7 @@
 -            "label": "Zobacz audyt sprzedaży"
 -          },
 -          "text": "Co dziś naprawdę dzieje się w sprzedaży. Oparta na danych z CRM i na rozmowach z zespołem. Na koniec dostajesz opis stanu, z którym zgadza się zespół i rekomendowaną ścieżkę wdrożenia.\n\nPo czym poznać, że działa: Obraz sprzedaży zgadza się z danymi z CRM. Spór o to, co się dzieje, rozstrzyga raport, a nie autorytet.\n\nPo czym poznać, że nie działa: Każdy ma swoją wersję tego, co się dzieje, i nikt jej nie sprawdza. Decyzje zapadają na podstawie ostatniej rozmowy, którą ktoś zapamiętał.\n\nOd czego zacząć: Audyt CRM Pipedrive: dwa tygodnie, raport z priorytetami i plan naprawy. To jest ta warstwa w całości.\n\nNie wiadomo, czy audyt jest potrzebny? Na bezpłatnej konsultacji przechodzimy przez to, co już stoi.",
++          "_type": "tabItem",
 +          "body": [
 +            {
 +              "_type": "block",
@@ -165,6 +166,7 @@
 -            "label": "Zobacz audyt Pipedrive"
 -          },
 -          "text": "Komu i po co sprzedajemy: profil idealnego klienta, persony, zadania klienta i to, jak wygląda zakup po jego stronie. Wychodzi z tego profil klienta i kryteria, po których odrzucamy zapytanie.\n\nPo czym poznać, że działa: W minutę wiadomo, czy to nasz klient i dlaczego. Handlowiec potrafi odrzucić zapytanie i uzasadnić to kryterium, nie kierując się przeczuciem.\n\nPo czym poznać, że nie działa: Kwalifikacja siedzi w głowie jednej osoby, a oferta idzie do każdego, kto zapyta. Czas marnowany jest na deale, które i tak nie miały szans na powodzenie.\n\nOd czego zacząć: Ta warstwa nie ma osobnej usługi. Wchodzi w zakres audytu i wdrożenia, bo profil klienta ustala się, zanim powstaną etapy w CRM.\n\nBezpłatna konsultacja: przechodzimy przez to, komu dziś sprzedajemy i gdzie ta definicja się rozjeżdża.",
++          "_type": "tabItem",
 +          "body": [
 +            {
 +              "_type": "block",
@@ -298,6 +300,7 @@
 -            "label": "Umów bezpłatną konsultację"
 -          },
 -          "text": "Dlaczego klient ma Cię wybrać, czym różnisz się od alternatyw i jakimi słowami to komunikujesz na stronie oraz w ofercie. Efekt to jedna wersja przekazu, która ma być klarowna dla grupy docelowej.\n\nPo czym poznać, że działa: Dwie osoby z firmy tłumaczą to samo tymi samymi słowami. Oferta broni ceny argumentem, a nie rabatem.\n\nPo czym poznać, że nie działa: Każda oferta opisuje firmę inaczej, a różnicę wobec konkurencji sprowadza do ceny.\n\nOd czego zacząć: Bezpłatna konsultacja: sprawdzamy, czy to, co mówisz na stronie, zgadza się z tym, co mówisz w ofercie.",
++          "_type": "tabItem",
 +          "body": [
 +            {
 +              "_type": "block",
@@ -398,6 +401,7 @@
 -            "label": "Zobacz wdrożenie Pipedrive"
 -          },
 -          "text": "Jak pracujesz z klientem od pierwszego kontaktu do wygranej: etapy, kryteria wyjścia, kwalifikacja, agendy spotkań i struktura oferty. Na tej podstawie konfigurowany jest CRM.\n\nPo czym poznać, że działa: Etap w CRM znaczy to samo u wszystkich, bo ma warunek wyjścia. Kontakt po ofercie ma termin i nie zależy od tego, czy handlowiec o nim pamięta.\n\nPo czym poznać, że nie działa: Etapy przesuwa się na wyczucie, a kontakt po ofercie zależy od czyjejś pamięci. Prognoza z takiego lejka nie ma pokrycia.\n\nOd czego zacząć: Wdrożenie Pipedrive: proces zaprojektowany i zapisany w narzędziu razem z kryteriami wyjścia, automatyzacjami i szkoleniem zespołu.\n\nBezpłatna konsultacja: przechodzimy przez dzisiejsze etapy i pokazuję, które z nich nic nie znaczą.",
++          "_type": "tabItem",
 +          "body": [
 +            {
 +              "_type": "block",
@@ -531,6 +535,7 @@
 -            "label": "Zobacz wdrożenie Asany"
 -          },
 -          "text": "Co dzieje się po finalizacji: przekazanie do realizacji, pierwszy wynik u klienta, upsell, cross-sell i polecenia. Powstaje moment przekazania z kompletem ustaleń, a polecenia stają się liczonym źródłem.\n\nPo czym poznać, że działa: Realizacja dostaje komplet ustaleń w dniu podpisu i nie dopytuje sprzedaży. Polecenia liczymy tak samo jak każde inne źródło.\n\nPo czym poznać, że nie działa: Po wygranej sprawa znika z widoku, a polecenia zdarzają się przypadkiem. Nikt nie odpowiada za to, co dzieje się między sprzedażą a realizacją.\n\nOd czego zacząć: Wdrożenie Asany. Tam rozstrzyga się, czy to, co obiecane przy podpisie, zostało dowiezione i kiedy.\n\nBezpłatna konsultacja: sprawdzamy, co dziś gubi się między wygraną a pierwszym dniem realizacji.",
++          "_type": "tabItem",
 +          "body": [
 +            {
 +              "_type": "block",
@@ -664,6 +669,7 @@
 -            "label": "Umów bezpłatną konsultację"
 -          },
 -          "text": "Skąd biorą się nowe szanse: prospecting, treści, analiza źródeł leadów i ile ich potrzeba, żeby dowieźć cel. Kończy się liczbą szans na miesiąc i podziałem na źródła, z których mają przyjść.\n\nPo czym poznać, że działa: Wiadomo, ile szans musi wejść w tym miesiącu i skąd mają przyjść. Spadek w jednym źródle widać, zanim uderzy w wynik.\n\nPo czym poznać, że nie działa: Nowe szanse biorą się z tego, kto akurat zadzwonił, a lejek puchnie od starych leadów, których nikt nie zamyka.\n\nOd czego zacząć: Bezpłatna konsultacja: liczymy, ile szans potrzebujesz miesięcznie, żeby cel był realny.",
++          "_type": "tabItem",
 +          "body": [
 +            {
 +              "_type": "block",
@@ -764,6 +770,7 @@
 -            "label": "Zobacz automatyzacje"
 -          },
 -          "text": "Gdzie to wszystko żyje: konfiguracja CRM, automatyzacje, integracje, hurtownia danych, AI i transkrypcje rozmów. Na końcu jest skonfigurowane narzędzie, w którym dane wpisuje się raz.\n\nPo czym poznać, że działa: Zespół pracuje w narzędziu, a nie obok niego, w arkuszu i w skrzynce. Dane wpisuje się do systemu raz.\n\nPo czym poznać, że nie działa: CRM jest archiwum korespondencji, a prawdziwy lejek stoi w Excelu. Te same dane przepisuje się do kilku systemów.\n\nOd czego zacząć: Automatyzacje dla Pipedrive łączą CRM z pocztą, ofertami i realizacją. Wdrożenie AI zdejmuje z handlowców przepisywanie danych.\n\nBezpłatna konsultacja: przechodzimy przez narzędzia i pokazuję, gdzie jest miejsce na integracje.",
++          "_type": "tabItem",
 +          "body": [
 +            {
 +              "_type": "block",
@@ -897,6 +904,7 @@
 -            "label": "Umów bezpłatną konsultację"
 -          },
 -          "text": "Jak zarządzać działem sprzedaży: struktura, rekrutacja, wdrożenie nowego handlowca, ocena i spotkania wewnętrzne.\n\nPo czym poznać, że działa: Nowy handlowiec sprzedaje samodzielnie po ustalonym czasie, nie po roku. Odejście jednej osoby nie zabiera wiedzy o klientach.\n\nPo czym poznać, że nie działa: Wdrożenie polega na przyglądaniu się właścicielowi, a odejście handlowca zabiera historię klientów razem z nim.\n\nOd czego zacząć: Bezpłatna konsultacja: rozmawiamy o tym, ile trwa dojście nowej osoby do pierwszej samodzielnej sprzedaży.",
++          "_type": "tabItem",
 +          "body": [
 +            {
 +              "_type": "block",
@@ -997,6 +1005,7 @@
 -            "label": "Zobacz automatyzacje"
 -          },
 -          "text": "Czy to działa i co poprawiamy: metryki, raporty, prognoza, analiza wygranych i przegranych oraz stały cykl poprawek. Wychodzą z tego raporty i prognoza, którą da się weryfikować.\n\nPo czym poznać, że działa: Prognoza na koniec miesiąca bierze się z systemu i zwykle się sprawdza. Wiadomo, dlaczego przegrane sprawy przepadły.\n\nPo czym poznać, że nie działa: Raport składa się ręcznie w Excelu, a prognoza to suma przeczuć. Przyczyn przegranych nikt nie zapisuje.\n\nOd czego zacząć: Raportowanie i prognoza powstają na danych z CRM. Gdy jedno źródło nie wystarcza, dokładamy hurtownię danych i integracje.\n\nBezpłatna konsultacja: sprawdzamy, czy z CRM da się dziś wyciągnąć prognozę, której można ufać.",
++          "_type": "tabItem",
 +          "body": [
 +            {
 +              "_type": "block",
@@ -1129,7 +1138,7 @@
      },
      {
        "_type": "feature",
-@@ -215,15 +1166,14 @@
+@@ -215,15 +1175,14 @@
        "tagline": "Granice"
      },
      {
@@ -1148,7 +1157,7 @@
              }
            ],
            "style": "normal"
-@@ -233,38 +1183,78 @@
+@@ -233,38 +1192,78 @@
            "children": [
              {
                "_type": "span",
@@ -1248,7 +1257,7 @@
      },
      {
        "_type": "contentSection",
-@@ -394,7 +1384,7 @@
+@@ -394,7 +1393,7 @@
                  {
                    "_type": "span",
                    "marks": [

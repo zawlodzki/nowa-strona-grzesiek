@@ -55,6 +55,7 @@
       "items": [
         {
           "_key": "bbbf93c0dcbb",
+          "_type": "tabItem",
           "body": [
             {
               "_key": "a61e8b48c349",
@@ -202,6 +203,7 @@
         },
         {
           "_key": "e88fa0c6abbd",
+          "_type": "tabItem",
           "body": [
             {
               "_key": "125cd8c0ebe2",
@@ -349,6 +351,7 @@
         },
         {
           "_key": "12ce036b0a1d",
+          "_type": "tabItem",
           "body": [
             {
               "_key": "a0fe69209bb2",
@@ -458,6 +461,7 @@
         },
         {
           "_key": "1eef161dae98",
+          "_type": "tabItem",
           "body": [
             {
               "_key": "fe5c2a0b685b",
@@ -605,6 +609,7 @@
         },
         {
           "_key": "a6b73d5e6535",
+          "_type": "tabItem",
           "body": [
             {
               "_key": "cd8c85f477c5",
@@ -752,6 +757,7 @@
         },
         {
           "_key": "a8ccef04996a",
+          "_type": "tabItem",
           "body": [
             {
               "_key": "cdb6ce124da9",
@@ -861,6 +867,7 @@
         },
         {
           "_key": "3fa0f2b2bcd5",
+          "_type": "tabItem",
           "body": [
             {
               "_key": "1eb5e2f80d6a",
@@ -1008,6 +1015,7 @@
         },
         {
           "_key": "3afd4a6d9cd4",
+          "_type": "tabItem",
           "body": [
             {
               "_key": "7a60fbd55a1f",
@@ -1117,6 +1125,7 @@
         },
         {
           "_key": "4c32b230d61c",
+          "_type": "tabItem",
           "body": [
             {
               "_key": "3888d58b9ab4",

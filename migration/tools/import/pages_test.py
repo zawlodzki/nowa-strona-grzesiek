@@ -48,6 +48,20 @@ class SectionExtractTests(unittest.TestCase):
     def texts(body):
         return [(b.get('style'), ''.join(c.get('text', '') for c in b.get('children', []))) for b in body]
 
+    def test_tabs_keep_both_standalone_links_and_panel_states(self):
+        from pages import Page, content_section
+        class ExternalLinks:
+            def resolve(self, href, path):
+                return 'external', href, None
+        page = Page('/example', Keys('/example'), ExternalLinks(), Assets('/nonexistent'), [], {})
+        html = '<section><div class="w-tabs"><div class="w-tab-menu"><a class="w-tab-link" data-w-tab="one"><h3>One</h3><p>Summary</p></a></div><div class="w-tab-pane" data-w-tab="one"><div class="stan-mocny"><h4>Works</h4><p>Good</p></div><div class="stan-slaby"><h4>Fails</h4><p>Bad</p></div><p>Start</p><a href="https://example.org/a">A</a><a href="https://example.org/b">B</a></div></div></section>'
+        block = content_section(page, parse(html).elements()[0], None)
+        self.assertEqual(block['_type'], 'tabs')
+        item = block['items'][0]
+        self.assertEqual([m['href'] for b in item['body'] for m in b.get('markDefs', [])], ['https://example.org/a', 'https://example.org/b'])
+        self.assertEqual(self.texts(item['positive']), [('h4', 'Works'), ('normal', 'Good')])
+        self.assertEqual(self.texts(item['negative']), [('h4', 'Fails'), ('normal', 'Bad')])
+
     def test_ordered_prose_keeps_list_between_paragraphs(self):
         [section] = self.sections('contentSection', '<section><div class="section-title"><h2>Test</h2><p>Before</p></div><ol><li>First</li><li>Second</li></ol><p>After</p></section>')
         self.assertEqual(section['_type'], 'richText')
