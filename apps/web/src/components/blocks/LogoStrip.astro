@@ -6,6 +6,7 @@ import BlockSection from '../ui/BlockSection.astro';
 interface Props { data: LogoStrip; logos: ResolvedLogo[]; }
 const { data, logos } = Astro.props;
 // Live brand treatments belong to each logo, regardless of the page using this strip.
+// Webflow .testimonial-logo.difference marks white artwork that needs inversion.
 const difference = new Set(['smmash', 'iimarbella', 'deky expo']);
 const small = new Set(['eagle lasers', 'american lens', '4hfix']);
 const tools = data.variant === 'tools';
@@ -18,7 +19,7 @@ const ordered = (data.logos ?? []).flatMap((ref) => { const logo = logos.find((i
     {data.title && (tools ? <p class="type-body-s">{data.title}</p> : <h2>{data.title}</h2>)}
     {data.intro && <p class="type-body intro">{data.intro}</p>}
   </header>}
-  <ul tabindex="0" aria-label={data.title || data.intro || 'Logotypy'} class:list={['logo-grid', { tools: data.variant === 'tools' }]}>{ordered.map((logo) => <li class:list={{ difference: difference.has(logo.name?.toLowerCase() ?? ''), small: small.has(logo.name?.toLowerCase() ?? '') }}>{safeHref(logo.url) ? <a href={safeHref(logo.url)}><img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" /></a> : <img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" />}</li>)}</ul>
+  <ul aria-label={data.title || data.intro || 'Logotypy'} class:list={['logo-grid', { tools: data.variant === 'tools' }]}>{ordered.map((logo) => <li tabindex={safeHref(logo.url) ? undefined : 0} class:list={{ difference: difference.has(logo.name?.toLowerCase() ?? ''), small: small.has(logo.name?.toLowerCase() ?? '') }}>{safeHref(logo.url) ? <a href={safeHref(logo.url)}><img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" /></a> : <img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" />}</li>)}</ul>
 </div></BlockSection>}
 <style>
   .logos { display: grid; gap: var(--space-l); }
@@ -26,12 +27,21 @@ const ordered = (data.logos ?? []).flatMap((ref) => { const logo = logos.find((i
   .intro { white-space: pre-line; }
   .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); align-items: center; gap: var(--space-s); padding: 0; margin: 0; list-style: none; }
   .logo-grid li { display: grid; place-items: center; block-size: 128px; min-inline-size: 0; }
-  .logo-grid img { inline-size: 75%; block-size: auto; max-block-size: 128px; object-fit: contain; }
-  .logo-grid .difference img { mix-blend-mode: difference; }
+  .logo-grid img { inline-size: 75%; block-size: auto; max-block-size: 128px; object-fit: contain; filter: grayscale(1); opacity: .65; }
+  .logo-grid .difference img { filter: invert(1) grayscale(1); }
   .logo-grid .small img { max-inline-size: 40%; }
   .logo-grid a { display: grid; place-items: center; inline-size: 100%; min-block-size: 44px; border-radius: var(--radius-sm); }
-  .logo-grid a:active { opacity: .65; }
-  @media (hover: hover) and (pointer: fine) { .logo-grid a:hover { opacity: .7; } }
+  .logo-grid :is(li, a):focus-visible { outline: 2px solid var(--border-focus); outline-offset: 3px; }
+  .logo-grid li:focus-visible img, .logo-grid li:has(a:focus-visible) img { filter: none; opacity: 1; }
+  .logo-grid li.difference:focus-visible img, .logo-grid li.difference:has(a:focus-visible) img { filter: invert(1); }
+  .logo-grid a:active { opacity: .8; }
+  @media (hover: hover) and (pointer: fine) {
+    .logo-grid li:hover img { filter: none; opacity: 1; }
+    .logo-grid li.difference:hover img { filter: invert(1); }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .logo-grid img { transition: filter var(--motion-duration-base) var(--motion-easing-out), opacity var(--motion-duration-base) var(--motion-easing-out); }
+  }
   @container (width < 30rem) {
     .logo-grid li { block-size: 48px; }
     .logo-grid img { max-block-size: 48px; }
