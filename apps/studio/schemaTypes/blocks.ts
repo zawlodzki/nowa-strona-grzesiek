@@ -8,6 +8,8 @@ export const hero = defineType({
     taglineField, headingField,
     defineField({name: 'body', type: 'text', validation: (rule) => rule.required()}),
     defineField({name: 'image', type: 'contentImage', validation: (rule) => rule.required()}),
+    defineField({name: 'badgeImage', type: 'contentImage'}),
+    defineField({name: 'badgeSize', type: 'string', options: {list: ['standard', 'wide']}}),
     defineField({name: 'badges', type: 'array', of: [defineArrayMember({type: 'string'})]}),
     defineField({name: 'cta', type: 'link'}),
   ], preview: {select: {title: 'heading', media: 'image'}},
@@ -43,6 +45,16 @@ export const contentSection = defineType({
       defineField({name: 'icon', type: 'string'}), defineField({name: 'link', type: 'link'}),
     ]})]}),
     defineField({name: 'media', type: 'media'}),
+  ], preview: {select: {title: 'heading'}},
+})
+export const tabs = defineType({
+  name: 'tabs', title: 'Zakładki', type: 'object',
+  fields: [taglineField, defineField({name: 'heading', type: 'string'}), defineField({name: 'intro', type: 'portableText'}),
+    defineField({name: 'items', type: 'array', validation: (rule) => rule.required().min(1), of: [defineArrayMember({name: 'tabItem', type: 'object', fields: [
+      titleField, defineField({name: 'summary', type: 'text'}),
+      defineField({name: 'positive', type: 'portableText'}), defineField({name: 'negative', type: 'portableText'}),
+      defineField({name: 'body', type: 'portableText', validation: (rule) => rule.required().min(1)}),
+    ]})]}),
   ], preview: {select: {title: 'heading'}},
 })
 export const pricing = defineType({
@@ -113,4 +125,4 @@ export const postList = defineType({
   ], preview: {select: {title: 'heading', subtitle: 'kind'}},
 })
 export const richText = defineType({name: 'richText', title: 'Treść artykułu', type: 'object', fields: [defineField({name: 'body', type: 'portableText', validation: (rule) => rule.required().min(1)})]})
-export const blockTypes = [hero, logoStrip, feature, contentSection, pricing, ctaBand, testimonials, promoCard, faq, contactForm, newsletterSignup, postList, richText]
+export const blockTypes = [hero, logoStrip, feature, contentSection, tabs, pricing, ctaBand, testimonials, promoCard, faq, contactForm, newsletterSignup, postList, richText]

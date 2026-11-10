@@ -5,8 +5,8 @@ import { consultation } from '../ui/block-types';
 import BlockSection from '../ui/BlockSection.astro';
 import Button from '../ui/Button.astro';
 import MediaImage from '../ui/MediaImage.astro';
-interface Props { data: Hero; image?: ResolvedImage; headingLevel?: 'h1' | 'h2'; }
-const { data, image, headingLevel: Heading = 'h1' } = Astro.props;
+interface Props { data: Hero; image?: ResolvedImage; badgeImage?: ResolvedImage; headingLevel?: 'h1' | 'h2'; }
+const { data, image, badgeImage, headingLevel: Heading = 'h1' } = Astro.props;
 ---
 <BlockSection kind="hero">
   <div class:list={['hero-layout', { 'has-image': image }]}>
@@ -18,7 +18,7 @@ const { data, image, headingLevel: Heading = 'h1' } = Astro.props;
         {(data.badges?.length ?? 0) > 0 && <ul class="badges type-body-s">{data.badges?.map((badge) => <li>{badge}</li>)}</ul>}
       </div>
     </div>
-    {image && <div class="portrait"><div class="portrait-image"><MediaImage image={image} eager portrait /></div></div>}
+    {image && <div class:list={["portrait", { wide: data.badgeSize === "wide" }]}><div class="portrait-image"><MediaImage image={image} eager portrait /></div>{badgeImage && <img class="image-badge" src={badgeImage.src} alt={badgeImage.alt} width={badgeImage.width} height={badgeImage.height} />}</div>}
   </div>
 </BlockSection>
 <style>
@@ -27,7 +27,10 @@ const { data, image, headingLevel: Heading = 'h1' } = Astro.props;
   .copy > * { overflow-wrap: anywhere; }
   .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-s); inline-size: 100%; }
   .badges { display: flex; flex-wrap: wrap; gap: var(--space-xs); padding: 0; margin: 0; list-style: none; color: var(--text-muted); }
-  .portrait { display: grid; isolation: isolate; }
+  .portrait { position: relative; display: grid; isolation: isolate; }
   .portrait > * { grid-area: 1 / 1; }
+  .image-badge { position: absolute; z-index: 2; inline-size: 130px; block-size: auto; inset-block-end: -60px; inset-inline-start: -40px; }
+  .wide .image-badge { inline-size: 200px; }
+  @media (max-width: 991px) { .image-badge, .wide .image-badge { inline-size: 60px; inset-block-end: -20px; inset-inline-start: -15px; } .wide .image-badge { inline-size: 70px; } }
   @container (width >= 48rem) { .has-image { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); } }
 </style>

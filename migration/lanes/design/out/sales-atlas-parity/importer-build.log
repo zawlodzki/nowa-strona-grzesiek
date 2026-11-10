@@ -1,0 +1,40 @@
+{
+ "pages": 28,
+ "logos": 36,
+ "testimonials": 2,
+ "images": {
+  "mapped": 437,
+  "sanityAssetPlaceholders": 0
+ },
+ "blocks": {
+  "contactForm": 16,
+  "contentSection": 47,
+  "ctaBand": 13,
+  "faq": 14,
+  "feature": 100,
+  "hero": 16,
+  "logoStrip": 21,
+  "newsletterSignup": 6,
+  "postList": 2,
+  "pricing": 11,
+  "promoCard": 10,
+  "richText": 9,
+  "tabs": 1,
+  "testimonials": 7
+ },
+ "issueCounts": {
+  "alt-missing": 11,
+  "contentSection-cta-dropped": 5,
+  "price-on-request": 9,
+  "pricing-intro-dropped": 11,
+  "seo-description-derived": 3,
+  "seo-description-too-long": 5,
+  "seo-title-too-long": 6,
+  "table-lifted-from-list": 1,
+  "testimonial-logo-dropped": 6,
+  "testimonials-as-logos": 4,
+  "tree-section-not-rendered": 1
+ },
+ "ndjsonSha256": "dc9ea52cea3daea9f51c10ee10627351a2c3645fd84b677ce01dd4a296e19a02"
+}
+sections with text loss: 54

@@ -48,6 +48,12 @@ class SectionExtractTests(unittest.TestCase):
     def texts(body):
         return [(b.get('style'), ''.join(c.get('text', '') for c in b.get('children', []))) for b in body]
 
+    def test_ordered_prose_keeps_list_between_paragraphs(self):
+        [section] = self.sections('contentSection', '<section><div class="section-title"><h2>Test</h2><p>Before</p></div><ol><li>First</li><li>Second</li></ol><p>After</p></section>')
+        self.assertEqual(section['_type'], 'richText')
+        self.assertEqual([t for _, t in self.texts(section['body'])], ['Test', 'Before', 'First', 'Second', 'After'])
+        self.assertEqual(section['body'][2]['listItem'], 'number')
+
     def test_feature_keeps_subheadings_and_paragraphs_once(self):
         [section] = self.sections('feature', '<div class="feature-section"><div class="copy"><h1>Title</h1><p>One.</p><h2>Start</h2><p>Two.</p></div></div>')
         self.assertEqual(self.texts(section['body']), [('normal', 'One.'), ('h2', 'Start'), ('normal', 'Two.')])

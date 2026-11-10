@@ -345,6 +345,22 @@ export type Pricing = {
   }>;
 };
 
+export type Tabs = {
+  _type: "tabs";
+  tagline?: string;
+  heading?: string;
+  intro?: PortableText;
+  items?: Array<{
+    title?: string;
+    summary?: string;
+    positive?: PortableText;
+    negative?: PortableText;
+    body?: PortableText;
+    _type: "tabItem";
+    _key: string;
+  }>;
+};
+
 export type ContentSection = {
   _type: "contentSection";
   tagline?: string;
@@ -401,6 +417,8 @@ export type Hero = {
   heading?: string;
   body?: string;
   image?: ContentImage;
+  badgeImage?: ContentImage;
+  badgeSize?: "standard" | "wide";
   badges?: Array<string>;
   cta?: Link;
 };
@@ -591,6 +609,9 @@ export type Page = {
     | ({
         _key: string;
       } & ContentSection)
+    | ({
+        _key: string;
+      } & Tabs)
     | ({
         _key: string;
       } & Pricing)
@@ -800,6 +821,7 @@ export type AllSanitySchemaTypes =
   | Testimonials
   | CtaBand
   | Pricing
+  | Tabs
   | ContentSection
   | Feature
   | LogoReference

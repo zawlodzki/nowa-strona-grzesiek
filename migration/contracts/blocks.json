@@ -14,7 +14,7 @@
       "type": "hero",
       "component": "Hero",
       "purpose": "Page opening with H1",
-      "fields": {"variant": "'default'|'badge'", "tagline": "string", "heading": "string (renders H1)", "body": "text", "image": "image", "badges": "string[]", "cta": "link?"},
+      "fields": {"variant": "'default'|'badge'", "tagline": "string", "heading": "string (renders H1)", "body": "text", "image": "image", "badgeImage": "contentImage? (alt required when set)", "badgeSize": "'standard'|'wide'?", "badges": "string[]", "cta": "link?"},
       "jsonld": "none (WebPage.name comes from page.seo)",
       "match": [{"component": "hero zawlodzki"}, {"component": "Hero zawlodzki badge"}, {"classes": "Hero Section"}]
     },
@@ -114,7 +114,20 @@
       "fields": {"body": "portableText"},
       "jsonld": "none",
       "match": [{"classes": "blog-article"}]
-    }
+    },
+{
+  "type": "tabs",
+  "component": "Tabs",
+  "purpose": "Accessible vertical tabs preserving all pane links",
+  "fields": {
+    "heading": "string",
+    "tagline": "string?",
+    "intro": "portableText?",
+    "items": "{title,summary?,positive?,negative?,body:portableText}[]"
+  },
+  "jsonld": "none",
+  "match": []
+}
   ],
   "diagramKeys": {
     "_note": "Animated diagrams are code, not content. Editors pick a key; lane D implements src/components/diagrams/<Key>.astro. Keys come from the embed ids in Webflow. Lane M extends this list from live-site/html if it finds more.",

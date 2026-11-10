@@ -1,0 +1,24 @@
+$ astro build
+18:58:00 [types] Generated 30ms
+18:58:00 [build] output: "static"
+18:58:00 [build] mode: "static"
+18:58:00 [build] directory: /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T32-sales-atlas-parity/apps/web/dist/
+18:58:00 [build] Collecting build info...
+18:58:00 [build] ✓ Completed in 51ms.
+18:58:00 [build] Building static entrypoints...
+18:58:00 [vite] ✓ built in 215ms
+18:58:00 [vite] ✓ built in 38ms
+18:58:00 [build] Rearranging server assets...
+
+ generating static routes 
+T32_LOCAL_DOCUMENTS is only allowed in explicit local proof builds
+  Location:
+    /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T32-sales-atlas-parity/node_modules/.pnpm/astro@7.4.1_@types+node@24.19.2_esbuild@0.28.2_jiti@2.7.0_yaml@2.9.1/node_modules/astro/dist/core/render/route-cache.js:64:16
+  Stack trace:
+    at applyLocalOverlay (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T32-sales-atlas-parity/apps/web/dist/.prerender/chunks/client_B18V5Wu1.mjs:21:119)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Module.getStaticPaths (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T32-sales-atlas-parity/apps/web/dist/.prerender/chunks/_slug__KdjeLTGJ.mjs:13:36)
+    at async callGetStaticPaths (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T32-sales-atlas-parity/node_modules/.pnpm/astro@7.4.1_@types+node@24.19.2_esbuild@0.28.2_jiti@2.7.0_yaml@2.9.1/node_modules/astro/dist/core/render/route-cache.js:36:27)
+    at async StaticPaths.getAll (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T32-sales-atlas-parity/node_modules/.pnpm/astro@7.4.1_@types+node@24.19.2_esbuild@0.28.2_jiti@2.7.0_yaml@2.9.1/node_modules/astro/dist/runtime/prerender/static-paths.js:44:19)
+[ELIFECYCLE] Command failed with exit code 1.
+build failed, log: /tmp/verify-web/runs/8791/build.log
