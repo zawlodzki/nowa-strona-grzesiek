@@ -44,7 +44,7 @@ Coordinator approved `verify-schema.mjs` in owns on main (0e9aaa9). Its contract
 
 Coordinator replaced the overlay approach with catalog fixtures; client.ts was restored exactly to T31 and the overlay test deleted. Coordinator later confirmed T31 merged and requested merging main plus a normal PR. T32 stays todo pending T31 board mark-done and coordinator claim.
 
-Existing T31 design choices remain: copy precedes the larger portrait on mobile and text is left aligned; requested consultation CTA is kept. Badge placement/sizing follows live (standard 130/60px, wide Salesforce 200/70px). At all widths only the selected tab summary is expanded under JavaScript; all summaries stay in the DOM and remain readable with JavaScript off. Selection uses secondary-10 and a left accent bar; card headings use heading-xs; the imported tab-item tagline renders as a neutral chip. No fade is authored, including reduced motion. Test tagline/heading use the shared section styles; its body is rendered identically in catalog and the proposed real route.
+Existing T31 design choices remain: copy precedes the larger portrait on mobile and text is left aligned; requested consultation CTA is kept. Badge placement/sizing follows live (standard 130/60px, wide Salesforce 200/70px). At all widths only the selected tab summary is expanded under JavaScript; all summaries stay in the DOM and remain readable with JavaScript off. Selection uses secondary-10 without a left accent bar; card headings use heading-xs; the imported tab-item tagline renders as a neutral chip. No fade is authored, including reduced motion. Test tagline/heading use the shared section styles; its body is rendered identically in catalog and the proposed real route.
 
 PR #52 review corrections: refreshed all eight affected tabs/test comparisons at 1280/375, updated proposed documents/sections patch/import diff, and reran browser and build/schema/source/importer checks. Sanity document validation is still skipped per coordinator (login required).
 
@@ -54,3 +54,14 @@ PR #52 review corrections: refreshed all eight affected tabs/test comparisons at
 2. PL page `/szkolenie-i-wdrozenie-salesforce` → hero → badgeImage: upload `https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a4fd5d9fc248b2db6691611_Salesforce.com_logo.svg.webp`; alt `Salesforce logo`; badgeSize `wide`.
 3. Sales Atlas sections: replace flattened nine-layer contentSection with the `tabs` object in the proposed page, including all nine titles/summaries, positive/negative cards, body and all 15 inline links. Update the test contentSection: retain tagline `Test` and its heading, and replace intro with the proposed Portable Text stream (intro paragraph, three numbered items, two closing paragraphs); omit items. For each tab item set its tagline field from the proposed document (the “Od czego zacząć” chip); keep it outside body text.
 4. Review `production-patch.json` against current published sections. This is the prepared exact mutation body if a later production write is explicitly approved; no mutation has been submitted. Keep the hero CTA unchanged (fallback remains).
+
+## Grzesiek review — remove selected-tab accent
+
+Selected tabs retain the cyan background; the inline-start border and accent color have been removed. Keyboard handling, ARIA attributes, selected summaries and no-JS fallback are unchanged. Latest screenshots through verify-web on Worker port 8790:
+
+| State | 1280 px | 375 px |
+|---|---|---|
+| Default | [PNG](tabs-no-accent-default-w1280.png) | [PNG](tabs-no-accent-default-w375.png) |
+| Tab 04 after click | [PNG](tabs-no-accent-click04-w1280.png) | [PNG](tabs-no-accent-click04-w375.png) |
+
+`no-accent-checks.json` confirms 0px inline-start border in both states, nontransparent selected background, one visible summary, Home/ArrowDown/End and selected tabindex, one visible tabpanel, viewport-width scrollWidth, and all nine panels/summaries visible without JS. `no-accent-worker.log` records verify-web doctor. `no-accent-{astro-check,source-tests,importer-tests}.log` contain the rerun checks (33 source tests, 23 importer tests). The Worker normal build passed before capture. Earlier compare PNGs preserve the review history; these four PNGs supersede their selected-tab accent styling.

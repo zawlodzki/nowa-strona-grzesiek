@@ -67,8 +67,8 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   header { display: grid; gap: var(--space-m); margin-block-end: var(--space-xl); }
   .tabs { display: flex; align-items: center; gap: 24px; }
   .menu { flex: 0 0 calc(35% - 12px); display: flex; flex-direction: column; gap: 16px; }
-  .menu a { display: grid; gap: var(--space-xs); padding: 16px 24px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-body); border-inline-start: 3px solid transparent; }
-  .menu a[aria-selected="true"] { background: var(--surface-cyan-tint); border-inline-start-color: var(--border-focus); }
+  .menu a { display: grid; gap: var(--space-xs); padding: 16px 24px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-body); }
+  .menu a[aria-selected="true"] { background: var(--surface-cyan-tint); }
   [data-ready] .menu a:not([aria-selected="true"]) > span:last-child { display: none; }
   .menu a:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; }
   .menu a:active { background: var(--surface-tint); }

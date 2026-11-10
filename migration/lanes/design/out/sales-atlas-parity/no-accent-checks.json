@@ -1,0 +1,44 @@
+[
+  {
+    "width": 1280,
+    "state": "default",
+    "selected": 0,
+    "border": "0px",
+    "background": "oklch(0.97262 0.02105 215.254)"
+  },
+  {
+    "width": 1280,
+    "state": "click04",
+    "selected": 3,
+    "border": "0px",
+    "background": "oklch(0.97262 0.02105 215.254)"
+  },
+  {
+    "width": 1280,
+    "keyboard": "Home/ArrowDown/End passed",
+    "scrollWidth": 1280
+  },
+  {
+    "width": 375,
+    "state": "default",
+    "selected": 0,
+    "border": "0px",
+    "background": "oklch(0.97262 0.02105 215.254)"
+  },
+  {
+    "width": 375,
+    "state": "click04",
+    "selected": 3,
+    "border": "0px",
+    "background": "oklch(0.97262 0.02105 215.254)"
+  },
+  {
+    "width": 375,
+    "keyboard": "Home/ArrowDown/End passed",
+    "scrollWidth": 375
+  },
+  {
+    "noJSVisiblePanels": 9,
+    "noJSVisibleSummaries": 9
+  }
+]
