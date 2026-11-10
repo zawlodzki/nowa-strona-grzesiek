@@ -5,6 +5,9 @@ import { safeHref } from '../ui/block-types';
 import BlockSection from '../ui/BlockSection.astro';
 interface Props { data: LogoStrip; logos: ResolvedLogo[]; }
 const { data, logos } = Astro.props;
+// Live brand treatments belong to each logo, regardless of the page using this strip.
+const difference = new Set(['smmash', 'iimarbella', 'deky expo']);
+const small = new Set(['eagle lasers', 'american lens', '4hfix']);
 const tools = data.variant === 'tools';
 const hasHead = Boolean(data.tagline || data.title || data.intro);
 const ordered = (data.logos ?? []).flatMap((ref) => { const logo = logos.find((item) => item._id === ref._ref); return logo ? [logo] : []; });
@@ -15,18 +18,22 @@ const ordered = (data.logos ?? []).flatMap((ref) => { const logo = logos.find((i
     {data.title && (tools ? <p class="type-body-s">{data.title}</p> : <h2>{data.title}</h2>)}
     {data.intro && <p class="type-body intro">{data.intro}</p>}
   </header>}
-  <ul tabindex="0" aria-label={data.title || data.intro || 'Logotypy'} class:list={['logo-grid', { tools: data.variant === 'tools' }]}>{ordered.map((logo) => <li>{safeHref(logo.url) ? <a href={safeHref(logo.url)}><img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" /></a> : <img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" />}</li>)}</ul>
+  <ul tabindex="0" aria-label={data.title || data.intro || 'Logotypy'} class:list={['logo-grid', { tools: data.variant === 'tools' }]}>{ordered.map((logo) => <li class:list={{ difference: difference.has(logo.name?.toLowerCase() ?? ''), small: small.has(logo.name?.toLowerCase() ?? '') }}>{safeHref(logo.url) ? <a href={safeHref(logo.url)}><img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" /></a> : <img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" />}</li>)}</ul>
 </div></BlockSection>}
 <style>
   .logos { display: grid; gap: var(--space-l); }
   .head { display: grid; gap: var(--space-2xs); justify-items: center; max-inline-size: 48rem; margin-inline: auto; text-align: center; }
   .intro { white-space: pre-line; }
-  .logo-grid { display: grid; grid-auto-flow: column; grid-template-rows: repeat(2, auto); grid-auto-columns: minmax(5rem, 1fr); overflow-x: auto; padding-block: var(--space-2xs); align-items: center; gap: var(--space-l) var(--space-m); padding: 0; margin: 0; list-style: none; }
-  .logo-grid.tools { grid-template-rows: auto; }
-  .logo-grid li { display: grid; align-items: center; min-block-size: 44px; }
-  .logo-grid img { inline-size: 100%; block-size: clamp(1.75rem, 3cqi, 2.5rem); object-fit: contain; filter: grayscale(1); opacity: .85; }
-  .logo-grid a { display: grid; align-items: center; min-block-size: 44px; border-radius: var(--radius-sm); }
+  .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); align-items: center; gap: var(--space-s); padding: 0; margin: 0; list-style: none; }
+  .logo-grid li { display: grid; place-items: center; block-size: 128px; min-inline-size: 0; }
+  .logo-grid img { inline-size: 75%; block-size: auto; max-block-size: 128px; object-fit: contain; }
+  .logo-grid .difference img { mix-blend-mode: difference; }
+  .logo-grid .small img { max-inline-size: 40%; }
+  .logo-grid a { display: grid; place-items: center; inline-size: 100%; min-block-size: 44px; border-radius: var(--radius-sm); }
   .logo-grid a:active { opacity: .65; }
   @media (hover: hover) and (pointer: fine) { .logo-grid a:hover { opacity: .7; } }
-  @container (width >= 40rem) { .logo-grid { grid-auto-flow: row; grid-template-rows: auto; grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr)); } }
+  @container (width < 30rem) {
+    .logo-grid li { block-size: 48px; }
+    .logo-grid img { max-block-size: 48px; }
+  }
 </style>

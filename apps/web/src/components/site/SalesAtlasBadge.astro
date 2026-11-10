@@ -1,0 +1,12 @@
+<span class="badge">
+  <img src="/brand/sales-atlas-system-pion.svg" width="355" height="520" alt="" loading="lazy" />
+  <span class="ring" aria-hidden="true"></span>
+</span>
+<style>
+  .badge { display: grid; position: relative; inline-size: 4.267rem; aspect-ratio: 355 / 520; border-radius: 14.648% / 10%; isolation: isolate; }
+  img { inline-size: 100%; block-size: auto; }
+  .ring { position: absolute; inset: 0; overflow: clip; border-radius: inherit; padding: 3.099%; pointer-events: none; mix-blend-mode: screen; mask: linear-gradient(oklch(1 0 none) 0 0) content-box, linear-gradient(oklch(1 0 none) 0 0); mask-composite: exclude; }
+  .ring::before { content: ''; position: absolute; inset: -35%; background: conic-gradient(from 0deg, transparent 56%, var(--color-secondary-60) 64.5%, var(--text-on-dark) 69.8%, var(--color-secondary-60) 75%, transparent 85%); rotate: 288deg; }
+  @media (prefers-reduced-motion: no-preference) { .ring::before { animation: orbit 11s linear infinite; } }
+  @keyframes orbit { from { rotate: 0deg; } to { rotate: 360deg; } }
+</style>

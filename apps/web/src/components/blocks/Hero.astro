@@ -18,7 +18,7 @@ const { data, image, headingLevel: Heading = 'h1' } = Astro.props;
         {(data.badges?.length ?? 0) > 0 && <ul class="badges type-body-s">{data.badges?.map((badge) => <li>{badge}</li>)}</ul>}
       </div>
     </div>
-    {image && <div class="portrait"><span class="monogram" aria-hidden="true">GZ</span><div class="portrait-image"><MediaImage image={image} eager portrait /></div></div>}
+    {image && <div class="portrait"><div class="portrait-image"><MediaImage image={image} eager portrait /></div></div>}
   </div>
 </BlockSection>
 <style>
@@ -29,6 +29,5 @@ const { data, image, headingLevel: Heading = 'h1' } = Astro.props;
   .badges { display: flex; flex-wrap: wrap; gap: var(--space-xs); padding: 0; margin: 0; list-style: none; color: var(--text-muted); }
   .portrait { display: grid; isolation: isolate; }
   .portrait > * { grid-area: 1 / 1; }
-  .monogram { align-self: center; color: var(--text-link); font-family: var(--font-family-heading); font-size: clamp(6rem, 28cqi, 18rem); font-weight: var(--font-weight-bold); line-height: 1; }
   @container (width >= 48rem) { .has-image { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); } }
 </style>

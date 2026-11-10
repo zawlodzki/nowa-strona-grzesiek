@@ -92,7 +92,7 @@ const icons: Record<string, string> = {
           )}
           {details && (
             <aside class="details" aria-labelledby={f('details')}>
-              {contact.image && <img class="portrait" src={contact.image.src} width={contact.image.width} height={contact.image.height} alt={contact.image.alt ?? ''} loading="lazy" decoding="async" />}
+              <img class="portrait" src="/brand/contact-profile.avif" width="450" height="450" alt="Grzegorz Zawłodzki" loading="lazy" decoding="async" />
               <h3 id={f('details')} class="type-heading-s">Bezpośredni kontakt</h3>
               <p>Wyślij e-mail, napisz SMS lub zadzwoń.</p>
               <ul class="channel-rows" role="list">
@@ -167,7 +167,7 @@ const icons: Record<string, string> = {
   .note-block { display: grid; gap: var(--space-2xs); }
   .strong-link { font-weight: var(--font-weight-medium); }
   .details { display: grid; gap: var(--space-xs); align-content: start; }
-  .portrait { inline-size: min(100%, 14rem); border-radius: var(--radius-lg); margin-block-end: var(--space-xs); }
+  .portrait { inline-size: 20%; block-size: auto; aspect-ratio: 1; object-fit: cover; margin-block-end: var(--space-xs); }
   .channel-rows { display: grid; gap: var(--space-3xs); margin: 0; padding: 0; list-style: none; }
   .channel-rows a { min-block-size: 44px; align-items: center; font-weight: var(--font-weight-medium); overflow-wrap: anywhere; }
   .channel-rows svg { block-size: 1cap; }
