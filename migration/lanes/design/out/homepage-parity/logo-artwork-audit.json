@@ -1,0 +1,218 @@
+[
+  {
+    "name": "costa broker",
+    "whiteFraction": 0,
+    "darkFraction": 0.97393149439224,
+    "whiteArtwork": false
+  },
+  {
+    "name": "openai",
+    "whiteFraction": 0,
+    "darkFraction": 1,
+    "whiteArtwork": false
+  },
+  {
+    "name": "clay",
+    "whiteFraction": 0,
+    "darkFraction": 0.4715390021082221,
+    "whiteArtwork": false
+  },
+  {
+    "name": "eagle lasers",
+    "whiteFraction": 0,
+    "darkFraction": 1,
+    "whiteArtwork": false
+  },
+  {
+    "name": "deky expo",
+    "whiteFraction": 1,
+    "darkFraction": 0,
+    "whiteArtwork": true
+  },
+  {
+    "name": "smmash",
+    "whiteFraction": 1,
+    "darkFraction": 0,
+    "whiteArtwork": true
+  },
+  {
+    "name": "salesforce",
+    "whiteFraction": 0.04701408694149166,
+    "darkFraction": 0,
+    "whiteArtwork": false
+  },
+  {
+    "name": "vadim eyewear",
+    "whiteFraction": 0,
+    "darkFraction": 0.9757746478873239,
+    "whiteArtwork": false
+  },
+  {
+    "name": "attio",
+    "whiteFraction": 0,
+    "darkFraction": 1,
+    "whiteArtwork": false
+  },
+  {
+    "name": "Lex Capital",
+    "whiteFraction": 0,
+    "darkFraction": 0.6350890488821523,
+    "whiteArtwork": false
+  },
+  {
+    "name": "microsoft",
+    "whiteFraction": 0,
+    "darkFraction": 0,
+    "whiteArtwork": false
+  },
+  {
+    "name": "iimarbella",
+    "whiteFraction": 1,
+    "darkFraction": 0,
+    "whiteArtwork": true
+  },
+  {
+    "name": "IAB Polska",
+    "whiteFraction": 0,
+    "darkFraction": 0.7599351175993512,
+    "whiteArtwork": false
+  },
+  {
+    "name": "sovo development",
+    "whiteFraction": 0,
+    "darkFraction": 0,
+    "whiteArtwork": false
+  },
+  {
+    "name": "prngo",
+    "whiteFraction": 0,
+    "darkFraction": 0.379163901791639,
+    "whiteArtwork": false
+  },
+  {
+    "name": "bosko agency",
+    "whiteFraction": 0.07696533203125,
+    "darkFraction": 0.89520263671875,
+    "whiteArtwork": false
+  },
+  {
+    "name": "american lens",
+    "whiteFraction": 0,
+    "darkFraction": 1,
+    "whiteArtwork": false
+  },
+  {
+    "name": "euroser",
+    "whiteFraction": 0,
+    "darkFraction": 0.4419681620839363,
+    "whiteArtwork": false
+  },
+  {
+    "name": "moovin",
+    "whiteFraction": 0,
+    "darkFraction": 1,
+    "whiteArtwork": false
+  },
+  {
+    "name": "asmo solutions",
+    "whiteFraction": 0,
+    "darkFraction": 0.15569938870909744,
+    "whiteArtwork": false
+  },
+  {
+    "name": "kpan",
+    "whiteFraction": 0.09989327641408752,
+    "darkFraction": 0,
+    "whiteArtwork": false
+  },
+  {
+    "name": "hubspot",
+    "whiteFraction": 0,
+    "darkFraction": 0.7604823747680891,
+    "whiteArtwork": false
+  },
+  {
+    "name": "anthropic",
+    "whiteFraction": 0,
+    "darkFraction": 1,
+    "whiteArtwork": false
+  },
+  {
+    "name": "4hfix",
+    "whiteFraction": 0,
+    "darkFraction": 1,
+    "whiteArtwork": false
+  },
+  {
+    "name": "optima home",
+    "whiteFraction": 0,
+    "darkFraction": 1,
+    "whiteArtwork": false
+  },
+  {
+    "name": "pro science",
+    "whiteFraction": 0,
+    "darkFraction": 0.6857633915783443,
+    "whiteArtwork": false
+  },
+  {
+    "name": "wsip",
+    "whiteFraction": 0.07036924939467312,
+    "darkFraction": 0,
+    "whiteArtwork": false
+  },
+  {
+    "name": "cash4car",
+    "whiteFraction": 0,
+    "darkFraction": 0,
+    "whiteArtwork": false
+  },
+  {
+    "name": "pipedrive",
+    "whiteFraction": 0,
+    "darkFraction": 1,
+    "whiteArtwork": false
+  },
+  {
+    "name": "rentli",
+    "whiteFraction": 0,
+    "darkFraction": 0.9593693147362038,
+    "whiteArtwork": false
+  },
+  {
+    "name": "cnk",
+    "whiteFraction": 0,
+    "darkFraction": 1,
+    "whiteArtwork": false
+  },
+  {
+    "name": "asana",
+    "whiteFraction": 0,
+    "darkFraction": 0.6954168170335618,
+    "whiteArtwork": false
+  },
+  {
+    "name": "asmo solutions",
+    "whiteFraction": 0.0005371530886302597,
+    "darkFraction": 0.0007162041181736795,
+    "whiteArtwork": false
+  },
+  {
+    "name": "make.com",
+    "whiteFraction": 0,
+    "darkFraction": 0.7796803652968036,
+    "whiteArtwork": false
+  },
+  {
+    "name": "n8n",
+    "whiteFraction": 0,
+    "darkFraction": 0.3805309734513274,
+    "whiteArtwork": false
+  },
+  {
+    "name": "zapier",
+    "whiteFraction": 0,
+    "darkFraction": 0.9334562520952062,
+    "whiteArtwork": false
+  }
+]
