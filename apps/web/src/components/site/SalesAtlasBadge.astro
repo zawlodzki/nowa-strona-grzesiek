@@ -1,0 +1,79 @@
+<span class="sas-beam">
+  <img class="plate" src="/brand/sales-atlas-system-pion.svg" width="355" height="520" alt="" loading="lazy" />
+  <span class="glow" aria-hidden="true"><span class="ring"><i></i></span></span>
+  <span class="ring" aria-hidden="true"><i></i></span>
+</span>
+<style>
+  /* Live .sas-beam: masked frame, glow copy, rotation, breath and brightness pulse.
+     Fluid dimensions reproduce live's 80/100px heights without its root-font jump. */
+  .sas-beam {
+    --sas-czas: 11s;
+    --sas-moc: 1.15;
+    --sas-rozmycie: 2.6cqw;
+    --sas-ramka: 3.099%;
+    --sas-wys: clamp(5rem, 4.48204rem + 2.20994vw, 6.25rem);
+    --sas-szer: calc(var(--sas-wys) * .6827);
+    --beam-cyan-tint: color-mix(in oklch, var(--color-secondary-60) 30%, var(--text-on-dark));
+    position: relative;
+    display: block;
+    inline-size: var(--sas-szer);
+    block-size: var(--sas-wys);
+    border-radius: 14.648% / 10%;
+    container-type: inline-size;
+    isolation: isolate;
+  }
+  .plate { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; display: block; }
+  .ring {
+    position: absolute;
+    inset: 0;
+    display: block;
+    overflow: clip;
+    border-radius: inherit;
+    padding: var(--sas-ramka);
+    pointer-events: none;
+    mix-blend-mode: screen;
+    mask: linear-gradient(var(--text-on-dark) 0 0) content-box, linear-gradient(var(--text-on-dark) 0 0);
+    mask-composite: exclude;
+  }
+  .ring > i {
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    inline-size: 170%;
+    aspect-ratio: 1;
+    display: block;
+    opacity: var(--sas-moc);
+    transform: translate(-50%, -50%) rotate(288deg);
+    background: conic-gradient(from 0deg,
+      transparent 0%, transparent 56%,
+      oklch(from var(--beam-cyan-tint) l c h / .05) 60%,
+      oklch(from var(--beam-cyan-tint) l c h / .22) 64.5%,
+      oklch(from var(--color-primary-10) l c h / .6) 68%,
+      var(--text-on-dark) 69.8%,
+      oklch(from var(--color-primary-10) l c h / .6) 71.5%,
+      oklch(from var(--color-secondary-60) l c h / .3) 75%,
+      oklch(from var(--color-secondary-60) l c h / .08) 80%,
+      transparent 85%);
+  }
+  .glow { position: absolute; inset: 0; border-radius: inherit; pointer-events: none; mix-blend-mode: screen; opacity: .75; filter: blur(2px) saturate(1.25); }
+  @supports (width: 1cqw) { .glow { filter: blur(var(--sas-rozmycie)) saturate(1.25); } }
+  .glow .ring { mix-blend-mode: normal; }
+  @media (prefers-reduced-motion: no-preference) {
+    .ring { animation: sas-iskra 6.7s ease-in-out infinite; }
+    .ring > i { animation: sas-obieg var(--sas-czas) linear infinite, sas-oddech 4.4s ease-in-out infinite; }
+  }
+  @keyframes sas-obieg {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  @keyframes sas-oddech {
+    0%, 100% { opacity: calc(var(--sas-moc) * .32); }
+    38% { opacity: var(--sas-moc); }
+    62% { opacity: calc(var(--sas-moc) * .78); }
+  }
+  @keyframes sas-iskra {
+    0%, 62%, 100% { filter: brightness(1); }
+    74% { filter: brightness(1.45); }
+    86% { filter: brightness(1.05); }
+  }
+</style>

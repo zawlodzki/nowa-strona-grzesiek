@@ -1,5 +1,6 @@
 ---
 import type { ContentSection } from '../../../../studio/sanity.types';
+import { safeHref } from '../ui/block-types';
 import type { ResolvedImage } from '../ui/block-types';
 import BlockSection from '../ui/BlockSection.astro';
 import PortableText from '../portable-text/PortableText.astro';
@@ -11,6 +12,7 @@ import MediaImage from '../ui/MediaImage.astro';
 interface Props extends Resolved { data: ContentSection; image?: ResolvedImage; }
 const { data, image, links, images } = Astro.props;
 const { layout = 'list' } = data;
+const linkOnly = layout === 'list' && Boolean(data.items?.length) && data.items!.every((item) => item.link?.label && safeHref(item.link.href) && !item.text && !item.icon);
 ---
 <BlockSection kind="content-section">
   <div class="content-layout">
@@ -18,8 +20,9 @@ const { layout = 'list' } = data;
       {data.tagline && <p class="type-tagline">{data.tagline}</p>}
       {data.heading && <h2>{data.heading}</h2>}
       <slot name="intro"><PortableText value={data.intro} links={links} images={images} /></slot>
+      {linkOnly && <nav class="inline-links" aria-label={data.heading || 'Usługi'}>{data.items?.map((item) => <a href={safeHref(item.link?.href)}>{item.link?.label}</a>)}</nav>}
     </header>
-    {(data.items?.length ?? 0) > 0 && <ul class:list={['items', layout]}>{data.items?.map((item) => <li class:list={{ negative: item.icon === 'close' }}>
+    {!linkOnly && (data.items?.length ?? 0) > 0 && <ul class:list={['items', layout]}>{data.items?.map((item) => <li class:list={{ negative: item.icon === 'close' }}>
       {layout === 'checklist' && <Icon name={item.icon === 'close' ? 'close' : 'check'} />}
       <div class="item-copy">
         {item.title && <h3 class="type-heading-xs">{item.title}</h3>}
@@ -33,6 +36,10 @@ const { layout = 'list' } = data;
 <style>
   .content-layout { display: grid; gap: var(--space-l); }
   .intro { display: grid; gap: var(--space-m); max-inline-size: 40rem; overflow-wrap: anywhere; }
+  .inline-links { display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-s); }
+  .inline-links a { display: inline-flex; align-items: center; min-block-size: 44px; color: var(--text-link); font-weight: var(--font-weight-medium); text-decoration: none; }
+  .inline-links a:active { color: var(--text-link-active); }
+  @media (hover: hover) and (pointer: fine) { .inline-links a:hover { color: var(--text-link-hover); text-decoration: underline; text-underline-offset: .18em; } }
   .items { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-m); }
   .items > li { min-inline-size: 0; }
   .item-copy { display: grid; gap: var(--space-xs); max-inline-size: 65ch; overflow-wrap: anywhere; }

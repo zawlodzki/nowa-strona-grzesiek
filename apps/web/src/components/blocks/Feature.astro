@@ -10,10 +10,11 @@ import Icon from '../ui/Icon.astro';
 import MediaImage from '../ui/MediaImage.astro';
 interface Props extends Resolved { data: Feature; image?: ResolvedImage; headingLevel?: 'h1' | 'h2' | 'h3'; }
 const { data, image, links, images, headingLevel: Heading = 'h2' } = Astro.props;
+const portrait = Boolean(image?.width && image?.height && image.height > image.width * 1.5 && data.media?.kind !== 'diagram');
 const hasMedia = Astro.slots.has('media') || image || (data.media?.kind === 'diagram' && data.media.key);
 ---
 <BlockSection id={data.anchorId?.current} kind="feature">
-  <div class:list={['feature-layout', { 'has-media': hasMedia, 'media-left': data.mediaSide === 'left' }]}>
+  <div class:list={['feature-layout', { 'has-media': hasMedia, 'media-left': data.mediaSide === 'left', 'has-portrait': portrait }]}>
     <div class="copy">
       {data.tagline && <p class="type-tagline">{data.tagline}</p>}
       {data.heading && <Heading>{data.heading}</Heading>}
@@ -27,6 +28,8 @@ const hasMedia = Astro.slots.has('media') || image || (data.media?.kind === 'dia
 <style>
   .feature-layout { display: grid; gap: var(--space-2xl); align-items: center; }
   .copy { display: flex; flex-direction: column; align-items: start; gap: var(--space-m); max-inline-size: 65ch; overflow-wrap: anywhere; }
+  .has-portrait .media { inline-size: min(100%, 240px); justify-self: center; }
+  @container (width < 48rem) { .has-portrait .media { display: none; } }
   .bullets { display: grid; gap: var(--space-xs); margin: 0; padding: 0; list-style: none; }
   .bullets li { display: flex; gap: var(--space-xs); align-items: start; }
   .bullets :global(svg) { color: var(--text-link); }

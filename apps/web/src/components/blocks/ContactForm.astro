@@ -16,6 +16,7 @@ const full = variant === 'full';
 const form = data.formId ?? (full ? 'main-contact' : 'landing-contact');
 // /kontakt has no hero, so the full variant carries the page's H1.
 const Heading = full ? 'h1' : 'h2';
+const FormHeading = data.heading ? 'h3' : 'h2';
 const f = (name: string) => `${id}-${name}`;
 
 // Calendar, consultation and channels belong to the full variant only (/kontakt).
@@ -50,7 +51,7 @@ const icons: Record<string, string> = {
 };
 ---
 <section id={id} class="content-grid section contact" aria-labelledby={data.heading ? f('heading') : undefined}>
-  <div class="inner">
+  <div class:list={['inner', { landing: !full }]}>
     {(data.tagline || data.heading || data.intro) && (
       <header class="head">
         {data.tagline && <p class="type-tagline">{data.tagline}</p>}
@@ -58,19 +59,20 @@ const icons: Record<string, string> = {
         {data.intro && <p class="type-body lines">{data.intro}</p>}
       </header>
     )}
-    <div class:list={['card', { split: side }]}>
+    <div class:list={['card', { split: side, full }]}>
       <LeadForm form={form} id={f('form')} visible={['email', 'phone', 'message', 'newsletter', 'marketing-emails']} submitLabel="Wyślij zapytanie">
+        {!full && <FormHeading class="form-heading">Formularz kontaktowy</FormHeading>}
         <div class="field">
-          <label for={f('email')}>E-mail <span class="required">(wymagane)</span></label>
-          <input id={f('email')} name="email" type="email" autocomplete="email" maxlength="256" required />
+          <label class="visually-hidden" for={f('email')}>E-mail <span class="required">(wymagane)</span></label>
+          <input id={f('email')} name="email" placeholder="E-mail" type="email" autocomplete="email" maxlength="256" required />
         </div>
         <div class="field">
-          <label for={f('phone')}>Telefon</label>
-          <input id={f('phone')} name="phone" type="tel" autocomplete="tel" maxlength="256" />
+          <label class="visually-hidden" for={f('phone')}>Telefon</label>
+          <input id={f('phone')} name="phone" placeholder="Telefon" type="tel" autocomplete="tel" maxlength="256" />
         </div>
         <div class="field">
-          <label for={f('message')}>Temat rozmowy</label>
-          <textarea id={f('message')} name="message" maxlength="5000"></textarea>
+          <label class="visually-hidden" for={f('message')}>Temat rozmowy</label>
+          <textarea id={f('message')} name="message" placeholder="Temat rozmowy" maxlength="5000"></textarea>
         </div>
         <p class="note type-body-s">Twoich danych użyjemy tylko po to, żeby odpowiedzieć na zgłoszenie i umówić rozmowę. Administratorem danych jest Wellbiz sp. z o.o. Szczegóły: <a href="/polityka-prywatnosci">Polityka prywatności</a>.</p>
         <label class="check type-body-s"><input type="checkbox" name="newsletter" /><span>Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.</span></label>
@@ -92,7 +94,7 @@ const icons: Record<string, string> = {
           )}
           {details && (
             <aside class="details" aria-labelledby={f('details')}>
-              {contact.image && <img class="portrait" src={contact.image.src} width={contact.image.width} height={contact.image.height} alt={contact.image.alt ?? ''} loading="lazy" decoding="async" />}
+              <img class="portrait" src="/brand/contact-profile.avif" width="450" height="450" alt="Grzegorz Zawłodzki" loading="lazy" decoding="async" />
               <h3 id={f('details')} class="type-heading-s">Bezpośredni kontakt</h3>
               <p>Wyślij e-mail, napisz SMS lub zadzwoń.</p>
               <ul class="channel-rows" role="list">
@@ -152,8 +154,24 @@ const icons: Record<string, string> = {
 <style>
   .inner { container-type: inline-size; display: grid; gap: var(--space-l); }
   .head { display: grid; gap: var(--space-2xs); max-inline-size: 40rem; }
+  .inner.landing { gap: clamp(2rem, 1.58564rem + 1.76796vw, 3rem); }
+  .inner.landing > .head {
+    inline-size: 100%;
+    max-inline-size: 37.5rem;
+    margin-inline: auto;
+    justify-items: center;
+    text-align: center;
+    gap: clamp(1.25rem, 1.12051rem + .552486vw, 1.5625rem);
+  }
+  .form-heading {
+    font-size: clamp(1.5rem, 1.344613rem + .662983vw, 1.875rem);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.25;
+    margin-block-end: calc(var(--space-m) - var(--lead-form-gap));
+  }
   .lines { white-space: pre-line; }
   .card {
+    --lead-form-gap: clamp(.5rem, .39640884rem + .44198895vw, .75rem);
     display: grid;
     gap: var(--space-xl);
     padding: var(--layout-box-pad);
@@ -163,11 +181,13 @@ const icons: Record<string, string> = {
   @container (width >= 48rem) {
     .split { grid-template-columns: 1.4fr 1fr; gap: var(--space-2xl); }
   }
+  .card.full { --lead-form-gap: var(--space-2xs); }
   .side { display: grid; gap: var(--space-xl); align-content: start; }
   .note-block { display: grid; gap: var(--space-2xs); }
   .strong-link { font-weight: var(--font-weight-medium); }
   .details { display: grid; gap: var(--space-xs); align-content: start; }
-  .portrait { inline-size: min(100%, 14rem); border-radius: var(--radius-lg); margin-block-end: var(--space-xs); }
+  /* Live renders 169px at 1280 and 59px at 375; preserve our existing columns. */
+  .portrait { inline-size: clamp(3.6875rem, .84rem + 12.15vw, 10.56rem); max-inline-size: 100%; border-radius: 0; block-size: auto; aspect-ratio: 1; object-fit: cover; margin-block-end: var(--space-xs); }
   .channel-rows { display: grid; gap: var(--space-3xs); margin: 0; padding: 0; list-style: none; }
   .channel-rows a { min-block-size: 44px; align-items: center; font-weight: var(--font-weight-medium); overflow-wrap: anywhere; }
   .channel-rows svg { block-size: 1cap; }

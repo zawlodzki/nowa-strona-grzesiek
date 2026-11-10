@@ -1,0 +1,1478 @@
+[
+  {
+    "route": "/",
+    "width": 1280,
+    "strip": 0,
+    "tools": false,
+    "default": [
+      {
+        "name": "cnk logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo wsip",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "euroser logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo rentli",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "eagle lasers logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "moovin logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo smmash",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "IAB Polska logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo american lens",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "kpan logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "sovo development logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "4hfix logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "prngo logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "bosko agency logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "costa broker logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "optima home logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "Lex Capital logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "iimarbella logo",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "vadim eyewear logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "pro science logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "cash4car logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "deky expo logo",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      }
+    ],
+    "hover": [
+      {
+        "name": "cnk logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo wsip",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "euroser logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo rentli",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "eagle lasers logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "moovin logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo smmash",
+        "filter": "invert(1)",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "IAB Polska logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo american lens",
+        "filter": "none",
+        "opacity": "1",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "kpan logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "sovo development logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "4hfix logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "prngo logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "bosko agency logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "costa broker logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "optima home logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "Lex Capital logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "iimarbella logo",
+        "filter": "invert(1)",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "vadim eyewear logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "pro science logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "cash4car logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "deky expo logo",
+        "filter": "invert(1)",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      }
+    ],
+    "focus": {
+      "visible": true,
+      "outline": "solid",
+      "filter": "none",
+      "opacity": "1"
+    },
+    "whiteFocus": [
+      {
+        "name": "logo smmash",
+        "filter": "invert(1)",
+        "opacity": "1"
+      },
+      {
+        "name": "iimarbella logo",
+        "filter": "invert(1)",
+        "opacity": "1"
+      },
+      {
+        "name": "deky expo logo",
+        "filter": "invert(1)",
+        "opacity": "1"
+      }
+    ]
+  },
+  {
+    "route": "/",
+    "width": 1280,
+    "strip": 1,
+    "tools": true,
+    "default": [
+      {
+        "name": "logo pipedrive",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "salesforce logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "attio logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo asana",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "clay logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "n8n logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "openai logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "anthropic logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      }
+    ],
+    "hover": [
+      {
+        "name": "logo pipedrive",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "salesforce logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "attio logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo asana",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "clay logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "n8n logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "openai logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "anthropic logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      }
+    ],
+    "focus": {
+      "visible": true,
+      "outline": "solid",
+      "filter": "none",
+      "opacity": "1"
+    },
+    "whiteFocus": []
+  },
+  {
+    "route": "/",
+    "width": 375,
+    "strip": 0,
+    "tools": false,
+    "default": [
+      {
+        "name": "cnk logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "logo wsip",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "euroser logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "logo rentli",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "eagle lasers logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 65.390625,
+        "loaded": true
+      },
+      {
+        "name": "moovin logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "logo smmash",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "IAB Polska logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "logo american lens",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 65.390625,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "kpan logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "sovo development logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "4hfix logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 65.390625,
+        "loaded": true
+      },
+      {
+        "name": "prngo logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "bosko agency logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "costa broker logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "optima home logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "Lex Capital logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "iimarbella logo",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "vadim eyewear logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "pro science logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "cash4car logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "deky expo logo",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/",
+    "width": 375,
+    "strip": 1,
+    "tools": true,
+    "default": [
+      {
+        "name": "logo pipedrive",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "salesforce logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "attio logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "logo asana",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "clay logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "n8n logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "openai logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "anthropic logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/automatyzacje-dla-pipedrive",
+    "width": 1280,
+    "strip": 0,
+    "tools": false,
+    "default": [
+      {
+        "name": "cnk logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo wsip",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "euroser logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo rentli",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "eagle lasers logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "moovin logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo smmash",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "IAB Polska logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo american lens",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "kpan logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "sovo development logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "4hfix logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "prngo logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "bosko agency logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "costa broker logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "optima home logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "Lex Capital logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "iimarbella logo",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "vadim eyewear logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "pro science logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "cash4car logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "deky expo logo",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      }
+    ],
+    "hover": [
+      {
+        "name": "cnk logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo wsip",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "euroser logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo rentli",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "eagle lasers logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "moovin logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo smmash",
+        "filter": "invert(1)",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "IAB Polska logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo american lens",
+        "filter": "none",
+        "opacity": "1",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "kpan logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "sovo development logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "4hfix logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 54.515625,
+        "loaded": true
+      },
+      {
+        "name": "prngo logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "bosko agency logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "costa broker logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "optima home logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "Lex Capital logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "iimarbella logo",
+        "filter": "invert(1)",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "vadim eyewear logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "pro science logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "cash4car logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "deky expo logo",
+        "filter": "invert(1)",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      }
+    ],
+    "focus": {
+      "visible": true,
+      "outline": "solid",
+      "filter": "none",
+      "opacity": "1"
+    },
+    "whiteFocus": [
+      {
+        "name": "logo smmash",
+        "filter": "invert(1)",
+        "opacity": "1"
+      },
+      {
+        "name": "iimarbella logo",
+        "filter": "invert(1)",
+        "opacity": "1"
+      },
+      {
+        "name": "deky expo logo",
+        "filter": "invert(1)",
+        "opacity": "1"
+      }
+    ]
+  },
+  {
+    "route": "/automatyzacje-dla-pipedrive",
+    "width": 1280,
+    "strip": 1,
+    "tools": true,
+    "default": [
+      {
+        "name": "logo pipedrive",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "n8n logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "make.com logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo zapier",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "clay logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo asana",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "openai logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "anthropic logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 102.234375,
+        "loaded": true
+      }
+    ],
+    "hover": [
+      {
+        "name": "logo pipedrive",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "n8n logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "make.com logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo zapier",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "clay logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "logo asana",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      },
+      {
+        "name": "openai logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.21875,
+        "loaded": true
+      },
+      {
+        "name": "anthropic logo",
+        "filter": "none",
+        "opacity": "1",
+        "width": 102.234375,
+        "loaded": true
+      }
+    ],
+    "focus": {
+      "visible": true,
+      "outline": "solid",
+      "filter": "none",
+      "opacity": "1"
+    },
+    "whiteFocus": []
+  },
+  {
+    "route": "/automatyzacje-dla-pipedrive",
+    "width": 375,
+    "strip": 0,
+    "tools": false,
+    "default": [
+      {
+        "name": "cnk logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "logo wsip",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "euroser logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "logo rentli",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "eagle lasers logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 65.390625,
+        "loaded": true
+      },
+      {
+        "name": "moovin logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "logo smmash",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "IAB Polska logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "logo american lens",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 65.390625,
+        "loaded": true
+      },
+      {
+        "name": "asmo solutions logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "kpan logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "sovo development logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "4hfix logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 65.390625,
+        "loaded": true
+      },
+      {
+        "name": "prngo logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "bosko agency logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "costa broker logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "optima home logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "Lex Capital logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "iimarbella logo",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "vadim eyewear logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "pro science logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "cash4car logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "deky expo logo",
+        "filter": "invert(1) grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/automatyzacje-dla-pipedrive",
+    "width": 375,
+    "strip": 1,
+    "tools": true,
+    "default": [
+      {
+        "name": "logo pipedrive",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "n8n logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "make.com logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "logo zapier",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "clay logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "logo asana",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "openai logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      },
+      {
+        "name": "anthropic logo",
+        "filter": "grayscale(1)",
+        "opacity": "0.65",
+        "width": 122.625,
+        "loaded": true
+      }
+    ]
+  }
+]

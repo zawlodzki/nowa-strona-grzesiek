@@ -1,0 +1,560 @@
+[
+  {
+    "source": "live",
+    "width": 1280,
+    "controls": {
+      "input": {
+        "width": 316.96875,
+        "height": 44,
+        "centerY": 8562.421875,
+        "x": 400,
+        "y": 8540.421875,
+        "padding": "8px 12px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "border": "1px solid rgb(221, 225, 230)"
+      },
+      "button": {
+        "width": 155.03125,
+        "height": 57,
+        "centerY": 8562.421875,
+        "x": 724.96875,
+        "y": 8533.921875,
+        "padding": "8px 24px",
+        "fontSize": "20px",
+        "lineHeight": "35px",
+        "border": "3px solid rgb(10, 207, 254)"
+      },
+      "rowDisplay": "flex",
+      "rowGap": "normal"
+    },
+    "typography": {
+      "link": {
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "35px",
+        "color": "rgb(99, 107, 117)",
+        "colorCSS": "rgb(99, 107, 117)",
+        "fontFamily": "\"Satoshi Variable\", sans-serif"
+      },
+      "title": {
+        "fontSize": "20px",
+        "fontWeight": "600",
+        "lineHeight": "35px",
+        "color": "rgb(14, 15, 17)",
+        "colorCSS": "rgb(14, 15, 17)",
+        "fontFamily": "\"Satoshi Variable\", sans-serif"
+      },
+      "legal": {
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "35px",
+        "color": "rgb(99, 107, 117)",
+        "colorCSS": "rgb(99, 107, 117)",
+        "fontFamily": "\"Satoshi Variable\", sans-serif"
+      }
+    },
+    "badge": {
+      "animation": {
+        "ring": {
+          "animationName": "sas-iskra",
+          "animationDuration": "6.7s",
+          "animationIterationCount": "infinite",
+          "animationTimingFunction": "ease-in-out",
+          "transform": "none",
+          "opacity": "1",
+          "filter": "brightness(1)"
+        },
+        "ink": {
+          "animationName": "sas-obieg, sas-oddech",
+          "animationDuration": "11s, 4.4s",
+          "animationIterationCount": "infinite, infinite",
+          "animationTimingFunction": "linear, ease-in-out",
+          "transform": "matrix(0.690113, 0.723701, -0.723701, 0.690113, -58.0234, -58.0234)",
+          "opacity": "1",
+          "filter": "none"
+        },
+        "glow": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "0.75",
+          "filter": "blur(1.77491px) saturate(1.25)"
+        },
+        "activeAnimations": 6,
+        "width": 68.265625,
+        "height": 100
+      },
+      "reduced": {
+        "ring": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "1",
+          "filter": "none"
+        },
+        "ink": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "matrix(0.309017, -0.951057, 0.951057, 0.309017, -58.0234, -58.0234)",
+          "opacity": "1",
+          "filter": "none"
+        },
+        "glow": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "0.75",
+          "filter": "blur(1.77491px) saturate(1.25)"
+        },
+        "activeAnimations": 0,
+        "width": 68.265625,
+        "height": 100
+      }
+    },
+    "scrollWidth": 1280
+  },
+  {
+    "source": "local",
+    "width": 1280,
+    "controls": {
+      "input": {
+        "width": 320.125,
+        "height": 57,
+        "centerY": 7838.359375,
+        "x": 400,
+        "y": 7809.859375,
+        "padding": "8px 12px",
+        "fontSize": "19.3904px",
+        "lineHeight": "33.9332px",
+        "border": "1px solid oklch(0.90812 0.00807 253.857)"
+      },
+      "button": {
+        "width": 151.875,
+        "height": 57,
+        "centerY": 7838.359375,
+        "x": 728.125,
+        "y": 7809.859375,
+        "padding": "8px 24px",
+        "fontSize": "19.3904px",
+        "lineHeight": "33.9332px",
+        "border": "3px solid oklch(0.79255 0.14564 222.167)"
+      },
+      "rowDisplay": "grid",
+      "rowGap": "8px"
+    },
+    "typography": {
+      "link": {
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "35px",
+        "color": "rgb(99, 107, 117)",
+        "colorCSS": "oklch(0.52443 0.01856 253.999)",
+        "fontFamily": "\"Satoshi Variable\", system-ui, sans-serif"
+      },
+      "title": {
+        "fontSize": "20px",
+        "fontWeight": "600",
+        "lineHeight": "35px",
+        "color": "rgb(14, 15, 17)",
+        "colorCSS": "oklch(0.16817 0.00448 264.447)",
+        "fontFamily": "\"Satoshi Variable\", system-ui, sans-serif"
+      },
+      "legal": {
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "35px",
+        "color": "rgb(99, 107, 117)",
+        "colorCSS": "oklch(0.52443 0.01856 253.999)",
+        "fontFamily": "\"Satoshi Variable\", system-ui, sans-serif"
+      }
+    },
+    "badge": {
+      "animation": {
+        "ring": {
+          "animationName": "sas-iskra",
+          "animationDuration": "6.7s",
+          "animationIterationCount": "infinite",
+          "animationTimingFunction": "ease-in-out",
+          "transform": "none",
+          "opacity": "1",
+          "filter": "brightness(1)"
+        },
+        "ink": {
+          "animationName": "sas-obieg, sas-oddech",
+          "animationDuration": "11s, 4.4s",
+          "animationIterationCount": "infinite, infinite",
+          "animationTimingFunction": "linear, ease-in-out",
+          "transform": "matrix(0.86125, 0.508182, -0.508182, 0.86125, -58.0234, -58.0234)",
+          "opacity": "0.836751",
+          "filter": "none"
+        },
+        "glow": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "0.75",
+          "filter": "blur(1.77491px) saturate(1.25)"
+        },
+        "activeAnimations": 6,
+        "width": 68.265625,
+        "height": 99.984375
+      },
+      "reduced": {
+        "ring": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "1",
+          "filter": "none"
+        },
+        "ink": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "matrix(0.309017, -0.951057, 0.951057, 0.309017, -58.0234, -58.0234)",
+          "opacity": "1",
+          "filter": "none"
+        },
+        "glow": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "0.75",
+          "filter": "blur(1.77491px) saturate(1.25)"
+        },
+        "activeAnimations": 0,
+        "width": 68.265625,
+        "height": 99.984375
+      }
+    },
+    "scrollWidth": 1280
+  },
+  {
+    "source": "live",
+    "width": 375,
+    "controls": {
+      "input": {
+        "width": 208.171875,
+        "height": 44,
+        "centerY": 10688.1875,
+        "x": 16,
+        "y": 10666.1875,
+        "padding": "8px 12px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "border": "1px solid rgb(221, 225, 230)"
+      },
+      "button": {
+        "width": 134.828125,
+        "height": 50,
+        "centerY": 10688.1875,
+        "x": 224.171875,
+        "y": 10663.1875,
+        "padding": "8px 24px",
+        "fontSize": "16px",
+        "lineHeight": "28px",
+        "border": "3px solid rgb(10, 207, 254)"
+      },
+      "rowDisplay": "flex",
+      "rowGap": "normal"
+    },
+    "typography": {
+      "link": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "28px",
+        "color": "rgb(99, 107, 117)",
+        "colorCSS": "rgb(99, 107, 117)",
+        "fontFamily": "\"Satoshi Variable\", sans-serif"
+      },
+      "title": {
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "28px",
+        "color": "rgb(14, 15, 17)",
+        "colorCSS": "rgb(14, 15, 17)",
+        "fontFamily": "\"Satoshi Variable\", sans-serif"
+      },
+      "legal": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "28px",
+        "color": "rgb(99, 107, 117)",
+        "colorCSS": "rgb(99, 107, 117)",
+        "fontFamily": "\"Satoshi Variable\", sans-serif"
+      }
+    },
+    "badge": {
+      "animation": {
+        "ring": {
+          "animationName": "sas-iskra",
+          "animationDuration": "6.7s",
+          "animationIterationCount": "infinite",
+          "animationTimingFunction": "ease-in-out",
+          "transform": "none",
+          "opacity": "1",
+          "filter": "brightness(1)"
+        },
+        "ink": {
+          "animationName": "sas-obieg, sas-oddech",
+          "animationDuration": "11s, 4.4s",
+          "animationIterationCount": "infinite, infinite",
+          "animationTimingFunction": "linear, ease-in-out",
+          "transform": "matrix(0.73677, 0.676144, -0.676144, 0.73677, -46.4141, -46.4141)",
+          "opacity": "1",
+          "filter": "none"
+        },
+        "glow": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "0.75",
+          "filter": "blur(1.41984px) saturate(1.25)"
+        },
+        "activeAnimations": 6,
+        "width": 54.609375,
+        "height": 80
+      },
+      "reduced": {
+        "ring": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "1",
+          "filter": "none"
+        },
+        "ink": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "matrix(0.309017, -0.951057, 0.951057, 0.309017, -46.4141, -46.4141)",
+          "opacity": "1",
+          "filter": "none"
+        },
+        "glow": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "0.75",
+          "filter": "blur(1.41984px) saturate(1.25)"
+        },
+        "activeAnimations": 0,
+        "width": 54.609375,
+        "height": 80
+      }
+    },
+    "scrollWidth": 375
+  },
+  {
+    "source": "local",
+    "width": 375,
+    "controls": {
+      "input": {
+        "width": 208.171875,
+        "height": 50,
+        "centerY": 10578.484375,
+        "x": 16,
+        "y": 10553.484375,
+        "padding": "8px 12px",
+        "fontSize": "16px",
+        "lineHeight": "28px",
+        "border": "1px solid oklch(0.90812 0.00807 253.857)"
+      },
+      "button": {
+        "width": 134.828125,
+        "height": 50,
+        "centerY": 10578.484375,
+        "x": 224.171875,
+        "y": 10553.484375,
+        "padding": "8px 24px",
+        "fontSize": "16px",
+        "lineHeight": "28px",
+        "border": "3px solid oklch(0.79255 0.14564 222.167)"
+      },
+      "rowDisplay": "grid",
+      "rowGap": "0px"
+    },
+    "typography": {
+      "link": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "28px",
+        "color": "rgb(99, 107, 117)",
+        "colorCSS": "oklch(0.52443 0.01856 253.999)",
+        "fontFamily": "\"Satoshi Variable\", system-ui, sans-serif"
+      },
+      "title": {
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "28px",
+        "color": "rgb(14, 15, 17)",
+        "colorCSS": "oklch(0.16817 0.00448 264.447)",
+        "fontFamily": "\"Satoshi Variable\", system-ui, sans-serif"
+      },
+      "legal": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "28px",
+        "color": "rgb(99, 107, 117)",
+        "colorCSS": "oklch(0.52443 0.01856 253.999)",
+        "fontFamily": "\"Satoshi Variable\", system-ui, sans-serif"
+      }
+    },
+    "badge": {
+      "animation": {
+        "ring": {
+          "animationName": "sas-iskra",
+          "animationDuration": "6.7s",
+          "animationIterationCount": "infinite",
+          "animationTimingFunction": "ease-in-out",
+          "transform": "none",
+          "opacity": "1",
+          "filter": "brightness(1)"
+        },
+        "ink": {
+          "animationName": "sas-obieg, sas-oddech",
+          "animationDuration": "11s, 4.4s",
+          "animationIterationCount": "infinite, infinite",
+          "animationTimingFunction": "linear, ease-in-out",
+          "transform": "matrix(0.841256, 0.540636, -0.540636, 0.841256, -46.4141, -46.4141)",
+          "opacity": "0.888066",
+          "filter": "none"
+        },
+        "glow": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "0.75",
+          "filter": "blur(1.41984px) saturate(1.25)"
+        },
+        "activeAnimations": 6,
+        "width": 54.609375,
+        "height": 80
+      },
+      "reduced": {
+        "ring": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "1",
+          "filter": "none"
+        },
+        "ink": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "matrix(0.309017, -0.951057, 0.951057, 0.309017, -46.4141, -46.4141)",
+          "opacity": "1",
+          "filter": "none"
+        },
+        "glow": {
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationIterationCount": "1",
+          "animationTimingFunction": "ease",
+          "transform": "none",
+          "opacity": "0.75",
+          "filter": "blur(1.41984px) saturate(1.25)"
+        },
+        "activeAnimations": 0,
+        "width": 54.609375,
+        "height": 80
+      }
+    },
+    "scrollWidth": 375
+  },
+  {
+    "source": "local",
+    "route": "/newsletter",
+    "width": 1280,
+    "geometry": {
+      "inputHeight": 57,
+      "buttonHeight": 57,
+      "centerDifference": 0,
+      "scrollWidth": 1280
+    }
+  },
+  {
+    "source": "local",
+    "route": "/newsletter",
+    "width": 375,
+    "geometry": {
+      "inputHeight": 50,
+      "buttonHeight": 50,
+      "centerDifference": 0,
+      "scrollWidth": 375
+    }
+  },
+  {
+    "source": "local",
+    "route": "/kontakt",
+    "width": 1280,
+    "geometry": {
+      "inputHeight": 57,
+      "buttonHeight": 57,
+      "centerDifference": 0,
+      "scrollWidth": 1280
+    }
+  },
+  {
+    "source": "local",
+    "route": "/kontakt",
+    "width": 375,
+    "geometry": {
+      "inputHeight": 50,
+      "buttonHeight": 50,
+      "centerDifference": 0,
+      "scrollWidth": 375
+    }
+  },
+  {
+    "source": "local",
+    "route": "/blog/bezpieczne-przekazanie-danych",
+    "width": 1280,
+    "geometry": {
+      "inputHeight": 57,
+      "buttonHeight": 57,
+      "centerDifference": 0,
+      "scrollWidth": 1280
+    }
+  },
+  {
+    "source": "local",
+    "route": "/blog/bezpieczne-przekazanie-danych",
+    "width": 375,
+    "geometry": {
+      "inputHeight": 50,
+      "buttonHeight": 50,
+      "centerDifference": 0,
+      "scrollWidth": 375
+    }
+  }
+]

@@ -1,0 +1,7 @@
+host	path	status	location	x-robots-tag	content-type	title
+127.0.0.1	/	200	-	noindex, nofollow	text/html; charset=utf-8	CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki
+127.0.0.1	/blog/bezpieczne-przekazanie-danych	200	-	noindex, nofollow	text/html; charset=utf-8	Bezpieczne przekazywanie poufnych danych i haseł | Grzegorz Zawłodzki
+127.0.0.1	/szkolenie-i-wdrozenie-pipedrive	200	-	noindex, nofollow	text/html; charset=utf-8	Wdrożenie Pipedrive CRM z procesem i szkoleniem | Zawłodzki
+127.0.0.1	/kontakt	200	-	noindex, nofollow	text/html; charset=utf-8	Kontakt | Grzegorz Zawłodzki
+127.0.0.1	/o-mnie	200	-	noindex, nofollow	text/html; charset=utf-8	O mnie | Grzegorz Zawłodzki
+127.0.0.1	/newsletter	200	-	noindex, nofollow	text/html; charset=utf-8	Newsletter Sales Atlas | Grzegorz Zawłodzki

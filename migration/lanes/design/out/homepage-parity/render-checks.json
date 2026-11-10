@@ -1,0 +1,394 @@
+[
+  {
+    "source": "live",
+    "path": "/",
+    "width": 1280,
+    "metrics": {
+      "scrollWidth": 1280,
+      "viewportWidth": 1280,
+      "headerFill": "rgb(0, 0, 0)",
+      "footerTitles": [],
+      "brokenImages": [],
+      "formFields": []
+    }
+  },
+  {
+    "source": "local",
+    "path": "/",
+    "width": 1280,
+    "metrics": {
+      "scrollWidth": 1280,
+      "viewportWidth": 1280,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "kontakt-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "checkbox",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": true
+        },
+        {
+          "id": "newsletter-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "hidden",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": true
+        }
+      ]
+    }
+  },
+  {
+    "source": "local",
+    "path": "/blog/bezpieczne-przekazanie-danych",
+    "width": 1280,
+    "status": 200,
+    "metrics": {
+      "scrollWidth": 1280,
+      "viewportWidth": 1280,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "newsletter-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "hidden",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": false
+        }
+      ]
+    }
+  },
+  {
+    "source": "local",
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "width": 1280,
+    "status": 200,
+    "metrics": {
+      "scrollWidth": 1280,
+      "viewportWidth": 1280,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "kontakt-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "checkbox",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": true
+        }
+      ]
+    }
+  },
+  {
+    "source": "local",
+    "path": "/kontakt",
+    "width": 1280,
+    "status": 200,
+    "metrics": {
+      "scrollWidth": 1280,
+      "viewportWidth": 1280,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "kontakt-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "checkbox",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": false
+        },
+        {
+          "id": "newsletter-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "hidden",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": false
+        }
+      ]
+    }
+  },
+  {
+    "source": "local",
+    "path": "/o-mnie",
+    "width": 1280,
+    "status": 200,
+    "metrics": {
+      "scrollWidth": 1280,
+      "viewportWidth": 1280,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "newsletter-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "hidden",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": false
+        }
+      ]
+    }
+  },
+  {
+    "source": "local",
+    "path": "/newsletter",
+    "width": 1280,
+    "status": 200,
+    "metrics": {
+      "scrollWidth": 1280,
+      "viewportWidth": 1280,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "newsletter-form",
+          "hiddenAttribution": 32,
+          "newsletterType": "hidden",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": false
+        }
+      ]
+    }
+  },
+  {
+    "source": "live",
+    "path": "/",
+    "width": 375,
+    "metrics": {
+      "scrollWidth": 375,
+      "viewportWidth": 375,
+      "headerFill": "rgb(0, 0, 0)",
+      "footerTitles": [],
+      "brokenImages": [],
+      "formFields": []
+    }
+  },
+  {
+    "source": "local",
+    "path": "/",
+    "width": 375,
+    "metrics": {
+      "scrollWidth": 375,
+      "viewportWidth": 375,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "kontakt-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "checkbox",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": true
+        },
+        {
+          "id": "newsletter-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "hidden",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": true
+        }
+      ]
+    }
+  },
+  {
+    "source": "local",
+    "path": "/blog/bezpieczne-przekazanie-danych",
+    "width": 375,
+    "status": 200,
+    "metrics": {
+      "scrollWidth": 375,
+      "viewportWidth": 375,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "newsletter-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "hidden",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": false
+        }
+      ]
+    }
+  },
+  {
+    "source": "local",
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "width": 375,
+    "status": 200,
+    "metrics": {
+      "scrollWidth": 375,
+      "viewportWidth": 375,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "kontakt-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "checkbox",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": true
+        }
+      ]
+    }
+  },
+  {
+    "source": "local",
+    "path": "/kontakt",
+    "width": 375,
+    "status": 200,
+    "metrics": {
+      "scrollWidth": 375,
+      "viewportWidth": 375,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "kontakt-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "checkbox",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": false
+        },
+        {
+          "id": "newsletter-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "hidden",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": false
+        }
+      ]
+    }
+  },
+  {
+    "source": "local",
+    "path": "/o-mnie",
+    "width": 375,
+    "status": 200,
+    "metrics": {
+      "scrollWidth": 375,
+      "viewportWidth": 375,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "newsletter-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "hidden",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": true
+        }
+      ]
+    }
+  },
+  {
+    "source": "local",
+    "path": "/newsletter",
+    "width": 375,
+    "status": 200,
+    "metrics": {
+      "scrollWidth": 375,
+      "viewportWidth": 375,
+      "headerFill": "rgb(58, 72, 204)",
+      "footerTitles": [
+        "CRM",
+        "AI",
+        "Asana",
+        "Materiały"
+      ],
+      "brokenImages": [],
+      "formFields": [
+        {
+          "id": "newsletter-form",
+          "hiddenAttribution": 6,
+          "newsletterType": "hidden",
+          "turnstileAppearance": "interaction-only",
+          "turnstileHeight": 0,
+          "hasToken": false
+        }
+      ]
+    }
+  }
+]
