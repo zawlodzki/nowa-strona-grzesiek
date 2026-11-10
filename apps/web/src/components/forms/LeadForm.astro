@@ -158,6 +158,17 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
     font-weight: var(--font-weight-medium);
     cursor: pointer;
   }
+  /* Both contact form contracts use live's full-width form-button treatment. */
+  .lead-form[data-form$="-contact"] > .submit {
+    justify-self: stretch;
+    inline-size: 100%;
+    min-block-size: 44px;
+    padding: var(--space-2xs) var(--space-m);
+    border-radius: 50px;
+    font-size: var(--form-field-size);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.75;
+  }
   .dark .submit { background: var(--surface-page); color: var(--text-link); }
   .submit:focus-visible { outline: var(--border-width-button) solid var(--border-focus); outline-offset: 3px; }
   .dark .submit:focus-visible { outline-color: var(--border-accent); }

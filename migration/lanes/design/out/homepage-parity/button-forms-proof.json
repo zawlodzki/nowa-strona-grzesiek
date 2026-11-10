@@ -1,0 +1,87 @@
+[
+  {
+    "route": "/",
+    "staticFields": {
+      "total": 37,
+      "hidden": 32
+    },
+    "form": "landing-contact",
+    "fields": [
+      "email",
+      "phone",
+      "message",
+      "newsletter",
+      "marketing-emails",
+      "form_name",
+      "conversion_timestamp",
+      "attribution_measurement_consent",
+      "attribution_marketing_consent",
+      "attribution_policy_id",
+      "attribution_schema_version"
+    ],
+    "hiddenAttribution": 6,
+    "widgetHeight": 0,
+    "newsletterType": "checkbox",
+    "status": 303,
+    "redirect": "/podziekowanie-konsultacja"
+  },
+  {
+    "route": "/",
+    "staticFields": {
+      "total": 34,
+      "hidden": 32
+    },
+    "form": "newsletter",
+    "fields": [
+      "email",
+      "newsletter",
+      "form_name",
+      "conversion_timestamp",
+      "attribution_measurement_consent",
+      "attribution_marketing_consent",
+      "attribution_policy_id",
+      "attribution_schema_version"
+    ],
+    "hiddenAttribution": 6,
+    "widgetHeight": 0,
+    "newsletterType": "hidden",
+    "status": 303,
+    "redirect": "/podziekowanie-newsletter"
+  },
+  {
+    "route": "/kontakt",
+    "staticFields": {
+      "total": 37,
+      "hidden": 32
+    },
+    "form": "main-contact",
+    "fields": [
+      "email",
+      "phone",
+      "message",
+      "newsletter",
+      "marketing-emails",
+      "form_name",
+      "conversion_timestamp",
+      "attribution_measurement_consent",
+      "attribution_marketing_consent",
+      "attribution_policy_id",
+      "attribution_schema_version"
+    ],
+    "hiddenAttribution": 6,
+    "widgetHeight": 0,
+    "newsletterType": "checkbox",
+    "status": 303,
+    "redirect": "/podziekowanie-konsultacja"
+  },
+  {
+    "case": "unknown form",
+    "statusText": "Nieznany formularz.",
+    "buttonEnabled": true,
+    "stayedOnPage": true
+  },
+  {
+    "case": "missing Turnstile token",
+    "status": 403
+  }
+]

@@ -1,6 +1,6 @@
 # T31 visual proof
 
-**Latest approved change:** see [Hidden labels and placeholders](#hidden-labels-and-placeholders). These `*-labels-*` captures supersede the visible field labels in earlier proof. [PR #50 follow-up proof](#pr-50-follow-up-proof) remains the latest footer/badge evidence.
+**Latest approved change:** see [Full-width contact submit](#full-width-contact-submit). [Hidden labels and placeholders](#hidden-labels-and-placeholders) remains the current label/a11y evidence. These `*-labels-*` captures supersede the visible field labels in earlier proof. [PR #50 follow-up proof](#pr-50-follow-up-proof) remains the latest footer/badge evidence.
 
 Captured 2026-11-10 from live `https://zawlodzki.pl/` and the built Astro site behind local `wrangler dev --local` on port 8790. Browser: headless Chromium, device scale 1, 1280/375 px. No deploy or dataset writes.
 
@@ -115,3 +115,21 @@ Placeholder contrast on white: **local 5.398:1**, using the existing text-muted 
 [Submission proof](labels-forms-proof.json), [mock payloads](labels-delivery.json) and [driver](labels-submission.mjs): browser fills by accessible name, posts through the real local Worker, receives 303 and reaches the correct thank-you path for landing contact, newsletter and full contact. Payloads remain 37/34/37 fields with all 32 attribution keys, newsletter=true. Turnstile issues test tokens at zero height; missing-token 403 and unknown-form error recovery still pass. No production submission or secret changes.
 
 Validation: [Astro check](labels-astro-check.txt) passes (0 errors/warnings, existing hint only), [source tests](labels-source-tests.txt) pass (81 passed, one skipped, zero failed), [build](labels-build.txt) passes (117 pages). Requested literal [node --test src](labels-node-test-src.txt) still fails with MODULE_NOT_FOUND on Node 24; the full explicit source-file test invocation passes. No dedicated label/a11y test files exist in the repository; all existing source tests ran, supplemented by the native Chrome AX assertions above. [Design detector](labels-design-detector.json) reports only the previously approved newsletter gradient. Board: 31 tasks, 0 problems.
+
+## Full-width contact submit
+
+The shared LeadForm selector `data-form$="-contact"` applies full-width submit treatment to both contact contracts, `landing-contact` and `main-contact`. Newsletter does not match this selector and its inline row remains unchanged. This update changes only LeadForm.astro; ContactForm/card markup, layout and background CSS are untouched.
+
+Measured live button treatment reproduced locally at 1280/375: **100% of the form column**, height **51px / 44px**, padding **8px 24px**, radius **50px**, Satoshi weight **400**, font size **20px / 16px**, line-height **35px / 28px**. Absolute widths follow each site's existing form column rather than imposing live's column width on the local card. [Computed button sizes](button-computed.json) includes form/button widths for both routes, newsletter geometry and the preserved local card background **rgb(249,250,251)**.
+
+| Evidence | 1280 px | 375 px |
+|---|---|---|
+| Homepage contact section | [live vs local](compare-button-contact-home-w1280.png) | [live vs local](compare-button-contact-home-w375.png) |
+| `/kontakt` section | [live vs local](compare-button-contact-kontakt-w1280.png) | [live vs local](compare-button-contact-kontakt-w375.png) |
+| Newsletter row regression | [live vs local](compare-button-newsletter-row-w1280.png) | [live vs local](compare-button-newsletter-row-w375.png) |
+
+[Proof driver](button-proof.mjs) asserts full form width on live/local, exact live height/padding/radius/font agreement, unchanged grey local card, no horizontal overflow and newsletter controls side by side, equal height, centre difference 0px. `button_-w*.png` and `button_kontakt-w*.png` are direct verify-web shots; [HTTP probes](button-probes.tsv) return 200.
+
+[Submission results](button-forms-proof.json), [mock receiver payloads](button-delivery.json), [submission driver](button-submission.mjs): landing contact/newsletter/full contact continue to return 303 and navigate to the correct thank-you pages. Payloads retain 37/34/37 fields and all attribution keys. Missing-token protection and unknown-form recovery pass.
+
+[Astro check](button-astro-check.txt) passes with 0 errors/warnings and one existing hint; [source tests](button-source-tests.txt): 81 passed, one skipped, zero failures; [build](button-build.txt): 117 pages. The requested literal [node --test src](button-node-test-src.txt) still fails on this Node 24 directory invocation; explicit source-file discovery runs the complete passing suite. Board check: 31 tasks, 0 problems. Design detector on LeadForm reported no findings. No deploy or merge.
