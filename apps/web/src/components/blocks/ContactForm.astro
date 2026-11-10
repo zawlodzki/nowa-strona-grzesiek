@@ -58,19 +58,19 @@ const icons: Record<string, string> = {
         {data.intro && <p class="type-body lines">{data.intro}</p>}
       </header>
     )}
-    <div class:list={['card', { split: side }]}>
+    <div class:list={['card', { split: side, full }]}>
       <LeadForm form={form} id={f('form')} visible={['email', 'phone', 'message', 'newsletter', 'marketing-emails']} submitLabel="Wyślij zapytanie">
         <div class="field">
-          <label for={f('email')}>E-mail <span class="required">(wymagane)</span></label>
-          <input id={f('email')} name="email" type="email" autocomplete="email" maxlength="256" required />
+          <label class="visually-hidden" for={f('email')}>E-mail <span class="required">(wymagane)</span></label>
+          <input id={f('email')} name="email" placeholder="E-mail" type="email" autocomplete="email" maxlength="256" required />
         </div>
         <div class="field">
-          <label for={f('phone')}>Telefon</label>
-          <input id={f('phone')} name="phone" type="tel" autocomplete="tel" maxlength="256" />
+          <label class="visually-hidden" for={f('phone')}>Telefon</label>
+          <input id={f('phone')} name="phone" placeholder="Telefon" type="tel" autocomplete="tel" maxlength="256" />
         </div>
         <div class="field">
-          <label for={f('message')}>Temat rozmowy</label>
-          <textarea id={f('message')} name="message" maxlength="5000"></textarea>
+          <label class="visually-hidden" for={f('message')}>Temat rozmowy</label>
+          <textarea id={f('message')} name="message" placeholder="Temat rozmowy" maxlength="5000"></textarea>
         </div>
         <p class="note type-body-s">Twoich danych użyjemy tylko po to, żeby odpowiedzieć na zgłoszenie i umówić rozmowę. Administratorem danych jest Wellbiz sp. z o.o. Szczegóły: <a href="/polityka-prywatnosci">Polityka prywatności</a>.</p>
         <label class="check type-body-s"><input type="checkbox" name="newsletter" /><span>Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.</span></label>
@@ -154,6 +154,7 @@ const icons: Record<string, string> = {
   .head { display: grid; gap: var(--space-2xs); max-inline-size: 40rem; }
   .lines { white-space: pre-line; }
   .card {
+    --lead-form-gap: clamp(.5rem, .39640884rem + .44198895vw, .75rem);
     display: grid;
     gap: var(--space-xl);
     padding: var(--layout-box-pad);
@@ -163,6 +164,7 @@ const icons: Record<string, string> = {
   @container (width >= 48rem) {
     .split { grid-template-columns: 1.4fr 1fr; gap: var(--space-2xl); }
   }
+  .card.full { --lead-form-gap: var(--space-2xs); }
   .side { display: grid; gap: var(--space-xl); align-content: start; }
   .note-block { display: grid; gap: var(--space-2xs); }
   .strong-link { font-weight: var(--font-weight-medium); }

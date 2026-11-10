@@ -1,0 +1,2444 @@
+[
+  {
+    "source": "live",
+    "route": "/",
+    "width": 1280,
+    "duplicateIds": [
+      "field-4",
+      "newsletter"
+    ],
+    "fields": [
+      {
+        "form": "wf-form-Landing-Contact-Form",
+        "id": "email-2",
+        "name": "email",
+        "type": "email",
+        "placeholder": "E-mail",
+        "required": true,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "E-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-Landing-Contact-Form",
+        "id": "phone",
+        "name": "phone",
+        "type": "tel",
+        "placeholder": "Telefon",
+        "required": false,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Telefon",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-Landing-Contact-Form",
+        "id": "message",
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Temat rozmowy",
+        "required": false,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 96,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Temat rozmowy",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-Landing-Contact-Form",
+        "id": "newsletter",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox",
+            "width": 512,
+            "height": 94.953125,
+            "clipPath": "none",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 13,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "20px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1.095
+      },
+      {
+        "form": "wf-form-Landing-Contact-Form",
+        "id": "marketing-emails",
+        "name": "marketing-emails",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox",
+            "width": 512,
+            "height": 69.96875,
+            "clipPath": "none",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 13,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "20px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1.095
+      },
+      {
+        "form": "wf-form-Newsletter-bottom-CTA-form-2",
+        "id": "email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "Adres e-mail",
+        "required": true,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Adres e-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-Newsletter-bottom-CTA-form-2",
+        "id": "newsletter",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox checkbox-field-3",
+            "width": 0,
+            "height": 0,
+            "clipPath": "none",
+            "display": "none",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": false,
+        "height": 0,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "20px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "",
+        "role": "none",
+        "axIgnored": true,
+        "placeholderContrast": 1.095
+      }
+    ],
+    "scrollWidth": 1280
+  },
+  {
+    "source": "live",
+    "route": "/kontakt",
+    "width": 1280,
+    "duplicateIds": [
+      "field-3",
+      "newsletter",
+      "field-4"
+    ],
+    "fields": [
+      {
+        "form": "wf-form-main-contact-form",
+        "id": "email-2",
+        "name": "email",
+        "type": "email",
+        "placeholder": "E-mail",
+        "required": true,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "E-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-main-contact-form",
+        "id": "phone",
+        "name": "phone",
+        "type": "tel",
+        "placeholder": "Telefon",
+        "required": false,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Telefon",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-main-contact-form",
+        "id": "message",
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Temat rozmowy",
+        "required": false,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 96,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Temat rozmowy",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-main-contact-form",
+        "id": "newsletter",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox",
+            "width": 524,
+            "height": 94.953125,
+            "clipPath": "none",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 13,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "20px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1.095
+      },
+      {
+        "form": "wf-form-main-contact-form",
+        "id": "marketing-emails",
+        "name": "marketing-emails",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox",
+            "width": 524,
+            "height": 69.96875,
+            "clipPath": "none",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 13,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "20px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1.095
+      },
+      {
+        "form": "wf-form-Newsletter-bottom-CTA-form-2",
+        "id": "email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "Adres e-mail",
+        "required": true,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Adres e-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-Newsletter-bottom-CTA-form-2",
+        "id": "newsletter",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox checkbox-field-3",
+            "width": 0,
+            "height": 0,
+            "clipPath": "none",
+            "display": "none",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": false,
+        "height": 0,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "20px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "",
+        "role": "none",
+        "axIgnored": true,
+        "placeholderContrast": 1.095
+      }
+    ],
+    "scrollWidth": 1280
+  },
+  {
+    "source": "local",
+    "route": "/",
+    "width": 1280,
+    "duplicateIds": [],
+    "fields": [
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "E-mail",
+        "required": true,
+        "labelText": "E-mail (wymagane)",
+        "labels": [
+          {
+            "for": "kontakt-email",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "E-mail (wymagane)",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-phone",
+        "name": "phone",
+        "type": "tel",
+        "placeholder": "Telefon",
+        "required": false,
+        "labelText": "Telefon",
+        "labels": [
+          {
+            "for": "kontakt-phone",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Telefon",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-message",
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Temat rozmowy",
+        "required": false,
+        "labelText": "Temat rozmowy",
+        "labels": [
+          {
+            "for": "kontakt-message",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 96,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Temat rozmowy",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "check type-body-s",
+            "width": 605.875,
+            "height": 48.5,
+            "clipPath": "none",
+            "display": "grid",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 20,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          0,
+          0,
+          0
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          0,
+          0,
+          0
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1
+      },
+      {
+        "form": "kontakt-form",
+        "id": "",
+        "name": "marketing-emails",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "check type-body-s",
+            "width": 605.875,
+            "height": 48.5,
+            "clipPath": "none",
+            "display": "grid",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 20,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          0,
+          0,
+          0
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          0,
+          0,
+          0
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1
+      },
+      {
+        "form": "newsletter-form",
+        "id": "newsletter-email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "Adres e-mail",
+        "required": true,
+        "labelText": "Adres e-mail",
+        "labels": [
+          {
+            "for": "newsletter-email",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 57,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Adres e-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      }
+    ],
+    "scrollWidth": 1280
+  },
+  {
+    "source": "local",
+    "route": "/kontakt",
+    "width": 1280,
+    "duplicateIds": [],
+    "fields": [
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "E-mail",
+        "required": true,
+        "labelText": "E-mail (wymagane)",
+        "labels": [
+          {
+            "for": "kontakt-email",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "E-mail (wymagane)",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-phone",
+        "name": "phone",
+        "type": "tel",
+        "placeholder": "Telefon",
+        "required": false,
+        "labelText": "Telefon",
+        "labels": [
+          {
+            "for": "kontakt-phone",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Telefon",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-message",
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Temat rozmowy",
+        "required": false,
+        "labelText": "Temat rozmowy",
+        "labels": [
+          {
+            "for": "kontakt-message",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 96,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Temat rozmowy",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "check type-body-s",
+            "width": 605.875,
+            "height": 48.5,
+            "clipPath": "none",
+            "display": "grid",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 20,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          0,
+          0,
+          0
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          0,
+          0,
+          0
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1
+      },
+      {
+        "form": "kontakt-form",
+        "id": "",
+        "name": "marketing-emails",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "check type-body-s",
+            "width": 605.875,
+            "height": 48.5,
+            "clipPath": "none",
+            "display": "grid",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 20,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          0,
+          0,
+          0
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          0,
+          0,
+          0
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1
+      },
+      {
+        "form": "newsletter-form",
+        "id": "newsletter-email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "Adres e-mail",
+        "required": true,
+        "labelText": "Adres e-mail",
+        "labels": [
+          {
+            "for": "newsletter-email",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 57,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "20px",
+        "lineHeight": "28.5714px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Adres e-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      }
+    ],
+    "scrollWidth": 1280
+  },
+  {
+    "source": "live",
+    "route": "/",
+    "width": 375,
+    "duplicateIds": [
+      "field-4",
+      "newsletter"
+    ],
+    "fields": [
+      {
+        "form": "wf-form-Landing-Contact-Form",
+        "id": "email-2",
+        "name": "email",
+        "type": "email",
+        "placeholder": "E-mail",
+        "required": true,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "E-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-Landing-Contact-Form",
+        "id": "phone",
+        "name": "phone",
+        "type": "tel",
+        "placeholder": "Telefon",
+        "required": false,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Telefon",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-Landing-Contact-Form",
+        "id": "message",
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Temat rozmowy",
+        "required": false,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 96,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Temat rozmowy",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-Landing-Contact-Form",
+        "id": "newsletter",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox",
+            "width": 295,
+            "height": 95.9375,
+            "clipPath": "none",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 13,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1.095
+      },
+      {
+        "form": "wf-form-Landing-Contact-Form",
+        "id": "marketing-emails",
+        "name": "marketing-emails",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox",
+            "width": 295,
+            "height": 75.953125,
+            "clipPath": "none",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 13,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1.095
+      },
+      {
+        "form": "wf-form-Newsletter-bottom-CTA-form-2",
+        "id": "email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "Adres e-mail",
+        "required": true,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Adres e-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-Newsletter-bottom-CTA-form-2",
+        "id": "newsletter",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox checkbox-field-3",
+            "width": 0,
+            "height": 0,
+            "clipPath": "none",
+            "display": "none",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": false,
+        "height": 0,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "",
+        "role": "none",
+        "axIgnored": true,
+        "placeholderContrast": 1.095
+      }
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "source": "live",
+    "route": "/kontakt",
+    "width": 375,
+    "duplicateIds": [
+      "field-3",
+      "newsletter",
+      "field-4"
+    ],
+    "fields": [
+      {
+        "form": "wf-form-main-contact-form",
+        "id": "email-2",
+        "name": "email",
+        "type": "email",
+        "placeholder": "E-mail",
+        "required": true,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "E-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-main-contact-form",
+        "id": "phone",
+        "name": "phone",
+        "type": "tel",
+        "placeholder": "Telefon",
+        "required": false,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Telefon",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-main-contact-form",
+        "id": "message",
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Temat rozmowy",
+        "required": false,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 96,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Temat rozmowy",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-main-contact-form",
+        "id": "newsletter",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox",
+            "width": 343,
+            "height": 75.953125,
+            "clipPath": "none",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 13,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1.095
+      },
+      {
+        "form": "wf-form-main-contact-form",
+        "id": "marketing-emails",
+        "name": "marketing-emails",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox",
+            "width": 343,
+            "height": 55.96875,
+            "clipPath": "none",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 13,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1.095
+      },
+      {
+        "form": "wf-form-Newsletter-bottom-CTA-form-2",
+        "id": "email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "Adres e-mail",
+        "required": true,
+        "labelText": "",
+        "labels": [],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          131,
+          141,
+          149
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Adres e-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 3.382
+      },
+      {
+        "form": "wf-form-Newsletter-bottom-CTA-form-2",
+        "id": "newsletter",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "w-checkbox checkbox-field-3",
+            "width": 0,
+            "height": 0,
+            "clipPath": "none",
+            "display": "none",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": false,
+        "height": 0,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          14,
+          15,
+          17
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          14,
+          15,
+          17
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "",
+        "role": "none",
+        "axIgnored": true,
+        "placeholderContrast": 1.095
+      }
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "source": "local",
+    "route": "/",
+    "width": 375,
+    "duplicateIds": [],
+    "fields": [
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "E-mail",
+        "required": true,
+        "labelText": "E-mail (wymagane)",
+        "labels": [
+          {
+            "for": "kontakt-email",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "E-mail (wymagane)",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-phone",
+        "name": "phone",
+        "type": "tel",
+        "placeholder": "Telefon",
+        "required": false,
+        "labelText": "Telefon",
+        "labels": [
+          {
+            "for": "kontakt-phone",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Telefon",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-message",
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Temat rozmowy",
+        "required": false,
+        "labelText": "Temat rozmowy",
+        "labels": [
+          {
+            "for": "kontakt-message",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 96,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Temat rozmowy",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "check type-body-s",
+            "width": 295,
+            "height": 80.0625,
+            "clipPath": "none",
+            "display": "grid",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 20,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          0,
+          0,
+          0
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          0,
+          0,
+          0
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1
+      },
+      {
+        "form": "kontakt-form",
+        "id": "",
+        "name": "marketing-emails",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "check type-body-s",
+            "width": 295,
+            "height": 60.046875,
+            "clipPath": "none",
+            "display": "grid",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 20,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          0,
+          0,
+          0
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          0,
+          0,
+          0
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1
+      },
+      {
+        "form": "newsletter-form",
+        "id": "newsletter-email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "Adres e-mail",
+        "required": true,
+        "labelText": "Adres e-mail",
+        "labels": [
+          {
+            "for": "newsletter-email",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 50,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Adres e-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      }
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "source": "local",
+    "route": "/kontakt",
+    "width": 375,
+    "duplicateIds": [],
+    "fields": [
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "E-mail",
+        "required": true,
+        "labelText": "E-mail (wymagane)",
+        "labels": [
+          {
+            "for": "kontakt-email",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "E-mail (wymagane)",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-phone",
+        "name": "phone",
+        "type": "tel",
+        "placeholder": "Telefon",
+        "required": false,
+        "labelText": "Telefon",
+        "labels": [
+          {
+            "for": "kontakt-phone",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 44,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Telefon",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "kontakt-message",
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Temat rozmowy",
+        "required": false,
+        "labelText": "Temat rozmowy",
+        "labels": [
+          {
+            "for": "kontakt-message",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 96,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Temat rozmowy",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      },
+      {
+        "form": "kontakt-form",
+        "id": "",
+        "name": "newsletter",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "check type-body-s",
+            "width": 295,
+            "height": 80.0625,
+            "clipPath": "none",
+            "display": "grid",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 20,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          0,
+          0,
+          0
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          0,
+          0,
+          0
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1
+      },
+      {
+        "form": "kontakt-form",
+        "id": "",
+        "name": "marketing-emails",
+        "type": "checkbox",
+        "placeholder": null,
+        "required": false,
+        "labelText": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "labels": [
+          {
+            "for": "",
+            "association": true,
+            "class": "check type-body-s",
+            "width": 295,
+            "height": 60.046875,
+            "clipPath": "none",
+            "display": "grid",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 20,
+        "padding": "0px",
+        "borderWidth": "0px",
+        "borderColor": [
+          0,
+          0,
+          0
+        ],
+        "borderRadius": "0px",
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "placeholderRGB": [
+          0,
+          0,
+          0
+        ],
+        "backgroundRGB": [
+          0,
+          0,
+          0
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Chcę otrzymywać od Wellbiz sp. z o.o. informacje o usługach i ofertach na podany adres e-mail.",
+        "role": "checkbox",
+        "axIgnored": false,
+        "placeholderContrast": 1
+      },
+      {
+        "form": "newsletter-form",
+        "id": "newsletter-email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "Adres e-mail",
+        "required": true,
+        "labelText": "Adres e-mail",
+        "labels": [
+          {
+            "for": "newsletter-email",
+            "association": true,
+            "class": "visually-hidden",
+            "width": 1,
+            "height": 1,
+            "clipPath": "inset(50%)",
+            "display": "block",
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "visible": true,
+        "height": 50,
+        "padding": "8px 12px",
+        "borderWidth": "1px",
+        "borderColor": [
+          221,
+          225,
+          230
+        ],
+        "borderRadius": "6px",
+        "fontSize": "16px",
+        "lineHeight": "22.8571px",
+        "placeholderRGB": [
+          99,
+          107,
+          117
+        ],
+        "backgroundRGB": [
+          255,
+          255,
+          255
+        ],
+        "placeholderOpacity": "1",
+        "accessibleName": "Adres e-mail",
+        "role": "textbox",
+        "axIgnored": false,
+        "placeholderContrast": 5.398
+      }
+    ],
+    "scrollWidth": 375
+  }
+]

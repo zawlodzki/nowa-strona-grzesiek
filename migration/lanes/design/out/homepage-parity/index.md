@@ -1,6 +1,6 @@
 # T31 visual proof
 
-**Latest review fixes:** see [PR #50 follow-up proof](#pr-50-follow-up-proof) below. Earlier captures document the initial implementation; the `*-review-*` captures supersede its newsletter/footer geometry and badge.
+**Latest approved change:** see [Hidden labels and placeholders](#hidden-labels-and-placeholders). These `*-labels-*` captures supersede the visible field labels in earlier proof. [PR #50 follow-up proof](#pr-50-follow-up-proof) remains the latest footer/badge evidence.
 
 Captured 2026-11-10 from live `https://zawlodzki.pl/` and the built Astro site behind local `wrangler dev --local` on port 8790. Browser: headless Chromium, device scale 1, 1280/375 px. No deploy or dataset writes.
 
@@ -94,3 +94,24 @@ Frames use the real browser CSS animations, paused and sought to exactly 0/3/6 s
 [Reproducible capture driver](review-proof.mjs) checks the shared newsletter on `/`, `/newsletter`, `/kontakt` and `/blog/bezpieczne-przekazanie-danych` at 1280/375. It asserts equal heights/centres and no overflow, exact rendered sRGB typography agreement and no active reduced-motion animations. `review-home-w*.png` and `review-newsletter-w*.png` are additional direct verify-web `shot` captures from run `20261110-174624-p8790`.
 
 Validation: [Astro check](review-astro-check.txt), [source tests](review-source-tests.txt), [117-page build](review-build.txt). Requested literal [`node --test src`](review-node-test-src.txt) was rerun and still fails with MODULE_NOT_FOUND on Node 24; explicit source test paths pass (81 passed, one skipped, zero failed), as documented above. Board check: 31 tasks, 0 problems.
+
+## Hidden labels and placeholders
+
+Approved shared-component change: field labels in NewsletterSignup and ContactForm remain in the DOM with their existing text and for/id associations, but use one `visually-hidden` utility defined in LeadForm (the same clip-path/1px/overflow-clip/nowrap pattern as Header). Checkbox consent labels remain visible. No display:none, visibility:hidden or aria-hidden is used for field labels. The newsletter's hidden label does not reserve a grid row; input and button remain equal-height and centred horizontally on desktop and mobile.
+
+Exact placeholders copied from live on both homepage and `/kontakt`: **E-mail**, **Telefon**, **Temat rozmowy**; newsletter: **Adres e-mail**. Email remains required; phone/message remain optional. Contact controls match live's 44px input/96px textarea height, 8px×12px padding, 1px border, 6px radius, 20px desktop/16px mobile font and 10/7 line-height. The shared input selector uses :where to let the textarea's own minimum height win. Hidden attribution/Turnstile inputs are excluded from visible field styling.
+
+| Comparison | 1280 px | 375 px |
+|---|---|---|
+| Newsletter row | [live vs local](compare-labels-newsletter-row-w1280.png) | [live vs local](compare-labels-newsletter-row-w375.png) |
+| Newsletter section | [live vs local](compare-labels-newsletter-section-w1280.png) | [live vs local](compare-labels-newsletter-section-w375.png) |
+| Homepage contact form | [live vs local](compare-labels-contact-home-w1280.png) | [live vs local](compare-labels-contact-home-w375.png) |
+| `/kontakt` form | [live vs local](compare-labels-contact-kontakt-w1280.png) | [live vs local](compare-labels-contact-kontakt-w375.png) |
+
+[Chrome accessibility tree + field styles](labels-accessibility.json) records live/local names per field at both widths on both routes. Native CDP `Accessibility.getPartialAXTree` confirms all **24 local interactive controls** (16 text fields and 8 checkboxes across four route/width combinations) remain exposed and have accessible names exactly equal to associated label text. Every local text-field label is associated by for/id and clipped to 1×1px; checkbox labels are visible and associated by wrapping. There are **zero duplicate ids** on all local pages. Existing live duplicate ids and its unlabeled hidden newsletter checkbox are recorded as reference only; they were not copied.
+
+Placeholder contrast on white: **local 5.398:1**, using the existing text-muted token; **live 3.382:1**. The slightly darker local colour is intentional to meet ≥4.5:1. [Capture/assertion driver](labels-proof.mjs) verifies these conditions, exact placeholder/required parity, contact dimensions/styles, retained newsletter alignment and no horizontal overflow. `labels_-w*.png` and `labels_kontakt-w*.png` are additional direct verify-web shots; [HTTP probes](labels-probes.tsv) return 200.
+
+[Submission proof](labels-forms-proof.json), [mock payloads](labels-delivery.json) and [driver](labels-submission.mjs): browser fills by accessible name, posts through the real local Worker, receives 303 and reaches the correct thank-you path for landing contact, newsletter and full contact. Payloads remain 37/34/37 fields with all 32 attribution keys, newsletter=true. Turnstile issues test tokens at zero height; missing-token 403 and unknown-form error recovery still pass. No production submission or secret changes.
+
+Validation: [Astro check](labels-astro-check.txt) passes (0 errors/warnings, existing hint only), [source tests](labels-source-tests.txt) pass (81 passed, one skipped, zero failed), [build](labels-build.txt) passes (117 pages). Requested literal [node --test src](labels-node-test-src.txt) still fails with MODULE_NOT_FOUND on Node 24; the full explicit source-file test invocation passes. No dedicated label/a11y test files exist in the repository; all existing source tests ran, supplemented by the native Chrome AX assertions above. [Design detector](labels-design-detector.json) reports only the previously approved newsletter gradient. Board: 31 tasks, 0 problems.

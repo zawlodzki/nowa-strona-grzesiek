@@ -1,0 +1,12 @@
+[
+  {
+    "antipattern": "gradient-text",
+    "name": "Gradient text",
+    "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T31-homepage-visual-parity/apps/web/src/components/blocks/NewsletterSignup.astro",
+    "line": 37,
+    "snippet": "background-clip: text + gradient"
+  }
+]

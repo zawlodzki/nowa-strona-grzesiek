@@ -12,8 +12,8 @@ const f = (name: string) => `${id}-${name}`;
     {data.body && <p class="body">{data.body}</p>}
     <LeadForm form="newsletter" id={f('form')} visible={['email', 'newsletter']} submitLabel="Zapisuję się" tone="dark" class="signup">
       <div class="field">
-        <label for={f('email')}>Adres e-mail</label>
-        <input id={f('email')} name="email" type="email" autocomplete="email" maxlength="256" required />
+        <label class="visually-hidden" for={f('email')}>Adres e-mail</label>
+        <input id={f('email')} name="email" type="email" placeholder="Adres e-mail" autocomplete="email" maxlength="256" required />
       </div>
       <input type="hidden" name="newsletter" value="on" />
     </LeadForm>
@@ -45,11 +45,10 @@ const f = (name: string) => `${id}-${name}`;
     gap: var(--space-2xs);
   }
   .inner :global(.signup .field) { display: contents; }
-  .inner :global(.signup .field > label) { grid-column: 1 / -1; grid-row: 1; text-align: start; }
-  .inner :global(.signup .field > input) { grid-column: 1; grid-row: 2; padding: var(--space-2xs) var(--space-xs); }
+  .inner :global(.signup .field > input) { grid-column: 1; grid-row: 1; padding: var(--space-2xs) var(--space-xs); }
   .inner :global(.signup .submit) {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
     justify-self: stretch;
     border: var(--border-width-button) solid var(--border-accent);
     padding: var(--space-2xs) var(--space-m);
