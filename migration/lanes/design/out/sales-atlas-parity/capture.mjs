@@ -22,6 +22,15 @@ for(const width of [1280,375]) {
  for(const [name,[a,b]] of Object.entries(pairs)){await shot(live,a,`live-${name}-w${width}`);await shot(local,b,`local-${name}-w${width}`);}
  const lt=live.locator('.tab-vertical');const ct=local.locator('#t32-tabs [role=tab]');
  assert.equal(await ct.count(),9);
+ const visibleSummaries = await local.locator('#t32-tabs .menu a > span:last-child:visible').count();
+ assert.equal(visibleSummaries,1);
+ const typography = await local.locator('#t32-tabs .panel:not([hidden])').evaluate(e=>({headingSize:getComputedStyle(e.querySelector('h4')).fontSize, expectedSize:getComputedStyle(document.querySelector('#t32-tabs .type-heading-xs')).fontSize, tagline:e.querySelector('.panel-tagline')?.textContent}));
+ assert.equal(typography.headingSize,typography.expectedSize);assert.ok(typography.tagline);
+ report.push({width,visibleSummaries,typography});
+ const test = local.locator('#t32-test');
+ assert.equal(await test.locator('.type-tagline').textContent(),'Test');
+ assert.equal(await test.locator('ol > li').count(),3);
+ assert.equal(await test.locator('.intro h2').count(),1);
  await lt.nth(3).click();await ct.nth(3).click();
  await shot(live,live.locator('.tabs-vertical'),`live-tabs-click04-w${width}`);await shot(local,local.locator('#t32-tabs'),`local-tabs-click04-w${width}`);
  await lt.first().focus();await lt.first().press('Home');for(let i=0;i<3;i++)await live.keyboard.press('ArrowDown');
@@ -53,6 +62,6 @@ for(const width of [1280,375]) {
  await p.locator('body').screenshot({path:`${out}/compare-${name}-w${width}.png`});await p.close();
  }
 }
-const nojs=await browser.newPage({javaScriptEnabled:false,viewport:{width:375,height:900}});await nojs.goto('http://127.0.0.1:8791/_ds/blocks-a');assert.equal(await nojs.locator('#t32-tabs .panel:visible').count(),9);report.push({noJSVisiblePanels:9});await nojs.close();
+const nojs=await browser.newPage({javaScriptEnabled:false,viewport:{width:375,height:900}});await nojs.goto('http://127.0.0.1:8791/_ds/blocks-a',{waitUntil:'domcontentloaded'});assert.equal(await nojs.locator('#t32-tabs .panel:visible').count(),9);assert.equal(await nojs.locator('#t32-tabs .menu a > span:last-child:visible').count(),9);report.push({noJSVisiblePanels:9,noJSVisibleSummaries:9});await nojs.close();
 await fs.writeFile(`${out}/browser-checks.json`,JSON.stringify(report,null,2)+'\n');
 }finally{await browser.close();}

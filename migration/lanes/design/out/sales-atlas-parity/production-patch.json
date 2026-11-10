@@ -52,7 +52,7 @@
               "tagline": "Zawartość"
             },
             {
-              "_key": "283de327cdd6",
+              "_key": "75b27b3ccc48",
               "_type": "tabs",
               "items": [
                 {
@@ -66,7 +66,7 @@
                         {
                           "_key": "5ab9c8ebd136",
                           "_type": "span",
-                          "text": "Od czego zacząć"
+                          "text": "Audyt CRM Pipedrive: dwa tygodnie, raport z priorytetami i plan naprawy. To jest ta warstwa w całości."
                         }
                       ],
                       "style": "normal"
@@ -76,29 +76,17 @@
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "57228f08d686",
-                          "_type": "span",
-                          "text": "Audyt CRM Pipedrive: dwa tygodnie, raport z priorytetami i plan naprawy. To jest ta warstwa w całości."
-                        }
-                      ],
-                      "style": "normal"
-                    },
-                    {
-                      "_key": "85b3cd150597",
-                      "_type": "block",
-                      "children": [
-                        {
-                          "_key": "039091a6e0b5",
+                          "_key": "4ccfd037949d",
                           "_type": "span",
                           "marks": [
-                            "1c3505f5ab12"
+                            "57228f08d686"
                           ],
                           "text": "Zobacz audyt sprzedaży"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "1c3505f5ab12",
+                          "_key": "57228f08d686",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-6a93c20ca47c5a15d5c2fce7",
@@ -110,11 +98,11 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "aa3cb81a1230",
+                      "_key": "1c3505f5ab12",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "30fc214c72c1",
+                          "_key": "039091a6e0b5",
                           "_type": "span",
                           "text": "Nie wiadomo, czy audyt jest potrzebny? Na bezpłatnej konsultacji przechodzimy przez to, co już stoi."
                         }
@@ -122,21 +110,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "fbf3d475e18b",
+                      "_key": "aa3cb81a1230",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "0f2126197519",
+                          "_key": "1598db54ddf3",
                           "_type": "span",
                           "marks": [
-                            "14f8c3ac998c"
+                            "30fc214c72c1"
                           ],
                           "text": "Umów bezpłatną konsultację"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "14f8c3ac998c",
+                          "_key": "30fc214c72c1",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-634daaa2c8ceab10fa93a044",
@@ -201,30 +189,19 @@
                     }
                   ],
                   "summary": "Co dziś naprawdę dzieje się w sprzedaży. Oparta na danych z CRM i na rozmowach z zespołem. Na koniec dostajesz opis stanu, z którym zgadza się zespół i rekomendowaną ścieżkę wdrożenia.",
+                  "tagline": "Od czego zacząć",
                   "title": "01 Diagnoza"
                 },
                 {
-                  "_key": "e88fa0c6abbd",
+                  "_key": "14f8c3ac998c",
                   "_type": "tabItem",
                   "body": [
                     {
-                      "_key": "125cd8c0ebe2",
+                      "_key": "ad7c221f40a4",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "467954aa8583",
-                          "_type": "span",
-                          "text": "Od czego zacząć"
-                        }
-                      ],
-                      "style": "normal"
-                    },
-                    {
-                      "_key": "16cf778276aa",
-                      "_type": "block",
-                      "children": [
-                        {
-                          "_key": "6ccf9cb6b588",
+                          "_key": "ff2d18239a9f",
                           "_type": "span",
                           "text": "Ta warstwa nie ma osobnej usługi. Wchodzi w zakres audytu i wdrożenia, bo profil klienta ustala się, zanim powstaną etapy w CRM."
                         }
@@ -232,21 +209,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "ad4a45e90371",
+                      "_key": "125cd8c0ebe2",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "3d1c38766f7d",
+                          "_key": "d01b5fb1a254",
                           "_type": "span",
                           "marks": [
-                            "544f52e4a557"
+                            "467954aa8583"
                           ],
                           "text": "Zobacz audyt Pipedrive"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "544f52e4a557",
+                          "_key": "467954aa8583",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-6a659c9d68d93d23daef5822",
@@ -258,11 +235,11 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "8a3e9be9f936",
+                      "_key": "6ccf9cb6b588",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "878b846714df",
+                          "_key": "8f45beb53d3e",
                           "_type": "span",
                           "text": "Bezpłatna konsultacja: przechodzimy przez to, komu dziś sprzedajemy i gdzie ta definicja się rozjeżdża."
                         }
@@ -270,21 +247,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "f0daa6bef1d3",
+                      "_key": "544f52e4a557",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "58add573e6c6",
+                          "_key": "63a932cd0b9f",
                           "_type": "span",
                           "marks": [
-                            "89c485b1a2a2"
+                            "3d1c38766f7d"
                           ],
                           "text": "Umów bezpłatną konsultację"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "89c485b1a2a2",
+                          "_key": "3d1c38766f7d",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-634daaa2c8ceab10fa93a044",
@@ -298,11 +275,11 @@
                   ],
                   "negative": [
                     {
-                      "_key": "063226fa17e4",
+                      "_key": "5fc3e7f8ac5f",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "ec4ea4fff137",
+                          "_key": "9c5fdefc8551",
                           "_type": "span",
                           "text": "Po czym poznać, że nie działa"
                         }
@@ -310,11 +287,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "ad7c221f40a4",
+                      "_key": "063226fa17e4",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "ff2d18239a9f",
+                          "_key": "ec4ea4fff137",
                           "_type": "span",
                           "text": "Kwalifikacja siedzi w głowie jednej osoby, a oferta idzie do każdego, kto zapyta. Czas marnowany jest na deale, które i tak nie miały szans na powodzenie."
                         }
@@ -324,11 +301,11 @@
                   ],
                   "positive": [
                     {
-                      "_key": "ebc0bd8b6e5a",
+                      "_key": "0f2126197519",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "f22c8176069f",
+                          "_key": "57b5652086d0",
                           "_type": "span",
                           "text": "Po czym poznać, że działa"
                         }
@@ -336,11 +313,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "5fc3e7f8ac5f",
+                      "_key": "ebc0bd8b6e5a",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "9c5fdefc8551",
+                          "_key": "f22c8176069f",
                           "_type": "span",
                           "text": "W minutę wiadomo, czy to nasz klient i dlaczego. Handlowiec potrafi odrzucić zapytanie i uzasadnić to kryterium, nie kierując się przeczuciem."
                         }
@@ -349,30 +326,19 @@
                     }
                   ],
                   "summary": "Komu i po co sprzedajemy: profil idealnego klienta, persony, zadania klienta i to, jak wygląda zakup po jego stronie. Wychodzi z tego profil klienta i kryteria, po których odrzucamy zapytanie.",
+                  "tagline": "Od czego zacząć",
                   "title": "02 Klient i rynek"
                 },
                 {
-                  "_key": "12ce036b0a1d",
+                  "_key": "878b846714df",
                   "_type": "tabItem",
                   "body": [
                     {
-                      "_key": "a0fe69209bb2",
+                      "_key": "e33740b31887",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "6db7945b097c",
-                          "_type": "span",
-                          "text": "Od czego zacząć"
-                        }
-                      ],
-                      "style": "normal"
-                    },
-                    {
-                      "_key": "abab39b26100",
-                      "_type": "block",
-                      "children": [
-                        {
-                          "_key": "932d0bc573fe",
+                          "_key": "64333fe98bbf",
                           "_type": "span",
                           "text": "Bezpłatna konsultacja: sprawdzamy, czy to, co mówisz na stronie, zgadza się z tym, co mówisz w ofercie."
                         }
@@ -380,21 +346,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "e7a40115c185",
+                      "_key": "1339ab7a2ec4",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "ccf94bcc1e97",
+                          "_key": "52dd041850c8",
                           "_type": "span",
                           "marks": [
-                            "8baea4ba44ba"
+                            "fb565362cd50"
                           ],
                           "text": "Umów bezpłatną konsultację"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "8baea4ba44ba",
+                          "_key": "fb565362cd50",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-634daaa2c8ceab10fa93a044",
@@ -408,39 +374,13 @@
                   ],
                   "negative": [
                     {
-                      "_key": "e33740b31887",
-                      "_type": "block",
-                      "children": [
-                        {
-                          "_key": "64333fe98bbf",
-                          "_type": "span",
-                          "text": "Po czym poznać, że nie działa"
-                        }
-                      ],
-                      "style": "h4"
-                    },
-                    {
-                      "_key": "1339ab7a2ec4",
-                      "_type": "block",
-                      "children": [
-                        {
-                          "_key": "fb565362cd50",
-                          "_type": "span",
-                          "text": "Każda oferta opisuje firmę inaczej, a różnicę wobec konkurencji sprowadza do ceny."
-                        }
-                      ],
-                      "style": "normal"
-                    }
-                  ],
-                  "positive": [
-                    {
                       "_key": "b8fc2ccd83fc",
                       "_type": "block",
                       "children": [
                         {
                           "_key": "d0b4e8c1f56f",
                           "_type": "span",
-                          "text": "Po czym poznać, że działa"
+                          "text": "Po czym poznać, że nie działa"
                         }
                       ],
                       "style": "h4"
@@ -452,6 +392,32 @@
                         {
                           "_key": "d24570b2d844",
                           "_type": "span",
+                          "text": "Każda oferta opisuje firmę inaczej, a różnicę wobec konkurencji sprowadza do ceny."
+                        }
+                      ],
+                      "style": "normal"
+                    }
+                  ],
+                  "positive": [
+                    {
+                      "_key": "b92c8e34a1c3",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "f0daa6bef1d3",
+                          "_type": "span",
+                          "text": "Po czym poznać, że działa"
+                        }
+                      ],
+                      "style": "h4"
+                    },
+                    {
+                      "_key": "58add573e6c6",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "dc8819545f7e",
+                          "_type": "span",
                           "text": "Dwie osoby z firmy tłumaczą to samo tymi samymi słowami. Oferta broni ceny argumentem, a nie rabatem."
                         }
                       ],
@@ -459,30 +425,19 @@
                     }
                   ],
                   "summary": "Dlaczego klient ma Cię wybrać, czym różnisz się od alternatyw i jakimi słowami to komunikujesz na stronie oraz w ofercie. Efekt to jedna wersja przekazu, która ma być klarowna dla grupy docelowej.",
+                  "tagline": "Od czego zacząć",
                   "title": "03 Pozycjonowanie i przekaz"
                 },
                 {
-                  "_key": "1eef161dae98",
+                  "_key": "6db7945b097c",
                   "_type": "tabItem",
                   "body": [
                     {
-                      "_key": "fe5c2a0b685b",
+                      "_key": "22047c9e7160",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "a27b7d8b7c05",
-                          "_type": "span",
-                          "text": "Od czego zacząć"
-                        }
-                      ],
-                      "style": "normal"
-                    },
-                    {
-                      "_key": "cfa7614622c3",
-                      "_type": "block",
-                      "children": [
-                        {
-                          "_key": "484e78c8aa9f",
+                          "_key": "efe4c580cce7",
                           "_type": "span",
                           "text": "Wdrożenie Pipedrive: proces zaprojektowany i zapisany w narzędziu razem z kryteriami wyjścia, automatyzacjami i szkoleniem zespołu."
                         }
@@ -490,21 +445,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "501d9a0ee56c",
+                      "_key": "304c89ef7569",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "0cc7abb5c150",
+                          "_key": "8fb184b3c743",
                           "_type": "span",
                           "marks": [
-                            "c4ec3e35cefc"
+                            "501967204203"
                           ],
                           "text": "Zobacz wdrożenie Pipedrive"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "c4ec3e35cefc",
+                          "_key": "501967204203",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-64a963565ffd73e869eafd91",
@@ -516,11 +471,11 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "d2013c80bf9b",
+                      "_key": "d6c1df7d5a69",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "a1b855b6bd4b",
+                          "_key": "f1c26e613776",
                           "_type": "span",
                           "text": "Bezpłatna konsultacja: przechodzimy przez dzisiejsze etapy i pokazuję, które z nich nic nie znaczą."
                         }
@@ -528,21 +483,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "97c040fd63e7",
+                      "_key": "a27b7d8b7c05",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "e4a8dc3fcb16",
+                          "_key": "cfa7614622c3",
                           "_type": "span",
                           "marks": [
-                            "c5b84886a652"
+                            "ffc5bcd22322"
                           ],
                           "text": "Umów bezpłatną konsultację"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "c5b84886a652",
+                          "_key": "ffc5bcd22322",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-634daaa2c8ceab10fa93a044",
@@ -556,11 +511,11 @@
                   ],
                   "negative": [
                     {
-                      "_key": "304c89ef7569",
+                      "_key": "ccf94bcc1e97",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "501967204203",
+                          "_key": "e5c4c17378bb",
                           "_type": "span",
                           "text": "Po czym poznać, że nie działa"
                         }
@@ -568,11 +523,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "983def73385a",
+                      "_key": "6517c7ca797e",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "d6c1df7d5a69",
+                          "_key": "ba2e6a1c6f42",
                           "_type": "span",
                           "text": "Etapy przesuwa się na wyczucie, a kontakt po ofercie zależy od czyjejś pamięci. Prognoza z takiego lejka nie ma pokrycia."
                         }
@@ -582,11 +537,11 @@
                   ],
                   "positive": [
                     {
-                      "_key": "6517c7ca797e",
+                      "_key": "1b28a403a0ae",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "ba2e6a1c6f42",
+                          "_key": "abab39b26100",
                           "_type": "span",
                           "text": "Po czym poznać, że działa"
                         }
@@ -594,11 +549,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "22047c9e7160",
+                      "_key": "f28b0cee26cc",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "efe4c580cce7",
+                          "_key": "e7a40115c185",
                           "_type": "span",
                           "text": "Etap w CRM znaczy to samo u wszystkich, bo ma warunek wyjścia. Kontakt po ofercie ma termin i nie zależy od tego, czy handlowiec o nim pamięta."
                         }
@@ -607,30 +562,19 @@
                     }
                   ],
                   "summary": "Jak pracujesz z klientem od pierwszego kontaktu do wygranej: etapy, kryteria wyjścia, kwalifikacja, agendy spotkań i struktura oferty. Na tej podstawie konfigurowany jest CRM.",
+                  "tagline": "Od czego zacząć",
                   "title": "04 Proces sprzedaży"
                 },
                 {
-                  "_key": "a6b73d5e6535",
+                  "_key": "c3924c82ac11",
                   "_type": "tabItem",
                   "body": [
                     {
-                      "_key": "cd8c85f477c5",
+                      "_key": "942993edd3b2",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "693ed6271aa8",
-                          "_type": "span",
-                          "text": "Od czego zacząć"
-                        }
-                      ],
-                      "style": "normal"
-                    },
-                    {
-                      "_key": "2966e13e56dc",
-                      "_type": "block",
-                      "children": [
-                        {
-                          "_key": "8f5146996af9",
+                          "_key": "3626946349d1",
                           "_type": "span",
                           "text": "Wdrożenie Asany. Tam rozstrzyga się, czy to, co obiecane przy podpisie, zostało dowiezione i kiedy."
                         }
@@ -638,21 +582,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "720bb65df6c0",
+                      "_key": "e28b3f4ef3da",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "295c7d341fed",
+                          "_key": "e1100b7d77a2",
                           "_type": "span",
                           "marks": [
-                            "a8bdbd029c30"
+                            "42d31b055595"
                           ],
                           "text": "Zobacz wdrożenie Asany"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "a8bdbd029c30",
+                          "_key": "42d31b055595",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-64a7d3814f84e9058b6f6dad",
@@ -664,11 +608,11 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "eb5fba508421",
+                      "_key": "f89ff9539951",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "9384d682f383",
+                          "_key": "e48450118402",
                           "_type": "span",
                           "text": "Bezpłatna konsultacja: sprawdzamy, co dziś gubi się między wygraną a pierwszym dniem realizacji."
                         }
@@ -676,21 +620,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "19490b3007cc",
+                      "_key": "069a424adde8",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "34dde2c28632",
+                          "_key": "cd8c85f477c5",
                           "_type": "span",
                           "marks": [
-                            "5e33ea8d675f"
+                            "21b38ba94b09"
                           ],
                           "text": "Umów bezpłatną konsultację"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "5e33ea8d675f",
+                          "_key": "21b38ba94b09",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-634daaa2c8ceab10fa93a044",
@@ -704,11 +648,11 @@
                   ],
                   "negative": [
                     {
-                      "_key": "01b47bd965c3",
+                      "_key": "d10638c51b19",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "f89ff9539951",
+                          "_key": "97c040fd63e7",
                           "_type": "span",
                           "text": "Po czym poznać, że nie działa"
                         }
@@ -716,11 +660,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "a176112ba0e1",
+                      "_key": "e4a8dc3fcb16",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "069a424adde8",
+                          "_key": "e852da84f901",
                           "_type": "span",
                           "text": "Po wygranej sprawa znika z widoku, a polecenia zdarzają się przypadkiem. Nikt nie odpowiada za to, co dzieje się między sprzedażą a realizacją."
                         }
@@ -730,11 +674,11 @@
                   ],
                   "positive": [
                     {
-                      "_key": "942993edd3b2",
+                      "_key": "501d9a0ee56c",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "3626946349d1",
+                          "_key": "c4ec3e35cefc",
                           "_type": "span",
                           "text": "Po czym poznać, że działa"
                         }
@@ -742,11 +686,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "e28b3f4ef3da",
+                      "_key": "4a2f7b4d189b",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "42d31b055595",
+                          "_key": "d2013c80bf9b",
                           "_type": "span",
                           "text": "Realizacja dostaje komplet ustaleń w dniu podpisu i nie dopytuje sprzedaży. Polecenia liczymy tak samo jak każde inne źródło."
                         }
@@ -755,30 +699,19 @@
                     }
                   ],
                   "summary": "Co dzieje się po finalizacji: przekazanie do realizacji, pierwszy wynik u klienta, upsell, cross-sell i polecenia. Powstaje moment przekazania z kompletem ustaleń, a polecenia stają się liczonym źródłem.",
+                  "tagline": "Od czego zacząć",
                   "title": "05 Po wygranej"
                 },
                 {
-                  "_key": "a8ccef04996a",
+                  "_key": "5bf341e89f6b",
                   "_type": "tabItem",
                   "body": [
                     {
-                      "_key": "cdb6ce124da9",
+                      "_key": "34dde2c28632",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "7c7197fb00e6",
-                          "_type": "span",
-                          "text": "Od czego zacząć"
-                        }
-                      ],
-                      "style": "normal"
-                    },
-                    {
-                      "_key": "1c94258f8af3",
-                      "_type": "block",
-                      "children": [
-                        {
-                          "_key": "70bbc30923b9",
+                          "_key": "f089469add5d",
                           "_type": "span",
                           "text": "Bezpłatna konsultacja: liczymy, ile szans potrzebujesz miesięcznie, żeby cel był realny."
                         }
@@ -786,21 +719,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "627ca68da77d",
+                      "_key": "6452748a4355",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "c569657922e4",
+                          "_key": "fa70b76fa4d8",
                           "_type": "span",
                           "marks": [
-                            "bc0cc4d75f62"
+                            "8b774ce2ef11"
                           ],
                           "text": "Umów bezpłatną konsultację"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "bc0cc4d75f62",
+                          "_key": "8b774ce2ef11",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-634daaa2c8ceab10fa93a044",
@@ -814,11 +747,11 @@
                   ],
                   "negative": [
                     {
-                      "_key": "ebd6f6f8ab29",
+                      "_key": "ce78d7f5d631",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "e8aa8b4afdca",
+                          "_key": "eb5fba508421",
                           "_type": "span",
                           "text": "Po czym poznać, że nie działa"
                         }
@@ -826,11 +759,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "81b12fb031f0",
+                      "_key": "655033b27575",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "c19127927ad3",
+                          "_key": "19490b3007cc",
                           "_type": "span",
                           "text": "Nowe szanse biorą się z tego, kto akurat zadzwonił, a lejek puchnie od starych leadów, których nikt nie zamyka."
                         }
@@ -840,11 +773,11 @@
                   ],
                   "positive": [
                     {
-                      "_key": "6452748a4355",
+                      "_key": "2966e13e56dc",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "8b774ce2ef11",
+                          "_key": "8f5146996af9",
                           "_type": "span",
                           "text": "Po czym poznać, że działa"
                         }
@@ -852,11 +785,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "9fc8869c5eea",
+                      "_key": "720bb65df6c0",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "e4bd987addfc",
+                          "_key": "a8bdbd029c30",
                           "_type": "span",
                           "text": "Wiadomo, ile szans musi wejść w tym miesiącu i skąd mają przyjść. Spadek w jednym źródle widać, zanim uderzy w wynik."
                         }
@@ -865,30 +798,19 @@
                     }
                   ],
                   "summary": "Skąd biorą się nowe szanse: prospecting, treści, analiza źródeł leadów i ile ich potrzeba, żeby dowieźć cel. Kończy się liczbą szans na miesiąc i podziałem na źródła, z których mają przyjść.",
+                  "tagline": "Od czego zacząć",
                   "title": "06 Popyt"
                 },
                 {
-                  "_key": "3fa0f2b2bcd5",
+                  "_key": "e4bd987addfc",
                   "_type": "tabItem",
                   "body": [
                     {
-                      "_key": "1eb5e2f80d6a",
+                      "_key": "53e5f4306004",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "bc376a8d1165",
-                          "_type": "span",
-                          "text": "Od czego zacząć"
-                        }
-                      ],
-                      "style": "normal"
-                    },
-                    {
-                      "_key": "07f7d3bd897a",
-                      "_type": "block",
-                      "children": [
-                        {
-                          "_key": "caf4dca540a3",
+                          "_key": "627ca68da77d",
                           "_type": "span",
                           "text": "Automatyzacje dla Pipedrive łączą CRM z pocztą, ofertami i realizacją. Wdrożenie AI zdejmuje z handlowców przepisywanie danych."
                         }
@@ -896,21 +818,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "8ff5569d2798",
+                      "_key": "c569657922e4",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "a50930021005",
+                          "_key": "3fa0f2b2bcd5",
                           "_type": "span",
                           "marks": [
-                            "f9ba352f5cdc"
+                            "ba1a783a519b"
                           ],
                           "text": "Zobacz automatyzacje"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "f9ba352f5cdc",
+                          "_key": "ba1a783a519b",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-64aae5153be5dab60a907e5c",
@@ -922,11 +844,11 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "01436402ef1b",
+                      "_key": "e82848474616",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "ee356b39a5dc",
+                          "_key": "1e0dc4e7ada2",
                           "_type": "span",
                           "text": "Bezpłatna konsultacja: przechodzimy przez narzędzia i pokazuję, gdzie jest miejsce na integracje."
                         }
@@ -934,21 +856,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "6123d5d1edd4",
+                      "_key": "8e57fb0a61f0",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "b88cf190290f",
+                          "_key": "c457277f6ff5",
                           "_type": "span",
                           "marks": [
-                            "b0df89d0f58a"
+                            "c96ab2600533"
                           ],
                           "text": "Umów bezpłatną konsultację"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "b0df89d0f58a",
+                          "_key": "c96ab2600533",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-634daaa2c8ceab10fa93a044",
@@ -962,11 +884,11 @@
                   ],
                   "negative": [
                     {
-                      "_key": "c457277f6ff5",
+                      "_key": "eeb325b4423c",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "9685ca697f4a",
+                          "_key": "cdb6ce124da9",
                           "_type": "span",
                           "text": "Po czym poznać, że nie działa"
                         }
@@ -974,11 +896,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "3615ed0f1acb",
+                      "_key": "e34105b8de11",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "1813f3f0fb77",
+                          "_key": "1c94258f8af3",
                           "_type": "span",
                           "text": "CRM jest archiwum korespondencji, a prawdziwy lejek stoi w Excelu. Te same dane przepisuje się do kilku systemów."
                         }
@@ -988,11 +910,11 @@
                   ],
                   "positive": [
                     {
-                      "_key": "6b97824b55b8",
+                      "_key": "8b94d2593c77",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "e82848474616",
+                          "_key": "ebd6f6f8ab29",
                           "_type": "span",
                           "text": "Po czym poznać, że działa"
                         }
@@ -1000,11 +922,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "3cb6fb7ca259",
+                      "_key": "db46093f188f",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "8e57fb0a61f0",
+                          "_key": "81b12fb031f0",
                           "_type": "span",
                           "text": "Zespół pracuje w narzędziu, a nie obok niego, w arkuszu i w skrzynce. Dane wpisuje się do systemu raz."
                         }
@@ -1013,30 +935,19 @@
                     }
                   ],
                   "summary": "Gdzie to wszystko żyje: konfiguracja CRM, automatyzacje, integracje, hurtownia danych, AI i transkrypcje rozmów. Na końcu jest skonfigurowane narzędzie, w którym dane wpisuje się raz.",
+                  "tagline": "Od czego zacząć",
                   "title": "07 Narzędzia i dane"
                 },
                 {
-                  "_key": "3afd4a6d9cd4",
+                  "_key": "615ad363198f",
                   "_type": "tabItem",
                   "body": [
                     {
-                      "_key": "7a60fbd55a1f",
+                      "_key": "d71b2c390dbf",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "606fa7a3220e",
-                          "_type": "span",
-                          "text": "Od czego zacząć"
-                        }
-                      ],
-                      "style": "normal"
-                    },
-                    {
-                      "_key": "27442bda120b",
-                      "_type": "block",
-                      "children": [
-                        {
-                          "_key": "fbdebf38f755",
+                          "_key": "01436402ef1b",
                           "_type": "span",
                           "text": "Bezpłatna konsultacja: rozmawiamy o tym, ile trwa dojście nowej osoby do pierwszej samodzielnej sprzedaży."
                         }
@@ -1044,21 +955,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "f5d7a8968d50",
+                      "_key": "edaa67aeebaf",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "bad1c968ae15",
+                          "_key": "b0df89d0f58a",
                           "_type": "span",
                           "marks": [
-                            "e75c17b0f3eb"
+                            "6123d5d1edd4"
                           ],
                           "text": "Umów bezpłatną konsultację"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "e75c17b0f3eb",
+                          "_key": "6123d5d1edd4",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-634daaa2c8ceab10fa93a044",
@@ -1072,11 +983,11 @@
                   ],
                   "negative": [
                     {
-                      "_key": "37d1105beb8b",
+                      "_key": "07f7d3bd897a",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "857c11f8ef53",
+                          "_key": "caf4dca540a3",
                           "_type": "span",
                           "text": "Po czym poznać, że nie działa"
                         }
@@ -1084,11 +995,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "7714c1421059",
+                      "_key": "8ff5569d2798",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "071ddf0f1ac3",
+                          "_key": "f9ba352f5cdc",
                           "_type": "span",
                           "text": "Wdrożenie polega na przyglądaniu się właścicielowi, a odejście handlowca zabiera historię klientów razem z nim."
                         }
@@ -1098,11 +1009,11 @@
                   ],
                   "positive": [
                     {
-                      "_key": "55f8526b25f6",
+                      "_key": "3615ed0f1acb",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "916ad4d2db67",
+                          "_key": "1813f3f0fb77",
                           "_type": "span",
                           "text": "Po czym poznać, że działa"
                         }
@@ -1110,11 +1021,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "16c7f4693945",
+                      "_key": "1eb5e2f80d6a",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "bd1489779688",
+                          "_key": "bc376a8d1165",
                           "_type": "span",
                           "text": "Nowy handlowiec sprzedaje samodzielnie po ustalonym czasie, nie po roku. Odejście jednej osoby nie zabiera wiedzy o klientach."
                         }
@@ -1123,30 +1034,19 @@
                     }
                   ],
                   "summary": "Jak zarządzać działem sprzedaży: struktura, rekrutacja, wdrożenie nowego handlowca, ocena i spotkania wewnętrzne.",
+                  "tagline": "Od czego zacząć",
                   "title": "08 Zespół"
                 },
                 {
-                  "_key": "4c32b230d61c",
+                  "_key": "c9db223d8c4c",
                   "_type": "tabItem",
                   "body": [
                     {
-                      "_key": "3888d58b9ab4",
+                      "_key": "7b3340ff851c",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "2ba1cb4b77c4",
-                          "_type": "span",
-                          "text": "Od czego zacząć"
-                        }
-                      ],
-                      "style": "normal"
-                    },
-                    {
-                      "_key": "b4f78eeab0a3",
-                      "_type": "block",
-                      "children": [
-                        {
-                          "_key": "d930008da153",
+                          "_key": "7a60fbd55a1f",
                           "_type": "span",
                           "text": "Raportowanie i prognoza powstają na danych z CRM. Gdy jedno źródło nie wystarcza, dokładamy hurtownię danych i integracje."
                         }
@@ -1154,21 +1054,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "cca51768f85f",
+                      "_key": "97b85d3c2439",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "b9e317359089",
+                          "_key": "fbdebf38f755",
                           "_type": "span",
                           "marks": [
-                            "2c8b3e0a4a42"
+                            "27442bda120b"
                           ],
                           "text": "Zobacz automatyzacje"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "2c8b3e0a4a42",
+                          "_key": "27442bda120b",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-64aae5153be5dab60a907e5c",
@@ -1180,11 +1080,11 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "90b7630ce6d3",
+                      "_key": "f5d7a8968d50",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "5f4c52cc2288",
+                          "_key": "e75c17b0f3eb",
                           "_type": "span",
                           "text": "Bezpłatna konsultacja: sprawdzamy, czy z CRM da się dziś wyciągnąć prognozę, której można ufać."
                         }
@@ -1192,21 +1092,21 @@
                       "style": "normal"
                     },
                     {
-                      "_key": "ceccde56a49a",
+                      "_key": "d7c33ae2190a",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "73dc3a948c3c",
+                          "_key": "6955ac2db2cb",
                           "_type": "span",
                           "marks": [
-                            "b36bf7f9ed4d"
+                            "4c32b230d61c"
                           ],
                           "text": "Umów bezpłatną konsultację"
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "b36bf7f9ed4d",
+                          "_key": "4c32b230d61c",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-634daaa2c8ceab10fa93a044",
@@ -1220,11 +1120,11 @@
                   ],
                   "negative": [
                     {
-                      "_key": "f167aa9e3230",
+                      "_key": "0f621f7a91a8",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "3c1d6fcf638d",
+                          "_key": "37d1105beb8b",
                           "_type": "span",
                           "text": "Po czym poznać, że nie działa"
                         }
@@ -1232,11 +1132,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "7a5f4b4689f1",
+                      "_key": "075507693cf6",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "4c0517dc955c",
+                          "_key": "7714c1421059",
                           "_type": "span",
                           "text": "Raport składa się ręcznie w Excelu, a prognoza to suma przeczuć. Przyczyn przegranych nikt nie zapisuje."
                         }
@@ -1246,11 +1146,11 @@
                   ],
                   "positive": [
                     {
-                      "_key": "6955ac2db2cb",
+                      "_key": "3afd4a6d9cd4",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "3f2dc69137e8",
+                          "_key": "55f8526b25f6",
                           "_type": "span",
                           "text": "Po czym poznać, że działa"
                         }
@@ -1258,11 +1158,11 @@
                       "style": "h4"
                     },
                     {
-                      "_key": "75c2d76a376f",
+                      "_key": "f5d2e79c2621",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "bade7adbeb9c",
+                          "_key": "16c7f4693945",
                           "_type": "span",
                           "text": "Prognoza na koniec miesiąca bierze się z systemu i zwykle się sprawdza. Wiadomo, dlaczego przegrane sprawy przepadły."
                         }
@@ -1271,20 +1171,21 @@
                     }
                   ],
                   "summary": "Czy to działa i co poprawiamy: metryki, raporty, prognoza, analiza wygranych i przegranych oraz stały cykl poprawek. Wychodzą z tego raporty i prognoza, którą da się weryfikować.",
+                  "tagline": "Od czego zacząć",
                   "title": "09 Pomiar i doskonalenie"
                 }
               ]
             },
             {
-              "_key": "c01aaae23862",
+              "_key": "f167aa9e3230",
               "_type": "feature",
               "body": [
                 {
-                  "_key": "683fc31b158a",
+                  "_key": "75c2d76a376f",
                   "_type": "block",
                   "children": [
                     {
-                      "_key": "dfc6c2afc446",
+                      "_key": "bade7adbeb9c",
                       "_type": "span",
                       "text": "Nie da się zaprojektować procesu bez wiedzy, kto kupuje, ani ustawić metryk bez procesu, który je generuje. Firma zgłasza się zwykle z objawem z góry, na przykład „nie wiem, ile zamkniemy w tym miesiącu”, a diagnoza prowadzi w dół, do przyczyny. Nikt nie wdraża dziewięciu warstw naraz: diagnoza wskazuje jedną z pięciu ścieżek, czyli porządek, przekaz, popyt, portfel albo zespół."
                     }
@@ -1309,16 +1210,16 @@
               "tagline": "Kolejność"
             },
             {
-              "_key": "039b327e00e7",
+              "_key": "d930008da153",
               "_type": "contentSection",
               "heading": "Czym Sales Atlas System nie jest",
               "intro": [
                 {
-                  "_key": "bff2d79c4f20",
+                  "_key": "3c1d6fcf638d",
                   "_type": "block",
                   "children": [
                     {
-                      "_key": "c24ba60524d8",
+                      "_key": "ae6313cda6d4",
                       "_type": "span",
                       "text": "Kategoria „system sprzedaży” jest zatłoczona i łatwo pomylić go z czymś innym. Sześć rzeczy, którymi Sales Atlas System nie jest. Żeby było wiadomo, czego się po nim nie spodziewać."
                     }
@@ -1328,37 +1229,37 @@
               ],
               "items": [
                 {
-                  "_key": "5e791dfdd6a0",
+                  "_key": "4c0517dc955c",
                   "_type": "contentItem",
                   "icon": "close",
                   "title": "Nie jest metodyką rozmowy handlowej. SPIN, Challenger i SPICED opisują samą rozmowę w szczegółowy sposób."
                 },
                 {
-                  "_key": "a9f428a682d4",
+                  "_key": "d86d76c554c3",
                   "_type": "contentItem",
                   "icon": "close",
                   "title": "Nie jest zestawem kryteriów kwalifikacji. BANT czy MEDDIC pokrywają jeden element czwartej warstwy, nie cały system."
                 },
                 {
-                  "_key": "0e662e0bfa51",
+                  "_key": "3888d58b9ab4",
                   "_type": "contentItem",
                   "icon": "close",
                   "title": "Nie jest szkoleniem sprzedażowym. Nie uczy domykania ani obrony ceny."
                 },
                 {
-                  "_key": "a0819af5a6f4",
+                  "_key": "2ba1cb4b77c4",
                   "_type": "contentItem",
                   "icon": "close",
                   "title": "Nie jest oprogramowaniem. Instaluje się w narzędziach, które już masz albo właśnie wdrażasz."
                 },
                 {
-                  "_key": "1b4cb34ed821",
+                  "_key": "5c71c38fcdcb",
                   "_type": "contentItem",
                   "icon": "close",
                   "title": "Nie jest systemem dla firm powyżej 250 osób. Tam lepiej sprawdzają się metodyki zbudowane wokół managera sprzedaży."
                 },
                 {
-                  "_key": "c44728c937a0",
+                  "_key": "b4f78eeab0a3",
                   "_type": "contentItem",
                   "icon": "close",
                   "title": "Nie jest osobnym produktem, a frameworkiem do wprowadzania zmian do sprzedaży w uporządkowany sposób."
@@ -1368,39 +1269,16 @@
               "tagline": "Granice"
             },
             {
-              "_key": "82d69cb88c11",
-              "_type": "richText",
-              "body": [
+              "_key": "c24ba60524d8",
+              "_type": "contentSection",
+              "heading": "Sprawdź, czy masz już system",
+              "intro": [
                 {
-                  "_key": "b56d9f17afbe",
+                  "_key": "e8aeab0c028f",
                   "_type": "block",
                   "children": [
                     {
-                      "_key": "c2819cce1093",
-                      "_type": "span",
-                      "text": "Test"
-                    }
-                  ],
-                  "style": "normal"
-                },
-                {
-                  "_key": "06868e6a18e4",
-                  "_type": "block",
-                  "children": [
-                    {
-                      "_key": "06bb276f7009",
-                      "_type": "span",
-                      "text": "Sprawdź, czy masz już system"
-                    }
-                  ],
-                  "style": "h2"
-                },
-                {
-                  "_key": "e85a20305b33",
-                  "_type": "block",
-                  "children": [
-                    {
-                      "_key": "bb798d471f59",
+                      "_key": "cca51768f85f",
                       "_type": "span",
                       "text": "Potrzebujesz 20 minut, bez rozmowy ze mną i bez kupowania czegokolwiek. Test odpowiada na jedno pytanie: czy sprzedaż w firmie opiera się na procesie, czy na pamięci konkretnych ludzi."
                     }
@@ -1408,11 +1286,11 @@
                   "style": "normal"
                 },
                 {
-                  "_key": "98d2ad294cf7",
+                  "_key": "b9e317359089",
                   "_type": "block",
                   "children": [
                     {
-                      "_key": "82c2b6178fb0",
+                      "_key": "534219da66ad",
                       "_type": "span",
                       "text": "Weź 10 ostatnich leadów, które trafiły do firmy. Dziesięć po kolei, nie dziesięć wybranych."
                     }
@@ -1422,11 +1300,11 @@
                   "style": "normal"
                 },
                 {
-                  "_key": "ae85d19bfae9",
+                  "_key": "5f4c52cc2288",
                   "_type": "block",
                   "children": [
                     {
-                      "_key": "755898a1eb1c",
+                      "_key": "6edf45372296",
                       "_type": "span",
                       "text": "Odtwórz z systemu, co się z każdym stało: kto go dostał, kiedy odezwał się pierwszy raz, czym się to skończyło i dlaczego."
                     }
@@ -1436,11 +1314,11 @@
                   "style": "normal"
                 },
                 {
-                  "_key": "f3269b80973b",
+                  "_key": "b36bf7f9ed4d",
                   "_type": "block",
                   "children": [
                     {
-                      "_key": "1bb07dd0f1bd",
+                      "_key": "73dc3a948c3c",
                       "_type": "span",
                       "text": "Zrób to bez pytania kogokolwiek z zespołu."
                     }
@@ -1450,11 +1328,11 @@
                   "style": "normal"
                 },
                 {
-                  "_key": "c6d62d6de809",
+                  "_key": "283de327cdd6",
                   "_type": "block",
                   "children": [
                     {
-                      "_key": "c5638b14536b",
+                      "_key": "683fc31b158a",
                       "_type": "span",
                       "text": "Jeżeli trzeba było kogoś dopytać choćby raz, odpowiedź brzmi: systemu nie ma, jest pamięć konkretnych osób. To nie jest ocena zespołu, tylko wynik szybkiej diagnozy i najczęstszy powód, żeby zacząć od warstwy pierwszej, a nie od konfiguracji narzędzia."
                     }
@@ -1462,30 +1340,32 @@
                   "style": "normal"
                 },
                 {
-                  "_key": "cc8637901055",
+                  "_key": "5e257f616732",
                   "_type": "block",
                   "children": [
                     {
-                      "_key": "2a18e227be8e",
+                      "_key": "c01aaae23862",
                       "_type": "span",
                       "text": "Drugi test, na jedno pytanie: jak wygląda czyszczenie lejka sprzedaży? Odpowiedź „czyścimy go na bieżąco” znaczy w praktyce, że nie czyści go nikt: nie ma definicji, nie ma terminu i nie ma odpowiedzialnego. Wtedy każda liczba z CRM jest niepewna, zanim cokolwiek policzymy."
                     }
                   ],
                   "style": "normal"
                 }
-              ]
+              ],
+              "layout": "list",
+              "tagline": "Test"
             },
             {
-              "_key": "93796594a838",
+              "_key": "1b4cb34ed821",
               "_type": "contentSection",
               "heading": "Skąd wziął się system sprzedaży",
               "intro": [
                 {
-                  "_key": "879d80e3160c",
+                  "_key": "852bd864ec4e",
                   "_type": "block",
                   "children": [
                     {
-                      "_key": "857544e307c0",
+                      "_key": "5e791dfdd6a0",
                       "_type": "span",
                       "text": "Sales Atlas System jest wynikiem zebranych doświadczeń z portfela wdrożeń systemów B2B, a nie doświadczenia na jednym stanowisku. Stoi za nim współpraca z ponad 50 firmami B2B i blisko cztery tysiące zapisanych obserwacji z prawdziwych rozmów wdrożeniowych. To, co klienci mówili o swojej sprzedaży, zanim cokolwiek w niej zmieniłem. Dlatego system opisuje to, co naprawdę się psuje, a nie to, co ładnie wygląda na schemacie."
                     }
@@ -1495,13 +1375,13 @@
               ],
               "items": [
                 {
-                  "_key": "9acd990548bd",
+                  "_key": "0e662e0bfa51",
                   "_type": "contentItem",
                   "icon": "check",
                   "title": "Ponad 50 wdrożeń w firmach B2B"
                 },
                 {
-                  "_key": "2bf86d9a8214",
+                  "_key": "a0819af5a6f4",
                   "_type": "contentItem",
                   "icon": "check",
                   "title": "Blisko 4 000 obserwacji z rozmów"
@@ -1511,21 +1391,21 @@
               "tagline": "Pochodzenie"
             },
             {
-              "_key": "145b03252197",
+              "_key": "879d80e3160c",
               "_type": "faq",
               "emitSchema": true,
               "heading": "Najczęściej zadawane pytania",
               "items": [
                 {
-                  "_key": "e2182fe0ba57",
+                  "_key": "c44728c937a0",
                   "_type": "faqItem",
                   "answer": [
                     {
-                      "_key": "37556e8d5144",
+                      "_key": "039b327e00e7",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "b486d3e9b9ff",
+                          "_key": "b56d9f17afbe",
                           "_type": "span",
                           "text": "Spisanym opisem tego, jak ma działać sprzedaż w firmie B2B, która sprzedaje na spotkaniach: dziewięć warstw, od diagnozy, przez proces i narzędzia, po pomiar. Powstał z wdrożeń w ponad 50 firmach, więc opisuje to, co naprawdę się psuje, a nie to, co ładnie wygląda na schemacie."
                         }
@@ -1536,15 +1416,15 @@
                   "question": "Czym jest Sales Atlas System?"
                 },
                 {
-                  "_key": "7e53b28dd59e",
+                  "_key": "d894ff4f099d",
                   "_type": "faqItem",
                   "answer": [
                     {
-                      "_key": "c8e9d74deb42",
+                      "_key": "06868e6a18e4",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "c26e1fc4a6a6",
+                          "_key": "06bb276f7009",
                           "_type": "span",
                           "text": "Nie. To nie jest osobny produkt i nie ma własnej ceny. Fragmenty dostajesz w trakcie współpracy, przy tych warstwach, które akurat robimy."
                         }
@@ -1555,15 +1435,15 @@
                   "question": "Czy mogę kupić sam system?"
                 },
                 {
-                  "_key": "900a74dc8d7a",
+                  "_key": "e85a20305b33",
                   "_type": "faqItem",
                   "answer": [
                     {
-                      "_key": "5f1e65ade693",
+                      "_key": "bb798d471f59",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "a1a3e3824e08",
+                          "_key": "f8a405469056",
                           "_type": "span",
                           "text": "Dla firm B2B, które sprzedają na spotkaniach: sprzedaje właściciel albo właściciel i kilku handlowców. Powyżej 250 osób lepiej sprawdzają się metodyki zbudowane wokół managera sprzedaży."
                         }
@@ -1574,15 +1454,15 @@
                   "question": "Dla jakich firm to jest?"
                 },
                 {
-                  "_key": "e89227972a3b",
+                  "_key": "82c2b6178fb0",
                   "_type": "faqItem",
                   "answer": [
                     {
-                      "_key": "edcb6b1c3c50",
+                      "_key": "841903bf4bd8",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "e2f2bfc356a8",
+                          "_key": "ae85d19bfae9",
                           "_type": "span",
                           "text": "Nie. SPIN, Challenger czy SPICED opisują samą rozmowę i robią to w szczegółowy sposób. Ten system mówi, kiedy i po co ta rozmowa się odbywa oraz co po niej zostaje w danych."
                         }
@@ -1593,15 +1473,15 @@
                   "question": "Czy to kolejna metodyka rozmowy handlowej?"
                 },
                 {
-                  "_key": "768d8d53997b",
+                  "_key": "372f5a77be82",
                   "_type": "faqItem",
                   "answer": [
                     {
-                      "_key": "eaa332c78470",
+                      "_key": "f3269b80973b",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "5f7f8e0931ee",
+                          "_key": "1bb07dd0f1bd",
                           "_type": "span",
                           "text": "Od diagnozy, czyli od pierwszej warstwy. Bez niej wybór ścieżki jest zgadywaniem, a najczęstszy błąd to wejście od razu od konfiguracji narzędzia."
                         }
@@ -1612,35 +1492,35 @@
                   "question": "Od czego się zaczyna?"
                 },
                 {
-                  "_key": "a21ee5cfe7a4",
+                  "_key": "c6d62d6de809",
                   "_type": "faqItem",
                   "answer": [
                     {
-                      "_key": "131ac8a3f1d7",
+                      "_key": "c5638b14536b",
                       "_type": "block",
                       "children": [
                         {
-                          "_key": "6373dd589a53",
+                          "_key": "97f25b81cb38",
                           "_type": "span",
                           "text": "Nie. Jeżeli CRM-a nie masz, siódma warstwa jest po prostu jednym z kroków, a nie punktem wyjścia. Jeżeli masz, zwykle zaczynamy od tego, co już w nim siedzi. Pytania najlepiej na maila, adres jest w zakładce "
                         },
                         {
-                          "_key": "ab3840fac4b7",
+                          "_key": "2a18e227be8e",
                           "_type": "span",
                           "marks": [
-                            "0c655b622511"
+                            "cc8637901055"
                           ],
                           "text": "kontakt"
                         },
                         {
-                          "_key": "21765590cc7e",
+                          "_key": "47d5a7481ca8",
                           "_type": "span",
                           "text": "."
                         }
                       ],
                       "markDefs": [
                         {
-                          "_key": "0c655b622511",
+                          "_key": "cc8637901055",
                           "_type": "internalLink",
                           "reference": {
                             "_ref": "page-634daaa2c8ceab10fa93a044",

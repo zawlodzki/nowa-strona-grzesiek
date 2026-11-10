@@ -6,7 +6,7 @@ $ sanity schema extract --path schema.json --force && sanity typegen generate
 - Loading schema…
 ✔ Schema loaded from ./schema.json
 - Generating schema types…
-✔ Successfully generated types to ./sanity.types.ts in 444ms
+✔ Successfully generated types to ./sanity.types.ts in 428ms
   └─ 0 queries and 63 schema types
   └─ found queries in 0 files after evaluating 137 files
   └─ formatted the generated code with prettier

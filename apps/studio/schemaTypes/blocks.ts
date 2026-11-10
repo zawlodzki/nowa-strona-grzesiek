@@ -40,7 +40,7 @@ export const contentSection = defineType({
   fields: [taglineField, headingField,
     defineField({name: 'intro', type: 'portableText'}),
     defineField({name: 'layout', type: 'string', options: {list: ['list', 'cards', 'twoColumn', 'checklist']}, initialValue: 'list', validation: (rule) => rule.required().custom((value) => value === undefined || ['list', 'cards', 'twoColumn', 'checklist'].includes(value) || 'Wybierz dozwoloną wartość.')}),
-    defineField({name: 'items', type: 'array', validation: (rule) => rule.required().min(1), of: [defineArrayMember({name: 'contentItem', type: 'object', fields: [
+    defineField({name: 'items', type: 'array', of: [defineArrayMember({name: 'contentItem', type: 'object', fields: [
       titleField, defineField({name: 'text', type: 'text', validation: (rule) => rule.required()}),
       defineField({name: 'icon', type: 'string'}), defineField({name: 'link', type: 'link'}),
     ]})]}),
@@ -51,7 +51,7 @@ export const tabs = defineType({
   name: 'tabs', title: 'Zakładki', type: 'object',
   fields: [taglineField, defineField({name: 'heading', type: 'string'}), defineField({name: 'intro', type: 'portableText'}),
     defineField({name: 'items', type: 'array', validation: (rule) => rule.required().min(1), of: [defineArrayMember({name: 'tabItem', type: 'object', fields: [
-      titleField, defineField({name: 'summary', type: 'text'}),
+      titleField, defineField({name: 'summary', type: 'text'}), taglineField,
       defineField({name: 'positive', type: 'portableText'}), defineField({name: 'negative', type: 'portableText'}),
       defineField({name: 'body', type: 'portableText', validation: (rule) => rule.required().min(1)}),
     ]})]}),

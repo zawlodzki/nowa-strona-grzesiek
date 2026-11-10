@@ -21,3 +21,5 @@ Written only by the coordinator. Newest at the bottom.
 | 15 | 2026-11-09 | Blocks gain fields for live text the page import dropped: `logoStrip.tagline` and `intro`; `contactForm.intro` and, for the `full` variant, `calendar`, `consultation` and `channels` (groups of social, e-mail, phone, Signal and WhatsApp links with notes). New `postList` block lists the latest N posts of one `kind`; it has no `match` rule because live renders it inside a `blog-article` section, so T20's importer splits it off. User decision of 2026-11-09 to restore all dropped text | T30 | C, D, M, T20 |
 
 | 2026-11-10 | T32 | Add optional hero badgeImage/badgeSize and reusable tabs. Plain ordered prose uses existing richText to preserve DOM order without another field. State cards use nearest existing tokens; palette is outside owns. |
+
+| 16 | 2026-11-10 | T32 review: tab items gain optional tagline label; contentSection items become optional so ordered prose stays in intro with separate section heading/tagline. Catalog uses the identical ContentSection data path. | T32 | C, D, M |

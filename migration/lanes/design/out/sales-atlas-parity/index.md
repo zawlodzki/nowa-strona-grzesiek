@@ -10,9 +10,9 @@ All local captures use the real local Worker on port 8791. Proposed content is r
 | Nine tabs, initial | Tabs.astro; schemaTypes/blocks.ts; Sections.astro; importer pages.py | [compare](compare-tabs-default-w1280.png) | [compare](compare-tabs-default-w375.png) |
 | Tab 04 by click | Tabs.astro | [compare](compare-tabs-click04-w1280.png) | [compare](compare-tabs-click04-w375.png) |
 | Tab 04 by keyboard | Tabs.astro | [compare](compare-tabs-keyboard04-w1280.png) | [compare](compare-tabs-keyboard04-w375.png) |
-| Ordered test between paragraphs | importer pages.py → existing richText; ContentSection catalog intro slot | [compare](compare-test-w1280.png) | [compare](compare-test-w375.png) |
+| Ordered test between paragraphs | importer pages.py → ContentSection.astro (same proposed document in fixture and route) | [compare](compare-test-w1280.png) | [compare](compare-test-w375.png) |
 
-Catalog anchors: `#t32-hero`, `#t32-tabs`, `#t32-test`. Fixture: `apps/web/src/pages/_ds/sales-atlas.json`, from `proposed.ndjson`. The test fixture uses the real ContentSection with its existing intro slot to render the same Portable Text stream; the imported real route will use the existing RichText block with that stream.
+Catalog anchors: `#t32-hero`, `#t32-tabs`, `#t32-test`. Fixture: `apps/web/src/pages/_ds/sales-atlas.json`, from `proposed.ndjson`. The test fixture passes the proposed contentSection directly to ContentSection.astro, exactly as Sections.astro will for the real route: tagline and heading fields plus intro containing prose, the numbered list and closing paragraphs. No slot override is used.
 
 ## Real routes and accessibility
 
@@ -20,7 +20,7 @@ Local hero captures `local-route-{sales-atlas-system,szkolenie-i-wdrozenie-piped
 
 `/sales-atlas-system` still renders the old flattened sections until the reviewed content patch is applied. Catalog proof demonstrates the proposed layout without a data-loading switch.
 
-[browser-checks.json](browser-checks.json) records nine tab roles, selected/tabindex after ArrowDown, Home and End, labelled panels, one visible panel, tab 04 reached by keyboard on live and local, reduced-motion transition 0s/animation none, all nine panels visible with JavaScript disabled, and scrollWidth == 375 for the catalog and all three real routes. `capture.mjs` reproduces the checks using local headless Chromium/Playwright. Cookies were dismissed in the browser; no consent code changed. Sticky navigation is hidden only by screenshot styling for section crops.
+[browser-checks.json](browser-checks.json) records nine tab roles, selected/tabindex after ArrowDown, Home and End, labelled panels, one visible panel, tab 04 reached by keyboard on live and local, reduced-motion transition 0s/animation none, all nine panels and summaries visible with JavaScript disabled, one visible summary at all widths with JavaScript enabled, heading-xs card heading sizes and typed tagline chips, and scrollWidth == 375 for the catalog and all three real routes. `capture.mjs` reproduces the checks using local headless Chromium/Playwright. Cookies were dismissed in the browser; no consent code changed. Sticky navigation is hidden only by screenshot styling for section crops.
 
 ## Import/data
 
@@ -44,11 +44,13 @@ Coordinator approved `verify-schema.mjs` in owns on main (0e9aaa9). Its contract
 
 Coordinator replaced the overlay approach with catalog fixtures; client.ts was restored exactly to T31 and the overlay test deleted. Coordinator later confirmed T31 merged and requested merging main plus a normal PR. T32 stays todo pending T31 board mark-done and coordinator claim.
 
-Existing T31 design choices remain: copy precedes the larger portrait on mobile and text is left aligned; requested consultation CTA is kept. Badge placement/sizing follows live (standard 130/60px, wide Salesforce 200/70px). Tabs use existing nearest state tokens because adding palette tokens is outside owns; all pane summaries remain readable, mobile inactive summaries collapse like live. No fade is authored, including reduced motion. Body label uses ordinary Portable Text styling. These typography/surface differences are visible in comparisons; content, pane selection and ordered prose are preserved.
+Existing T31 design choices remain: copy precedes the larger portrait on mobile and text is left aligned; requested consultation CTA is kept. Badge placement/sizing follows live (standard 130/60px, wide Salesforce 200/70px). At all widths only the selected tab summary is expanded under JavaScript; all summaries stay in the DOM and remain readable with JavaScript off. Selection uses secondary-10 and a left accent bar; card headings use heading-xs; the imported tab-item tagline renders as a neutral chip. No fade is authored, including reduced motion. Test tagline/heading use the shared section styles; its body is rendered identically in catalog and the proposed real route.
+
+PR #52 review corrections: refreshed all eight affected tabs/test comparisons at 1280/375, updated proposed documents/sections patch/import diff, and reran browser and build/schema/source/importer checks. Sanity document validation is still skipped per coordinator (login required).
 
 ## Studio content steps and prepared production patch
 
 1. PL page `/sales-atlas-system` → hero → badgeImage: upload `https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a7f87f4dd9e040eb3a74457_sales-atlas-system-pion.svg`; alt `Sales Atlas System badge`; badgeSize `standard`.
 2. PL page `/szkolenie-i-wdrozenie-salesforce` → hero → badgeImage: upload `https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a4fd5d9fc248b2db6691611_Salesforce.com_logo.svg.webp`; alt `Salesforce logo`; badgeSize `wide`.
-3. Sales Atlas sections: replace flattened nine-layer contentSection with the `tabs` object in the proposed page, including all nine titles/summaries, positive/negative cards, body and all 15 inline links. Replace the test contentSection with the proposed richText stream: tagline, heading, intro, three numbered items, two closing paragraphs.
+3. Sales Atlas sections: replace flattened nine-layer contentSection with the `tabs` object in the proposed page, including all nine titles/summaries, positive/negative cards, body and all 15 inline links. Update the test contentSection: retain tagline `Test` and its heading, and replace intro with the proposed Portable Text stream (intro paragraph, three numbered items, two closing paragraphs); omit items. For each tab item set its tagline field from the proposed document (the “Od czego zacząć” chip); keep it outside body text.
 4. Review `production-patch.json` against current published sections. This is the prepared exact mutation body if a later production write is explicitly approved; no mutation has been submitted. Keep the hero CTA unchanged (fallback remains).

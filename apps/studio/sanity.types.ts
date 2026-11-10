@@ -353,6 +353,7 @@ export type Tabs = {
   items?: Array<{
     title?: string;
     summary?: string;
+    tagline?: string;
     positive?: PortableText;
     negative?: PortableText;
     body?: PortableText;

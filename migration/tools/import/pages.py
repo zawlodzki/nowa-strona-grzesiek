@@ -386,7 +386,8 @@ def content_section(page, node, component):
             positive = first(pane, has_class('stan-mocny'))
             negative = first(pane, has_class('stan-slaby'))
             cards = [c for c in (positive, negative) if c is not None]
-            body = [n for n in all_of(pane, lambda n: n.tag in ('p', 'h3', 'h4', 'a') or 'tagline' in n.classes()) if not any(inside(n, c) for c in cards) and not (n.tag == 'a' and any(inside(n, p) for p in all_of(pane, tag_in('p'))))]
+            label = first(pane, has_class('tagline'))
+            body = [n for n in all_of(pane, lambda n: n.tag in ('p', 'h3', 'h4', 'a') or 'tagline' in n.classes()) if n is not label and not any(inside(n, c) for c in cards) and not (n.tag == 'a' and any(inside(n, p) for p in all_of(pane, tag_in('p'))))]
             for i, n in enumerate(body):
                 if n.tag == 'a':
                     wrapper = Node('p', {})
@@ -394,6 +395,7 @@ def content_section(page, node, component):
                     body[i] = wrapper
             entries.append({'_type': 'tabItem', '_key': page.key(), 'title': page.string(first(link, tag_in('h3', 'h4'))),
                             'summary': '\n\n'.join(page.string(p) for p in paragraphs(link)),
+                            'tagline': page.string(label),
                             'positive': page.blocks(all_of(positive, tag_in('h4', 'p'))) if positive is not None else None,
                             'negative': page.blocks(all_of(negative, tag_in('h4', 'p'))) if negative is not None else None,
                             'body': page.blocks(body)})
@@ -402,9 +404,9 @@ def content_section(page, node, component):
                 'intro': page.blocks([n for n in outside if n.tag == 'p']), 'items': entries}
     ordered = all_of(node, tag_in('ol'))
     if ordered and all(not li.find('h3') and not li.find('h4') for ol in ordered for li in all_of(ol, tag_in('li'))):
-        # One ordered stream keeps closing paragraphs after the list. No new schema field needed.
+        # Keep section metadata and one ordered prose stream using the shared content section.
         stream = [n for n in all_of(node, lambda n: n.tag in ('p', 'ol')) if not any(n is not ol and inside(n, ol) for ol in ordered)]
-        return {'_type': 'richText', 'body': page.blocks(([first(title_box, has_class('tagline'))] if first(title_box, has_class('tagline')) is not None else []) + ([head] if head is not None else []) + stream)}
+        return {'tagline': tagline, 'heading': heading, 'layout': 'list', 'intro': page.blocks(stream)}
     found, layout = items_of(page, node, [])
     links = [a for a in all_of(node, lambda n: n.tag == 'a' and 'inline-link' in n.classes()) if not any(inside(a, f) for f in found)]
     intro_nodes = [p for p in paragraphs(node, exclude=found) if p is not head]

@@ -1,6 +1,15 @@
 [
   {
     "width": 1280,
+    "visibleSummaries": 1,
+    "typography": {
+      "headingSize": "21.8141px",
+      "expectedSize": "21.8141px",
+      "tagline": "Od czego zacząć"
+    }
+  },
+  {
+    "width": 1280,
     "states": [
       {
         "key": "ArrowDown",
@@ -9,55 +18,55 @@
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-0"
+            "controls": "tabs-75b27b3ccc48-panel-0"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-1"
+            "controls": "tabs-75b27b3ccc48-panel-1"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-2"
+            "controls": "tabs-75b27b3ccc48-panel-2"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-3"
+            "controls": "tabs-75b27b3ccc48-panel-3"
           },
           {
             "role": "tab",
             "selected": "true",
             "tabindex": 0,
-            "controls": "tabs-283de327cdd6-panel-4"
+            "controls": "tabs-75b27b3ccc48-panel-4"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-5"
+            "controls": "tabs-75b27b3ccc48-panel-5"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-6"
+            "controls": "tabs-75b27b3ccc48-panel-6"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-7"
+            "controls": "tabs-75b27b3ccc48-panel-7"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-8"
+            "controls": "tabs-75b27b3ccc48-panel-8"
           }
         ]
       },
@@ -68,55 +77,55 @@
             "role": "tab",
             "selected": "true",
             "tabindex": 0,
-            "controls": "tabs-283de327cdd6-panel-0"
+            "controls": "tabs-75b27b3ccc48-panel-0"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-1"
+            "controls": "tabs-75b27b3ccc48-panel-1"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-2"
+            "controls": "tabs-75b27b3ccc48-panel-2"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-3"
+            "controls": "tabs-75b27b3ccc48-panel-3"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-4"
+            "controls": "tabs-75b27b3ccc48-panel-4"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-5"
+            "controls": "tabs-75b27b3ccc48-panel-5"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-6"
+            "controls": "tabs-75b27b3ccc48-panel-6"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-7"
+            "controls": "tabs-75b27b3ccc48-panel-7"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-8"
+            "controls": "tabs-75b27b3ccc48-panel-8"
           }
         ]
       },
@@ -127,103 +136,103 @@
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-0"
+            "controls": "tabs-75b27b3ccc48-panel-0"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-1"
+            "controls": "tabs-75b27b3ccc48-panel-1"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-2"
+            "controls": "tabs-75b27b3ccc48-panel-2"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-3"
+            "controls": "tabs-75b27b3ccc48-panel-3"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-4"
+            "controls": "tabs-75b27b3ccc48-panel-4"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-5"
+            "controls": "tabs-75b27b3ccc48-panel-5"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-6"
+            "controls": "tabs-75b27b3ccc48-panel-6"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-7"
+            "controls": "tabs-75b27b3ccc48-panel-7"
           },
           {
             "role": "tab",
             "selected": "true",
             "tabindex": 0,
-            "controls": "tabs-283de327cdd6-panel-8"
+            "controls": "tabs-75b27b3ccc48-panel-8"
           }
         ]
       }
     ],
     "panels": [
       {
-        "id": "tabs-283de327cdd6-panel-0",
-        "labelledby": "tabs-283de327cdd6-tab-0",
+        "id": "tabs-75b27b3ccc48-panel-0",
+        "labelledby": "tabs-75b27b3ccc48-tab-0",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-1",
-        "labelledby": "tabs-283de327cdd6-tab-1",
+        "id": "tabs-75b27b3ccc48-panel-1",
+        "labelledby": "tabs-75b27b3ccc48-tab-1",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-2",
-        "labelledby": "tabs-283de327cdd6-tab-2",
+        "id": "tabs-75b27b3ccc48-panel-2",
+        "labelledby": "tabs-75b27b3ccc48-tab-2",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-3",
-        "labelledby": "tabs-283de327cdd6-tab-3",
+        "id": "tabs-75b27b3ccc48-panel-3",
+        "labelledby": "tabs-75b27b3ccc48-tab-3",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-4",
-        "labelledby": "tabs-283de327cdd6-tab-4",
+        "id": "tabs-75b27b3ccc48-panel-4",
+        "labelledby": "tabs-75b27b3ccc48-tab-4",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-5",
-        "labelledby": "tabs-283de327cdd6-tab-5",
+        "id": "tabs-75b27b3ccc48-panel-5",
+        "labelledby": "tabs-75b27b3ccc48-tab-5",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-6",
-        "labelledby": "tabs-283de327cdd6-tab-6",
+        "id": "tabs-75b27b3ccc48-panel-6",
+        "labelledby": "tabs-75b27b3ccc48-tab-6",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-7",
-        "labelledby": "tabs-283de327cdd6-tab-7",
+        "id": "tabs-75b27b3ccc48-panel-7",
+        "labelledby": "tabs-75b27b3ccc48-tab-7",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-8",
-        "labelledby": "tabs-283de327cdd6-tab-8",
+        "id": "tabs-75b27b3ccc48-panel-8",
+        "labelledby": "tabs-75b27b3ccc48-tab-8",
         "hidden": false
       }
     ],
@@ -296,6 +305,15 @@
   },
   {
     "width": 375,
+    "visibleSummaries": 1,
+    "typography": {
+      "headingSize": "18px",
+      "expectedSize": "18px",
+      "tagline": "Od czego zacząć"
+    }
+  },
+  {
+    "width": 375,
     "states": [
       {
         "key": "ArrowDown",
@@ -304,55 +322,55 @@
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-0"
+            "controls": "tabs-75b27b3ccc48-panel-0"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-1"
+            "controls": "tabs-75b27b3ccc48-panel-1"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-2"
+            "controls": "tabs-75b27b3ccc48-panel-2"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-3"
+            "controls": "tabs-75b27b3ccc48-panel-3"
           },
           {
             "role": "tab",
             "selected": "true",
             "tabindex": 0,
-            "controls": "tabs-283de327cdd6-panel-4"
+            "controls": "tabs-75b27b3ccc48-panel-4"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-5"
+            "controls": "tabs-75b27b3ccc48-panel-5"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-6"
+            "controls": "tabs-75b27b3ccc48-panel-6"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-7"
+            "controls": "tabs-75b27b3ccc48-panel-7"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-8"
+            "controls": "tabs-75b27b3ccc48-panel-8"
           }
         ]
       },
@@ -363,55 +381,55 @@
             "role": "tab",
             "selected": "true",
             "tabindex": 0,
-            "controls": "tabs-283de327cdd6-panel-0"
+            "controls": "tabs-75b27b3ccc48-panel-0"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-1"
+            "controls": "tabs-75b27b3ccc48-panel-1"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-2"
+            "controls": "tabs-75b27b3ccc48-panel-2"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-3"
+            "controls": "tabs-75b27b3ccc48-panel-3"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-4"
+            "controls": "tabs-75b27b3ccc48-panel-4"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-5"
+            "controls": "tabs-75b27b3ccc48-panel-5"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-6"
+            "controls": "tabs-75b27b3ccc48-panel-6"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-7"
+            "controls": "tabs-75b27b3ccc48-panel-7"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-8"
+            "controls": "tabs-75b27b3ccc48-panel-8"
           }
         ]
       },
@@ -422,103 +440,103 @@
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-0"
+            "controls": "tabs-75b27b3ccc48-panel-0"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-1"
+            "controls": "tabs-75b27b3ccc48-panel-1"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-2"
+            "controls": "tabs-75b27b3ccc48-panel-2"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-3"
+            "controls": "tabs-75b27b3ccc48-panel-3"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-4"
+            "controls": "tabs-75b27b3ccc48-panel-4"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-5"
+            "controls": "tabs-75b27b3ccc48-panel-5"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-6"
+            "controls": "tabs-75b27b3ccc48-panel-6"
           },
           {
             "role": "tab",
             "selected": "false",
             "tabindex": -1,
-            "controls": "tabs-283de327cdd6-panel-7"
+            "controls": "tabs-75b27b3ccc48-panel-7"
           },
           {
             "role": "tab",
             "selected": "true",
             "tabindex": 0,
-            "controls": "tabs-283de327cdd6-panel-8"
+            "controls": "tabs-75b27b3ccc48-panel-8"
           }
         ]
       }
     ],
     "panels": [
       {
-        "id": "tabs-283de327cdd6-panel-0",
-        "labelledby": "tabs-283de327cdd6-tab-0",
+        "id": "tabs-75b27b3ccc48-panel-0",
+        "labelledby": "tabs-75b27b3ccc48-tab-0",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-1",
-        "labelledby": "tabs-283de327cdd6-tab-1",
+        "id": "tabs-75b27b3ccc48-panel-1",
+        "labelledby": "tabs-75b27b3ccc48-tab-1",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-2",
-        "labelledby": "tabs-283de327cdd6-tab-2",
+        "id": "tabs-75b27b3ccc48-panel-2",
+        "labelledby": "tabs-75b27b3ccc48-tab-2",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-3",
-        "labelledby": "tabs-283de327cdd6-tab-3",
+        "id": "tabs-75b27b3ccc48-panel-3",
+        "labelledby": "tabs-75b27b3ccc48-tab-3",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-4",
-        "labelledby": "tabs-283de327cdd6-tab-4",
+        "id": "tabs-75b27b3ccc48-panel-4",
+        "labelledby": "tabs-75b27b3ccc48-tab-4",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-5",
-        "labelledby": "tabs-283de327cdd6-tab-5",
+        "id": "tabs-75b27b3ccc48-panel-5",
+        "labelledby": "tabs-75b27b3ccc48-tab-5",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-6",
-        "labelledby": "tabs-283de327cdd6-tab-6",
+        "id": "tabs-75b27b3ccc48-panel-6",
+        "labelledby": "tabs-75b27b3ccc48-tab-6",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-7",
-        "labelledby": "tabs-283de327cdd6-tab-7",
+        "id": "tabs-75b27b3ccc48-panel-7",
+        "labelledby": "tabs-75b27b3ccc48-tab-7",
         "hidden": true
       },
       {
-        "id": "tabs-283de327cdd6-panel-8",
-        "labelledby": "tabs-283de327cdd6-tab-8",
+        "id": "tabs-75b27b3ccc48-panel-8",
+        "labelledby": "tabs-75b27b3ccc48-tab-8",
         "hidden": false
       }
     ],
@@ -590,6 +608,7 @@
     "viewport": 375
   },
   {
-    "noJSVisiblePanels": 9
+    "noJSVisiblePanels": 9,
+    "noJSVisibleSummaries": 9
   }
 ]

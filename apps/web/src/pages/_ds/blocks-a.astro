@@ -1,7 +1,6 @@
 ---
 import atlas from './sales-atlas.json';
 import TabsBlock from '../../components/blocks/Tabs.astro';
-import PortableTextBlock from '../../components/portable-text/PortableText.astro';
 import { loadSite, resolveImage } from '../../lib/sanity/site';
 import type { Tabs } from '../../../../studio/sanity.types';
 import Base from '../../layouts/Base.astro';
@@ -56,7 +55,7 @@ const layouts: NonNullable<ContentSection['layout']>[] = ['list', 'cards', 'twoC
 const atlasSite = await loadSite();
 const atlasHero = atlas.sections.find((s) => s._type === 'hero') as unknown as Hero;
 const atlasTabs = atlas.sections.find((s) => s._type === 'tabs') as unknown as Tabs;
-const atlasTest = atlas.sections.find((s) => s._type === 'richText') as unknown as { body: PortableText };
+const atlasTest = atlas.sections.find((s) => s._type === 'contentSection' && s.intro?.some((b) => 'listItem' in b && b.listItem === 'number')) as unknown as ContentSection;
 const atlasBadge = { src: 'https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a7f87f4dd9e040eb3a74457_sales-atlas-system-pion.svg', alt: 'Sales Atlas System badge', width: 130, height: 190 };
 
 ---
@@ -85,7 +84,7 @@ const atlasBadge = { src: 'https://cdn.prod.website-files.com/62e8050a7ce936c2ca
   </main>
 <div id="t32-hero"><HeroBlock data={atlasHero} image={resolveImage(atlasSite, atlasHero.image)} badgeImage={atlasBadge} /></div>
 <div id="t32-tabs"><TabsBlock data={atlasTabs} links={atlasSite.links} images={atlasSite.images} /></div>
-<div id="t32-test"><ContentSectionBlock data={{ _type: 'contentSection', layout: 'list', items: [] }} links={atlasSite.links} images={atlasSite.images}><PortableTextBlock slot="intro" value={atlasTest.body} links={atlasSite.links} images={atlasSite.images} /></ContentSectionBlock></div>
+<div id="t32-test"><ContentSectionBlock data={atlasTest} links={atlasSite.links} images={atlasSite.images} /></div>
 </Base>
 <script>
   const controls = document.querySelectorAll<HTMLButtonElement>('[data-select]');
