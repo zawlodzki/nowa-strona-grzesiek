@@ -1,0 +1,1160 @@
+--- /sales-atlas-system before
++++ after
+@@ -5,6 +5,15 @@
+   "sections": [
+     {
+       "_type": "hero",
++      "badgeImage": {
++        "_type": "contentImage",
++        "alt": "Sales Atlas System badge",
++        "asset": {
++          "_ref": "image-2c88e5145801e7f2598d1228a8a1dcdd6a47d660-355x520-svg",
++          "_type": "reference"
++        }
++      },
++      "badgeSize": "standard",
+       "body": "Powtarzalny system sprzedaży dla firm B2B, które sprzedają na spotkaniach. Dziewięć warstw, od diagnozy po pomiar, opisuje, jak ma działać sprzedaż i gdzie każda decyzja zostaje zapisana w narzędziach, żeby dało się ją potem sprawdzić.",
+       "heading": "Sales Atlas System",
+       "image": {
+@@ -37,102 +46,972 @@
+       "tagline": "Zawartość"
+     },
+     {
+-      "_type": "contentSection",
+-      "heading": "01 Diagnoza",
++      "_type": "tabs",
+       "items": [
+         {
+-          "_type": "contentItem",
+-          "link": {
+-            "_type": "link",
+-            "href": "/audyt-sprzedazy",
+-            "label": "Zobacz audyt sprzedaży"
+-          },
+-          "text": "Co dziś naprawdę dzieje się w sprzedaży. Oparta na danych z CRM i na rozmowach z zespołem. Na koniec dostajesz opis stanu, z którym zgadza się zespół i rekomendowaną ścieżkę wdrożenia.\n\nPo czym poznać, że działa: Obraz sprzedaży zgadza się z danymi z CRM. Spór o to, co się dzieje, rozstrzyga raport, a nie autorytet.\n\nPo czym poznać, że nie działa: Każdy ma swoją wersję tego, co się dzieje, i nikt jej nie sprawdza. Decyzje zapadają na podstawie ostatniej rozmowy, którą ktoś zapamiętał.\n\nOd czego zacząć: Audyt CRM Pipedrive: dwa tygodnie, raport z priorytetami i plan naprawy. To jest ta warstwa w całości.\n\nNie wiadomo, czy audyt jest potrzebny? Na bezpłatnej konsultacji przechodzimy przez to, co już stoi.",
++          "_type": "tabItem",
++          "body": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Audyt CRM Pipedrive: dwa tygodnie, raport z priorytetami i plan naprawy. To jest ta warstwa w całości."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "57228f08d686"
++                  ],
++                  "text": "Zobacz audyt sprzedaży"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-6a93c20ca47c5a15d5c2fce7",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Nie wiadomo, czy audyt jest potrzebny? Na bezpłatnej konsultacji przechodzimy przez to, co już stoi."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "30fc214c72c1"
++                  ],
++                  "text": "Umów bezpłatną konsultację"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-634daaa2c8ceab10fa93a044",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "negative": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że nie działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Każdy ma swoją wersję tego, co się dzieje, i nikt jej nie sprawdza. Decyzje zapadają na podstawie ostatniej rozmowy, którą ktoś zapamiętał."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "positive": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Obraz sprzedaży zgadza się z danymi z CRM. Spór o to, co się dzieje, rozstrzyga raport, a nie autorytet."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "summary": "Co dziś naprawdę dzieje się w sprzedaży. Oparta na danych z CRM i na rozmowach z zespołem. Na koniec dostajesz opis stanu, z którym zgadza się zespół i rekomendowaną ścieżkę wdrożenia.",
++          "tagline": "Od czego zacząć",
+           "title": "01 Diagnoza"
+         },
+         {
+-          "_type": "contentItem",
+-          "link": {
+-            "_type": "link",
+-            "href": "/audyt-crm-pipedrive",
+-            "label": "Zobacz audyt Pipedrive"
+-          },
+-          "text": "Komu i po co sprzedajemy: profil idealnego klienta, persony, zadania klienta i to, jak wygląda zakup po jego stronie. Wychodzi z tego profil klienta i kryteria, po których odrzucamy zapytanie.\n\nPo czym poznać, że działa: W minutę wiadomo, czy to nasz klient i dlaczego. Handlowiec potrafi odrzucić zapytanie i uzasadnić to kryterium, nie kierując się przeczuciem.\n\nPo czym poznać, że nie działa: Kwalifikacja siedzi w głowie jednej osoby, a oferta idzie do każdego, kto zapyta. Czas marnowany jest na deale, które i tak nie miały szans na powodzenie.\n\nOd czego zacząć: Ta warstwa nie ma osobnej usługi. Wchodzi w zakres audytu i wdrożenia, bo profil klienta ustala się, zanim powstaną etapy w CRM.\n\nBezpłatna konsultacja: przechodzimy przez to, komu dziś sprzedajemy i gdzie ta definicja się rozjeżdża.",
++          "_type": "tabItem",
++          "body": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Ta warstwa nie ma osobnej usługi. Wchodzi w zakres audytu i wdrożenia, bo profil klienta ustala się, zanim powstaną etapy w CRM."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "467954aa8583"
++                  ],
++                  "text": "Zobacz audyt Pipedrive"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-6a659c9d68d93d23daef5822",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Bezpłatna konsultacja: przechodzimy przez to, komu dziś sprzedajemy i gdzie ta definicja się rozjeżdża."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "3d1c38766f7d"
++                  ],
++                  "text": "Umów bezpłatną konsultację"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-634daaa2c8ceab10fa93a044",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "negative": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że nie działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Kwalifikacja siedzi w głowie jednej osoby, a oferta idzie do każdego, kto zapyta. Czas marnowany jest na deale, które i tak nie miały szans na powodzenie."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "positive": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "W minutę wiadomo, czy to nasz klient i dlaczego. Handlowiec potrafi odrzucić zapytanie i uzasadnić to kryterium, nie kierując się przeczuciem."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "summary": "Komu i po co sprzedajemy: profil idealnego klienta, persony, zadania klienta i to, jak wygląda zakup po jego stronie. Wychodzi z tego profil klienta i kryteria, po których odrzucamy zapytanie.",
++          "tagline": "Od czego zacząć",
+           "title": "02 Klient i rynek"
+         },
+         {
+-          "_type": "contentItem",
+-          "link": {
+-            "_type": "link",
+-            "href": "/kontakt",
+-            "label": "Umów bezpłatną konsultację"
+-          },
+-          "text": "Dlaczego klient ma Cię wybrać, czym różnisz się od alternatyw i jakimi słowami to komunikujesz na stronie oraz w ofercie. Efekt to jedna wersja przekazu, która ma być klarowna dla grupy docelowej.\n\nPo czym poznać, że działa: Dwie osoby z firmy tłumaczą to samo tymi samymi słowami. Oferta broni ceny argumentem, a nie rabatem.\n\nPo czym poznać, że nie działa: Każda oferta opisuje firmę inaczej, a różnicę wobec konkurencji sprowadza do ceny.\n\nOd czego zacząć: Bezpłatna konsultacja: sprawdzamy, czy to, co mówisz na stronie, zgadza się z tym, co mówisz w ofercie.",
++          "_type": "tabItem",
++          "body": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Bezpłatna konsultacja: sprawdzamy, czy to, co mówisz na stronie, zgadza się z tym, co mówisz w ofercie."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "fb565362cd50"
++                  ],
++                  "text": "Umów bezpłatną konsultację"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-634daaa2c8ceab10fa93a044",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "negative": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że nie działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Każda oferta opisuje firmę inaczej, a różnicę wobec konkurencji sprowadza do ceny."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "positive": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Dwie osoby z firmy tłumaczą to samo tymi samymi słowami. Oferta broni ceny argumentem, a nie rabatem."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "summary": "Dlaczego klient ma Cię wybrać, czym różnisz się od alternatyw i jakimi słowami to komunikujesz na stronie oraz w ofercie. Efekt to jedna wersja przekazu, która ma być klarowna dla grupy docelowej.",
++          "tagline": "Od czego zacząć",
+           "title": "03 Pozycjonowanie i przekaz"
+         },
+         {
+-          "_type": "contentItem",
+-          "link": {
+-            "_type": "link",
+-            "href": "/szkolenie-i-wdrozenie-pipedrive",
+-            "label": "Zobacz wdrożenie Pipedrive"
+-          },
+-          "text": "Jak pracujesz z klientem od pierwszego kontaktu do wygranej: etapy, kryteria wyjścia, kwalifikacja, agendy spotkań i struktura oferty. Na tej podstawie konfigurowany jest CRM.\n\nPo czym poznać, że działa: Etap w CRM znaczy to samo u wszystkich, bo ma warunek wyjścia. Kontakt po ofercie ma termin i nie zależy od tego, czy handlowiec o nim pamięta.\n\nPo czym poznać, że nie działa: Etapy przesuwa się na wyczucie, a kontakt po ofercie zależy od czyjejś pamięci. Prognoza z takiego lejka nie ma pokrycia.\n\nOd czego zacząć: Wdrożenie Pipedrive: proces zaprojektowany i zapisany w narzędziu razem z kryteriami wyjścia, automatyzacjami i szkoleniem zespołu.\n\nBezpłatna konsultacja: przechodzimy przez dzisiejsze etapy i pokazuję, które z nich nic nie znaczą.",
++          "_type": "tabItem",
++          "body": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Wdrożenie Pipedrive: proces zaprojektowany i zapisany w narzędziu razem z kryteriami wyjścia, automatyzacjami i szkoleniem zespołu."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "501967204203"
++                  ],
++                  "text": "Zobacz wdrożenie Pipedrive"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-64a963565ffd73e869eafd91",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Bezpłatna konsultacja: przechodzimy przez dzisiejsze etapy i pokazuję, które z nich nic nie znaczą."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "ffc5bcd22322"
++                  ],
++                  "text": "Umów bezpłatną konsultację"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-634daaa2c8ceab10fa93a044",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "negative": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że nie działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Etapy przesuwa się na wyczucie, a kontakt po ofercie zależy od czyjejś pamięci. Prognoza z takiego lejka nie ma pokrycia."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "positive": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Etap w CRM znaczy to samo u wszystkich, bo ma warunek wyjścia. Kontakt po ofercie ma termin i nie zależy od tego, czy handlowiec o nim pamięta."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "summary": "Jak pracujesz z klientem od pierwszego kontaktu do wygranej: etapy, kryteria wyjścia, kwalifikacja, agendy spotkań i struktura oferty. Na tej podstawie konfigurowany jest CRM.",
++          "tagline": "Od czego zacząć",
+           "title": "04 Proces sprzedaży"
+         },
+         {
+-          "_type": "contentItem",
+-          "link": {
+-            "_type": "link",
+-            "href": "/szkolenie-i-wdrozenie-asana",
+-            "label": "Zobacz wdrożenie Asany"
+-          },
+-          "text": "Co dzieje się po finalizacji: przekazanie do realizacji, pierwszy wynik u klienta, upsell, cross-sell i polecenia. Powstaje moment przekazania z kompletem ustaleń, a polecenia stają się liczonym źródłem.\n\nPo czym poznać, że działa: Realizacja dostaje komplet ustaleń w dniu podpisu i nie dopytuje sprzedaży. Polecenia liczymy tak samo jak każde inne źródło.\n\nPo czym poznać, że nie działa: Po wygranej sprawa znika z widoku, a polecenia zdarzają się przypadkiem. Nikt nie odpowiada za to, co dzieje się między sprzedażą a realizacją.\n\nOd czego zacząć: Wdrożenie Asany. Tam rozstrzyga się, czy to, co obiecane przy podpisie, zostało dowiezione i kiedy.\n\nBezpłatna konsultacja: sprawdzamy, co dziś gubi się między wygraną a pierwszym dniem realizacji.",
++          "_type": "tabItem",
++          "body": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Wdrożenie Asany. Tam rozstrzyga się, czy to, co obiecane przy podpisie, zostało dowiezione i kiedy."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "42d31b055595"
++                  ],
++                  "text": "Zobacz wdrożenie Asany"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-64a7d3814f84e9058b6f6dad",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Bezpłatna konsultacja: sprawdzamy, co dziś gubi się między wygraną a pierwszym dniem realizacji."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "21b38ba94b09"
++                  ],
++                  "text": "Umów bezpłatną konsultację"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-634daaa2c8ceab10fa93a044",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "negative": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że nie działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po wygranej sprawa znika z widoku, a polecenia zdarzają się przypadkiem. Nikt nie odpowiada za to, co dzieje się między sprzedażą a realizacją."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "positive": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Realizacja dostaje komplet ustaleń w dniu podpisu i nie dopytuje sprzedaży. Polecenia liczymy tak samo jak każde inne źródło."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "summary": "Co dzieje się po finalizacji: przekazanie do realizacji, pierwszy wynik u klienta, upsell, cross-sell i polecenia. Powstaje moment przekazania z kompletem ustaleń, a polecenia stają się liczonym źródłem.",
++          "tagline": "Od czego zacząć",
+           "title": "05 Po wygranej"
+         },
+         {
+-          "_type": "contentItem",
+-          "link": {
+-            "_type": "link",
+-            "href": "/kontakt",
+-            "label": "Umów bezpłatną konsultację"
+-          },
+-          "text": "Skąd biorą się nowe szanse: prospecting, treści, analiza źródeł leadów i ile ich potrzeba, żeby dowieźć cel. Kończy się liczbą szans na miesiąc i podziałem na źródła, z których mają przyjść.\n\nPo czym poznać, że działa: Wiadomo, ile szans musi wejść w tym miesiącu i skąd mają przyjść. Spadek w jednym źródle widać, zanim uderzy w wynik.\n\nPo czym poznać, że nie działa: Nowe szanse biorą się z tego, kto akurat zadzwonił, a lejek puchnie od starych leadów, których nikt nie zamyka.\n\nOd czego zacząć: Bezpłatna konsultacja: liczymy, ile szans potrzebujesz miesięcznie, żeby cel był realny.",
++          "_type": "tabItem",
++          "body": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Bezpłatna konsultacja: liczymy, ile szans potrzebujesz miesięcznie, żeby cel był realny."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "8b774ce2ef11"
++                  ],
++                  "text": "Umów bezpłatną konsultację"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-634daaa2c8ceab10fa93a044",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "negative": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że nie działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Nowe szanse biorą się z tego, kto akurat zadzwonił, a lejek puchnie od starych leadów, których nikt nie zamyka."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "positive": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Wiadomo, ile szans musi wejść w tym miesiącu i skąd mają przyjść. Spadek w jednym źródle widać, zanim uderzy w wynik."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "summary": "Skąd biorą się nowe szanse: prospecting, treści, analiza źródeł leadów i ile ich potrzeba, żeby dowieźć cel. Kończy się liczbą szans na miesiąc i podziałem na źródła, z których mają przyjść.",
++          "tagline": "Od czego zacząć",
+           "title": "06 Popyt"
+         },
+         {
+-          "_type": "contentItem",
+-          "link": {
+-            "_type": "link",
+-            "href": "/automatyzacje-dla-pipedrive",
+-            "label": "Zobacz automatyzacje"
+-          },
+-          "text": "Gdzie to wszystko żyje: konfiguracja CRM, automatyzacje, integracje, hurtownia danych, AI i transkrypcje rozmów. Na końcu jest skonfigurowane narzędzie, w którym dane wpisuje się raz.\n\nPo czym poznać, że działa: Zespół pracuje w narzędziu, a nie obok niego, w arkuszu i w skrzynce. Dane wpisuje się do systemu raz.\n\nPo czym poznać, że nie działa: CRM jest archiwum korespondencji, a prawdziwy lejek stoi w Excelu. Te same dane przepisuje się do kilku systemów.\n\nOd czego zacząć: Automatyzacje dla Pipedrive łączą CRM z pocztą, ofertami i realizacją. Wdrożenie AI zdejmuje z handlowców przepisywanie danych.\n\nBezpłatna konsultacja: przechodzimy przez narzędzia i pokazuję, gdzie jest miejsce na integracje.",
++          "_type": "tabItem",
++          "body": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Automatyzacje dla Pipedrive łączą CRM z pocztą, ofertami i realizacją. Wdrożenie AI zdejmuje z handlowców przepisywanie danych."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "ba1a783a519b"
++                  ],
++                  "text": "Zobacz automatyzacje"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-64aae5153be5dab60a907e5c",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Bezpłatna konsultacja: przechodzimy przez narzędzia i pokazuję, gdzie jest miejsce na integracje."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "c96ab2600533"
++                  ],
++                  "text": "Umów bezpłatną konsultację"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-634daaa2c8ceab10fa93a044",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "negative": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że nie działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "CRM jest archiwum korespondencji, a prawdziwy lejek stoi w Excelu. Te same dane przepisuje się do kilku systemów."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "positive": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Zespół pracuje w narzędziu, a nie obok niego, w arkuszu i w skrzynce. Dane wpisuje się do systemu raz."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "summary": "Gdzie to wszystko żyje: konfiguracja CRM, automatyzacje, integracje, hurtownia danych, AI i transkrypcje rozmów. Na końcu jest skonfigurowane narzędzie, w którym dane wpisuje się raz.",
++          "tagline": "Od czego zacząć",
+           "title": "07 Narzędzia i dane"
+         },
+         {
+-          "_type": "contentItem",
+-          "link": {
+-            "_type": "link",
+-            "href": "/kontakt",
+-            "label": "Umów bezpłatną konsultację"
+-          },
+-          "text": "Jak zarządzać działem sprzedaży: struktura, rekrutacja, wdrożenie nowego handlowca, ocena i spotkania wewnętrzne.\n\nPo czym poznać, że działa: Nowy handlowiec sprzedaje samodzielnie po ustalonym czasie, nie po roku. Odejście jednej osoby nie zabiera wiedzy o klientach.\n\nPo czym poznać, że nie działa: Wdrożenie polega na przyglądaniu się właścicielowi, a odejście handlowca zabiera historię klientów razem z nim.\n\nOd czego zacząć: Bezpłatna konsultacja: rozmawiamy o tym, ile trwa dojście nowej osoby do pierwszej samodzielnej sprzedaży.",
++          "_type": "tabItem",
++          "body": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Bezpłatna konsultacja: rozmawiamy o tym, ile trwa dojście nowej osoby do pierwszej samodzielnej sprzedaży."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "6123d5d1edd4"
++                  ],
++                  "text": "Umów bezpłatną konsultację"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-634daaa2c8ceab10fa93a044",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "negative": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że nie działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Wdrożenie polega na przyglądaniu się właścicielowi, a odejście handlowca zabiera historię klientów razem z nim."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "positive": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Nowy handlowiec sprzedaje samodzielnie po ustalonym czasie, nie po roku. Odejście jednej osoby nie zabiera wiedzy o klientach."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "summary": "Jak zarządzać działem sprzedaży: struktura, rekrutacja, wdrożenie nowego handlowca, ocena i spotkania wewnętrzne.",
++          "tagline": "Od czego zacząć",
+           "title": "08 Zespół"
+         },
+         {
+-          "_type": "contentItem",
+-          "link": {
+-            "_type": "link",
+-            "href": "/automatyzacje-dla-pipedrive",
+-            "label": "Zobacz automatyzacje"
+-          },
+-          "text": "Czy to działa i co poprawiamy: metryki, raporty, prognoza, analiza wygranych i przegranych oraz stały cykl poprawek. Wychodzą z tego raporty i prognoza, którą da się weryfikować.\n\nPo czym poznać, że działa: Prognoza na koniec miesiąca bierze się z systemu i zwykle się sprawdza. Wiadomo, dlaczego przegrane sprawy przepadły.\n\nPo czym poznać, że nie działa: Raport składa się ręcznie w Excelu, a prognoza to suma przeczuć. Przyczyn przegranych nikt nie zapisuje.\n\nOd czego zacząć: Raportowanie i prognoza powstają na danych z CRM. Gdy jedno źródło nie wystarcza, dokładamy hurtownię danych i integracje.\n\nBezpłatna konsultacja: sprawdzamy, czy z CRM da się dziś wyciągnąć prognozę, której można ufać.",
++          "_type": "tabItem",
++          "body": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Raportowanie i prognoza powstają na danych z CRM. Gdy jedno źródło nie wystarcza, dokładamy hurtownię danych i integracje."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "27442bda120b"
++                  ],
++                  "text": "Zobacz automatyzacje"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-64aae5153be5dab60a907e5c",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Bezpłatna konsultacja: sprawdzamy, czy z CRM da się dziś wyciągnąć prognozę, której można ufać."
++                }
++              ],
++              "style": "normal"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "marks": [
++                    "4c32b230d61c"
++                  ],
++                  "text": "Umów bezpłatną konsultację"
++                }
++              ],
++              "markDefs": [
++                {
++                  "_type": "internalLink",
++                  "reference": {
++                    "_ref": "page-634daaa2c8ceab10fa93a044",
++                    "_type": "reference",
++                    "_weak": true
++                  }
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "negative": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że nie działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Raport składa się ręcznie w Excelu, a prognoza to suma przeczuć. Przyczyn przegranych nikt nie zapisuje."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "positive": [
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Po czym poznać, że działa"
++                }
++              ],
++              "style": "h4"
++            },
++            {
++              "_type": "block",
++              "children": [
++                {
++                  "_type": "span",
++                  "text": "Prognoza na koniec miesiąca bierze się z systemu i zwykle się sprawdza. Wiadomo, dlaczego przegrane sprawy przepadły."
++                }
++              ],
++              "style": "normal"
++            }
++          ],
++          "summary": "Czy to działa i co poprawiamy: metryki, raporty, prognoza, analiza wygranych i przegranych oraz stały cykl poprawek. Wychodzą z tego raporty i prognoza, którą da się weryfikować.",
++          "tagline": "Od czego zacząć",
+           "title": "09 Pomiar i doskonalenie"
+         }
+-      ],
+-      "layout": "list",
+-      "tagline": "Od czego zacząć"
++      ]
+     },
+     {
+       "_type": "feature",
+@@ -233,9 +1112,11 @@
+           "children": [
+             {
+               "_type": "span",
+-              "text": "Jeżeli trzeba było kogoś dopytać choćby raz, odpowiedź brzmi: systemu nie ma, jest pamięć konkretnych osób. To nie jest ocena zespołu, tylko wynik szybkiej diagnozy i najczęstszy powód, żeby zacząć od warstwy pierwszej, a nie od konfiguracji narzędzia."
+-            }
+-          ],
++              "text": "Weź 10 ostatnich leadów, które trafiły do firmy. Dziesięć po kolei, nie dziesięć wybranych."
++            }
++          ],
++          "level": 1,
++          "listItem": "number",
+           "style": "normal"
+         },
+         {
+@@ -243,24 +1124,44 @@
+           "children": [
+             {
+               "_type": "span",
++              "text": "Odtwórz z systemu, co się z każdym stało: kto go dostał, kiedy odezwał się pierwszy raz, czym się to skończyło i dlaczego."
++            }
++          ],
++          "level": 1,
++          "listItem": "number",
++          "style": "normal"
++        },
++        {
++          "_type": "block",
++          "children": [
++            {
++              "_type": "span",
++              "text": "Zrób to bez pytania kogokolwiek z zespołu."
++            }
++          ],
++          "level": 1,
++          "listItem": "number",
++          "style": "normal"
++        },
++        {
++          "_type": "block",
++          "children": [
++            {
++              "_type": "span",
++              "text": "Jeżeli trzeba było kogoś dopytać choćby raz, odpowiedź brzmi: systemu nie ma, jest pamięć konkretnych osób. To nie jest ocena zespołu, tylko wynik szybkiej diagnozy i najczęstszy powód, żeby zacząć od warstwy pierwszej, a nie od konfiguracji narzędzia."
++            }
++          ],
++          "style": "normal"
++        },
++        {
++          "_type": "block",
++          "children": [
++            {
++              "_type": "span",
+               "text": "Drugi test, na jedno pytanie: jak wygląda czyszczenie lejka sprzedaży? Odpowiedź „czyścimy go na bieżąco” znaczy w praktyce, że nie czyści go nikt: nie ma definicji, nie ma terminu i nie ma odpowiedzialnego. Wtedy każda liczba z CRM jest niepewna, zanim cokolwiek policzymy."
+             }
+           ],
+           "style": "normal"
+-        }
+-      ],
+-      "items": [
+-        {
+-          "_type": "contentItem",
+-          "title": "Weź 10 ostatnich leadów, które trafiły do firmy. Dziesięć po kolei, nie dziesięć wybranych."
+-        },
+-        {
+-          "_type": "contentItem",
+-          "title": "Odtwórz z systemu, co się z każdym stało: kto go dostał, kiedy odezwał się pierwszy raz, czym się to skończyło i dlaczego."
+-        },
+-        {
+-          "_type": "contentItem",
+-          "title": "Zrób to bez pytania kogokolwiek z zespołu."
+         }
+       ],
+       "layout": "list",
+@@ -394,7 +1295,7 @@
+                 {
+                   "_type": "span",
+                   "marks": [
+-                    "56245b9e86d8"
++                    "cc8637901055"
+                   ],
+                   "text": "kontakt"
+                 },
+--- /szkolenie-i-wdrozenie-salesforce before
++++ after
+@@ -5,6 +5,15 @@
+   "sections": [
+     {
+       "_type": "hero",
++      "badgeImage": {
++        "_type": "contentImage",
++        "alt": "salesforce logo",
++        "asset": {
++          "_ref": "image-f25f052a658c224cb9ff487ee617d07de9627468-960x672-webp",
++          "_type": "reference"
++        }
++      },
++      "badgeSize": "wide",
+       "body": "Projektuję proces sprzedaży, konfiguruję Salesforce, przenoszę dane z Pipedrive'a, HubSpota albo Excela i szkolę handlowców na realnych szansach z Waszego lejka. Od pierwszej rozmowy do uruchomienia pracujesz ze mną. Wdrażałem CRM w 50+ firmach od 2 do 500 pracowników.",
+       "cta": {
+         "_type": "link",

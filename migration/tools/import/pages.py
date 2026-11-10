@@ -250,6 +250,10 @@ def hero(page, node, component):
         block['image'] = page.image(img)
     else:
         page.issue('hero-image-missing', heading)
+    badge = first(node, has_class('badge-naroznik'))
+    if badge is not None:
+        block['badgeImage'] = page.image(badge)
+        block['badgeSize'] = 'wide' if 'salesforce' in badge.classes() and 'Salesforce.com' in badge.attrs.get('src', '') else 'standard'
     badges = [page.string(b) for b in all_of(node, lambda n: any('badge' in c for c in n.classes()) and n.tag != 'img' and not n.find('div'))]
     if badges := [b for b in badges if b]:
         block['badges'] = badges
@@ -372,10 +376,37 @@ def tab_items(page, node):
 def content_section(page, node, component):
     title_box = first(node, has_class('section-title')) or node
     tagline, heading, head = section_title(page, title_box)
-    tabs = tab_items(page, node)
-    if tabs:
-        intro = page.blocks([p for p in paragraphs(node) if not any(inside(p, t) for t in all_of(node, has_class('w-tabs')))])
-        return {'tagline': tagline, 'heading': heading, 'layout': 'list', 'intro': intro or None, 'items': tabs}
+    widget = first(node, has_class('w-tabs'))
+    if widget is not None:
+        menu = first(widget, has_class('w-tab-menu'))
+        panes = {p.attrs.get('data-w-tab'): p for p in all_of(widget, has_class('w-tab-pane'))}
+        entries = []
+        for link in all_of(menu, has_class('w-tab-link')):
+            pane = panes[link.attrs.get('data-w-tab')]
+            positive = first(pane, has_class('stan-mocny'))
+            negative = first(pane, has_class('stan-slaby'))
+            cards = [c for c in (positive, negative) if c is not None]
+            label = first(pane, has_class('tagline'))
+            body = [n for n in all_of(pane, lambda n: n.tag in ('p', 'h3', 'h4', 'a') or 'tagline' in n.classes()) if n is not label and not any(inside(n, c) for c in cards) and not (n.tag == 'a' and any(inside(n, p) for p in all_of(pane, tag_in('p'))))]
+            for i, n in enumerate(body):
+                if n.tag == 'a':
+                    wrapper = Node('p', {})
+                    wrapper.children = [n]
+                    body[i] = wrapper
+            entries.append({'_type': 'tabItem', '_key': page.key(), 'title': page.string(first(link, tag_in('h3', 'h4'))),
+                            'summary': '\n\n'.join(page.string(p) for p in paragraphs(link)),
+                            'tagline': page.string(label),
+                            'positive': page.blocks(all_of(positive, tag_in('h4', 'p'))) if positive is not None else None,
+                            'negative': page.blocks(all_of(negative, tag_in('h4', 'p'))) if negative is not None else None,
+                            'body': page.blocks(body)})
+        outside = [n for n in all_of(node, tag_in('h2', 'p')) if not inside(n, widget)]
+        return {'_type': 'tabs', 'heading': page.string(next((n for n in outside if n.tag == 'h2'), None)),
+                'intro': page.blocks([n for n in outside if n.tag == 'p']), 'items': entries}
+    ordered = all_of(node, tag_in('ol'))
+    if ordered and all(not li.find('h3') and not li.find('h4') for ol in ordered for li in all_of(ol, tag_in('li'))):
+        # Keep section metadata and one ordered prose stream using the shared content section.
+        stream = [n for n in all_of(node, lambda n: n.tag in ('p', 'ol')) if not any(n is not ol and inside(n, ol) for ol in ordered)]
+        return {'tagline': tagline, 'heading': heading, 'layout': 'list', 'intro': page.blocks(stream)}
     found, layout = items_of(page, node, [])
     links = [a for a in all_of(node, lambda n: n.tag == 'a' and 'inline-link' in n.classes()) if not any(inside(a, f) for f in found)]
     intro_nodes = [p for p in paragraphs(node, exclude=found) if p is not head]

@@ -1,0 +1,85 @@
+---
+import type { Tabs } from '../../../../studio/sanity.types';
+import type { Resolved } from '../portable-text/types';
+import PortableText from '../portable-text/PortableText.astro';
+import BlockSection from '../ui/BlockSection.astro';
+interface Props extends Resolved { data: Tabs & { _key?: string }; }
+const { data, links, images } = Astro.props;
+const id = `tabs-${data._key ?? crypto.randomUUID()}`;
+---
+<BlockSection kind="tabs">
+  <header>{data.tagline && <p class="type-tagline">{data.tagline}</p>}{data.heading && <h2>{data.heading}</h2>}<PortableText value={data.intro} links={links} images={images} /></header>
+  <div class="tabs" data-tabs>
+    <div class="menu" aria-label={data.heading || "Warstwy systemu"}>
+      {data.items?.map((item, i) => <a id={`${id}-tab-${i}`} href={`#${id}-panel-${i}`}><span class="type-heading-xs">{item.title}</span><span>{item.summary}</span></a>)}
+    </div>
+    <div class="panels">{data.items?.map((item, i) => <section class="panel" id={`${id}-panel-${i}`} aria-labelledby={`${id}-tab-${i}`}>
+      <div class="positive"><PortableText value={item.positive} links={links} images={images} /></div>
+      <div class="negative"><PortableText value={item.negative} links={links} images={images} /></div>
+      {item.tagline && <p class="type-tagline panel-tagline">{item.tagline}</p>}
+      <PortableText value={item.body} links={links} images={images} />
+    </section>)}</div>
+  </div>
+</BlockSection>
+<script>
+  function initTabs() {
+    document.querySelectorAll<HTMLElement>('[data-tabs]:not([data-ready])').forEach((root) => {
+      const menu = root.querySelector<HTMLElement>('.menu')!;
+      const tabs = Array.from(menu.querySelectorAll<HTMLAnchorElement>('a'));
+      const panels = Array.from(root.querySelectorAll<HTMLElement>('.panel'));
+      if (!tabs.length || tabs.length !== panels.length) return;
+      menu.setAttribute('role', 'tablist');
+      menu.setAttribute('aria-orientation', 'vertical');
+      function activate(index: number, focus = false) {
+        tabs.forEach((tab, i) => {
+          tab.setAttribute('aria-selected', String(i === index));
+          tab.tabIndex = i === index ? 0 : -1;
+          panels[i].hidden = i !== index;
+        });
+        if (focus) tabs[index].focus();
+      }
+      tabs.forEach((tab, index) => {
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('aria-controls', panels[index].id);
+        panels[index].setAttribute('role', 'tabpanel');
+        panels[index].tabIndex = 0;
+        tab.addEventListener('click', (event) => { event.preventDefault(); activate(index); });
+        tab.addEventListener('keydown', (event) => {
+          let next: number;
+          switch (event.key) {
+            case 'ArrowDown': next = (index + 1) % tabs.length; break;
+            case 'ArrowUp': next = (index + tabs.length - 1) % tabs.length; break;
+            case 'Home': next = 0; break;
+            case 'End': next = tabs.length - 1; break;
+            case ' ': event.preventDefault(); activate(index); return;
+            default: return;
+          }
+          event.preventDefault(); activate(next, true);
+        });
+      });
+      root.dataset.ready = 'true'; activate(0);
+    });
+  }
+  initTabs();
+  document.addEventListener('astro:page-load', initTabs);
+</script>
+<style>
+  header { display: grid; gap: var(--space-m); margin-block-end: var(--space-xl); }
+  .tabs { display: flex; align-items: center; gap: 24px; }
+  .menu { flex: 0 0 calc(35% - 12px); display: flex; flex-direction: column; gap: 16px; }
+  .menu a { display: grid; gap: var(--space-xs); padding: 16px 24px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-body); }
+  .menu a[aria-selected="true"] { background: var(--surface-cyan-tint); }
+  [data-ready] .menu a:not([aria-selected="true"]) > span:last-child { display: none; }
+  .menu a:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; }
+  .menu a:active { background: var(--surface-tint); }
+  @media (hover: hover) and (pointer: fine) { .menu a:not([aria-selected="true"]):hover { background: var(--surface-soft); } }
+  .panels { flex: 1; min-inline-size: 0; }
+  .panel { border: 1px solid var(--border-default); background: var(--surface-page); border-radius: var(--radius-lg); padding: clamp(24px, 3.125vw, 40px); box-shadow: var(--shadow-panel); overflow-wrap: anywhere; }
+  .panel:not([hidden]) { display: grid; gap: var(--space-m); }
+  .positive, .negative { padding: var(--space-m); border: 1px solid var(--border-default); border-radius: var(--radius-sm); }
+  .positive { background: var(--surface-tint); border-color: var(--color-primary-20); }
+  .positive :global(h4), .negative :global(h4) { font-family: var(--typography-heading-xs-family); font-size: var(--typography-heading-xs-size); font-weight: var(--typography-heading-xs-weight); line-height: var(--typography-heading-xs-leading); letter-spacing: var(--typography-heading-xs-tracking); }
+  .panel-tagline { justify-self: start; padding-inline: var(--space-2xs); background: var(--surface-soft); color: var(--color-neutral-80); border-radius: var(--radius-sm); }
+  .negative { background: var(--surface-alt); }
+  @media (max-width: 991px) { .tabs { flex-direction: column; align-items: stretch; } .menu { flex-basis: auto; } .panels { order: -1; } }
+</style>

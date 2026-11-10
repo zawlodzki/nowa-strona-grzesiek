@@ -1,0 +1,13 @@
+$ astro check
+19:21:40 [types] Generated 40ms
+19:21:40 [check] Getting diagnostics for Astro files in /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T32-sales-atlas-parity/apps/web...
+src/preview/worker.ts:5:3 - warning ts(80006): This may be converted to an async function.
+
+5   fetch(request: Request, env: Parameters<typeof handle>[1], context: Parameters<typeof handle>[2]): Promise<Response> {
+    ~~~~~
+
+Result (159 files):
+- 0 errors
+- 0 warnings
+- 1 hint
+

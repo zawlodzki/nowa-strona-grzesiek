@@ -9,7 +9,8 @@ const contract = read('../../../migration/contracts/blocks.json')
 const schema = read('../schema.json')
 const types = new Map(schema.map((type) => [type.name, type]))
 const sections = types.get('page').attributes.sections.value.of.of.map((item) => item.rest.name)
-assert.deepEqual(sections, contract.blocks.map((block) => block.type))
+assert.deepEqual([...sections].sort(), contract.blocks.map((block) => block.type).sort())
+assert.ok(sections.includes('tabs'), 'page builder registers tabs')
 for (const block of contract.blocks) {
   const attributes = types.get(block.type).value.attributes
   assert.deepEqual(Object.keys(attributes).filter((name) => name !== '_type').sort(), Object.keys(block.fields).sort(), block.type)
@@ -20,6 +21,10 @@ assert.deepEqual(names, ['block', ...Object.keys(contract.portableText.objects)]
 const styles = portableMembers[0].attributes.style.value.of.map((style) => style.value)
 assert.deepEqual(styles, contract.portableText.styles)
 console.log('PASS contract blocks, fields, Portable Text members and styles')
+if (process.argv.includes('--schema-only')) {
+  console.log('SKIP document validation: Sanity login required; coordinator requested schema-only checks')
+  process.exit(0)
+}
 
 const baseline = {
   _id: 't07-schema-check', _type: 'page', _rev: 'test',

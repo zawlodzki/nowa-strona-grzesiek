@@ -1,4 +1,8 @@
 ---
+import atlas from './sales-atlas.json';
+import TabsBlock from '../../components/blocks/Tabs.astro';
+import { loadSite, resolveImage } from '../../lib/sanity/site';
+import type { Tabs } from '../../../../studio/sanity.types';
 import Base from '../../layouts/Base.astro';
 import HeroBlock from '../../components/blocks/Hero.astro';
 import LogoStripBlock from '../../components/blocks/LogoStrip.astro';
@@ -48,6 +52,12 @@ const fixtures = states.map(({ key, label }) => {
   return { key, label, hero, logoStrip, toolsStrip, logos, feature, content, cta, promo, empty };
 });
 const layouts: NonNullable<ContentSection['layout']>[] = ['list', 'cards', 'twoColumn', 'checklist'];
+const atlasSite = await loadSite();
+const atlasHero = atlas.sections.find((s) => s._type === 'hero') as unknown as Hero;
+const atlasTabs = atlas.sections.find((s) => s._type === 'tabs') as unknown as Tabs;
+const atlasTest = atlas.sections.find((s) => s._type === 'contentSection' && s.intro?.some((b) => 'listItem' in b && b.listItem === 'number')) as unknown as ContentSection;
+const atlasBadge = { src: 'https://cdn.prod.website-files.com/62e8050a7ce936c2cad0d6a1/6a7f87f4dd9e040eb3a74457_sales-atlas-system-pion.svg', alt: 'Sales Atlas System badge', width: 130, height: 190 };
+
 ---
 <Base title="Bloki A | Katalog komponentów" noindex>
   <main>
@@ -72,6 +82,9 @@ const layouts: NonNullable<ContentSection['layout']>[] = ['list', 'cards', 'twoC
       <PromoCardBlock data={fixture.promo} target={fixture.empty ? undefined : target} badge={fixture.empty ? undefined : badge} />
     </div>)}
   </main>
+<div id="t32-hero"><HeroBlock data={atlasHero} image={resolveImage(atlasSite, atlasHero.image)} badgeImage={atlasBadge} /></div>
+<div id="t32-tabs"><TabsBlock data={atlasTabs} links={atlasSite.links} images={atlasSite.images} /></div>
+<div id="t32-test"><ContentSectionBlock data={atlasTest} links={atlasSite.links} images={atlasSite.images} /></div>
 </Base>
 <script>
   const controls = document.querySelectorAll<HTMLButtonElement>('[data-select]');

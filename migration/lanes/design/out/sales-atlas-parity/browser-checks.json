@@ -1,0 +1,614 @@
+[
+  {
+    "width": 1280,
+    "visibleSummaries": 1,
+    "typography": {
+      "headingSize": "21.8141px",
+      "expectedSize": "21.8141px",
+      "tagline": "Od czego zacząć"
+    }
+  },
+  {
+    "width": 1280,
+    "states": [
+      {
+        "key": "ArrowDown",
+        "tabs": [
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-0"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-1"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-2"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-3"
+          },
+          {
+            "role": "tab",
+            "selected": "true",
+            "tabindex": 0,
+            "controls": "tabs-75b27b3ccc48-panel-4"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-5"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-6"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-7"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-8"
+          }
+        ]
+      },
+      {
+        "key": "Home",
+        "tabs": [
+          {
+            "role": "tab",
+            "selected": "true",
+            "tabindex": 0,
+            "controls": "tabs-75b27b3ccc48-panel-0"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-1"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-2"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-3"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-4"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-5"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-6"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-7"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-8"
+          }
+        ]
+      },
+      {
+        "key": "End",
+        "tabs": [
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-0"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-1"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-2"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-3"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-4"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-5"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-6"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-7"
+          },
+          {
+            "role": "tab",
+            "selected": "true",
+            "tabindex": 0,
+            "controls": "tabs-75b27b3ccc48-panel-8"
+          }
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "tabs-75b27b3ccc48-panel-0",
+        "labelledby": "tabs-75b27b3ccc48-tab-0",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-1",
+        "labelledby": "tabs-75b27b3ccc48-tab-1",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-2",
+        "labelledby": "tabs-75b27b3ccc48-tab-2",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-3",
+        "labelledby": "tabs-75b27b3ccc48-tab-3",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-4",
+        "labelledby": "tabs-75b27b3ccc48-tab-4",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-5",
+        "labelledby": "tabs-75b27b3ccc48-tab-5",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-6",
+        "labelledby": "tabs-75b27b3ccc48-tab-6",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-7",
+        "labelledby": "tabs-75b27b3ccc48-tab-7",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-8",
+        "labelledby": "tabs-75b27b3ccc48-tab-8",
+        "hidden": false
+      }
+    ],
+    "liveKeyboardSelected": 3
+  },
+  {
+    "width": 1280,
+    "motion": [
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      }
+    ]
+  },
+  {
+    "label": "catalog",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "viewport": 1280
+  },
+  {
+    "label": "/sales-atlas-system",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "viewport": 1280
+  },
+  {
+    "label": "/szkolenie-i-wdrozenie-pipedrive",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "viewport": 1280
+  },
+  {
+    "label": "/audyt-crm-pipedrive",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "viewport": 1280
+  },
+  {
+    "width": 375,
+    "visibleSummaries": 1,
+    "typography": {
+      "headingSize": "18px",
+      "expectedSize": "18px",
+      "tagline": "Od czego zacząć"
+    }
+  },
+  {
+    "width": 375,
+    "states": [
+      {
+        "key": "ArrowDown",
+        "tabs": [
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-0"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-1"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-2"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-3"
+          },
+          {
+            "role": "tab",
+            "selected": "true",
+            "tabindex": 0,
+            "controls": "tabs-75b27b3ccc48-panel-4"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-5"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-6"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-7"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-8"
+          }
+        ]
+      },
+      {
+        "key": "Home",
+        "tabs": [
+          {
+            "role": "tab",
+            "selected": "true",
+            "tabindex": 0,
+            "controls": "tabs-75b27b3ccc48-panel-0"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-1"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-2"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-3"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-4"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-5"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-6"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-7"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-8"
+          }
+        ]
+      },
+      {
+        "key": "End",
+        "tabs": [
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-0"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-1"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-2"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-3"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-4"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-5"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-6"
+          },
+          {
+            "role": "tab",
+            "selected": "false",
+            "tabindex": -1,
+            "controls": "tabs-75b27b3ccc48-panel-7"
+          },
+          {
+            "role": "tab",
+            "selected": "true",
+            "tabindex": 0,
+            "controls": "tabs-75b27b3ccc48-panel-8"
+          }
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "tabs-75b27b3ccc48-panel-0",
+        "labelledby": "tabs-75b27b3ccc48-tab-0",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-1",
+        "labelledby": "tabs-75b27b3ccc48-tab-1",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-2",
+        "labelledby": "tabs-75b27b3ccc48-tab-2",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-3",
+        "labelledby": "tabs-75b27b3ccc48-tab-3",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-4",
+        "labelledby": "tabs-75b27b3ccc48-tab-4",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-5",
+        "labelledby": "tabs-75b27b3ccc48-tab-5",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-6",
+        "labelledby": "tabs-75b27b3ccc48-tab-6",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-7",
+        "labelledby": "tabs-75b27b3ccc48-tab-7",
+        "hidden": true
+      },
+      {
+        "id": "tabs-75b27b3ccc48-panel-8",
+        "labelledby": "tabs-75b27b3ccc48-tab-8",
+        "hidden": false
+      }
+    ],
+    "liveKeyboardSelected": 3
+  },
+  {
+    "width": 375,
+    "motion": [
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      },
+      {
+        "transition": "0s",
+        "animation": "none"
+      }
+    ]
+  },
+  {
+    "label": "catalog",
+    "width": 375,
+    "scrollWidth": 375,
+    "viewport": 375
+  },
+  {
+    "label": "/sales-atlas-system",
+    "width": 375,
+    "scrollWidth": 375,
+    "viewport": 375
+  },
+  {
+    "label": "/szkolenie-i-wdrozenie-pipedrive",
+    "width": 375,
+    "scrollWidth": 375,
+    "viewport": 375
+  },
+  {
+    "label": "/audyt-crm-pipedrive",
+    "width": 375,
+    "scrollWidth": 375,
+    "viewport": 375
+  },
+  {
+    "noJSVisiblePanels": 9,
+    "noJSVisibleSummaries": 9
+  }
+]

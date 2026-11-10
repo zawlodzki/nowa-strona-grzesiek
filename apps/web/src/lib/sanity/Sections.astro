@@ -4,6 +4,7 @@ import ContentSection from '../../components/blocks/ContentSection.astro';
 import CtaBand from '../../components/blocks/CtaBand.astro';
 import Faq from '../../components/blocks/Faq.astro';
 import Feature from '../../components/blocks/Feature.astro';
+import Tabs from '../../components/blocks/Tabs.astro';
 import Hero from '../../components/blocks/Hero.astro';
 import LogoStrip from '../../components/blocks/LogoStrip.astro';
 import NewsletterSignup from '../../components/blocks/NewsletterSignup.astro';
@@ -37,7 +38,7 @@ const postsOf = (kind: string | undefined) => site.posts
 {sections.map((section, index) => {
   switch (section._type) {
     case 'hero':
-      return <Hero data={section} image={resolveImage(site, section.image)} headingLevel={index === firstHeading ? headingLevel : 'h2'} />;
+      return <Hero data={section} image={resolveImage(site, section.image)} badgeImage={resolveImage(site, section.badgeImage)} headingLevel={index === firstHeading ? headingLevel : 'h2'} />;
     case 'logoStrip': {
       const logos = (section.logos ?? []).flatMap((ref): ResolvedLogo[] => {
         const logo = site.logos.get(ref._ref);
@@ -50,6 +51,8 @@ const postsOf = (kind: string | undefined) => site.posts
       return <Feature data={section} image={mediaImage(section.media)} links={links} images={images} headingLevel={index === firstHeading ? headingLevel : 'h2'} />;
     case 'contentSection':
       return <ContentSection data={section} image={mediaImage(section.media)} links={links} images={images} />;
+    case 'tabs':
+      return <Tabs data={section} links={links} images={images} />;
     case 'pricing':
       return <Pricing data={section} />;
     case 'ctaBand':

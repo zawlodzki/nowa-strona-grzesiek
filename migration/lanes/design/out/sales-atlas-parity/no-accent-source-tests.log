@@ -1,0 +1,41 @@
+✔ openDisclosure open and closed are open (0.33896ms)
+✔ toggleDisclosure flips, and a second closeDisclosure closed stays closed (0.077292ms)
+✔ bindNavDisclosure toggles aria-expanded, closes on Escape, and binds once (0.200709ms)
+✔ null returns kind empty (1.040922ms)
+✔ a two-item nav puts the first in links and the second in pill, and on /kontakt only the pill is current (1.290257ms)
+✔ the same query function on / and /kontakt runs once, and the current flags differ (0.138834ms)
+✔ a pl document requested as en rejects and stays rejected (0.241043ms)
+✔ a footer without the consent label has added, and before holds every link (0.19ms)
+✔ a footer with the label in the middle has on-link, the label is in neither array, and a later twin stays in after (0.200709ms)
+✔ mailto is not current (0.133834ms)
+✔ / is current only for pathname / (0.560753ms)
+✔ static build pathnames ending in .html match the public path (0.269168ms)
+✔ an absolute zawlodzki.pl URL is current for its pathname, and one trailing slash is ignored (0.491085ms)
+✔ english copy uses /en and an empty nav stays none (0.149292ms)
+✔ a malformed document rejects (0.301002ms)
+✔ a thrown query stays cached for that function and language (0.088167ms)
+✔ a different query function does not reuse another function cache (0.054042ms)
+✔ the query embeds the language literal and does not ask for defaultSeo (0.046417ms)
+✔ missing or invalid configuration fails closed before rendering (16.689626ms)
+✔ every unauthenticated URL including assets is rejected before rendering (7.050119ms)
+✔ robots disallows the entire site without authentication (0.57242ms)
+✔ successful, missing and failed pages keep private headers and allow only Studio framing (1.613591ms)
+✔ preview refuses form submissions before any side effect (0.508753ms)
+✔ hosted Studio also allows its Sanity application ancestor (0.348919ms)
+✔ session is signed, expires after one hour and cannot cross origin or dataset (15.260702ms)
+✔ tampered, malformed and duplicate sessions fail closed (1.113589ms)
+✔ cookie authorizes protected pages and assets and missing configuration still fails closed (3.067932ms)
+✔ only the exact GET enable endpoint reaches its own secret validation without Basic auth (0.697837ms)
+✔ redirect accepts local paths and rejects foreign, ambiguous and encoded boundaries (0.188167ms)
+✔ request readers fetch again and observe draft changes without a process restart (0.558461ms)
+✔ only display text receives visual editing metadata (0.124792ms)
+✔ an incomplete unrelated document does not break a valid preview (0.251877ms)
+✔ preview retains PL and EN routes and rejects uppercase slugs (0.344377ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 227.153731
