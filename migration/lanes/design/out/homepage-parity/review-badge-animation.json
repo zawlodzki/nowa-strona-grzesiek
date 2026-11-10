@@ -1,0 +1,150 @@
+[
+  {
+    "source": "live",
+    "width": 1280,
+    "normal": {
+      "ring": {
+        "animationName": "sas-iskra",
+        "animationDuration": "6.7s",
+        "animationIterationCount": "infinite",
+        "animationTimingFunction": "ease-in-out",
+        "transform": "none",
+        "opacity": "1",
+        "filter": "brightness(1)"
+      },
+      "ink": {
+        "animationName": "sas-obieg, sas-oddech",
+        "animationDuration": "11s, 4.4s",
+        "animationIterationCount": "infinite, infinite",
+        "animationTimingFunction": "linear, ease-in-out",
+        "transform": "matrix(0.690113, 0.723701, -0.723701, 0.690113, -58.0234, -58.0234)",
+        "opacity": "1",
+        "filter": "none"
+      },
+      "glow": {
+        "animationName": "none",
+        "animationDuration": "0s",
+        "animationIterationCount": "1",
+        "animationTimingFunction": "ease",
+        "transform": "none",
+        "opacity": "0.75",
+        "filter": "blur(1.77491px) saturate(1.25)"
+      },
+      "activeAnimations": 6,
+      "width": 68.265625,
+      "height": 100
+    },
+    "reducedMotion": {
+      "ring": {
+        "animationName": "none",
+        "animationDuration": "0s",
+        "animationIterationCount": "1",
+        "animationTimingFunction": "ease",
+        "transform": "none",
+        "opacity": "1",
+        "filter": "none"
+      },
+      "ink": {
+        "animationName": "none",
+        "animationDuration": "0s",
+        "animationIterationCount": "1",
+        "animationTimingFunction": "ease",
+        "transform": "matrix(0.309017, -0.951057, 0.951057, 0.309017, -58.0234, -58.0234)",
+        "opacity": "1",
+        "filter": "none"
+      },
+      "glow": {
+        "animationName": "none",
+        "animationDuration": "0s",
+        "animationIterationCount": "1",
+        "animationTimingFunction": "ease",
+        "transform": "none",
+        "opacity": "0.75",
+        "filter": "blur(1.77491px) saturate(1.25)"
+      },
+      "activeAnimations": 0,
+      "width": 68.265625,
+      "height": 100
+    },
+    "frameTimesSeconds": [
+      0,
+      3,
+      6
+    ],
+    "frameMethod": "Native CSS animations paused and sought via Web Animations API; no replacement animation or CSS edits."
+  },
+  {
+    "source": "local",
+    "width": 1280,
+    "normal": {
+      "ring": {
+        "animationName": "sas-iskra",
+        "animationDuration": "6.7s",
+        "animationIterationCount": "infinite",
+        "animationTimingFunction": "ease-in-out",
+        "transform": "none",
+        "opacity": "1",
+        "filter": "brightness(1)"
+      },
+      "ink": {
+        "animationName": "sas-obieg, sas-oddech",
+        "animationDuration": "11s, 4.4s",
+        "animationIterationCount": "infinite, infinite",
+        "animationTimingFunction": "linear, ease-in-out",
+        "transform": "matrix(0.86125, 0.508182, -0.508182, 0.86125, -58.0234, -58.0234)",
+        "opacity": "0.836751",
+        "filter": "none"
+      },
+      "glow": {
+        "animationName": "none",
+        "animationDuration": "0s",
+        "animationIterationCount": "1",
+        "animationTimingFunction": "ease",
+        "transform": "none",
+        "opacity": "0.75",
+        "filter": "blur(1.77491px) saturate(1.25)"
+      },
+      "activeAnimations": 6,
+      "width": 68.265625,
+      "height": 99.984375
+    },
+    "reducedMotion": {
+      "ring": {
+        "animationName": "none",
+        "animationDuration": "0s",
+        "animationIterationCount": "1",
+        "animationTimingFunction": "ease",
+        "transform": "none",
+        "opacity": "1",
+        "filter": "none"
+      },
+      "ink": {
+        "animationName": "none",
+        "animationDuration": "0s",
+        "animationIterationCount": "1",
+        "animationTimingFunction": "ease",
+        "transform": "matrix(0.309017, -0.951057, 0.951057, 0.309017, -58.0234, -58.0234)",
+        "opacity": "1",
+        "filter": "none"
+      },
+      "glow": {
+        "animationName": "none",
+        "animationDuration": "0s",
+        "animationIterationCount": "1",
+        "animationTimingFunction": "ease",
+        "transform": "none",
+        "opacity": "0.75",
+        "filter": "blur(1.77491px) saturate(1.25)"
+      },
+      "activeAnimations": 0,
+      "width": 68.265625,
+      "height": 99.984375
+    },
+    "frameTimesSeconds": [
+      0,
+      3,
+      6
+    ],
+    "frameMethod": "Native CSS animations paused and sought via Web Animations API; no replacement animation or CSS edits."
+  }
+]

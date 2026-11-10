@@ -36,14 +36,31 @@ const f = (name: string) => `${id}-${name}`;
   :is(h1, h2) { color: var(--text-on-dark); }
   .accent { background: linear-gradient(315deg, var(--color-secondary-60), var(--text-on-dark) 84%); background-clip: text; -webkit-text-fill-color: transparent; }
   .body { color: var(--text-on-dark-muted); max-inline-size: 60ch; }
-  .inner > :global(.signup) { inline-size: 100%; grid-template-columns: minmax(0, 1fr) auto; align-items: end; }
-  .inner :global(.signup .cf-turnstile), .inner :global(.signup .status) { grid-column: 1 / -1; }
-  .inner :global(.signup .field) { text-align: start; }
-  .inner :global(.signup .submit) { grid-column: 2; grid-row: 1; }
-  @container (width < 30rem) {
-    .inner > :global(.signup) { grid-template-columns: minmax(0, 1fr); }
-    .inner :global(.signup .submit) { grid-column: 1; grid-row: auto; }
+  .inner > :global(.signup) {
+    --newsletter-control-height: clamp(3.125rem, 2.9437rem + .7735vw, 3.5625rem);
+    inline-size: 100%;
+    max-inline-size: 30rem;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    align-items: center;
+    gap: var(--space-2xs);
   }
+  .inner :global(.signup .field) { display: contents; }
+  .inner :global(.signup .field > label) { grid-column: 1 / -1; grid-row: 1; text-align: start; }
+  .inner :global(.signup .field > input) { grid-column: 1; grid-row: 2; padding: var(--space-2xs) var(--space-xs); }
+  .inner :global(.signup .submit) {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: stretch;
+    border: var(--border-width-button) solid var(--border-accent);
+    padding: var(--space-2xs) var(--space-m);
+    font-weight: var(--font-weight-regular);
+  }
+  .inner :global(.signup :is(.field > input, .submit)) {
+    block-size: var(--newsletter-control-height);
+    min-block-size: var(--newsletter-control-height);
+  }
+  .inner :global(.signup .cf-turnstile), .inner :global(.signup .status) { grid-column: 1 / -1; }
+  @container (width < 30rem) { .inner > :global(.signup) { column-gap: 0; } }
   .legal { color: var(--text-on-dark-muted); max-inline-size: 60ch; }
   .legal a { color: var(--text-link-on-dark); }
   .legal a:active { color: var(--text-on-dark); }
