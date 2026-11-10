@@ -1,0 +1,474 @@
+[
+  {
+    "source": "live",
+    "route": "/",
+    "width": 1280,
+    "header": {
+      "tag": "DIV",
+      "text": "KontaktSkontaktuj się ze mnąWspółpracę najlepiej zacząć od rozmowy.",
+      "width": 600,
+      "height": 166.5,
+      "fontSize": "20px",
+      "fontWeight": "400",
+      "lineHeight": "35px",
+      "textAlign": "center",
+      "borderRadius": "0px"
+    },
+    "headerChildGaps": [
+      25,
+      25
+    ],
+    "headerCardGap": 48,
+    "formHeading": {
+      "tag": "H3",
+      "text": "Formularz kontaktowy",
+      "width": 512,
+      "height": 37.5,
+      "fontSize": "30px",
+      "fontWeight": "600",
+      "lineHeight": "37.5px",
+      "textAlign": "start",
+      "borderRadius": "0px"
+    },
+    "formHeadingToInput": 24,
+    "photo": {
+      "tag": "IMG",
+      "text": "",
+      "width": 168.953125,
+      "height": 168.953125,
+      "fontSize": "20px",
+      "fontWeight": "400",
+      "lineHeight": "35px",
+      "textAlign": "start",
+      "borderRadius": "0px"
+    },
+    "photoToHeading": 24,
+    "headings": [
+      {
+        "level": "H2",
+        "text": "Skontaktuj się ze mną"
+      },
+      {
+        "level": "H3",
+        "text": "Formularz kontaktowy"
+      },
+      {
+        "level": "H3",
+        "text": "Bezpośredni kontakt"
+      }
+    ],
+    "cardBackground": "rgb(249, 250, 251)",
+    "phoneText": [
+      "phone+48 571 088 338"
+    ],
+    "underlines": [
+      "none",
+      "none"
+    ],
+    "scrollWidth": 1280
+  },
+  {
+    "source": "live",
+    "route": "/kontakt",
+    "width": 1280,
+    "header": {
+      "tag": "H1",
+      "text": "Umów się na bezpłatną konsultację",
+      "width": 524,
+      "height": 99,
+      "fontSize": "45px",
+      "fontWeight": "700",
+      "lineHeight": "49.5px",
+      "textAlign": "start",
+      "borderRadius": "0px"
+    },
+    "headerChildGaps": [],
+    "headerCardGap": null,
+    "formHeading": null,
+    "formHeadingToInput": null,
+    "photo": null,
+    "photoToHeading": null,
+    "headings": [
+      {
+        "level": "H1",
+        "text": "Umów się na bezpłatną konsultację"
+      },
+      {
+        "level": "H2",
+        "text": "Dostęp do mojego kalendarza"
+      },
+      {
+        "level": "H2",
+        "text": "Jak działa bezpłatna konsultacja?"
+      }
+    ],
+    "cardBackground": null,
+    "phoneText": [],
+    "underlines": [],
+    "scrollWidth": 1280
+  },
+  {
+    "source": "local",
+    "route": "/",
+    "width": 1280,
+    "header": {
+      "tag": "HEADER",
+      "text": "KontaktSkontaktuj się ze mnąWspółpracę najlepiej zacząć od rozmowy.",
+      "width": 600,
+      "height": 159.015625,
+      "fontSize": "19.3904px",
+      "fontWeight": "400",
+      "lineHeight": "33.9332px",
+      "textAlign": "center",
+      "borderRadius": "0px"
+    },
+    "headerChildGaps": [
+      24.984375,
+      24.984375
+    ],
+    "headerCardGap": 48,
+    "formHeading": {
+      "tag": "H3",
+      "text": "Formularz kontaktowy",
+      "width": 605.875,
+      "height": 37.5,
+      "fontSize": "29.9999px",
+      "fontWeight": "600",
+      "lineHeight": "37.4999px",
+      "textAlign": "start",
+      "borderRadius": "0px"
+    },
+    "formHeadingToInput": 24,
+    "photo": {
+      "tag": "IMG",
+      "text": "",
+      "width": 168.953125,
+      "height": 168.953125,
+      "fontSize": "19.3904px",
+      "fontWeight": "400",
+      "lineHeight": "33.9332px",
+      "textAlign": "start",
+      "borderRadius": "0px"
+    },
+    "photoToHeading": 24,
+    "headings": [
+      {
+        "level": "H2",
+        "text": "Skontaktuj się ze mną"
+      },
+      {
+        "level": "H3",
+        "text": "Formularz kontaktowy"
+      },
+      {
+        "level": "H3",
+        "text": "Bezpośredni kontakt"
+      }
+    ],
+    "cardBackground": "oklch(0.98463 0.00171 247.839)",
+    "phoneText": [
+      "+48571088338"
+    ],
+    "underlines": [
+      "underline",
+      "underline"
+    ],
+    "scrollWidth": 1280
+  },
+  {
+    "source": "local",
+    "route": "/kontakt",
+    "width": 1280,
+    "header": {
+      "tag": "HEADER",
+      "text": "Formularz kontaktowyUmów się na bezpłatną konsultacjęWspółpracę najlepiej zacząć od rozmowy.\nNa pierwsze spotkanie on-line zarezerwuj 25 min.",
+      "width": 640,
+      "height": 206.953125,
+      "fontSize": "19.3904px",
+      "fontWeight": "400",
+      "lineHeight": "33.9332px",
+      "textAlign": "start",
+      "borderRadius": "0px"
+    },
+    "headerChildGaps": [
+      8,
+      8
+    ],
+    "headerCardGap": 32,
+    "formHeading": null,
+    "formHeadingToInput": null,
+    "photo": null,
+    "photoToHeading": null,
+    "headings": [
+      {
+        "level": "H1",
+        "text": "Umów się na bezpłatną konsultację"
+      },
+      {
+        "level": "H2",
+        "text": "Dostęp do mojego kalendarza"
+      },
+      {
+        "level": "H2",
+        "text": "Jak działa bezpłatna konsultacja?"
+      },
+      {
+        "level": "H2",
+        "text": "Wolisz sam/a się odezwać?"
+      },
+      {
+        "level": "H3",
+        "text": "Social media"
+      },
+      {
+        "level": "H3",
+        "text": "Bezpośredni kontakt"
+      }
+    ],
+    "cardBackground": "oklch(0.98463 0.00171 247.839)",
+    "phoneText": [
+      "+48 571 088 338"
+    ],
+    "underlines": [
+      "underline",
+      "underline"
+    ],
+    "scrollWidth": 1280
+  },
+  {
+    "source": "live",
+    "route": "/",
+    "width": 375,
+    "header": {
+      "tag": "DIV",
+      "text": "KontaktSkontaktuj się ze mnąWspółpracę najlepiej zacząć od rozmowy.",
+      "width": 343,
+      "height": 136.59375,
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28px",
+      "textAlign": "center",
+      "borderRadius": "0px"
+    },
+    "headerChildGaps": [
+      20,
+      20
+    ],
+    "headerCardGap": 32,
+    "formHeading": {
+      "tag": "H3",
+      "text": "Formularz kontaktowy",
+      "width": 295,
+      "height": 30,
+      "fontSize": "24px",
+      "fontWeight": "600",
+      "lineHeight": "30px",
+      "textAlign": "start",
+      "borderRadius": "0px"
+    },
+    "formHeadingToInput": 24,
+    "photo": {
+      "tag": "IMG",
+      "text": "",
+      "width": 59,
+      "height": 59,
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28px",
+      "textAlign": "start",
+      "borderRadius": "0px"
+    },
+    "photoToHeading": 24,
+    "headings": [
+      {
+        "level": "H2",
+        "text": "Skontaktuj się ze mną"
+      },
+      {
+        "level": "H3",
+        "text": "Formularz kontaktowy"
+      },
+      {
+        "level": "H3",
+        "text": "Bezpośredni kontakt"
+      }
+    ],
+    "cardBackground": "rgb(249, 250, 251)",
+    "phoneText": [
+      "phone+48 571 088 338"
+    ],
+    "underlines": [
+      "none",
+      "none"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "source": "live",
+    "route": "/kontakt",
+    "width": 375,
+    "header": {
+      "tag": "H1",
+      "text": "Umów się na bezpłatną konsultację",
+      "width": 343,
+      "height": 79.1875,
+      "fontSize": "36px",
+      "fontWeight": "700",
+      "lineHeight": "39.6px",
+      "textAlign": "left",
+      "borderRadius": "0px"
+    },
+    "headerChildGaps": [],
+    "headerCardGap": null,
+    "formHeading": null,
+    "formHeadingToInput": null,
+    "photo": null,
+    "photoToHeading": null,
+    "headings": [
+      {
+        "level": "H1",
+        "text": "Umów się na bezpłatną konsultację"
+      },
+      {
+        "level": "H2",
+        "text": "Dostęp do mojego kalendarza"
+      },
+      {
+        "level": "H2",
+        "text": "Jak działa bezpłatna konsultacja?"
+      }
+    ],
+    "cardBackground": null,
+    "phoneText": [],
+    "underlines": [],
+    "scrollWidth": 375
+  },
+  {
+    "source": "local",
+    "route": "/",
+    "width": 375,
+    "header": {
+      "tag": "HEADER",
+      "text": "KontaktSkontaktuj się ze mnąWspółpracę najlepiej zacząć od rozmowy.",
+      "width": 343,
+      "height": 129.984375,
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28px",
+      "textAlign": "center",
+      "borderRadius": "0px"
+    },
+    "headerChildGaps": [
+      20,
+      20
+    ],
+    "headerCardGap": 32,
+    "formHeading": {
+      "tag": "H3",
+      "text": "Formularz kontaktowy",
+      "width": 295,
+      "height": 30,
+      "fontSize": "24px",
+      "fontWeight": "600",
+      "lineHeight": "30px",
+      "textAlign": "start",
+      "borderRadius": "0px"
+    },
+    "formHeadingToInput": 23.984375,
+    "photo": {
+      "tag": "IMG",
+      "text": "",
+      "width": 59,
+      "height": 59,
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28px",
+      "textAlign": "start",
+      "borderRadius": "0px"
+    },
+    "photoToHeading": 24,
+    "headings": [
+      {
+        "level": "H2",
+        "text": "Skontaktuj się ze mną"
+      },
+      {
+        "level": "H3",
+        "text": "Formularz kontaktowy"
+      },
+      {
+        "level": "H3",
+        "text": "Bezpośredni kontakt"
+      }
+    ],
+    "cardBackground": "oklch(0.98463 0.00171 247.839)",
+    "phoneText": [
+      "+48571088338"
+    ],
+    "underlines": [
+      "underline",
+      "underline"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "source": "local",
+    "route": "/kontakt",
+    "width": 375,
+    "header": {
+      "tag": "HEADER",
+      "text": "Formularz kontaktowyUmów się na bezpłatną konsultacjęWspółpracę najlepiej zacząć od rozmowy.\nNa pierwsze spotkanie on-line zarezerwuj 25 min.",
+      "width": 343,
+      "height": 173.578125,
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28px",
+      "textAlign": "start",
+      "borderRadius": "0px"
+    },
+    "headerChildGaps": [
+      8,
+      8
+    ],
+    "headerCardGap": 32,
+    "formHeading": null,
+    "formHeadingToInput": null,
+    "photo": null,
+    "photoToHeading": null,
+    "headings": [
+      {
+        "level": "H1",
+        "text": "Umów się na bezpłatną konsultację"
+      },
+      {
+        "level": "H2",
+        "text": "Dostęp do mojego kalendarza"
+      },
+      {
+        "level": "H2",
+        "text": "Jak działa bezpłatna konsultacja?"
+      },
+      {
+        "level": "H2",
+        "text": "Wolisz sam/a się odezwać?"
+      },
+      {
+        "level": "H3",
+        "text": "Social media"
+      },
+      {
+        "level": "H3",
+        "text": "Bezpośredni kontakt"
+      }
+    ],
+    "cardBackground": "oklch(0.98463 0.00171 247.839)",
+    "phoneText": [
+      "+48 571 088 338"
+    ],
+    "underlines": [
+      "underline",
+      "underline"
+    ],
+    "scrollWidth": 375
+  }
+]

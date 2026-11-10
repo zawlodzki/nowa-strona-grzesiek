@@ -1,6 +1,6 @@
 # T31 visual proof
 
-**Latest approved change:** see [Full-width contact submit](#full-width-contact-submit). [Hidden labels and placeholders](#hidden-labels-and-placeholders) remains the current label/a11y evidence. These `*-labels-*` captures supersede the visible field labels in earlier proof. [PR #50 follow-up proof](#pr-50-follow-up-proof) remains the latest footer/badge evidence.
+**Final approved contact refinements:** see [Centred header, form heading and profile photo](#centred-header-form-heading-and-profile-photo). [Full-width contact submit](#full-width-contact-submit) remains the current button evidence. [Hidden labels and placeholders](#hidden-labels-and-placeholders) remains the current label/a11y evidence. These `*-labels-*` captures supersede the visible field labels in earlier proof. [PR #50 follow-up proof](#pr-50-follow-up-proof) remains the latest footer/badge evidence.
 
 Captured 2026-11-10 from live `https://zawlodzki.pl/` and the built Astro site behind local `wrangler dev --local` on port 8790. Browser: headless Chromium, device scale 1, 1280/375 px. No deploy or dataset writes.
 
@@ -133,3 +133,26 @@ Measured live button treatment reproduced locally at 1280/375: **100% of the for
 [Submission results](button-forms-proof.json), [mock receiver payloads](button-delivery.json), [submission driver](button-submission.mjs): landing contact/newsletter/full contact continue to return 303 and navigate to the correct thank-you pages. Payloads retain 37/34/37 fields and all attribution keys. Missing-token protection and unknown-form recovery pass.
 
 [Astro check](button-astro-check.txt) passes with 0 errors/warnings and one existing hint; [source tests](button-source-tests.txt): 81 passed, one skipped, zero failures; [build](button-build.txt): 117 pages. The requested literal [node --test src](button-node-test-src.txt) still fails on this Node 24 directory invocation; explicit source-file discovery runs the complete passing suite. Board check: 31 tasks, 0 problems. Design detector on LeadForm reported no findings. No deploy or merge.
+
+## Centred header, form heading and profile photo
+
+Final scope for PR #50: exactly these three ContactForm refinements plus the requested PR-link attempt. `link_pull_request` succeeded (`alreadyLinked: true`). No other application file changed in this update.
+
+1. Landing section header is centred with a 600px maximum width (343px at 375 viewport), centred text and 25px/20px child gaps. Header-to-card spacing is 48px desktop / 32px mobile, matching live. Full contact retains its existing H1/header composition because live `/kontakt` uses a different, left-aligned full variant.
+2. Landing adds **H3 Formularz kontaktowy** above the fields inside the card, below the section H2. It matches live's 30px/24px, weight 600, line-height 37.5px/30px and approximately 24px actual heading-to-input spacing. If a landing block has no section heading it falls back to H2 to avoid a skipped level. Full contact already has its page H1 and a Formularz kontaktowy tagline in content; live has no extra form H3, so no duplicate heading is added.
+3. Landing portrait matches live's rendered **168.953×168.953px at 1280** and **59×59px at 375**, radius 0 and 24px gap before Bezpośredni kontakt. After decoding the live lazy image, the actual desktop rule is 33% of its 512px column; mobile is 20% of 295px. Local fluid photo dimensions reproduce these endpoints without changing the existing card columns. Live/full contact has no corresponding portrait, and none is inserted into the full variant.
+
+| Contact section | 1280 px | 375 px |
+|---|---|---|
+| Homepage | [live vs local](compare-section-contact-home-w1280.png) | [live vs local](compare-section-contact-home-w375.png) |
+| `/kontakt` | [live vs local](compare-section-contact-kontakt-w1280.png) | [live vs local](compare-section-contact-kontakt-w375.png) |
+
+[Computed sizes and heading outline](section-computed.json) records live/local geometry, spacing, typography, photo dimensions, card background, phone text and link underlines. [Proof driver](section-proof.mjs) asserts landing parity to subpixel tolerance, H2→H3 structure, no duplicate full-variant H1/form heading or portrait, and no horizontal overflow. Direct verify-web `section_-w*.png` and `section_kontakt-w*.png` and [HTTP probes](section-probes.tsv) supplement the cropped comparisons.
+
+Phone number rendering, link markup/underlines and the light grey card background were left untouched. LeadForm, fields, buttons, newsletter, footer and other blocks were not modified.
+
+[Submission proof](section-forms-proof.json), [mock receiver payloads](section-delivery.json), [submission driver](section-submission.mjs): landing contact, newsletter and full contact still return 303 and navigate to the correct thank-you paths, with unchanged 37/34/37-field payloads and attribution contract. Missing-token 403 and unknown-form recovery still pass.
+
+[Astro check](section-astro-check.txt) passes (0 errors/warnings, one existing hint), [source tests](section-source-tests.txt) pass (81 passed, one skipped, zero failed), [build](section-build.txt) passes (117 pages), and board check passes (31 tasks, 0 problems). The requested literal [node --test src](section-node-test-src.txt) was also run; this Node 24 invocation rejects the directory, while explicit source-file discovery passes the complete suite. [Design detector](section-design-detector.json): no findings.
+
+Other observed differences are follow-ups for a **new task and PR**: existing card column proportions/padding; main heading/tagline typography and outer section rhythm from global fluid tokens; full contact's existing H1/tagline/intro placement relative to the live form column. Phone formatting and link underlines remain explicitly protected. These differences were not changed here.
