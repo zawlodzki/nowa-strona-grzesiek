@@ -120,6 +120,7 @@ export type SeoPage = PageKind & {
   entityImages?: { person: Image; organization: Image };
   dateModified?: string;
   faq?: FaqEntry[];
+  reviews?: { id: string; author: string; body: string }[];
   /** The same page in the other language. Only real pairs, so hreflang never points at a missing page. */
   translation?: { language: Language; path: SitePath };
 };

@@ -1,0 +1,1046 @@
+[
+  {
+    "width": 1440,
+    "cards": [
+      "oklch(0.97262 0.02105 215.254)",
+      "oklch(0.97262 0.02105 215.254)",
+      "oklch(0.97262 0.02105 215.254)",
+      "oklch(0.97262 0.02105 215.254)"
+    ],
+    "graphs": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#webpage",
+            "url": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana",
+            "name": "Szkolenie i wdrożenie Asany, które porządkuje realizację projektów",
+            "description": "Szkolenie zespołu na Waszych projektach razem z wdrożeniem Asany: szablony i odpowiedzialności. Do 15 osób: 6 tys. zł netto/mies. przez 3 mies. (18 tys. łącznie).",
+            "inLanguage": "pl-PL",
+            "isPartOf": {
+              "@id": "https://www.zawlodzki.pl/#website"
+            },
+            "about": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service"
+            },
+            "mainEntity": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service"
+            },
+            "breadcrumb": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#breadcrumb"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://cdn.sanity.io/images/8u2zjhvn/production/e1cdee338868228a60708789abe832dd742354d6-800x800.webp?w=800&fit=max&auto=format",
+              "width": 800,
+              "height": 800,
+              "caption": "Grzegorz Zawłodzki konsultant asana.com"
+            },
+            "dateModified": "2026-11-09T20:41:37Z"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service",
+            "name": "Szkolenie i wdrożenie Asany, które porządkuje realizację projektów",
+            "description": "Szkolenie zespołu na Waszych projektach razem z wdrożeniem Asany: szablony i odpowiedzialności. Do 15 osób: 6 tys. zł netto/mies. przez 3 mies. (18 tys. łącznie).",
+            "url": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana",
+            "provider": {
+              "@id": "https://www.zawlodzki.pl/#organization"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Polska"
+            },
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Audyt istniejącej Asany",
+                "price": "3900",
+                "priceCurrency": "PLN"
+              },
+              {
+                "@type": "Offer",
+                "name": "Zespół do 15 osób",
+                "price": "6000",
+                "priceCurrency": "PLN"
+              },
+              {
+                "@type": "Offer",
+                "name": "Firmy 15+ osób"
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona główna",
+                "item": "https://www.zawlodzki.pl/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Szkolenie i wdrożenie Asany, które porządkuje realizację projektów",
+                "item": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#faq",
+            "isPartOf": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#webpage"
+            },
+            "about": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service"
+            },
+            "inLanguage": "pl-PL",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Ile kosztuje wdrożenie aplikacji do zarządzania projektami asana.com?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Wdrożenie dla zespołu do 15 osób kosztuje 6 000 zł netto miesięcznie przy współpracy na 3 miesiące, czyli 18 000 zł netto łącznie. W cenie jest mapa procesu, szablony projektów, konfiguracja, 12 warsztatów, szkolenie z organizacji pracy na Waszych realnych projektach i przygotowanie lidera, który będzie rozwijał system. System sprzedaż–realizacja, czyli Asana połączona z Pipedrive i automatyzacjami, wyceniam indywidualnie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kiedy szkolisz zespół z pracy w Asanie?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nie na starcie. Podstawy pokazuję na pierwszych warsztatach, ale szkolenie z organizacji pracy robię dopiero wtedy, gdy w Asanie jest masa krytyczna Waszych zadań i projektów. Dobre praktyki: skrzynka odbiorcza zamiast maili, Moje zadania, komunikacja w zadaniu, mają się wtedy do czego przykleić. Szkolenie na pustym systemie to teoria, którą zespół zapomina w tydzień."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ile kosztuje szkolenie z obsługi asana.com?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Szkolenie jest częścią wdrożenia: dla zespołu do 15 osób to 6 000 zł netto miesięcznie przez 3 miesiące, czyli 18 000 zł netto łącznie. Osobno go nie sprzedaję, bo bez szablonów i odpowiedzialności ustawionych pod Waszą pracę zespół nie ma do czego przyłożyć tego, czego się nauczył. Jeśli Twoja firma już pracuje w Asanie i trzeba ją uporządkować, punktem startu jest audyt za 3 900 zł netto. Kończy się raportem z listą problemów i planem naprawy, a część poprawek robimy od razu podczas warsztatów."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czym to szkolenie różni się od kursu Asany online?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Kurs uczy obsługi narzędzia: jak założyć projekt, przypisać zadanie, przełączyć widok na tablicę. Jednej osobie to wystarczy. Zespół potyka się o coś innego. Nie ma wspólnych szablonów ani ustaleń, kto za co odpowiada, więc po kursie każdy i tak prowadzi projekty po swojemu. Dlatego szkolę na Waszych projektach, w Asanie, którą w tym czasie razem ustawiamy. Po trzech miesiącach zespół zna narzędzie i ma w nim system, którego używa."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Jak długo trwa wdrożenie asana.com do firmy?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pierwszy proces działa w Asanie w ciągu 30 dni. Pełne wdrożenie kolejnych procesów i zespołów trwa od 1 do 6 miesięcy, zależnie od wielkości firmy i czasu, jaki zespół może zadeklarować między warsztatami."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy zespół będzie musiał wszystko raportować w Asanie?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nie i to jest fundament mojego podejścia. Rozmowy zostają tam, gdzie mają sens. Asana przejmuje ich wynik: kto się zobowiązał, do czego, na kiedy i od czego zależy dalsza praca. Po wdrożeniu zespół dostaje też jasne zasady, czego do Asany nie wpisywać, żeby system nie zamienił się w dodatkową biurokrację."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kogo trzeba zaangażować we wdrożenie asana.com?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Na starcie wyznaczamy lidera wdrożenia, czyli osobę, która zna procesy firmy. Lider koordynuje warsztaty po stronie firmy, a na końcu dostaje zasady administracji, dokumentację i wzorzec onboardingu, żeby rozwijać system i wdrażać kolejne osoby bez stałej zależności ode mnie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Korzystam już z asana.com, muszę ją na nowo wdrażać?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nie. Dla firm z działającą Asaną robię audyt za 3 900 zł netto. Przechodzę przez architekturę, szablony, realną pracę zespołu i raporty. Najczęstsze znalezisko: każdy dział zbudował w Asanie co innego, więc nikt nie widzi całości. Dostajesz listę problemów z priorytetami i decydujesz, czy naprawiamy razem, czy Twój zespół samodzielnie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy łączysz Asanę z Pipedrive?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak, to mój ulubiony przepływ: wygrana szansa w Pipedrive automatycznie tworzy właściwy typ projektu w Asanie, przenosi ustalenia handlowe i przypisuje odpowiedzialności. Zespół realizacyjny nie zaczyna od ponownego zbierania informacji, które sprzedaż już ustaliła. Szczegóły na stronie wdrożenia Pipedrive."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Skąd mam wiedzieć co wybrać: Asana czy Jira, Clickup, Monday, Motion, Airtable, Notion?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Narzędzie jest wtórne, najpierw musisz wiedzieć, jaki problem ma rozwiązać. Być może nie potrzebujesz żadnego z nich albo potrzebujesz czegoś zupełnie innego. Jeśli masz wątpliwości, napisz do mnie, powiem wprost, także wtedy, gdy Asana nie będzie dobrym wyborem."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy dostanę fakturę VAT?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak, oczywiście."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy możemy podpisać umowę NDA?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak. Daj mi znać, że jest to konieczne, prześlę wzór. Umowę będziemy mogli podpisać elektronicznie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy asana.com jest po polsku?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Interfejs aplikacji asana.com w przeglądarce i aplikacji mobilnej jest całkowicie spolszczony. Oficjalny support działa w języku angielskim, natomiast ja odpowiem na wszystkie Twoje pytania w języku polskim."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy asana.com jest darmowa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Asana ma darmowy plan Personal, ale dla maksymalnie 2 użytkowników. Do pracy zespołowej potrzebny jest plan płatny, na starcie współpracy pomagam dobrać właściwy, żeby nie płacić za funkcje, których nie użyjecie."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://www.zawlodzki.pl/o-mnie#person",
+            "name": "Grzegorz Zawłodzki",
+            "jobTitle": "Konsultant CRM i automatyzacji sprzedaży B2B",
+            "description": "Konsultant i trener. Wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę oraz procesy sprzedaży wspierane przez AI. Pracował z ponad 50 firmami, od startupów po globalne marki jak IAB.",
+            "url": "https://www.zawlodzki.pl/o-mnie",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://cdn.sanity.io/images/8u2zjhvn/production/d519a3e46c8eb9f05e98170375bcfaec6b8ac75b-240x448.webp?w=240&fit=max&auto=format",
+              "width": 240,
+              "height": 448,
+              "caption": "Grzegorz Zawłodzki"
+            },
+            "email": "grzesiek@zawlodzki.pl",
+            "telephone": "+48571088338",
+            "worksFor": {
+              "@id": "https://www.zawlodzki.pl/#organization"
+            },
+            "knowsLanguage": [
+              "pl",
+              "en"
+            ],
+            "knowsAbout": [
+              "Wdrożenia CRM",
+              "Pipedrive",
+              "HubSpot",
+              "Attio",
+              "Asana",
+              "AI w sprzedaży B2B",
+              "Agenty AI",
+              "Automatyzacja procesów biznesowych",
+              "n8n",
+              "Integracje API",
+              "Dashboardy sprzedażowe",
+              "Zarządzanie projektami"
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/in/zawlodzki/",
+              "https://x.com/zawlodzki",
+              "https://www.youtube.com/@GrzesiekZawlodzki",
+              "https://www.instagram.com/zawlodzki/",
+              "https://github.com/zawlodzki"
+            ]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.zawlodzki.pl/#organization",
+            "name": "Wellbiz",
+            "legalName": "Wellbiz sp. z o.o.",
+            "alternateName": [
+              "zawlodzki.pl"
+            ],
+            "description": "Wellbiz to firma doradcza z Krakowa, która wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę, automatyzacje w n8n oraz procesy sprzedaży wspierane przez AI w firmach B2B. Prowadzi ją Grzegorz Zawłodzki, a serwis firmy działa pod adresem zawlodzki.pl.",
+            "url": "https://www.zawlodzki.pl",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://cdn.sanity.io/images/8u2zjhvn/production/99e95e3456f8f59119d96aa8125d3ee172095c66-215x82.svg?w=215&fit=max&auto=format",
+              "width": 215,
+              "height": 82,
+              "caption": "Wellbiz"
+            },
+            "foundingDate": "2025-02-26",
+            "vatID": "PL6793323800",
+            "taxID": "6793323800",
+            "identifier": [
+              {
+                "@type": "PropertyValue",
+                "propertyID": "KRS",
+                "value": "0001158341"
+              },
+              {
+                "@type": "PropertyValue",
+                "propertyID": "REGON",
+                "value": "541006624"
+              }
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "ul. Lipowa 3d",
+              "postalCode": "30-702",
+              "addressLocality": "Kraków",
+              "addressCountry": "PL"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Polska"
+            },
+            "knowsAbout": [
+              "Wdrożenia CRM",
+              "Pipedrive",
+              "Asana",
+              "AI w sprzedaży B2B",
+              "Automatyzacja procesów biznesowych",
+              "n8n"
+            ],
+            "founder": {
+              "@id": "https://www.zawlodzki.pl/o-mnie#person"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "grzesiek@zawlodzki.pl",
+              "telephone": "+48571088338",
+              "contactType": "sales",
+              "availableLanguage": [
+                "pl",
+                "en"
+              ]
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/zawlodzki-pl/",
+              "https://rejestr.io/krs/1158341/wellbiz",
+              "https://aleo.com/pl/firma/wellbiz-spolka-z-ograniczona-odpowiedzialnoscia"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.zawlodzki.pl/#website",
+            "url": "https://www.zawlodzki.pl",
+            "name": "Grzegorz Zawłodzki — wdrożenia CRM i automatyzacja sprzedaży B2B",
+            "alternateName": "zawlodzki.pl",
+            "inLanguage": [
+              "pl-PL",
+              "en"
+            ],
+            "publisher": {
+              "@id": "https://www.zawlodzki.pl/o-mnie#person"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "cards": [
+      "oklch(0.97262 0.02105 215.254)",
+      "oklch(0.97262 0.02105 215.254)",
+      "oklch(0.97262 0.02105 215.254)",
+      "oklch(0.97262 0.02105 215.254)"
+    ],
+    "graphs": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#webpage",
+            "url": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana",
+            "name": "Szkolenie i wdrożenie Asany, które porządkuje realizację projektów",
+            "description": "Szkolenie zespołu na Waszych projektach razem z wdrożeniem Asany: szablony i odpowiedzialności. Do 15 osób: 6 tys. zł netto/mies. przez 3 mies. (18 tys. łącznie).",
+            "inLanguage": "pl-PL",
+            "isPartOf": {
+              "@id": "https://www.zawlodzki.pl/#website"
+            },
+            "about": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service"
+            },
+            "mainEntity": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service"
+            },
+            "breadcrumb": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#breadcrumb"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://cdn.sanity.io/images/8u2zjhvn/production/e1cdee338868228a60708789abe832dd742354d6-800x800.webp?w=800&fit=max&auto=format",
+              "width": 800,
+              "height": 800,
+              "caption": "Grzegorz Zawłodzki konsultant asana.com"
+            },
+            "dateModified": "2026-11-09T20:41:37Z"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service",
+            "name": "Szkolenie i wdrożenie Asany, które porządkuje realizację projektów",
+            "description": "Szkolenie zespołu na Waszych projektach razem z wdrożeniem Asany: szablony i odpowiedzialności. Do 15 osób: 6 tys. zł netto/mies. przez 3 mies. (18 tys. łącznie).",
+            "url": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana",
+            "provider": {
+              "@id": "https://www.zawlodzki.pl/#organization"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Polska"
+            },
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Audyt istniejącej Asany",
+                "price": "3900",
+                "priceCurrency": "PLN"
+              },
+              {
+                "@type": "Offer",
+                "name": "Zespół do 15 osób",
+                "price": "6000",
+                "priceCurrency": "PLN"
+              },
+              {
+                "@type": "Offer",
+                "name": "Firmy 15+ osób"
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona główna",
+                "item": "https://www.zawlodzki.pl/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Szkolenie i wdrożenie Asany, które porządkuje realizację projektów",
+                "item": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#faq",
+            "isPartOf": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#webpage"
+            },
+            "about": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service"
+            },
+            "inLanguage": "pl-PL",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Ile kosztuje wdrożenie aplikacji do zarządzania projektami asana.com?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Wdrożenie dla zespołu do 15 osób kosztuje 6 000 zł netto miesięcznie przy współpracy na 3 miesiące, czyli 18 000 zł netto łącznie. W cenie jest mapa procesu, szablony projektów, konfiguracja, 12 warsztatów, szkolenie z organizacji pracy na Waszych realnych projektach i przygotowanie lidera, który będzie rozwijał system. System sprzedaż–realizacja, czyli Asana połączona z Pipedrive i automatyzacjami, wyceniam indywidualnie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kiedy szkolisz zespół z pracy w Asanie?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nie na starcie. Podstawy pokazuję na pierwszych warsztatach, ale szkolenie z organizacji pracy robię dopiero wtedy, gdy w Asanie jest masa krytyczna Waszych zadań i projektów. Dobre praktyki: skrzynka odbiorcza zamiast maili, Moje zadania, komunikacja w zadaniu, mają się wtedy do czego przykleić. Szkolenie na pustym systemie to teoria, którą zespół zapomina w tydzień."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ile kosztuje szkolenie z obsługi asana.com?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Szkolenie jest częścią wdrożenia: dla zespołu do 15 osób to 6 000 zł netto miesięcznie przez 3 miesiące, czyli 18 000 zł netto łącznie. Osobno go nie sprzedaję, bo bez szablonów i odpowiedzialności ustawionych pod Waszą pracę zespół nie ma do czego przyłożyć tego, czego się nauczył. Jeśli Twoja firma już pracuje w Asanie i trzeba ją uporządkować, punktem startu jest audyt za 3 900 zł netto. Kończy się raportem z listą problemów i planem naprawy, a część poprawek robimy od razu podczas warsztatów."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czym to szkolenie różni się od kursu Asany online?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Kurs uczy obsługi narzędzia: jak założyć projekt, przypisać zadanie, przełączyć widok na tablicę. Jednej osobie to wystarczy. Zespół potyka się o coś innego. Nie ma wspólnych szablonów ani ustaleń, kto za co odpowiada, więc po kursie każdy i tak prowadzi projekty po swojemu. Dlatego szkolę na Waszych projektach, w Asanie, którą w tym czasie razem ustawiamy. Po trzech miesiącach zespół zna narzędzie i ma w nim system, którego używa."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Jak długo trwa wdrożenie asana.com do firmy?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pierwszy proces działa w Asanie w ciągu 30 dni. Pełne wdrożenie kolejnych procesów i zespołów trwa od 1 do 6 miesięcy, zależnie od wielkości firmy i czasu, jaki zespół może zadeklarować między warsztatami."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy zespół będzie musiał wszystko raportować w Asanie?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nie i to jest fundament mojego podejścia. Rozmowy zostają tam, gdzie mają sens. Asana przejmuje ich wynik: kto się zobowiązał, do czego, na kiedy i od czego zależy dalsza praca. Po wdrożeniu zespół dostaje też jasne zasady, czego do Asany nie wpisywać, żeby system nie zamienił się w dodatkową biurokrację."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kogo trzeba zaangażować we wdrożenie asana.com?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Na starcie wyznaczamy lidera wdrożenia, czyli osobę, która zna procesy firmy. Lider koordynuje warsztaty po stronie firmy, a na końcu dostaje zasady administracji, dokumentację i wzorzec onboardingu, żeby rozwijać system i wdrażać kolejne osoby bez stałej zależności ode mnie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Korzystam już z asana.com, muszę ją na nowo wdrażać?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nie. Dla firm z działającą Asaną robię audyt za 3 900 zł netto. Przechodzę przez architekturę, szablony, realną pracę zespołu i raporty. Najczęstsze znalezisko: każdy dział zbudował w Asanie co innego, więc nikt nie widzi całości. Dostajesz listę problemów z priorytetami i decydujesz, czy naprawiamy razem, czy Twój zespół samodzielnie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy łączysz Asanę z Pipedrive?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak, to mój ulubiony przepływ: wygrana szansa w Pipedrive automatycznie tworzy właściwy typ projektu w Asanie, przenosi ustalenia handlowe i przypisuje odpowiedzialności. Zespół realizacyjny nie zaczyna od ponownego zbierania informacji, które sprzedaż już ustaliła. Szczegóły na stronie wdrożenia Pipedrive."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Skąd mam wiedzieć co wybrać: Asana czy Jira, Clickup, Monday, Motion, Airtable, Notion?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Narzędzie jest wtórne, najpierw musisz wiedzieć, jaki problem ma rozwiązać. Być może nie potrzebujesz żadnego z nich albo potrzebujesz czegoś zupełnie innego. Jeśli masz wątpliwości, napisz do mnie, powiem wprost, także wtedy, gdy Asana nie będzie dobrym wyborem."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy dostanę fakturę VAT?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak, oczywiście."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy możemy podpisać umowę NDA?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak. Daj mi znać, że jest to konieczne, prześlę wzór. Umowę będziemy mogli podpisać elektronicznie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy asana.com jest po polsku?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Interfejs aplikacji asana.com w przeglądarce i aplikacji mobilnej jest całkowicie spolszczony. Oficjalny support działa w języku angielskim, natomiast ja odpowiem na wszystkie Twoje pytania w języku polskim."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy asana.com jest darmowa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Asana ma darmowy plan Personal, ale dla maksymalnie 2 użytkowników. Do pracy zespołowej potrzebny jest plan płatny, na starcie współpracy pomagam dobrać właściwy, żeby nie płacić za funkcje, których nie użyjecie."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://www.zawlodzki.pl/o-mnie#person",
+            "name": "Grzegorz Zawłodzki",
+            "jobTitle": "Konsultant CRM i automatyzacji sprzedaży B2B",
+            "description": "Konsultant i trener. Wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę oraz procesy sprzedaży wspierane przez AI. Pracował z ponad 50 firmami, od startupów po globalne marki jak IAB.",
+            "url": "https://www.zawlodzki.pl/o-mnie",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://cdn.sanity.io/images/8u2zjhvn/production/d519a3e46c8eb9f05e98170375bcfaec6b8ac75b-240x448.webp?w=240&fit=max&auto=format",
+              "width": 240,
+              "height": 448,
+              "caption": "Grzegorz Zawłodzki"
+            },
+            "email": "grzesiek@zawlodzki.pl",
+            "telephone": "+48571088338",
+            "worksFor": {
+              "@id": "https://www.zawlodzki.pl/#organization"
+            },
+            "knowsLanguage": [
+              "pl",
+              "en"
+            ],
+            "knowsAbout": [
+              "Wdrożenia CRM",
+              "Pipedrive",
+              "HubSpot",
+              "Attio",
+              "Asana",
+              "AI w sprzedaży B2B",
+              "Agenty AI",
+              "Automatyzacja procesów biznesowych",
+              "n8n",
+              "Integracje API",
+              "Dashboardy sprzedażowe",
+              "Zarządzanie projektami"
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/in/zawlodzki/",
+              "https://x.com/zawlodzki",
+              "https://www.youtube.com/@GrzesiekZawlodzki",
+              "https://www.instagram.com/zawlodzki/",
+              "https://github.com/zawlodzki"
+            ]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.zawlodzki.pl/#organization",
+            "name": "Wellbiz",
+            "legalName": "Wellbiz sp. z o.o.",
+            "alternateName": [
+              "zawlodzki.pl"
+            ],
+            "description": "Wellbiz to firma doradcza z Krakowa, która wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę, automatyzacje w n8n oraz procesy sprzedaży wspierane przez AI w firmach B2B. Prowadzi ją Grzegorz Zawłodzki, a serwis firmy działa pod adresem zawlodzki.pl.",
+            "url": "https://www.zawlodzki.pl",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://cdn.sanity.io/images/8u2zjhvn/production/99e95e3456f8f59119d96aa8125d3ee172095c66-215x82.svg?w=215&fit=max&auto=format",
+              "width": 215,
+              "height": 82,
+              "caption": "Wellbiz"
+            },
+            "foundingDate": "2025-02-26",
+            "vatID": "PL6793323800",
+            "taxID": "6793323800",
+            "identifier": [
+              {
+                "@type": "PropertyValue",
+                "propertyID": "KRS",
+                "value": "0001158341"
+              },
+              {
+                "@type": "PropertyValue",
+                "propertyID": "REGON",
+                "value": "541006624"
+              }
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "ul. Lipowa 3d",
+              "postalCode": "30-702",
+              "addressLocality": "Kraków",
+              "addressCountry": "PL"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Polska"
+            },
+            "knowsAbout": [
+              "Wdrożenia CRM",
+              "Pipedrive",
+              "Asana",
+              "AI w sprzedaży B2B",
+              "Automatyzacja procesów biznesowych",
+              "n8n"
+            ],
+            "founder": {
+              "@id": "https://www.zawlodzki.pl/o-mnie#person"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "grzesiek@zawlodzki.pl",
+              "telephone": "+48571088338",
+              "contactType": "sales",
+              "availableLanguage": [
+                "pl",
+                "en"
+              ]
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/zawlodzki-pl/",
+              "https://rejestr.io/krs/1158341/wellbiz",
+              "https://aleo.com/pl/firma/wellbiz-spolka-z-ograniczona-odpowiedzialnoscia"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.zawlodzki.pl/#website",
+            "url": "https://www.zawlodzki.pl",
+            "name": "Grzegorz Zawłodzki — wdrożenia CRM i automatyzacja sprzedaży B2B",
+            "alternateName": "zawlodzki.pl",
+            "inLanguage": [
+              "pl-PL",
+              "en"
+            ],
+            "publisher": {
+              "@id": "https://www.zawlodzki.pl/o-mnie#person"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "cards": [
+      "oklch(0.97262 0.02105 215.254)",
+      "oklch(0.97262 0.02105 215.254)",
+      "oklch(0.97262 0.02105 215.254)",
+      "oklch(0.97262 0.02105 215.254)"
+    ],
+    "graphs": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#webpage",
+            "url": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana",
+            "name": "Szkolenie i wdrożenie Asany, które porządkuje realizację projektów",
+            "description": "Szkolenie zespołu na Waszych projektach razem z wdrożeniem Asany: szablony i odpowiedzialności. Do 15 osób: 6 tys. zł netto/mies. przez 3 mies. (18 tys. łącznie).",
+            "inLanguage": "pl-PL",
+            "isPartOf": {
+              "@id": "https://www.zawlodzki.pl/#website"
+            },
+            "about": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service"
+            },
+            "mainEntity": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service"
+            },
+            "breadcrumb": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#breadcrumb"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://cdn.sanity.io/images/8u2zjhvn/production/e1cdee338868228a60708789abe832dd742354d6-800x800.webp?w=800&fit=max&auto=format",
+              "width": 800,
+              "height": 800,
+              "caption": "Grzegorz Zawłodzki konsultant asana.com"
+            },
+            "dateModified": "2026-11-09T20:41:37Z"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service",
+            "name": "Szkolenie i wdrożenie Asany, które porządkuje realizację projektów",
+            "description": "Szkolenie zespołu na Waszych projektach razem z wdrożeniem Asany: szablony i odpowiedzialności. Do 15 osób: 6 tys. zł netto/mies. przez 3 mies. (18 tys. łącznie).",
+            "url": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana",
+            "provider": {
+              "@id": "https://www.zawlodzki.pl/#organization"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Polska"
+            },
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Audyt istniejącej Asany",
+                "price": "3900",
+                "priceCurrency": "PLN"
+              },
+              {
+                "@type": "Offer",
+                "name": "Zespół do 15 osób",
+                "price": "6000",
+                "priceCurrency": "PLN"
+              },
+              {
+                "@type": "Offer",
+                "name": "Firmy 15+ osób"
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona główna",
+                "item": "https://www.zawlodzki.pl/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Szkolenie i wdrożenie Asany, które porządkuje realizację projektów",
+                "item": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#faq",
+            "isPartOf": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#webpage"
+            },
+            "about": {
+              "@id": "https://www.zawlodzki.pl/szkolenie-i-wdrozenie-asana#service"
+            },
+            "inLanguage": "pl-PL",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Ile kosztuje wdrożenie aplikacji do zarządzania projektami asana.com?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Wdrożenie dla zespołu do 15 osób kosztuje 6 000 zł netto miesięcznie przy współpracy na 3 miesiące, czyli 18 000 zł netto łącznie. W cenie jest mapa procesu, szablony projektów, konfiguracja, 12 warsztatów, szkolenie z organizacji pracy na Waszych realnych projektach i przygotowanie lidera, który będzie rozwijał system. System sprzedaż–realizacja, czyli Asana połączona z Pipedrive i automatyzacjami, wyceniam indywidualnie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kiedy szkolisz zespół z pracy w Asanie?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nie na starcie. Podstawy pokazuję na pierwszych warsztatach, ale szkolenie z organizacji pracy robię dopiero wtedy, gdy w Asanie jest masa krytyczna Waszych zadań i projektów. Dobre praktyki: skrzynka odbiorcza zamiast maili, Moje zadania, komunikacja w zadaniu, mają się wtedy do czego przykleić. Szkolenie na pustym systemie to teoria, którą zespół zapomina w tydzień."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ile kosztuje szkolenie z obsługi asana.com?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Szkolenie jest częścią wdrożenia: dla zespołu do 15 osób to 6 000 zł netto miesięcznie przez 3 miesiące, czyli 18 000 zł netto łącznie. Osobno go nie sprzedaję, bo bez szablonów i odpowiedzialności ustawionych pod Waszą pracę zespół nie ma do czego przyłożyć tego, czego się nauczył. Jeśli Twoja firma już pracuje w Asanie i trzeba ją uporządkować, punktem startu jest audyt za 3 900 zł netto. Kończy się raportem z listą problemów i planem naprawy, a część poprawek robimy od razu podczas warsztatów."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czym to szkolenie różni się od kursu Asany online?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Kurs uczy obsługi narzędzia: jak założyć projekt, przypisać zadanie, przełączyć widok na tablicę. Jednej osobie to wystarczy. Zespół potyka się o coś innego. Nie ma wspólnych szablonów ani ustaleń, kto za co odpowiada, więc po kursie każdy i tak prowadzi projekty po swojemu. Dlatego szkolę na Waszych projektach, w Asanie, którą w tym czasie razem ustawiamy. Po trzech miesiącach zespół zna narzędzie i ma w nim system, którego używa."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Jak długo trwa wdrożenie asana.com do firmy?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pierwszy proces działa w Asanie w ciągu 30 dni. Pełne wdrożenie kolejnych procesów i zespołów trwa od 1 do 6 miesięcy, zależnie od wielkości firmy i czasu, jaki zespół może zadeklarować między warsztatami."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy zespół będzie musiał wszystko raportować w Asanie?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nie i to jest fundament mojego podejścia. Rozmowy zostają tam, gdzie mają sens. Asana przejmuje ich wynik: kto się zobowiązał, do czego, na kiedy i od czego zależy dalsza praca. Po wdrożeniu zespół dostaje też jasne zasady, czego do Asany nie wpisywać, żeby system nie zamienił się w dodatkową biurokrację."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kogo trzeba zaangażować we wdrożenie asana.com?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Na starcie wyznaczamy lidera wdrożenia, czyli osobę, która zna procesy firmy. Lider koordynuje warsztaty po stronie firmy, a na końcu dostaje zasady administracji, dokumentację i wzorzec onboardingu, żeby rozwijać system i wdrażać kolejne osoby bez stałej zależności ode mnie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Korzystam już z asana.com, muszę ją na nowo wdrażać?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nie. Dla firm z działającą Asaną robię audyt za 3 900 zł netto. Przechodzę przez architekturę, szablony, realną pracę zespołu i raporty. Najczęstsze znalezisko: każdy dział zbudował w Asanie co innego, więc nikt nie widzi całości. Dostajesz listę problemów z priorytetami i decydujesz, czy naprawiamy razem, czy Twój zespół samodzielnie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy łączysz Asanę z Pipedrive?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak, to mój ulubiony przepływ: wygrana szansa w Pipedrive automatycznie tworzy właściwy typ projektu w Asanie, przenosi ustalenia handlowe i przypisuje odpowiedzialności. Zespół realizacyjny nie zaczyna od ponownego zbierania informacji, które sprzedaż już ustaliła. Szczegóły na stronie wdrożenia Pipedrive."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Skąd mam wiedzieć co wybrać: Asana czy Jira, Clickup, Monday, Motion, Airtable, Notion?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Narzędzie jest wtórne, najpierw musisz wiedzieć, jaki problem ma rozwiązać. Być może nie potrzebujesz żadnego z nich albo potrzebujesz czegoś zupełnie innego. Jeśli masz wątpliwości, napisz do mnie, powiem wprost, także wtedy, gdy Asana nie będzie dobrym wyborem."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy dostanę fakturę VAT?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak, oczywiście."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy możemy podpisać umowę NDA?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak. Daj mi znać, że jest to konieczne, prześlę wzór. Umowę będziemy mogli podpisać elektronicznie."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy asana.com jest po polsku?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Interfejs aplikacji asana.com w przeglądarce i aplikacji mobilnej jest całkowicie spolszczony. Oficjalny support działa w języku angielskim, natomiast ja odpowiem na wszystkie Twoje pytania w języku polskim."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy asana.com jest darmowa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Asana ma darmowy plan Personal, ale dla maksymalnie 2 użytkowników. Do pracy zespołowej potrzebny jest plan płatny, na starcie współpracy pomagam dobrać właściwy, żeby nie płacić za funkcje, których nie użyjecie."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://www.zawlodzki.pl/o-mnie#person",
+            "name": "Grzegorz Zawłodzki",
+            "jobTitle": "Konsultant CRM i automatyzacji sprzedaży B2B",
+            "description": "Konsultant i trener. Wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę oraz procesy sprzedaży wspierane przez AI. Pracował z ponad 50 firmami, od startupów po globalne marki jak IAB.",
+            "url": "https://www.zawlodzki.pl/o-mnie",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://cdn.sanity.io/images/8u2zjhvn/production/d519a3e46c8eb9f05e98170375bcfaec6b8ac75b-240x448.webp?w=240&fit=max&auto=format",
+              "width": 240,
+              "height": 448,
+              "caption": "Grzegorz Zawłodzki"
+            },
+            "email": "grzesiek@zawlodzki.pl",
+            "telephone": "+48571088338",
+            "worksFor": {
+              "@id": "https://www.zawlodzki.pl/#organization"
+            },
+            "knowsLanguage": [
+              "pl",
+              "en"
+            ],
+            "knowsAbout": [
+              "Wdrożenia CRM",
+              "Pipedrive",
+              "HubSpot",
+              "Attio",
+              "Asana",
+              "AI w sprzedaży B2B",
+              "Agenty AI",
+              "Automatyzacja procesów biznesowych",
+              "n8n",
+              "Integracje API",
+              "Dashboardy sprzedażowe",
+              "Zarządzanie projektami"
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/in/zawlodzki/",
+              "https://x.com/zawlodzki",
+              "https://www.youtube.com/@GrzesiekZawlodzki",
+              "https://www.instagram.com/zawlodzki/",
+              "https://github.com/zawlodzki"
+            ]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.zawlodzki.pl/#organization",
+            "name": "Wellbiz",
+            "legalName": "Wellbiz sp. z o.o.",
+            "alternateName": [
+              "zawlodzki.pl"
+            ],
+            "description": "Wellbiz to firma doradcza z Krakowa, która wdraża systemy CRM (Pipedrive, HubSpot, Attio), Asanę, automatyzacje w n8n oraz procesy sprzedaży wspierane przez AI w firmach B2B. Prowadzi ją Grzegorz Zawłodzki, a serwis firmy działa pod adresem zawlodzki.pl.",
+            "url": "https://www.zawlodzki.pl",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://cdn.sanity.io/images/8u2zjhvn/production/99e95e3456f8f59119d96aa8125d3ee172095c66-215x82.svg?w=215&fit=max&auto=format",
+              "width": 215,
+              "height": 82,
+              "caption": "Wellbiz"
+            },
+            "foundingDate": "2025-02-26",
+            "vatID": "PL6793323800",
+            "taxID": "6793323800",
+            "identifier": [
+              {
+                "@type": "PropertyValue",
+                "propertyID": "KRS",
+                "value": "0001158341"
+              },
+              {
+                "@type": "PropertyValue",
+                "propertyID": "REGON",
+                "value": "541006624"
+              }
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "ul. Lipowa 3d",
+              "postalCode": "30-702",
+              "addressLocality": "Kraków",
+              "addressCountry": "PL"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Polska"
+            },
+            "knowsAbout": [
+              "Wdrożenia CRM",
+              "Pipedrive",
+              "Asana",
+              "AI w sprzedaży B2B",
+              "Automatyzacja procesów biznesowych",
+              "n8n"
+            ],
+            "founder": {
+              "@id": "https://www.zawlodzki.pl/o-mnie#person"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "grzesiek@zawlodzki.pl",
+              "telephone": "+48571088338",
+              "contactType": "sales",
+              "availableLanguage": [
+                "pl",
+                "en"
+              ]
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/zawlodzki-pl/",
+              "https://rejestr.io/krs/1158341/wellbiz",
+              "https://aleo.com/pl/firma/wellbiz-spolka-z-ograniczona-odpowiedzialnoscia"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.zawlodzki.pl/#website",
+            "url": "https://www.zawlodzki.pl",
+            "name": "Grzegorz Zawłodzki — wdrożenia CRM i automatyzacja sprzedaży B2B",
+            "alternateName": "zawlodzki.pl",
+            "inLanguage": [
+              "pl-PL",
+              "en"
+            ],
+            "publisher": {
+              "@id": "https://www.zawlodzki.pl/o-mnie#person"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

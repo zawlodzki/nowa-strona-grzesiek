@@ -102,6 +102,11 @@ function routeSeoPage(site: Site, route: Route): SeoPage {
       breadcrumbs: crumbs(language, { name: page.title, path }),
       ...(primaryImage && { primaryImage }),
       dateModified: page._updatedAt,
+      reviews: (page.sections ?? []).flatMap((section) => section._type === 'testimonials' ? section.items ?? [] : [])
+        .flatMap((ref) => {
+          const item = site.testimonials.get(ref._ref);
+          return item?.quote?.trim() && item.name ? [{ id: item._id, author: item.name, body: item.quote }] : [];
+        }),
       ...(faq && { faq }),
       ...(pair && { translation: pair }),
     };

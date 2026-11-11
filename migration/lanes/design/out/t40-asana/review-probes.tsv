@@ -1,0 +1,4 @@
+host	path	status	location	x-robots-tag	content-type	title
+127.0.0.1	/newsletter	200	-	noindex, nofollow	text/html; charset=utf-8	Newsletter Sales Atlas | Grzegorz Zawłodzki
+127.0.0.1	/o-mnie	200	-	noindex, nofollow	text/html; charset=utf-8	O mnie | Grzegorz Zawłodzki
+127.0.0.1	/blog	200	-	noindex, nofollow	text/html; charset=utf-8	Blog | Grzegorz Zawłodzki

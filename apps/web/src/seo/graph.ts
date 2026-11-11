@@ -249,6 +249,14 @@ export function buildGraph(page: SeoPage): { '@context': 'https://schema.org'; '
   const graph = [
     webPage,
     ...part.nodes,
+    ...Array.from(new Map((page.reviews ?? []).map((review) => [review.id, review])).values()).map((review) => ({
+      '@type': 'Review',
+      '@id': nodeId(page.language, page.path, `review-${review.id}`),
+      author: { '@type': 'Person', name: review.author },
+      reviewBody: review.body,
+      itemReviewed: part.mainEntity ?? PERSON,
+      isPartOf: { '@id': nodeId(page.language, page.path, 'webpage') },
+    })),
     breadcrumb,
     faqNode(page, part.about === PERSON || part.about === ORGANIZATION ? undefined : part.about),
     { ...entities.person, ...(page.entityImages && { image: imageObject(page.entityImages.person) }), ...part.person },

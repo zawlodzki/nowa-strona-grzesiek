@@ -1,0 +1,25 @@
+$ pnpm -r check
+apps/studio check$ tsc --noEmit && sanity schema validate
+apps/web check$ astro check
+apps/web check: 15:45:27 [types] Generated 35ms
+apps/web check: 15:45:27 [check] Getting diagnostics for Astro files in /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T40-asana-results-quotes/apps/web...
+apps/studio check: - Validating schema…
+apps/web check: src/preview/worker.ts:5:3 - warning ts(80006): This may be converted to an async function.
+apps/web check: 
+apps/web check: 5   fetch(request: Request, env: Parameters<typeof handle>[1], context: Parameters<typeof handle>[2]): Promise<Response> {
+apps/web check:     ~~~~~
+apps/web check: 
+apps/web check: Result (159 files): 
+apps/web check: - 0 errors
+apps/web check: - 0 warnings
+apps/web check: - 1 hint
+apps/web check: 
+apps/web check: Done
+apps/studio check: ✔ Validated schema
+apps/studio check: 
+apps/studio check: Validation results:
+apps/studio check: ✖ Errors:   0 errors
+apps/studio check: ⚠ Warnings: 0 warnings
+apps/studio check: 
+apps/studio check: 
+apps/studio check: Done

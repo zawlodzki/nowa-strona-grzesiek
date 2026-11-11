@@ -1,0 +1,218 @@
+[
+  {
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "width": 1440,
+    "badges": [
+      {
+        "text": "Audyt CRM",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie do 5 osób",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie 5+ handlowców",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "path": "/audyt-crm-pipedrive",
+    "width": 1440,
+    "badges": [
+      {
+        "text": "Audyt CRM",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie do 5 osób",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie 5+ handlowców",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "path": "/kurs-ai-w-sprzedazy",
+    "width": 1440,
+    "badges": [
+      {
+        "text": "Kurs, dostęp na rok",
+        "lines": 1
+      },
+      {
+        "text": "Grupa · start 1 X",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie 1:1",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-salesforce",
+    "width": 1440,
+    "badges": [
+      {
+        "text": "Diagnoza CRM Salesforce",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie do 15 osób",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie powyżej 15 osób",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "width": 768,
+    "badges": [
+      {
+        "text": "Audyt CRM",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie do 5 osób",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie 5+ handlowców",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "path": "/audyt-crm-pipedrive",
+    "width": 768,
+    "badges": [
+      {
+        "text": "Audyt CRM",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie do 5 osób",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie 5+ handlowców",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "path": "/kurs-ai-w-sprzedazy",
+    "width": 768,
+    "badges": [
+      {
+        "text": "Kurs, dostęp na rok",
+        "lines": 1
+      },
+      {
+        "text": "Grupa · start 1 X",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie 1:1",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-salesforce",
+    "width": 768,
+    "badges": [
+      {
+        "text": "Diagnoza CRM Salesforce",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie do 15 osób",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie powyżej 15 osób",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "width": 375,
+    "badges": [
+      {
+        "text": "Audyt CRM",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie do 5 osób",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie 5+ handlowców",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "path": "/audyt-crm-pipedrive",
+    "width": 375,
+    "badges": [
+      {
+        "text": "Audyt CRM",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie do 5 osób",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie 5+ handlowców",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "path": "/kurs-ai-w-sprzedazy",
+    "width": 375,
+    "badges": [
+      {
+        "text": "Kurs, dostęp na rok",
+        "lines": 1
+      },
+      {
+        "text": "Grupa · start 1 X",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie 1:1",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-salesforce",
+    "width": 375,
+    "badges": [
+      {
+        "text": "Diagnoza CRM Salesforce",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie do 15 osób",
+        "lines": 1
+      },
+      {
+        "text": "Wdrożenie powyżej 15 osób",
+        "lines": 1
+      }
+    ]
+  }
+]
