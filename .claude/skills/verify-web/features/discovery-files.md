@@ -28,7 +28,7 @@ Preconditions:
 - **Well-formed XML.** Run `xmllint --noout "$VERIFY_WEB_HOME/evidence/<run-id>/<label>.body"` on the three XML bodies. It prints nothing on success.
 - **Exclusions.** Run `grep -c 'podziekowanie\|lista-cookies' <sitemap-pl body>`. It prints `0`.
 - **Locs resolve.** Once content exists, extract every `<loc>` and probe its path with `--host www.zawlodzki.pl`. Each must give `200`, never a redirect, because a sitemap must list only canonical URLs.
-- **Renderer unit tests.** Run `node --test apps/web/src/pages/sitemap/`. They prove ordering, escaping and exclusion on fixture content, which is what to cite while the dataset is empty.
+- **Renderer unit tests.** Run `node --test "apps/web/src/pages/sitemap/**/*.test.mjs"`. They prove ordering, escaping and exclusion on fixture content, which is what to cite while the dataset is empty.
 
 ## Gotchas
 
