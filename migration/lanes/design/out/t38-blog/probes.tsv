@@ -1,0 +1,3 @@
+host	path	status	location	x-robots-tag	content-type	title
+127.0.0.1	/blog	200	-	noindex, nofollow	text/html; charset=utf-8	Blog | Grzegorz Zawłodzki
+127.0.0.1	/blog/strona/2	200	-	noindex, nofollow	text/html; charset=utf-8	Blog, strona 2 | Grzegorz Zawłodzki
