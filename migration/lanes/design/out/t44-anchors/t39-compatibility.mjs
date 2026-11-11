@@ -1,0 +1,17 @@
+import { execFileSync } from 'node:child_process';
+import { createRequire } from 'node:module';
+import assert from 'node:assert/strict';
+import { writeFileSync } from 'node:fs';
+import { createPostHeadingIds } from '../../../../../apps/web/src/lib/headings.ts';
+const require = createRequire(new URL('../../../../../apps/web/package.json', import.meta.url));
+const ts = require('typescript');
+const ref = 'origin/task/T39-post-layout';
+const source = execFileSync('git', ['show', `${ref}:apps/web/src/components/post/outline.ts`], {encoding:'utf8'});
+const js = ts.transpileModule(source, {compilerOptions:{module:ts.ModuleKind.ESNext}}).outputText;
+const { postOutline } = await import(`data:text/javascript;base64,${Buffer.from(js).toString('base64')}`);
+const body = ['Zażółć gęślą jaźń','Zażółć gęślą jaźń','CRM / AI','!!!','Łódź café','日本語'].map((text,i)=>({_type:'block',_key:`key${i}`,style:i%2?'h3':'h2',children:[{_type:'span',text}]}));
+const expected = postOutline(body).sections.map(s=>s.heading.id);
+const allocate = createPostHeadingIds();
+const actual = body.map(b=>allocate(b.children[0].text,b._key));
+assert.deepEqual(actual,expected);
+writeFileSync(new URL('t39-compatibility.json',import.meta.url),JSON.stringify({ref,commit:execFileSync('git',['rev-parse',ref],{encoding:'utf8'}).trim(),expected,actual,passed:true},null,2));

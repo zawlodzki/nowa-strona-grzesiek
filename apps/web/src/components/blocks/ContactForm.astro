@@ -1,4 +1,5 @@
 ---
+import { pageHeadingId } from '../../lib/headings';
 import type { ContactForm } from '../../../../studio/sanity.types';
 import LeadForm from '../forms/LeadForm.astro';
 import type { ResolvedImage } from '../portable-text/types';
@@ -62,7 +63,7 @@ const icons: Record<string, string> = {
     )}
     {!channelsOnly && <div class:list={['card', { split: side, full }]}>
       <LeadForm form={form} id={f('form')} visible={['email', 'phone', 'message', 'newsletter']} submitLabel="Wyślij zapytanie">
-        {!full && <FormHeading class="form-heading">Formularz kontaktowy</FormHeading>}
+        {!full && <FormHeading id={pageHeadingId(Astro.locals, 'Formularz kontaktowy')} class="form-heading">Formularz kontaktowy</FormHeading>}
         <div class="field">
           <label class="visually-hidden" for={f('email')}>E-mail <span class="required">(wymagane)</span></label>
           <input id={f('email')} name="email" placeholder="E-mail" type="email" autocomplete="email" maxlength="256" required />
@@ -82,13 +83,13 @@ const icons: Record<string, string> = {
         <div class="side">
           {calendar && (
             <div class="note-block">
-              <h2 class="type-heading-s">{calendar.heading}</h2>
+              <h2 id={pageHeadingId(Astro.locals, calendar.heading ?? '')} class="type-heading-s">{calendar.heading}</h2>
               <p>{calendar.text && <>{calendar.text} </>}<a class="strong-link" href={calendar.href}>{calendar.link?.label}</a></p>
             </div>
           )}
           {consultation && (
             <div class="note-block">
-              <h2 class="type-heading-s">{consultation.heading}</h2>
+              <h2 id={pageHeadingId(Astro.locals, consultation.heading ?? '')} class="type-heading-s">{consultation.heading}</h2>
               <p class="lines">{consultation.body}</p>
             </div>
           )}
@@ -128,7 +129,7 @@ const icons: Record<string, string> = {
           {groups.map((group) => (
             <li class="group">
               {channelsOnly && <span class="group-icon" aria-hidden="true"><svg viewBox="0 0 24 24" set:html={group.icons.length ? '<circle cx="12" cy="7" r="3"/><path d="M6 21v-3a6 6 0 0 1 12 0v3M2 11v6m-3-3h6"/>' : icons.email} /></span>}
-              <h3 class="type-heading-s">{group.title}</h3>
+              <h3 id={pageHeadingId(Astro.locals, group.title)} class="type-heading-s">{group.title}</h3>
               {group.note && <p>{group.note}</p>}
               {group.icons.length > 0 && (
                 <ul class="channel-icons" role="list">
@@ -153,6 +154,7 @@ const icons: Record<string, string> = {
 </section>
 
 <style>
+  :is(h2, h3)[id] { scroll-margin-top: 7.5rem; }
   .inner { container-type: inline-size; display: grid; gap: var(--space-l); }
   .head { display: grid; gap: var(--space-2xs); max-inline-size: 40rem; }
   .inner.landing { gap: clamp(2rem, 1.58564rem + 1.76796vw, 3rem); }

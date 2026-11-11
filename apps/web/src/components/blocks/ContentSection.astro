@@ -1,4 +1,5 @@
 ---
+import { pageHeadingId } from '../../lib/headings';
 import type { ContentSection } from '../../../../studio/sanity.types';
 import { safeHref } from '../ui/block-types';
 import type { ResolvedImage } from '../ui/block-types';
@@ -19,7 +20,7 @@ const linkOnly = layout === 'list' && Boolean(data.items?.length) && data.items!
   <div class="content-layout">
     <header class="intro">
       {data.tagline && <p class="type-tagline">{data.tagline}</p>}
-      {data.heading && <h2>{data.heading}</h2>}
+      {data.heading && <h2 id={pageHeadingId(Astro.locals, data.heading)}>{data.heading}</h2>}
       <slot name="intro"><PortableText value={data.intro} links={links} images={images} /></slot>
       {linkOnly && <nav class="inline-links" aria-label={data.heading || 'Usługi'}>{data.items?.map((item) => <a href={safeHref(item.link?.href)}>{item.link?.label}</a>)}</nav>}
     </header>
@@ -29,7 +30,7 @@ const linkOnly = layout === 'list' && Boolean(data.items?.length) && data.items!
       return <li class:list={{ negative: item.icon === 'close' }}>
       {layout === 'checklist' && <Icon name={item.icon === 'close' ? 'close' : 'check'} />}
       <div class="item-copy">
-        {metric ? <><p class="metric-value">{metric[1]}{plus && '+'}</p><h3 class="metric-label">{metric[2]}</h3></> : item.title && <h3 class="type-heading-xs">{item.title}</h3>}
+        {metric ? <><p class="metric-value">{metric[1]}{plus && '+'}</p><h3 id={pageHeadingId(Astro.locals, metric[2])} class="metric-label">{metric[2]}</h3></> : item.title && <h3 id={pageHeadingId(Astro.locals, item.title)} class="type-heading-xs">{item.title}</h3>}
         {item.text && <p class:list={{ 'metric-text': metrics }}>{plus ? item.text.replace(/^\+\s+/, '') : item.text}</p>}
         {item.link && <Button link={item.link} variant="text" />}
       </div>
@@ -38,6 +39,7 @@ const linkOnly = layout === 'list' && Boolean(data.items?.length) && data.items!
   </div>
 </BlockSection>
 <style>
+  :is(h2, h3)[id] { scroll-margin-top: 7.5rem; }
   .content-layout { display: grid; gap: var(--space-l); }
   .intro { display: grid; gap: var(--space-m); max-inline-size: 40rem; overflow-wrap: anywhere; }
   .inline-links { display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-s); }
