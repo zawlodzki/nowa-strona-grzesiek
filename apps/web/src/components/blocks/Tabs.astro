@@ -9,16 +9,19 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
 ---
 <BlockSection kind="tabs">
   <header>{data.tagline && <p class="type-tagline">{data.tagline}</p>}{data.heading && <h2>{data.heading}</h2>}<PortableText value={data.intro} links={links} images={images} /></header>
-  <div class="tabs" data-tabs>
-    <div class="menu" aria-label={data.heading || "Warstwy systemu"}>
-      {data.items?.map((item, i) => <a id={`${id}-tab-${i}`} href={`#${id}-panel-${i}`}><span class="type-heading-xs">{item.title}</span><span>{item.summary}</span></a>)}
+  <div class="tabs" data-tabs style={`--layers: ${data.items?.length ?? 0}`}>
+    <div class="stage">
+      <div class="menu" aria-label={data.heading || "Warstwy systemu"}>
+        {data.items?.map((item, i) => <a id={`${id}-tab-${i}`} href={`#${id}-panel-${i}`}><span class="type-heading-xs">{item.title}</span><span>{item.summary}</span></a>)}
+      </div>
+      <div class="panels">{data.items?.map((item, i) => <section class="panel" id={`${id}-panel-${i}`} aria-labelledby={`${id}-tab-${i}`}>
+        <div class="positive"><PortableText value={item.positive} links={links} images={images} /></div>
+        <div class="negative"><PortableText value={item.negative} links={links} images={images} /></div>
+        {item.tagline && <p class="type-tagline panel-tagline">{item.tagline}</p>}
+        <PortableText value={item.body} links={links} images={images} />
+      </section>)}</div>
     </div>
-    <div class="panels">{data.items?.map((item, i) => <section class="panel" id={`${id}-panel-${i}`} aria-labelledby={`${id}-tab-${i}`}>
-      <div class="positive"><PortableText value={item.positive} links={links} images={images} /></div>
-      <div class="negative"><PortableText value={item.negative} links={links} images={images} /></div>
-      {item.tagline && <p class="type-tagline panel-tagline">{item.tagline}</p>}
-      <PortableText value={item.body} links={links} images={images} />
-    </section>)}</div>
+    <div class="runway" aria-hidden="true"></div>
   </div>
 </BlockSection>
 <script>
@@ -27,23 +30,62 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
       const menu = root.querySelector<HTMLElement>('.menu')!;
       const tabs = Array.from(menu.querySelectorAll<HTMLAnchorElement>('a'));
       const panels = Array.from(root.querySelectorAll<HTMLElement>('.panel'));
+      const stage = root.querySelector<HTMLElement>('.stage')!;
+      const runway = root.querySelector<HTMLElement>('.runway')!;
       if (!tabs.length || tabs.length !== panels.length) return;
+      const wide = matchMedia('(min-width: 992px)');
+      const still = matchMedia('(prefers-reduced-motion: reduce)');
+      const slack = 24;
+      const live = new AbortController();
+      let current = 0;
+      let pinned = false;
+      let offset = 0;
+      let frame = 0;
+      let resized = false;
       menu.setAttribute('role', 'tablist');
       menu.setAttribute('aria-orientation', 'vertical');
-      function activate(index: number, focus = false) {
+      function activate(index: number) {
+        current = index;
         tabs.forEach((tab, i) => {
           tab.setAttribute('aria-selected', String(i === index));
           tab.tabIndex = i === index ? 0 : -1;
           panels[i].hidden = i !== index;
         });
-        if (focus) tabs[index].focus();
       }
+      const step = () => runway.offsetHeight / panels.length;
+      const layerFromScroll = () => Math.min(panels.length - 1, Math.max(0, Math.floor((offset - root.getBoundingClientRect().top) / step())));
+      function select(index: number, focus = false) {
+        activate(index);
+        // Move the page to the middle of that layer's slice, otherwise the next scroll event would switch back.
+        if (pinned && layerFromScroll() !== index) window.scrollTo({ top: scrollY + root.getBoundingClientRect().top - offset + (index + 0.5) * step(), behavior: 'instant' });
+        if (focus) tabs[index].focus({ preventScroll: pinned });
+      }
+      function fitsViewport() {
+        const was = current;
+        let tallest = 0;
+        root.style.removeProperty('--stage-size');
+        panels.forEach((_, i) => { activate(i); tallest = Math.max(tallest, stage.offsetHeight); });
+        activate(was);
+        // A constant stage height keeps the track length fixed, so switching layers never shifts the page.
+        root.style.setProperty('--stage-size', `${tallest}px`);
+        return tallest <= innerHeight - offset + slack;
+      }
+      function evaluate() {
+        if (!root.isConnected) { live.abort(); return; }
+        pinned = wide.matches && !still.matches;
+        if (pinned) { root.dataset.scroll = 'true'; offset = parseFloat(getComputedStyle(stage).insetBlockStart); pinned = fitsViewport(); }
+        if (!pinned) delete root.dataset.scroll;
+        else if (layerFromScroll() !== current) activate(layerFromScroll());
+      }
+      function follow() { if (pinned && layerFromScroll() !== current) activate(layerFromScroll()); }
+      function tick() { frame = 0; if (resized) evaluate(); resized = false; follow(); }
+      function queue(resize = false) { resized ||= resize; if (!frame) frame = requestAnimationFrame(tick); }
       tabs.forEach((tab, index) => {
         tab.setAttribute('role', 'tab');
         tab.setAttribute('aria-controls', panels[index].id);
         panels[index].setAttribute('role', 'tabpanel');
         panels[index].tabIndex = 0;
-        tab.addEventListener('click', (event) => { event.preventDefault(); activate(index); });
+        tab.addEventListener('click', (event) => { event.preventDefault(); select(index); });
         tab.addEventListener('keydown', (event) => {
           let next: number;
           switch (event.key) {
@@ -51,13 +93,18 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
             case 'ArrowUp': next = (index + tabs.length - 1) % tabs.length; break;
             case 'Home': next = 0; break;
             case 'End': next = tabs.length - 1; break;
-            case ' ': event.preventDefault(); activate(index); return;
+            case ' ': event.preventDefault(); select(index); return;
             default: return;
           }
-          event.preventDefault(); activate(next, true);
+          event.preventDefault(); select(next, true);
         });
       });
-      root.dataset.ready = 'true'; activate(0);
+      root.dataset.ready = 'true'; activate(0); evaluate();
+      const opts = { signal: live.signal };
+      addEventListener('scroll', () => queue(), { ...opts, passive: true });
+      addEventListener('resize', () => queue(true), opts);
+      wide.addEventListener('change', evaluate, opts);
+      still.addEventListener('change', evaluate, opts);
     });
   }
   initTabs();
@@ -65,7 +112,13 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
 </script>
 <style>
   header { display: grid; gap: var(--space-m); margin-block-end: var(--space-xl); }
-  .tabs { display: flex; align-items: center; gap: 24px; }
+  .tabs { --tabs-top: 5rem; --tabs-step: clamp(12rem, 30svh, 20rem); }
+  .stage { display: flex; align-items: start; gap: 24px; }
+  .runway { display: none; }
+  [data-scroll] .stage { position: sticky; inset-block-start: var(--tabs-top); min-block-size: var(--stage-size); }
+  [data-scroll] .runway { display: block; block-size: calc(var(--layers) * var(--tabs-step)); }
+  [data-scroll] .menu { gap: 8px; }
+  [data-scroll] .menu a { padding-block: 12px; }
   .menu { flex: 0 0 calc(35% - 12px); display: flex; flex-direction: column; gap: 16px; }
   .menu a { display: grid; gap: var(--space-xs); padding: 16px 24px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-body); }
   .menu a[aria-selected="true"] { background: var(--surface-cyan-tint); }
@@ -81,5 +134,5 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   .positive :global(h4), .negative :global(h4) { font-family: var(--typography-heading-xs-family); font-size: var(--typography-heading-xs-size); font-weight: var(--typography-heading-xs-weight); line-height: var(--typography-heading-xs-leading); letter-spacing: var(--typography-heading-xs-tracking); }
   .panel-tagline { justify-self: start; padding-inline: var(--space-2xs); background: var(--surface-soft); color: var(--color-neutral-80); border-radius: var(--radius-sm); }
   .negative { background: var(--surface-alt); }
-  @media (max-width: 991px) { .tabs { flex-direction: column; align-items: stretch; } .menu { flex-basis: auto; } .panels { order: -1; } }
+  @media (max-width: 991px) { .stage { flex-direction: column; align-items: stretch; } .menu { flex-basis: auto; } .panels { order: -1; } }
 </style>
