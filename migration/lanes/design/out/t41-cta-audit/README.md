@@ -863,4 +863,3 @@ Porównanie live: wysokość 900 px wobec 2920 px na stagingu. Brak porównywaln
 Rekomendacja, priorytet niski: Nie dodawać CTA między kartami. Lista służy wyborowi artykułu, a newsletter jest pod paginacją. Zachować ten sam układ na kolejnych stronach.
 
 Nowe miejsce, typ, tekst i cel: nie dotyczy, brak rekomendowanego dodatku. Kod i Sanity: bez zmian.
-
