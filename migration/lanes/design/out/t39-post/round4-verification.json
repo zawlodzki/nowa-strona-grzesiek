@@ -1,0 +1,128 @@
+[
+  {
+    "width": 1440,
+    "centered": 0,
+    "menu": {
+      "x": 85.1875,
+      "y": 303.75,
+      "width": 368,
+      "height": 398
+    },
+    "tiles": [
+      {
+        "label": "X",
+        "width": 163,
+        "height": 96,
+        "icons": 1,
+        "href": "https://x.com/intent/post?url=https%3A%2F%2Fwww.zawlodzki.pl%2Fblog%2Fasana-vs-jira&text=Asana%20vs%20Jira%3A%20co%20ma%20wiedzie%C4%87%20zesp%C3%B3%C5%82%20i%20szef%3F"
+      },
+      {
+        "label": "LinkedIn",
+        "width": 163,
+        "height": 96,
+        "icons": 1,
+        "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.zawlodzki.pl%2Fblog%2Fasana-vs-jira"
+      },
+      {
+        "label": "Facebook",
+        "width": 163,
+        "height": 96,
+        "icons": 1,
+        "href": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.zawlodzki.pl%2Fblog%2Fasana-vs-jira"
+      },
+      {
+        "label": "Email",
+        "width": 163,
+        "height": 96,
+        "icons": 1,
+        "href": "mailto:?subject=Asana%20vs%20Jira%3A%20co%20ma%20wiedzie%C4%87%20zesp%C3%B3%C5%82%20i%20szef%3F&body=https%3A%2F%2Fwww.zawlodzki.pl%2Fblog%2Fasana-vs-jira"
+      },
+      {
+        "label": "WhatsApp",
+        "width": 163,
+        "height": 96,
+        "icons": 1,
+        "href": "https://wa.me/?text=Asana%20vs%20Jira%3A%20co%20ma%20wiedzie%C4%87%20zesp%C3%B3%C5%82%20i%20szef%3F%20https%3A%2F%2Fwww.zawlodzki.pl%2Fblog%2Fasana-vs-jira"
+      },
+      {
+        "label": "Kopiuj link",
+        "width": 163,
+        "height": 96,
+        "icons": 1,
+        "href": null
+      }
+    ],
+    "keyboardAndFocus": true,
+    "clipboard": true,
+    "manualCopyFallback": true,
+    "fallbackMenu": {
+      "x": 536,
+      "y": 181,
+      "width": 368,
+      "height": 538
+    }
+  },
+  {
+    "width": 390,
+    "centered": 0,
+    "menu": {
+      "x": 16,
+      "y": 481.15625,
+      "width": 358,
+      "height": 398
+    },
+    "tiles": [
+      {
+        "label": "X",
+        "width": 158,
+        "height": 96,
+        "icons": 1,
+        "href": "https://x.com/intent/post?url=https%3A%2F%2Fwww.zawlodzki.pl%2Fblog%2Fasana-vs-jira&text=Asana%20vs%20Jira%3A%20co%20ma%20wiedzie%C4%87%20zesp%C3%B3%C5%82%20i%20szef%3F"
+      },
+      {
+        "label": "LinkedIn",
+        "width": 158,
+        "height": 96,
+        "icons": 1,
+        "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.zawlodzki.pl%2Fblog%2Fasana-vs-jira"
+      },
+      {
+        "label": "Facebook",
+        "width": 158,
+        "height": 96,
+        "icons": 1,
+        "href": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.zawlodzki.pl%2Fblog%2Fasana-vs-jira"
+      },
+      {
+        "label": "Email",
+        "width": 158,
+        "height": 96,
+        "icons": 1,
+        "href": "mailto:?subject=Asana%20vs%20Jira%3A%20co%20ma%20wiedzie%C4%87%20zesp%C3%B3%C5%82%20i%20szef%3F&body=https%3A%2F%2Fwww.zawlodzki.pl%2Fblog%2Fasana-vs-jira"
+      },
+      {
+        "label": "WhatsApp",
+        "width": 158,
+        "height": 96,
+        "icons": 1,
+        "href": "https://wa.me/?text=Asana%20vs%20Jira%3A%20co%20ma%20wiedzie%C4%87%20zesp%C3%B3%C5%82%20i%20szef%3F%20https%3A%2F%2Fwww.zawlodzki.pl%2Fblog%2Fasana-vs-jira"
+      },
+      {
+        "label": "Kopiuj link",
+        "width": 158,
+        "height": 96,
+        "icons": 1,
+        "href": null
+      }
+    ],
+    "keyboardAndFocus": true,
+    "clipboard": true,
+    "manualCopyFallback": true,
+    "fallbackMenu": {
+      "x": 16,
+      "y": 181,
+      "width": 358,
+      "height": 538
+    }
+  }
+]
