@@ -54,7 +54,6 @@ const CONTACT_FIELDS: readonly Field[] = [
   ['phone', 'FormTextInput'],
   ['message', 'FormTextarea'],
   ['newsletter', 'FormCheckboxInput'],
-  ['marketing-emails', 'FormCheckboxInput'],
   ...ATTRIBUTION_FIELDS,
 ];
 

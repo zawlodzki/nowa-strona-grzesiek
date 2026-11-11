@@ -45,7 +45,7 @@ const postsOf = (kind: string | undefined) => site.posts
         const image = resolveImage(site, logo?.image);
         return logo && image ? [{ _id: logo._id, name: logo.name, url: logo.url, image }] : [];
       });
-      return <LogoStrip data={section} logos={logos} />;
+      return <LogoStrip data={{ ...section, intro: section.intro === section.title ? undefined : section.intro }} logos={logos} />;
     }
     case 'feature':
       return <Feature data={section} image={mediaImage(section.media)} links={links} images={images} headingLevel={index === firstHeading ? headingLevel : 'h2'} />;
