@@ -1,0 +1,358 @@
+[
+  {
+    "_id": "page-634daaa2c8ceab1df293a051",
+    "_type": "page",
+    "language": "pl",
+    "sections": [
+      {
+        "_key": "5ed9ece0ba85",
+        "_type": "feature",
+        "body": [
+          {
+            "_key": "285998ecf287",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "1e5781d1d553",
+                "_type": "span",
+                "text": "Pomagam firmom B2B uporządkować sprzedaż i projekty: wdrażam Pipedrive, Asanę, automatyzacje n8n i procesy wspierane przez AI. Pracowałem z ponad 50 firmami, od startupów po globalne marki jak IAB.\n‍\nZdarzyło Ci się patrzeć, jak rosnąca firma tonie w arkuszach Excel, rozrzuconych wiadomościach i ręcznej robocie, wiedząc że da się to zrobić lepiej, ale nie wiadomo od czego zacząć?"
+              }
+            ],
+            "style": "normal"
+          },
+          {
+            "_key": "92c5ef7c1e23",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "2c26d2560985",
+                "_type": "span",
+                "text": "Jak zaczynałem?"
+              }
+            ],
+            "style": "h2"
+          },
+          {
+            "_key": "f2a9d43ed29e",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "441e6a1328cc",
+                "_type": "span",
+                "text": "Znam to. Pracę w branży OZE zacząłem na samym szczycie. Na dachach, montując panele fotowoltaiczne. Potem zszedłem na ziemię, żeby serwisować pompy ciepła i kotły gazowe. Szybko odkryłem, że moją najsilniejszą stroną jest uczenie się nowych rzeczy od zera, porządkowanie chaosu i przekazywanie wiedzy dalej tak, żeby następna osoba mogła to ogarnąć.\n‍\nKiedy firma, którą współtworzyłem, urosła do 50 osób, stanąłem przed trzema wyzwaniami, które zmieniły wszystko co robię dzisiaj: jak wycisnąć maksimum z ograniczonych zasobów, jak z intuicyjnego i chaotycznego działania ludzi zrobić powtarzalne procesy, i jak zbierać dane potrzebne do podejmowania decyzji.\nAsana i Pipedrive pomogły mi rozwiązać te problemy. Zobaczyłem, co się dzieje, kiedy zespół przestaje zgadywać i zaczyna widzieć. Chciałem przenieść to do kolejnych firm."
+              }
+            ],
+            "style": "normal"
+          },
+          {
+            "_key": "9f9366312011",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "9db8f44d7977",
+                "_type": "span",
+                "text": "Komu Pomagam?"
+              }
+            ],
+            "style": "h2"
+          },
+          {
+            "_key": "80d145895f32",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "cdac78781985",
+                "_type": "span",
+                "text": "Dzisiaj pracuję jako konsultant i trener. Pomagam firmom zmienić sposób, w jaki sprzedają, zarządzają projektami i korzystają z danych. Wśród moich klientów są globalne marki jak IAB i Fundacja Pułaskiego, a także szybko rosnące firmy stawiające pierwszy system do zarządzania projektami lub CRM."
+              }
+            ],
+            "style": "normal"
+          },
+          {
+            "_key": "58ae18c202b9",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "1d32fe97b812",
+                "_type": "span",
+                "text": "Jak pracuję?"
+              }
+            ],
+            "style": "h2"
+          },
+          {
+            "_key": "a073d7c7e4db",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "83c3c3d466ca",
+                "_type": "span",
+                "text": "Dwie rzeczy wyróżniają moje podejście:\nPo pierwsze, pracuję z Twoim zespołem na żywo. Siadam z ludźmi, konfiguruję narzędzia przy nich, szkolę na ich poziomie i zostaję, aż faktycznie zaczną z tego korzystać. Każda sesja kończy się konkretnymi zadaniami, z przypisanymi osobami i datami.\nPo drugie, myślę w połączonych systemach. Łączę CRM z zarządzaniem projektami, automatyzuję przepływ danych przez n8n i API, buduję dashboardy raportowe i projektuję procesy wspierane przez AI, które oszczędzają godziny ręcznej pracy. Cel jest jeden: żeby Twoja codzienna praca była widoczna, mierzalna i skalowalna."
+              }
+            ],
+            "style": "normal"
+          },
+          {
+            "_key": "c3424d3699b2",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "9f8c765aeba3",
+                "_type": "span",
+                "text": "W czym mogę Ci pomóc?"
+              }
+            ],
+            "style": "h2"
+          },
+          {
+            "_key": "a40f6dbfe412",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "9c4b76ef0c56",
+                "_type": "span",
+                "text": "Mogę pomóc Ci:\n→ wdrożyć Pipedrive, Attio, Hubspot CRM lub Asanę od zera i nauczyć Twój zespół z nich korzystać,\n→ nauczyć Twój zespół korzystać z AI i uruchomić pierwsze agenty AI pracujące dla Twojego zespołu handlowego,\n→ zmapować i uporządkować procesy w firmie, żeby nic nie ginęło po drodze,\n→ zautomatyzować przepływ danych między narzędziami (CRM, zarządzanie projektami, mail, formularze, e-commerce),\n→ postawić dashboardy sprzedażowe i marketingowe, które na bieżąco pokazują co się dzieje w firmie,\n→ wpiąć AI w Twoje procesy, od automatycznych opisów produktów po inteligentną obsługę leadów,\n→ zaplanować cyfrową transformację krok po kroku, testując w bezpiecznym środowisku zanim wejdziesz na produkcję."
+              }
+            ],
+            "style": "normal"
+          },
+          {
+            "_key": "6edcb36e928f",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "565496dbb3b1",
+                "_type": "span",
+                "text": "Po czym poznasz że wdrożenie się udało?"
+              }
+            ],
+            "style": "h2"
+          },
+          {
+            "_key": "59fc6a9de6a8",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "7cda63721146",
+                "_type": "span",
+                "text": "Najlepsze wdrożenia dzieją się wtedy, kiedy narzędzia stają się nawykami zespołu, a nie projektem IT. Lepszy sposób pracy poprawia wyniki i zmienia to, jak ludzie czują się przychodząc do pracy każdego dnia.\n‍\nKiedy nie siedzę w CRM klienta i nie mapuję procesów w Asanie, śledzę jak agenty AI zmieniają pracę i pilnuję, żeby moi klienci byli na to gotowi.\n‍\nKliknij poniżej i skontaktuj się bezpośrednio ze mną."
+              }
+            ],
+            "style": "normal"
+          }
+        ],
+        "cta": {
+          "_type": "link",
+          "href": "/kontakt",
+          "label": "Porozmawiajmy o wdrożeniu"
+        },
+        "heading": "Grzegorz Zawłodzki - konsultant CRM i automatyzacji sprzedaży B2B",
+        "layout": "article",
+        "media": {
+          "_type": "media",
+          "image": {
+            "_type": "contentImage",
+            "alt": "Grzegorz Zawłodzki",
+            "asset": {
+              "_ref": "image-8213611a5070243a2dd7f3006b1af2962f6d39db-400x600-webp",
+              "_type": "reference"
+            }
+          },
+          "kind": "image"
+        },
+        "mediaSide": "right",
+        "tagline": "O mnie"
+      },
+      {
+        "_key": "a3e8d50d9e6d",
+        "_type": "contactForm",
+        "channels": {
+          "groups": [
+            {
+              "_key": "92c75fe0cbaa",
+              "_type": "contactChannelGroup",
+              "items": [
+                {
+                  "_key": "af1597d4d048",
+                  "_type": "contactChannel",
+                  "href": "https://github.com/zawlodzki",
+                  "kind": "github",
+                  "label": "GitHub"
+                },
+                {
+                  "_key": "9f47444eaddb",
+                  "_type": "contactChannel",
+                  "href": "https://www.linkedin.com/in/zawlodzki/",
+                  "kind": "linkedin",
+                  "label": "LinkedIn"
+                },
+                {
+                  "_key": "abc3a9b6f97b",
+                  "_type": "contactChannel",
+                  "href": "https://x.com/zawlodzki",
+                  "kind": "x",
+                  "label": "X"
+                },
+                {
+                  "_key": "0f418b41b52e",
+                  "_type": "contactChannel",
+                  "href": "https://www.youtube.com/@GrzesiekZawlodzki",
+                  "kind": "youtube",
+                  "label": "YouTube"
+                },
+                {
+                  "_key": "8055e0bb5cc3",
+                  "_type": "contactChannel",
+                  "href": "https://www.instagram.com/zawlodzki/",
+                  "kind": "instagram",
+                  "label": "Instagram"
+                }
+              ],
+              "note": "Najlepsze dla krótkich wiadomości. Odpowiadam najszybciej.",
+              "title": "Social media"
+            },
+            {
+              "_key": "6216721d2a46",
+              "_type": "contactChannelGroup",
+              "items": [
+                {
+                  "_key": "17740cd4b1d2",
+                  "_type": "contactChannel",
+                  "href": "mailto:grzesiek@zawlodzki.pl",
+                  "kind": "email",
+                  "label": "grzesiek@zawlodzki.pl"
+                },
+                {
+                  "_key": "47d233899692",
+                  "_type": "contactChannel",
+                  "href": "tel:+48571088338",
+                  "kind": "phone",
+                  "label": "+48 571 088 338"
+                },
+                {
+                  "_key": "0c8fe58ad333",
+                  "_type": "contactChannel",
+                  "href": "https://signal.me/#eu/N93P3LbtKuO_5kC1OTTxTwgXw_6HGb9tBhbQgAKqQ43FmwzWGJZNkIJixoswplN2",
+                  "kind": "signal",
+                  "label": "Signal"
+                },
+                {
+                  "_key": "e61ca78af55a",
+                  "_type": "contactChannel",
+                  "href": "https://wa.me/48571088338",
+                  "kind": "whatsapp",
+                  "label": "WhatsApp"
+                }
+              ],
+              "note": "Lepszy dla dłuższych pytań i propozycji współpracy.",
+              "title": "Bezpośredni kontakt"
+            }
+          ]
+        },
+        "heading": "Jak się ze mną skontaktować?",
+        "tagline": "Kontakt",
+        "variant": "channels"
+      },
+      {
+        "_key": "a7a6cb3f5c37",
+        "_type": "testimonials",
+        "heading": "Opinie zadowolonych klientów",
+        "items": [
+          {
+            "_key": "95a34610d79e",
+            "_ref": "testimonial-c38cec50fbdd326e",
+            "_type": "reference"
+          },
+          {
+            "_key": "dcfd7e372413",
+            "_ref": "testimonial-6f0a990b3555d094",
+            "_type": "reference"
+          }
+        ],
+        "tagline": "Co o mnie mówią",
+        "variant": "quotes"
+      },
+      {
+        "_key": "ff9bdf6831ae",
+        "_type": "contentSection",
+        "heading": "Dane firmy",
+        "intro": [
+          {
+            "_key": "62ae79c7494a",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "765d2e818d2d",
+                "_type": "span",
+                "text": "Wellbiz sp. z o.o.\nul. Lipowa 3d\n30-702 Kraków\nNIP: 6793323800"
+              }
+            ],
+            "style": "normal"
+          }
+        ],
+        "layout": "list"
+      },
+      {
+        "_key": "9edb72f1e8b9",
+        "_type": "postList",
+        "heading": "Ostatnie wpisy",
+        "kind": "blog",
+        "limit": 3
+      },
+      {
+        "_key": "9df02a4517c5",
+        "_type": "newsletterSignup",
+        "body": "Raz w tygodniu dostaniesz bezpłatnie, jedno gotowe rozwiązanie, jak skutecznie wykorzystać nowoczesne technologie w sprzedaży B2B."
+      }
+    ],
+    "seo": {
+      "_type": "seo",
+      "description": "Konsultant CRM i automatyzacji sprzedaży B2B. Wdrażam Pipedrive, Asanę, n8n i AI - ponad 50 firm, od startupów po IAB. Zobacz, jak pracuję.",
+      "noindex": false,
+      "ogImage": {
+        "_type": "contentImage",
+        "alt": "O mnie | Grzegorz Zawłodzki",
+        "asset": {
+          "_ref": "image-adf8b6f394493397e4786471554b6dff50c57bb9-1200x630-jpg",
+          "_type": "reference"
+        }
+      },
+      "title": "O mnie | Grzegorz Zawłodzki"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "/o-mnie"
+    },
+    "title": "O mnie"
+  },
+  {
+    "_id": "testimonial-6f0a990b3555d094",
+    "_type": "testimonial",
+    "company": "AdTelier",
+    "image": {
+      "_type": "contentImage",
+      "alt": "logo adtelier",
+      "asset": {
+        "_ref": "image-d243eb02f2fadcdd0ef2ef4f035dac03475a2589-292x58-webp",
+        "_type": "reference"
+      }
+    },
+    "name": "Łukasz Kruszewski-Zelman",
+    "quote": "\"Naszym problemem był start z działaniem Pipedrive, ponieważ ilość funkcjonalności i ustawień tego narzędzia oraz jego stopień zaawansowania i skomplikowania początkowo nas przerósł. Wystarczyła konsultacja aby Pan Grzegorz wyjaśnił nam zasady działania aplikacji Pipedrive oraz pomógł nam ją skonfigurować i wystartować z jej działaniem.\""
+  },
+  {
+    "_id": "testimonial-c38cec50fbdd326e",
+    "_type": "testimonial",
+    "company": "SMMASH",
+    "image": {
+      "_type": "contentImage",
+      "alt": "logo smmash",
+      "asset": {
+        "_ref": "image-1f702fbcbd7648de63bca8acd1161b8c36230e69-349x72-webp",
+        "_type": "reference"
+      }
+    },
+    "name": "Bart Gryndzia",
+    "quote": "\"Rozpoczynając współpracę z Grześkiem miałem nadzieję na to, że uda mi się lepiej wykorzystać narzędzia, z których już korzystałem w firmie, ale przy samodzielnym wdrażaniu natrafiłem na \"ścianę koncepcyjną\". Wspólna praca nad procesami i ich koordynacją okazała się prosta i 100% skuteczna. Polecam!\""
+  }
+]

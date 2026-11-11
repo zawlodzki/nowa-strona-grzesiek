@@ -178,5 +178,20 @@ export function loadSite(): Promise<Site> {
 
 /** A request-scoped reader can share the build parser without sharing its cache. */
 export async function fetchSite(query: (query: string) => Promise<unknown>): Promise<Site> {
-  return parseSite(await query(QUERY) as Raw);
+  const raw = await query(QUERY) as Raw;
+  const overlay = process.env.T34_LOCAL_DOCUMENTS;
+  if (overlay) {
+    if (process.env.npm_lifecycle_event === 'deploy' || process.env.CI || process.env.CF_PAGES || process.env.WORKERS_CI || process.env.T34_LOCAL_PROOF !== '1' || !overlay.startsWith('/tmp/') || process.env.CLOUDFLARE_API_TOKEN || process.env.CLOUDFLARE_ACCOUNT_ID) throw new Error('T34 local proof overlay is forbidden in CI/deploy');
+    const { readFile } = await import('node:fs/promises');
+    const docs = JSON.parse(await readFile(overlay, 'utf8')) as { pages: Page[]; testimonials: Testimonial[]; assets: Raw['assets'] };
+    const replace = <T extends {_id: string}>(current: T[], proposed: T[]) => {
+      const map = new Map(current.map((doc) => [doc._id, doc]));
+      for (const doc of proposed) map.set(doc._id, doc);
+      return [...map.values()];
+    };
+    raw.pages = replace(raw.pages, docs.pages);
+    raw.testimonials = replace(raw.testimonials, docs.testimonials);
+    raw.assets = replace(raw.assets, docs.assets);
+  }
+  return parseSite(raw);
 }

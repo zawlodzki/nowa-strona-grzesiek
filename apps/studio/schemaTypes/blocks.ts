@@ -27,6 +27,7 @@ export const logoStrip = defineType({
 export const feature = defineType({
   name: 'feature', title: 'Sekcja z mediami', type: 'object',
   fields: [taglineField, headingField,
+    defineField({name: 'layout', type: 'string', options: {list: ['default', 'article']}, validation: (rule) => rule.custom((value) => !value || ['default', 'article'].includes(value) || 'Wybierz dozwoloną wartość.')}),
     defineField({name: 'body', type: 'portableText', validation: (rule) => rule.required().min(1)}),
     defineField({name: 'bullets', type: 'array', of: [defineArrayMember({type: 'string'})]}),
     defineField({name: 'media', type: 'media'}),
@@ -88,7 +89,7 @@ export const channelKinds = ['linkedin', 'github', 'x', 'youtube', 'instagram', 
 export const contactForm = defineType({
   name: 'contactForm', title: 'Formularz kontaktowy', type: 'object',
   fields: [
-    defineField({name: 'variant', type: 'string', options: {list: ['landing', 'full']}, initialValue: 'landing', validation: (rule) => rule.required().custom((value) => value === undefined || ['landing', 'full'].includes(value) || 'Wybierz dozwoloną wartość.')}),
+    defineField({name: 'variant', type: 'string', options: {list: ['landing', 'full', 'channels']}, initialValue: 'landing', validation: (rule) => rule.required().custom((value) => value === undefined || ['landing', 'full', 'channels'].includes(value) || 'Wybierz dozwoloną wartość.')}),
     taglineField, defineField({name: 'heading', type: 'string'}),
     defineField({name: 'intro', title: 'Wstęp', description: 'Tekst pod nagłówkiem. Nowa linia zostaje zachowana.', type: 'text', rows: 3}),
     defineField({name: 'showDetails', type: 'boolean', initialValue: false}),
@@ -101,7 +102,7 @@ export const contactForm = defineType({
       defineField({name: 'heading', title: 'Nagłówek', type: 'string', validation: (rule) => rule.required().regex(/\S/)}),
       defineField({name: 'body', title: 'Treść', description: 'Nowa linia zostaje zachowana.', type: 'text', rows: 4, validation: (rule) => rule.required().regex(/\S/)}),
     ]}),
-    defineField({name: 'channels', title: 'Kanały kontaktu', type: 'object', hidden: fullOnly, fields: [
+    defineField({name: 'channels', title: 'Kanały kontaktu', type: 'object', hidden: ({parent}) => !['full', 'channels'].includes(parent?.variant), fields: [
       taglineField, defineField({name: 'heading', title: 'Nagłówek', type: 'string'}),
       defineField({name: 'groups', title: 'Grupy', type: 'array', validation: (rule) => rule.required().min(1), of: [defineArrayMember({name: 'contactChannelGroup', type: 'object', fields: [
         titleField, defineField({name: 'note', title: 'Opis', type: 'text', rows: 2}),
@@ -112,7 +113,7 @@ export const contactForm = defineType({
         ], preview: {select: {title: 'label', subtitle: 'kind'}}})]}),
       ], preview: {select: {title: 'title', subtitle: 'note'}}})]}),
     ]}),
-    defineField({name: 'formId', type: 'string', options: {list: ['landing-contact', 'main-contact']}, validation: (rule) => rule.required().custom((value) => value === undefined || ['landing-contact', 'main-contact'].includes(value) || 'Wybierz dozwoloną wartość.')}),
+    defineField({name: 'formId', type: 'string', hidden: ({parent}) => parent?.variant === 'channels', options: {list: ['landing-contact', 'main-contact']}, validation: (rule) => rule.custom((value, context) => (context.parent as {variant?: string})?.variant === 'channels' || !!value || 'Wybierz formularz.').custom((value) => value === undefined || ['landing-contact', 'main-contact'].includes(value) || 'Wybierz dozwoloną wartość.')}),
   ], preview: {select: {title: 'heading'}},
 })
 export const newsletterSignup = defineType({name: 'newsletterSignup', title: 'Newsletter', type: 'object', fields: [defineField({name: 'body', type: 'text'})]})

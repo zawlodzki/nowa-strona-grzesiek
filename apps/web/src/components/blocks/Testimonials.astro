@@ -3,7 +3,7 @@ import type { Testimonial, Testimonials } from '../../../../studio/sanity.types'
 import type { ResolvedImage } from '../portable-text/types';
 import { safeHref } from '../portable-text/types';
 
-export type ResolvedTestimonial = Pick<Testimonial, '_id' | 'name' | 'role' | 'company' | 'quote' | 'url'> & { image?: ResolvedImage };
+export type ResolvedTestimonial = Pick<Testimonial, '_id' | 'name' | 'role' | 'company' | 'quote' | 'url' | 'linkedinUrl'> & { image?: ResolvedImage; authorImage?: ResolvedImage };
 
 interface Props {
   data: Testimonials;
@@ -15,6 +15,13 @@ const { data, items, id = 'opinie' } = Astro.props;
 const byId = new Map(items.map((item) => [item._id, item]));
 const quotes = (data.items ?? []).flatMap((ref) => byId.get(ref._ref) ?? []).filter((item) => item.quote || item.image);
 const wall = data.variant === 'imageWall';
+// Normalize only paired outer quotes; internal quotations and paragraphs remain intact.
+const quoteText = (value = '') => {
+  let text = value.trim();
+  const pairs = [['"', '"'], ['„', '”'], ['“', '”'], ['«', '»']];
+  while (pairs.some(([start, end]) => text.startsWith(start) && text.endsWith(end))) text = text.slice(1, -1).trim();
+  return text;
+};
 const byline = (item: ResolvedTestimonial) => [item.role, item.company].filter(Boolean).join(', ');
 ---
 {quotes.length > 0 && (
@@ -37,12 +44,16 @@ const byline = (item: ResolvedTestimonial) => [item.role, item.company].filter(B
                   : (
                     <>
                       {item.image && <img class="logo" src={item.image.src} width={item.image.width} height={item.image.height} alt={item.image.alt ?? ''} loading="lazy" decoding="async" />}
-                      <blockquote>{item.quote?.split(/\n{2,}/).map((paragraph) => <p>{paragraph}</p>)}</blockquote>
+                      <blockquote>{quoteText(item.quote).split(/\n{2,}/).map((paragraph) => <p>{paragraph}</p>)}</blockquote>
                     </>
                   )}
                 <figcaption>
+                  {item.authorImage && <img class="author-image" src={item.authorImage.src} width={item.authorImage.width} height={item.authorImage.height} alt={item.authorImage.alt} loading="lazy" decoding="async" />}
+                  <div class="attribution">
                   <span class="name">{href ? <a href={href} rel="noopener">{item.name}</a> : item.name}</span>
                   {byline(item) && <span class="role type-body-s">{byline(item)}</span>}
+                </div>
+                  {item.linkedinUrl?.startsWith('https://') && safeHref(item.linkedinUrl) && <a class="linkedin" href={item.linkedinUrl} aria-label={`LinkedIn: ${item.name}`} rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 9h4v12H3zm6 0h4v1.6c.8-1.2 1.8-1.9 3.4-1.9 3 0 4.6 1.8 4.6 5V21h-4v-6.6c0-1.6-.6-2.5-1.9-2.5-1.4 0-2.1 1-2.1 2.5V21H9z"/></svg></a>}
                 </figcaption>
               </figure>
             </li>
@@ -83,7 +94,12 @@ const byline = (item: ResolvedTestimonial) => [item.role, item.company].filter(B
   blockquote { display: grid; gap: 0.75em; color: var(--text-heading); max-inline-size: 65ch; }
   blockquote p:first-child::before { content: "„"; }
   blockquote p:last-child::after { content: "”"; }
-  figcaption { display: grid; gap: var(--space-3xs); }
+  figcaption { display: flex; align-items: center; gap: var(--space-xs); }
+  .attribution { display: grid; gap: var(--space-3xs); }
+  .author-image { flex: none; inline-size: 3.5rem; block-size: 3.5rem; object-fit: cover; border-radius: 50%; }
+  .linkedin { display: grid; place-items: center; min-inline-size: 44px; min-block-size: 44px; }
+  .linkedin svg { inline-size: 1.5em; block-size: 1.5em; }
+  .linkedin:active { color: var(--text-link-active); }
   .name { font-weight: var(--font-weight-semibold); color: var(--text-heading); overflow-wrap: anywhere; }
   .role { color: var(--text-muted); overflow-wrap: anywhere; }
 

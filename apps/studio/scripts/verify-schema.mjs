@@ -8,6 +8,12 @@ const read = (relative) => JSON.parse(readFileSync(new URL(relative, import.meta
 const contract = read('../../../migration/contracts/blocks.json')
 const schema = read('../schema.json')
 const types = new Map(schema.map((type) => [type.name, type]))
+const testimonial = types.get('testimonial').attributes;
+assert.equal(testimonial.authorImage.value.name, 'contentImage');
+assert.equal(testimonial.authorImage.optional, true);
+assert.equal(testimonial.linkedinUrl.optional, true);
+assert.equal(testimonial.linkedinUrl.value.type, 'string');
+console.log('PASS optional testimonial authorImage and linkedinUrl registered');
 const sections = types.get('page').attributes.sections.value.of.of.map((item) => item.rest.name)
 assert.deepEqual([...sections].sort(), contract.blocks.map((block) => block.type).sort())
 assert.ok(sections.includes('tabs'), 'page builder registers tabs')

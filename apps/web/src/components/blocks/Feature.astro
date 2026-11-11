@@ -10,17 +10,18 @@ import Icon from '../ui/Icon.astro';
 import MediaImage from '../ui/MediaImage.astro';
 interface Props extends Resolved { data: Feature; image?: ResolvedImage; headingLevel?: 'h1' | 'h2' | 'h3'; }
 const { data, image, links, images, headingLevel: Heading = 'h2' } = Astro.props;
+const article = data.layout === 'article';
 const portrait = Boolean(image?.width && image?.height && image.height > image.width * 1.5 && data.media?.kind !== 'diagram');
 const hasMedia = Astro.slots.has('media') || image || (data.media?.kind === 'diagram' && data.media.key);
 ---
 <BlockSection id={data.anchorId?.current} kind="feature">
-  <div class:list={['feature-layout', { 'has-media': hasMedia, 'media-left': data.mediaSide === 'left', 'has-portrait': portrait }]}>
+  <div class:list={['feature-layout', { article, 'has-media': hasMedia, 'article-media': article && hasMedia, 'media-left': !article && data.mediaSide === 'left', 'has-portrait': portrait }]}>
     <div class="copy">
       {data.tagline && <p class="type-tagline">{data.tagline}</p>}
       {data.heading && <Heading>{data.heading}</Heading>}
       <slot name="body"><PortableText value={data.body} links={links} images={images} /></slot>
       {(data.bullets?.length ?? 0) > 0 && <ul class="bullets">{data.bullets?.map((text) => <li><Icon name="check" /><span>{text}</span></li>)}</ul>}
-      {data.cta && <Button link={data.cta} variant="text" />}
+      {data.cta && <Button link={data.cta} variant={article ? 'primary' : 'text'} />}
     </div>
     {hasMedia && <div class="media"><slot name="media">{data.media?.kind === 'diagram' && data.media.key ? <Diagram diagram={data.media.key} /> : image && <MediaImage image={image} />}</slot></div>}
   </div>
@@ -30,6 +31,19 @@ const hasMedia = Astro.slots.has('media') || image || (data.media?.kind === 'dia
   .copy { display: flex; flex-direction: column; align-items: start; gap: var(--space-m); max-inline-size: 65ch; overflow-wrap: anywhere; }
   .has-portrait .media { inline-size: min(100%, 240px); justify-self: center; }
   @container (width < 48rem) { .has-portrait .media { display: none; } }
+  .feature-layout.article { align-items: start; grid-template-columns: minmax(0, 1fr); }
+  .article .copy { max-inline-size: 45rem; gap: clamp(1.25rem, 1.12rem + .55vw, 1.5625rem); }
+  .article :global(.pt > *) { margin-block: 0; }
+  .article :global(.pt > * + *) { margin-block-start: 1em; }
+  .article :global(.pt > :is(h2, h3, h4)) { margin-block-start: clamp(1.5rem, 1.345rem + .663vw, 1.875rem); }
+  .article :global(.pt > :is(h2, h3, h4) + *) { margin-block-start: clamp(1.25rem, 1.12rem + .55vw, 1.5625rem); }
+  .article .copy > :global(h1) { font-size: var(--typography-heading-l-size); line-height: 1.1; }
+  .article .copy > :global(.action) { align-self: center; }
+  .article .media { display: none; }
+  @container (width >= 60rem) {
+    .article.article-media { gap: var(--space-m); grid-template-columns: minmax(0, 1fr) minmax(0, .5fr); }
+    .article .media { display: block; position: sticky; inset-block-start: 4rem; align-self: start; inline-size: 100%; justify-self: end; }
+  }
   .bullets { display: grid; gap: var(--space-xs); margin: 0; padding: 0; list-style: none; }
   .bullets li { display: flex; gap: var(--space-xs); align-items: start; }
   .bullets :global(svg) { color: var(--text-link); }
