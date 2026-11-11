@@ -1,0 +1,55 @@
+---
+interface Props { title: string; path: string; pl: boolean; }
+const { title, path, pl } = Astro.props;
+const url = new URL(path, 'https://www.zawlodzki.pl').href;
+const encoded = encodeURIComponent(url);
+const text = encodeURIComponent(title);
+const options = [
+  ['X', `https://x.com/intent/post?url=${encoded}&text=${text}`],
+  ['LinkedIn', `https://www.linkedin.com/sharing/share-offsite/?url=${encoded}`],
+  ['Facebook', `https://www.facebook.com/sharer/sharer.php?u=${encoded}`],
+  ['Email', `mailto:?subject=${text}&body=${encoded}`],
+  ['WhatsApp', `https://wa.me/?text=${text}%20${encoded}`],
+];
+---
+<div class="share">
+  <button type="button" popovertarget="share-options">{pl ? 'Udostępnij' : 'Share'}</button>
+  <div id="share-options" popover aria-labelledby="share-heading">
+    <h2 id="share-heading" class="type-heading-xs">{pl ? 'Udostępnij artykuł' : 'Share this article'}</h2>
+    <ul role="list">{options.map(([label, href]) => <li><a href={href} target={href.startsWith('mailto:') ? undefined : '_blank'} rel="noopener noreferrer">{label}</a></li>)}</ul>
+    <button type="button" data-copy-url={url}>{pl ? 'Kopiuj link' : 'Copy link'}</button>
+    <p role="status" aria-live="polite"></p>
+    <label class="manual" hidden>{pl ? 'Skopiuj adres ręcznie' : 'Copy the address manually'}<input readonly value={url} /></label>
+    <button type="button" popovertarget="share-options" popovertargetaction="hide">{pl ? 'Zamknij' : 'Close'}</button>
+  </div>
+</div>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-copy-url]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const panel = button.closest<HTMLElement>('[popover]')!;
+      try {
+        await navigator.clipboard.writeText(button.dataset.copyUrl!);
+        panel.querySelector('[role="status"]')!.textContent = document.documentElement.lang === 'pl' ? 'Link skopiowany.' : 'Link copied.';
+      } catch {
+        const label = panel.querySelector<HTMLElement>('.manual')!;
+        label.hidden = false;
+        const input = label.querySelector('input')!;
+        input.focus();
+        input.select();
+      }
+    });
+  });
+</script>
+<style>
+  button, a { min-block-size: 44px; display: inline-flex; align-items: center; padding: var(--space-2xs) var(--space-s); border-radius: var(--radius-md); }
+  button { border: 1px solid var(--border-hairline); background: var(--surface-soft); color: var(--text-link); cursor: pointer; font: inherit; }
+  button:active, a:active { background: var(--surface-tint); }
+  button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--text-link); outline-offset: 3px; }
+  [popover] { inline-size: min(22rem, calc(100% - 2rem)); padding: var(--space-m); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg); background: var(--surface-page, oklch(1 0 none)); color: var(--text-body); }
+  ul { display: grid; list-style: none; padding: 0; margin-block: var(--space-s); }
+  [role="status"] { margin-block: var(--space-xs); }
+  input { inline-size: 100%; padding: var(--space-xs); }
+  .manual:not([hidden]) { display: grid; gap: var(--space-2xs); margin-block: var(--space-s); }
+  @media (hover: hover) and (pointer: fine) { button:hover, a:hover { background: var(--surface-tint); } }
+  @supports (position-area: block-end) { [popover] { margin: 0; margin-block-start: .5rem; position-area: block-end span-inline-end; position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline; } }
+</style>

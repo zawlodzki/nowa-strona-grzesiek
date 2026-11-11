@@ -1,0 +1,6 @@
+host	path	status	location	x-robots-tag	content-type	title
+127.0.0.1	/blog/asana-vs-jira	200	-	noindex, nofollow	text/html; charset=utf-8	Asana vs Jira: projekty, AI i ceny | Grzegorz Zawłodzki
+127.0.0.1	/blog/asana-vs-trello	200	-	noindex, nofollow	text/html; charset=utf-8	Asana vs Trello: kiedy zmienić? | Grzegorz Zawłodzki
+127.0.0.1	/blog	200	-	noindex, nofollow	text/html; charset=utf-8	Blog | Grzegorz Zawłodzki
+127.0.0.1	/	200	-	noindex, nofollow	text/html; charset=utf-8	CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki
+127.0.0.1	/BLOG/asana-vs-jira	404	-	noindex, nofollow	text/html; charset=utf-8	Nie znaleziono strony

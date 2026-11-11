@@ -1,0 +1,224 @@
+[
+  {
+    "slug": "asana-vs-jira",
+    "width": 1440,
+    "headings": 8,
+    "related": 3,
+    "order": true,
+    "avatar": {
+      "fit": "contain",
+      "width": 112,
+      "height": 209,
+      "natural": null
+    },
+    "sticky": [
+      [
+        {
+          "y": 112,
+          "position": "sticky"
+        },
+        {
+          "y": 112,
+          "position": "sticky"
+        }
+      ],
+      [
+        {
+          "y": 112,
+          "position": "sticky"
+        },
+        {
+          "y": 112,
+          "position": "sticky"
+        }
+      ]
+    ],
+    "share": "keyboard open, copy, Escape and restored focus passed",
+    "overflow": false
+  },
+  {
+    "slug": "asana-vs-jira",
+    "width": 768,
+    "headings": 8,
+    "related": 3,
+    "order": true,
+    "avatar": {
+      "fit": "contain",
+      "width": 112,
+      "height": 209,
+      "natural": null
+    },
+    "sticky": [
+      [
+        {
+          "y": 111.984375,
+          "position": "static"
+        },
+        {
+          "y": 9652.0625,
+          "position": "static"
+        }
+      ],
+      [
+        {
+          "y": -538.015625,
+          "position": "static"
+        },
+        {
+          "y": 9002.0625,
+          "position": "static"
+        }
+      ]
+    ],
+    "share": "keyboard open, copy, Escape and restored focus passed",
+    "overflow": false
+  },
+  {
+    "slug": "asana-vs-jira",
+    "width": 375,
+    "headings": 8,
+    "related": 3,
+    "order": true,
+    "avatar": {
+      "fit": "contain",
+      "width": 112,
+      "height": 209,
+      "natural": null
+    },
+    "sticky": [
+      [
+        {
+          "y": 112.28125,
+          "position": "static"
+        },
+        {
+          "y": 13398.546875,
+          "position": "static"
+        }
+      ],
+      [
+        {
+          "y": -537.71875,
+          "position": "static"
+        },
+        {
+          "y": 12748.546875,
+          "position": "static"
+        }
+      ]
+    ],
+    "share": "keyboard open, copy, Escape and restored focus passed",
+    "overflow": false
+  },
+  {
+    "slug": "asana-vs-trello",
+    "width": 1440,
+    "headings": 8,
+    "related": 3,
+    "order": true,
+    "avatar": {
+      "fit": "contain",
+      "width": 112,
+      "height": 209,
+      "natural": null
+    },
+    "sticky": [
+      [
+        {
+          "y": 112.1875,
+          "position": "sticky"
+        },
+        {
+          "y": 112.1875,
+          "position": "sticky"
+        }
+      ],
+      [
+        {
+          "y": 112,
+          "position": "sticky"
+        },
+        {
+          "y": 112,
+          "position": "sticky"
+        }
+      ]
+    ],
+    "share": "keyboard open, copy, Escape and restored focus passed",
+    "overflow": false
+  },
+  {
+    "slug": "asana-vs-trello",
+    "width": 768,
+    "headings": 8,
+    "related": 3,
+    "order": true,
+    "avatar": {
+      "fit": "contain",
+      "width": 112,
+      "height": 209,
+      "natural": null
+    },
+    "sticky": [
+      [
+        {
+          "y": 111.71875,
+          "position": "static"
+        },
+        {
+          "y": 9190.890625,
+          "position": "static"
+        }
+      ],
+      [
+        {
+          "y": -538.28125,
+          "position": "static"
+        },
+        {
+          "y": 8540.890625,
+          "position": "static"
+        }
+      ]
+    ],
+    "share": "keyboard open, copy, Escape and restored focus passed",
+    "overflow": false
+  },
+  {
+    "slug": "asana-vs-trello",
+    "width": 375,
+    "headings": 8,
+    "related": 3,
+    "order": true,
+    "avatar": {
+      "fit": "contain",
+      "width": 112,
+      "height": 209,
+      "natural": null
+    },
+    "sticky": [
+      [
+        {
+          "y": 112.46875,
+          "position": "static"
+        },
+        {
+          "y": 13082.84375,
+          "position": "static"
+        }
+      ],
+      [
+        {
+          "y": -537.53125,
+          "position": "static"
+        },
+        {
+          "y": 12432.84375,
+          "position": "static"
+        }
+      ]
+    ],
+    "share": "keyboard open, copy, Escape and restored focus passed",
+    "overflow": false
+  }
+]
