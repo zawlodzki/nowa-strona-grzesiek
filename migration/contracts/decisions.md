@@ -23,3 +23,5 @@ Written only by the coordinator. Newest at the bottom.
 | 2026-11-10 | T32 | Add optional hero badgeImage/badgeSize and reusable tabs. Plain ordered prose uses existing richText to preserve DOM order without another field. State cards use nearest existing tokens; palette is outside owns. |
 
 | 16 | 2026-11-10 | T32 review: tab items gain optional tagline label; contentSection items become optional so ordered prose stays in intro with separate section heading/tagline. Catalog uses the identical ContentSection data path. | T32 | C, D, M |
+
+| 2026-11-11 | T34 | Add opt-in Feature layout `article` (one prose flow, sticky right portrait), ContactForm `channels` variant without form; reuse channel groups. Testimonial adds optional contentImage `authorImage` and HTTPS `linkedinUrl`, independent of recommendation `image` / source `url`. Existing variants unchanged. |

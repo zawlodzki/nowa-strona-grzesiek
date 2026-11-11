@@ -62,7 +62,8 @@ const postsOf = (kind: string | undefined) => site.posts
         const item = site.testimonials.get(ref._ref);
         if (!item) return [];
         const image = resolveImage(site, item.image);
-        return [{ _id: item._id, name: item.name, role: item.role, company: item.company, quote: item.quote, url: item.url, ...(image && { image }) }];
+        const authorImage = resolveImage(site, item.authorImage);
+        return [{ _id: item._id, name: item.name, role: item.role, company: item.company, quote: item.quote, url: item.url, linkedinUrl: item.linkedinUrl, ...(authorImage && { authorImage }), ...(image && { image }) }];
       });
       return <Testimonials data={section} items={items} />;
     }

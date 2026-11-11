@@ -1,0 +1,132 @@
+[
+  {
+    "side": "live",
+    "width": 1280,
+    "route": "/o-mnie",
+    "scrollWidth": 1280,
+    "viewport": 1280
+  },
+  {
+    "side": "local",
+    "width": 1280,
+    "route": "/o-mnie",
+    "scrollWidth": 1280,
+    "viewport": 1280
+  },
+  {
+    "width": 1280,
+    "media": {
+      "display": "block",
+      "position": "sticky",
+      "top": "64px",
+      "rect": {
+        "x": 848.40625,
+        "y": -1092.890625,
+        "width": 392.8125,
+        "height": 589.21875,
+        "top": -1092.890625,
+        "right": 1241.21875,
+        "bottom": -503.671875,
+        "left": 848.40625
+      }
+    }
+  },
+  {
+    "width": 1280,
+    "marks": [
+      {
+        "first": "Rozpoczynając współpracę z Grześkiem miałem nadzieję na to, że uda mi się lepiej wykorzystać narzędzia, z których już korzystałem w firmie, ale przy samodzielnym wdrażaniu natrafiłem na \"ścianę koncepcyjną\". Wspólna praca nad procesami i ich koordynacją okazała się prosta i 100% skuteczna. Polecam!",
+        "before": "\"„\"",
+        "after": "\"”\""
+      },
+      {
+        "first": "Naszym problemem był start z działaniem Pipedrive, ponieważ ilość funkcjonalności i ustawień tego narzędzia oraz jego stopień zaawansowania i skomplikowania początkowo nas przerósł. Wystarczyła konsultacja aby Pan Grzegorz wyjaśnił nam zasady działania aplikacji Pipedrive oraz pomógł nam ją skonfigurować i wystartować z jej działaniem.",
+        "before": "\"„\"",
+        "after": "\"”\""
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "fixture": {
+      "photo": true,
+      "linkedin": true,
+      "recommendationImage": true
+    }
+  },
+  {
+    "width": 1280,
+    "route": "/",
+    "contactForms": 1
+  },
+  {
+    "width": 1280,
+    "route": "/kontakt",
+    "contactForms": 1
+  },
+  {
+    "side": "live",
+    "width": 375,
+    "route": "/o-mnie",
+    "scrollWidth": 375,
+    "viewport": 375
+  },
+  {
+    "side": "local",
+    "width": 375,
+    "route": "/o-mnie",
+    "scrollWidth": 375,
+    "viewport": 375
+  },
+  {
+    "width": 375,
+    "media": {
+      "display": "none",
+      "position": "static",
+      "top": "auto",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
+    }
+  },
+  {
+    "width": 375,
+    "marks": [
+      {
+        "first": "Rozpoczynając współpracę z Grześkiem miałem nadzieję na to, że uda mi się lepiej wykorzystać narzędzia, z których już korzystałem w firmie, ale przy samodzielnym wdrażaniu natrafiłem na \"ścianę koncepcyjną\". Wspólna praca nad procesami i ich koordynacją okazała się prosta i 100% skuteczna. Polecam!",
+        "before": "\"„\"",
+        "after": "\"”\""
+      },
+      {
+        "first": "Naszym problemem był start z działaniem Pipedrive, ponieważ ilość funkcjonalności i ustawień tego narzędzia oraz jego stopień zaawansowania i skomplikowania początkowo nas przerósł. Wystarczyła konsultacja aby Pan Grzegorz wyjaśnił nam zasady działania aplikacji Pipedrive oraz pomógł nam ją skonfigurować i wystartować z jej działaniem.",
+        "before": "\"„\"",
+        "after": "\"”\""
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "fixture": {
+      "photo": true,
+      "linkedin": true,
+      "recommendationImage": true
+    }
+  },
+  {
+    "width": 375,
+    "route": "/",
+    "contactForms": 1
+  },
+  {
+    "width": 375,
+    "route": "/kontakt",
+    "contactForms": 1
+  }
+]

@@ -102,6 +102,8 @@ export const testimonial = defineType({
     defineField({name: 'role', title: 'Rola', type: 'string'}),
     defineField({name: 'company', title: 'Firma', type: 'string'}),
     defineField({name: 'quote', title: 'Cytat', type: 'text'}),
+    defineField({name: 'authorImage', title: 'Zdjęcie autora', type: 'contentImage'}),
+    defineField({name: 'linkedinUrl', title: 'Profil LinkedIn autora', type: 'url', validation: (rule) => rule.uri({scheme: ['https']})}),
     defineField({name: 'image', title: 'Zrzut rekomendacji', type: 'contentImage'}),
     defineField({name: 'url', title: 'Źródło', type: 'url', validation: (rule) => rule.uri({scheme: ['https']})}),
   ],

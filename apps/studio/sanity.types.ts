@@ -271,7 +271,7 @@ export type NewsletterSignup = {
 
 export type ContactForm = {
   _type: "contactForm";
-  variant?: "landing" | "full";
+  variant?: "landing" | "full" | "channels";
   tagline?: string;
   heading?: string;
   intro?: string;
@@ -383,6 +383,7 @@ export type Feature = {
   _type: "feature";
   tagline?: string;
   heading?: string;
+  layout?: "default" | "article";
   body?: PortableText;
   bullets?: Array<string>;
   media?: Media;
@@ -485,6 +486,8 @@ export type Testimonial = {
   role?: string;
   company?: string;
   quote?: string;
+  authorImage?: ContentImage;
+  linkedinUrl?: string;
   image?: ContentImage;
   url?: string;
 };

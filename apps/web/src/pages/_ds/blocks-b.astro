@@ -55,7 +55,7 @@ const pricingWorst: PricingData = {
 const people: ResolvedTestimonial[] = [
   { _id: 't1', name: 'Anna Przykładowa', role: 'Dyrektorka sprzedaży', company: 'Firma Demo sp. z o.o.', quote: 'Przykładowa opinia do katalogu komponentów. Pokazuje, jak wygląda cytat średniej długości w siatce dwóch kolumn.' },
   { _id: 't2', name: 'Jan Testowy', company: 'Demo SA', quote: 'Drugi przykładowy cytat.\n\nMa dwa akapity, żeby sprawdzić odstępy w środku cytatu.', url: 'https://example.com' },
-  { _id: 't3', name: 'Ewa Wzorcowa', role: 'CEO', company: 'Logo Demo', quote: 'Krótki cytat z logo firmy.', image: placeholder(320, 80, 'LOGO DEMO') },
+  { _id: 't3', name: 'Ewa Wzorcowa', role: 'CEO', company: 'Logo Demo', quote: '"Krótki cytat z logo firmy."', authorImage: { src: '/brand/contact-profile.avif', width: 450, height: 450, alt: 'Zdjęcie demonstracyjne autora (fixture)' }, linkedinUrl: 'https://www.linkedin.com/in/example/', image: placeholder(320, 80, 'LOGO DEMO') },
   { _id: 't4', name: `Bartłomiej ${longWord}`, role: 'Prezes zarządu, pełnomocnik do spraw transformacji cyfrowej i jakości danych', company: 'Bardzo Długa Nazwa Spółki Przykładowej Komandytowo-Akcyjnej', quote: Array.from({ length: 6 }, () => 'Bardzo długi przykładowy cytat, który ma sprawdzić, czy tekst jest wyrównany do lewej i nie rozpycha karty.').join(' ') },
   ...[1, 2, 3, 4].map((n) => ({ _id: `w${n}`, name: `Rekomendacja ${n}`, image: placeholder(480, 600, `REKOMENDACJA ${n}`, `Zrzut rekomendacji numer ${n}`) })),
 ];

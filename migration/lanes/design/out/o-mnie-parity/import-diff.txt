@@ -1,0 +1,434 @@
+--- baseline importer
++++ T34 importer
+@@ -1217,7 +1217,7 @@
+     "language": "pl",
+     "sections": [
+       {
+-        "_key": "9f9366312011",
++        "_key": "5ed9ece0ba85",
+         "_type": "feature",
+         "body": [
+           {
+@@ -1255,82 +1255,97 @@
+               }
+             ],
+             "style": "normal"
+-          }
+-        ],
+-        "heading": "Grzegorz Zawłodzki - konsultant CRM i automatyzacji sprzedaży B2B",
+-        "mediaSide": "right",
+-        "tagline": "O mnie"
+-      },
+-      {
+-        "_key": "cdac78781985",
+-        "_type": "feature",
+-        "body": [
+-          {
+-            "_key": "9db8f44d7977",
+-            "_type": "block",
+-            "children": [
+-              {
+-                "_key": "bb09af12ee9c",
++          },
++          {
++            "_key": "9f9366312011",
++            "_type": "block",
++            "children": [
++              {
++                "_key": "9db8f44d7977",
++                "_type": "span",
++                "text": "Komu Pomagam?"
++              }
++            ],
++            "style": "h2"
++          },
++          {
++            "_key": "80d145895f32",
++            "_type": "block",
++            "children": [
++              {
++                "_key": "cdac78781985",
+                 "_type": "span",
+                 "text": "Dzisiaj pracuję jako konsultant i trener. Pomagam firmom zmienić sposób, w jaki sprzedają, zarządzają projektami i korzystają z danych. Wśród moich klientów są globalne marki jak IAB i Fundacja Pułaskiego, a także szybko rosnące firmy stawiające pierwszy system do zarządzania projektami lub CRM."
+               }
+             ],
+             "style": "normal"
+-          }
+-        ],
+-        "heading": "Komu Pomagam?",
+-        "mediaSide": "right"
+-      },
+-      {
+-        "_key": "37b89137cf1b",
+-        "_type": "feature",
+-        "body": [
+-          {
+-            "_key": "600a3cbe1792",
+-            "_type": "block",
+-            "children": [
+-              {
+-                "_key": "58ae18c202b9",
++          },
++          {
++            "_key": "58ae18c202b9",
++            "_type": "block",
++            "children": [
++              {
++                "_key": "1d32fe97b812",
++                "_type": "span",
++                "text": "Jak pracuję?"
++              }
++            ],
++            "style": "h2"
++          },
++          {
++            "_key": "a073d7c7e4db",
++            "_type": "block",
++            "children": [
++              {
++                "_key": "83c3c3d466ca",
+                 "_type": "span",
+                 "text": "Dwie rzeczy wyróżniają moje podejście:\nPo pierwsze, pracuję z Twoim zespołem na żywo. Siadam z ludźmi, konfiguruję narzędzia przy nich, szkolę na ich poziomie i zostaję, aż faktycznie zaczną z tego korzystać. Każda sesja kończy się konkretnymi zadaniami, z przypisanymi osobami i datami.\nPo drugie, myślę w połączonych systemach. Łączę CRM z zarządzaniem projektami, automatyzuję przepływ danych przez n8n i API, buduję dashboardy raportowe i projektuję procesy wspierane przez AI, które oszczędzają godziny ręcznej pracy. Cel jest jeden: żeby Twoja codzienna praca była widoczna, mierzalna i skalowalna."
+               }
+             ],
+             "style": "normal"
+-          }
+-        ],
+-        "heading": "Jak pracuję?",
+-        "mediaSide": "right"
+-      },
+-      {
+-        "_key": "c3424d3699b2",
+-        "_type": "feature",
+-        "body": [
+-          {
+-            "_key": "a073d7c7e4db",
+-            "_type": "block",
+-            "children": [
+-              {
+-                "_key": "83c3c3d466ca",
++          },
++          {
++            "_key": "c3424d3699b2",
++            "_type": "block",
++            "children": [
++              {
++                "_key": "9f8c765aeba3",
++                "_type": "span",
++                "text": "W czym mogę Ci pomóc?"
++              }
++            ],
++            "style": "h2"
++          },
++          {
++            "_key": "a40f6dbfe412",
++            "_type": "block",
++            "children": [
++              {
++                "_key": "9c4b76ef0c56",
+                 "_type": "span",
+                 "text": "Mogę pomóc Ci:\n→ wdrożyć Pipedrive, Attio, Hubspot CRM lub Asanę od zera i nauczyć Twój zespół z nich korzystać,\n→ nauczyć Twój zespół korzystać z AI i uruchomić pierwsze agenty AI pracujące dla Twojego zespołu handlowego,\n→ zmapować i uporządkować procesy w firmie, żeby nic nie ginęło po drodze,\n→ zautomatyzować przepływ danych między narzędziami (CRM, zarządzanie projektami, mail, formularze, e-commerce),\n→ postawić dashboardy sprzedażowe i marketingowe, które na bieżąco pokazują co się dzieje w firmie,\n→ wpiąć AI w Twoje procesy, od automatycznych opisów produktów po inteligentną obsługę leadów,\n→ zaplanować cyfrową transformację krok po kroku, testując w bezpiecznym środowisku zanim wejdziesz na produkcję."
+               }
+             ],
+             "style": "normal"
+-          }
+-        ],
+-        "heading": "W czym mogę Ci pomóc?",
+-        "mediaSide": "right"
+-      },
+-      {
+-        "_key": "9c4b76ef0c56",
+-        "_type": "feature",
+-        "body": [
+-          {
+-            "_key": "9f8c765aeba3",
+-            "_type": "block",
+-            "children": [
+-              {
+-                "_key": "37b2cf35e689",
++          },
++          {
++            "_key": "6edcb36e928f",
++            "_type": "block",
++            "children": [
++              {
++                "_key": "565496dbb3b1",
++                "_type": "span",
++                "text": "Po czym poznasz że wdrożenie się udało?"
++              }
++            ],
++            "style": "h2"
++          },
++          {
++            "_key": "59fc6a9de6a8",
++            "_type": "block",
++            "children": [
++              {
++                "_key": "7cda63721146",
+                 "_type": "span",
+                 "text": "Najlepsze wdrożenia dzieją się wtedy, kiedy narzędzia stają się nawykami zespołu, a nie projektem IT. Lepszy sposób pracy poprawia wyniki i zmienia to, jak ludzie czują się przychodząc do pracy każdego dnia.\n‍\nKiedy nie siedzę w CRM klienta i nie mapuję procesów w Asanie, śledzę jak agenty AI zmieniają pracę i pilnuję, żeby moi klienci byli na to gotowi.\n‍\nKliknij poniżej i skontaktuj się bezpośrednio ze mną."
+               }
+@@ -1343,7 +1358,8 @@
+           "href": "/kontakt",
+           "label": "Porozmawiajmy o wdrożeniu"
+         },
+-        "heading": "Po czym poznasz że wdrożenie się udało?",
++        "heading": "Grzegorz Zawłodzki - konsultant CRM i automatyzacji sprzedaży B2B",
++        "layout": "article",
+         "media": {
+           "_type": "media",
+           "image": {
+@@ -1356,91 +1372,129 @@
+           },
+           "kind": "image"
+         },
+-        "mediaSide": "left"
+-      },
+-      {
+-        "_key": "aa312d1a6071",
+-        "_type": "feature",
+-        "body": [
+-          {
+-            "_key": "4cbcb5a9d682",
+-            "_type": "block",
+-            "children": [
+-              {
+-                "_key": "6edcb36e928f",
+-                "_type": "span",
+-                "text": "Najlepsze dla krótkich wiadomości. Odpowiadam najszybciej."
+-              }
+-            ],
+-            "style": "normal"
+-          },
+-          {
+-            "_key": "1eaab0bd9517",
+-            "_type": "block",
+-            "children": [
+-              {
+-                "_key": "59fc6a9de6a8",
+-                "_type": "span",
+-                "text": "Lepszy dla dłuższych pytań i propozycji współpracy."
+-              }
+-            ],
+-            "style": "normal"
+-          }
+-        ],
+-        "bullets": [
+-          "grzesiek@zawlodzki.pl",
+-          "+48 571 088 338",
+-          "Signal",
+-          "WhatsApp"
+-        ],
++        "mediaSide": "right",
++        "tagline": "O mnie"
++      },
++      {
++        "_key": "a3e8d50d9e6d",
++        "_type": "contactForm",
++        "channels": {
++          "groups": [
++            {
++              "_key": "92c75fe0cbaa",
++              "_type": "contactChannelGroup",
++              "items": [
++                {
++                  "_key": "af1597d4d048",
++                  "_type": "contactChannel",
++                  "href": "https://github.com/zawlodzki",
++                  "kind": "github",
++                  "label": "GitHub"
++                },
++                {
++                  "_key": "9f47444eaddb",
++                  "_type": "contactChannel",
++                  "href": "https://www.linkedin.com/in/zawlodzki/",
++                  "kind": "linkedin",
++                  "label": "LinkedIn"
++                },
++                {
++                  "_key": "abc3a9b6f97b",
++                  "_type": "contactChannel",
++                  "href": "https://x.com/zawlodzki",
++                  "kind": "x",
++                  "label": "X"
++                },
++                {
++                  "_key": "0f418b41b52e",
++                  "_type": "contactChannel",
++                  "href": "https://www.youtube.com/@GrzesiekZawlodzki",
++                  "kind": "youtube",
++                  "label": "YouTube"
++                },
++                {
++                  "_key": "8055e0bb5cc3",
++                  "_type": "contactChannel",
++                  "href": "https://www.instagram.com/zawlodzki/",
++                  "kind": "instagram",
++                  "label": "Instagram"
++                }
++              ],
++              "note": "Najlepsze dla krótkich wiadomości. Odpowiadam najszybciej.",
++              "title": "Social media"
++            },
++            {
++              "_key": "6216721d2a46",
++              "_type": "contactChannelGroup",
++              "items": [
++                {
++                  "_key": "17740cd4b1d2",
++                  "_type": "contactChannel",
++                  "href": "mailto:grzesiek@zawlodzki.pl",
++                  "kind": "email",
++                  "label": "grzesiek@zawlodzki.pl"
++                },
++                {
++                  "_key": "47d233899692",
++                  "_type": "contactChannel",
++                  "href": "tel:+48571088338",
++                  "kind": "phone",
++                  "label": "+48 571 088 338"
++                },
++                {
++                  "_key": "0c8fe58ad333",
++                  "_type": "contactChannel",
++                  "href": "https://signal.me/#eu/N93P3LbtKuO_5kC1OTTxTwgXw_6HGb9tBhbQgAKqQ43FmwzWGJZNkIJixoswplN2",
++                  "kind": "signal",
++                  "label": "Signal"
++                },
++                {
++                  "_key": "e61ca78af55a",
++                  "_type": "contactChannel",
++                  "href": "https://wa.me/48571088338",
++                  "kind": "whatsapp",
++                  "label": "WhatsApp"
++                }
++              ],
++              "note": "Lepszy dla dłuższych pytań i propozycji współpracy.",
++              "title": "Bezpośredni kontakt"
++            }
++          ]
++        },
+         "heading": "Jak się ze mną skontaktować?",
+-        "media": {
+-          "_type": "media",
+-          "image": {
+-            "_type": "contentImage",
+-            "alt": "github logo",
+-            "asset": {
+-              "_ref": "image-0bd9a05c13ab958e15e3581bdae851146195ac52-48x48-svg",
+-              "_type": "reference"
+-            }
+-          },
+-          "kind": "image"
+-        },
+-        "mediaSide": "right",
+-        "tagline": "Kontakt"
+-      },
+-      {
+-        "_key": "9f47444eaddb",
+-        "_type": "contentSection",
++        "tagline": "Kontakt",
++        "variant": "channels"
++      },
++      {
++        "_key": "a7a6cb3f5c37",
++        "_type": "testimonials",
+         "heading": "Opinie zadowolonych klientów",
+         "items": [
+           {
+-            "_key": "5ed9ece0ba85",
+-            "_type": "contentItem",
+-            "text": "\"Rozpoczynając współpracę z Grześkiem miałem nadzieję na to, że uda mi się lepiej wykorzystać narzędzia, z których już korzystałem w firmie, ale przy samodzielnym wdrażaniu natrafiłem na \"ścianę koncepcyjną\". Wspólna praca nad procesami i ich koordynacją okazała się prosta i 100% skuteczna. Polecam!\"",
+-            "title": "Bart Gryndzia, SMMASH"
+-          },
+-          {
+-            "_key": "af1597d4d048",
+-            "_type": "contentItem",
+-            "text": "\"Naszym problemem był start z działaniem Pipedrive, ponieważ ilość funkcjonalności i ustawień tego narzędzia oraz jego stopień zaawansowania i skomplikowania początkowo nas przerósł. Wystarczyła konsultacja aby Pan Grzegorz wyjaśnił nam zasady działania aplikacji Pipedrive oraz pomógł nam ją skonfigurować i wystartować z jej działaniem.\"",
+-            "title": "Łukasz Kruszewski-Zelman, AdTelier"
+-          }
+-        ],
+-        "layout": "cards",
+-        "tagline": "Co o mnie mówią"
+-      },
+-      {
+-        "_key": "92c75fe0cbaa",
++            "_key": "95a34610d79e",
++            "_ref": "testimonial-c38cec50fbdd326e",
++            "_type": "reference"
++          },
++          {
++            "_key": "dcfd7e372413",
++            "_ref": "testimonial-6f0a990b3555d094",
++            "_type": "reference"
++          }
++        ],
++        "tagline": "Co o mnie mówią",
++        "variant": "quotes"
++      },
++      {
++        "_key": "ff9bdf6831ae",
+         "_type": "contentSection",
+         "heading": "Dane firmy",
+         "intro": [
+           {
+-            "_key": "abc3a9b6f97b",
+-            "_type": "block",
+-            "children": [
+-              {
+-                "_key": "0f418b41b52e",
++            "_key": "62ae79c7494a",
++            "_type": "block",
++            "children": [
++              {
++                "_key": "765d2e818d2d",
+                 "_type": "span",
+                 "text": "Wellbiz sp. z o.o.\nul. Lipowa 3d\n30-702 Kraków\nNIP: 6793323800"
+               }
+@@ -1451,14 +1505,14 @@
+         "layout": "list"
+       },
+       {
+-        "_key": "17740cd4b1d2",
++        "_key": "9edb72f1e8b9",
+         "_type": "postList",
+         "heading": "Ostatnie wpisy",
+         "kind": "blog",
+         "limit": 3
+       },
+       {
+-        "_key": "47d233899692",
++        "_key": "9df02a4517c5",
+         "_type": "newsletterSignup",
+         "body": "Raz w tygodniu dostaniesz bezpłatnie, jedno gotowe rozwiązanie, jak skutecznie wykorzystać nowoczesne technologie w sprzedaży B2B."
+       }
+@@ -19835,6 +19889,14 @@
+     "_id": "testimonial-6f0a990b3555d094",
+     "_type": "testimonial",
+     "company": "AdTelier",
++    "image": {
++      "_type": "contentImage",
++      "alt": "logo adtelier",
++      "asset": {
++        "_ref": "image-d243eb02f2fadcdd0ef2ef4f035dac03475a2589-292x58-webp",
++        "_type": "reference"
++      }
++    },
+     "name": "Łukasz Kruszewski-Zelman",
+     "quote": "\"Naszym problemem był start z działaniem Pipedrive, ponieważ ilość funkcjonalności i ustawień tego narzędzia oraz jego stopień zaawansowania i skomplikowania początkowo nas przerósł. Wystarczyła konsultacja aby Pan Grzegorz wyjaśnił nam zasady działania aplikacji Pipedrive oraz pomógł nam ją skonfigurować i wystartować z jej działaniem.\""
+   },
+@@ -19842,6 +19904,14 @@
+     "_id": "testimonial-c38cec50fbdd326e",
+     "_type": "testimonial",
+     "company": "SMMASH",
++    "image": {
++      "_type": "contentImage",
++      "alt": "logo smmash",
++      "asset": {
++        "_ref": "image-1f702fbcbd7648de63bca8acd1161b8c36230e69-349x72-webp",
++        "_type": "reference"
++      }
++    },
+     "name": "Bart Gryndzia",
+     "quote": "\"Rozpoczynając współpracę z Grześkiem miałem nadzieję na to, że uda mi się lepiej wykorzystać narzędzia, z których już korzystałem w firmie, ale przy samodzielnym wdrażaniu natrafiłem na \"ścianę koncepcyjną\". Wspólna praca nad procesami i ich koordynacją okazała się prosta i 100% skuteczna. Polecam!\""
+   }
