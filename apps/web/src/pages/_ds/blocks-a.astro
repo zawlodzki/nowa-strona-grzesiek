@@ -83,6 +83,7 @@ const atlasBadge = { src: 'https://cdn.prod.website-files.com/62e8050a7ce936c2ca
     </div>)}
   </main>
 <div id="t32-hero"><HeroBlock data={atlasHero} image={resolveImage(atlasSite, atlasHero.image)} badgeImage={atlasBadge} /></div>
+<section id="t43-variants" class="variants content-grid section"><div><h2>Aktywna warstwa · trzy warianty</h2><div class="variant-grid">{['Obrys i tint · rekomendowany', 'Podkreślenie', 'Pełny Atlas Blue'].map((label, i) => <div><h3>{label}</h3><div class:list={['variant', `variant-${i}`]}><span>01 Diagnoza</span><strong>02 Klient i rynek</strong><span>03 Pozycjonowanie i przekaz</span></div></div>)}</div></div></section>
 <div id="t32-tabs"><TabsBlock data={atlasTabs} links={atlasSite.links} images={atlasSite.images} /></div>
 <div id="t32-test"><ContentSectionBlock data={atlasTest} links={atlasSite.links} images={atlasSite.images} /></div>
 </Base>
@@ -105,6 +106,13 @@ const atlasBadge = { src: 'https://cdn.prod.website-files.com/62e8050a7ce936c2ca
   }));
 </script>
 <style>
+  .variant-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: var(--space-l); }
+  .variant { display: grid; gap: var(--space-2xs); }
+  .variant > * { padding: var(--space-s); border-radius: var(--radius-sm); }
+  .variant strong { color: var(--text-link); }
+  .variant-0 strong { background: var(--surface-tint); box-shadow: inset 0 0 0 1px var(--border-focus); }
+  .variant-1 strong { text-decoration: underline; text-underline-offset: 0.4em; }
+  .variant-2 strong { background: var(--surface-accent); color: var(--text-on-accent); }
   .catalog-header { background: var(--surface-soft); }
   .catalog-header .flow { max-inline-size: 65ch; }
   .controls { display: flex; flex-wrap: wrap; gap: var(--space-2xs); padding: var(--space-s) var(--layout-gutter); border-block-end: 1px solid var(--border-default); }
