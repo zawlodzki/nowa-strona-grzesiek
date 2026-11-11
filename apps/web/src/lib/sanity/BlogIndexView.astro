@@ -1,5 +1,7 @@
 ---
 import { blogPagePath, type Route } from './routes.ts';
+import Button from '../../components/ui/Button.astro';
+import NewsletterSignup from '../../components/blocks/NewsletterSignup.astro';
 import PostCards from './PostCards.astro';
 import { localHref, type Site } from './site.ts';
 
@@ -14,31 +16,22 @@ const pageHref = (n: number) => localHref(language, blogPagePath(n));
     <div class="inner">
       <h1>Blog</h1>
       <p class="type-body">{description}</p>
-      {pageCount > 1 && <p class="type-body-s muted">{pl ? `Strona ${pageNumber} z ${pageCount}` : `Page ${pageNumber} of ${pageCount}`}</p>}
     </div>
   </header>
   <section class="content-grid section" aria-label={pl ? 'Wpisy' : 'Posts'}>
-    <PostCards site={site} posts={posts} eager={3} />
+    <PostCards site={site} posts={posts} eager={3} featured={pageNumber === 1} />
     {pageCount > 1 && (
       <nav class="pagination" aria-label={pl ? 'Strony bloga' : 'Blog pages'}>
         {pageNumber > 1 && <a rel="prev" href={pageHref(pageNumber - 1)}>{pl ? 'Nowsze wpisy' : 'Newer posts'}</a>}
-        <ol role="list">
-          {Array.from({ length: pageCount }, (_, i) => i + 1).map((n) => (
-            <li>{n === pageNumber ? <span aria-current="page">{n}</span> : <a href={pageHref(n)}>{n}</a>}</li>
-          ))}
-        </ol>
-        {pageNumber < pageCount && <a rel="next" href={pageHref(pageNumber + 1)}>{pl ? 'Starsze wpisy' : 'Older posts'}</a>}
+        {pageNumber < pageCount && <Button link={{ _type: 'link', label: pl ? 'Następne wpisy' : 'Next posts', href: pageHref(pageNumber + 1) }} variant="secondary" />}
       </nav>
     )}
   </section>
+  {pl && <NewsletterSignup data={{ _type: 'newsletterSignup', body: 'Raz w tygodniu dostaniesz bezpłatnie, jedno gotowe rozwiązanie, jak skutecznie wykorzystać nowoczesne technologie w sprzedaży B2B.' }} />}
 </main>
 <style>
   .blog-head { padding-block-end: 0; }
   .blog-head .inner { display: grid; gap: var(--space-s); max-inline-size: var(--measure-prose); }
-  .muted { color: var(--text-muted); }
   .pagination { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-s); margin-block-start: var(--space-3xl); }
-  .pagination ol { display: flex; flex-wrap: wrap; gap: var(--space-2xs); margin: 0; padding: 0; }
-  .pagination :is(a, span) { display: inline-grid; place-items: center; min-inline-size: 2.75rem; min-block-size: 2.75rem; padding-inline: var(--space-2xs); border-radius: var(--radius-sm); }
   .pagination a:active { color: var(--text-link-active); }
-  .pagination [aria-current] { background: var(--surface-tint); color: var(--text-heading); font-weight: 600; }
 </style>

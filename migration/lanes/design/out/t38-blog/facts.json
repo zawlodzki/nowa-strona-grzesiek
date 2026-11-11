@@ -1,0 +1,126 @@
+[
+  {
+    "name": "live",
+    "width": 1440,
+    "url": "https://www.zawlodzki.pl/blog",
+    "h1": [
+      "Blog"
+    ],
+    "cards": 13,
+    "dates": 0,
+    "next": 0,
+    "overflow": false
+  },
+  {
+    "name": "new",
+    "width": 1440,
+    "url": "http://127.0.0.1:8790/blog",
+    "h1": [
+      "Blog"
+    ],
+    "cards": 12,
+    "dates": 0,
+    "next": 1,
+    "overflow": false
+  },
+  {
+    "name": "staging",
+    "width": 1440,
+    "url": "https://zawlodzki-web.zawlodzki.workers.dev/blog",
+    "h1": [
+      "Blog"
+    ],
+    "cards": 12,
+    "dates": 12,
+    "next": 0,
+    "overflow": false
+  },
+  {
+    "name": "live",
+    "width": 768,
+    "url": "https://www.zawlodzki.pl/blog",
+    "h1": [
+      "Blog"
+    ],
+    "cards": 13,
+    "dates": 0,
+    "next": 0,
+    "overflow": false
+  },
+  {
+    "name": "new",
+    "width": 768,
+    "url": "http://127.0.0.1:8790/blog",
+    "h1": [
+      "Blog"
+    ],
+    "cards": 12,
+    "dates": 0,
+    "next": 1,
+    "overflow": false
+  },
+  {
+    "name": "staging",
+    "width": 768,
+    "url": "https://zawlodzki-web.zawlodzki.workers.dev/blog",
+    "h1": [
+      "Blog"
+    ],
+    "cards": 12,
+    "dates": 12,
+    "next": 0,
+    "overflow": false
+  },
+  {
+    "name": "live",
+    "width": 375,
+    "url": "https://www.zawlodzki.pl/blog",
+    "h1": [
+      "Blog"
+    ],
+    "cards": 13,
+    "dates": 0,
+    "next": 0,
+    "overflow": false
+  },
+  {
+    "name": "new",
+    "width": 375,
+    "url": "http://127.0.0.1:8790/blog",
+    "h1": [
+      "Blog"
+    ],
+    "cards": 12,
+    "dates": 0,
+    "next": 1,
+    "overflow": false
+  },
+  {
+    "name": "staging",
+    "width": 375,
+    "url": "https://zawlodzki-web.zawlodzki.workers.dev/blog",
+    "h1": [
+      "Blog"
+    ],
+    "cards": 12,
+    "dates": 12,
+    "next": 0,
+    "overflow": false
+  },
+  {
+    "name": "home",
+    "path": "/",
+    "status": 200,
+    "h1": [
+      "Łączę CRM, automatyzacje i AI w jeden system pracy zespołu sprzedaży"
+    ]
+  },
+  {
+    "name": "post",
+    "path": "/blog/asana-vs-jira",
+    "status": 200,
+    "h1": [
+      "Asana vs Jira: co ma wiedzieć zespół i szef?"
+    ]
+  }
+]
