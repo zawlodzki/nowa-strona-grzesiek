@@ -12,6 +12,7 @@ import MediaImage from '../ui/MediaImage.astro';
 interface Props extends Resolved { data: ContentSection; image?: ResolvedImage; }
 const { data, image, links, images } = Astro.props;
 const { layout = 'list' } = data;
+const metrics = layout === 'cards' && Boolean(data.items?.length) && data.items!.every((item) => /^\d+\s+/.test(item.title ?? ''));
 const linkOnly = layout === 'list' && Boolean(data.items?.length) && data.items!.every((item) => item.link?.label && safeHref(item.link.href) && !item.text && !item.icon);
 ---
 <BlockSection kind="content-section">
@@ -22,14 +23,17 @@ const linkOnly = layout === 'list' && Boolean(data.items?.length) && data.items!
       <slot name="intro"><PortableText value={data.intro} links={links} images={images} /></slot>
       {linkOnly && <nav class="inline-links" aria-label={data.heading || 'Usługi'}>{data.items?.map((item) => <a href={safeHref(item.link?.href)}>{item.link?.label}</a>)}</nav>}
     </header>
-    {!linkOnly && (data.items?.length ?? 0) > 0 && <ul class:list={['items', layout]}>{data.items?.map((item) => <li class:list={{ negative: item.icon === 'close' }}>
+    {!linkOnly && (data.items?.length ?? 0) > 0 && <ul class:list={['items', layout, { metrics }]}>{data.items?.map((item) => {
+      const metric = metrics ? /^(\d+)\s+(.+)$/.exec(item.title ?? '') : null;
+      const plus = metric && /^\+\s+/.test(item.text ?? '');
+      return <li class:list={{ negative: item.icon === 'close' }}>
       {layout === 'checklist' && <Icon name={item.icon === 'close' ? 'close' : 'check'} />}
       <div class="item-copy">
-        {item.title && <h3 class="type-heading-xs">{item.title}</h3>}
-        {item.text && <p>{item.text}</p>}
+        {metric ? <><p class="metric-value">{metric[1]}{plus && '+'}</p><h3 class="metric-label">{metric[2]}</h3></> : item.title && <h3 class="type-heading-xs">{item.title}</h3>}
+        {item.text && <p class:list={{ 'metric-text': metrics }}>{plus ? item.text.replace(/^\+\s+/, '') : item.text}</p>}
         {item.link && <Button link={item.link} variant="text" />}
       </div>
-    </li>)}</ul>}
+    </li>; })}</ul>}
     <slot name="media">{data.media?.kind === 'diagram' && data.media.key ? <Diagram diagram={data.media.key} /> : image && <MediaImage image={image} />}</slot>
   </div>
 </BlockSection>
@@ -46,6 +50,14 @@ const linkOnly = layout === 'list' && Boolean(data.items?.length) && data.items!
   .cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
   .cards > li { background: var(--surface-cyan-tint); border-radius: var(--radius-lg); padding: var(--space-m); }
   .cards h3 { color: var(--text-link); }
+  .metrics { gap: var(--space-m); }
+  .metrics > li { background: var(--surface-soft); border-radius: var(--radius-sm); text-align: center; }
+  .metrics .item-copy { gap: 0; color: var(--text-body); }
+  .metric-value { font-family: var(--font-family-body); font-size: clamp(2.25rem, 1.60714286rem + 1.3392857vw, 2.8125rem); font-weight: var(--font-weight-semibold); line-height: 1.25; color: var(--text-link); margin-block-end: .111111em; }
+  .metrics .metric-label { font-family: var(--font-family-body); font-size: clamp(1rem, .7142857rem + .595238vw, 1.25rem); font-weight: var(--font-weight-semibold); line-height: 1.75; color: var(--text-body); letter-spacing: var(--typography-body-tracking); margin-block-end: .5em; }
+  .metric-text { font-size: clamp(.875rem, .625rem + .5208333vw, 1.09375rem); line-height: 1.4285; letter-spacing: normal; }
+  @media (width >= 768px) { .metrics { max-inline-size: calc(100vw - 3rem); inline-size: 100%; margin-inline: auto; } }
+  @media (width < 768px) { .metrics { gap: var(--space-s); } }
   .twoColumn { grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); }
   .checklist > li { display: flex; align-items: start; gap: var(--space-xs); }
   .checklist :global(svg) { color: var(--text-link); }

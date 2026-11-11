@@ -67,3 +67,13 @@ Captured 2026-11-11 from canonical live www.zawlodzki.pl and the local Worker on
 - [regression-sales-atlas-system-1440.png](regression-sales-atlas-system-1440.png)
 - [regression-sales-atlas-system-375.png](regression-sales-atlas-system-375.png)
 - [regression-sales-atlas-system-768.png](regression-sales-atlas-system-768.png)
+
+## Grzesiek review corrections
+
+The `live-results-*`, `new-results-*`, `live-atlas-*` and `new-atlas-*` PNGs were regenerated after the review. `review-measurements.json` records current live and revised Worker geometry and computed styles at 1440, 768 and 375. Earlier descriptions of cyan result surfaces and the small promo badge are superseded by this review.
+
+Badge sizes match within 0.1 CSS px. Desktop is 190.8125 × 279.5; tablet is hidden (0 × 0) on live and new; phone is 180 × 263.65625. This sizing is scoped to the promo so the existing footer badge is unaffected.
+
+Result backgrounds use `--surface-soft` (#f9fafb), numbers `--text-link` (#3a48cc), labels and descriptions `--text-body` (#1e2024). Satoshi numbers / labels / descriptions measure 45 / 20 / 17.5 px at 1440 and 36 / 16 / 14 px at 768 and 375. Cards have centred text, 24px padding and `--radius-sm` (6px) corners. Layout is four / two / one columns. Numeric cards reuse the imported numeric title and move the imported leading plus from description beside the number, without a Sanity write or count-up script.
+
+Verification used the ordinary public-content build through verify-web on port 8791. No patched-content fixture was used for this review. Astro check and TypeScript pass; design detector returns [].
