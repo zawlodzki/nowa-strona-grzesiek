@@ -1,0 +1,64 @@
+[
+  {
+    "width": 1440,
+    "height": 3235,
+    "stage": 835,
+    "pinned": "true"
+  },
+  {
+    "layer": 0,
+    "active": "01 Diagnoza\nCo dziś naprawdę dzieje się w sprzedaży. Oparta na danych z CRM i na rozmowach z zespołem. Na koniec dostajesz opis stanu, z którym zgadza się zespół i rekomendowaną ścieżkę wdrożenia."
+  },
+  {
+    "layer": 1,
+    "active": "02 Klient i rynek\nKomu i po co sprzedajemy: profil idealnego klienta, persony, zadania klienta i to, jak wygląda zakup po jego stronie. Wychodzi z tego profil klienta i kryteria, po których odrzucamy zapytanie."
+  },
+  {
+    "layer": 2,
+    "active": "03 Pozycjonowanie i przekaz\nDlaczego klient ma Cię wybrać, czym różnisz się od alternatyw i jakimi słowami to komunikujesz na stronie oraz w ofercie. Efekt to jedna wersja przekazu, która ma być klarowna dla grupy docelowej."
+  },
+  {
+    "layer": 3,
+    "active": "04 Proces sprzedaży\nJak pracujesz z klientem od pierwszego kontaktu do wygranej: etapy, kryteria wyjścia, kwalifikacja, agendy spotkań i struktura oferty. Na tej podstawie konfigurowany jest CRM."
+  },
+  {
+    "layer": 4,
+    "active": "05 Po wygranej\nCo dzieje się po finalizacji: przekazanie do realizacji, pierwszy wynik u klienta, upsell, cross-sell i polecenia. Powstaje moment przekazania z kompletem ustaleń, a polecenia stają się liczonym źródłem."
+  },
+  {
+    "layer": 5,
+    "active": "06 Popyt\nSkąd biorą się nowe szanse: prospecting, treści, analiza źródeł leadów i ile ich potrzeba, żeby dowieźć cel. Kończy się liczbą szans na miesiąc i podziałem na źródła, z których mają przyjść."
+  },
+  {
+    "layer": 6,
+    "active": "07 Narzędzia i dane\nGdzie to wszystko żyje: konfiguracja CRM, automatyzacje, integracje, hurtownia danych, AI i transkrypcje rozmów. Na końcu jest skonfigurowane narzędzie, w którym dane wpisuje się raz."
+  },
+  {
+    "layer": 7,
+    "active": "08 Zespół\nJak zarządzać działem sprzedaży: struktura, rekrutacja, wdrożenie nowego handlowca, ocena i spotkania wewnętrzne."
+  },
+  {
+    "layer": 8,
+    "active": "09 Pomiar i doskonalenie\nCzy to działa i co poprawiamy: metryki, raporty, prognoza, analiza wygranych i przegranych oraz stały cykl poprawek. Wychodzą z tego raporty i prognoza, którą da się weryfikować."
+  },
+  {
+    "width": 1440,
+    "keyboard": "09 Pomiar i doskonalenie\nCzy to działa i co poprawiamy: metryki, raporty, prognoza, analiza wygranych i przegranych oraz stały cykl poprawek. Wychodzą z tego raporty i prognoza, którą da się weryfikować."
+  },
+  {
+    "width": 390,
+    "height": 1633,
+    "stage": 1633
+  },
+  {
+    "width": 390,
+    "keyboard": "09 Pomiar i doskonalenie\nCzy to działa i co poprawiamy: metryki, raporty, prognoza, analiza wygranych i przegranych oraz stały cykl poprawek. Wychodzą z tego raporty i prognoza, którą da się weryfikować."
+  },
+  {
+    "reducedMotion": null
+  },
+  {
+    "path": "/kurs-ai-w-sprzedazy",
+    "tabs": 0
+  }
+]

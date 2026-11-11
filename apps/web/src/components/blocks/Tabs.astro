@@ -21,7 +21,6 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
         <PortableText value={item.body} links={links} images={images} />
       </section>)}</div>
     </div>
-    <div class="runway" aria-hidden="true"></div>
   </div>
 </BlockSection>
 <script>
@@ -31,11 +30,10 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
       const tabs = Array.from(menu.querySelectorAll<HTMLAnchorElement>('a'));
       const panels = Array.from(root.querySelectorAll<HTMLElement>('.panel'));
       const stage = root.querySelector<HTMLElement>('.stage')!;
-      const runway = root.querySelector<HTMLElement>('.runway')!;
       if (!tabs.length || tabs.length !== panels.length) return;
       const wide = matchMedia('(min-width: 992px)');
       const still = matchMedia('(prefers-reduced-motion: reduce)');
-      const slack = 24;
+      const slack = 0;
       const live = new AbortController();
       let current = 0;
       let pinned = false;
@@ -52,12 +50,12 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
           panels[i].hidden = i !== index;
         });
       }
-      const step = () => runway.offsetHeight / panels.length;
-      const layerFromScroll = () => Math.min(panels.length - 1, Math.max(0, Math.floor((offset - root.getBoundingClientRect().top) / step())));
+      const step = () => (root.offsetHeight - stage.offsetHeight) / Math.max(1, panels.length - 1);
+      const layerFromScroll = () => Math.min(panels.length - 1, Math.max(0, Math.round((offset - root.getBoundingClientRect().top) / step())));
       function select(index: number, focus = false) {
         activate(index);
-        // Move the page to the middle of that layer's slice, otherwise the next scroll event would switch back.
-        if (pinned && layerFromScroll() !== index) window.scrollTo({ top: scrollY + root.getBoundingClientRect().top - offset + (index + 0.5) * step(), behavior: 'instant' });
+        // Keep explicit selection aligned with the scroll position.
+        if (pinned && layerFromScroll() !== index) window.scrollTo({ top: scrollY + root.getBoundingClientRect().top - offset + index * step(), behavior: 'instant' });
         if (focus) tabs[index].focus({ preventScroll: pinned });
       }
       function fitsViewport() {
@@ -72,7 +70,7 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
       }
       function evaluate() {
         if (!root.isConnected) { live.abort(); return; }
-        pinned = wide.matches && !still.matches;
+        pinned = panels.length > 1 && wide.matches && !still.matches;
         if (pinned) { root.dataset.scroll = 'true'; offset = parseFloat(getComputedStyle(stage).insetBlockStart); pinned = fitsViewport(); }
         if (!pinned) delete root.dataset.scroll;
         else if (layerFromScroll() !== current) activate(layerFromScroll());
@@ -105,6 +103,7 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
       addEventListener('resize', () => queue(true), opts);
       wide.addEventListener('change', evaluate, opts);
       still.addEventListener('change', evaluate, opts);
+      document.fonts.ready.then(() => queue(true));
     });
   }
   initTabs();
@@ -114,17 +113,18 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   header { display: grid; gap: var(--space-m); margin-block-end: var(--space-xl); }
   .tabs { --tabs-top: 5rem; --tabs-step: clamp(12rem, 30svh, 20rem); }
   .stage { display: flex; align-items: start; gap: 24px; }
-  .runway { display: none; }
+  [data-scroll] { min-block-size: calc(var(--stage-size) + (var(--layers) - 1) * var(--tabs-step)); }
   [data-scroll] .stage { position: sticky; inset-block-start: var(--tabs-top); min-block-size: var(--stage-size); }
-  [data-scroll] .runway { display: block; block-size: calc(var(--layers) * var(--tabs-step)); }
   [data-scroll] .menu { gap: 8px; }
   [data-scroll] .menu a { padding-block: 12px; }
   .menu { flex: 0 0 calc(35% - 12px); display: flex; flex-direction: column; gap: 16px; }
   .menu a { display: grid; gap: var(--space-xs); padding: 16px 24px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-body); }
-  .menu a[aria-selected="true"] { background: var(--surface-cyan-tint); }
+  .menu a[aria-selected="true"] { background: var(--surface-accent); color: var(--text-on-accent); }
+  .menu a[aria-selected="true"] > span { color: inherit; }
   [data-ready] .menu a:not([aria-selected="true"]) > span:last-child { display: none; }
-  .menu a:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; }
+  .menu a:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; box-shadow: 0 0 0 3px var(--surface-page); }
   .menu a:active { background: var(--surface-tint); }
+  .menu a[aria-selected="true"]:active { background: var(--color-primary-70); }
   @media (hover: hover) and (pointer: fine) { .menu a:not([aria-selected="true"]):hover { background: var(--surface-soft); } }
   .panels { flex: 1; min-inline-size: 0; }
   .panel { border: 1px solid var(--border-default); background: var(--surface-page); border-radius: var(--radius-lg); padding: clamp(24px, 3.125vw, 40px); box-shadow: var(--shadow-panel); overflow-wrap: anywhere; }
