@@ -42,8 +42,7 @@ const headingId = id ? `${id}-heading` : undefined;
   .cards {
     display: grid;
     gap: var(--space-xl) var(--space-l);
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 22rem));
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
     margin: 0;
     padding: 0;
     list-style: none;

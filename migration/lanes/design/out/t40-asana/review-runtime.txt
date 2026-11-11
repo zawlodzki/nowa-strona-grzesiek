@@ -1,0 +1,9 @@
+PASS 1440 /o-mnie
+PASS 1440 /newsletter
+PASS 1440 /blog
+PASS 1024 /o-mnie
+PASS 1024 /newsletter
+PASS 1024 /blog
+PASS 390 /o-mnie
+PASS 390 /newsletter
+PASS 390 /blog
