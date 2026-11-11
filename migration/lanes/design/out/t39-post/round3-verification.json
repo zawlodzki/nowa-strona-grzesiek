@@ -1,0 +1,29 @@
+{
+  "origin": "http://127.0.0.1:8790",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "column": {
+    "x": 24,
+    "y": 111.6875,
+    "width": 276.65625,
+    "height": 10453.96875
+  },
+  "trigger": {
+    "x": 85.1875,
+    "y": 709.75,
+    "width": 154.28125,
+    "height": 46
+  },
+  "centerDelta": 0,
+  "menu": {
+    "x": 85.1875,
+    "y": 262,
+    "width": 352,
+    "height": 439.75
+  },
+  "aligned": true,
+  "insideViewport": true,
+  "keyboardOpenEscapeAndFocus": true
+}

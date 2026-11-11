@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import { writeFile } from 'node:fs/promises';
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright-core');
+const origin = process.env.VERIFY_ORIGIN || 'http://127.0.0.1:8790';
+const out = new URL('./', import.meta.url).pathname;
+const browser = await chromium.launch({ executablePath: process.env.CHROME_BIN, args: ['--no-sandbox'] });
+try {
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  assert.equal((await page.goto(`${origin}/blog/asana-vs-jira`)).status(), 200);
+  await page.evaluate(() => document.fonts.ready);
+  const reject = page.getByRole('button', { name: 'Odrzucam opcjonalne', exact: true });
+  if (await reject.count()) await reject.first().click();
+  await page.locator('.post-layout').evaluate(el => scrollTo(0, scrollY + el.getBoundingClientRect().top - 112));
+  const button = page.getByRole('button', { name: 'Udostępnij', exact: true });
+  const column = await page.locator('.toc-column').boundingBox();
+  const trigger = await button.boundingBox();
+  const delta = trigger.x + trigger.width / 2 - column.x - column.width / 2;
+  assert(Math.abs(delta) < 1, 'share pill is centered in TOC column');
+  assert(trigger.y >= 0 && trigger.y + trigger.height <= 900);
+  await page.screenshot({ path: `${out}round3-centered-share-1440.png` });
+  await button.focus();
+  await page.keyboard.press('Enter');
+  assert(await page.locator('#share-options').evaluate(el => el.matches(':popover-open')));
+  const menu = await page.locator('#share-options').boundingBox();
+  assert(menu.x >= 0 && menu.y >= 0 && menu.x + menu.width <= 1440 && menu.y + menu.height <= 900, 'menu stays inside viewport');
+  assert(Math.abs(menu.x - trigger.x) < 1, 'menu stays aligned to its trigger');
+  assert.equal(await page.locator('#share-options a').count(), 5);
+  await page.screenshot({ path: `${out}round3-open-share-1440.png` });
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator('#share-options').evaluate(el => el.matches(':popover-open')), false);
+  assert(await button.evaluate(el => document.activeElement === el));
+  await writeFile(`${out}round3-verification.json`, JSON.stringify({ origin, viewport: { width: 1440, height: 900 }, column, trigger, centerDelta: delta, menu, aligned: true, insideViewport: true, keyboardOpenEscapeAndFocus: true }, null, 2));
+  console.log('Round 3 passed: centered pill, aligned in-viewport menu, keyboard open/Escape/focus.');
+} finally { await browser.close(); }

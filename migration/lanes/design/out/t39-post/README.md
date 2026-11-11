@@ -37,3 +37,9 @@ The `round2-*.png` images supersede the first review's filled active label and p
 The source portrait has no Sanity hotspot/crop and starts directly above the hair. A top-aligned cover crop plus 8px internal headroom retains the full head inside the 80px circle. Both Asana/Jira and Asana Cennik screenshots were inspected.
 
 Run `20261111-161543-p8790` used a port confirmed free by lsof. verify-web up/doctor/probe/shot all passed through wrangler dev --local. Two post paths returned 200. `round2-verify.mjs` captured active mid-scroll TOC, share button and avatar for both posts at 1440px. `round2-verification.json` records the track/segment widths, exact accent color, alignment for h2/h3, transparent label background, absence of transition under reduced motion, pill radius/padding, avatar framing, scrollspy in both directions and no-JavaScript anchors. Astro check and web TypeScript passed. The script closes Chromium in finally, and verify-web down stopped the Worker. Repeat using the same environment configuration as the first review script.
+
+## Third review change on 2026-11-11
+
+The only product change is `.share { display: grid; justify-items: center; }` in SharePost. This centers the pill within the TOC column while preserving the native button anchor and popover positioning rules.
+
+verify-web run `20261111-162623-p8790` passed up/doctor/probe/shot after lsof confirmed port 8790 was free. `round3-centered-share-1440.png` and `round3-open-share-1440.png` show Asana/Jira at 1440px. `round3-verification.json` records a zero-pixel difference between the button and column centers. The open menu starts at the button's inline edge and stays fully inside the 1440×900 viewport. Enter, Escape and restored trigger focus passed. `round3-verify.mjs` repeats these checks using the same environment configuration as the previous verification scripts. The browser closed in finally and verify-web down stopped the Worker.
