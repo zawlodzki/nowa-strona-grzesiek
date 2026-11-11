@@ -1,38 +1,47 @@
-# T33 revised hero proof
+# T33 — badge-only proof
 
-Refreshed 2026-11-11 after PR #53 review. **Live left, local right** in every comparison. Chromium viewports: width × 1100. Images capture the complete hero and its CTA; original captures use `*-live.png` and `*-local.png`. Optional cookies declined to expose the portraits. Local runs through verify-web `web.sh up`, `doctor`, `probe`, and `shot`, port 8790, real `wrangler dev --local`. Playwright captures use the same Worker. Shared preview automation was unavailable due to host AppArmor.
+Final scope follows Grzesiek's correction: **preserve main/staging layout; fix only the badge**. Refreshed 2026-11-11 using Chromium, width × 1100 viewports. Optional cookies declined. Comparisons capture the hero plus lower badge overlap. Superseded photo-first evidence was replaced.
 
-| Page | 1280 | 1024 | 768 | 375 |
+## Live badge reference vs local
+
+Live left, local right. Live is the reference for visible lower-left overlap. Local intentionally retains main/staging's text-first layout rather than live's compact photo-first mobile layout.
+
+| Badge | 1280 | 1024 | 768 | 375 |
 |---|---|---|---|---|
-| Sales Atlas — standard badge | [1280](sales-atlas-system-1280-comparison.png) | [1024](sales-atlas-system-1024-comparison.png) | [768](sales-atlas-system-768-comparison.png) | [375](sales-atlas-system-375-comparison.png) |
-| Salesforce — wide badge | [1280](szkolenie-i-wdrozenie-salesforce-1280-comparison.png) | [1024](szkolenie-i-wdrozenie-salesforce-1024-comparison.png) | [768](szkolenie-i-wdrozenie-salesforce-768-comparison.png) | [375](szkolenie-i-wdrozenie-salesforce-375-comparison.png) |
-| Homepage — no badge | [1280](home-1280-comparison.png) | [1024](home-1024-comparison.png) | [768](home-768-comparison.png) | [375](home-375-comparison.png) |
-| Sales audit — no badge | [1280](audyt-sprzedazy-1280-comparison.png) | [1024](audyt-sprzedazy-1024-comparison.png) | [768](audyt-sprzedazy-768-comparison.png) | [375](audyt-sprzedazy-375-comparison.png) |
+| Standard | [1280](sales-atlas-system-1280-comparison.png) | [1024](sales-atlas-system-1024-comparison.png) | [768](sales-atlas-system-768-comparison.png) | [375](sales-atlas-system-375-comparison.png) |
+| Wide | [1280](szkolenie-i-wdrozenie-salesforce-1280-comparison.png) | [1024](szkolenie-i-wdrozenie-salesforce-1024-comparison.png) | [768](szkolenie-i-wdrozenie-salesforce-768-comparison.png) | [375](szkolenie-i-wdrozenie-salesforce-375-comparison.png) |
 
-## Cause and revised fix
+## Staging layout controls vs local
 
-The first revision fixed the full-column anchor but failed visually: the source photo has transparent margins, so negative offsets placed a small badge beside the visible torso. Fixed pixel badge widths also failed to track photo size. The initial text-first, height-capped portrait was far larger than live on narrow layouts.
+Staging (`zawlodzki-web.zawlodzki.workers.dev`) left, local right. Both controls have no CMS badge.
 
-Hero now matches live’s 992px viewport switch: two columns at 1280/1024, compact centered photo before centered copy at 768/375. The former `width > 64rem` container query incorrectly kept 1024 stacked because the padded container was narrower than the viewport; it is replaced by `@media (width >= 62rem)`. Portrait width is fluid from 112 to 144px in that layout. Wider viewports use two columns and a portrait capped at 436.8px. The photo/copy gap is 32px in compact layouts, 48px in columns. Badge placement is inset 3% from the photo box's left and extends 8% below it: this moves the badge over the visible lower-left torso instead of leaving it outside the transparent image edge. No clipping is introduced.
+| Control | 768 | 375 |
+|---|---|---|
+| Homepage | [768](home-768-comparison.png) | [375](home-375-comparison.png) |
+| Sales audit | [768](audyt-sprzedazy-768-comparison.png) | [375](audyt-sprzedazy-375-comparison.png) |
 
-Badge widths are proportions of the photo: standard 46% compact / 34% columns; wide 55% compact / 52% columns. For comparison, live standard ratios at the requested widths range roughly 30–53%, wide 46–62%. Both variants visibly overlap the portrait in the refreshed captures. CTA content/links and optional badge rendering are unchanged. Homepage and sales-audit controls have no badge node or reserved badge space.
+Original captures are named `<route>-<width>-live.png`, `-staging.png`, or `-local.png`; the homepage uses `home`.
 
-## Intended differences from live
+## Final implementation
 
-At 1024 local now follows live's two-column composition with a large portrait and proportional badge on the right. At 768/375 local follows live's photo-first compact centered composition. Local has the migration's existing navigation without the old promotional strip, so its hero starts higher. Existing copy, CTA, typography and section styling can differ; this task changes only the shared Hero layout/overlay. Transparent image edges are deliberately crossed inward so the badge covers the actual portrait.
+The original wrapper stretched across the column while MediaImage height-capped the photo and object-fit contained it in that wider box. The cut-out also has transparent edges, so a badge placed outside the box appeared beside the visible torso.
 
-## Verification
+Hero retains main's text-first source order, left-aligned copy/actions, 48px grid gap, existing portrait height caps and `@container (width >= 48rem)` columns. At 1280/1024 this produces columns; at 768/375 the original larger photo sits below the copy. There is no `order: -1`, compact mobile clamp, centered copy/actions, tightened gap, 992px media layout switch, or desktop portrait width cap.
 
-`measurements.json` contains all 32 rendered captures: photo/wrapper/badge rectangles, copy rectangle, badge ratio/count, CTA text and document scroll width. These supplement direct screenshot inspection, which is the evidence for overlap of the visible cut-out, not only its transparent box.
+Only badge-related behavior changes: the relative wrapper is centered and sized from image aspect ratio using MediaImage's existing 40svh / 32rem height caps. Badge widths are 34% (standard) / 52% (wide) of that rendered photo at every width. Inline inset 3% and block-end -8% place the badge over the lower-left visible torso instead of outside its transparent edge. Badges are absolute and remain conditional; no placeholder space is reserved.
 
-- Both badged routes: `scrollWidth == 375` at width 375.
-- All four local pages: copy left / portrait right at 1280/1024; photo precedes copy at 768/375. Portrait widths are 436.8/373.73/144/112px. Standard badge at 1024 is ~127px wide; wide badge is ~194px, both overlapping the larger portrait.
-- Regression check against `d22f73d`: all 12 local PNGs at 1280/768/375 are byte-for-byte identical to the approved captures. All four 1024 pairs were visually inspected for columns and overlap.
-- Both controls: zero badge nodes at every requested width; no badge placeholder or badge-only spacing.
-- `astro-check.log`: 0 errors/warnings, 1 existing hint.
-- `build.log`: production build passes, 117 pages.
-- `node-test-src.log`: literal `node --test src` still fails MODULE_NOT_FOUND under Node 24.22.2.
-- `node-tests-expanded.log`: explicit source test files pass 81, skip 1, fail 0.
-- `design-detector.json`: no findings.
-- `probes.tsv`: all four local routes return 200 with non-production noindex headers.
-- Board check passes; verify-web stopped after proof. No Sanity writes, deployment or merge.
+## Evidence and checks
+
+`measurements.json` records 24 captures across the 12 pairs, including visible image-content bounds as well as element boxes, copy/layout rectangles, badge ratios/counts, and document scroll width.
+
+- Visually inspected badge overlap on both variants and the staging controls' restored text-first composition.
+- Both controls' copy and visible-photo x/y/width/height match staging within 0.02px at 768/375. Grid columns, 48px gap, left text alignment and zero badge count also match. No empty gap was introduced.
+- Photo widths at 1280/1024/768/375 are approximately 461.77/373.73/440/343px at the capture height. Wrapper widths match visible photo widths; badge/photo ratios are consistently 0.34 / 0.52. Height-dependent portrait caps retain main behavior.
+- Both badged routes have document scrollWidth 375 at viewport 375.
+- Local served by the real Worker on 8790 via verify-web `web.sh up`, `doctor`, `probe`, `shot`, then `down`. Shared preview automation was unavailable due to AppArmor; Playwright captured the same Worker.
+- `probes.tsv`: four local routes return 200 with non-production noindex headers.
+- `astro-check.log`: 0 errors/warnings, 1 existing hint. `build.log`: 117 pages built.
+- `node-tests-expanded.log`: explicit source tests pass 81, skip 1, fail 0. Literal `node --test src` still fails MODULE_NOT_FOUND on Node 24.22.2; `node-test-src.log` records it.
+- `design-detector.json`: no findings. Board check passes.
+- Fetched main before work and again after PR #54 merged (main 4fad0b8); merge-tree reports no conflicts. No unrelated PR #54 changes were copied into this work.
+- Verify-web stopped. No Sanity writes, deployment or PR merge.
