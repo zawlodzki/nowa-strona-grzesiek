@@ -1,0 +1,570 @@
+[
+  {
+    "path": "sales-atlas-system",
+    "width": 1280,
+    "label": "live",
+    "scrollWidth": 1280,
+    "badge": {
+      "x": 763.1875,
+      "y": 497.625,
+      "width": 130,
+      "height": 190.421875,
+      "top": 497.625,
+      "right": 893.1875,
+      "bottom": 688.046875,
+      "left": 763.1875
+    }
+  },
+  {
+    "path": "sales-atlas-system",
+    "width": 1280,
+    "label": "local",
+    "scrollWidth": 1280,
+    "photo": {
+      "x": 779.4375,
+      "y": 133.546875,
+      "width": 461.765625,
+      "height": 461.765625,
+      "top": 133.546875,
+      "right": 1241.203125,
+      "bottom": 595.3125,
+      "left": 779.4375
+    },
+    "anchor": {
+      "x": 779.4375,
+      "y": 133.546875,
+      "width": 461.765625,
+      "height": 461.765625,
+      "top": 133.546875,
+      "right": 1241.203125,
+      "bottom": 595.3125,
+      "left": 779.4375
+    },
+    "badge": {
+      "x": 739.4375,
+      "y": 464.890625,
+      "width": 130,
+      "height": 190.421875,
+      "top": 464.890625,
+      "right": 869.4375,
+      "bottom": 655.3125,
+      "left": 739.4375
+    },
+    "badgeCount": 1,
+    "cta": "Umów bezpłatną konsultację"
+  },
+  {
+    "path": "sales-atlas-system",
+    "width": 1024,
+    "label": "live",
+    "scrollWidth": 1024,
+    "badge": {
+      "x": 612.796875,
+      "y": 439.03125,
+      "width": 130,
+      "height": 190.421875,
+      "top": 439.03125,
+      "right": 742.796875,
+      "bottom": 629.453125,
+      "left": 612.796875
+    }
+  },
+  {
+    "path": "sales-atlas-system",
+    "width": 1024,
+    "label": "local",
+    "scrollWidth": 1024,
+    "photo": {
+      "x": 629.421875,
+      "y": 129.65625,
+      "width": 373.734375,
+      "height": 373.734375,
+      "top": 129.65625,
+      "right": 1003.15625,
+      "bottom": 503.390625,
+      "left": 629.421875
+    },
+    "anchor": {
+      "x": 629.421875,
+      "y": 129.65625,
+      "width": 373.734375,
+      "height": 373.734375,
+      "top": 129.65625,
+      "right": 1003.15625,
+      "bottom": 503.390625,
+      "left": 629.421875
+    },
+    "badge": {
+      "x": 589.421875,
+      "y": 372.96875,
+      "width": 130,
+      "height": 190.421875,
+      "top": 372.96875,
+      "right": 719.421875,
+      "bottom": 563.390625,
+      "left": 589.421875
+    },
+    "badgeCount": 1,
+    "cta": "Umów bezpłatną konsultację"
+  },
+  {
+    "path": "sales-atlas-system",
+    "width": 768,
+    "label": "live",
+    "scrollWidth": 768,
+    "badge": {
+      "x": 297,
+      "y": 263.125,
+      "width": 60,
+      "height": 87.875,
+      "top": 263.125,
+      "right": 357,
+      "bottom": 351,
+      "left": 297
+    }
+  },
+  {
+    "path": "sales-atlas-system",
+    "width": 768,
+    "label": "local",
+    "scrollWidth": 768,
+    "photo": {
+      "x": 163.984375,
+      "y": 447.453125,
+      "width": 440,
+      "height": 440,
+      "top": 447.453125,
+      "right": 603.984375,
+      "bottom": 887.453125,
+      "left": 163.984375
+    },
+    "anchor": {
+      "x": 163.984375,
+      "y": 447.453125,
+      "width": 440,
+      "height": 440,
+      "top": 447.453125,
+      "right": 603.984375,
+      "bottom": 887.453125,
+      "left": 163.984375
+    },
+    "badge": {
+      "x": 148.984375,
+      "y": 819.578125,
+      "width": 60,
+      "height": 87.875,
+      "top": 819.578125,
+      "right": 208.984375,
+      "bottom": 907.453125,
+      "left": 148.984375
+    },
+    "badgeCount": 1,
+    "cta": "Umów bezpłatną konsultację"
+  },
+  {
+    "path": "sales-atlas-system",
+    "width": 375,
+    "label": "live",
+    "scrollWidth": 375,
+    "badge": {
+      "x": 115.90625,
+      "y": 253.3125,
+      "width": 60,
+      "height": 87.875,
+      "top": 253.3125,
+      "right": 175.90625,
+      "bottom": 341.1875,
+      "left": 115.90625
+    }
+  },
+  {
+    "path": "sales-atlas-system",
+    "width": 375,
+    "label": "local",
+    "scrollWidth": 375,
+    "photo": {
+      "x": 16,
+      "y": 532.171875,
+      "width": 343,
+      "height": 343,
+      "top": 532.171875,
+      "right": 359,
+      "bottom": 875.171875,
+      "left": 16
+    },
+    "anchor": {
+      "x": 16,
+      "y": 532.171875,
+      "width": 343,
+      "height": 343,
+      "top": 532.171875,
+      "right": 359,
+      "bottom": 875.171875,
+      "left": 16
+    },
+    "badge": {
+      "x": 1,
+      "y": 807.296875,
+      "width": 60,
+      "height": 87.875,
+      "top": 807.296875,
+      "right": 61,
+      "bottom": 895.171875,
+      "left": 1
+    },
+    "badgeCount": 1,
+    "cta": "Umów bezpłatną konsultację"
+  },
+  {
+    "path": "szkolenie-i-wdrozenie-salesforce",
+    "width": 1280,
+    "label": "live",
+    "scrollWidth": 1280,
+    "badge": {
+      "x": 763.1875,
+      "y": 574.390625,
+      "width": 200,
+      "height": 140,
+      "top": 574.390625,
+      "right": 963.1875,
+      "bottom": 714.390625,
+      "left": 763.1875
+    }
+  },
+  {
+    "path": "szkolenie-i-wdrozenie-salesforce",
+    "width": 1280,
+    "label": "local",
+    "scrollWidth": 1280,
+    "photo": {
+      "x": 779.4375,
+      "y": 133.546875,
+      "width": 461.765625,
+      "height": 461.765625,
+      "top": 133.546875,
+      "right": 1241.203125,
+      "bottom": 595.3125,
+      "left": 779.4375
+    },
+    "anchor": {
+      "x": 779.4375,
+      "y": 133.546875,
+      "width": 461.765625,
+      "height": 461.765625,
+      "top": 133.546875,
+      "right": 1241.203125,
+      "bottom": 595.3125,
+      "left": 779.4375
+    },
+    "badge": {
+      "x": 739.4375,
+      "y": 515.3125,
+      "width": 200,
+      "height": 140,
+      "top": 515.3125,
+      "right": 939.4375,
+      "bottom": 655.3125,
+      "left": 739.4375
+    },
+    "badgeCount": 1,
+    "cta": "Umów rozmowę o wdrożeniu"
+  },
+  {
+    "path": "szkolenie-i-wdrozenie-salesforce",
+    "width": 1024,
+    "label": "live",
+    "scrollWidth": 1024,
+    "badge": {
+      "x": 612.796875,
+      "y": 578.09375,
+      "width": 200,
+      "height": 140,
+      "top": 578.09375,
+      "right": 812.796875,
+      "bottom": 718.09375,
+      "left": 612.796875
+    }
+  },
+  {
+    "path": "szkolenie-i-wdrozenie-salesforce",
+    "width": 1024,
+    "label": "local",
+    "scrollWidth": 1024,
+    "photo": {
+      "x": 629.421875,
+      "y": 177.8125,
+      "width": 373.734375,
+      "height": 373.734375,
+      "top": 177.8125,
+      "right": 1003.15625,
+      "bottom": 551.546875,
+      "left": 629.421875
+    },
+    "anchor": {
+      "x": 629.421875,
+      "y": 177.8125,
+      "width": 373.734375,
+      "height": 373.734375,
+      "top": 177.8125,
+      "right": 1003.15625,
+      "bottom": 551.546875,
+      "left": 629.421875
+    },
+    "badge": {
+      "x": 589.421875,
+      "y": 471.546875,
+      "width": 200,
+      "height": 140,
+      "top": 471.546875,
+      "right": 789.421875,
+      "bottom": 611.546875,
+      "left": 589.421875
+    },
+    "badgeCount": 1,
+    "cta": "Umów rozmowę o wdrożeniu"
+  },
+  {
+    "path": "szkolenie-i-wdrozenie-salesforce",
+    "width": 768,
+    "label": "live",
+    "scrollWidth": 768,
+    "badge": {
+      "x": 297,
+      "y": 302,
+      "width": 70,
+      "height": 49,
+      "top": 302,
+      "right": 367,
+      "bottom": 351,
+      "left": 297
+    }
+  },
+  {
+    "path": "szkolenie-i-wdrozenie-salesforce",
+    "width": 768,
+    "label": "local",
+    "scrollWidth": 768,
+    "photo": {
+      "x": 163.984375,
+      "y": 500.1875,
+      "width": 440,
+      "height": 440,
+      "top": 500.1875,
+      "right": 603.984375,
+      "bottom": 940.1875,
+      "left": 163.984375
+    },
+    "anchor": {
+      "x": 163.984375,
+      "y": 500.1875,
+      "width": 440,
+      "height": 440,
+      "top": 500.1875,
+      "right": 603.984375,
+      "bottom": 940.1875,
+      "left": 163.984375
+    },
+    "badge": {
+      "x": 148.984375,
+      "y": 911.1875,
+      "width": 70,
+      "height": 49,
+      "top": 911.1875,
+      "right": 218.984375,
+      "bottom": 960.1875,
+      "left": 148.984375
+    },
+    "badgeCount": 1,
+    "cta": "Umów rozmowę o wdrożeniu"
+  },
+  {
+    "path": "szkolenie-i-wdrozenie-salesforce",
+    "width": 375,
+    "label": "live",
+    "scrollWidth": 375,
+    "badge": {
+      "x": 115.90625,
+      "y": 292.1875,
+      "width": 70,
+      "height": 49,
+      "top": 292.1875,
+      "right": 185.90625,
+      "bottom": 341.1875,
+      "left": 115.90625
+    }
+  },
+  {
+    "path": "szkolenie-i-wdrozenie-salesforce",
+    "width": 375,
+    "label": "local",
+    "scrollWidth": 375,
+    "photo": {
+      "x": 16,
+      "y": 733.34375,
+      "width": 343,
+      "height": 343,
+      "top": 733.34375,
+      "right": 359,
+      "bottom": 1076.34375,
+      "left": 16
+    },
+    "anchor": {
+      "x": 16,
+      "y": 733.34375,
+      "width": 343,
+      "height": 343,
+      "top": 733.34375,
+      "right": 359,
+      "bottom": 1076.34375,
+      "left": 16
+    },
+    "badge": {
+      "x": 1,
+      "y": 1047.34375,
+      "width": 70,
+      "height": 49,
+      "top": 1047.34375,
+      "right": 71,
+      "bottom": 1096.34375,
+      "left": 1
+    },
+    "badgeCount": 1,
+    "cta": "Umów rozmowę o wdrożeniu"
+  },
+  {
+    "path": "",
+    "width": 1280,
+    "label": "live",
+    "scrollWidth": 1280
+  },
+  {
+    "path": "",
+    "width": 1280,
+    "label": "local",
+    "scrollWidth": 1280,
+    "photo": {
+      "x": 779.4375,
+      "y": 133.546875,
+      "width": 461.765625,
+      "height": 461.765625,
+      "top": 133.546875,
+      "right": 1241.203125,
+      "bottom": 595.3125,
+      "left": 779.4375
+    },
+    "anchor": {
+      "x": 779.4375,
+      "y": 133.546875,
+      "width": 461.765625,
+      "height": 461.765625,
+      "top": 133.546875,
+      "right": 1241.203125,
+      "bottom": 595.3125,
+      "left": 779.4375
+    },
+    "badgeCount": 0,
+    "cta": "Umów bezpłatną konsultację"
+  },
+  {
+    "path": "",
+    "width": 1024,
+    "label": "live",
+    "scrollWidth": 1024
+  },
+  {
+    "path": "",
+    "width": 1024,
+    "label": "local",
+    "scrollWidth": 1024,
+    "photo": {
+      "x": 629.421875,
+      "y": 173.421875,
+      "width": 373.734375,
+      "height": 373.734375,
+      "top": 173.421875,
+      "right": 1003.15625,
+      "bottom": 547.15625,
+      "left": 629.421875
+    },
+    "anchor": {
+      "x": 629.421875,
+      "y": 173.421875,
+      "width": 373.734375,
+      "height": 373.734375,
+      "top": 173.421875,
+      "right": 1003.15625,
+      "bottom": 547.15625,
+      "left": 629.421875
+    },
+    "badgeCount": 0,
+    "cta": "Umów bezpłatną konsultację"
+  },
+  {
+    "path": "",
+    "width": 768,
+    "label": "live",
+    "scrollWidth": 768
+  },
+  {
+    "path": "",
+    "width": 768,
+    "label": "local",
+    "scrollWidth": 768,
+    "photo": {
+      "x": 163.984375,
+      "y": 552.921875,
+      "width": 440,
+      "height": 440,
+      "top": 552.921875,
+      "right": 603.984375,
+      "bottom": 992.921875,
+      "left": 163.984375
+    },
+    "anchor": {
+      "x": 163.984375,
+      "y": 552.921875,
+      "width": 440,
+      "height": 440,
+      "top": 552.921875,
+      "right": 603.984375,
+      "bottom": 992.921875,
+      "left": 163.984375
+    },
+    "badgeCount": 0,
+    "cta": "Umów bezpłatną konsultację"
+  },
+  {
+    "path": "",
+    "width": 375,
+    "label": "live",
+    "scrollWidth": 375
+  },
+  {
+    "path": "",
+    "width": 375,
+    "label": "local",
+    "scrollWidth": 375,
+    "photo": {
+      "x": 16,
+      "y": 748.125,
+      "width": 343,
+      "height": 343,
+      "top": 748.125,
+      "right": 359,
+      "bottom": 1091.125,
+      "left": 16
+    },
+    "anchor": {
+      "x": 16,
+      "y": 748.125,
+      "width": 343,
+      "height": 343,
+      "top": 748.125,
+      "right": 359,
+      "bottom": 1091.125,
+      "left": 16
+    },
+    "badgeCount": 0,
+    "cta": "Umów bezpłatną konsultację"
+  }
+]

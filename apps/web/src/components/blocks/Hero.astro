@@ -18,7 +18,7 @@ const { data, image, badgeImage, headingLevel: Heading = 'h1' } = Astro.props;
         {(data.badges?.length ?? 0) > 0 && <ul class="badges type-body-s">{data.badges?.map((badge) => <li>{badge}</li>)}</ul>}
       </div>
     </div>
-    {image && <div class:list={["portrait", { wide: data.badgeSize === "wide" }]}><div class="portrait-image"><MediaImage image={image} eager portrait /></div>{badgeImage && <img class="image-badge" src={badgeImage.src} alt={badgeImage.alt} width={badgeImage.width} height={badgeImage.height} />}</div>}
+    {image && <div class:list={["portrait", { wide: data.badgeSize === "wide" }]} style={`--portrait-ratio: ${image.width / image.height}`}><div class="portrait-image"><MediaImage image={image} eager portrait /></div>{badgeImage && <img class="image-badge" src={badgeImage.src} alt={badgeImage.alt} width={badgeImage.width} height={badgeImage.height} />}</div>}
   </div>
 </BlockSection>
 <style>
@@ -27,10 +27,11 @@ const { data, image, badgeImage, headingLevel: Heading = 'h1' } = Astro.props;
   .copy > * { overflow-wrap: anywhere; }
   .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-s); inline-size: 100%; }
   .badges { display: flex; flex-wrap: wrap; gap: var(--space-xs); padding: 0; margin: 0; list-style: none; color: var(--text-muted); }
-  .portrait { position: relative; display: grid; isolation: isolate; }
+  /* Match MediaImage’s height cap so the badge anchors to the visible photo. */
+  .portrait { position: relative; display: grid; isolation: isolate; justify-self: center; inline-size: min(100%, calc(40svh * var(--portrait-ratio))); }
   .portrait > * { grid-area: 1 / 1; }
   .image-badge { position: absolute; z-index: 2; inline-size: 130px; block-size: auto; inset-block-end: -60px; inset-inline-start: -40px; }
   .wide .image-badge { inline-size: 200px; }
   @media (max-width: 991px) { .image-badge, .wide .image-badge { inline-size: 60px; inset-block-end: -20px; inset-inline-start: -15px; } .wide .image-badge { inline-size: 70px; } }
-  @container (width >= 48rem) { .has-image { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); } }
+  @container (width >= 48rem) { .portrait { inline-size: min(100%, calc(32rem * var(--portrait-ratio))); } .has-image { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); } }
 </style>
