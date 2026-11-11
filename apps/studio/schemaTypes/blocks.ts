@@ -56,6 +56,8 @@ export const tabs = defineType({
       titleField, defineField({name: 'summary', type: 'text'}), taglineField,
       defineField({name: 'positive', type: 'portableText'}), defineField({name: 'negative', type: 'portableText'}),
       defineField({name: 'body', type: 'portableText', validation: (rule) => rule.required().min(1)}),
+      defineField({name: 'primaryCta', title: 'Główne CTA (opcjonalne)', type: 'link'}),
+      defineField({name: 'secondaryCta', title: 'Dodatkowe CTA (opcjonalne)', type: 'link'}),
     ]})]}),
   ], preview: {select: {title: 'heading'}},
 })
