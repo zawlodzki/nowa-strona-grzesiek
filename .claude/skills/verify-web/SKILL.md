@@ -17,7 +17,7 @@ Everything below goes through one helper, `.claude/skills/verify-web/scripts/web
 pnpm install --frozen-lockfile
 ```
 
-Needs Node >= 22.22 and pnpm 12. Chrome at `/Applications/Google Chrome.app` is needed only for `shot`; set `CHROME_BIN` to use another Chromium.
+Needs Node >= 22.22 and pnpm 12. Chrome/Chromium is needed only for `shot`. The script searches PATH, the Linux VM installation, Snap and the macOS Chrome app. Set `CHROME_BIN` to override discovery (an executable path or command name).
 
 Set where state and evidence go. In a Claude session, use the session scratchpad. Otherwise it defaults to `$TMPDIR/verify-web`:
 

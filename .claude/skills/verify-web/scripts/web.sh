@@ -59,6 +59,25 @@ owns_port() {
   return 1
 }
 
+# Explicit overrides must be valid; otherwise try PATH and platform installations.
+find_chrome() {
+  local candidate
+  if [ -n "${CHROME_BIN:-}" ]; then
+    candidate="$(command -v "$CHROME_BIN" || true)"
+    [ -n "$candidate" ] && [ -x "$candidate" ] || { echo "invalid CHROME_BIN: $CHROME_BIN" >&2; return 1; }
+    printf '%s\n' "$candidate"
+    return
+  fi
+  for candidate in chromium chromium-browser google-chrome google-chrome-stable; do
+    if command -v "$candidate" >/dev/null 2>&1; then command -v "$candidate"; return; fi
+  done
+  for candidate in /opt/agent-vm/chromium/chrome /snap/bin/chromium "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"; do
+    if [ -x "$candidate" ]; then printf '%s\n' "$candidate"; return; fi
+  done
+  echo "Chrome/Chromium not found; set CHROME_BIN to an executable" >&2
+  return 1
+}
+
 case "$cmd" in
   up)
     if [ -n "$(listener_pid)" ]; then
@@ -125,8 +144,7 @@ case "$cmd" in
 
   shot)
     [ -n "$ARG" ] || { echo "usage: $0 shot <path> [--port N] [--label L] [--width W]" >&2; exit 2; }
-    chrome="${CHROME_BIN:-/Applications/Google Chrome.app/Contents/MacOS/Google Chrome}"
-    [ -x "$chrome" ] || { echo "no Chrome at $chrome; set CHROME_BIN" >&2; exit 1; }
+    chrome="$(find_chrome)"
     ev="$(evidence_dir)"
     slug="${LABEL:-$(printf '%s' "$ARG" | tr -c 'A-Za-z0-9._-' '_')}-w$WIDTH"
     prof="$RUN/chrome-profile"; mkdir -p "$prof"
