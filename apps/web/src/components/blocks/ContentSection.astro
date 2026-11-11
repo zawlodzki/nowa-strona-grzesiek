@@ -43,8 +43,9 @@ const linkOnly = layout === 'list' && Boolean(data.items?.length) && data.items!
   .items { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-m); }
   .items > li { min-inline-size: 0; }
   .item-copy { display: grid; gap: var(--space-xs); max-inline-size: 65ch; overflow-wrap: anywhere; }
-  .cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
-  .cards > li { background: var(--surface-soft); border-radius: var(--radius-lg); padding: var(--space-m); }
+  .cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+  .cards > li { background: var(--surface-cyan-tint); border-radius: var(--radius-lg); padding: var(--space-m); }
+  .cards h3 { color: var(--text-link); }
   .twoColumn { grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); }
   .checklist > li { display: flex; align-items: start; gap: var(--space-xs); }
   .checklist :global(svg) { color: var(--text-link); }

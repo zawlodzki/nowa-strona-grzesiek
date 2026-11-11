@@ -23,10 +23,12 @@ const hasMedia = Astro.slots.has('media') || image || (data.media?.kind === 'dia
       {(data.bullets?.length ?? 0) > 0 && <ul class="bullets">{data.bullets?.map((text) => <li><Icon name="check" /><span>{text}</span></li>)}</ul>}
       {data.cta && <Button link={data.cta} variant={article ? 'primary' : 'text'} />}
     </div>
-    {hasMedia && <div class="media"><slot name="media">{data.media?.kind === 'diagram' && data.media.key ? <Diagram diagram={data.media.key} /> : image && <MediaImage image={image} />}</slot></div>}
+    {hasMedia && <figure class="media"><slot name="media">{data.media?.kind === 'diagram' && data.media.key ? <Diagram diagram={data.media.key} /> : image && <MediaImage image={image} />}</slot>{data.mediaCaption && <figcaption class="type-body-s">{data.mediaCaption}</figcaption>}</figure>}
   </div>
 </BlockSection>
 <style>
+  .media { margin: 0; min-inline-size: 0; }
+  figcaption { margin-block-start: var(--space-s); color: var(--text-muted); white-space: pre-line; }
   .feature-layout { display: grid; gap: var(--space-2xl); align-items: center; }
   .copy { display: flex; flex-direction: column; align-items: start; gap: var(--space-m); max-inline-size: 65ch; overflow-wrap: anywhere; }
   .has-portrait .media { inline-size: min(100%, 240px); justify-self: center; }

@@ -30,7 +30,7 @@
       "type": "feature",
       "component": "Feature",
       "purpose": "Tagline, heading, body with optional media. Covers Problem, Krok N, Moduł N, Tygodnie X-Y, Obszar N, Bonus N and home service anchors",
-      "fields": {"tagline": "string?", "heading": "string", "body": "portableText", "bullets": "string[]?", "media": "{kind:'image', image} | {kind:'diagram', key: DiagramKey} | null", "mediaSide": "'left'|'right'", "layout": "'default'|'article'?", "anchorId": "slug?", "cta": "link?"},
+      "fields": {"tagline": "string?", "heading": "string", "body": "portableText", "bullets": "string[]?", "media": "{kind:'image', image} | {kind:'diagram', key: DiagramKey} | null", "mediaCaption": "string?", "mediaSide": "'left'|'right'", "layout": "'default'|'article'?", "anchorId": "slug?", "cta": "link?"},
       "jsonld": "none",
       "match": [{"classes": "Feature Section"}, {"component": "Feature / Left 1 / Text Only"}]
     },

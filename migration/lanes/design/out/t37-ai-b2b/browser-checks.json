@@ -1,0 +1,149 @@
+[
+  {
+    "label": "live",
+    "width": 1440,
+    "status": 200
+  },
+  {
+    "label": "new",
+    "width": 1440,
+    "status": 200
+  },
+  {
+    "width": 1440,
+    "checks": {
+      "duplicate": 1,
+      "marketing": 0,
+      "hidden": 7,
+      "gradient": "linear-gradient(45deg, oklch(0.20569 0.10779 272.336) 50%, oklch(0.47807 0.20192 271.544))",
+      "overflow": false,
+      "prices": [
+        "6 000 zł zł netto jednorazowo",
+        "8 000 zł zł netto / mies.",
+        "Wycena indywidualna"
+      ]
+    }
+  },
+  {
+    "path": "/",
+    "width": 1440,
+    "status": 200,
+    "marketing": 0
+  },
+  {
+    "path": "/sales-atlas-system",
+    "width": 1440,
+    "status": 200,
+    "marketing": 0
+  },
+  {
+    "path": "/o-mnie",
+    "width": 1440,
+    "status": 200,
+    "marketing": 0
+  },
+  {
+    "path": "/kontakt",
+    "width": 1440,
+    "status": 200,
+    "marketing": 0
+  },
+  {
+    "label": "live",
+    "width": 768,
+    "status": 200
+  },
+  {
+    "label": "new",
+    "width": 768,
+    "status": 200
+  },
+  {
+    "width": 768,
+    "checks": {
+      "duplicate": 1,
+      "marketing": 0,
+      "hidden": 7,
+      "gradient": "linear-gradient(45deg, oklch(0.20569 0.10779 272.336) 50%, oklch(0.47807 0.20192 271.544))",
+      "overflow": false,
+      "prices": [
+        "6 000 zł zł netto jednorazowo",
+        "8 000 zł zł netto / mies.",
+        "Wycena indywidualna"
+      ]
+    }
+  },
+  {
+    "path": "/",
+    "width": 768,
+    "status": 200,
+    "marketing": 0
+  },
+  {
+    "path": "/sales-atlas-system",
+    "width": 768,
+    "status": 200,
+    "marketing": 0
+  },
+  {
+    "path": "/o-mnie",
+    "width": 768,
+    "status": 200,
+    "marketing": 0
+  },
+  {
+    "path": "/kontakt",
+    "width": 768,
+    "status": 200,
+    "marketing": 0
+  },
+  {
+    "label": "live",
+    "width": 375,
+    "status": 200
+  },
+  {
+    "label": "new",
+    "width": 375,
+    "status": 200
+  },
+  {
+    "width": 375,
+    "checks": {
+      "duplicate": 1,
+      "marketing": 0,
+      "hidden": 7,
+      "gradient": "linear-gradient(45deg, oklch(0.20569 0.10779 272.336) 50%, oklch(0.47807 0.20192 271.544))",
+      "overflow": false,
+      "prices": [
+        "6 000 zł zł netto jednorazowo",
+        "8 000 zł zł netto / mies.",
+        "Wycena indywidualna"
+      ]
+    }
+  },
+  {
+    "path": "/",
+    "width": 375,
+    "status": 200,
+    "marketing": 0
+  },
+  {
+    "path": "/sales-atlas-system",
+    "width": 375,
+    "status": 200,
+    "marketing": 0
+  },
+  {
+    "path": "/o-mnie",
+    "width": 375,
+    "status": 200,
+    "marketing": 0
+  },
+  {
+    "path": "/kontakt",
+    "width": 375,
+    "status": 200,
+    "marketing": 0
+  }
+]

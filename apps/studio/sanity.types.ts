@@ -380,6 +380,7 @@ export type ContentSection = {
 };
 
 export type Feature = {
+  mediaCaption?: string;
   _type: "feature";
   tagline?: string;
   heading?: string;

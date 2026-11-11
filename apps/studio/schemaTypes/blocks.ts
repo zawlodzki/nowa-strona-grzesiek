@@ -31,6 +31,7 @@ export const feature = defineType({
     defineField({name: 'body', type: 'portableText', validation: (rule) => rule.required().min(1)}),
     defineField({name: 'bullets', type: 'array', of: [defineArrayMember({type: 'string'})]}),
     defineField({name: 'media', type: 'media'}),
+    defineField({name: 'mediaCaption', type: 'text', rows: 2}),
     defineField({name: 'mediaSide', type: 'string', options: {list: ['left', 'right']}, initialValue: 'right', validation: (rule) => rule.required().custom((value) => value === undefined || ['left', 'right'].includes(value) || 'Wybierz dozwoloną wartość.')}),
     defineField({name: 'anchorId', type: 'slug', validation: (rule) => rule.custom((value) => !value?.current || /^[a-z][a-z0-9-]*$/.test(value.current) || 'Użyj identyfikatora bez # i spacji.')}),
     defineField({name: 'cta', type: 'link'}),

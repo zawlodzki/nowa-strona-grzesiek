@@ -23,7 +23,7 @@ const inventory = JSON.parse(await readFile(formsPath, 'utf8'));
 const expected = new Map();
 for (const form of inventory.uniqueByNameAndPage) {
   if (form.path.startsWith('/style-guide')) continue;
-  const names = Object.keys(form.fields).sort();
+  const names = Object.keys(form.fields).filter((name) => name !== 'marketing-emails').sort();
   const known = expected.get(form.displayName);
   if (known && known.join() !== names.join()) throw new Error(`forms.json has two field sets for "${form.displayName}".`);
   expected.set(form.displayName, names);

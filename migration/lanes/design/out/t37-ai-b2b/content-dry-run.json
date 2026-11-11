@@ -1,0 +1,953 @@
+{
+  "document": "page-6a4e60735114259a5cd425c5",
+  "changes": [
+    {
+      "before": {
+        "_key": "fb0f53241470",
+        "_type": "logoStrip",
+        "intro": "Łączę AI z narzędziami, w których wasz zespół już pracuje",
+        "logos": [
+          {
+            "_key": "39dba078cf96",
+            "_ref": "logo-9234e5f10cf5f1df",
+            "_type": "reference"
+          },
+          {
+            "_key": "fc5f159d0cba",
+            "_ref": "logo-085bd0ac50eb9827",
+            "_type": "reference"
+          },
+          {
+            "_key": "abc27eea5501",
+            "_ref": "logo-4835978663184233",
+            "_type": "reference"
+          },
+          {
+            "_key": "0becffdf566c",
+            "_ref": "logo-b156dd832cf7b1b8",
+            "_type": "reference"
+          },
+          {
+            "_key": "72c19e0aa114",
+            "_ref": "logo-35c49364a77c8a57",
+            "_type": "reference"
+          },
+          {
+            "_key": "ecd172f9e9b8",
+            "_ref": "logo-90b81589ba836279",
+            "_type": "reference"
+          },
+          {
+            "_key": "c02393b5a919",
+            "_ref": "logo-f256ad8ec63e38d9",
+            "_type": "reference"
+          },
+          {
+            "_key": "2520c2af55ae",
+            "_ref": "logo-169621dfb8337d93",
+            "_type": "reference"
+          }
+        ],
+        "title": "Łączę AI z narzędziami, w których wasz zespół już pracuje",
+        "variant": "tools"
+      },
+      "after": {
+        "_key": "fb0f53241470",
+        "_type": "logoStrip",
+        "logos": [
+          {
+            "_key": "39dba078cf96",
+            "_ref": "logo-9234e5f10cf5f1df",
+            "_type": "reference"
+          },
+          {
+            "_key": "fc5f159d0cba",
+            "_ref": "logo-085bd0ac50eb9827",
+            "_type": "reference"
+          },
+          {
+            "_key": "abc27eea5501",
+            "_ref": "logo-4835978663184233",
+            "_type": "reference"
+          },
+          {
+            "_key": "0becffdf566c",
+            "_ref": "logo-b156dd832cf7b1b8",
+            "_type": "reference"
+          },
+          {
+            "_key": "72c19e0aa114",
+            "_ref": "logo-35c49364a77c8a57",
+            "_type": "reference"
+          },
+          {
+            "_key": "ecd172f9e9b8",
+            "_ref": "logo-90b81589ba836279",
+            "_type": "reference"
+          },
+          {
+            "_key": "c02393b5a919",
+            "_ref": "logo-f256ad8ec63e38d9",
+            "_type": "reference"
+          },
+          {
+            "_key": "2520c2af55ae",
+            "_ref": "logo-169621dfb8337d93",
+            "_type": "reference"
+          }
+        ],
+        "title": "Łączę AI z narzędziami, w których wasz zespół już pracuje",
+        "variant": "tools"
+      }
+    },
+    {
+      "before": {
+        "_key": "8792f6caacf9",
+        "_type": "feature",
+        "body": [
+          {
+            "_key": "5a3ac23a4fa8",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "699c1c4c457b",
+                "_type": "span",
+                "text": "ChatGPT szybciej napisze mail. Copilot streści spotkanie. Ale jeśli każdy używa AI po swojemu, na danych kopiowanych ręcznie, poprawiają się pojedyncze zadania, a nie cały proces sprzedaży.\n- AI nie zna cennika, klientów ani sposobu komunikacji firmy, więc przygotowuje generyczne materiały.\n- CRM, poczta i notatki ze spotkań są osobno, więc handlowiec nadal przenosi dane ręcznie.\n- Dobre prompty i poprawki zostają u pojedynczych osób, więc firma nie uczy się na kolejnych ofertach.\nPowtarza się jeden wzorzec: AI przyspiesza zadania, ale firma nie zmienia sposoby pracy i nie widzi zysku."
+              }
+            ],
+            "style": "normal"
+          },
+          {
+            "_key": "c1616bf1bade",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "30e71db907eb",
+                "_type": "span",
+                "text": "McKinsey podaje, że 88% organizacji regularnie używa AI, natomiast tylko 39% deklaruje jakikolwiek wpływ na EBIT, zwykle poniżej 5%\n(McKinsey, State of AI 2025)"
+              }
+            ],
+            "style": "normal"
+          }
+        ],
+        "heading": "AI przyspiesza handlowca. Firma nadal czeka na wynik.",
+        "media": {
+          "_type": "media",
+          "key": "zw-problem",
+          "kind": "diagram"
+        },
+        "mediaSide": "right",
+        "tagline": "Problem"
+      },
+      "after": {
+        "_key": "8792f6caacf9",
+        "_type": "feature",
+        "body": [
+          {
+            "_key": "5a3ac23a4fa8",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "699c1c4c457b",
+                "_type": "span",
+                "text": "ChatGPT szybciej napisze mail. Copilot streści spotkanie. Ale jeśli każdy używa AI po swojemu, na danych kopiowanych ręcznie, poprawiają się pojedyncze zadania, a nie cały proces sprzedaży.\n- AI nie zna cennika, klientów ani sposobu komunikacji firmy, więc przygotowuje generyczne materiały.\n- CRM, poczta i notatki ze spotkań są osobno, więc handlowiec nadal przenosi dane ręcznie.\n- Dobre prompty i poprawki zostają u pojedynczych osób, więc firma nie uczy się na kolejnych ofertach.\nPowtarza się jeden wzorzec: AI przyspiesza zadania, ale firma nie zmienia sposoby pracy i nie widzi zysku."
+              }
+            ],
+            "style": "normal"
+          }
+        ],
+        "heading": "AI przyspiesza handlowca. Firma nadal czeka na wynik.",
+        "media": {
+          "_type": "media",
+          "key": "zw-problem",
+          "kind": "diagram"
+        },
+        "mediaSide": "right",
+        "tagline": "Problem",
+        "mediaCaption": "McKinsey podaje, że 88% organizacji regularnie używa AI, natomiast tylko 39% deklaruje jakikolwiek wpływ na EBIT, zwykle poniżej 5%\n(McKinsey, State of AI 2025)"
+      }
+    }
+  ],
+  "mutations": [
+    {
+      "patch": {
+        "id": "page-6a4e60735114259a5cd425c5",
+        "ifRevisionID": "s0woJMOB7mWiVecre6FmYD",
+        "set": {
+          "sections": [
+            {
+              "_key": "9fd9685abae2",
+              "_type": "hero",
+              "body": "Znam sprzedaż od środka, z ponad 50 firm, nie tylko z promptów. Przeprowadzę twój zespół handlowy przez całą drogę: dopasowanie procesów do pracy z AI, zebranie kontekstu firmy, wybór narzędzi, uruchomienie działających agentów i szkolenie handlowców. Wdrażam agentów AI, którzy przygotowują handlowcom oferty, follow-upy i briefingi z danych w CRM.",
+              "cta": {
+                "_type": "link",
+                "href": "/kontakt",
+                "label": "Umów rozmowę o wdrożeniu AI"
+              },
+              "heading": "Wdrożenie AI w sprzedaży, które oddaje handlowcom czas na zarabianie",
+              "image": {
+                "_type": "contentImage",
+                "alt": "Grafika: Frame 51",
+                "asset": {
+                  "_ref": "image-b27f6e99123abe859e133a01e1d348d2e2d30f3d-800x800-avif",
+                  "_type": "reference"
+                }
+              },
+              "tagline": "Połącz agentów AI z ekspercką wiedzą",
+              "variant": "default"
+            },
+            {
+              "_key": "fb0f53241470",
+              "_type": "logoStrip",
+              "logos": [
+                {
+                  "_key": "39dba078cf96",
+                  "_ref": "logo-9234e5f10cf5f1df",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "fc5f159d0cba",
+                  "_ref": "logo-085bd0ac50eb9827",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "abc27eea5501",
+                  "_ref": "logo-4835978663184233",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "0becffdf566c",
+                  "_ref": "logo-b156dd832cf7b1b8",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "72c19e0aa114",
+                  "_ref": "logo-35c49364a77c8a57",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "ecd172f9e9b8",
+                  "_ref": "logo-90b81589ba836279",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "c02393b5a919",
+                  "_ref": "logo-f256ad8ec63e38d9",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "2520c2af55ae",
+                  "_ref": "logo-169621dfb8337d93",
+                  "_type": "reference"
+                }
+              ],
+              "title": "Łączę AI z narzędziami, w których wasz zespół już pracuje",
+              "variant": "tools"
+            },
+            {
+              "_key": "acc216a3120b",
+              "_type": "logoStrip",
+              "intro": "Dotąd współpracowałem z firmami, które zatrudniają od 2 do 500 pracowników.",
+              "logos": [
+                {
+                  "_key": "ba151682864c",
+                  "_ref": "logo-d1871ab1a7246d48",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "e24579c39b71",
+                  "_ref": "logo-a475f3703df350df",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "c1c3126dcf91",
+                  "_ref": "logo-7a785c789afac495",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "11773780f420",
+                  "_ref": "logo-b60a85d844245790",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "09842d214213",
+                  "_ref": "logo-7c185d23e90864d3",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "36b72fce1b10",
+                  "_ref": "logo-1fc6ad520e1b27b3",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "61710990e65f",
+                  "_ref": "logo-7a837b28e66e33c6",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "76bc02ab665c",
+                  "_ref": "logo-23038710d4c683ee",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "06238fd5dc86",
+                  "_ref": "logo-4c62f747913c7ac4",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "06e9b55feb72",
+                  "_ref": "logo-715af8090d9c3e3f",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "40ffa9ed5142",
+                  "_ref": "logo-d849b792535d33b2",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "486ee2e1ab66",
+                  "_ref": "logo-7d987b3dc514a339",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "75421d9b66f1",
+                  "_ref": "logo-4e9db8ea5aacefad",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "f69038ea2c8f",
+                  "_ref": "logo-930712fb94c19934",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "55e4ec92f8a1",
+                  "_ref": "logo-4f7be01cfc1ad4fc",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "0553e4fa7bb5",
+                  "_ref": "logo-67fe8cc3dc693ef1",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "5eeafa57f25f",
+                  "_ref": "logo-06d110596bb4cc62",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "e462e11f2486",
+                  "_ref": "logo-9cfcf58cafa7d9be",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "16ee91c519b6",
+                  "_ref": "logo-3884770d16e71bdc",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "08d9b7981fca",
+                  "_ref": "logo-4b8df179c55d17cd",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "5490676c476c",
+                  "_ref": "logo-334b03825192d642",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "a7415f3ca9f4",
+                  "_ref": "logo-9fbace8815575a04",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "420509ffa497",
+                  "_ref": "logo-a9e9af352ee95eeb",
+                  "_type": "reference"
+                },
+                {
+                  "_key": "c87bcab470a8",
+                  "_ref": "logo-22aa77b5a7eb61ad",
+                  "_type": "reference"
+                }
+              ],
+              "tagline": "Z kim współpracuję",
+              "title": "Doświadczenie z wdrożeń CRM i automatyzacji w ponad 50 firmach",
+              "variant": "clients"
+            },
+            {
+              "_key": "8792f6caacf9",
+              "_type": "feature",
+              "body": [
+                {
+                  "_key": "5a3ac23a4fa8",
+                  "_type": "block",
+                  "children": [
+                    {
+                      "_key": "699c1c4c457b",
+                      "_type": "span",
+                      "text": "ChatGPT szybciej napisze mail. Copilot streści spotkanie. Ale jeśli każdy używa AI po swojemu, na danych kopiowanych ręcznie, poprawiają się pojedyncze zadania, a nie cały proces sprzedaży.\n- AI nie zna cennika, klientów ani sposobu komunikacji firmy, więc przygotowuje generyczne materiały.\n- CRM, poczta i notatki ze spotkań są osobno, więc handlowiec nadal przenosi dane ręcznie.\n- Dobre prompty i poprawki zostają u pojedynczych osób, więc firma nie uczy się na kolejnych ofertach.\nPowtarza się jeden wzorzec: AI przyspiesza zadania, ale firma nie zmienia sposoby pracy i nie widzi zysku."
+                    }
+                  ],
+                  "style": "normal"
+                }
+              ],
+              "heading": "AI przyspiesza handlowca. Firma nadal czeka na wynik.",
+              "media": {
+                "_type": "media",
+                "key": "zw-problem",
+                "kind": "diagram"
+              },
+              "mediaSide": "right",
+              "tagline": "Problem",
+              "mediaCaption": "McKinsey podaje, że 88% organizacji regularnie używa AI, natomiast tylko 39% deklaruje jakikolwiek wpływ na EBIT, zwykle poniżej 5%\n(McKinsey, State of AI 2025)"
+            },
+            {
+              "_key": "02d7851cd88a",
+              "_type": "contentSection",
+              "heading": "Sprawdź czy moja usługa pasuje do Twojej firmy",
+              "items": [
+                {
+                  "_key": "25e4918ab59b",
+                  "_type": "contentItem",
+                  "icon": "check",
+                  "title": "Kupiliście ChatGPT albo Copilota. Ludzie mówią, że oszczędzają czas, ale wynik tego nie pokazuje."
+                },
+                {
+                  "_key": "9249150c948a",
+                  "_type": "contentItem",
+                  "icon": "check",
+                  "title": "Oferta powstaje 3 godziny: ręcznie, z cennika w PDF-ie i historii maili. Macie też inną powtarzalną pracę."
+                },
+                {
+                  "_key": "73ca0eb960d9",
+                  "_type": "contentItem",
+                  "icon": "check",
+                  "title": "Kilka osób w zespole używa AI po cichu i nic z tej wiedzy nie zostaje w firmie. Nikt nie ma nad tym kontroli."
+                },
+                {
+                  "_key": "2e440411c104",
+                  "_type": "contentItem",
+                  "icon": "check",
+                  "title": "Leadów przybywa, zespół nie nadąża z ofertami i follow-upami. Nowych etatów nie będzie."
+                }
+              ],
+              "layout": "checklist",
+              "tagline": "Dla kogo"
+            },
+            {
+              "_key": "57237dcc2bab",
+              "_type": "feature",
+              "body": [
+                {
+                  "_key": "deec1df7313c",
+                  "_type": "block",
+                  "children": [
+                    {
+                      "_key": "7a9a86c8aae8",
+                      "_type": "span",
+                      "text": "Każda współpraca opiera się na tych kluczowych krokach, dopasowanych do Twojej sytuacji, wdrożonych w 12 tygodni."
+                    }
+                  ],
+                  "style": "normal"
+                }
+              ],
+              "heading": "Pięć kroków do pierwszych procesów sprzedaży obsługiwanych przez AI",
+              "mediaSide": "right",
+              "tagline": "Jak wygląda proces"
+            },
+            {
+              "_key": "ac71b81cf879",
+              "_type": "feature",
+              "body": [
+                {
+                  "_key": "74cb075f854d",
+                  "_type": "block",
+                  "children": [
+                    {
+                      "_key": "7203a8e44263",
+                      "_type": "span",
+                      "text": "Siadam z zespołem, oglądam, jak dziś powstają oferty, briefy i follow-upy, raporty, prognozy i wybieram tę powtarzalną robotę, którą przejmie AI."
+                    }
+                  ],
+                  "style": "normal"
+                }
+              ],
+              "heading": "Dopasowanie procesów",
+              "media": {
+                "_type": "media",
+                "key": "zw-step1",
+                "kind": "diagram"
+              },
+              "mediaSide": "right",
+              "tagline": "Tygodnie 1-2"
+            },
+            {
+              "_key": "38cdd0e31f45",
+              "_type": "feature",
+              "body": [
+                {
+                  "_key": "6964453b349c",
+                  "_type": "block",
+                  "children": [
+                    {
+                      "_key": "8291ca987186",
+                      "_type": "span",
+                      "text": "Zbieram to, co pozwala AI pisać jak wasz doświadczony handlowiec, a nie jak każda firma z internetu: ofertę, cennik, profil klienta, persony, ton komunikacji, procedury, stretagie, konkurencję.\nTwoje unikalne know-how sformatowane dla agentów AI. Osobno opisałem "
+                    },
+                    {
+                      "_key": "0649678588ec",
+                      "_type": "span",
+                      "marks": [
+                        "5e22045883b1"
+                      ],
+                      "text": "kontekst firmy dla AI."
+                    }
+                  ],
+                  "markDefs": [
+                    {
+                      "_key": "5e22045883b1",
+                      "_type": "internalLink",
+                      "reference": {
+                        "_ref": "post-6a99cd44eccb478753f29bd6",
+                        "_type": "reference"
+                      }
+                    }
+                  ],
+                  "style": "normal"
+                }
+              ],
+              "heading": "Budowa kontekstu firmy do pracy z AI",
+              "media": {
+                "_type": "media",
+                "key": "zw-step2",
+                "kind": "diagram"
+              },
+              "mediaSide": "left",
+              "tagline": "Tygodnie 2-4"
+            },
+            {
+              "_key": "a8076842463e",
+              "_type": "feature",
+              "body": [
+                {
+                  "_key": "57d0807e05f2",
+                  "_type": "block",
+                  "children": [
+                    {
+                      "_key": "b75abc5980c0",
+                      "_type": "span",
+                      "text": "Wybieramy narzędzia AI oparte na agentach jak ChatGPT Work/Codex, Claude Cowork/Code. Podpinam CRM, pocztę, kalendarz, dokumenty online, transkrypcje spotkań, na start tylko do odczytu, żeby AI pracowało na żywych danych."
+                    }
+                  ],
+                  "style": "normal"
+                }
+              ],
+              "heading": "Narzędzia i integracje",
+              "media": {
+                "_type": "media",
+                "key": "zw-step3",
+                "kind": "diagram"
+              },
+              "mediaSide": "right",
+              "tagline": "Tygodnie 3-5"
+            },
+            {
+              "_key": "668f63721947",
+              "_type": "feature",
+              "body": [
+                {
+                  "_key": "fd52be7a15c4",
+                  "_type": "block",
+                  "children": [
+                    {
+                      "_key": "7ee00b1ba759",
+                      "_type": "span",
+                      "text": "Celem jest jeden przepływ pracy z dużym wpływem i akceptowalnym nakładem, domknięty od początku do końca. AI robi pierwszą wersję oferty czy follow-upu, handlowiec sprawdza i wysyła, a poprawki wracają do systemu, więc każdy kolejny raz jest lepszy."
+                    }
+                  ],
+                  "style": "normal"
+                }
+              ],
+              "heading": "Pierwszy agent AI",
+              "media": {
+                "_type": "media",
+                "key": "zw-step4",
+                "kind": "diagram"
+              },
+              "mediaSide": "left",
+              "tagline": "Tygodnie 5-9"
+            },
+            {
+              "_key": "6d3cfe2071ad",
+              "_type": "feature",
+              "body": [
+                {
+                  "_key": "9a3ab1beec24",
+                  "_type": "block",
+                  "children": [
+                    {
+                      "_key": "1fd244a8c1f8",
+                      "_type": "span",
+                      "text": "Tworzenie kolejnych agentów z zamiarem doprowadzenia ich do stanu w którym dają powtarzalne wyniki. Transfer wiedzy do zespołu, żeby firma mogła dalej rozwijać wykorzystanie AI beze mnie."
+                    }
+                  ],
+                  "style": "normal"
+                }
+              ],
+              "heading": "Skalowanie, szkolenie i przekazanie",
+              "media": {
+                "_type": "media",
+                "key": "zw-step5",
+                "kind": "diagram"
+              },
+              "mediaSide": "right",
+              "tagline": "Tygodnie 6-12"
+            },
+            {
+              "_key": "c3cffc88e9f5",
+              "_type": "contentSection",
+              "heading": "Po 12 tygodniach zostaje u was:",
+              "items": [
+                {
+                  "_key": "f4c4fdfec5b1",
+                  "_type": "contentItem",
+                  "text": "+  Na przykład przygotowanie oferty i follow-upu. AI tworzy pierwszą wersję z aktualnych danych, handlowiec ją zatwierdza.",
+                  "title": "3 Agentów"
+                },
+                {
+                  "_key": "34ba4b55cbd3",
+                  "_type": "contentItem",
+                  "text": "Oferta, cennik, profil klienta, przykłady, typowe obiekcje i ton komunikacji.",
+                  "title": "1 Baza wiedzy firmy"
+                },
+                {
+                  "_key": "1f9d494deb46",
+                  "_type": "contentItem",
+                  "text": "+  CRM, poczta i kalendarz, transkrypcja rozmów, dysk online.",
+                  "title": "5 Integracje z narzędziami"
+                },
+                {
+                  "_key": "c4c0121f8b94",
+                  "_type": "contentItem",
+                  "text": "Handlowcy wiedzą, jak korzystać z wdrożonych agentów i jak przekazywać poprawki.",
+                  "title": "1 Przeszkolony zespół"
+                }
+              ],
+              "layout": "cards",
+              "tagline": "Efekty wdrożenia"
+            },
+            {
+              "_key": "1faf7b0e232f",
+              "_type": "pricing",
+              "heading": "Współpraca przejrzysta od początku",
+              "plans": [
+                {
+                  "_key": "cbdc9dfca5a6",
+                  "_type": "pricePlan",
+                  "cta": {
+                    "_type": "link",
+                    "href": "/audyt-ai-sprzedaz",
+                    "label": "Zobacz audyt AI"
+                  },
+                  "currency": "PLN",
+                  "features": [
+                    "Audyt procesów sprzedaży",
+                    "Audyt CRM i narzędzi IT",
+                    "Rekomendacja, w których procesach warto wdrożyć AI",
+                    "Dobór narzędzi",
+                    "Ocena gotowości zespołu do pracy z AI"
+                  ],
+                  "highlighted": false,
+                  "name": "Audyt gotowości na AI",
+                  "price": 6000,
+                  "priceNote": "2 tygodnie, żeby sprawdzić, na ile zespół jest gotowy",
+                  "unit": "zł netto jednorazowo"
+                },
+                {
+                  "_key": "92adad1a54fd",
+                  "_type": "pricePlan",
+                  "cta": {
+                    "_type": "link",
+                    "href": "/kontakt",
+                    "label": "Zacznijmy wdrożenie"
+                  },
+                  "currency": "PLN",
+                  "features": [
+                    "Zakres audytu gotowości na AI",
+                    "Mapowanie procesów",
+                    "Czyszczenie danych w CRM",
+                    "Zebranie i ustrukturyzowanie kontekstu firmy",
+                    "Połączenie narzędzi IT z agentami",
+                    "Uruchomienie 3-5 agentów AI",
+                    "Szkolenia obsługowe dla zespołu",
+                    "Osobne szkolenie z tworzenia agentów",
+                    "Plan kolejnych kroków",
+                    "Pomiar wskaźników przed i po"
+                  ],
+                  "highlighted": true,
+                  "name": "dla firmy usługowej",
+                  "price": 8000,
+                  "priceNote": "Współpraca 3-miesięczna, łącznie 24 000 zł netto. Wdrożenie AI w dziale sprzedaży firmy usługowej.",
+                  "unit": "zł netto / mies."
+                },
+                {
+                  "_key": "dc59c71b12c6",
+                  "_type": "pricePlan",
+                  "cta": {
+                    "_type": "link",
+                    "href": "/kontakt",
+                    "label": "Ustalmy zakres i cenę"
+                  },
+                  "currency": "PLN",
+                  "features": [
+                    "Zakres dla firmy usługowej",
+                    "Integracja z systemem ERP",
+                    "Integracja z platformą e-commerce",
+                    "Zintegrowane raportowanie CRM i ERP"
+                  ],
+                  "highlighted": false,
+                  "name": "dla firmy produkcyjnej",
+                  "priceNote": "Wdrożenie AI w dziale sprzedaży firmy produkcyjnej lub handlowej.",
+                  "unit": "Wycena indywidualna"
+                }
+              ],
+              "tagline": "Cennik"
+            },
+            {
+              "_key": "6cd726a91bf3",
+              "_type": "ctaBand",
+              "cta": {
+                "_type": "link",
+                "href": "/kontakt",
+                "label": "Umów bezpłatną konsultację"
+              },
+              "heading": "Zacznijmy od rozmowy"
+            },
+            {
+              "_key": "cc29a1c0bed6",
+              "_type": "promoCard",
+              "points": [
+                "To wdrożenie jest częścią Sales Atlas System i łączy proces sprzedaży, dane, narzędzia oraz sposób pomiaru. Dzięki temu agenci AI pracują na aktualnym kontekście firmy, a ich wynik można porównać przed wdrożeniem i po nim."
+              ],
+              "target": {
+                "_ref": "page-6a82cef512f2263890a42ee2",
+                "_type": "reference",
+                "_weak": true
+              },
+              "title": "Sales Atlas System"
+            },
+            {
+              "_key": "ae4fb12cddeb",
+              "_type": "faq",
+              "emitSchema": true,
+              "heading": "Najczęściej zadawane pytania",
+              "items": [
+                {
+                  "_key": "c0e28b8def22",
+                  "_type": "faqItem",
+                  "answer": [
+                    {
+                      "_key": "ae9e4a3e19c6",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "eb8a54d3bb61",
+                          "_type": "span",
+                          "text": "Dostęp i tak jest potrzebny. To załatwia narzędzie, czyli mniejszą część problemu. Moja praca zaczyna się tam, gdzie kończy licencja: procesy, kontekst firmy i agenci, których zespół naprawdę używa."
+                        }
+                      ],
+                      "style": "normal"
+                    }
+                  ],
+                  "question": "Czy nie lepiej dać handlowcom dostęp do ChatGPT lub Claude?"
+                },
+                {
+                  "_key": "0787070b7be7",
+                  "_type": "faqItem",
+                  "answer": [
+                    {
+                      "_key": "d1bd6648a4ad",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "fd25d78ce0e4",
+                          "_type": "span",
+                          "text": "Nie. Na starcie sprawdzam jakość danych i czyścimy to, czego potrzebuje pierwsze wdrożenie."
+                        }
+                      ],
+                      "style": "normal"
+                    }
+                  ],
+                  "question": "Nasz CRM jest zaniedbany. To nas dyskwalifikuje?"
+                },
+                {
+                  "_key": "ea3a8491b590",
+                  "_type": "faqItem",
+                  "answer": [
+                    {
+                      "_key": "70dd7e13530e",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "41e5e045ea07",
+                          "_type": "span",
+                          "text": "Podpinam go bezpośrednio do waszych narzędzi: Pipedrive, HubSpot, poczta, kalendarz, Asana. Każda integracja zaczyna od trybu tylko-odczyt. Zmiany w danych dopiero po waszej zgodzie."
+                        }
+                      ],
+                      "style": "normal"
+                    }
+                  ],
+                  "question": "Jak agent łączy się z naszymi systemami?"
+                },
+                {
+                  "_key": "85a29a61f172",
+                  "_type": "faqItem",
+                  "answer": [
+                    {
+                      "_key": "9e78203a84a5",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "7d7056ac0899",
+                          "_type": "span",
+                          "text": "Jedna osoba po waszej stronie: 4–6 godzin tygodniowo. Handlowcy: szkolenia i testowanie agentów w codziennej pracy."
+                        }
+                      ],
+                      "style": "normal"
+                    }
+                  ],
+                  "question": "Ile czasu musi w to włożyć nasz zespół?"
+                },
+                {
+                  "_key": "cdbbf81cf4a0",
+                  "_type": "faqItem",
+                  "answer": [
+                    {
+                      "_key": "1d3af83ee012",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "d9996cf08677",
+                          "_type": "span",
+                          "text": "Wszystko zostaje u was: baza wiedzy, integracje, dokumentacja i przeszkolony zespół."
+                        }
+                      ],
+                      "style": "normal"
+                    }
+                  ],
+                  "question": "Co, jeśli przestaniemy współpracować?"
+                },
+                {
+                  "_key": "178e6ef7efea",
+                  "_type": "faqItem",
+                  "answer": [
+                    {
+                      "_key": "550af9faaff1",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "d4fae6fd8a87",
+                          "_type": "span",
+                          "text": "Na starcie ustalamy, które dane mogą iść do zewnętrznego API, a które nie. Rekomenduję, decyzja jest wasza. Jeśli macie firmowe wdrożenie modeli (Azure, AWS), pracuję na nim. W ramach wdrożenia tworzymy politykę użycia AI i procedury operacyjne RODO. Ustalamy też role i obowiązki wynikające z AI Act. Do weryfikacji przez dział prawny."
+                        }
+                      ],
+                      "style": "normal"
+                    }
+                  ],
+                  "question": "Jak wygląda kwestia RODO i AI Act?"
+                },
+                {
+                  "_key": "d29e25357a74",
+                  "_type": "faqItem",
+                  "answer": [
+                    {
+                      "_key": "afb0fd47650d",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "08477fb07fde",
+                          "_type": "span",
+                          "text": "Domyślnie OpenAI i Anthropic przez API. Również Claude i ChatGPT w wersji Business/Team. Wybór uzgadniamy na starcie."
+                        }
+                      ],
+                      "style": "normal"
+                    }
+                  ],
+                  "question": "Na jakich modelach pracujesz?"
+                },
+                {
+                  "_key": "583657384445",
+                  "_type": "faqItem",
+                  "answer": [
+                    {
+                      "_key": "77384ff26b2f",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "2c2a9fe337ba",
+                          "_type": "span",
+                          "text": "Domyślnie zdalnie. Kickoff i 1–2 spotkania na miejscu, jeśli to ma sens."
+                        }
+                      ],
+                      "style": "normal"
+                    }
+                  ],
+                  "question": "Zdalnie czy u nas w biurze?"
+                },
+                {
+                  "_key": "b17cb7d193fe",
+                  "_type": "faqItem",
+                  "answer": [
+                    {
+                      "_key": "89a6f0bc0e6f",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "350db5298652",
+                          "_type": "span",
+                          "text": "Jedna osoba do uzgodnienia dostępów na starcie. Reszta projektu należy do działu sprzedaży."
+                        }
+                      ],
+                      "style": "normal"
+                    }
+                  ],
+                  "question": "Czy potrzebujemy działu IT?"
+                },
+                {
+                  "_key": "e493abc00909",
+                  "_type": "faqItem",
+                  "answer": [
+                    {
+                      "_key": "52c92e776564",
+                      "_type": "block",
+                      "children": [
+                        {
+                          "_key": "43f07b90bd60",
+                          "_type": "span",
+                          "text": "Warsztaty i szkolenia prowadzę osobiście. Od pierwszych ustaleń do zakończenia projektu rozmawiasz tylko ze mną. Jestem osobą w 100% odpowiedzialną za projekt."
+                        }
+                      ],
+                      "style": "normal"
+                    }
+                  ],
+                  "question": "Kto prowadzi warsztaty i szkolenia?"
+                }
+              ],
+              "tagline": "FAQ"
+            },
+            {
+              "_key": "a552ae37b561",
+              "_type": "contactForm",
+              "formId": "landing-contact",
+              "heading": "Skontaktuj się ze mną",
+              "intro": "Współpracę najlepiej zacząć od rozmowy.",
+              "showDetails": true,
+              "tagline": "Kontakt",
+              "variant": "landing"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

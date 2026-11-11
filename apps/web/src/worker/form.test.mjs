@@ -41,6 +41,7 @@ test('contact form forwards every Webflow field and redirects to the thank-you p
     gclid: 'abc123',
     'cf-turnstile-response': PASS_TOKEN,
     injected: 'dropped',
+    'marketing-emails': 'on',
   });
   assert.equal(response.status, 303);
   assert.equal(response.headers.get('Location'), '/podziekowanie-konsultacja');
@@ -50,10 +51,10 @@ test('contact form forwards every Webflow field and redirects to the thank-you p
   assert.equal(triggerType, 'form_submission');
   assert.equal(payload.name, 'Landing Contact Form');
   assert.deepEqual(Object.keys(payload.data), FORMS['landing-contact'].fields.map(([name]) => name));
-  assert.equal(Object.keys(payload.data).length, 37);
+  assert.equal(Object.keys(payload.data).length, 36);
   assert.equal(payload.data.email, 'ola@example.com');
   assert.equal(payload.data.newsletter, 'true');
-  assert.equal(payload.data['marketing-emails'], 'false');
+  assert.ok(!('marketing-emails' in payload.data));
   assert.equal(payload.data.gclid, 'abc123');
   assert.equal(payload.data.utm_id, '');
   assert.ok(!('cf-turnstile-response' in payload.data), 'turnstile token is not forwarded');
