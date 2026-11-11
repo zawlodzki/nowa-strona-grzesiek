@@ -1,0 +1,51 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "first": {
+        "width": 1440,
+        "scroll": 1425,
+        "labels": [
+          "Zapytaj o kurs",
+          "Zapytaj o pracę na Twoim CRM"
+        ],
+        "hrefs": [
+          "/kontakt",
+          "/kontakt"
+        ],
+        "y": [
+          567.5,
+          567.5
+        ],
+        "primary": true,
+        "secondary": true
+      },
+      "noCtaAfterArrowDown": true,
+      "secondaryOnlyAfterClick": true
+    },
+    {
+      "width": 390,
+      "first": {
+        "width": 390,
+        "scroll": 390,
+        "labels": [
+          "Zapytaj o kurs",
+          "Zapytaj o pracę na Twoim CRM"
+        ],
+        "hrefs": [
+          "/kontakt",
+          "/kontakt"
+        ],
+        "y": [
+          589.1875,
+          649.1875
+        ],
+        "primary": true,
+        "secondary": true
+      },
+      "noCtaAfterArrowDown": true,
+      "secondaryOnlyAfterClick": true
+    }
+  ],
+  "atlasHasNoCtaActions": true
+}

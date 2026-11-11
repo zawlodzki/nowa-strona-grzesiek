@@ -1,9 +1,15 @@
 ---
-import type { Tabs } from '../../../../studio/sanity.types';
+import type { Tabs, Link } from '../../../../studio/sanity.types';
 import type { Resolved } from '../portable-text/types';
 import PortableText from '../portable-text/PortableText.astro';
 import BlockSection from '../ui/BlockSection.astro';
-interface Props extends Resolved { data: Tabs & { _key?: string }; }
+import Button from '../ui/Button.astro';
+import { safeHref } from '../ui/block-types';
+type TabsWithCtas = Omit<Tabs, 'items'> & {
+  _key?: string;
+  items?: (NonNullable<Tabs['items']>[number] & { primaryCta?: Link; secondaryCta?: Link })[];
+};
+interface Props extends Resolved { data: TabsWithCtas; }
 const { data, links, images } = Astro.props;
 const id = `tabs-${data._key ?? crypto.randomUUID()}`;
 ---
@@ -19,6 +25,10 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
         <div class="negative"><PortableText value={item.negative} links={links} images={images} /></div>
         {item.tagline && <p class="type-tagline panel-tagline">{item.tagline}</p>}
         <PortableText value={item.body} links={links} images={images} />
+        {((item.primaryCta?.label && safeHref(item.primaryCta.href)) || (item.secondaryCta?.label && safeHref(item.secondaryCta.href))) && <div class="actions">
+          {item.primaryCta && <Button link={item.primaryCta} />}
+          {item.secondaryCta && <Button link={item.secondaryCta} variant="secondary" />}
+        </div>}
       </section>)}</div>
     </div>
   </div>
@@ -129,6 +139,7 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   .panels { flex: 1; min-inline-size: 0; }
   .panel { border: 1px solid var(--border-default); background: var(--surface-page); border-radius: var(--radius-lg); padding: clamp(24px, 3.125vw, 40px); box-shadow: var(--shadow-panel); overflow-wrap: anywhere; }
   .panel:not([hidden]) { display: grid; gap: var(--space-m); }
+  .actions { display: flex; flex-wrap: wrap; align-items: start; gap: var(--space-s); }
   .positive, .negative { padding: var(--space-m); border: 1px solid var(--border-default); border-radius: var(--radius-sm); }
   .positive { background: var(--surface-tint); border-color: var(--color-primary-20); }
   .positive :global(h4), .negative :global(h4) { font-family: var(--typography-heading-xs-family); font-size: var(--typography-heading-xs-size); font-weight: var(--typography-heading-xs-weight); line-height: var(--typography-heading-xs-leading); letter-spacing: var(--typography-heading-xs-tracking); }

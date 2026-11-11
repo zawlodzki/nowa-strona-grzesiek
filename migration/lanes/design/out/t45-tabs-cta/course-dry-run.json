@@ -1,0 +1,143 @@
+{
+  "dryRun": true,
+  "applied": false,
+  "document": "page-6a65a09038ad0c6d6d0a1aa3",
+  "revision": "qvVg1luYRxJZnxaWi03ZGy",
+  "tabs": 0,
+  "sections": [
+    {
+      "key": "0f936d6bbfcc",
+      "type": "hero",
+      "heading": "Osiem modułów AI dla sprzedaży B2B. Na końcu każdego zostaje gotowe rozwiązanie, nie notatki."
+    },
+    {
+      "key": "421a5975cf0a",
+      "type": "logoStrip"
+    },
+    {
+      "key": "f745788b7d5f",
+      "type": "logoStrip"
+    },
+    {
+      "key": "c667cce0b040",
+      "type": "feature",
+      "heading": "Prompty przechodzą. Proces zostaje."
+    },
+    {
+      "key": "492e315442e2",
+      "type": "contentSection",
+      "heading": "Sprawdź, czy ten kurs jest dla ciebie"
+    },
+    {
+      "key": "t42-band",
+      "type": "ctaBand"
+    },
+    {
+      "key": "0739dd40c754",
+      "type": "feature",
+      "heading": "Osiem modułów, osiem rozwiązań na koniec"
+    },
+    {
+      "key": "470d05a16244",
+      "type": "feature",
+      "heading": "Zaczynasz od procesu"
+    },
+    {
+      "key": "2ce62d6a3695",
+      "type": "feature",
+      "heading": "Proces sprzedaży pod AI"
+    },
+    {
+      "key": "d01743cd0ea5",
+      "type": "feature",
+      "heading": "Kontekst, integracje i ontologia"
+    },
+    {
+      "key": "08487676d623",
+      "type": "feature",
+      "heading": "Pierwszy skill w Claude albo ChatGPT"
+    },
+    {
+      "key": "154366534462",
+      "type": "feature",
+      "heading": "Automatyzacje CRM i porządek w danych"
+    },
+    {
+      "key": "42299b52b7c6",
+      "type": "feature",
+      "heading": "Bazy prospectingowe"
+    },
+    {
+      "key": "80d476a6d67a",
+      "type": "feature",
+      "heading": "Transkrypcje jako materiał do sprzedaży"
+    },
+    {
+      "key": "c97c857753be",
+      "type": "feature",
+      "heading": "Oferta jako interaktywna strona"
+    },
+    {
+      "key": "e872b4983840",
+      "type": "feature",
+      "heading": "Wdrożenie w zespole"
+    },
+    {
+      "key": "86dc0cea0d57",
+      "type": "feature",
+      "heading": "Widoczność w Google i w AI"
+    },
+    {
+      "key": "d5d08dd76c2c",
+      "type": "feature",
+      "heading": "Treści na bloga i LinkedIna"
+    },
+    {
+      "key": "c20f35433f1b",
+      "type": "feature",
+      "heading": "Jeśli nie chcesz robić tego sam"
+    },
+    {
+      "key": "c18edd1e05d4",
+      "type": "contentSection",
+      "heading": "Co dostajesz po kursie:"
+    },
+    {
+      "key": "b6fcc5fbffa8",
+      "type": "feature",
+      "heading": "Grzegorz Zawłodzki. Wdrażam CRM i AI w sprzedaży B2B."
+    },
+    {
+      "key": "5f8ee255ce49",
+      "type": "pricing",
+      "heading": "Trzy poziomy, każdy odliczany od następnego"
+    },
+    {
+      "key": "8dcbf8e42d74",
+      "type": "ctaBand",
+      "heading": "Zapytaj, zanim kupisz"
+    },
+    {
+      "key": "e0bd7b66122c",
+      "type": "promoCard"
+    },
+    {
+      "key": "16042a985d3f",
+      "type": "faq",
+      "heading": "Najczęściej zadawane pytania"
+    },
+    {
+      "key": "ba6d2a9f245b",
+      "type": "contactForm",
+      "heading": "Skontaktuj się ze mną"
+    }
+  ],
+  "finding": "No tabs in current course. No patch proposed; converting the program is outside T45.",
+  "intendedSecondaryCta": {
+    "_type": "link",
+    "label": "Zapytaj o pracę na Twoim CRM",
+    "href": "/kontakt"
+  },
+  "changes": [],
+  "mutations": []
+}
