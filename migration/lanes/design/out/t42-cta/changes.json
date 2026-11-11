@@ -1,0 +1,532 @@
+{
+  "dryRun": true,
+  "changes": [
+    {
+      "page": "/",
+      "document": "page-634daaa2c8ceab0fea939fe6",
+      "path": "sections[_key==\"c012de6e7add\"].cta.label",
+      "before": "Dowiedz się więcej o pipedrive.com",
+      "after": "Zobacz ofertę wdrożenia Pipedrive"
+    },
+    {
+      "page": "/",
+      "document": "page-634daaa2c8ceab0fea939fe6",
+      "path": "sections[_key==\"60f9ae32aab0\"].cta.label",
+      "before": "Dowiedz się więcej o asana.com",
+      "after": "Zobacz ofertę wdrożenia Asany"
+    },
+    {
+      "page": "/audyt-ai-sprzedaz",
+      "document": "page-6a6525137109a67a895f5e80",
+      "path": "sections[_key==\"2dcc7dcbde3e\"].plans[_key==\"fd2cd45154d2\"].cta.label",
+      "before": "Umów audyt AI",
+      "after": "Umów rozmowę o audycie AI"
+    },
+    {
+      "page": "/audyt-ai-sprzedaz",
+      "document": "page-6a6525137109a67a895f5e80",
+      "path": "sections[_key==\"b7576e9b7f87\"].cta.label",
+      "before": "Umów audyt AI",
+      "after": "Umów rozmowę o audycie AI"
+    },
+    {
+      "page": "/audyt-crm-pipedrive",
+      "document": "page-6a659c9d68d93d23daef5822",
+      "path": "sections[_key==\"8c0622e03138\"].cta.label",
+      "before": "Umów audyt Pipedrive",
+      "after": "Umów rozmowę o audycie Pipedrive"
+    },
+    {
+      "page": "/audyt-crm-pipedrive",
+      "document": "page-6a659c9d68d93d23daef5822",
+      "path": "sections[_key==\"5b1bec6112f1\"].plans[_key==\"9dcf21d61b2e\"].cta.label",
+      "before": "Umów audyt Pipedrive",
+      "after": "Umów rozmowę o audycie Pipedrive"
+    },
+    {
+      "page": "/audyt-crm-pipedrive",
+      "document": "page-6a659c9d68d93d23daef5822",
+      "path": "sections[_key==\"508ab63e8521\"].cta.label",
+      "before": "Umów audyt Pipedrive",
+      "after": "Umów rozmowę o audycie Pipedrive"
+    },
+    {
+      "page": "/audyt-crm-pipedrive",
+      "document": "page-6a659c9d68d93d23daef5822",
+      "path": "sections[_key==\"c1db6f9efc84\"].cta.label",
+      "before": "Sprawdźmy, co jest zepsute",
+      "after": "Porozmawiajmy o problemach z Pipedrive"
+    },
+    {
+      "page": "/audyt-crm-pipedrive",
+      "document": "page-6a659c9d68d93d23daef5822",
+      "path": "sections[_key==\"5b1bec6112f1\"].plans[_key==\"11bd71bbc50d\"].cta.label",
+      "before": "Ustalmy zakres i cenę",
+      "after": "Porozmawiajmy o zakresie i cenie"
+    },
+    {
+      "page": "/audyt-procesow-asana",
+      "document": "page-6a6650c971f470cf8a5110d4",
+      "path": "sections[_key==\"3da351d67a9b\"].cta.label",
+      "before": "Umów audyt Asany",
+      "after": "Umów rozmowę o audycie Asany"
+    },
+    {
+      "page": "/audyt-procesow-asana",
+      "document": "page-6a6650c971f470cf8a5110d4",
+      "path": "sections[_key==\"09a865c29e2d\"].plans[_key==\"46fc940a558a\"].cta.label",
+      "before": "Umów audyt Asany",
+      "after": "Umów rozmowę o audycie Asany"
+    },
+    {
+      "page": "/audyt-procesow-asana",
+      "document": "page-6a6650c971f470cf8a5110d4",
+      "path": "sections[_key==\"b807063d1456\"].cta.label",
+      "before": "Umów audyt Asany",
+      "after": "Umów rozmowę o audycie Asany"
+    },
+    {
+      "page": "/audyt-procesow-asana",
+      "document": "page-6a6650c971f470cf8a5110d4",
+      "path": "sections[_key==\"464329076d4c\"].cta.label",
+      "before": "Sprawdźmy, gdzie utykają projekty",
+      "after": "Porozmawiajmy o Waszych projektach"
+    },
+    {
+      "page": "/audyt-procesow-asana",
+      "document": "page-6a6650c971f470cf8a5110d4",
+      "path": "sections[_key==\"09a865c29e2d\"].plans[_key==\"f8baa8cc8c2f\"].cta.label",
+      "before": "Ustalmy zakres i cenę",
+      "after": "Porozmawiajmy o zakresie i cenie"
+    },
+    {
+      "page": "/audyt-sprzedazy",
+      "document": "page-6a93c20ca47c5a15d5c2fce7",
+      "path": "sections[_key==\"c7b932fd4a38\"].plans[_key==\"eafcf2b09841\"].cta.label",
+      "before": "Umów audyt sprzedaży",
+      "after": "Umów rozmowę o audycie sprzedaży"
+    },
+    {
+      "page": "/audyt-sprzedazy",
+      "document": "page-6a93c20ca47c5a15d5c2fce7",
+      "path": "sections[_key==\"96c919be71ee\"].cta.label",
+      "before": "Umów audyt sprzedaży",
+      "after": "Umów rozmowę o audycie sprzedaży"
+    },
+    {
+      "page": "/audyt-sprzedazy",
+      "document": "page-6a93c20ca47c5a15d5c2fce7",
+      "path": "sections[_key==\"b180dcc0746e\"].cta.label",
+      "before": "Sprawdźmy, gdzie jest blokada",
+      "after": "Porozmawiajmy o problemach w sprzedaży"
+    },
+    {
+      "page": "/automatyzacja-procesow-biznesowych-nocode",
+      "document": "page-65364c7d554535d3e4141668",
+      "path": "sections[_key==\"068fea56a0a5\"].cta.label",
+      "before": "Sprawdź, co da się uprościć",
+      "after": "Porozmawiajmy o automatyzacji"
+    },
+    {
+      "page": "/automatyzacja-procesow-biznesowych-nocode",
+      "document": "page-65364c7d554535d3e4141668",
+      "path": "sections[_key==\"6a0eb24741ab\"].cta.label",
+      "before": "Wskaż swój powtarzalny proces",
+      "after": "Opisz proces, o którym chcesz porozmawiać"
+    },
+    {
+      "page": "/automatyzacje-dla-pipedrive",
+      "document": "page-64aae5153be5dab60a907e5c",
+      "path": "sections[_key==\"e12a62aabc1f\"].cta.label",
+      "before": "Policzmy, ile czasu to zjada",
+      "after": "Porozmawiajmy o ręcznej pracy w CRM"
+    },
+    {
+      "page": "/blog/ai-w-sprzedazy",
+      "document": "post-6a96002bf019c2eff8865e67",
+      "path": "body[_key==\"49563366e79c\"].children[_key==\"64ba326829f7\"].text",
+      "before": "umówić 30 minut rozmowy",
+      "after": "umówić bezpłatną konsultację"
+    },
+    {
+      "page": "/blog/asana-cennik",
+      "document": "post-6a92db68460f61f772b92765",
+      "path": "body[_key==\"dc89d863bb0e\"].children[_key==\"d26e4b70e9cb\"].text",
+      "before": "umów 30 minut rozmowy",
+      "after": "umów bezpłatną konsultację"
+    },
+    {
+      "page": "/kurs-ai-w-sprzedazy",
+      "document": "page-6a65a09038ad0c6d6d0a1aa3",
+      "path": "sections[_key==\"5f8ee255ce49\"].plans[_key==\"01ed356782dd\"].cta.label",
+      "before": "Zacznijmy wdrożenie",
+      "after": "Zobacz ofertę wdrożenia AI"
+    },
+    {
+      "page": "/program-ai-dla-zespolu-sprzedazy",
+      "document": "page-6a6524cc429bff76b57cc347",
+      "path": "sections[_key==\"112a72884d90\"].cta.label",
+      "before": "Zapisz się na pierwszą grupę",
+      "after": "Zapytaj o udział w programie"
+    },
+    {
+      "page": "/program-ai-dla-zespolu-sprzedazy",
+      "document": "page-6a6524cc429bff76b57cc347",
+      "path": "sections[_key==\"5b88d19461fc\"].plans[_key==\"37b341994f4a\"].cta.label",
+      "before": "Zapisz się na pierwszą grupę",
+      "after": "Zapytaj o udział w programie"
+    },
+    {
+      "page": "/program-ai-dla-zespolu-sprzedazy",
+      "document": "page-6a6524cc429bff76b57cc347",
+      "path": "sections[_key==\"b1f73e6161d3\"].cta.label",
+      "before": "Zapisz się na pierwszą grupę",
+      "after": "Zapytaj o udział w programie"
+    },
+    {
+      "page": "/program-ai-dla-zespolu-sprzedazy",
+      "document": "page-6a6524cc429bff76b57cc347",
+      "path": "sections[_key==\"5b88d19461fc\"].plans[_key==\"b7d70f0fd8e4\"].cta.label",
+      "before": "Zacznijmy wdrożenie",
+      "after": "Zobacz ofertę wdrożenia AI"
+    },
+    {
+      "page": "/program-partnerski",
+      "document": "page-65369078d23fa9556206c3cb",
+      "path": "sections[_key==\"f458099bf565\"].cta.label",
+      "before": "Poleć klienta",
+      "after": "Zapytaj o polecenie klienta"
+    },
+    {
+      "page": "/program-partnerski",
+      "document": "page-65369078d23fa9556206c3cb",
+      "path": "sections[_key==\"c03ca8f8e94e\"].cta.label",
+      "before": "Poleć klienta",
+      "after": "Zapytaj o polecenie klienta"
+    },
+    {
+      "page": "/szkolenie-i-wdrozenie-asana",
+      "document": "page-64a7d3814f84e9058b6f6dad",
+      "path": "sections[_key==\"c8814f3c258d\"].plans[_key==\"35d735f10d4c\"].cta.label",
+      "before": "Zacznijmy wdrożenie",
+      "after": "Umów rozmowę o wdrożeniu"
+    },
+    {
+      "page": "/szkolenie-i-wdrozenie-asana",
+      "document": "page-64a7d3814f84e9058b6f6dad",
+      "path": "sections[_key==\"c8814f3c258d\"].plans[_key==\"b1668bcbd371\"].cta.label",
+      "before": "Ustalmy zakres i cenę",
+      "after": "Porozmawiajmy o zakresie i cenie"
+    },
+    {
+      "page": "/szkolenie-i-wdrozenie-pipedrive",
+      "document": "page-64a963565ffd73e869eafd91",
+      "path": "sections[_key==\"328441a18e1a\"].plans[_key==\"b35213838ccc\"].cta.label",
+      "before": "Zacznijmy wdrożenie",
+      "after": "Umów rozmowę o wdrożeniu"
+    },
+    {
+      "page": "/szkolenie-i-wdrozenie-pipedrive",
+      "document": "page-64a963565ffd73e869eafd91",
+      "path": "sections[_key==\"328441a18e1a\"].plans[_key==\"5decc2fc9eed\"].cta.label",
+      "before": "Ustalmy zakres i cenę",
+      "after": "Porozmawiajmy o zakresie i cenie"
+    },
+    {
+      "page": "/szkolenie-i-wdrozenie-salesforce",
+      "document": "page-6abac9e3fe23660c83e62014",
+      "path": "sections[_key==\"be52c45bb7cc\"].plans[_key==\"a8f5d3b249c7\"].cta.label",
+      "before": "Umów diagnozę",
+      "after": "Umów rozmowę o diagnozie CRM"
+    },
+    {
+      "page": "/szkolenie-i-wdrozenie-salesforce",
+      "document": "page-6abac9e3fe23660c83e62014",
+      "path": "sections[_key==\"be52c45bb7cc\"].plans[_key==\"1ac71b72f47e\"].cta.label",
+      "before": "Zacznijmy wdrożenie",
+      "after": "Umów rozmowę o wdrożeniu"
+    },
+    {
+      "page": "/szkolenie-i-wdrozenie-salesforce",
+      "document": "page-6abac9e3fe23660c83e62014",
+      "path": "sections[_key==\"be52c45bb7cc\"].plans[_key==\"4d0402316e00\"].cta.label",
+      "before": "Ustalmy zakres i cenę",
+      "after": "Porozmawiajmy o zakresie i cenie"
+    },
+    {
+      "page": "/wdrozenie-ai-w-sprzedazy-b2b",
+      "document": "page-6a4e60735114259a5cd425c5",
+      "path": "sections[_key==\"1faf7b0e232f\"].plans[_key==\"92adad1a54fd\"].cta.label",
+      "before": "Zacznijmy wdrożenie",
+      "after": "Umów rozmowę o wdrożeniu AI"
+    },
+    {
+      "page": "/wdrozenie-ai-w-sprzedazy-b2b",
+      "document": "page-6a4e60735114259a5cd425c5",
+      "path": "sections[_key==\"1faf7b0e232f\"].plans[_key==\"dc59c71b12c6\"].cta.label",
+      "before": "Ustalmy zakres i cenę",
+      "after": "Porozmawiajmy o zakresie i cenie"
+    },
+    {
+      "page": "/wspolpraca",
+      "document": "page-634daaa2c8ceab408393a043",
+      "path": "sections[_key==\"9cf03f74aae7\"].cta.label",
+      "before": "Zacznijmy współpracę",
+      "after": "Porozmawiajmy o współpracy"
+    },
+    {
+      "page": "/audyt-ai-sprzedaz",
+      "document": "page-6a6525137109a67a895f5e80",
+      "path": "sections (before Dwa tygodnie pracy. Pięć kroków do decyzji.)",
+      "before": null,
+      "after": {
+        "_key": "t42-band",
+        "_type": "ctaBand",
+        "cta": {
+          "_type": "link",
+          "label": "Porozmawiajmy o audycie AI w Waszej firmie",
+          "href": "/kontakt"
+        }
+      }
+    },
+    {
+      "page": "/audyt-crm-pipedrive",
+      "document": "page-6a659c9d68d93d23daef5822",
+      "path": "sections[_key==\"32be34a848e3\"].cta",
+      "before": null,
+      "after": {
+        "_type": "link",
+        "label": "Omówmy problemy z danymi w Pipedrive",
+        "href": "/kontakt"
+      }
+    },
+    {
+      "page": "/audyt-procesow-asana",
+      "document": "page-6a6650c971f470cf8a5110d4",
+      "path": "sections[_key==\"ad90b70dc0a3\"].cta",
+      "before": null,
+      "after": {
+        "_type": "link",
+        "label": "Porozmawiajmy o Waszych projektach",
+        "href": "/kontakt"
+      }
+    },
+    {
+      "page": "/audyt-sprzedazy",
+      "document": "page-6a93c20ca47c5a15d5c2fce7",
+      "path": "sections[_key==\"4b43461595f5\"].cta",
+      "before": null,
+      "after": {
+        "_type": "link",
+        "label": "Porozmawiajmy o zakresie diagnozy sprzedaży",
+        "href": "/kontakt"
+      }
+    },
+    {
+      "page": "/automatyzacje-dla-pipedrive",
+      "document": "page-64aae5153be5dab60a907e5c",
+      "path": "sections[_key==\"274d58f994d0\"].cta",
+      "before": null,
+      "after": {
+        "_type": "link",
+        "label": "Omówmy jeden przepływ w Twoim CRM",
+        "href": "/kontakt"
+      }
+    },
+    {
+      "page": "/blog/ai-w-sprzedazy",
+      "document": "post-6a96002bf019c2eff8865e67",
+      "path": "body (before Jak wdrożyć AI w sprzedaży krok po kroku?)",
+      "before": null,
+      "after": {
+        "_key": "t42-pt",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_key": "contact",
+            "_type": "internalLink",
+            "reference": {
+              "_type": "reference",
+              "_ref": "page-634daaa2c8ceab10fa93a044"
+            }
+          }
+        ],
+        "children": [
+          {
+            "_key": "text",
+            "_type": "span",
+            "marks": [
+              "contact"
+            ],
+            "text": "Chcesz sprawdzić taki proces w swojej firmie? Porozmawiajmy."
+          }
+        ]
+      }
+    },
+    {
+      "page": "/blog/asana-cennik",
+      "document": "post-6a92db68460f61f772b92765",
+      "path": "body (before Rocznie czy miesięcznie)",
+      "before": null,
+      "after": {
+        "_key": "t42-pt",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_key": "contact",
+            "_type": "internalLink",
+            "reference": {
+              "_type": "reference",
+              "_ref": "page-634daaa2c8ceab10fa93a044"
+            }
+          }
+        ],
+        "children": [
+          {
+            "_key": "text",
+            "_type": "span",
+            "marks": [
+              "contact"
+            ],
+            "text": "Chcesz policzyć koszt dla swojego zespołu? Napisz do mnie."
+          }
+        ]
+      }
+    },
+    {
+      "page": "/blog/audyt-wdrozonego-crm",
+      "document": "post-6a9d93db4a935f84bb449bb7",
+      "path": "body (before Czego ta lista nie sprawdzi)",
+      "before": null,
+      "after": {
+        "_key": "t42-pt",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_key": "contact",
+            "_type": "internalLink",
+            "reference": {
+              "_type": "reference",
+              "_ref": "page-634daaa2c8ceab10fa93a044"
+            }
+          }
+        ],
+        "children": [
+          {
+            "_key": "text",
+            "_type": "span",
+            "marks": [
+              "contact"
+            ],
+            "text": "Chcesz omówić wynik swojej checklisty? Napisz do mnie."
+          }
+        ]
+      }
+    },
+    {
+      "page": "/kurs-ai-w-sprzedazy",
+      "document": "page-6a65a09038ad0c6d6d0a1aa3",
+      "path": "sections (before Osiem modułów, osiem rozwiązań na koniec)",
+      "before": null,
+      "after": {
+        "_key": "t42-band",
+        "_type": "ctaBand",
+        "cta": {
+          "_type": "link",
+          "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+          "href": "/kontakt"
+        }
+      }
+    },
+    {
+      "page": "/program-ai-dla-zespolu-sprzedazy",
+      "document": "page-6a6524cc429bff76b57cc347",
+      "path": "sections (before Pięć kroków w osiem tygodni)",
+      "before": null,
+      "after": {
+        "_key": "t42-band",
+        "_type": "ctaBand",
+        "cta": {
+          "_type": "link",
+          "label": "Zapytaj o udział zespołu w programie",
+          "href": "/kontakt"
+        }
+      }
+    },
+    {
+      "page": "/sales-atlas-system",
+      "document": "page-6a82cef512f2263890a42ee2",
+      "path": "sections (before Skąd wziął się system sprzedaży)",
+      "before": null,
+      "after": {
+        "_key": "t42-band",
+        "_type": "ctaBand",
+        "cta": {
+          "_type": "link",
+          "label": "Umów konsultację o swoim systemie sprzedaży",
+          "href": "/kontakt"
+        }
+      }
+    },
+    {
+      "page": "/szkolenie-i-wdrozenie-asana",
+      "document": "page-64a7d3814f84e9058b6f6dad",
+      "path": "sections[_key==\"eb2dcc0cc004\"].cta",
+      "before": null,
+      "after": {
+        "_type": "link",
+        "label": "Omówmy pierwszy proces w Asanie",
+        "href": "/kontakt"
+      }
+    },
+    {
+      "page": "/szkolenie-i-wdrozenie-pipedrive",
+      "document": "page-64a963565ffd73e869eafd91",
+      "path": "sections[_key==\"a53c621aa426\"].cta",
+      "before": null,
+      "after": {
+        "_type": "link",
+        "label": "Porozmawiajmy o migracji Twoich danych",
+        "href": "/kontakt"
+      }
+    },
+    {
+      "page": "/szkolenie-i-wdrozenie-salesforce",
+      "document": "page-6abac9e3fe23660c83e62014",
+      "path": "sections[_key==\"515242387b26\"].cta",
+      "before": null,
+      "after": {
+        "_type": "link",
+        "label": "Porozmawiajmy o migracji do Salesforce",
+        "href": "/kontakt"
+      }
+    },
+    {
+      "page": "/wdrozenie-ai-w-sprzedazy-b2b",
+      "document": "page-6a4e60735114259a5cd425c5",
+      "path": "sections (before Pięć kroków do pierwszych procesów sprzedaży obsługiwanych przez AI)",
+      "before": null,
+      "after": {
+        "_key": "t42-band",
+        "_type": "ctaBand",
+        "cta": {
+          "_type": "link",
+          "label": "Porozmawiajmy o pierwszym procesie dla AI",
+          "href": "/kontakt"
+        }
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "page": "/audyt-sprzedazy",
+      "path": "sections[_key==\"5051521e88c7\"].cta.label",
+      "reason": "T40 hero overlap",
+      "before": "Umów audyt sprzedaży",
+      "after": "Umów rozmowę o audycie sprzedaży"
+    }
+  ]
+}
