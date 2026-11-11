@@ -1,5 +1,5 @@
-06:23:24 [types] Generated 44ms
-06:23:24 [check] Getting diagnostics for Astro files in /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T33-hero-badge-responsive/apps/web...
+06:29:28 [types] Generated 42ms
+06:29:28 [check] Getting diagnostics for Astro files in /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T33-hero-badge-responsive/apps/web...
 [96msrc/preview/worker.ts[0m:[93m5[0m:[93m3[0m - [93mwarning[0m[90m ts(80006): [0mThis may be converted to an async function.
 
 [7m5[0m   fetch(request: Request, env: Parameters<typeof handle>[1], context: Parameters<typeof handle>[2]): Promise<Response> {

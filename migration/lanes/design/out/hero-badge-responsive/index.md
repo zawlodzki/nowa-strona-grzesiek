@@ -13,20 +13,21 @@ Refreshed 2026-11-11 after PR #53 review. **Live left, local right** in every co
 
 The first revision fixed the full-column anchor but failed visually: the source photo has transparent margins, so negative offsets placed a small badge beside the visible torso. Fixed pixel badge widths also failed to track photo size. The initial text-first, height-capped portrait was far larger than live on narrow layouts.
 
-Hero now puts a compact centered photo before centered copy through a 64rem container width (including all requested 1024/768/375 viewports). Portrait width is fluid from 112 to 144px in that layout. Wider containers retain two columns and a portrait capped at 436.8px. The photo/copy gap is 32px in compact layouts, 48px in columns. Badge placement is inset 3% from the photo box's left and extends 8% below it: this moves the badge over the visible lower-left torso instead of leaving it outside the transparent image edge. No clipping is introduced.
+Hero now matches live’s 992px viewport switch: two columns at 1280/1024, compact centered photo before centered copy at 768/375. The former `width > 64rem` container query incorrectly kept 1024 stacked because the padded container was narrower than the viewport; it is replaced by `@media (width >= 62rem)`. Portrait width is fluid from 112 to 144px in that layout. Wider viewports use two columns and a portrait capped at 436.8px. The photo/copy gap is 32px in compact layouts, 48px in columns. Badge placement is inset 3% from the photo box's left and extends 8% below it: this moves the badge over the visible lower-left torso instead of leaving it outside the transparent image edge. No clipping is introduced.
 
 Badge widths are proportions of the photo: standard 46% compact / 34% columns; wide 55% compact / 52% columns. For comparison, live standard ratios at the requested widths range roughly 30–53%, wide 46–62%. Both variants visibly overlap the portrait in the refreshed captures. CTA content/links and optional badge rendering are unchanged. Homepage and sales-audit controls have no badge node or reserved badge space.
 
 ## Intended differences from live
 
-At exactly 1024px live still has desktop columns. Per Grzesiek's review request, local instead keeps the compact photo-first layout through that width. At 768/375 local follows live's photo-first compact centered composition. Local has the migration's existing navigation without the old promotional strip, so its hero starts higher. Existing copy, CTA, typography and section styling can differ; this task changes only the shared Hero layout/overlay. Transparent image edges are deliberately crossed inward so the badge covers the actual portrait.
+At 1024 local now follows live's two-column composition with a large portrait and proportional badge on the right. At 768/375 local follows live's photo-first compact centered composition. Local has the migration's existing navigation without the old promotional strip, so its hero starts higher. Existing copy, CTA, typography and section styling can differ; this task changes only the shared Hero layout/overlay. Transparent image edges are deliberately crossed inward so the badge covers the actual portrait.
 
 ## Verification
 
 `measurements.json` contains all 32 rendered captures: photo/wrapper/badge rectangles, copy rectangle, badge ratio/count, CTA text and document scroll width. These supplement direct screenshot inspection, which is the evidence for overlap of the visible cut-out, not only its transparent box.
 
 - Both badged routes: `scrollWidth == 375` at width 375.
-- All four local pages: photo precedes copy at 1024/768/375; compact photo widths are 144/144/112px.
+- All four local pages: copy left / portrait right at 1280/1024; photo precedes copy at 768/375. Portrait widths are 436.8/373.73/144/112px. Standard badge at 1024 is ~127px wide; wide badge is ~194px, both overlapping the larger portrait.
+- Regression check against `d22f73d`: all 12 local PNGs at 1280/768/375 are byte-for-byte identical to the approved captures. All four 1024 pairs were visually inspected for columns and overlap.
 - Both controls: zero badge nodes at every requested width; no badge placeholder or badge-only spacing.
 - `astro-check.log`: 0 errors/warnings, 1 existing hint.
 - `build.log`: production build passes, 117 pages.

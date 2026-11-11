@@ -27,7 +27,7 @@ const { data, image, badgeImage, headingLevel: Heading = 'h1' } = Astro.props;
   .copy > * { overflow-wrap: anywhere; }
   .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-s); inline-size: 100%; }
   .badges { display: flex; flex-wrap: wrap; gap: var(--space-xs); padding: 0; margin: 0; list-style: none; color: var(--text-muted); }
-  /* Keep the compact portrait above the copy until both columns have room. */
+  /* Match live: compact photo-first below the 992px viewport breakpoint. */
   .hero-layout { gap: var(--space-l); }
   .copy { align-items: center; text-align: center; justify-self: center; }
   .actions { justify-content: center; }
@@ -36,7 +36,7 @@ const { data, image, badgeImage, headingLevel: Heading = 'h1' } = Astro.props;
   /* The cut-out has transparent edges: inset onto the visible torso, not outside its box. */
   .image-badge { position: absolute; z-index: 2; inline-size: 46%; block-size: auto; inset-block-end: -8%; inset-inline-start: 3%; }
   .wide .image-badge { inline-size: 55%; }
-  @container (width > 64rem) {
+  @media (width >= 62rem) {
     .has-image { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: var(--space-2xl); }
     .copy { align-items: start; text-align: start; justify-self: start; }
     .actions { justify-content: start; }
