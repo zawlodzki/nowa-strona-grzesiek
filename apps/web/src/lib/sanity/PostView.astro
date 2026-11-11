@@ -113,7 +113,7 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   .who { display: flex; align-items: center; gap: var(--space-s); }
   .who p { display: grid; overflow-wrap: anywhere; }
   .who strong { color: var(--text-heading); }
-  .avatar { inline-size: 5rem; block-size: 5rem; flex: none; object-fit: cover; object-position: center 12%; border-radius: var(--radius-round); }
+  .avatar { inline-size: 5rem; block-size: 5rem; flex: none; object-fit: cover; object-position: center top; padding-block-start: var(--space-2xs); border-radius: var(--radius-round); background: var(--surface-soft); }
   .links { display: flex; flex-wrap: wrap; gap: var(--space-m); }
   .author a:active { color: var(--text-link-active); }
   .muted { color: var(--text-muted); }

@@ -29,3 +29,11 @@ Review proof used port 8790 after `lsof` confirmed it was free. Port 8791 was oc
 The published Asana/Jira body contains eight h2 headings and no h3. Its screenshots therefore show the actual h2 outline. The additional `/blog/asana-cennik` screenshots prove all three existing h3 headings appear under their h2, target actual h3 elements and become active on scroll. No production content was changed to manufacture a nested outline on Asana/Jira.
 
 `outline.test.ts` verifies nesting, Polish slug normalization, duplicate titles, stable IDs after unrelated insertion, orphan h3 handling and bodies without headings. Web tests passed 86 with one existing skip; Astro check and TypeScript passed. The Worker was stopped with verify-web `down` after successful proof.
+
+## Second review changes on 2026-11-11
+
+The `round2-*.png` images supersede the first review's filled active label and portrait framing. TOC has a 1px neutral track with a 2px active segment aligned to that same track, including for nested h3. The segment uses the existing link accent token; browser pixel conversion confirms #3a48cc. The active label has no fill or persistent underline and uses medium weight. There is no bar transition, so reduced-motion users receive the same immediate update. The share trigger uses `radius-pill` and 8px/24px padding, matching the shared Button component.
+
+The source portrait has no Sanity hotspot/crop and starts directly above the hair. A top-aligned cover crop plus 8px internal headroom retains the full head inside the 80px circle. Both Asana/Jira and Asana Cennik screenshots were inspected.
+
+Run `20261111-161543-p8790` used a port confirmed free by lsof. verify-web up/doctor/probe/shot all passed through wrangler dev --local. Two post paths returned 200. `round2-verify.mjs` captured active mid-scroll TOC, share button and avatar for both posts at 1440px. `round2-verification.json` records the track/segment widths, exact accent color, alignment for h2/h3, transparent label background, absence of transition under reduced motion, pill radius/padding, avatar framing, scrollspy in both directions and no-JavaScript anchors. Astro check and web TypeScript passed. The script closes Chromium in finally, and verify-web down stopped the Worker. Repeat using the same environment configuration as the first review script.

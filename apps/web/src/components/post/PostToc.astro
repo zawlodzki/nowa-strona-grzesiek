@@ -42,9 +42,12 @@ const { entries, pl } = Astro.props;
 </script>
 <style>
   ol { list-style: none; padding: 0; margin-block: var(--space-s) 0; display: grid; gap: var(--space-xs); }
-  ol ol { margin-block: var(--space-2xs) 0; padding-inline-start: var(--space-s); border-inline-start: 1px solid var(--border-hairline); }
-  a { display: block; padding: var(--space-3xs); text-decoration: none; border-radius: var(--radius-sm); }
-  a[aria-current="location"] { background: var(--surface-tint); color: var(--text-link-active); font-weight: var(--font-weight-semibold); text-decoration: underline; text-underline-offset: .2em; }
+  nav > ol { --toc-indent: var(--space-s); position: relative; padding-inline-start: var(--toc-indent); }
+  nav > ol::before { content: ''; position: absolute; inset-block: 0; inset-inline-start: 0; inline-size: 1px; background: var(--border-hairline); }
+  ol ol { --toc-indent: calc(2 * var(--space-s)); margin-block: var(--space-2xs) 0; padding-inline-start: var(--space-s); }
+  a { position: relative; display: block; padding: var(--space-3xs); text-decoration: none; border-radius: var(--radius-sm); }
+  a[aria-current="location"] { color: var(--text-link-active); font-weight: var(--font-weight-medium); }
+  a[aria-current="location"]::before { content: ''; position: absolute; inset-block: 0; inset-inline-start: calc(-1 * var(--toc-indent)); inline-size: 2px; background: var(--text-link); }
   a:focus-visible { outline: 2px solid var(--text-link); outline-offset: 3px; }
   a:active { color: var(--text-link-active); }
   @media (hover: hover) and (pointer: fine) { a:hover { text-decoration: underline; text-underline-offset: .2em; } }
