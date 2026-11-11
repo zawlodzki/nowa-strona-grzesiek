@@ -1,0 +1,1 @@
+PASS: quote coverage, logo loaded, centered post lists, price typography, CTA, no overflow, shortened badges all one line.

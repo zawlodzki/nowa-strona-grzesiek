@@ -1,0 +1,119 @@
+{
+  "dryRun": true,
+  "assetPlan": {
+    "action": "reuse-existing-asset",
+    "asset": "image-1f702fbcbd7648de63bca8acd1161b8c36230e69-349x72-webp",
+    "source": "https://cdn.sanity.io/images/8u2zjhvn/production/1f702fbcbd7648de63bca8acd1161b8c36230e69-349x72.webp",
+    "fallback": "Only if asset is absent: coordinator downloads the approved logo and uploads it as a Sanity image after explicit approval, then reruns the planner with its returned asset reference. This script performs no uploads."
+  },
+  "changes": [
+    {
+      "document": "page-64a963565ffd73e869eafd91",
+      "revision": "s0woJMOB7mWiVecre6FmYD",
+      "path": "sections[_key==\"328441a18e1a\"].plans[_key==\"b35213838ccc\"].name",
+      "before": "Wdrożenie zespołu do 5 osób",
+      "after": "Wdrożenie do 5 osób",
+      "action": "patch"
+    },
+    {
+      "document": "page-6a659c9d68d93d23daef5822",
+      "revision": "s0woJMOB7mWiVecre6FmYD",
+      "path": "sections[_key==\"5b1bec6112f1\"].plans[_key==\"aefe1797bd10\"].name",
+      "before": "Wdrożenie zespołu do 5 osób",
+      "after": "Wdrożenie do 5 osób",
+      "action": "patch"
+    },
+    {
+      "document": "page-6a65a09038ad0c6d6d0a1aa3",
+      "revision": "s0woJMOB7mWiVecre6FmYD",
+      "path": "sections[_key==\"5f8ee255ce49\"].plans[_key==\"dffc60385a93\"].name",
+      "before": "Program grupowy · start 1 października",
+      "after": "Grupa · start 1 X",
+      "action": "patch"
+    },
+    {
+      "document": "page-6a93c20ca47c5a15d5c2fce7",
+      "revision": "s0woJMOB7mWiVecre6FmYD",
+      "path": "sections[_key==\"5051521e88c7\"].cta.label",
+      "before": "Umów audyt sprzedaży",
+      "after": "Umów audyt sprzedaży",
+      "action": "already-correct"
+    },
+    {
+      "document": "page-6a93c20ca47c5a15d5c2fce7",
+      "revision": "s0woJMOB7mWiVecre6FmYD",
+      "path": "sections[_key==\"5051521e88c7\"].cta.href",
+      "before": "/kontakt",
+      "after": "/kontakt",
+      "action": "already-correct"
+    },
+    {
+      "document": "page-6abac9e3fe23660c83e62014",
+      "revision": "Cq0WfbdWfPjjye8LFhlv7V",
+      "path": "sections[_key==\"be52c45bb7cc\"].plans[_key==\"1ac71b72f47e\"].name",
+      "before": "Wdrożenie zespołu do 15 osób",
+      "after": "Wdrożenie do 15 osób",
+      "action": "patch"
+    },
+    {
+      "document": "testimonial-c38cec50fbdd326e",
+      "revision": "Cq0WfbdWfPjjye8LFj1X7V",
+      "path": "image",
+      "before": {
+        "_type": "contentImage",
+        "alt": "logo smmash",
+        "asset": {
+          "_ref": "image-1f702fbcbd7648de63bca8acd1161b8c36230e69-349x72-webp",
+          "_type": "reference"
+        }
+      },
+      "after": {
+        "_type": "contentImage",
+        "alt": "logo smmash",
+        "asset": {
+          "_ref": "image-1f702fbcbd7648de63bca8acd1161b8c36230e69-349x72-webp",
+          "_type": "reference"
+        }
+      },
+      "action": "already-correct"
+    }
+  ],
+  "mutations": [
+    {
+      "patch": {
+        "id": "page-64a963565ffd73e869eafd91",
+        "ifRevisionID": "s0woJMOB7mWiVecre6FmYD",
+        "set": {
+          "sections[_key==\"328441a18e1a\"].plans[_key==\"b35213838ccc\"].name": "Wdrożenie do 5 osób"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a659c9d68d93d23daef5822",
+        "ifRevisionID": "s0woJMOB7mWiVecre6FmYD",
+        "set": {
+          "sections[_key==\"5b1bec6112f1\"].plans[_key==\"aefe1797bd10\"].name": "Wdrożenie do 5 osób"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a65a09038ad0c6d6d0a1aa3",
+        "ifRevisionID": "s0woJMOB7mWiVecre6FmYD",
+        "set": {
+          "sections[_key==\"5f8ee255ce49\"].plans[_key==\"dffc60385a93\"].name": "Grupa · start 1 X"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6abac9e3fe23660c83e62014",
+        "ifRevisionID": "Cq0WfbdWfPjjye8LFhlv7V",
+        "set": {
+          "sections[_key==\"be52c45bb7cc\"].plans[_key==\"1ac71b72f47e\"].name": "Wdrożenie do 15 osób"
+        }
+      }
+    }
+  ]
+}

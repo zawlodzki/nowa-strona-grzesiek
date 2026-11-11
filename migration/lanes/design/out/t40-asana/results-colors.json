@@ -1,0 +1,293 @@
+[
+  {
+    "path": "/",
+    "width": 1440,
+    "colors": []
+  },
+  {
+    "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+    "width": 1440,
+    "colors": [
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-asana",
+    "width": 1440,
+    "colors": [
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      }
+    ]
+  },
+  {
+    "path": "/",
+    "width": 768,
+    "colors": []
+  },
+  {
+    "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+    "width": 768,
+    "colors": [
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-asana",
+    "width": 768,
+    "colors": [
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      }
+    ]
+  },
+  {
+    "path": "/",
+    "width": 375,
+    "colors": []
+  },
+  {
+    "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+    "width": 375,
+    "colors": [
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": [
+          58,
+          72,
+          204
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-asana",
+    "width": 375,
+    "colors": [
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      },
+      {
+        "background": [
+          249,
+          250,
+          251
+        ],
+        "number": null
+      }
+    ]
+  }
+]

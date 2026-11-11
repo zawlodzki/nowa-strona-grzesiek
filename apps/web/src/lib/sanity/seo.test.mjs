@@ -29,3 +29,26 @@ test('an unmodified post uses its publication date as dateModified', () => {
   const result = seoPage(withEntities({ ...site(), posts: [post] }), { kind: 'post', language: 'pl', path: post.path, post });
   assert.equal(result.post.dateModified, post.publishedAt);
 });
+
+test('all visible text testimonials reach the single serialized graph', async () => {
+  const { serializeGraph } = await import('../../seo/graph.ts');
+  const doc = { ...page, sections: [
+    { _type: 'testimonials', items: [{ _ref: 'a' }, { _ref: 'missing' }] },
+    { _type: 'testimonials', items: [{ _ref: 'b' }, { _ref: 'image' }, { _ref: 'a' }] },
+  ] };
+  const value = withEntities({ ...site(), pages: [doc], testimonials: new Map([
+    ['a', { _id: 'a', name: 'Anna', quote: 'First <quote>.' }],
+    ['b', { _id: 'b', name: 'Bart', quote: 'Second quote.' }],
+    ['image', { _id: 'image', name: 'Image only', image: {} }],
+  ]) });
+  const serialized = serializeGraph(seoPage(value, { kind: 'page', language: 'pl', path: doc.path, page: doc }));
+  assert.ok(!serialized.includes('<quote>'));
+  const graph = JSON.parse(serialized)['@graph'];
+  const reviews = graph.filter(n => n['@type'] === 'Review');
+  assert.deepEqual(reviews.map(n => n.reviewBody), ['First <quote>.', 'Second quote.']);
+  assert.deepEqual(reviews.map(n => n.author), [{ '@type': 'Person', name: 'Anna' }, { '@type': 'Person', name: 'Bart' }]);
+  for (const review of reviews) {
+    assert.ok(graph.some(n => n['@id'] === review.itemReviewed['@id']));
+    assert.ok(graph.some(n => n['@id'] === review.isPartOf['@id']));
+  }
+});

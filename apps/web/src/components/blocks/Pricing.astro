@@ -27,7 +27,7 @@ const currency = { PLN: 'zł' } as const;
               <p class="price">
                 {plan.price !== undefined
                   ? <><span class="type-price">{amount(plan.price)} {currency[plan.currency ?? 'PLN']}</span>{plan.unit && <span class="unit"> {plan.unit}</span>}</>
-                  : <span class="type-heading-s">{plan.unit || plan.priceNote}</span>}
+                  : <span class="type-price price-label">{plan.unit || plan.priceNote}</span>}
               </p>
               <p class="note type-body-s">{(plan.price !== undefined || plan.unit) && plan.priceNote}</p>
               <div class="action">{href && plan.cta?.label && <a class:list={['cta', { secondary: !plan.highlighted && plans.some((p) => p.highlighted) }]} href={href}>{plan.cta.label}</a>}</div>
@@ -83,6 +83,7 @@ const currency = { PLN: 'zł' } as const;
   }
   .price { color: var(--text-heading); overflow-wrap: anywhere; }
   .type-price { white-space: nowrap; }
+  .price-label { white-space: normal; overflow-wrap: normal; }
   .unit { color: var(--text-muted); }
   .note { color: var(--text-muted); }
   .note:empty { min-block-size: 0; }
