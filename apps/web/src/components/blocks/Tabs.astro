@@ -140,6 +140,12 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   .panel { border: 1px solid var(--border-default); background: var(--surface-page); border-radius: var(--radius-lg); padding: clamp(24px, 3.125vw, 40px); box-shadow: var(--shadow-panel); overflow-wrap: anywhere; }
   .panel:not([hidden]) { display: grid; gap: var(--space-m); }
   .actions { display: flex; flex-wrap: wrap; align-items: start; gap: var(--space-s); }
+  .actions :global(.secondary) { color: var(--color-primary-60); border-color: var(--color-primary-60); }
+  .actions :global(.secondary:focus-visible) { outline-color: var(--color-primary-60); }
+  .actions :global(.secondary:active) { color: var(--color-primary-60); background: var(--surface-tint); }
+  @media (hover: hover) and (pointer: fine) {
+    .actions :global(.secondary:hover) { color: var(--color-primary-60); background: var(--surface-tint); }
+  }
   .positive, .negative { padding: var(--space-m); border: 1px solid var(--border-default); border-radius: var(--radius-sm); }
   .positive { background: var(--surface-tint); border-color: var(--color-primary-20); }
   .positive :global(h4), .negative :global(h4) { font-family: var(--typography-heading-xs-family); font-size: var(--typography-heading-xs-size); font-weight: var(--typography-heading-xs-weight); line-height: var(--typography-heading-xs-leading); letter-spacing: var(--typography-heading-xs-tracking); }

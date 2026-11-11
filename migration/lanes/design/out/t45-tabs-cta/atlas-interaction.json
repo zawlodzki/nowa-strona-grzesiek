@@ -1,0 +1,134 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "first": {
+        "width": 1440,
+        "scroll": 1425,
+        "labels": [
+          "Zapytaj o kurs",
+          "Zapytaj o pracę na Twoim CRM"
+        ],
+        "hrefs": [
+          "/kontakt",
+          "/kontakt"
+        ],
+        "y": [
+          567.5,
+          567.5
+        ],
+        "primary": true,
+        "secondary": true
+      },
+      "noCtaAfterArrowDown": true,
+      "secondaryOnlyAfterClick": true
+    },
+    {
+      "width": 390,
+      "first": {
+        "width": 390,
+        "scroll": 390,
+        "labels": [
+          "Zapytaj o kurs",
+          "Zapytaj o pracę na Twoim CRM"
+        ],
+        "hrefs": [
+          "/kontakt",
+          "/kontakt"
+        ],
+        "y": [
+          589.1875,
+          649.1875
+        ],
+        "primary": true,
+        "secondary": true
+      },
+      "noCtaAfterArrowDown": true,
+      "secondaryOnlyAfterClick": true
+    }
+  ],
+  "colors": [
+    {
+      "state": "default",
+      "text": [
+        58,
+        72,
+        204
+      ],
+      "border": [
+        58,
+        72,
+        204
+      ],
+      "background": [
+        255,
+        255,
+        255
+      ],
+      "outline": [
+        58,
+        72,
+        204
+      ],
+      "hover": false,
+      "hoverMedia": true,
+      "focus": false,
+      "contrast": 7.049864343691391
+    },
+    {
+      "state": "hover",
+      "text": [
+        58,
+        72,
+        204
+      ],
+      "border": [
+        58,
+        72,
+        204
+      ],
+      "background": [
+        235,
+        237,
+        250
+      ],
+      "outline": [
+        58,
+        72,
+        204
+      ],
+      "hover": true,
+      "hoverMedia": true,
+      "focus": false,
+      "contrast": 6.051648450744858
+    },
+    {
+      "state": "hover-focus",
+      "text": [
+        58,
+        72,
+        204
+      ],
+      "border": [
+        58,
+        72,
+        204
+      ],
+      "background": [
+        235,
+        237,
+        250
+      ],
+      "outline": [
+        58,
+        72,
+        204
+      ],
+      "hover": true,
+      "hoverMedia": true,
+      "focus": true,
+      "contrast": 6.051648450744858
+    }
+  ],
+  "atlasHasNoCtaActions": true
+}
