@@ -1,0 +1,56 @@
+[
+  {
+    "path": "/szkolenie-i-wdrozenie-asana",
+    "width": 1440,
+    "id": "firmy-ktore-korzystaja-juz-z-mojego-doswiadczenia",
+    "top": 119.5,
+    "headerBottom": 72,
+    "margin": "120px",
+    "scrollY": 683
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-asana",
+    "width": 390,
+    "id": "firmy-ktore-korzystaja-juz-z-mojego-doswiadczenia",
+    "top": 120.109375,
+    "headerBottom": 61,
+    "margin": "120px",
+    "scrollY": 1120
+  },
+  {
+    "path": "/audyt-sprzedazy",
+    "width": 1440,
+    "id": "firmy-ktore-korzystaja-juz-z-mojego-doswiadczenia",
+    "top": 119.5,
+    "headerBottom": 72,
+    "margin": "120px",
+    "scrollY": 648
+  },
+  {
+    "path": "/audyt-sprzedazy",
+    "width": 390,
+    "id": "firmy-ktore-korzystaja-juz-z-mojego-doswiadczenia",
+    "top": 119.71875,
+    "headerBottom": 61,
+    "margin": "120px",
+    "scrollY": 1070
+  },
+  {
+    "path": "/blog/asana-vs-jira",
+    "width": 1440,
+    "id": "post-kiedy-wybralbym-asane",
+    "top": 119.671875,
+    "headerBottom": 72,
+    "margin": "120px",
+    "scrollY": 2206
+  },
+  {
+    "path": "/blog/asana-vs-jira",
+    "width": 390,
+    "id": "post-kiedy-wybralbym-asane",
+    "top": 120.15625,
+    "headerBottom": 61,
+    "margin": "120px",
+    "scrollY": 2275
+  }
+]

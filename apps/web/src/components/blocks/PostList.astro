@@ -1,4 +1,5 @@
 ---
+import { pageHeadingId } from '../../lib/headings';
 import type { PostList } from '../../../../studio/sanity.types';
 import type { ResolvedImage } from '../portable-text/types';
 import Icon from '../ui/Icon.astro';
@@ -17,7 +18,7 @@ interface Props { data: PostList; posts: PostListItem[]; id?: string; }
 const { data, posts, id } = Astro.props;
 const limit = Math.min(Math.max(Math.trunc(data.limit ?? 3), 1), 12);
 const items = posts.filter((post) => post.title.trim() && post.href).slice(0, limit);
-const headingId = id ? `${id}-heading` : undefined;
+const headingId = id ? `${id}-heading` : pageHeadingId(Astro.locals, data.heading ?? 'Ostatnie wpisy');
 ---
 {items.length > 0 && <BlockSection id={id} kind="post-list"><div class="posts-block">
   {(data.tagline || data.heading) && (
@@ -30,13 +31,14 @@ const headingId = id ? `${id}-heading` : undefined;
     {items.map((post) => (
       <li class="card">
         {post.image ? <img src={post.image.src} width={post.image.width} height={post.image.height} alt="" loading="lazy" decoding="async" /> : <span class="thumb-empty" />}
-        <h3 class="type-heading-xs"><a class="card-link" href={post.href}>{post.title}</a></h3>
+        <h3 id={pageHeadingId(Astro.locals, post.title)} class="type-heading-xs"><a class="card-link" href={post.href}>{post.title}</a></h3>
         <span class="more with-icon type-body-s" aria-hidden="true">Czytaj więcej<Icon /></span>
       </li>
     ))}
   </ul>
 </div></BlockSection>}
 <style>
+  :is(h2, h3)[id] { scroll-margin-top: 7.5rem; }
   .posts-block { display: grid; gap: var(--space-l); }
   .head { display: grid; gap: var(--space-2xs); max-inline-size: 40rem; }
   .cards {

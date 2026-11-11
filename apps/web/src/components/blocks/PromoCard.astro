@@ -1,4 +1,5 @@
 ---
+import { pageHeadingId } from '../../lib/headings';
 import type { PromoCard } from '../../../../studio/sanity.types';
 import type { ResolvedImage, ResolvedPage } from '../ui/block-types';
 import { pageHref } from '../ui/block-types';
@@ -13,13 +14,14 @@ const href = target && target._id === data.target?._ref ? pageHref(target) : und
 ---
 <BlockSection kind="promo-card" tone="dark"><div class:list={['promo', { 'has-badge': badge || atlas, 'atlas-badge': atlas && !badge }]}>
   <div class="copy">
-    {data.title && <h2>{data.title}</h2>}
+    {data.title && <h2 id={pageHeadingId(Astro.locals, data.title)}>{data.title}</h2>}
     {(data.points?.length ?? 0) > 0 && <ul class:list={{ single: data.points?.length === 1 }}>{data.points?.map((point) => <li>{point}</li>)}</ul>}
     {href && <Button link={{ _type: 'link', href, label: `Zobacz ${target?.title ?? data.title ?? 'szczegóły'}` }} variant="text" />}
   </div>
   {(badge || atlas) && <div class="badge">{badge ? <MediaImage image={badge} /> : <SalesAtlasBadge />}</div>}
 </div></BlockSection>
 <style>
+  :is(h2, h3)[id] { scroll-margin-top: 7.5rem; }
   :global(.section.promo-card.dark) { background: linear-gradient(45deg, var(--surface-dark) 50%, var(--surface-accent)); }
   .promo { display: grid; align-items: center; gap: var(--space-l); color: var(--text-on-dark); }
   .copy { display: grid; justify-items: start; gap: var(--space-m); max-inline-size: 65ch; overflow-wrap: anywhere; }

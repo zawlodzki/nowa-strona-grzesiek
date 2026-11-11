@@ -1,4 +1,5 @@
 ---
+import { pageHeadingId, postHeadingId } from '../../lib/headings';
 import List, { type ListNode } from './List.astro';
 import Span from './Span.astro';
 import type { PortableTextItem, PortableTextValue, Resolved } from './types';
@@ -38,7 +39,11 @@ const headingTags = { h2: 'h2', h3: 'h3', h4: 'h4', blockquote: 'blockquote', no
     switch (item._type) {
       case 'block': {
         const Tag = headingTags[item.style ?? 'normal'];
-        return <Tag>{item.children?.map((span) => <Span span={span} definitions={item.markDefs} links={links} />)}</Tag>;
+        const text = item.children?.map((span) => span.text).join('') ?? '';
+        const id = Tag === 'h2' || Tag === 'h3'
+          ? (Astro.url.pathname.includes('/blog/') ? postHeadingId(Astro.locals, text, item._key) : pageHeadingId(Astro.locals, text))
+          : undefined;
+        return <Tag id={id}>{item.children?.map((span) => <Span span={span} definitions={item.markDefs} links={links} />)}</Tag>;
       }
       case 'image': {
         const image = images[item.asset?._ref ?? ''];
@@ -93,6 +98,7 @@ const headingTags = { h2: 'h2', h3: 'h3', h4: 'h4', blockquote: 'blockquote', no
 </div>
 
 <style>
+  :is(h2, h3)[id] { scroll-margin-top: 7.5rem; }
   .pt { overflow-wrap: break-word; }
   blockquote {
     padding-inline-start: var(--space-s);

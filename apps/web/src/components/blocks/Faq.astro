@@ -31,6 +31,7 @@ const items = visibleFaqItems(data);
 )}
 
 <style>
+  :is(h2, h3)[id] { scroll-margin-top: 7.5rem; }
   .inner { display: grid; gap: var(--space-xl); }
   .head { display: grid; gap: var(--space-2xs); max-inline-size: 44rem; }
   .list { border-radius: var(--radius-lg); background: var(--surface-soft); overflow: clip; }

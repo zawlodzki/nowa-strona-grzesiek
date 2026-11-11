@@ -1,0 +1,1783 @@
+[
+  {
+    "path": "/szkolenie-i-wdrozenie-asana",
+    "headings": [
+      {
+        "tag": "H2",
+        "text": "Firmy które korzystają już z mojego doświadczenia",
+        "id": "firmy-ktore-korzystaja-juz-z-mojego-doswiadczenia",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Każdy projekt zaczynacie od nowa, a ustalenia mieszkają w mailach",
+        "id": "kazdy-projekt-zaczynacie-od-nowa-a-ustalenia-mieszkaja-w-mailach",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Sprawdź, czy wdrożenie Asany pasuje do Twojej firmy",
+        "id": "sprawdz-czy-wdrozenie-asany-pasuje-do-twojej-firmy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Prowadzicie równolegle kilka podobnych projektów klientów, ale każdy startuje inaczej.",
+        "id": "prowadzicie-rownolegle-kilka-podobnych-projektow-klientow-ale-kazdy-startuje-inaczej",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Ustalenia z klientem zostają w mailu albo w głowie prowadzącego. Realizacja dopytuje o rzeczy już uzgodnione.",
+        "id": "ustalenia-z-klientem-zostaja-w-mailu-albo-w-glowie-prowadzacego-realizacja-dopytuje-o-rzeczy-juz-uzgodnione",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Status projektów znasz dopiero po odprawie, a nieobecność jednej osoby zatrzymuje pracę.",
+        "id": "status-projektow-znasz-dopiero-po-odprawie-a-nieobecnosc-jednej-osoby-zatrzymuje-prace",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Próbowaliście już Asany (albo Trello, Monday, ClickUp), ale każdy dział zbudował w niej co innego.",
+        "id": "probowaliscie-juz-asany-albo-trello-monday-clickup-ale-kazdy-dzial-zbudowal-w-niej-co-innego",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Od jednego procesu do systemu, który zespół sam rozwija",
+        "id": "od-jednego-procesu-do-systemu-ktory-zespol-sam-rozwija",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Wybór pierwszych procesów",
+        "id": "wybor-pierwszych-procesow",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Szablony i odpowiedzialności",
+        "id": "szablony-i-odpowiedzialnosci",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Praca na realnych projektach",
+        "id": "praca-na-realnych-projektach",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Szkolenie z organizacji pracy",
+        "id": "szkolenie-z-organizacji-pracy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Przekazanie liderowi",
+        "id": "przekazanie-liderowi",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Po wdrożeniu Asana zostaje u Was",
+        "id": "po-wdrozeniu-asana-zostaje-u-was",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Powtarzalny sposób startowania projektów",
+        "id": "powtarzalny-sposob-startowania-projektow",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Widok  managera",
+        "id": "widok-managera",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Przeszkolony lider",
+        "id": "przeszkolony-lider",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Zasady jak korzystać a Asany",
+        "id": "zasady-jak-korzystac-a-asany",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Współpraca przejrzysta od początku",
+        "id": "cennik-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Audyt istniejącej Asany",
+        "id": "audyt-istniejacej-asany",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Zespół do 15 osób",
+        "id": "zespol-do-15-osob",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Firmy 15+ osób",
+        "id": "firmy-15-osob",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Zacznijmy od rozmowy",
+        "id": "zacznijmy-od-rozmowy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Wygrana szansa w Pipedrive może sama uruchomić projekt w Asanie",
+        "id": "wygrana-szansa-w-pipedrive-moze-sama-uruchomic-projekt-w-asanie",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Najczęściej zadawane pytania",
+        "id": "faq-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Skontaktuj się ze mną",
+        "id": "kontakt-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Formularz kontaktowy",
+        "id": "formularz-kontaktowy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Bezpośredni kontakt",
+        "id": "kontakt-details",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "CRM",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "AI",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Asana",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Materiały",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      }
+    ],
+    "total": 32,
+    "withId": 28,
+    "missing": [
+      "CRM",
+      "AI",
+      "Asana",
+      "Materiały"
+    ],
+    "duplicates": []
+  },
+  {
+    "path": "/audyt-sprzedazy",
+    "headings": [
+      {
+        "tag": "H2",
+        "text": "Firmy które korzystają już z mojego doświadczenia",
+        "id": "firmy-ktore-korzystaja-juz-z-mojego-doswiadczenia",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Wynik nie dowozi, ale każda osoba wskazuje inną przyczynę",
+        "id": "wynik-nie-dowozi-ale-kazda-osoba-wskazuje-inna-przyczyne",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Audyt ma sens, jeśli firma nie realizuje planu i nie wie dlaczego",
+        "id": "audyt-ma-sens-jesli-firma-nie-realizuje-planu-i-nie-wie-dlaczego",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Właściciel, dyrektor sprzedaży i handlowcy inaczej oceniają przyczynę słabszego wyniku.",
+        "id": "wlasciciel-dyrektor-sprzedazy-i-handlowcy-inaczej-oceniaja-przyczyne-slabszego-wyniku",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Korzystacie z inboundu, outboundu, poleceń albo partnerów, ale nie wiecie, które źródła dowożą wartościowe szanse.",
+        "id": "korzystacie-z-inboundu-outboundu-polecen-albo-partnerow-ale-nie-wiecie-ktore-zrodla-dowoza-wartosciowe-szanse",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Handlowcy opowiadają o ofercie na kilka różnych sposobów, a cena zbyt często staje się głównym argumentem.",
+        "id": "handlowcy-opowiadaja-o-ofercie-na-kilka-roznych-sposobow-a-cena-zbyt-czesto-staje-sie-glownym-argumentem",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "System prowizyjny nagradza aktywność lub przychód, ale niekoniecznie zachowania, marżę i klientów, na których firmie zależy.",
+        "id": "system-prowizyjny-nagradza-aktywnosc-lub-przychod-ale-niekoniecznie-zachowania-marze-i-klientow-na-ktorych-firmie-zalezy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Pięć obszarów, jedna diagnoza systemu sprzedaży",
+        "id": "piec-obszarow-jedna-diagnoza-systemu-sprzedazy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Strategia sprzedaży i matematyka celu",
+        "id": "strategia-sprzedazy-i-matematyka-celu",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Pozycjonowanie i sales motions",
+        "id": "pozycjonowanie-i-sales-motions",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Proces sprzedaży",
+        "id": "proces-sprzedazy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Zespół i wynagradzanie",
+        "id": "zespol-i-wynagradzanie",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "CRM, dane i pomiar",
+        "id": "crm-dane-i-pomiar",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Po audycie wiesz, co zmienić najpierw",
+        "id": "po-audycie-wiesz-co-zmienic-najpierw",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Obszarów diagnozy",
+        "id": "obszarow-diagnozy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Mapa systemu sprzedaży",
+        "id": "mapa-systemu-sprzedazy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Dni planu",
+        "id": "dni-planu",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Lista decyzji",
+        "id": "lista-decyzji",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Ile kosztuje audyt sprzedaży",
+        "id": "cennik-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Audyt CRM Pipedrive",
+        "id": "audyt-crm-pipedrive",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Audyt sprzedaży",
+        "id": "audyt-sprzedazy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Wdrożenie po audycie",
+        "id": "wdrozenie-po-audycie",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Sprawdźmy, co blokuje wzrost sprzedaży",
+        "id": "sprawdzmy-co-blokuje-wzrost-sprzedazy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Dwa różne pytania, dwa punkty startu",
+        "id": "dwa-rozne-pytania-dwa-punkty-startu",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Sales Atlas System",
+        "id": "sales-atlas-system",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Najczęściej zadawane pytania",
+        "id": "faq-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Skontaktuj się ze mną",
+        "id": "kontakt-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Formularz kontaktowy",
+        "id": "formularz-kontaktowy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Bezpośredni kontakt",
+        "id": "kontakt-details",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "CRM",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "AI",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Asana",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Materiały",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      }
+    ],
+    "total": 33,
+    "withId": 29,
+    "missing": [
+      "CRM",
+      "AI",
+      "Asana",
+      "Materiały"
+    ],
+    "duplicates": []
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "headings": [
+      {
+        "tag": "H2",
+        "text": "Firmy które korzystają już z mojego doświadczenia",
+        "id": "firmy-ktore-korzystaja-juz-z-mojego-doswiadczenia",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Konto w Pipedrive można skonfigurować w tydzień. Problem zaczyna się później.",
+        "id": "konto-w-pipedrive-mozna-skonfigurowac-w-tydzien-problem-zaczyna-sie-pozniej",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Sprawdź, czy to wdrożenie Pipedrive pasuje do Twojej firmy",
+        "id": "sprawdz-czy-to-wdrozenie-pipedrive-pasuje-do-twojej-firmy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Sprzedaż żyje w Excelu, skrzynkach mailowych i pamięci handlowców, a Ty nie wiesz, ile naprawdę wartościowych szans jest w lejku.",
+        "id": "sprzedaz-zyje-w-excelu-skrzynkach-mailowych-i-pamieci-handlowcow-a-ty-nie-wiesz-ile-naprawde-wartosciowych-szans-jest-w-lejku",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Macie już Pipedrive, ale handlowcy go omijają, a raporty nie nadają się do decyzji.",
+        "id": "macie-juz-pipedrive-ale-handlowcy-go-omijaja-a-raporty-nie-nadaja-sie-do-decyzji",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Po wygranej szansie zespół realizacyjny dopytuje klienta o rzeczy, które sprzedaż już ustaliła.",
+        "id": "po-wygranej-szansie-zespol-realizacyjny-dopytuje-klienta-o-rzeczy-ktore-sprzedaz-juz-ustalila",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Chcecie automatyzacji i AI w sprzedaży, ale dane w CRM się do tego nie nadają.",
+        "id": "chcecie-automatyzacji-i-ai-w-sprzedazy-ale-dane-w-crm-sie-do-tego-nie-nadaja",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Od audytu procesu do zespołu, który sam administruje systemem",
+        "id": "od-audytu-procesu-do-zespolu-ktory-sam-administruje-systemem",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Proces sprzedaży",
+        "id": "proces-sprzedazy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Struktura danych i migracja",
+        "id": "struktura-danych-i-migracja",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Konfiguracja, automatyzacje i integracje",
+        "id": "konfiguracja-automatyzacje-i-integracje",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Warsztaty, szkolenia i treningi 1:1",
+        "id": "warsztaty-szkolenia-i-treningi-1-1",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Przekazanie gotowego systemu",
+        "id": "przekazanie-gotowego-systemu",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Po wdrożeniu Pipedrive zostaje u Was",
+        "id": "po-wdrozeniu-pipedrive-zostaje-u-was",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Proces sprzedaży",
+        "id": "proces-sprzedazy-2",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Przeszkolony administrator",
+        "id": "przeszkolony-administrator",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Raporty",
+        "id": "raporty",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Dane dla AI",
+        "id": "dane-dla-ai",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Współpraca przejrzysta od początku",
+        "id": "cennik-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Audyt CRM",
+        "id": "audyt-crm",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Wdrożenie do 5 osób",
+        "id": "wdrozenie-do-5-osob",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Wdrożenie 5+ handlowców",
+        "id": "wdrozenie-5-handlowcow",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Zacznijmy od rozmowy",
+        "id": "zacznijmy-od-rozmowy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Dobrze wdrożony Pipedrive to fundament, nie koniec",
+        "id": "dobrze-wdrozony-pipedrive-to-fundament-nie-koniec",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Sales Atlas System",
+        "id": "sales-atlas-system",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Najczęściej zadawane pytania",
+        "id": "faq-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Skontaktuj się ze mną",
+        "id": "kontakt-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Formularz kontaktowy",
+        "id": "formularz-kontaktowy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Bezpośredni kontakt",
+        "id": "kontakt-details",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "CRM",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "AI",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Asana",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Materiały",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      }
+    ],
+    "total": 33,
+    "withId": 29,
+    "missing": [
+      "CRM",
+      "AI",
+      "Asana",
+      "Materiały"
+    ],
+    "duplicates": []
+  },
+  {
+    "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+    "headings": [
+      {
+        "tag": "H2",
+        "text": "Doświadczenie z wdrożeń CRM i automatyzacji w ponad 50 firmach",
+        "id": "doswiadczenie-z-wdrozen-crm-i-automatyzacji-w-ponad-50-firmach",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "AI przyspiesza handlowca. Firma nadal czeka na wynik.",
+        "id": "ai-przyspiesza-handlowca-firma-nadal-czeka-na-wynik",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Sprawdź czy moja usługa pasuje do Twojej firmy",
+        "id": "sprawdz-czy-moja-usluga-pasuje-do-twojej-firmy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Kupiliście ChatGPT albo Copilota. Ludzie mówią, że oszczędzają czas, ale wynik tego nie pokazuje.",
+        "id": "kupiliscie-chatgpt-albo-copilota-ludzie-mowia-ze-oszczedzaja-czas-ale-wynik-tego-nie-pokazuje",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Oferta powstaje 3 godziny: ręcznie, z cennika w PDF-ie i historii maili. Macie też inną powtarzalną pracę.",
+        "id": "oferta-powstaje-3-godziny-recznie-z-cennika-w-pdf-ie-i-historii-maili-macie-tez-inna-powtarzalna-prace",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Kilka osób w zespole używa AI po cichu i nic z tej wiedzy nie zostaje w firmie. Nikt nie ma nad tym kontroli.",
+        "id": "kilka-osob-w-zespole-uzywa-ai-po-cichu-i-nic-z-tej-wiedzy-nie-zostaje-w-firmie-nikt-nie-ma-nad-tym-kontroli",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Leadów przybywa, zespół nie nadąża z ofertami i follow-upami. Nowych etatów nie będzie.",
+        "id": "leadow-przybywa-zespol-nie-nadaza-z-ofertami-i-follow-upami-nowych-etatow-nie-bedzie",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Pięć kroków do pierwszych procesów sprzedaży obsługiwanych przez AI",
+        "id": "piec-krokow-do-pierwszych-procesow-sprzedazy-obslugiwanych-przez-ai",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Dopasowanie procesów",
+        "id": "dopasowanie-procesow",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Budowa kontekstu firmy do pracy z AI",
+        "id": "budowa-kontekstu-firmy-do-pracy-z-ai",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Narzędzia i integracje",
+        "id": "narzedzia-i-integracje",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Pierwszy agent AI",
+        "id": "pierwszy-agent-ai",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Skalowanie, szkolenie i przekazanie",
+        "id": "skalowanie-szkolenie-i-przekazanie",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Po 12 tygodniach zostaje u was:",
+        "id": "po-12-tygodniach-zostaje-u-was",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Agentów",
+        "id": "agentow",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Baza wiedzy firmy",
+        "id": "baza-wiedzy-firmy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Integracje z narzędziami",
+        "id": "integracje-z-narzedziami",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Przeszkolony zespół",
+        "id": "przeszkolony-zespol",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Współpraca przejrzysta od początku",
+        "id": "cennik-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Audyt gotowości na AI",
+        "id": "audyt-gotowosci-na-ai",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "dla firmy usługowej",
+        "id": "dla-firmy-uslugowej",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "dla firmy produkcyjnej",
+        "id": "dla-firmy-produkcyjnej",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Zacznijmy od rozmowy",
+        "id": "zacznijmy-od-rozmowy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Sales Atlas System",
+        "id": "sales-atlas-system",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Najczęściej zadawane pytania",
+        "id": "faq-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Skontaktuj się ze mną",
+        "id": "kontakt-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Formularz kontaktowy",
+        "id": "formularz-kontaktowy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Bezpośredni kontakt",
+        "id": "kontakt-details",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "CRM",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "AI",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Asana",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Materiały",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      }
+    ],
+    "total": 32,
+    "withId": 28,
+    "missing": [
+      "CRM",
+      "AI",
+      "Asana",
+      "Materiały"
+    ],
+    "duplicates": []
+  },
+  {
+    "path": "/kurs-ai-w-sprzedazy",
+    "headings": [
+      {
+        "tag": "H2",
+        "text": "Metoda z ponad 50 wdrożeń CRM i automatyzacji",
+        "id": "metoda-z-ponad-50-wdrozen-crm-i-automatyzacji",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Prompty przechodzą. Proces zostaje.",
+        "id": "prompty-przechodza-proces-zostaje",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Sprawdź, czy ten kurs jest dla ciebie",
+        "id": "sprawdz-czy-ten-kurs-jest-dla-ciebie",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Chcesz zacząć od najtańszej rzeczy i sam sprawdzić, czy AI ma sens w waszej sprzedaży.",
+        "id": "chcesz-zaczac-od-najtanszej-rzeczy-i-sam-sprawdzic-czy-ai-ma-sens-w-waszej-sprzedazy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Masz CRM, w którym da się pracować, i dostęp, żeby go podpiąć. Nie musi być idealny.",
+        "id": "masz-crm-w-ktorym-da-sie-pracowac-i-dostep-zeby-go-podpiac-nie-musi-byc-idealny",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Oferta albo follow-up powstaje ręcznie po godzinę i powtarza się co tydzień.",
+        "id": "oferta-albo-follow-up-powstaje-recznie-po-godzine-i-powtarza-sie-co-tydzien",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Wolisz przerobić to własnym tempem, bez cotygodniowych spotkań w grupie.",
+        "id": "wolisz-przerobic-to-wlasnym-tempem-bez-cotygodniowych-spotkan-w-grupie",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "E-commerce, gdzie klient kupuje sam i nie rozmawia z handlowcem.",
+        "id": "e-commerce-gdzie-klient-kupuje-sam-i-nie-rozmawia-z-handlowcem",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Sprzedaż transakcyjna, w której zaangażowanie handlowca w transakcję jest minimalne.",
+        "id": "sprzedaz-transakcyjna-w-ktorej-zaangazowanie-handlowca-w-transakcje-jest-minimalne",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "PLG SaaS, gdzie produkt sprzedaje się sam w self-service.",
+        "id": "plg-saas-gdzie-produkt-sprzedaje-sie-sam-w-self-service",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Osiem modułów, osiem rozwiązań na koniec",
+        "id": "osiem-modulow-osiem-rozwiazan-na-koniec",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Zaczynasz od procesu",
+        "id": "zaczynasz-od-procesu",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Proces sprzedaży pod AI",
+        "id": "proces-sprzedazy-pod-ai",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Kontekst, integracje i ontologia",
+        "id": "kontekst-integracje-i-ontologia",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Pierwszy skill w Claude albo ChatGPT",
+        "id": "pierwszy-skill-w-claude-albo-chatgpt",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Automatyzacje CRM i porządek w danych",
+        "id": "automatyzacje-crm-i-porzadek-w-danych",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Bazy prospectingowe",
+        "id": "bazy-prospectingowe",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Transkrypcje jako materiał do sprzedaży",
+        "id": "transkrypcje-jako-material-do-sprzedazy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Oferta jako interaktywna strona",
+        "id": "oferta-jako-interaktywna-strona",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Wdrożenie w zespole",
+        "id": "wdrozenie-w-zespole",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Widoczność w Google i w AI",
+        "id": "widocznosc-w-google-i-w-ai",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Treści na bloga i LinkedIna",
+        "id": "tresci-na-bloga-i-linkedina",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Jeśli nie chcesz robić tego sam",
+        "id": "jesli-nie-chcesz-robic-tego-sam",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Co dostajesz po kursie:",
+        "id": "co-dostajesz-po-kursie",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Gotowych rozwiązań",
+        "id": "gotowych-rozwiazan",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Baza wiedzy firmy",
+        "id": "baza-wiedzy-firmy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Integracje z narzędziami",
+        "id": "integracje-z-narzedziami",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Działający proces",
+        "id": "dzialajacy-proces",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Grzegorz Zawłodzki. Wdrażam CRM i AI w sprzedaży B2B.",
+        "id": "grzegorz-zawlodzki-wdrazam-crm-i-ai-w-sprzedazy-b2b",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Trzy poziomy, każdy odliczany od następnego",
+        "id": "cennik-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Kurs, dostęp na rok",
+        "id": "kurs-dostep-na-rok",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Grupa · start 1 X",
+        "id": "grupa-start-1-x",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Wdrożenie 1:1",
+        "id": "wdrozenie-1-1",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Zapytaj, zanim kupisz",
+        "id": "zapytaj-zanim-kupisz",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Sales Atlas System",
+        "id": "sales-atlas-system",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Najczęściej zadawane pytania",
+        "id": "faq-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Skontaktuj się ze mną",
+        "id": "kontakt-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Formularz kontaktowy",
+        "id": "formularz-kontaktowy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Bezpośredni kontakt",
+        "id": "kontakt-details",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "CRM",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "AI",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Asana",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Materiały",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      }
+    ],
+    "total": 43,
+    "withId": 39,
+    "missing": [
+      "CRM",
+      "AI",
+      "Asana",
+      "Materiały"
+    ],
+    "duplicates": []
+  },
+  {
+    "path": "/sales-atlas-system",
+    "headings": [
+      {
+        "tag": "H2",
+        "text": "Dziewięć warstw",
+        "id": "dziewiec-warstw",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Buduje się od dołu, czyta od góry",
+        "id": "buduje-sie-od-dolu-czyta-od-gory",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Czym Sales Atlas System nie jest",
+        "id": "czym-sales-atlas-system-nie-jest",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Nie jest metodyką rozmowy handlowej. SPIN, Challenger i SPICED opisują samą rozmowę w szczegółowy sposób.",
+        "id": "nie-jest-metodyka-rozmowy-handlowej-spin-challenger-i-spiced-opisuja-sama-rozmowe-w-szczegolowy-sposob",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Nie jest zestawem kryteriów kwalifikacji. BANT czy MEDDIC pokrywają jeden element czwartej warstwy, nie cały system.",
+        "id": "nie-jest-zestawem-kryteriow-kwalifikacji-bant-czy-meddic-pokrywaja-jeden-element-czwartej-warstwy-nie-caly-system",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Nie jest szkoleniem sprzedażowym. Nie uczy domykania ani obrony ceny.",
+        "id": "nie-jest-szkoleniem-sprzedazowym-nie-uczy-domykania-ani-obrony-ceny",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Nie jest oprogramowaniem. Instaluje się w narzędziach, które już masz albo właśnie wdrażasz.",
+        "id": "nie-jest-oprogramowaniem-instaluje-sie-w-narzedziach-ktore-juz-masz-albo-wlasnie-wdrazasz",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Nie jest systemem dla firm powyżej 250 osób. Tam lepiej sprawdzają się metodyki zbudowane wokół managera sprzedaży.",
+        "id": "nie-jest-systemem-dla-firm-powyzej-250-osob-tam-lepiej-sprawdzaja-sie-metodyki-zbudowane-wokol-managera-sprzedazy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Nie jest osobnym produktem, a frameworkiem do wprowadzania zmian do sprzedaży w uporządkowany sposób.",
+        "id": "nie-jest-osobnym-produktem-a-frameworkiem-do-wprowadzania-zmian-do-sprzedazy-w-uporzadkowany-sposob",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Sprawdź, czy masz już system",
+        "id": "sprawdz-czy-masz-juz-system",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Skąd wziął się system sprzedaży",
+        "id": "skad-wzial-sie-system-sprzedazy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Ponad 50 wdrożeń w firmach B2B",
+        "id": "ponad-50-wdrozen-w-firmach-b2b",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Blisko 4 000 obserwacji z rozmów",
+        "id": "blisko-4-000-obserwacji-z-rozmow",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Najczęściej zadawane pytania",
+        "id": "faq-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "CRM",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "AI",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Asana",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Materiały",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      }
+    ],
+    "total": 18,
+    "withId": 14,
+    "missing": [
+      "CRM",
+      "AI",
+      "Asana",
+      "Materiały"
+    ],
+    "duplicates": []
+  },
+  {
+    "path": "/blog/asana-vs-jira",
+    "headings": [
+      {
+        "tag": "H2",
+        "text": "Kiedy wybrałbym Asanę",
+        "id": "post-kiedy-wybralbym-asane",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Kiedy zostałbym przy Jirze",
+        "id": "post-kiedy-zostalbym-przy-jirze",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "AI w Asanie i Jirze: porównuj sposób wykonania pracy",
+        "id": "post-ai-w-asanie-i-jirze-porownuj-sposob-wykonania-pracy",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Czego żaden system nie ustali za Was",
+        "id": "post-czego-zaden-system-nie-ustali-za-was",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Asana razem z Jirą: co się synchronizuje, a co trzeba uzgodnić",
+        "id": "post-asana-razem-z-jira-co-sie-synchronizuje-a-co-trzeba-uzgodnic",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Ile kosztuje Asana, Jira i praca AI",
+        "id": "post-ile-kosztuje-asana-jira-i-praca-ai",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Jak sprawdzić wybór przed migracją",
+        "id": "post-jak-sprawdzic-wybor-przed-migracja",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Jeśli wybierasz Asanę, zacznij od jednego procesu",
+        "id": "post-jesli-wybierasz-asane-zacznij-od-jednego-procesu",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Najczęściej zadawane pytania",
+        "id": "faq-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Pomogę ustalić, co prowadzić w Asanie, co zostawić w Jirze i jak połączyć pracę obu zespołów.",
+        "id": "pomoge-ustalic-co-prowadzic-w-asanie-co-zostawic-w-jirze-i-jak-polaczyc-prace-obu-zespolow",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Powiązane wpisy",
+        "id": "related-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Asana vs Trello: kiedy tablice wystarczają, a kiedy potrzebny jest portfel projektów",
+        "id": "",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Asana vs monday.com: pięć decyzji przed wdrożeniem",
+        "id": "",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H3",
+        "text": "Asana vs ClickUp: który system zespół utrzyma po wdrożeniu?",
+        "id": "",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Newsletter Sales Atlas",
+        "id": "newsletter-heading",
+        "visible": true,
+        "inMain": true,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "CRM",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "AI",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Asana",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      },
+      {
+        "tag": "H2",
+        "text": "Materiały",
+        "id": "",
+        "visible": true,
+        "inMain": false,
+        "excluded": false
+      }
+    ],
+    "total": 19,
+    "withId": 12,
+    "missing": [
+      "Asana vs Trello: kiedy tablice wystarczają, a kiedy potrzebny jest portfel projektów",
+      "Asana vs monday.com: pięć decyzji przed wdrożeniem",
+      "Asana vs ClickUp: który system zespół utrzyma po wdrożeniu?",
+      "CRM",
+      "AI",
+      "Asana",
+      "Materiały"
+    ],
+    "duplicates": []
+  }
+]

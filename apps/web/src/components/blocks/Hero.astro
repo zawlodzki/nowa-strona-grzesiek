@@ -1,4 +1,5 @@
 ---
+import { pageHeadingId } from '../../lib/headings';
 import type { Hero } from '../../../../studio/sanity.types';
 import type { ResolvedImage } from '../ui/block-types';
 import { consultation } from '../ui/block-types';
@@ -12,7 +13,7 @@ const { data, image, badgeImage, headingLevel: Heading = 'h1' } = Astro.props;
   <div class:list={['hero-layout', { 'has-image': image }]}>
     <div class="copy">
       {data.tagline && <p class="type-tagline">{data.tagline}</p>}
-      {data.heading && <Heading class="type-display">{data.heading}</Heading>}
+      {data.heading && <Heading id={pageHeadingId(Astro.locals, data.heading)} class="type-display">{data.heading}</Heading>}
       {data.body && <p>{data.body}</p>}
       <div class="actions"><Button link={data.cta ?? consultation} />
         {(data.badges?.length ?? 0) > 0 && <ul class="badges type-body-s">{data.badges?.map((badge) => <li>{badge}</li>)}</ul>}
@@ -22,6 +23,7 @@ const { data, image, badgeImage, headingLevel: Heading = 'h1' } = Astro.props;
   </div>
 </BlockSection>
 <style>
+  :is(h2, h3)[id] { scroll-margin-top: 7.5rem; }
   .hero-layout { display: grid; gap: var(--space-2xl); align-items: center; }
   .copy { display: flex; flex-direction: column; align-items: start; gap: var(--space-m); max-inline-size: 65ch; }
   .copy > * { overflow-wrap: anywhere; }

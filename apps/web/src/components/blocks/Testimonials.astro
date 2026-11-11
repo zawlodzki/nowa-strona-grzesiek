@@ -65,6 +65,7 @@ const byline = (item: ResolvedTestimonial) => [item.role, item.company].filter(B
 )}
 
 <style>
+  :is(h2, h3)[id] { scroll-margin-top: 7.5rem; }
   .inner { container-type: inline-size; display: grid; gap: var(--space-xl); }
   .head { display: grid; gap: var(--space-2xs); max-inline-size: 44rem; }
   .list {

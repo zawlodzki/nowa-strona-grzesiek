@@ -1,0 +1,21 @@
+{
+  "ref": "origin/task/T39-post-layout",
+  "commit": "96c3c874a74bdf45d02c657111f07827bea9b279",
+  "expected": [
+    "post-zazolc-gesla-jazn",
+    "post-zazolc-gesla-jazn-key1",
+    "post-crm-ai",
+    "post-sekcja",
+    "post-lodz-cafe",
+    "post-日本語"
+  ],
+  "actual": [
+    "post-zazolc-gesla-jazn",
+    "post-zazolc-gesla-jazn-key1",
+    "post-crm-ai",
+    "post-sekcja",
+    "post-lodz-cafe",
+    "post-日本語"
+  ],
+  "passed": true
+}
