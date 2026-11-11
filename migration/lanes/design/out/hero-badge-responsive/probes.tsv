@@ -1,0 +1,5 @@
+host	path	status	location	x-robots-tag	content-type	title
+127.0.0.1	/sales-atlas-system	200	-	noindex, nofollow	text/html; charset=utf-8	Sales Atlas System - system sprzedaży dla firm B2B | Grzegorz Zawłodzki
+127.0.0.1	/szkolenie-i-wdrozenie-salesforce	200	-	noindex, nofollow	text/html; charset=utf-8	Wdrożenie Salesforce i szkolenie zespołu handlowego
+127.0.0.1	/	200	-	noindex, nofollow	text/html; charset=utf-8	CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki
+127.0.0.1	/audyt-sprzedazy	200	-	noindex, nofollow	text/html; charset=utf-8	Audyt sprzedaży B2B — zakres i cena | Grzegorz Zawłodzki
