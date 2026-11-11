@@ -1,10 +1,13 @@
 ---
 import CtaBand from '../../components/blocks/CtaBand.astro';
 import Faq from '../../components/blocks/Faq.astro';
-import RichText from '../../components/blocks/RichText.astro';
+import PostBody from '../../components/post/PostBody.astro';
+import PostToc from '../../components/post/PostToc.astro';
+import { postOutline } from '../../components/post/outline';
+import SharePost from '../../components/post/SharePost.astro';
+import { relatedPosts } from '../../components/post/related';
 import NewsletterSignup from '../../components/blocks/NewsletterSignup.astro';
 import MediaImage from '../../components/ui/MediaImage.astro';
-import PostCards from './PostCards.astro';
 import { BLOG_PATH } from './routes.ts';
 import { localHref, resolveImage, type PostDoc, type Site } from './site.ts';
 
@@ -17,10 +20,8 @@ const dateLabel = (iso: string) => new Intl.DateTimeFormat(pl ? 'pl-PL' : 'en-GB
 const person = site.person;
 const avatar = resolveImage(site, person?.image);
 const linkedIn = person?.sameAs?.find((url) => url.includes('linkedin.com'));
-const related = site.posts
-  .filter((other) => other.language === post.language && other.kind === post.kind && other._id !== post._id)
-  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
-  .slice(0, 3);
+const related = relatedPosts(post, site.posts);
+const outline = postOutline(post.body);
 const contactHref = post.cta?.href ?? localHref(post.language, '/kontakt');
 const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _type: 'faqItem' as const, _key, question: q, answer: a }] : []);
 ---
@@ -46,8 +47,27 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
         {image && <MediaImage image={image} eager />}
       </div>
     </header>
-    <RichText data={{ _type: 'richText', body: post.body }} links={links} images={images} />
-    {faq.length > 0 && <Faq data={{ _type: 'faq', heading: pl ? 'Najczęściej zadawane pytania' : 'Frequently asked questions', items: faq }} links={links} images={images} />}
+    <div class="post-layout">
+      <aside class="toc-column" aria-label={pl ? 'Nawigacja artykułu' : 'Article navigation'}>
+        <div class="sticky">
+          <PostToc entries={outline.entries} pl={pl} />
+          <SharePost title={post.title} path={localHref(post.language, post.path)} pl={pl} />
+        </div>
+      </aside>
+      <div class="post-content"><PostBody sections={outline.sections} links={links} images={images} /></div>
+      <aside class="recommendations" aria-label={pl ? 'Polecane' : 'Recommended'}>
+        <div class="sticky">
+          <div class="sidebar-cta">
+            <h2 class="type-heading-xs">{post.cta?.label ?? (pl ? 'Porozmawiajmy o Twojej firmie' : "Let's talk about your business")}</h2>
+            <a class="post-button" href={contactHref}>{pl ? 'Umów konsultację' : 'Book a consultation'}</a>
+          </div>
+          {related.length > 0 && <section aria-labelledby="related-heading">
+            <h2 id="related-heading" class="type-heading-xs">{pl ? 'Sprawdź również' : 'Read also'}</h2>
+            <ul role="list">{related.map((other) => <li><a href={localHref(other.language, other.path)}>{other.title}</a></li>)}</ul>
+          </section>}
+        </div>
+      </aside>
+    </div>
     {person?.name && (
       <aside class="content-grid section author-section" aria-labelledby="author-heading">
         <div class="author">
@@ -61,25 +81,15 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
             <a rel="author" href={localHref(post.language, '/o-mnie')}>{pl ? 'O mnie' : 'About me'}</a>
             {linkedIn && <a rel="me noopener" target="_blank" href={linkedIn}>LinkedIn</a>}
           </p>
-          {post.cta?.label && (
-            <div class="nudge">
-              <p class="type-body-s">{post.cta.label}</p>
-              <a class="type-body-s" href={contactHref}>{pl ? 'Porozmawiajmy' : "Let's talk"}</a>
-            </div>
-          )}
+
         </div>
       </aside>
     )}
-    {post.cta?.label && (
-      <CtaBand data={{ _type: 'ctaBand', heading: post.cta.label, cta: { _type: 'link', label: pl ? 'Umów konsultację' : 'Book a consultation', href: post.cta.href ?? '/kontakt' } }} />
+    {(
+      <CtaBand data={{ _type: 'ctaBand', heading: post.cta?.label ?? (pl ? 'Porozmawiajmy o Twojej firmie' : "Let's talk about your business"), cta: { _type: 'link', label: pl ? 'Umów konsultację' : 'Book a consultation', href: post.cta?.href ?? '/kontakt' } }} />
     )}
+    {faq.length > 0 && <Faq data={{ _type: 'faq', heading: pl ? 'Najczęściej zadawane pytania' : 'Frequently asked questions', items: faq }} links={links} images={images} />}
   </article>
-  {related.length > 0 && (
-    <section class="content-grid section" aria-labelledby="related-heading">
-      <h2 id="related-heading" class="type-heading-m related-heading">{pl ? 'Powiązane wpisy' : 'Related posts'}</h2>
-      <PostCards site={site} posts={related} headingLevel="h3" />
-    </section>
-  )}
   {pl && <NewsletterSignup data={{ _type: 'newsletterSignup', body: 'Raz w tygodniu dostaniesz bezpłatnie, jedno gotowe rozwiązanie, jak skutecznie wykorzystać nowoczesne technologie w sprzedaży B2B.' }} />}
 </main>
 <style>
@@ -103,11 +113,26 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   .who { display: flex; align-items: center; gap: var(--space-s); }
   .who p { display: grid; overflow-wrap: anywhere; }
   .who strong { color: var(--text-heading); }
-  .avatar { inline-size: 4rem; block-size: 4rem; flex: none; object-fit: cover; border-radius: var(--radius-round); }
+  .avatar { inline-size: 5rem; block-size: 5rem; flex: none; object-fit: cover; object-position: center top; padding-block-start: var(--space-2xs); border-radius: var(--radius-round); background: var(--surface-soft); }
   .links { display: flex; flex-wrap: wrap; gap: var(--space-m); }
   .author a:active { color: var(--text-link-active); }
-  .nudge { display: grid; gap: var(--space-2xs); justify-self: stretch; padding: var(--space-s); border-radius: var(--radius-md); background: var(--surface-tint); }
   .muted { color: var(--text-muted); }
-  .related-heading { margin-block-end: var(--space-l); }
   .meta { display: flex; flex-wrap: wrap; column-gap: var(--space-s); row-gap: var(--space-3xs); color: var(--text-muted); }
+  .post-layout { display: grid; gap: var(--space-xl); inline-size: min(100% - 2 * var(--space-m), 88rem); margin-inline: auto; padding-block-end: var(--space-3xl); }
+  .post-content { min-inline-size: 0; }
+  .sticky { display: grid; gap: var(--space-l); }
+  .toc-column, .recommendations { min-inline-size: 0; font-size: var(--font-size-body-s, 1rem); }
+  .recommendations ul { list-style: none; padding: 0; margin-block: var(--space-s) 0; display: grid; gap: var(--space-xs); }
+  .recommendations li a { display: block; padding-block: var(--space-3xs); text-decoration: none; }
+  .post-layout a:focus-visible { outline: 2px solid var(--text-link); outline-offset: 3px; }
+  .post-layout a:active { color: var(--text-link-active); }
+  .sidebar-cta { display: grid; gap: var(--space-m); padding: var(--space-m); border-radius: var(--radius-lg); background: var(--surface-tint); }
+  .post-button { display: inline-flex; justify-content: center; align-items: center; min-block-size: 44px; padding: var(--space-xs) var(--space-s); border-radius: var(--radius-pill); background: var(--surface-accent); color: var(--text-on-accent); text-decoration: none; }
+  .post-button:active { background: var(--text-link-active); color: var(--text-on-accent) !important; }
+  .recommendations li + li { border-block-start: 1px solid var(--border-hairline); padding-block-start: var(--space-xs); }
+  @media (hover: hover) and (pointer: fine) { .post-layout a:hover { text-decoration: underline; text-underline-offset: .2em; } }
+  @media (min-width: 75rem) {
+    .post-layout { grid-template-columns: minmax(12rem, 1fr) minmax(0, 2.8fr) minmax(14rem, 1fr); gap: var(--space-l); }
+    .sticky { position: sticky; inset-block-start: 7rem; max-block-size: calc(100dvh - 8rem); overflow-y: auto; overscroll-behavior: contain; padding: var(--space-3xs); }
+  }
 </style>

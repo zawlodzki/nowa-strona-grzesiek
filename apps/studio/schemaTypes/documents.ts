@@ -30,6 +30,19 @@ export const post = defineType({
     defineField({name: 'kind', title: 'Rodzaj', type: 'string', options: {list: ['blog', 'newsletter']}, initialValue: 'blog', validation: (rule) => rule.required().custom((value) => value === undefined || ['blog', 'newsletter'].includes(value) || 'Wybierz dozwoloną wartość.')}),
     defineField({name: 'readingTime', title: 'Czas czytania w minutach', type: 'number', validation: (rule) => rule.integer().min(1)}),
     defineField({name: 'cta', type: 'link'}),
+    defineField({
+      name: 'relatedPosts', title: 'Sprawdź również',
+      description: 'Maksymalnie 3 wpisy. Puste pole pokazuje 3 najnowsze inne wpisy.',
+      type: 'array',
+      of: [defineArrayMember({
+        type: 'reference', to: [{type: 'post'}],
+        options: {filter: ({document}) => ({
+          filter: '_id != $id && language == $language',
+          params: {id: document._id.replace(/^drafts\./, ''), language: document.language},
+        })},
+      })],
+      validation: (rule) => rule.max(3).unique(),
+    }),
     defineField({name: 'faq', title: 'FAQ', type: 'array', of: [defineArrayMember({name: 'postFaqItem', type: 'object', fields: [
       defineField({name: 'q', title: 'Pytanie', type: 'string', validation: (rule) => rule.required().regex(/\S/)}),
       defineField({name: 'a', title: 'Odpowiedź', type: 'portableText', validation: (rule) => rule.required().min(1)}),

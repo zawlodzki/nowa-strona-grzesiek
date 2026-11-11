@@ -1,0 +1,208 @@
+{
+  "origin": "http://127.0.0.1:8790",
+  "results": [
+    {
+      "slug": "asana-vs-jira",
+      "width": 1440,
+      "headings": [
+        {
+          "id": "post-kiedy-wybralbym-asane",
+          "tag": "H2",
+          "text": "Kiedy wybrałbym Asanę",
+          "nested": false
+        },
+        {
+          "id": "post-kiedy-zostalbym-przy-jirze",
+          "tag": "H2",
+          "text": "Kiedy zostałbym przy Jirze",
+          "nested": false
+        },
+        {
+          "id": "post-ai-w-asanie-i-jirze-porownuj-sposob-wykonania-pracy",
+          "tag": "H2",
+          "text": "AI w Asanie i Jirze: porównuj sposób wykonania pracy",
+          "nested": false
+        },
+        {
+          "id": "post-czego-zaden-system-nie-ustali-za-was",
+          "tag": "H2",
+          "text": "Czego żaden system nie ustali za Was",
+          "nested": false
+        },
+        {
+          "id": "post-asana-razem-z-jira-co-sie-synchronizuje-a-co-trzeba-uzgodnic",
+          "tag": "H2",
+          "text": "Asana razem z Jirą: co się synchronizuje, a co trzeba uzgodnić",
+          "nested": false
+        },
+        {
+          "id": "post-ile-kosztuje-asana-jira-i-praca-ai",
+          "tag": "H2",
+          "text": "Ile kosztuje Asana, Jira i praca AI",
+          "nested": false
+        },
+        {
+          "id": "post-jak-sprawdzic-wybor-przed-migracja",
+          "tag": "H2",
+          "text": "Jak sprawdzić wybór przed migracją",
+          "nested": false
+        },
+        {
+          "id": "post-jesli-wybierasz-asane-zacznij-od-jednego-procesu",
+          "tag": "H2",
+          "text": "Jeśli wybierasz Asanę, zacznij od jednego procesu",
+          "nested": false
+        }
+      ],
+      "activeTarget": "post-asana-razem-z-jira-co-sie-synchronizuje-a-co-trzeba-uzgodnic",
+      "activeCount": 1,
+      "indicator": {
+        "background": "rgba(0, 0, 0, 0)",
+        "decoration": "none",
+        "segmentWidth": "2px",
+        "segmentColor": [
+          58,
+          72,
+          204,
+          255
+        ],
+        "segmentOffset": 0,
+        "trackWidth": "1px",
+        "transition": "0s"
+      },
+      "buttonStyle": {
+        "radius": "999px",
+        "paddingInline": "24px",
+        "paddingBlock": "8px"
+      },
+      "reverseScrollPassed": true,
+      "avatar": {
+        "width": 80,
+        "height": 80,
+        "fit": "cover",
+        "radius": "50%",
+        "position": "50% 0%",
+        "headroom": "8px"
+      },
+      "icon": true,
+      "overflow": false
+    },
+    {
+      "slug": "asana-cennik",
+      "width": 1440,
+      "headings": [
+        {
+          "id": "post-asana-personal-kiedy-darmowy-plan-wystarczy",
+          "tag": "H2",
+          "text": "Asana Personal: kiedy darmowy plan wystarczy",
+          "nested": false
+        },
+        {
+          "id": "post-asana-starter-plan-do-pierwszego-procesu-zespolowego",
+          "tag": "H2",
+          "text": "Asana Starter: plan do pierwszego procesu zespołowego",
+          "nested": false
+        },
+        {
+          "id": "post-asana-advanced-kiedy-portfolio-uzasadnia-doplate",
+          "tag": "H2",
+          "text": "Asana Advanced: kiedy portfolio uzasadnia dopłatę",
+          "nested": false
+        },
+        {
+          "id": "post-enterprise-nie-za-wielkosc-firmy-tylko-za-wymagania-administracyjne",
+          "tag": "H2",
+          "text": "Enterprise: nie za wielkość firmy, tylko za wymagania administracyjne",
+          "nested": false
+        },
+        {
+          "id": "post-ile-miejsc-asana-doliczy-do-rachunku",
+          "tag": "H2",
+          "text": "Ile miejsc Asana doliczy do rachunku",
+          "nested": false
+        },
+        {
+          "id": "post-rocznie-czy-miesiecznie",
+          "tag": "H2",
+          "text": "Rocznie czy miesięcznie",
+          "nested": false
+        },
+        {
+          "id": "post-dodatki-ktore-moga-zmienic-rachunek",
+          "tag": "H2",
+          "text": "Dodatki, które mogą zmienić rachunek",
+          "nested": false
+        },
+        {
+          "id": "post-ai-teammates",
+          "tag": "H3",
+          "text": "AI Teammates",
+          "nested": true
+        },
+        {
+          "id": "post-timesheets-and-budgets",
+          "tag": "H3",
+          "text": "Timesheets and Budgets",
+          "nested": true
+        },
+        {
+          "id": "post-compliance-management-i-permissions-management",
+          "tag": "H3",
+          "text": "Compliance management i Permissions management",
+          "nested": true
+        },
+        {
+          "id": "post-jak-asana-rozlicza-kredyty-i-tokeny-ai-studio",
+          "tag": "H2",
+          "text": "Jak Asana rozlicza kredyty i tokeny AI Studio",
+          "nested": false
+        },
+        {
+          "id": "post-stackai-by-asana-to-osobny-produkt",
+          "tag": "H2",
+          "text": "StackAI by Asana to osobny produkt",
+          "nested": false
+        },
+        {
+          "id": "post-nie-zaczynaj-wyboru-od-porownania-funkcji",
+          "tag": "H2",
+          "text": "Nie zaczynaj wyboru od porównania funkcji",
+          "nested": false
+        }
+      ],
+      "activeTarget": "post-ai-teammates",
+      "activeCount": 1,
+      "indicator": {
+        "background": "rgba(0, 0, 0, 0)",
+        "decoration": "none",
+        "segmentWidth": "2px",
+        "segmentColor": [
+          58,
+          72,
+          204,
+          255
+        ],
+        "segmentOffset": 0,
+        "trackWidth": "1px",
+        "transition": "0s"
+      },
+      "buttonStyle": {
+        "radius": "999px",
+        "paddingInline": "24px",
+        "paddingBlock": "8px"
+      },
+      "reverseScrollPassed": true,
+      "avatar": {
+        "width": 80,
+        "height": 80,
+        "fit": "cover",
+        "radius": "50%",
+        "position": "50% 0%",
+        "headroom": "8px"
+      },
+      "icon": true,
+      "overflow": false
+    }
+  ],
+  "noJavaScriptNestedLinks": true
+}

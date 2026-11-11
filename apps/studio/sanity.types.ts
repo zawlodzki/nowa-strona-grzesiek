@@ -671,6 +671,11 @@ export type Post = {
   kind?: "blog" | "newsletter";
   readingTime?: number;
   cta?: Link;
+  relatedPosts?: Array<
+    {
+      _key: string;
+    } & PostReference
+  >;
   faq?: Array<{
     q?: string;
     a?: PortableText;

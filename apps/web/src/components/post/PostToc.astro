@@ -1,0 +1,54 @@
+---
+import type { TocEntry } from './outline';
+interface Props { entries: TocEntry[]; pl: boolean; }
+const { entries, pl } = Astro.props;
+---
+{entries.length > 0 && <nav aria-labelledby="toc-heading" data-post-toc>
+  <h2 id="toc-heading" class="type-heading-xs">{pl ? 'Spis treści' : 'Contents'}</h2>
+  <ol role="list">{entries.map((heading) => <li>
+    <a href={`#${heading.id}`}>{heading.text}</a>
+    {heading.children.length > 0 && <ol role="list">{heading.children.map((child) => <li><a href={`#${child.id}`}>{child.text}</a></li>)}</ol>}
+  </li>)}</ol>
+</nav>}
+<script>
+  const toc = document.querySelector<HTMLElement>('[data-post-toc]');
+  if (toc) {
+    const links = [...toc.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')];
+    const targets = links.flatMap((link) => {
+      const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+      return heading ? [{ link, heading }] : [];
+    });
+    let active: HTMLAnchorElement | undefined;
+    let scheduled = false;
+    const update = () => {
+      scheduled = false;
+      const header = document.querySelector('body > header');
+      const offset = Math.max(120, header?.getBoundingClientRect().bottom ?? 0);
+      const current = targets.findLast(({ heading }) => heading.getBoundingClientRect().top <= offset)?.link;
+      if (current === active) return;
+      active?.removeAttribute('aria-current');
+      current?.setAttribute('aria-current', 'location');
+      active = current;
+    };
+    const schedule = () => {
+      if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+    };
+    addEventListener('scroll', schedule, { passive: true });
+    addEventListener('resize', schedule, { passive: true });
+    addEventListener('hashchange', schedule);
+    document.fonts.ready.then(schedule);
+    update();
+  }
+</script>
+<style>
+  ol { list-style: none; padding: 0; margin-block: var(--space-s) 0; display: grid; gap: var(--space-xs); }
+  nav > ol { --toc-indent: var(--space-s); position: relative; padding-inline-start: var(--toc-indent); }
+  nav > ol::before { content: ''; position: absolute; inset-block: 0; inset-inline-start: 0; inline-size: 1px; background: var(--border-hairline); }
+  ol ol { --toc-indent: calc(2 * var(--space-s)); margin-block: var(--space-2xs) 0; padding-inline-start: var(--space-s); }
+  a { position: relative; display: block; padding: var(--space-3xs); text-decoration: none; border-radius: var(--radius-sm); }
+  a[aria-current="location"] { color: var(--text-link-active); font-weight: var(--font-weight-medium); }
+  a[aria-current="location"]::before { content: ''; position: absolute; inset-block: 0; inset-inline-start: calc(-1 * var(--toc-indent)); inline-size: 2px; background: var(--text-link); }
+  a:focus-visible { outline: 2px solid var(--text-link); outline-offset: 3px; }
+  a:active { color: var(--text-link-active); }
+  @media (hover: hover) and (pointer: fine) { a:hover { text-decoration: underline; text-underline-offset: .2em; } }
+</style>
