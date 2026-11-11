@@ -1,0 +1,34 @@
+[
+  {
+    "background": "oklch(0.47807 0.20192 271.544)",
+    "color": "oklch(1 0 none)",
+    "rgbBackground": [
+      58,
+      72,
+      204
+    ],
+    "rgbText": [
+      255,
+      255,
+      255
+    ],
+    "spans": [
+      "oklch(1 0 none)",
+      "oklch(1 0 none)"
+    ],
+    "outline": "oklch(0.47807 0.20192 271.544) solid 3px",
+    "offset": "3px",
+    "shadow": "oklch(1 0 none) 0px 0px 0px 3px",
+    "focus": true,
+    "contrast": 7.049864343691391
+  },
+  {
+    "inactiveHover": "oklch(0.98463 0.00171 247.839)"
+  },
+  {
+    "width": 390,
+    "height": 1633,
+    "stage": 1633,
+    "pinned": false
+  }
+]

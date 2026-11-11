@@ -119,11 +119,12 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   [data-scroll] .menu a { padding-block: 12px; }
   .menu { flex: 0 0 calc(35% - 12px); display: flex; flex-direction: column; gap: 16px; }
   .menu a { display: grid; gap: var(--space-xs); padding: 16px 24px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-body); }
-  .menu a[aria-selected="true"] { background: var(--surface-tint); box-shadow: inset 0 0 0 1px var(--border-focus); }
-  .menu a[aria-selected="true"] > span:first-child { color: var(--text-link); }
+  .menu a[aria-selected="true"] { background: var(--surface-accent); color: var(--text-on-accent); }
+  .menu a[aria-selected="true"] > span { color: inherit; }
   [data-ready] .menu a:not([aria-selected="true"]) > span:last-child { display: none; }
-  .menu a:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; }
+  .menu a:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; box-shadow: 0 0 0 3px var(--surface-page); }
   .menu a:active { background: var(--surface-tint); }
+  .menu a[aria-selected="true"]:active { background: var(--color-primary-70); }
   @media (hover: hover) and (pointer: fine) { .menu a:not([aria-selected="true"]):hover { background: var(--surface-soft); } }
   .panels { flex: 1; min-inline-size: 0; }
   .panel { border: 1px solid var(--border-default); background: var(--surface-page); border-radius: var(--radius-lg); padding: clamp(24px, 3.125vw, 40px); box-shadow: var(--shadow-panel); overflow-wrap: anywhere; }
