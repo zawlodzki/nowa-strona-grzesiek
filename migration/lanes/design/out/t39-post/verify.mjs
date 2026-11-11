@@ -12,7 +12,7 @@ for(const slug of ['asana-vs-jira','asana-vs-trello']) for(const width of [1440,
   const context=await browser.newContext({viewport:{width,height:900},permissions:['clipboard-read','clipboard-write']});
   const local=await context.newPage(),live=await context.newPage();
   const path=`/blog/${slug}`;
-  assert.equal((await local.goto(`http://127.0.0.1:8791${path}`)).status(),200);
+  assert.equal((await local.goto(`${process.env.VERIFY_ORIGIN || "http://127.0.0.1:8791"}${path}`)).status(),200);
   assert.equal((await live.goto(`https://zawlodzki.pl${path}`)).status(),200);
   for(const page of [local,live]) {
     const reject=page.getByRole('button',{name:'Odrzucam opcjonalne',exact:true});
@@ -31,7 +31,7 @@ for(const slug of ['asana-vs-jira','asana-vs-trello']) for(const width of [1440,
     return !!author && !!cta && !!faq && !!(author.compareDocumentPosition(cta)&4) && !!(cta.compareDocumentPosition(faq)&4);
   });assert(order,'author CTA FAQ order');
   const avatar=await local.locator('.avatar').evaluate(img=>({fit:getComputedStyle(img).objectFit,width:img.width,height:img.height,natural:img.naturalWidth/img.naturalHeight}));
-  assert.equal(avatar.fit,'contain');
+  assert.equal(avatar.fit,'cover');
   const sticky=[];
   async function capture(state) {
     const a=await live.screenshot();
@@ -73,7 +73,7 @@ for(const slug of ['asana-vs-jira','asana-vs-trello']) for(const width of [1440,
   await context.close();
 }
 for(const path of ['/','/blog']) {
- const page=await browser.newPage();assert.equal((await page.goto(`http://127.0.0.1:8791${path}`)).status(),200);
+ const page=await browser.newPage();assert.equal((await page.goto(`${process.env.VERIFY_ORIGIN || "http://127.0.0.1:8791"}${path}`)).status(),200);
  for(const width of [1440,768,375]){await page.setViewportSize({width,height:900});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await page.screenshot({path:`${out}regression-${path==='/'?'home':'blog'}-${width}.png`});}
  await page.close();
 }

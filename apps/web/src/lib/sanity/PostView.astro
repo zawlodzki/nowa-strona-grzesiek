@@ -2,6 +2,8 @@
 import CtaBand from '../../components/blocks/CtaBand.astro';
 import Faq from '../../components/blocks/Faq.astro';
 import PostBody from '../../components/post/PostBody.astro';
+import PostToc from '../../components/post/PostToc.astro';
+import { postOutline } from '../../components/post/outline';
 import SharePost from '../../components/post/SharePost.astro';
 import { relatedPosts } from '../../components/post/related';
 import NewsletterSignup from '../../components/blocks/NewsletterSignup.astro';
@@ -19,8 +21,7 @@ const person = site.person;
 const avatar = resolveImage(site, person?.image);
 const linkedIn = person?.sameAs?.find((url) => url.includes('linkedin.com'));
 const related = relatedPosts(post, site.posts);
-const headings = post.body.flatMap((block) => block._type === 'block' && ['h2', 'h3'].includes(block.style ?? '')
-  ? [{ id: `section-${block._key}`, text: block.children?.map((span) => span.text).join('') ?? '', level: block.style }] : []);
+const outline = postOutline(post.body);
 const contactHref = post.cta?.href ?? localHref(post.language, '/kontakt');
 const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _type: 'faqItem' as const, _key, question: q, answer: a }] : []);
 ---
@@ -49,14 +50,11 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
     <div class="post-layout">
       <aside class="toc-column" aria-label={pl ? 'Nawigacja artykułu' : 'Article navigation'}>
         <div class="sticky">
-          {headings.length > 0 && <nav aria-labelledby="toc-heading">
-            <h2 id="toc-heading" class="type-heading-xs">{pl ? 'Spis treści' : 'Contents'}</h2>
-            <ol role="list">{headings.map((heading) => <li class:list={{subheading: heading.level === 'h3'}}><a href={`#${heading.id}`}>{heading.text}</a></li>)}</ol>
-          </nav>}
+          <PostToc entries={outline.entries} pl={pl} />
           <SharePost title={post.title} path={localHref(post.language, post.path)} pl={pl} />
         </div>
       </aside>
-      <div class="post-content"><PostBody body={post.body} links={links} images={images} /></div>
+      <div class="post-content"><PostBody sections={outline.sections} links={links} images={images} /></div>
       <aside class="recommendations" aria-label={pl ? 'Polecane' : 'Recommended'}>
         <div class="sticky">
           <div class="sidebar-cta">
@@ -115,7 +113,7 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   .who { display: flex; align-items: center; gap: var(--space-s); }
   .who p { display: grid; overflow-wrap: anywhere; }
   .who strong { color: var(--text-heading); }
-  .avatar { inline-size: 7rem; block-size: auto; flex: none; object-fit: contain; object-position: center; border-radius: var(--radius-md); }
+  .avatar { inline-size: 5rem; block-size: 5rem; flex: none; object-fit: cover; object-position: center 12%; border-radius: var(--radius-round); }
   .links { display: flex; flex-wrap: wrap; gap: var(--space-m); }
   .author a:active { color: var(--text-link-active); }
   .muted { color: var(--text-muted); }
@@ -124,9 +122,8 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   .post-content { min-inline-size: 0; }
   .sticky { display: grid; gap: var(--space-l); }
   .toc-column, .recommendations { min-inline-size: 0; font-size: var(--font-size-body-s, 1rem); }
-  .toc-column ol, .recommendations ul { list-style: none; padding: 0; margin-block: var(--space-s) 0; display: grid; gap: var(--space-xs); }
-  .toc-column a, .recommendations li a { display: block; padding-block: var(--space-3xs); text-decoration: none; }
-  .toc-column .subheading { padding-inline-start: var(--space-s); }
+  .recommendations ul { list-style: none; padding: 0; margin-block: var(--space-s) 0; display: grid; gap: var(--space-xs); }
+  .recommendations li a { display: block; padding-block: var(--space-3xs); text-decoration: none; }
   .post-layout a:focus-visible { outline: 2px solid var(--text-link); outline-offset: 3px; }
   .post-layout a:active { color: var(--text-link-active); }
   .sidebar-cta { display: grid; gap: var(--space-m); padding: var(--space-m); border-radius: var(--radius-lg); background: var(--surface-tint); }

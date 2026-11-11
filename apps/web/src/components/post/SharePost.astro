@@ -13,7 +13,7 @@ const options = [
 ];
 ---
 <div class="share">
-  <button type="button" popovertarget="share-options">{pl ? 'Udostępnij' : 'Share'}</button>
+  <button class="share-trigger" type="button" popovertarget="share-options"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4" /></svg>{pl ? 'Udostępnij' : 'Share'}</button>
   <div id="share-options" popover aria-labelledby="share-heading">
     <h2 id="share-heading" class="type-heading-xs">{pl ? 'Udostępnij artykuł' : 'Share this article'}</h2>
     <ul role="list">{options.map(([label, href]) => <li><a href={href} target={href.startsWith('mailto:') ? undefined : '_blank'} rel="noopener noreferrer">{label}</a></li>)}</ul>
@@ -41,6 +41,8 @@ const options = [
   });
 </script>
 <style>
+  .share-trigger { gap: var(--space-2xs); }
+  .share-trigger svg { flex: none; inline-size: 1.2em; block-size: 1.2em; }
   button, a { min-block-size: 44px; display: inline-flex; align-items: center; padding: var(--space-2xs) var(--space-s); border-radius: var(--radius-md); }
   button { border: 1px solid var(--border-hairline); background: var(--surface-soft); color: var(--text-link); cursor: pointer; font: inherit; }
   button:active, a:active { background: var(--surface-tint); }

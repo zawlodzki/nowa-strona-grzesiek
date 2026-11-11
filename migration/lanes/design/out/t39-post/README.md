@@ -19,3 +19,13 @@ node migration/lanes/design/out/t39-post/verify.mjs
 ```
 
 Use `web.sh probe` and `web.sh shot` for the two post paths at each width. Always run `down`, including after a failed assertion. The browser script closes Chromium in `finally`. No external writes or production Sanity patches are needed because the optional CMS field has a runtime fallback.
+
+## Review changes on 2026-11-11
+
+The `review-*.png` files and `review-verification.json` supersede the original portrait and TOC evidence. The author now uses an 80px circular crop with `object-fit: cover`. The share trigger includes an inline decorative SVG. `PostToc` renders real nested lists and marks the current heading with `aria-current="location"`. Slug anchors are on the actual h2/h3 elements. A passive, animation-frame-throttled scroll listener updates the active link in either scroll direction. Links and nested structure work without JavaScript.
+
+Review proof used port 8790 after `lsof` confirmed it was free. Port 8791 was occupied by another task and was untouched. verify-web run `20261111-154824-p8790` passed doctor, both HTTP probes and desktop/mobile shots. `review-verify.mjs` exercised the built Worker at 1440 and 375px and captured icon, active TOC and round-avatar states. Repeat it with `VERIFY_ORIGIN=http://127.0.0.1:8790`, `PLAYWRIGHT_MODULE` and `CHROME_BIN` configured as above. Its `finally` closes Chromium; run verify-web `down --port 8790` after each attempt.
+
+The published Asana/Jira body contains eight h2 headings and no h3. Its screenshots therefore show the actual h2 outline. The additional `/blog/asana-cennik` screenshots prove all three existing h3 headings appear under their h2, target actual h3 elements and become active on scroll. No production content was changed to manufacture a nested outline on Asana/Jira.
+
+`outline.test.ts` verifies nesting, Polish slug normalization, duplicate titles, stable IDs after unrelated insertion, orphan h3 handling and bodies without headings. Web tests passed 86 with one existing skip; Astro check and TypeScript passed. The Worker was stopped with verify-web `down` after successful proof.
