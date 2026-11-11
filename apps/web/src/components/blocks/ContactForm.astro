@@ -12,6 +12,7 @@ interface Props {
 }
 const { data, contact = {}, id = 'kontakt' } = Astro.props;
 const variant = data.variant ?? 'landing';
+const channelsOnly = variant === 'channels';
 const full = variant === 'full';
 const form = data.formId ?? (full ? 'main-contact' : 'landing-contact');
 // /kontakt has no hero, so the full variant carries the page's H1.
@@ -24,7 +25,7 @@ const calendarHref = safeHref(data.calendar?.link?.href);
 const calendar = full && data.calendar?.heading && calendarHref ? { ...data.calendar, href: calendarHref } : undefined;
 const consultation = full && data.consultation?.heading && data.consultation.body ? data.consultation : undefined;
 const social = new Set(['linkedin', 'github', 'x', 'youtube', 'instagram']);
-const groups = (full ? data.channels?.groups ?? [] : []).flatMap((group) => {
+const groups = (full || channelsOnly ? data.channels?.groups ?? [] : []).flatMap((group) => {
   const items = (group.items ?? []).flatMap((item) => {
     const href = safeHref(item.href);
     return href && item.kind && item.label?.trim() ? [{ ...item, kind: item.kind, label: item.label, href }] : [];
@@ -33,7 +34,7 @@ const groups = (full ? data.channels?.groups ?? [] : []).flatMap((group) => {
 });
 const channels = groups.length > 0 ? data.channels : undefined;
 
-const details = data.showDetails !== false && !channels && (contact.email || contact.telephone);
+const details = data.showDetails !== false && !channelsOnly && !channels && (contact.email || contact.telephone);
 const side = Boolean(calendar || consultation || details);
 const tel = contact.telephone?.replace(/[^\d+]/g, '');
 
@@ -51,7 +52,7 @@ const icons: Record<string, string> = {
 };
 ---
 <section id={id} class="content-grid section contact" aria-labelledby={data.heading ? f('heading') : undefined}>
-  <div class:list={['inner', { landing: !full }]}>
+  <div class:list={['inner', { landing: !full && !channelsOnly, 'channels-only': channelsOnly }]}>
     {(data.tagline || data.heading || data.intro) && (
       <header class="head">
         {data.tagline && <p class="type-tagline">{data.tagline}</p>}
@@ -59,7 +60,7 @@ const icons: Record<string, string> = {
         {data.intro && <p class="type-body lines">{data.intro}</p>}
       </header>
     )}
-    <div class:list={['card', { split: side, full }]}>
+    {!channelsOnly && <div class:list={['card', { split: side, full }]}>
       <LeadForm form={form} id={f('form')} visible={['email', 'phone', 'message', 'newsletter', 'marketing-emails']} submitLabel="Wyślij zapytanie">
         {!full && <FormHeading class="form-heading">Formularz kontaktowy</FormHeading>}
         <div class="field">
@@ -115,7 +116,7 @@ const icons: Record<string, string> = {
           )}
         </div>
       )}
-    </div>
+    </div>}
     {channels && (
       <div class="channels" role="group" aria-labelledby={channels.heading ? f('channels') : undefined}>
         {(channels.tagline || channels.heading) && (
@@ -127,6 +128,7 @@ const icons: Record<string, string> = {
         <ul class="groups" role="list">
           {groups.map((group) => (
             <li class="group">
+              {channelsOnly && <span class="group-icon" aria-hidden="true"><svg viewBox="0 0 24 24" set:html={group.icons.length ? '<circle cx="12" cy="7" r="3"/><path d="M6 21v-3a6 6 0 0 1 12 0v3M2 11v6m-3-3h6"/>' : icons.email} /></span>}
               <h3 class="type-heading-s">{group.title}</h3>
               {group.note && <p>{group.note}</p>}
               {group.icons.length > 0 && (
@@ -195,6 +197,10 @@ const icons: Record<string, string> = {
   .stroke, .channel-icons svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
   .channels { display: grid; gap: var(--space-l); margin-block-start: var(--space-2xl); }
+  .channels-only > .head { gap: 1.25rem; }
+  .group-icon { display: grid; place-items: center; inline-size: 3rem; block-size: 3rem; border-radius: var(--radius-sm); background: var(--surface-cyan-tint); color: var(--text-link); }
+  .group-icon svg { inline-size: 1.25em; block-size: 1.25em; fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .channels-only .channels { margin-block-start: 0; }
   .groups {
     display: grid;
     gap: var(--space-xl) var(--space-2xl);

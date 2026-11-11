@@ -295,6 +295,9 @@ def feature(page, node, component):
     if node.attrs.get('id'):
         block['anchorId'] = {'_type': 'slug', 'current': node.attrs['id']}
     block['cta'] = page.link(button)
+    if first(node, lambda n: {'feature-grid-3', 'about'} <= n.classes()) is not None:
+        block['layout'] = 'article'
+        block['mediaSide'] = 'right'
     return block
 
 
@@ -474,10 +477,16 @@ def testimonials(page, node, component, docs):
                 name, _, company = (part.strip() for part in raw.partition(','))
                 name = re.sub(r'\s+,?$', '', name)
             page.keep(f'{name} {company or ""}')
-            if first(box, tag_in('img')) is not None:
-                page.issue('testimonial-logo-dropped', name)
             _id = 'testimonial-' + hashlib.sha1(quote.encode()).hexdigest()[:16]
             docs.setdefault(_id, {'_id': _id, '_type': 'testimonial', 'name': name, 'company': company or None, 'quote': quote})
+            doc = docs[_id]
+            for img in all_of(box, tag_in('img')):
+                portrait = any('avatar' in c or 'author' in c for n in [img, *ancestors(img, box)] for c in n.classes()) or (attribution is not None and inside(img, attribution))
+                doc['authorImage' if portrait else 'image'] = page.image(img)
+            for link in all_of(box, tag_in('a')):
+                href = link.attrs.get('href', '')
+                if href.startswith('https://') and re.search(r'^https://(?:www\.)?linkedin\.com/in/', href):
+                    doc['linkedinUrl'] = href
             refs.append({'_type': 'reference', '_key': page.key(), '_ref': _id})
     elif first(node, has_class('testimonial-logo')) is not None:
         page.issue('testimonials-as-logos', 'logo row matched as Testimonials Section, imported as logoStrip')
@@ -533,6 +542,8 @@ def lines(page, node):
 
 def contact_form(page, node, component):
     tagline, heading, head = section_title(page, node)
+    if node.find('form') is None and component != 'Contact Section Details':
+        return {'variant': 'channels', 'tagline': tagline, 'heading': heading, 'channels': {'groups': contact_channels(page, node)['groups']}}
     full = page.path == '/kontakt'
     # Live landing forms carry a "Bezpośredni kontakt" column; the block renders it from the person document.
     details = full or 'Bezpośredni kontakt' in clean(text(node))
@@ -769,9 +780,30 @@ def build_page(row, meta, plan, keys, links, assets, issues, stats, docs, regist
     page = Page(path, keys, links, assets, issues, stats)
     page.registry_keys = registry_keys
     sections, losses, sections_extra = [], [], []
+    # Some Webflow exports nest complete sections inside a feature div. Lift those
+    # siblings before extraction so neither their text nor media leaks into the article.
+    expanded = []
     for kind, component, node in plan:
+        nested = all_of(node, lambda n: bool(n.classes() & {'contact-section', 'testimonials-section'}))
+        nested = [n for n in nested if not any(inside(n, other) for other in nested if other is not n)]
+        if nested:
+            import copy
+            node = copy.deepcopy(node)
+            nested = all_of(node, lambda n: bool(n.classes() & {'contact-section', 'testimonials-section'}))
+            nested = [n for n in nested if not any(inside(n, other) for other in nested if other is not n)]
+            for child in nested:
+                child.parent.children.remove(child)
+        expanded.append((kind, component, node))
+        expanded.extend(('contactForm' if 'contact-section' in child.classes() else 'testimonials', None, child) for child in nested)
+    for kind, component, node in expanded:
         page.kept = []
-        parts = segments(node) if kind in SPLIT else [node]
+        # HTML structure is authoritative when Webflow's tree uses a generic Section.
+        if 'testimonials-section' in node.classes() and first(node, has_class('testimonial-box')) is not None:
+            kind = 'testimonials'
+        if 'contact-section' in node.classes() and node.find('form') is None:
+            kind = 'contactForm'
+        article = first(node, lambda n: {'feature-grid-3', 'about'} <= n.classes()) is not None
+        parts = segments(node) if kind in SPLIT and not article else [node]
         if len(parts) > 1:
             stats['sectionsSplit'] = stats.get('sectionsSplit', 0) + 1
         start = len(sections)

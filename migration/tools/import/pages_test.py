@@ -106,5 +106,34 @@ class SectionExtractTests(unittest.TestCase):
         self.assertEqual(self.sections('richText', html, '/o-mnie')[0]['kind'], 'blog')
 
 
+
+class AboutParityTests(unittest.TestCase):
+    def build(self, html, kind='feature'):
+        docs, issues = {}, []
+        doc, _ = build_page({'old_path': '/example', 'indexable': 'yes', 'title': 'Example'},
+            {'id': 'example', 'title': 'Example', 'seoDescription': 'Example'},
+            [(kind, None, parse(html))], Keys('/example'), None, Assets('/nonexistent'), issues, {}, docs, set())
+        return doc['sections'], docs, issues
+
+    def test_article_keeps_headings_and_lifts_nested_sections(self):
+        sections, docs, _ = self.build('''<div class="feature-grid-3 about"><div class="feature-content-wrapper"><h1>Article</h1><p>First</p><h2>Next</h2><p>Second</p></div><img src="https://example.com/portrait.webp" alt="Author"></div><div class="contact-section"><h2>Contact</h2><div><h3>Social</h3><a href="https://github.com/example">wrong label</a></div></div><div class="testimonials-section"><h2>Opinions</h2><div class="testimonial-box"><p>"Quote"</p><div class="bold">- Author, Company</div></div></div>''')
+        self.assertEqual([s['_type'] for s in sections], ['feature', 'contactForm', 'testimonials'])
+        self.assertEqual(sections[0]['layout'], 'article')
+        self.assertEqual(sections[0]['mediaSide'], 'right')
+        self.assertEqual(len(sections[0]['body']), 3)
+        self.assertEqual(sections[1]['variant'], 'channels')
+        self.assertNotIn('formId', sections[1])
+        self.assertEqual(sections[1]['channels']['groups'][0]['items'][0]['label'], 'GitHub')
+        self.assertEqual(len(docs), 1)
+        self.assertNotIn('authorImage', next(iter(docs.values())))
+
+    def test_card_media_is_not_dropped(self):
+        _, docs, issues = self.build('''<h2>Opinions</h2><div class="testimonial-box"><p>Quote</p><div class="bold">- Author</div><img class="avatar" src="https://example.com/author.webp" alt="Author"><img src="https://example.com/recommendation.webp" alt="Recommendation"><a href="https://www.linkedin.com/in/example/">in</a></div>''', 'testimonials')
+        card = next(iter(docs.values()))
+        self.assertIn('authorImage', card)
+        self.assertIn('image', card)
+        self.assertEqual(card['linkedinUrl'], 'https://www.linkedin.com/in/example/')
+        self.assertFalse(any(i['kind'] == 'testimonial-logo-dropped' for i in issues))
+
 if __name__ == '__main__':
     unittest.main()
