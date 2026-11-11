@@ -16,7 +16,7 @@ Error: Cannot find module '/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T
 }
 
 Node.js v24.22.2
-✖ src (21.824543ms)
+✖ src (33.315161ms)
 ℹ tests 1
 ℹ suites 0
 ℹ pass 0
@@ -24,10 +24,10 @@ Node.js v24.22.2
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 26.622376
+ℹ duration_ms 37.962571
 
 ✖ failing tests:
 
 test at src:1:1
-✖ src (21.824543ms)
+✖ src (33.315161ms)
   'test failed'
