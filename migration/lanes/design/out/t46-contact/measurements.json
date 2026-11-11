@@ -1,0 +1,242 @@
+[
+  {
+    "w": 1440,
+    "slug": "kontakt",
+    "mode": "live",
+    "links": [
+      {
+        "label": "grzesiek@zawlodzki.pl",
+        "href": "mailto:grzesiek@zawlodzki.pl",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      },
+      {
+        "label": "+48 571 088 338",
+        "href": "tel:+48571088338",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      },
+      {
+        "label": "Signal",
+        "href": "https://signal.me/#eu/N93P3LbtKuO_5kC1OTTxTwgXw_6HGb9tBhbQgAKqQ43FmwzWGJZNkIJixoswplN2",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      },
+      {
+        "label": "WhatsApp",
+        "href": "https://wa.me/48571088338",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      }
+    ]
+  },
+  {
+    "w": 1440,
+    "slug": "kontakt",
+    "mode": "new",
+    "links": [
+      {
+        "label": "grzesiek@zawlodzki.pl",
+        "href": "mailto:grzesiek@zawlodzki.pl",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      },
+      {
+        "label": "+48 571 088 338",
+        "href": "tel:+48571088338",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      },
+      {
+        "label": "Signal",
+        "href": "https://signal.me/#eu/N93P3LbtKuO_5kC1OTTxTwgXw_6HGb9tBhbQgAKqQ43FmwzWGJZNkIJixoswplN2",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      },
+      {
+        "label": "WhatsApp",
+        "href": "https://wa.me/48571088338",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      }
+    ]
+  },
+  {
+    "w": 1440,
+    "slug": "kontakt",
+    "before": "oklch(0.47807 0.20192 271.544)",
+    "hover": "oklch(0.41131 0.16667 271.389)",
+    "focus": {
+      "outline": "solid",
+      "width": "2px"
+    }
+  },
+  {
+    "w": 1440,
+    "slug": "home",
+    "mode": "live",
+    "links": [
+      {
+        "label": "emailgrzesiek@zawlodzki.pl",
+        "href": "mailto:grzesiek@zawlodzki.pl",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      },
+      {
+        "label": "phone+48 571 088 338",
+        "href": "tel:+48571088338",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      }
+    ]
+  },
+  {
+    "w": 1440,
+    "slug": "home",
+    "mode": "new",
+    "links": [
+      {
+        "label": "grzesiek@zawlodzki.pl",
+        "href": "mailto:grzesiek@zawlodzki.pl",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      },
+      {
+        "label": "+48 571 088 338",
+        "href": "tel:+48571088338",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      }
+    ]
+  },
+  {
+    "w": 1440,
+    "slug": "home",
+    "before": "oklch(0.47807 0.20192 271.544)",
+    "hover": "oklch(0.41131 0.16667 271.389)",
+    "focus": {
+      "outline": "solid",
+      "width": "2px"
+    }
+  },
+  {
+    "w": 390,
+    "slug": "kontakt",
+    "mode": "live",
+    "links": [
+      {
+        "label": "grzesiek@zawlodzki.pl",
+        "href": "mailto:grzesiek@zawlodzki.pl",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      },
+      {
+        "label": "+48 571 088 338",
+        "href": "tel:+48571088338",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      },
+      {
+        "label": "Signal",
+        "href": "https://signal.me/#eu/N93P3LbtKuO_5kC1OTTxTwgXw_6HGb9tBhbQgAKqQ43FmwzWGJZNkIJixoswplN2",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      },
+      {
+        "label": "WhatsApp",
+        "href": "https://wa.me/48571088338",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      }
+    ]
+  },
+  {
+    "w": 390,
+    "slug": "kontakt",
+    "mode": "new",
+    "links": [
+      {
+        "label": "grzesiek@zawlodzki.pl",
+        "href": "mailto:grzesiek@zawlodzki.pl",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      },
+      {
+        "label": "+48 571 088 338",
+        "href": "tel:+48571088338",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      },
+      {
+        "label": "Signal",
+        "href": "https://signal.me/#eu/N93P3LbtKuO_5kC1OTTxTwgXw_6HGb9tBhbQgAKqQ43FmwzWGJZNkIJixoswplN2",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      },
+      {
+        "label": "WhatsApp",
+        "href": "https://wa.me/48571088338",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      }
+    ]
+  },
+  {
+    "w": 390,
+    "slug": "kontakt",
+    "before": "oklch(0.47807 0.20192 271.544)",
+    "hover": "oklch(0.41131 0.16667 271.389)",
+    "focus": {
+      "outline": "solid",
+      "width": "2px"
+    }
+  },
+  {
+    "w": 390,
+    "slug": "home",
+    "mode": "live",
+    "links": [
+      {
+        "label": "emailgrzesiek@zawlodzki.pl",
+        "href": "mailto:grzesiek@zawlodzki.pl",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      },
+      {
+        "label": "phone+48 571 088 338",
+        "href": "tel:+48571088338",
+        "decoration": "none",
+        "color": "rgb(99, 107, 117)"
+      }
+    ]
+  },
+  {
+    "w": 390,
+    "slug": "home",
+    "mode": "new",
+    "links": [
+      {
+        "label": "grzesiek@zawlodzki.pl",
+        "href": "mailto:grzesiek@zawlodzki.pl",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      },
+      {
+        "label": "+48 571 088 338",
+        "href": "tel:+48571088338",
+        "decoration": "none",
+        "color": "oklch(0.47807 0.20192 271.544)"
+      }
+    ]
+  },
+  {
+    "w": 390,
+    "slug": "home",
+    "before": "oklch(0.47807 0.20192 271.544)",
+    "hover": "oklch(0.41131 0.16667 271.389)",
+    "focus": {
+      "outline": "solid",
+      "width": "2px"
+    }
+  }
+]

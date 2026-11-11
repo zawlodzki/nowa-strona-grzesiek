@@ -38,6 +38,7 @@ const channels = groups.length > 0 ? data.channels : undefined;
 const details = data.showDetails !== false && !channelsOnly && !channels && (contact.email || contact.telephone);
 const side = Boolean(calendar || consultation || details);
 const tel = contact.telephone?.replace(/[^\d+]/g, '');
+const telephoneLabel = contact.telephone?.replace(/^\+?48(\d{3})(\d{3})(\d{3})$/, '+48 $1 $2 $3');
 
 // Stroke icons on a 24 grid, drawn in currentColor so they follow the link state.
 const icons: Record<string, string> = {
@@ -108,7 +109,7 @@ const icons: Record<string, string> = {
                 {contact.telephone && tel && (
                   <li><a class="with-icon" href={`tel:${tel}`}>
                     <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3.6 7.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V17a1 1 0 0 1-1 1A17 17 0 0 1 0 1a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" /></svg>
-                    <span>{contact.telephone}</span>
+                    <span>{telephoneLabel}</span>
                   </a></li>
                 )}
               </ul>
@@ -193,6 +194,12 @@ const icons: Record<string, string> = {
   .portrait { inline-size: clamp(3.6875rem, .84rem + 12.15vw, 10.56rem); max-inline-size: 100%; border-radius: 0; block-size: auto; aspect-ratio: 1; object-fit: cover; margin-block-end: var(--space-xs); }
   .channel-rows { display: grid; gap: var(--space-3xs); margin: 0; padding: 0; list-style: none; }
   .channel-rows a { min-block-size: 44px; align-items: center; font-weight: var(--font-weight-medium); overflow-wrap: anywhere; }
+  .channel-rows a { color: var(--text-link); text-decoration: none; }
+  .channel-rows a:focus-visible { outline: 2px solid currentColor; outline-offset: .25em; }
+  .channel-rows a:active { color: var(--text-link-active); }
+  @media (hover: hover) and (pointer: fine) {
+    .channel-rows a:hover { color: var(--text-link-hover); }
+  }
   .channel-rows svg { block-size: 1cap; }
   .channel-rows svg.stroke { block-size: 1.3cap; }
   .stroke, .channel-icons svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
