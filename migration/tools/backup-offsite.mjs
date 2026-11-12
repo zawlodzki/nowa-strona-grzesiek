@@ -96,7 +96,7 @@ async function upload(bundle, name, sha1, sha256) {
       'X-Bz-Content-Sha1': sha1,
       'X-Bz-Info-sha256': sha256,
       'X-Bz-File-Retention-Mode': 'compliance',
-      'X-Bz-File-Retain-Until-Timestamp': String(retainUntil),
+      'X-Bz-File-Retention-Retain-Until-Timestamp': String(retainUntil),
     },
     body: data,
     redirect: 'error',
