@@ -1,0 +1,26 @@
+{
+ "kind": {
+  "type": "objectAttribute",
+  "value": {
+   "type": "union",
+   "of": [
+    {
+     "type": "string",
+     "value": "client"
+    },
+    {
+     "type": "string",
+     "value": "tool"
+    }
+   ]
+  },
+  "optional": true
+ },
+ "invert": {
+  "type": "objectAttribute",
+  "value": {
+   "type": "boolean"
+  },
+  "optional": true
+ }
+}

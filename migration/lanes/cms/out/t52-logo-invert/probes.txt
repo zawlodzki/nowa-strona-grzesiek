@@ -1,0 +1,29 @@
+# T52 probe output (wrangler dev --local, port 8790, rev 926d202 + working tree)
+
+## Run 20261112-174646-p8790: production data, no invert flags set (36 logos, 0 with invert)
+127.0.0.1	/	200	-	noindex, nofollow	text/html; charset=utf-8	CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki
+127.0.0.1	/wspolpraca	200	-	noindex, nofollow	text/html; charset=utf-8	Grzegorz Zawłodzki | Współpraca Way Forward
+127.0.0.1	/program-partnerski	200	-	noindex, nofollow	text/html; charset=utf-8	Program partnerski - automatyzacja procesów biznesowych | Grzegorz Zawłodzki
+127.0.0.1	/kurs-ai-w-sprzedazy	200	-	noindex, nofollow	text/html; charset=utf-8	AI w sprzedaży B2B — osiem modułów na waszych danych z CRM
+fallback-.body:
+  inverted: logo smmash
+  inverted: iimarbella logo
+  inverted: deky expo logo
+fallback-program-partnerski.body:
+  inverted: logo smmash
+  inverted: iimarbella logo
+  inverted: deky expo logo
+fallback-kurs-ai-w-sprzedazy.body:
+  inverted: logo smmash
+  inverted: iimarbella logo
+  inverted: deky expo logo
+fallback-wspolpraca.body:
+
+## Run 20261112-175824-p8790: same data, build-time override via flags-preload.mjs (rentli invert=true, smmash invert=false)
+[t52-preload] smmash invert=false
+[t52-preload] rentli invert=true
+127.0.0.1	/program-partnerski	200	-	noindex, nofollow	text/html; charset=utf-8	Program partnerski - automatyzacja procesów biznesowych | Grzegorz Zawłodzki
+flags-program-partnerski.body:
+  inverted: logo rentli
+  inverted: iimarbella logo
+  inverted: deky expo logo
