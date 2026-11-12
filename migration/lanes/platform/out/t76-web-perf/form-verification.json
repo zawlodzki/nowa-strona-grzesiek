@@ -1,0 +1,14 @@
+[
+  {
+    "form": "main-contact",
+    "tokenInputsBeforeInteraction": 0,
+    "nonemptyTokenOnPost": true,
+    "thankYou": "/podziekowanie-konsultacja"
+  },
+  {
+    "form": "newsletter",
+    "tokenInputsBeforeInteraction": 0,
+    "nonemptyTokenOnPost": true,
+    "thankYou": "/podziekowanie-newsletter"
+  }
+]

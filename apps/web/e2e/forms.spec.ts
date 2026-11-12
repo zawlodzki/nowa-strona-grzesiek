@@ -26,9 +26,11 @@ for (const form of FORMS) {
     await page.goto(form.page);
     await rejectOptionalConsent(page);
     const el = page.locator(`form[data-form="${form.key}"]`);
-    await expect(el.locator('[name="cf-turnstile-response"]')).toHaveValue(/.+/);
     await el.locator('input[name="email"]').fill(email);
+    // T76 renders Turnstile on submit; verify the token in the actual POST.
+    const submission = page.waitForRequest((request) => new URL(request.url()).pathname === '/api/form');
     await el.locator('button[type="submit"]').click();
+    expect((await submission).postData()).toMatch(/name="cf-turnstile-response"\r\n\r\n[^\r]+/);
 
     await page.waitForURL(form.thanks);
     await expect.poll(() => deliveries().filter((d) => d.body.payload.data.email === email)).toHaveLength(1);
