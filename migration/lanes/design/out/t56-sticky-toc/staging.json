@@ -1,0 +1,569 @@
+[
+  {
+    "width": 1440,
+    "position": "top",
+    "scrollY": 0,
+    "tocTop": 991.1875,
+    "tocHeight": 938,
+    "tocPosition": "static",
+    "offset": "112px",
+    "pageScroll": true,
+    "articleWidth": 896,
+    "right": {
+      "overflowY": "visible",
+      "maxBlockSize": "none",
+      "height": 720,
+      "scrollHeight": 720,
+      "pageScroll": false
+    },
+    "relatedHidden": true,
+    "ancestors": [
+      {
+        "tag": "ASIDE",
+        "class": "toc-column",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 11659
+      },
+      {
+        "tag": "DIV",
+        "class": "post-layout",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 11723
+      },
+      {
+        "tag": "ARTICLE",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14058
+      },
+      {
+        "tag": "MAIN",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14568
+      },
+      {
+        "tag": "BODY",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 15274
+      },
+      {
+        "tag": "HTML",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 900
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "position": "mid",
+    "scrollY": 6370,
+    "tocTop": -5378.8125,
+    "tocHeight": 938,
+    "tocPosition": "static",
+    "offset": "112px",
+    "pageScroll": true,
+    "articleWidth": 896,
+    "right": {
+      "overflowY": "visible",
+      "maxBlockSize": "none",
+      "height": 720,
+      "scrollHeight": 720,
+      "pageScroll": false
+    },
+    "relatedHidden": true,
+    "ancestors": [
+      {
+        "tag": "ASIDE",
+        "class": "toc-column",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 11659
+      },
+      {
+        "tag": "DIV",
+        "class": "post-layout",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 11723
+      },
+      {
+        "tag": "ARTICLE",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14058
+      },
+      {
+        "tag": "MAIN",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14568
+      },
+      {
+        "tag": "BODY",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 15274
+      },
+      {
+        "tag": "HTML",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 900
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "position": "late",
+    "scrollY": 11034,
+    "tocTop": -10042.8125,
+    "tocHeight": 938,
+    "tocPosition": "static",
+    "offset": "112px",
+    "pageScroll": true,
+    "articleWidth": 896,
+    "right": {
+      "overflowY": "visible",
+      "maxBlockSize": "none",
+      "height": 720,
+      "scrollHeight": 720,
+      "pageScroll": false
+    },
+    "relatedHidden": false,
+    "ancestors": [
+      {
+        "tag": "ASIDE",
+        "class": "toc-column",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 11659
+      },
+      {
+        "tag": "DIV",
+        "class": "post-layout",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 11723
+      },
+      {
+        "tag": "ARTICLE",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14058
+      },
+      {
+        "tag": "MAIN",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14568
+      },
+      {
+        "tag": "BODY",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 15274
+      },
+      {
+        "tag": "HTML",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 900
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "position": "top",
+    "scrollY": 0,
+    "tocTop": 963.96875,
+    "tocHeight": 938,
+    "tocPosition": "static",
+    "offset": "112px",
+    "pageScroll": true,
+    "articleWidth": 802,
+    "right": {
+      "overflowY": "visible",
+      "maxBlockSize": "none",
+      "height": 712,
+      "scrollHeight": 712,
+      "pageScroll": false
+    },
+    "relatedHidden": true,
+    "ancestors": [
+      {
+        "tag": "ASIDE",
+        "class": "toc-column",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 10704
+      },
+      {
+        "tag": "DIV",
+        "class": "post-layout",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 10768
+      },
+      {
+        "tag": "ARTICLE",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13047
+      },
+      {
+        "tag": "MAIN",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13547
+      },
+      {
+        "tag": "BODY",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14252
+      },
+      {
+        "tag": "HTML",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 900
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "position": "mid",
+    "scrollY": 5866,
+    "tocTop": -4902.03125,
+    "tocHeight": 938,
+    "tocPosition": "static",
+    "offset": "112px",
+    "pageScroll": true,
+    "articleWidth": 802,
+    "right": {
+      "overflowY": "visible",
+      "maxBlockSize": "none",
+      "height": 712,
+      "scrollHeight": 712,
+      "pageScroll": false
+    },
+    "relatedHidden": false,
+    "ancestors": [
+      {
+        "tag": "ASIDE",
+        "class": "toc-column",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 10704
+      },
+      {
+        "tag": "DIV",
+        "class": "post-layout",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 10768
+      },
+      {
+        "tag": "ARTICLE",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13047
+      },
+      {
+        "tag": "MAIN",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13547
+      },
+      {
+        "tag": "BODY",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14252
+      },
+      {
+        "tag": "HTML",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 900
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "position": "late",
+    "scrollY": 10147,
+    "tocTop": -9183.03125,
+    "tocHeight": 938,
+    "tocPosition": "static",
+    "offset": "112px",
+    "pageScroll": true,
+    "articleWidth": 802,
+    "right": {
+      "overflowY": "visible",
+      "maxBlockSize": "none",
+      "height": 712,
+      "scrollHeight": 712,
+      "pageScroll": false
+    },
+    "relatedHidden": false,
+    "ancestors": [
+      {
+        "tag": "ASIDE",
+        "class": "toc-column",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 10704
+      },
+      {
+        "tag": "DIV",
+        "class": "post-layout",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 10768
+      },
+      {
+        "tag": "ARTICLE",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13047
+      },
+      {
+        "tag": "MAIN",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13547
+      },
+      {
+        "tag": "BODY",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14252
+      },
+      {
+        "tag": "HTML",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 900
+      }
+    ]
+  },
+  {
+    "width": 1100,
+    "position": "top",
+    "scrollY": 0,
+    "tocTop": 933.78125,
+    "tocHeight": 938,
+    "tocPosition": "static",
+    "offset": "112px",
+    "pageScroll": true,
+    "articleWidth": 873,
+    "right": {
+      "overflowY": "visible",
+      "maxBlockSize": "none",
+      "height": 214,
+      "scrollHeight": 214,
+      "pageScroll": false
+    },
+    "relatedHidden": false,
+    "ancestors": [
+      {
+        "tag": "ASIDE",
+        "class": "toc-column",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 10841
+      },
+      {
+        "tag": "DIV",
+        "class": "post-layout",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 11142
+      },
+      {
+        "tag": "ARTICLE",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13344
+      },
+      {
+        "tag": "MAIN",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13830
+      },
+      {
+        "tag": "BODY",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14552
+      },
+      {
+        "tag": "HTML",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 900
+      }
+    ]
+  },
+  {
+    "width": 1100,
+    "position": "mid",
+    "scrollY": 5904,
+    "tocTop": -4970.21875,
+    "tocHeight": 938,
+    "tocPosition": "static",
+    "offset": "112px",
+    "pageScroll": true,
+    "articleWidth": 873,
+    "right": {
+      "overflowY": "visible",
+      "maxBlockSize": "none",
+      "height": 214,
+      "scrollHeight": 214,
+      "pageScroll": false
+    },
+    "relatedHidden": false,
+    "ancestors": [
+      {
+        "tag": "ASIDE",
+        "class": "toc-column",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 10841
+      },
+      {
+        "tag": "DIV",
+        "class": "post-layout",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 11142
+      },
+      {
+        "tag": "ARTICLE",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13344
+      },
+      {
+        "tag": "MAIN",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13830
+      },
+      {
+        "tag": "BODY",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14552
+      },
+      {
+        "tag": "HTML",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 900
+      }
+    ]
+  },
+  {
+    "width": 1100,
+    "position": "late",
+    "scrollY": 10240,
+    "tocTop": -9306.21875,
+    "tocHeight": 938,
+    "tocPosition": "static",
+    "offset": "112px",
+    "pageScroll": true,
+    "articleWidth": 873,
+    "right": {
+      "overflowY": "visible",
+      "maxBlockSize": "none",
+      "height": 214,
+      "scrollHeight": 214,
+      "pageScroll": false
+    },
+    "relatedHidden": false,
+    "ancestors": [
+      {
+        "tag": "ASIDE",
+        "class": "toc-column",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 10841
+      },
+      {
+        "tag": "DIV",
+        "class": "post-layout",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 11142
+      },
+      {
+        "tag": "ARTICLE",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13344
+      },
+      {
+        "tag": "MAIN",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 13830
+      },
+      {
+        "tag": "BODY",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 14552
+      },
+      {
+        "tag": "HTML",
+        "class": "",
+        "overflow": "visible",
+        "alignItems": "normal",
+        "height": 900
+      }
+    ]
+  }
+]
