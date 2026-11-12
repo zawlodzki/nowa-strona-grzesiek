@@ -1,0 +1,14 @@
+host	path	status	location	x-robots-tag	content-type	title
+127.0.0.1	/index.md	200	-	noindex, nofollow	text/markdown; charset=utf-8	-
+127.0.0.1	/sales-atlas-system.md	200	-	noindex, nofollow	text/markdown; charset=utf-8	-
+127.0.0.1	/blog/automatyzacja-sprzedazy.md	200	-	noindex, nofollow	text/markdown; charset=utf-8	-
+127.0.0.1	/polityka-prywatnosci.md	200	-	noindex, nofollow	text/markdown; charset=utf-8	-
+127.0.0.1	/	200	-	noindex, nofollow	text/html; charset=utf-8	CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki
+127.0.0.1	/sales-atlas-system	200	-	noindex, nofollow	text/html; charset=utf-8	Sales Atlas System - system sprzedaży dla firm B2B | Grzegorz Zawłodzki
+127.0.0.1	/blog/automatyzacja-sprzedazy	200	-	noindex, nofollow	text/html; charset=utf-8	Automatyzacja sprzedaży: co się opłaca | Grzegorz Zawłodzki
+127.0.0.1	/polityka-prywatnosci	200	-	noindex, nofollow	text/html; charset=utf-8	Polityka prywatności - Grzegorz Zawłodzki
+127.0.0.1	/konsultacja	301	http://127.0.0.1:8790/wspolpraca	noindex, nofollow	-	-
+127.0.0.1	/index.md/	301	http://127.0.0.1:8790/index.md	noindex, nofollow	-	-
+127.0.0.1	/missing-t59.md	404	-	noindex, nofollow	text/html; charset=utf-8	Nie znaleziono strony
+127.0.0.1	/INDEX.md	404	-	noindex, nofollow	text/html; charset=utf-8	Nie znaleziono strony
+www.zawlodzki.pl	/index.md	200	-	noindex	text/markdown; charset=utf-8	-

@@ -1,0 +1,83 @@
+/index.md
+Status: 200
+Content-Type: text/markdown; charset=utf-8
+X-Robots-Tag: noindex, nofollow
+# Łączę CRM, automatyzacje i AI w jeden system pracy zespołu sprzedaży
+
+Wdrażam CRM, automatyzacje n8n i agentów AI w zespołach sprzedaży B2B. Porządkuję proces, łączę narzędzia i szkolę handlowców.
+
+Canonical: https://www.zawlodzki.pl/
+
+## Łączę CRM, automatyzacje i AI w jeden system pracy zespołu sprzedaży
+
+Wdrożenia CRM, automatyzacji i AI w sprzedaży B2B
+
+Porządkuję proces sprzedaży, wdrażam CRM, łączę używane narzędzia i uruchamiam agentów AI. Handlowcy dostają aktualne dane, gotowe wersje ofert i follow-upów oraz mniej ręcznego raportowania.
+
+![Grafika: Frame 28 compressed](https://cdn.sanity.io/images/8u2zjhvn/production/03b455b6fade22fcfc90e03d554d67ec31921bb3-800x800.webp?w=800&fit=max&auto=format)
+
+[Umów bezpłatną konsultację](https://www.zawlodzki.pl/kontakt)
+
+
+/sales-atlas-system.md
+Status: 200
+Content-Type: text/markdown; charset=utf-8
+X-Robots-Tag: noindex, nofollow
+# Sales Atlas System
+
+System, według którego układam sprzedaż w firmach B2B do 250 osób. Dziewięć warstw, od diagnozy po pomiar, każda zapisana w narzędziach, a nie w dokumencie.
+
+Canonical: https://www.zawlodzki.pl/sales-atlas-system
+
+## Sales Atlas System
+
+Co to jest
+
+Powtarzalny system sprzedaży dla firm B2B, które sprzedają na spotkaniach. Dziewięć warstw, od diagnozy po pomiar, opisuje, jak ma działać sprzedaż i gdzie każda decyzja zostaje zapisana w narzędziach, żeby dało się ją potem sprawdzić.
+
+![Grzegorz Zawłodzki](https://cdn.sanity.io/images/8u2zjhvn/production/743f000b6306622a1a32bca730654ee937f8a7fe-800x800.avif?w=800&fit=max&auto=format)
+
+![Sales Atlas System badge](https://cdn.sanity.io/images/8u2zjhvn/production/2c88e5145801e7f2598d1228a8a1dcdd6a47d660-355x520.svg?w=355&fit=max&auto=format)
+
+
+/blog/automatyzacja-sprzedazy.md
+Status: 200
+Content-Type: text/markdown; charset=utf-8
+X-Robots-Tag: noindex, nofollow
+# Automatyzacja sprzedaży w firmie B2B: od czego zacząć i czego nie automatyzować
+
+Co zautomatyzować w sprzedaży B2B, a czego nie ruszać: dwie listy z wdrożeń, rachunek, czy automatyzacja się zwróci, i ceny wykonania od 2 000 zł netto.
+
+Canonical: https://www.zawlodzki.pl/blog/automatyzacja-sprzedazy
+
+![Automatyzacja sprzedaży w firmie B2B: od czego zacząć i czego nie automatyzować](https://cdn.sanity.io/images/8u2zjhvn/production/7fb3d02e435e57b45a6507ffd55588808bbcc4ca-1200x630.png?w=1200&fit=max&auto=format)
+
+Automatyzacja sprzedaży opłaca się tam, gdzie ta sama czynność powtarza się co tydzień, ma jeden poprawny wynik i dziś robi ją człowiek, przepisując dane z miejsca na miejsce: wejście leada do CRM-a, przypomnienie o ofercie bez odpowiedzi, umowa z danych, które już są w systemie, przekazanie wygranej sprawy do realizacji. Szkodzi tam, gdzie proces nie jest jeszcze ustalony, gdzie trwa rozmowa z klientem i gdzie automat nikomu nie powie, że przestał działać.
+
+Niżej masz obie listy, z przypadkami z wdrożeń, w których siedziałem. Do tego sposób, żeby przed zleceniem czegokolwiek policzyć, czy dana automatyzacja zwróci swój koszt, i ceny wykonania, których nie podaje żaden z tekstów w czołówce Google.
+
+**W skrócie:**
+
+- Zacznij od wejścia leada do systemu. Wszystkie dalsze automatyzacje pracują na danych, które ktoś wcześniej musiał wpisać.
+
+
+/polityka-prywatnosci.md
+Status: 200
+Content-Type: text/markdown; charset=utf-8
+X-Robots-Tag: noindex, nofollow
+# Polityka prywatności www.zawlodzki.pl
+
+Niniejsza Polityka Prywatności określa zasady przetwarzania danych osobowych, które zostały pozyskane od klientów za pośrednictwem strony www.zawlodzki.pl
+
+Canonical: https://www.zawlodzki.pl/polityka-prywatnosci
+
+obowiązuje od 24.08.2026
+
+## 1. Administrator danych
+
+Administratorem danych osobowych zbieranych za pośrednictwem strony internetowej dostępnej pod adresami www.zawlodzki.pl oraz www.zawlodzki.com, wraz z ich subdomenami („**Strona**”) jest **Wellbiz sp. z o.o.** z siedzibą w Krakowie, ul. Lipowa 3D, 30-702 Kraków, KRS 0001158341, NIP 6793323800, REGON 541006624 („**Administrator**”).
+
+Kontakt w sprawach danych osobowych: **grzesiek@zawlodzki.pl** lub pisemnie na adres siedziby.
+
+Dane przetwarzamy zgodnie z RODO (rozporządzenie 2016/679), ustawą z 10 maja 2018 r. o ochronie danych osobowych oraz – w zakresie plików cookies i komunikacji marketingowej – ustawą z 12 lipca 2024 r. Prawo komunikacji elektronicznej.
+
