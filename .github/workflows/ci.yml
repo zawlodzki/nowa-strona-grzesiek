@@ -5,18 +5,43 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version-file: .node-version
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
+      - run: pnpm test
+      - run: pnpm --filter web preview:test
+      - uses: browser-actions/setup-chrome@v2
+        id: chrome
+        with:
+          install-dependencies: true
+      # Hosted runners restrict Chrome's sandbox; these tests visit local fixtures only.
+      - run: |
+          printf '#!/usr/bin/env bash\nexec %q --no-sandbox "$@"\n' "$CHROME_PATH" > "$RUNNER_TEMP/test-chrome"
+          chmod +x "$RUNNER_TEMP/test-chrome"
+          CHROME_BIN="$RUNNER_TEMP/test-chrome" node --test "migration/tools/**/*.test.mjs"
+        env:
+          CHROME_PATH: ${{ steps.chrome.outputs.chrome-path }}
+      - run: |
+          python3 -I migration/tools/import/assets_test.py
+          python3 -I migration/tools/import/bundle_test.py
+          python3 -I migration/tools/import/pages_test.py
       - run: pnpm --filter web exec tsc --noEmit
       - run: pnpm build
       - run: python3 -I migration/tools/tasks.py check

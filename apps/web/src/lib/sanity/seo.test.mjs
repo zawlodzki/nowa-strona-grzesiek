@@ -52,3 +52,34 @@ test('all visible text testimonials reach the single serialized graph', async ()
     assert.ok(graph.some(n => n['@id'] === review.isPartOf['@id']));
   }
 });
+
+test('a course document makes its page a Course with its instance, wins over a service on the same page, and the home stub points at it', async () => {
+  const { serializeGraph } = await import('../../seo/graph.ts');
+  const doc = { ...page, _id: 'page-course', path: '/kurs', sections: [{ _type: 'pricing', plans: [{ name: 'Access', price: 2200 }] }] };
+  const home = { ...page, _id: 'page-home', path: '/' };
+  const plain = { _id: 's1', name: 'Course', description: 'Eight modules.', page: { _ref: doc._id } };
+  const course = { educationalLevel: 'Intermediate', audience: 'B2B companies', teaches: ['Process', 'CRM'], instance: { name: 'One year access', courseMode: 'online', courseWorkload: 'PT9H', startDate: '2026-10-01' } };
+  const build = (courses, target) => {
+    const value = withEntities({ ...site(), pages: [doc, home], services: [plain], courses, byId: new Map([[doc._id, doc], [home._id, home]]) });
+    return JSON.parse(serializeGraph(seoPage(value, { kind: 'page', language: 'pl', path: target.path, page: target })))['@graph'];
+  };
+
+  const before = build([], doc);
+  assert.ok(before.some(n => n['@type'] === 'Service'));
+  assert.ok(!before.some(n => n['@type'] === 'Course'));
+
+  const graph = build([{ ...plain, _id: 'c1', ...course }], doc);
+  assert.ok(!graph.some(n => n['@type'] === 'Service'));
+  const node = graph.find(n => n['@type'] === 'Course');
+  assert.equal(node['@id'], 'https://www.zawlodzki.pl/kurs#course');
+  assert.equal(node.isAccessibleForFree, false);
+  assert.deepEqual(node.teaches, course.teaches);
+  assert.deepEqual(node.audience, { '@type': 'BusinessAudience', name: 'B2B companies' });
+  assert.equal(node.hasCourseInstance['@type'], 'CourseInstance');
+  assert.equal(node.hasCourseInstance.courseWorkload, 'PT9H');
+  assert.deepEqual(node.offers.map(o => o.price), ['2200']);
+  assert.equal(graph.find(n => n['@id'] === 'https://www.zawlodzki.pl/kurs#webpage').mainEntity['@id'], node['@id']);
+
+  const items = build([{ ...plain, _id: 'c1', ...course }], home).find(n => n['@id'] === 'https://www.zawlodzki.pl/#webpage').mainEntity.itemListElement;
+  assert.deepEqual(items.map(i => [i.itemOffered['@type'], i.itemOffered['@id']]), [['Course', node['@id']]]);
+});

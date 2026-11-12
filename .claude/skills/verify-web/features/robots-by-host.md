@@ -20,7 +20,7 @@ Preconditions:
 - `web.sh doctor --port 8791` prints `doctor: healthy`.
 
 - **Staging HTML.** Run `web.sh probe / --port 8791`. The `x-robots-tag` column reads `noindex, nofollow`.
-- **Staging redirect, 404 and asset.** Run `web.sh probe /index.html --port 8791`, `web.sh probe /nope --port 8791` and `web.sh probe /favicon.svg --port 8791`. All three read `noindex, nofollow`.
+- **Staging redirect, 404 and asset.** Run `web.sh probe /index.html --port 8791`, `web.sh probe /nope --port 8791` and `web.sh probe /favicon.png --port 8791`. All three read `noindex, nofollow`.
 - **Production host.** Run `web.sh probe / --port 8791 --host www.zawlodzki.pl --label home-prod`. The `x-robots-tag` column is `-`. Confirm with `grep -i robots "$VERIFY_WEB_HOME/evidence/<run-id>/home-prod.headers"`, which prints nothing.
 - **Production redirect and 404.** Run `web.sh probe /index.html --port 8791 --host www.zawlodzki.pl --label index-prod` and `web.sh probe /nope --port 8791 --host www.zawlodzki.pl --label nope-prod`. Both have `x-robots-tag` set to `-`.
 - **Meta robots.** Run `grep -o '<meta name="robots"[^>]*>' "$VERIFY_WEB_HOME/evidence/<run-id>/home-prod.body"`. Today it prints `content="noindex"`, the expected scaffold state. After T12/T18, it must print nothing for `indexable=yes` rows.

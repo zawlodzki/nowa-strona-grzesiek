@@ -1,0 +1,5 @@
+host	path	status	location	x-robots-tag	content-type	title
+127.0.0.1	/bdc31ccbcd4d0adf56519189a77ebf3c.txt	200	-	noindex, nofollow	text/plain; charset=utf-8	-
+www.zawlodzki.pl	/bdc31ccbcd4d0adf56519189a77ebf3c.txt	200	-	-	text/plain; charset=utf-8	-
+www.zawlodzki.pl	/sitemap-pl.xml	200	-	-	application/xml	-
+127.0.0.1	/indexnow.txt	404	-	noindex, nofollow	text/html; charset=utf-8	Nie znaleziono strony
