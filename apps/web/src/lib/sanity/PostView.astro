@@ -94,6 +94,7 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
 </main>
 <style>
   main { --text-link: oklch(from #3a48cc l c h); --text-link-active: oklch(from #3a48cc l c h); --surface-accent: oklch(from #3a48cc l c h); }
+  .post-head { --breakout: 86rem; }
   .post-head .inner { display: grid; justify-items: start; gap: var(--space-m); max-inline-size: var(--measure-prose); }
   .post-head :global(figure) { justify-self: stretch; }
   .crumbs ol { display: flex; flex-wrap: wrap; gap: var(--space-3xs) var(--space-2xs); margin: 0; padding: 0; color: var(--text-muted); }
@@ -119,8 +120,8 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   .author a:active { color: var(--text-link-active); }
   .muted { color: var(--text-muted); }
   .meta { display: flex; flex-wrap: wrap; column-gap: var(--space-s); row-gap: var(--space-3xs); color: var(--text-muted); }
-  .post-layout { display: grid; gap: var(--space-xl); inline-size: min(100% - 2 * var(--layout-gutter), calc(var(--layout-container-max) - 2 * var(--layout-gutter))); margin-inline: auto; padding-block-end: var(--space-3xl); }
-  .post-content { min-inline-size: 0; }
+  .post-layout { display: grid; gap: var(--space-xl); inline-size: min(100% - 2 * var(--layout-gutter), calc(86rem - 2 * var(--layout-gutter))); margin-inline: auto; padding-block-end: var(--space-3xl); }
+  .post-content { --measure-prose: 72ch; min-inline-size: 0; max-inline-size: 72ch; }
   .sticky { display: grid; gap: var(--space-l); }
   .toc-column, .recommendations { min-inline-size: 0; font-size: var(--font-size-body-s, 1rem); }
   .recommendations ul { list-style: none; padding: 0; margin-block: var(--space-s) 0; display: grid; gap: var(--space-xs); }
@@ -134,12 +135,14 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   @media (hover: hover) and (pointer: fine) { .post-layout a:hover { text-decoration: underline; text-underline-offset: .2em; } }
   .sidebar-cta { display: none; }
   @media (min-width: 56rem) {
-    .post-layout { grid-template-columns: 12rem minmax(0, 1fr); gap: var(--space-l); }
+    .post-layout { grid-template-columns: 10rem minmax(0, 1fr); gap: var(--space-m); }
     .recommendations { grid-column: 2; }
-    .sticky { position: sticky; inset-block-start: 7rem; max-block-size: calc(100dvh - 8rem); overflow-y: auto; overscroll-behavior: contain; padding: var(--space-3xs); }
+    .sticky { position: sticky; inset-block-start: 7rem; padding: var(--space-3xs); }
   }
+  .sticky[data-page-scroll] { position: static; }
   @media (min-width: 80rem) {
-    .post-layout { grid-template-columns: 12rem minmax(0, 1fr) 14rem; }
+    .post-content { font-size: clamp(1.125rem, 0.125rem + 1.25vw, 1.25rem); }
+    .post-layout { grid-template-columns: 10rem minmax(0, 1fr) 14rem; }
     .recommendations { grid-column: 3; }
     .sidebar-cta { display: grid; }
     [data-related-posts][inert] { opacity: 0; pointer-events: none; }
@@ -151,6 +154,19 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
 </style>
 
 <script>
+  // A tall side panel belongs to the page scroll, never an inner scroller.
+  const panels = [...document.querySelectorAll<HTMLElement>('.post-layout .sticky')];
+  const fitPanels = () => {
+    for (const panel of panels) {
+      const offset = parseFloat(getComputedStyle(panel).insetBlockStart) || 0;
+      panel.toggleAttribute('data-page-scroll', panel.offsetHeight > innerHeight - offset - 16);
+    }
+  };
+  const panelObserver = new ResizeObserver(fitPanels);
+  panels.forEach((panel) => panelObserver.observe(panel));
+  addEventListener('resize', fitPanels, { passive: true });
+  fitPanels();
+
   const related = document.querySelector<HTMLElement>('[data-related-posts]');
   const content = document.querySelector<HTMLElement>('.post-content');
   if (related && content) {
