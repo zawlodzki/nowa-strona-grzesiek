@@ -1,0 +1,78 @@
+host	method	path	accept	status	content-type	vary	x-robots-tag	cache-control	cf-cache-status	age	etag	location
+www.zawlodzki.pl	GET	/index.md	text/markdown	200	text/markdown; charset=utf-8	-	noindex	public, max-age=0, must-revalidate	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	GET	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	MISS	-	-	-
+www.zawlodzki.pl	HEAD	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	HEAD	/?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	GET	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	HEAD	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	HEAD	/?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	GET	/?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	HEAD	/?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	GET	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	HEAD	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	HEAD	/?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	GET	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	HEAD	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/sales-atlas-system.md	text/markdown	200	text/markdown; charset=utf-8	-	noindex	public, max-age=0, must-revalidate	MISS	-	"f1cd5419e3a1c9078854e8fdf393bfc3"	-
+www.zawlodzki.pl	GET	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	HEAD	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/sales-atlas-system?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"f1cd5419e3a1c9078854e8fdf393bfc3"	-
+www.zawlodzki.pl	HEAD	/sales-atlas-system?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"f1cd5419e3a1c9078854e8fdf393bfc3"	-
+www.zawlodzki.pl	GET	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	HEAD	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/sales-atlas-system?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"f1cd5419e3a1c9078854e8fdf393bfc3"	-
+www.zawlodzki.pl	HEAD	/sales-atlas-system?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"f1cd5419e3a1c9078854e8fdf393bfc3"	-
+www.zawlodzki.pl	GET	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"f1cd5419e3a1c9078854e8fdf393bfc3"	-
+www.zawlodzki.pl	HEAD	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"f1cd5419e3a1c9078854e8fdf393bfc3"	-
+www.zawlodzki.pl	GET	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	HEAD	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"f1cd5419e3a1c9078854e8fdf393bfc3"	-
+www.zawlodzki.pl	HEAD	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"f1cd5419e3a1c9078854e8fdf393bfc3"	-
+www.zawlodzki.pl	GET	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	HEAD	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/blog/automatyzacja-sprzedazy.md	text/markdown	200	text/markdown; charset=utf-8	-	noindex	public, max-age=0, must-revalidate	MISS	-	"95f166b1a3995222c43b4116578c3b3d"	-
+www.zawlodzki.pl	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	MISS	-	-	-
+www.zawlodzki.pl	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"95f166b1a3995222c43b4116578c3b3d"	-
+www.zawlodzki.pl	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"95f166b1a3995222c43b4116578c3b3d"	-
+www.zawlodzki.pl	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"95f166b1a3995222c43b4116578c3b3d"	-
+www.zawlodzki.pl	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"95f166b1a3995222c43b4116578c3b3d"	-
+www.zawlodzki.pl	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"95f166b1a3995222c43b4116578c3b3d"	-
+www.zawlodzki.pl	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"95f166b1a3995222c43b4116578c3b3d"	-
+www.zawlodzki.pl	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"95f166b1a3995222c43b4116578c3b3d"	-
+www.zawlodzki.pl	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"95f166b1a3995222c43b4116578c3b3d"	-
+www.zawlodzki.pl	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/	*/*	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/	text/*	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/	text/markdown;q=0, */*;q=1	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/	text/markdown;q=0.4, text/html;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/	text/markdown, text/html	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/	text/html;q=0.2, text/markdown;q=0.8, */*;q=1	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	GET	/	text/markdown, */*	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	GET	/	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	GET	/konsultacja	text/markdown	301	-	-	-	-	-	-	-	https://www.zawlodzki.pl/wspolpraca
+www.zawlodzki.pl	GET	/index.html?x=1	text/markdown	301	-	-	-	-	-	-	-	https://www.zawlodzki.pl/?x=1
+www.zawlodzki.pl	GET	/sales-atlas-system/	text/markdown	301	-	-	-	-	-	-	-	https://www.zawlodzki.pl/sales-atlas-system
+www.zawlodzki.pl	GET	/t78-missing-page	text/markdown	404	text/html	-	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/O-MNIE	text/markdown	404	text/html	-	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/robots.txt	text/markdown	200	text/plain; charset=utf-8	-	-	public, max-age=0, must-revalidate	MISS	-	"8739a69dff072f85ba14b4ab6c36976c"	-
+www.zawlodzki.pl	GET	/llms.txt	text/markdown	200	text/plain; charset=utf-8	-	-	public, max-age=0, must-revalidate	HIT	-	"166296e91f4af6577539a1ab5b553f3f"	-
+www.zawlodzki.pl	GET	/sitemap.xml	text/markdown	200	application/xml	-	-	public, max-age=0, must-revalidate	HIT	-	"50c3ca6465e143af5ffa2e7f60327bbd"	-
+www.zawlodzki.pl	GET	/sitemap-pl.xml	text/markdown	200	application/xml	-	-	public, max-age=0, must-revalidate	HIT	-	"777181e54e0aaace456f6b9b7c6184d4"	-
+www.zawlodzki.pl	GET	/blog/rss.xml	text/markdown	200	application/xml	-	-	public, max-age=0, must-revalidate	HIT	-	"a855a9b62b9ccc7e9475ce110dd7c603"	-
+www.zawlodzki.pl	GET	/api/form	text/markdown	405	-	-	-	-	-	-	-	-
+www.zawlodzki.pl	GET	/index.md	text/markdown	200	text/markdown; charset=utf-8	-	noindex	public, max-age=0, must-revalidate	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	GET	/	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+www.zawlodzki.pl	GET	/	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/podziekowanie-konsultacja	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	Accept	-	public, max-age=0, must-revalidate	HIT	-	-	-
+www.zawlodzki.pl	GET	/podziekowanie-konsultacja	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex	private, no-store	MISS	-	"8c52976816999b44294c6032cb194b0b"	-
+www.zawlodzki.pl	HEAD	/podziekowanie-konsultacja	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex	private, no-store	HIT	-	"8c52976816999b44294c6032cb194b0b"	-
