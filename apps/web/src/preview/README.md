@@ -69,7 +69,7 @@ On a delete, `after()` is null. Read the type from `before()` first, and test th
 && !(_id in path("versions.**"))
 && coalesce(before()._type, _type) in [
   "page", "post", "person", "organization", "siteSettings",
-  "service", "logo", "testimonial", "translation.metadata", "sanity.imageAsset"
+  "service", "course", "redirect", "logo", "testimonial", "translation.metadata", "sanity.imageAsset"
 ]
 ```
 
