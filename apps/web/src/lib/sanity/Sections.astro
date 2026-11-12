@@ -43,7 +43,7 @@ const postsOf = (kind: string | undefined) => site.posts
       const logos = (section.logos ?? []).flatMap((ref): ResolvedLogo[] => {
         const logo = site.logos.get(ref._ref);
         const image = resolveImage(site, logo?.image);
-        return logo && image ? [{ _id: logo._id, name: logo.name, url: logo.url, image }] : [];
+        return logo && image ? [{ _id: logo._id, name: logo.name, url: logo.url, invert: logo.invert, image }] : [];
       });
       return <LogoStrip data={{ ...section, intro: section.intro === section.title ? undefined : section.intro }} logos={logos} />;
     }

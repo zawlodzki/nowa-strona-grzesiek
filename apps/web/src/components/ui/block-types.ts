@@ -4,7 +4,7 @@ import type { ResolvedImage } from '../portable-text/types';
 export type { ResolvedImage } from '../portable-text/types';
 export { safeHref } from '../portable-text/types';
 
-export type ResolvedLogo = Pick<Logo, '_id' | 'name' | 'url'> & {
+export type ResolvedLogo = Pick<Logo, '_id' | 'name' | 'url' | 'invert'> & {
   image: ResolvedImage;
 };
 

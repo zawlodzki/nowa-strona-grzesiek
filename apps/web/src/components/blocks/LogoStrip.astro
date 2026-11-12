@@ -7,8 +7,10 @@ import BlockSection from '../ui/BlockSection.astro';
 interface Props { data: LogoStrip; logos: ResolvedLogo[]; }
 const { data, logos } = Astro.props;
 // Live brand treatments belong to each logo, regardless of the page using this strip.
-// Webflow .testimonial-logo.difference marks white artwork that needs inversion.
-const difference = new Set(['smmash', 'iimarbella', 'deky expo']);
+// White artwork needs inversion. The logo's own flag wins; until production flags are set,
+// the names Webflow marked .testimonial-logo.difference keep the live treatment.
+const whiteByName = new Set(['smmash', 'iimarbella', 'deky expo']);
+const inverts = (logo: ResolvedLogo) => logo.invert ?? whiteByName.has(logo.name?.toLowerCase() ?? '');
 const small = new Set(['eagle lasers', 'american lens', '4hfix']);
 const tools = data.variant === 'tools';
 const hasHead = Boolean(data.tagline || data.title || data.intro);
@@ -20,7 +22,7 @@ const ordered = (data.logos ?? []).flatMap((ref) => { const logo = logos.find((i
     {data.title && (tools ? <p class="type-body-s">{data.title}</p> : <h2 id={pageHeadingId(Astro.locals, data.title)}>{data.title}</h2>)}
     {data.intro && <p class="type-body intro">{data.intro}</p>}
   </header>}
-  <ul aria-label={data.title || data.intro || 'Logotypy'} class:list={['logo-grid', { tools: data.variant === 'tools' }]}>{ordered.map((logo) => <li tabindex={safeHref(logo.url) ? undefined : 0} class:list={{ difference: difference.has(logo.name?.toLowerCase() ?? ''), small: small.has(logo.name?.toLowerCase() ?? '')}}>{safeHref(logo.url) ? <a href={safeHref(logo.url)}><img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" /></a> : <img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" />}</li>)}</ul>
+  <ul aria-label={data.title || data.intro || 'Logotypy'} class:list={['logo-grid', { tools: data.variant === 'tools' }]}>{ordered.map((logo) => <li tabindex={safeHref(logo.url) ? undefined : 0} class:list={{ difference: inverts(logo), small: small.has(logo.name?.toLowerCase() ?? '')}}>{safeHref(logo.url) ? <a href={safeHref(logo.url)}><img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" /></a> : <img src={logo.image.src} alt={logo.image.alt || logo.name || ''} width={logo.image.width} height={logo.image.height} loading="lazy" decoding="async" />}</li>)}</ul>
 </div></BlockSection>}
 <style>
   :is(h2, h3)[id] { scroll-margin-top: 7.5rem; }
