@@ -46,3 +46,25 @@ jobs:
       - run: pnpm --filter web exec tsc --noEmit
       - run: pnpm build
       - run: python3 -I migration/tools/tasks.py check
+
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter web exec playwright install --with-deps --only-shell chromium
+      - run: pnpm --filter web build
+      - run: pnpm --filter web e2e
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-report
+          path: apps/web/.wrangler/e2e/
+          include-hidden-files: true
+          retention-days: 14
