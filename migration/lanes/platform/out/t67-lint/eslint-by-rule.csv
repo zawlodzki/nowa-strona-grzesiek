@@ -1,0 +1,11 @@
+rule,severity,count
+no-var,warn,770
+@typescript-eslint/no-unused-vars,warn,140
+@typescript-eslint/ban-ts-comment,warn,52
+@typescript-eslint/no-unused-expressions,warn,6
+preserve-caught-error,warn,4
+no-useless-escape,warn,3
+no-control-regex,warn,2
+no-useless-assignment,warn,2
+prefer-rest-params,warn,1
+no-empty,warn,1
