@@ -24,5 +24,48 @@
       "N8N_FORM_WEBHOOK",
       "TURNSTILE_SECRET_KEY"
     ]
+  },
+  "env": {
+    "staging": {
+      "name": "zawlodzki-web",
+      "workers_dev": true,
+      "preview_urls": false,
+      "routes": [],
+      "assets": {
+        "directory": "./dist",
+        "binding": "ASSETS",
+        "run_worker_first": true,
+        "html_handling": "drop-trailing-slash",
+        "not_found_handling": "404-page"
+      },
+      "secrets": {
+        "required": [
+          "N8N_FORM_WEBHOOK",
+          "TURNSTILE_SECRET_KEY"
+        ]
+      }
+    },
+    "production": {
+      "name": "zawlodzki-web-production",
+      // T22 only: replace routes: [] after explicit cutover approval.
+      // "routes": [{ "pattern": "www.zawlodzki.pl", "custom_domain": true },
+      //            { "pattern": "zawlodzki.pl", "custom_domain": true }],
+      "workers_dev": false,
+      "preview_urls": false,
+      "routes": [],
+      "assets": {
+        "directory": "./dist",
+        "binding": "ASSETS",
+        "run_worker_first": true,
+        "html_handling": "drop-trailing-slash",
+        "not_found_handling": "404-page"
+      },
+      "secrets": {
+        "required": [
+          "N8N_FORM_WEBHOOK",
+          "TURNSTILE_SECRET_KEY"
+        ]
+      }
+    }
   }
 }

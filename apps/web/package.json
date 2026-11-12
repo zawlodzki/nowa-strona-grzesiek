@@ -7,16 +7,18 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node ../../migration/tools/check-dist.mjs",
     "check": "astro check",
     "preview": "wrangler dev",
-    "deploy": "astro build && wrangler deploy",
+    "deploy": "pnpm deploy:staging",
     "astro": "astro",
     "preview:build": "astro build --config src/preview/astro.config.mjs",
     "preview:dev": "astro dev --config src/preview/astro.config.mjs",
     "preview:serve": "wrangler dev --config .wrangler/preview/server/wrangler.json",
     "preview:test": "node --experimental-strip-types --test src/preview/*.test.ts",
-    "test": "node --test \"src/**/*.test.{ts,mjs}\""
+    "test": "node --test \"src/**/*.test.{ts,mjs}\"",
+    "deploy:staging": "pnpm build && wrangler deploy --env staging",
+    "deploy:production": "pnpm build && wrangler deploy --env production"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.4.2",
