@@ -1,7 +1,6 @@
 /index.md
 Status: 200
 Content-Type: text/markdown; charset=utf-8
-X-Robots-Tag: noindex, nofollow
 # Łączę CRM, automatyzacje i AI w jeden system pracy zespołu sprzedaży
 
 Wdrażam CRM, automatyzacje n8n i agentów AI w zespołach sprzedaży B2B. Porządkuję proces, łączę narzędzia i szkolę handlowców.
@@ -22,7 +21,6 @@ Porządkuję proces sprzedaży, wdrażam CRM, łączę używane narzędzia i uru
 /sales-atlas-system.md
 Status: 200
 Content-Type: text/markdown; charset=utf-8
-X-Robots-Tag: noindex, nofollow
 # Sales Atlas System
 
 System, według którego układam sprzedaż w firmach B2B do 250 osób. Dziewięć warstw, od diagnozy po pomiar, każda zapisana w narzędziach, a nie w dokumencie.
@@ -43,7 +41,6 @@ Powtarzalny system sprzedaży dla firm B2B, które sprzedają na spotkaniach. Dz
 /blog/automatyzacja-sprzedazy.md
 Status: 200
 Content-Type: text/markdown; charset=utf-8
-X-Robots-Tag: noindex, nofollow
 # Automatyzacja sprzedaży w firmie B2B: od czego zacząć i czego nie automatyzować
 
 Co zautomatyzować w sprzedaży B2B, a czego nie ruszać: dwie listy z wdrożeń, rachunek, czy automatyzacja się zwróci, i ceny wykonania od 2 000 zł netto.
@@ -64,7 +61,6 @@ Niżej masz obie listy, z przypadkami z wdrożeń, w których siedziałem. Do te
 /polityka-prywatnosci.md
 Status: 200
 Content-Type: text/markdown; charset=utf-8
-X-Robots-Tag: noindex, nofollow
 # Polityka prywatności www.zawlodzki.pl
 
 Niniejsza Polityka Prywatności określa zasady przetwarzania danych osobowych, które zostały pozyskane od klientów za pośrednictwem strony www.zawlodzki.pl
@@ -80,4 +76,24 @@ Administratorem danych osobowych zbieranych za pośrednictwem strony internetowe
 Kontakt w sprawach danych osobowych: **grzesiek@zawlodzki.pl** lub pisemnie na adres siedziby.
 
 Dane przetwarzamy zgodnie z RODO (rozporządzenie 2016/679), ustawą z 10 maja 2018 r. o ochronie danych osobowych oraz – w zakresie plików cookies i komunikacji marketingowej – ustawą z 12 lipca 2024 r. Prawo komunikacji elektronicznej.
+
+
+/index.md
+Status: 200
+Content-Type: text/markdown; charset=utf-8
+# Łączę CRM, automatyzacje i AI w jeden system pracy zespołu sprzedaży
+
+Wdrażam CRM, automatyzacje n8n i agentów AI w zespołach sprzedaży B2B. Porządkuję proces, łączę narzędzia i szkolę handlowców.
+
+Canonical: https://www.zawlodzki.pl/
+
+## Łączę CRM, automatyzacje i AI w jeden system pracy zespołu sprzedaży
+
+Wdrożenia CRM, automatyzacji i AI w sprzedaży B2B
+
+Porządkuję proces sprzedaży, wdrażam CRM, łączę używane narzędzia i uruchamiam agentów AI. Handlowcy dostają aktualne dane, gotowe wersje ofert i follow-upów oraz mniej ręcznego raportowania.
+
+![Grafika: Frame 28 compressed](https://cdn.sanity.io/images/8u2zjhvn/production/03b455b6fade22fcfc90e03d554d67ec31921bb3-800x800.webp?w=800&fit=max&auto=format)
+
+[Umów bezpłatną konsultację](https://www.zawlodzki.pl/kontakt)
 
