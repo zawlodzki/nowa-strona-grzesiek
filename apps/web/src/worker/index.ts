@@ -1,5 +1,6 @@
 import { permanentCanonicalRedirect } from './canonical.ts';
 import { type FormEnv, handleForm } from './form.ts';
+import { negotiateMarkdown } from './markdown-negotiation.ts';
 import { markdownResponse } from './markdown.ts';
 import { legacyRedirect } from './redirects.ts';
 
@@ -11,8 +12,16 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname === '/api/form') return handleForm(request, env);
-    const response = robotsResponse(url) ?? await markdownResponse(request, env.ASSETS) ?? legacyRedirect(url) ?? permanentCanonicalRedirect(await env.ASSETS.fetch(request), url);
-    if (url.hostname === PRODUCTION_HOST) return response;
+    const production = url.hostname === PRODUCTION_HOST;
+    const response = robotsResponse(url)
+      ?? await markdownResponse(request, env.ASSETS)
+      ?? legacyRedirect(url)
+      ?? permanentCanonicalRedirect(await negotiateMarkdown({
+        request,
+        assets: env.ASSETS,
+        preservePageRobots: production,
+      }), url);
+    if (production) return response;
     const staged = new Response(response.body, response);
     staged.headers.set('X-Robots-Tag', 'noindex, nofollow');
     return staged;

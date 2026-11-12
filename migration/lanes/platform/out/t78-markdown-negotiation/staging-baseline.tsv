@@ -1,0 +1,52 @@
+host	method	path	accept	status	content-type	vary	x-robots-tag	cache-control	cf-cache-status	age	etag	location
+zawlodzki-web.zawlodzki.workers.dev	GET	/index.md	text/markdown	200	text/markdown; charset=utf-8	-	noindex, nofollow	public, max-age=0, must-revalidate	MISS	-	"5c40399ec8b36bdc6fca17ce5a5ea8d3"	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/sales-atlas-system.md	text/markdown	200	text/markdown; charset=utf-8	-	noindex, nofollow	public, max-age=0, must-revalidate	MISS	-	"f1cd5419e3a1c9078854e8fdf393bfc3"	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/sales-atlas-system?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/sales-atlas-system?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/sales-atlas-system?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/sales-atlas-system?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/blog/automatyzacja-sprzedazy.md	text/markdown	200	text/markdown; charset=utf-8	-	noindex, nofollow	public, max-age=0, must-revalidate	MISS	-	"95f166b1a3995222c43b4116578c3b3d"	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-
+zawlodzki-web.zawlodzki.workers.dev	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	-	-

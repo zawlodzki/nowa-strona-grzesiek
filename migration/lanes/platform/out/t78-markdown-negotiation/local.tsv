@@ -1,0 +1,84 @@
+host	method	path	accept	status	content-type	vary	x-robots-tag	cache-control	cf-cache-status	age	etag	location
+127.0.0.1:8790	GET	/index.md	text/markdown	200	text/markdown; charset=utf-8	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	GET	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	HEAD	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	HEAD	/?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	GET	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	HEAD	/?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	HEAD	/?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	GET	/?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	HEAD	/?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	GET	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	HEAD	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	HEAD	/?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	GET	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	HEAD	/?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/sales-atlas-system.md	text/markdown	200	text/markdown; charset=utf-8	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"3b3e9256120f97d3ec225244b7180cb7"	-
+127.0.0.1:8790	GET	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"99e04e20a9109e33b9b2d6a282919c96"	-
+127.0.0.1:8790	HEAD	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"99e04e20a9109e33b9b2d6a282919c96"	-
+127.0.0.1:8790	GET	/sales-atlas-system?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"3b3e9256120f97d3ec225244b7180cb7"	-
+127.0.0.1:8790	HEAD	/sales-atlas-system?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"3b3e9256120f97d3ec225244b7180cb7"	-
+127.0.0.1:8790	GET	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"99e04e20a9109e33b9b2d6a282919c96"	-
+127.0.0.1:8790	HEAD	/sales-atlas-system?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"99e04e20a9109e33b9b2d6a282919c96"	-
+127.0.0.1:8790	GET	/sales-atlas-system?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"3b3e9256120f97d3ec225244b7180cb7"	-
+127.0.0.1:8790	HEAD	/sales-atlas-system?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"3b3e9256120f97d3ec225244b7180cb7"	-
+127.0.0.1:8790	GET	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"3b3e9256120f97d3ec225244b7180cb7"	-
+127.0.0.1:8790	HEAD	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"3b3e9256120f97d3ec225244b7180cb7"	-
+127.0.0.1:8790	GET	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"99e04e20a9109e33b9b2d6a282919c96"	-
+127.0.0.1:8790	HEAD	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"99e04e20a9109e33b9b2d6a282919c96"	-
+127.0.0.1:8790	GET	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"3b3e9256120f97d3ec225244b7180cb7"	-
+127.0.0.1:8790	HEAD	/sales-atlas-system?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"3b3e9256120f97d3ec225244b7180cb7"	-
+127.0.0.1:8790	GET	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"99e04e20a9109e33b9b2d6a282919c96"	-
+127.0.0.1:8790	HEAD	/sales-atlas-system?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"99e04e20a9109e33b9b2d6a282919c96"	-
+127.0.0.1:8790	GET	/blog/automatyzacja-sprzedazy.md	text/markdown	200	text/markdown; charset=utf-8	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"f5f083d2bf38a844d533cb6e62837412"	-
+127.0.0.1:8790	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"4119f3bb395aee84ef6e07336f591f62"	-
+127.0.0.1:8790	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"4119f3bb395aee84ef6e07336f591f62"	-
+127.0.0.1:8790	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"f5f083d2bf38a844d533cb6e62837412"	-
+127.0.0.1:8790	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"f5f083d2bf38a844d533cb6e62837412"	-
+127.0.0.1:8790	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"4119f3bb395aee84ef6e07336f591f62"	-
+127.0.0.1:8790	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"4119f3bb395aee84ef6e07336f591f62"	-
+127.0.0.1:8790	GET	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"f5f083d2bf38a844d533cb6e62837412"	-
+127.0.0.1:8790	HEAD	/blog/automatyzacja-sprzedazy?t78=html-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"f5f083d2bf38a844d533cb6e62837412"	-
+127.0.0.1:8790	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"f5f083d2bf38a844d533cb6e62837412"	-
+127.0.0.1:8790	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"f5f083d2bf38a844d533cb6e62837412"	-
+127.0.0.1:8790	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"4119f3bb395aee84ef6e07336f591f62"	-
+127.0.0.1:8790	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"4119f3bb395aee84ef6e07336f591f62"	-
+127.0.0.1:8790	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"f5f083d2bf38a844d533cb6e62837412"	-
+127.0.0.1:8790	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"f5f083d2bf38a844d533cb6e62837412"	-
+127.0.0.1:8790	GET	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"4119f3bb395aee84ef6e07336f591f62"	-
+127.0.0.1:8790	HEAD	/blog/automatyzacja-sprzedazy?t78=markdown-first	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"4119f3bb395aee84ef6e07336f591f62"	-
+127.0.0.1:8790	GET	/	*/*	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/	text/*	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/	text/markdown;q=0, */*;q=1	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/	text/markdown;q=0.4, text/html;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/	text/markdown, text/html	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/	text/html;q=0.2, text/markdown;q=0.8, */*;q=1	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	GET	/	text/markdown, */*	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	GET	/	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	GET	/	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	304	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+127.0.0.1:8790	GET	/	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	GET	/	text/markdown	304	text/markdown; charset=utf-8	Accept	noindex, nofollow	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+127.0.0.1:8790	GET	/konsultacja	text/markdown	301	-	-	noindex, nofollow	-	-	-	-	http://127.0.0.1:8790/wspolpraca
+127.0.0.1:8790	GET	/index.html?x=1	text/markdown	301	-	-	noindex, nofollow	-	-	-	-	http://127.0.0.1:8790/?x=1
+127.0.0.1:8790	GET	/sales-atlas-system/	text/markdown	301	-	-	noindex, nofollow	-	-	-	-	http://127.0.0.1:8790/sales-atlas-system
+127.0.0.1:8790	GET	/t78-missing-page	text/markdown	404	text/html; charset=utf-8	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6505edf955d3ec7ac2277c69ba447c5e"	-
+127.0.0.1:8790	GET	/O-MNIE	text/markdown	404	text/html; charset=utf-8	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6505edf955d3ec7ac2277c69ba447c5e"	-
+127.0.0.1:8790	GET	/robots.txt	text/markdown	200	text/plain; charset=utf-8	-	noindex, nofollow	-	-	-	-	-
+127.0.0.1:8790	GET	/llms.txt	text/markdown	200	text/plain; charset=utf-8	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"ea6b210c45063fcbe651fbff542fec89"	-
+127.0.0.1:8790	GET	/sitemap.xml	text/markdown	200	application/xml	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"49d02d84af575eadad56e4d36e4d122a"	-
+127.0.0.1:8790	GET	/sitemap-pl.xml	text/markdown	200	application/xml	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"a5a904a219eb8181d186aa6053e79a16"	-
+127.0.0.1:8790	GET	/blog/rss.xml	text/markdown	200	application/xml	-	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"d18df95af65ea763e3b2665939d0ac16"	-
+127.0.0.1:8790	GET	/api/form	text/markdown	405	-	-	-	-	-	-	-	-
+www.zawlodzki.pl	GET	/index.md	text/markdown	200	text/markdown; charset=utf-8	-	noindex	public, max-age=0, must-revalidate	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+www.zawlodzki.pl	GET	/	text/markdown	200	text/markdown; charset=utf-8	Accept	-	private, no-store	HIT	-	"2ff5805486a67d4318c2d00292b664c1"	-
+www.zawlodzki.pl	GET	/	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	-	public, max-age=0, must-revalidate	HIT	-	"6ae7849a155cf00158f1e01ffed30184"	-
+www.zawlodzki.pl	GET	/podziekowanie-konsultacja	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	-	public, max-age=0, must-revalidate	HIT	-	"99d45cee7ef08e53c8bf3567f607f877"	-
+www.zawlodzki.pl	GET	/podziekowanie-konsultacja	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex	private, no-store	HIT	-	"47b6876d4ea7ed7f06ed9a852c8befe8"	-
+www.zawlodzki.pl	HEAD	/podziekowanie-konsultacja	text/markdown	200	text/markdown; charset=utf-8	Accept	noindex	private, no-store	HIT	-	"47b6876d4ea7ed7f06ed9a852c8befe8"	-
+127.0.0.1:8790	GET	/404	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6505edf955d3ec7ac2277c69ba447c5e"	-
+127.0.0.1:8790	GET	/404	text/markdown	200	text/html; charset=utf-8	Accept	noindex, nofollow	public, max-age=0, must-revalidate	HIT	-	"6505edf955d3ec7ac2277c69ba447c5e"	-
