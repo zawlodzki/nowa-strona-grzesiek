@@ -130,6 +130,7 @@ export const logo = defineType({
     defineField({name: 'image', title: 'Logo', type: 'contentImage', validation: (rule) => rule.required()}),
     defineField({name: 'url', type: 'url', validation: (rule) => rule.uri({scheme: ['https']})}),
     defineField({name: 'kind', type: 'string', options: {list: ['client', 'tool']}, validation: (rule) => rule.required().custom((value) => value === undefined || ['client', 'tool'].includes(value) || 'Wybierz dozwoloną wartość.')}),
+    defineField({name: 'invert', title: 'Odwróć kolory', description: 'Zaznacz dla białego logo, które bez odwrócenia znika na jasnym tle.', type: 'boolean', initialValue: false}),
   ], preview: {select: {title: 'name', media: 'image'}},
 })
 export const service = defineType({

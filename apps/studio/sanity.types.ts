@@ -540,6 +540,7 @@ export type Logo = {
   image?: ContentImage;
   url?: string;
   kind?: "client" | "tool";
+  invert?: boolean;
 };
 
 export type Testimonial = {
@@ -767,6 +768,32 @@ export type SanityImageHotspot = {
   width?: number;
 };
 
+export type MediaFolderReference = {
+  _ref: string;
+  _type: "reference";
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: "media.folder";
+};
+
+export type MediaFolder = {
+  _id: string;
+  _type: "media.folder";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name?: string;
+  parent?: MediaFolderReference;
+};
+
+export type MediaTag = {
+  _id: string;
+  _type: "media.tag";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name?: Slug;
+};
+
 export type SanityImagePaletteSwatch = {
   _type: "sanity.imagePaletteSwatch";
   background?: string;
@@ -921,6 +948,9 @@ export type AllSanitySchemaTypes =
   | Post
   | SanityImageCrop
   | SanityImageHotspot
+  | MediaFolderReference
+  | MediaFolder
+  | MediaTag
   | SanityImagePaletteSwatch
   | SanityImagePalette
   | SanityImageDimensions
