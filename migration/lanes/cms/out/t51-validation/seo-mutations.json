@@ -1,0 +1,370 @@
+{
+  "mutations": [
+    {
+      "patch": {
+        "id": "page-634daaa2c8ceab0fea939fe6",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi1FwWP",
+        "set": {
+          "seo.title": "CRM, automatyzacja i AI w sprzedaży B2B | Grzegorz Zawłodzki"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-65364c7d554535d3e4141668",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi1FwWP",
+        "set": {
+          "seo.title": "Automatyzacja procesów biznesowych no-code"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-64aae5153be5dab60a907e5c",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi1FwWP",
+        "set": {
+          "seo.description": "Automatyzacje dla Pipedrive w n8n, Make i Zapier. Łączę CRM z pocztą, telefonią, ofertami i realizacją. Dane płyną same, handlowiec ma czas na sprzedaż."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-63dfea350c95fc855e2647ed",
+        "ifRevisionID": "CTyFX3i20RiZBqzaqvjcWM",
+        "set": {
+          "seo.title": "Darmowe materiały dla biznesów usługowych"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a65a09038ad0c6d6d0a1aa3",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi1FwWP",
+        "set": {
+          "seo.description": "8 modułów o AI: proces, kontekst firmy, CRM, skille, transkrypcje i oferty. Każdy kończysz z rozwiązaniem. 2200 zł netto/rok, w przedsprzedaży 1100 zł."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a6524cc429bff76b57cc347",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi1FwWP",
+        "set": {
+          "seo.description": "Start 1 października. W 8 tygodni wdrożycie w grupie kilku firm dwa procesy sprzedaży działające na waszych danych w CRM. Przedsprzedaż: 6900 zł netto za firmę."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-65369078d23fa9556206c3cb",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi1FwWP",
+        "set": {
+          "seo.title": "Program partnerski | Automatyzacja procesów biznesowych"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a82cef512f2263890a42ee2",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi1FwWP",
+        "set": {
+          "seo.title": "Sales Atlas System: system sprzedaży dla firm B2B"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-64a7d3814f84e9058b6f6dad",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi1FwWP",
+        "set": {
+          "seo.title": "Szkolenie i wdrożenie Asany na waszych projektach",
+          "seo.description": "Szkolenie i wdrożenie Asany na waszych projektach: szablony i podział odpowiedzialności. Do 15 osób, 6000 zł netto miesięcznie przez 3 miesiące (18 000 zł)."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-634daaa2c8ceab408393a043",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi1FwWP",
+        "set": {
+          "seo.description": "Sprawdź, co możesz zautomatyzować w Zapierze, jak zorganizować pracę zespołu w CRM Pipedrive i jak wdrożyć Asanę do zarządzania projektami."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8aacb8a205a1097e0bbf",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbDxUz",
+        "set": {
+          "seo.title": "5 kroków do obsługi każdego leada w 5 minut",
+          "seo.description": "Zobacz, jak w 5 krokach zbudować automatyzację, która pozwoli obsłużyć każdego leada w 5 minut. Klienci oczekują kontaktu w ciągu 10 minut."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8ab26d84e975b290cb48",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhalE",
+        "set": {
+          "seo.title": "Widok „Moje zadania” w Asanie: 7 wskazówek",
+          "seo.description": "7 wskazówek do widoku „Moje zadania” w Asanie. Ułóż listę po swojemu, przypisuj zadania prywatne, zmieniaj kolejność i korzystaj z kalendarza."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8ad6238b858c957e3b51",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbDxUz",
+        "set": {
+          "seo.title": "22 aplikacje, które sprawdziłem w 4 biznesach",
+          "seo.description": "22 aplikacje, które sprawdziłem w 4 biznesach. Nadają się dla małych firm w Polsce, w których za IT często odpowiada sam właściciel."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a92db792b0ef7af46cd146a",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.description": "Asana AI, AI Studio, AI Teammates, Dash oraz integracje przez konektory i MCP. Zobacz funkcje, limity kredytów, dostęp do danych i przykłady."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a8dd80bfe86e3266cd72e15",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.title": "Audyt CRM: jakie wnioski wyciągniesz z danych"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a9d93db4a935f84bb449bb7",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi03ZGy",
+        "set": {
+          "seo.title": "Audyt wdrożonego CRM: 9 rzeczy do sprawdzenia"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8acfee70f71890180fb3",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhalE",
+        "set": {
+          "seo.title": "AI przydziela leady według specjalizacji handlowca",
+          "seo.description": "Zobacz krok po kroku, jak użyć AI i automatyzacji, by przydzielać leady handlowcom według ich specjalizacji."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a60bce94365a5ecaa0f3184",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbDxUz",
+        "set": {
+          "seo.title": "Bezpieczne przekazywanie poufnych danych i haseł"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e889d869e41af30f74035",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbDxUz",
+        "set": {
+          "seo.title": "Co zrobić, żeby twoje maile nie lądowały w spamie?",
+          "seo.description": "Skonfiguruj pocztę w 5 krokach, by wiadomości trafiały do skrzynki odbiorczej klientów. Skorzystaj z instrukcji i przetestuj własną skrzynkę."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a8eaa98c84f8fa05bbeb850",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.title": "CRM a ERP: różnice i kiedy potrzebujesz obu"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abbfa9d81238c34496658bb",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.description": "Pipedrive, HubSpot, Salesforce: ile kosztuje CRM dla 30 osób, kiedy zostać przy obecnym i jak odróżnić problem systemu od problemu konfiguracji."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a886636c64f3c28c2dd9be5",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.description": "Abonament, wdrożenie i CRM od zera to trzy różne koszty. Podaję własne stawki i tłumaczę, skąd biorą się widełki od 1500 zł do 300 tys. zł."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8a9f49cfcc0496b9627f",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbDxUz",
+        "set": {
+          "seo.title": "Inbox Zero: 5 kroków do odzyskania kontroli nad pocztą",
+          "seo.description": "Odzyskaj kontrolę nad pocztą w 5 krokach z metodą Inbox Zero. Ogranicz stres i rozproszenie, żeby ważne wiadomości ci nie umykały."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8ad3ee70f7189018106e",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Jak automatycznie rozdzielać leady według branży klienta?",
+          "seo.description": "Przydzielaj leady handlowcom automatycznie według branży klienta. Zobacz, jak wzbogacić dane w Apollo i rozdzielić leady w n8n."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8abd87f6343a703cb8c3",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbDxUz",
+        "set": {
+          "seo.title": "Jak odsiać fałszywe leady? Weryfikacja e-maila i telefonu",
+          "seo.description": "Sprawdź, jak tanio weryfikować adresy e-mail i numery telefonów przed dodaniem kontaktów do CRM i oszczędzić czas na obsłudze fałszywych leadów."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8ac8364a5656fa1cb075",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbDxUz",
+        "set": {
+          "seo.title": "Jak robić lepsze reklamy dzięki konwersjom offline",
+          "seo.description": "Zapisz identyfikator kliknięcia w CRM, włącz konwersje offline w Google Ads i połącz oba systemy przez Zapier. Zobacz, które reklamy przynoszą najlepsze leady."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a8d753b242e7e68ca81d04d",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Jaki CRM dla małej firmy? Tabela decyzyjna"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8ad9b8a205a1097e1fba",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.title": "Konfiguracja Pipedrive: checklista i najczęstsze błędy"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6aa301fd74dbd0791534f074",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Migracja z Excela do CRM: czego nie przenosić"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8aa3a696234af3329320",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbDxUz",
+        "set": {
+          "seo.title": "Pisz bloga 2× szybciej: automatyczny research z ChatGPT",
+          "seo.description": "Zobacz, jak z pomocą ChatGPT zautomatyzować research, zbierać pomysły i szybciej pisać wpisy na bloga."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8ab8e1b74f8f2c2e4f61",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbDxUz",
+        "set": {
+          "seo.title": "Śledzenie ofert: Smart Docs, PandaDoc, Sellizer i DocSend",
+          "seo.description": "Porównuję Smart Docs, PandaDoc, Sellizer i DocSend. Sprawdź, kto otworzył ofertę, co czytał, ile razy do niej wracał i ile osób ją przeglądało."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a7170bdf59d4b10356c06cb",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.description": "API 8 CRM-ów pod agenta AI: Salesforce 96,1/100, HubSpot 85,7, Pipedrive 74. Sprawdź, od czego zależy, ile agent zrobi za ciebie w CRM-ie."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8aa7de3855ba5d50244e",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbDxUz",
+        "set": {
+          "seo.title": "Elektroniczne wnioski urlopowe: prosty system w 45 minut",
+          "seo.description": "W 45 minut zbuduj elektroniczny obieg wniosków urlopowych z Formularzami i Arkuszami Google, Gmailem oraz Asaną."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8aaf8bdc2581e553a3d6",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbDxUz",
+        "set": {
+          "seo.title": "Skróć o 50% cotygodniowe spotkania w dziale marketingu",
+          "seo.description": "Skróć cotygodniowe spotkania marketingu o połowę. Zobacz, jak prowadzić agendę w Asanie, żeby spotkania się nie przeciągały i żaden temat nie umknął."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8acb0376804fd4b7e6db",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhalE",
+        "set": {
+          "seo.title": "Skuteczne instrukcje dla pracowników w 5 krokach",
+          "seo.description": "5 kroków do instrukcji dla pracowników i bazy wiedzy. Zobacz, jak wykorzystać ScribeHow, Descript i ChatGPT."
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a7b280eb2a8526006e0ff4f",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Spotkania z handlowcami: jak je poukładać"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6aa06311996cc93f585edd06",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Jak zbudować system premiowy dla handlowców"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a67e3a6336fd8feee01e130",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Wdrożenie agenta AI w firmie: od czego zacząć"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "siteSettings-pl",
+        "ifRevisionID": "bojZKyr4pwW51v9CpzgagA",
+        "set": {
+          "defaultSeo.title": "CRM, automatyzacja i AI w sprzedaży B2B | Grzegorz Zawłodzki"
+        }
+      }
+    }
+  ]
+}

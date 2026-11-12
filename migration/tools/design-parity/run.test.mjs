@@ -7,8 +7,6 @@ import { join } from 'node:path';
 import { test } from 'node:test';
 import { main } from './run.mjs';
 
-process.env.CHROME_BIN = '/usr/local/bin/google-chrome';
-
 const HTML = `<!doctype html>
 <meta charset="utf-8">
 <title>parity</title>

@@ -35,10 +35,13 @@ function translation(site: Site, doc: PageDoc | PostDoc): SeoPage['translation']
 }
 
 function serviceStubs(site: Site, language: Language): ServiceStub[] {
-  return site.services.flatMap((service) => {
-    const page = service.page?._ref ? site.byId.get(service.page._ref) : undefined;
-    return page && page.language === language && service.name && service.description ? [{ name: service.name, description: service.description, path: page.path }] : [];
+  const courses = site.courses ?? [];
+  const coursePages = new Set(courses.map((course) => course.page?._ref));
+  const stubs = (items: (Site['services'][number] | Site['courses'][number])[], entity?: 'course') => items.flatMap((item) => {
+    const page = item.page?._ref ? site.byId.get(item.page._ref) : undefined;
+    return page && page.language === language && item.name && item.description ? [{ name: item.name, description: item.description, path: page.path, ...(entity && { entity }) }] : [];
   });
+  return [...stubs(site.services.filter((service) => !coursePages.has(service.page?._ref))), ...stubs(courses, 'course')];
 }
 
 function offers(page: PageDoc): Offer[] {
@@ -50,6 +53,30 @@ function pageKind(site: Site, page: PageDoc): PageKind {
   if (page.path === '/') return { kind: 'home', services: serviceStubs(site, page.language) };
   if (page.path === '/kontakt') return { kind: 'contact' };
   if (page.path === '/o-mnie') return { kind: 'about', services: serviceStubs(site, page.language) };
+  const course = site.courses?.find((item) => item.page?._ref === page._id);
+  if (course?.name && course.description) {
+    const { educationalLevel, isAccessibleForFree, audience, teaches, instance } = course;
+    return {
+      kind: 'course',
+      course: {
+        name: course.name,
+        description: course.description,
+        ...(educationalLevel && { educationalLevel }),
+        isAccessibleForFree: isAccessibleForFree ?? false,
+        ...(audience && { audience }),
+        teaches: teaches ?? [],
+        ...(instance?.name && instance.courseMode && {
+          instance: {
+            name: instance.name,
+            courseMode: instance.courseMode,
+            ...(instance.courseWorkload && { courseWorkload: instance.courseWorkload }),
+            ...(instance.startDate && { startDate: instance.startDate }),
+          },
+        }),
+        offers: offers(page),
+      },
+    };
+  }
   const service = site.services.find((item) => item.page?._ref === page._id);
   if (service?.name && service.description) {
     return {

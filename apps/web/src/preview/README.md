@@ -56,11 +56,13 @@ The entrypoint rejects non-GET/HEAD requests. Preview cannot submit the producti
 
 ## Published-content rebuild hook
 
-The destination is the static staging Worker `zawlodzki-web`. The preview Worker reads drafts on requests and does not need a rebuild when drafts change.
+The proposed destination remains the static staging Worker `zawlodzki-web`, selected with `--env staging`. Production uses `zawlodzki-web-production` with `--env production`. This split awaits owner approval. No external setup is authorized by this document. See `migration/lanes/platform/out/t66-environments/proposal.md` for the gated rollout. The preview Worker reads drafts on requests and does not need a rebuild when drafts change.
 
-Workers Builds connects this repository to `zawlodzki-web` on `main`. Preview branch builds are disabled. The build environment sets `NODE_VERSION=24`. The deployment token has only Workers Scripts Edit for the selected account. For a replacement installation, connect the repository and deployment branch after owner approval. Configure the repository root as the build root, `pnpm --filter web build` as the build command, and `pnpm --filter web exec wrangler deploy` as the deployment command. Build from the selected published dataset. Treat the Workers Builds hook URL as a secret.
+Workers Builds connects this repository to `zawlodzki-web` on `main`. Preview branch builds are disabled. The build environment sets `NODE_VERSION=24`. The deployment token has only Workers Scripts Edit for the selected account. For a replacement installation, connect the repository and deployment branch after owner approval. Configure the repository root as the build root, `pnpm --filter web build` as the build command, and `pnpm --filter web exec wrangler deploy --env staging` as the deployment command. Build from the selected published dataset. Treat the Workers Builds hook URL as a secret.
 
-Create a Workers Builds deploy hook for that branch. Create a Sanity GROQ webhook in the same dataset, with POST as the method and the hook URL as its target. There is no deploy-hook handler in this repository. The webhook's HTTP request is the rebuild. Enable create, update, and delete. Leave draft events and content-release version events disabled. Sanity already ignores `drafts.` and `versions.` documents while those two settings are off.
+After separate owner approval, create a Workers Builds deploy hook for that staging branch. Production has no automatic build or Sanity hook in this proposal. Promote the verified staging commit manually with `pnpm --filter web deploy:production` only after approval. Before T22 this creates no public production address because workers.dev is disabled and routes are empty. T22 alone activates the commented custom domains.
+
+Create the staging hook only after approval. Create a Sanity GROQ webhook in the same dataset, with POST as the method and the hook URL as its target. There is no deploy-hook handler in this repository. The webhook's HTTP request is the rebuild. Enable create, update, and delete. Leave draft events and content-release version events disabled. Sanity already ignores `drafts.` and `versions.` documents while those two settings are off.
 
 On a delete, `after()` is null. Read the type from `before()` first, and test the id that Sanity still exposes as `_id`.
 
@@ -69,7 +71,7 @@ On a delete, `after()` is null. Read the type from `before()` first, and test th
 && !(_id in path("versions.**"))
 && coalesce(before()._type, _type) in [
   "page", "post", "person", "organization", "siteSettings",
-  "service", "logo", "testimonial", "translation.metadata", "sanity.imageAsset"
+  "service", "course", "redirect", "logo", "testimonial", "translation.metadata", "sanity.imageAsset"
 ]
 ```
 

@@ -1,0 +1,12 @@
+up: http://127.0.0.1:8790 (run 20261112-133930-p8790, rev eca216f, log /tmp/verify-web/runs/8790/wrangler.log)
+evidence: /tmp/verify-web/evidence/20261112-133930-p8790
+ok       wrangler pid 291964 alive
+ok       port 8790 is owned by our wrangler
+ok       started at HEAD eca216f
+ok       dist is newer than src
+ok       GET / -> 200
+ok       home page title is this site
+doctor: healthy (http://127.0.0.1:8790, run 20261112-133930-p8790)
+127.0.0.1	/	200	-	noindex, nofollow	text/html; charset=utf-8	CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki
+127.0.0.1	/T60-Unknown	404	-	noindex, nofollow	text/html; charset=utf-8	Nie znaleziono strony
+stopped run 20261112-133930-p8790 (pids 291996 292003 292015 292019 291984 291965 291964); evidence kept in /tmp/verify-web/evidence/20261112-133930-p8790

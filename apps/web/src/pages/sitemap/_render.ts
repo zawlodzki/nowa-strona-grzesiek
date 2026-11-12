@@ -116,10 +116,12 @@ function section(heading: string, lines: string[]): string[] {
 
 export function renderLlms(discovery: Discovery): string {
   const { person } = discovery;
-  const services = discovery.services
-    .filter((service): service is LinkedService => service.language === 'pl' && service.path !== undefined)
+  const linked = (items: DiscoveryService[]) => items
+    .filter((item): item is LinkedService => item.language === 'pl' && item.path !== undefined)
     .sort((a, b) => a.name.localeCompare(b.name, 'pl'));
-  const servicePaths = new Set(services.map((service) => service.path));
+  const services = linked(discovery.services);
+  const courses = linked(discovery.courses ?? []);
+  const servicePaths = new Set([...services, ...courses].map((item) => item.path));
   const pages = discovery.docs
     .filter((doc) => doc.kind === 'page' && doc.language === 'pl' && doc.path !== '/' && !servicePaths.has(doc.path))
     .sort((a, b) => compare(a.path, b.path));
@@ -127,6 +129,7 @@ export function renderLlms(discovery: Discovery): string {
     `# ${inline(person?.name ?? DEFAULT_NAME)}`,
     ...(person ? ['', `> ${inline(person.description)}`] : []),
     ...section('Usługi', services.map((service) => link(service.name, pageUrl('pl', service.path), service.description))),
+    ...section('Kursy', courses.map((course) => link(course.name, pageUrl('pl', course.path), course.description))),
     ...section('Strony', pages.map((page) => link(page.title, pageUrl('pl', page.path), page.description))),
     ...section('Blog', postsNewestFirst(discovery, 'pl').map((post) => link(post.title, pageUrl('pl', post.path), post.description))),
     '',
@@ -134,5 +137,5 @@ export function renderLlms(discovery: Discovery): string {
 }
 
 export function renderRobots(): string {
-  return ['User-agent: *', 'Allow: /', '', `Sitemap: ${ORIGIN}/sitemap.xml`, ''].join('\n');
+  return ['# AI crawlers welcome. See /llms.txt and page URLs with .md appended.', 'User-agent: *', 'Allow: /', '', `Sitemap: ${ORIGIN}/sitemap.xml`, ''].join('\n');
 }

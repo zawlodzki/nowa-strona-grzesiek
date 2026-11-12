@@ -1,0 +1,540 @@
+[
+  {
+    "name": "reference",
+    "width": 1440,
+    "px": 745.046875,
+    "ch": 74.5046875,
+    "chPx": 10,
+    "font": "18px / 32.4px Switzer, Arial, sans-serif",
+    "ancestors": [
+      {
+        "class": "",
+        "width": 745.046875,
+        "grid": "none"
+      },
+      {
+        "class": "article-richtext",
+        "width": 745.046875,
+        "grid": "none"
+      },
+      {
+        "class": "article-center",
+        "width": 745.046875,
+        "grid": "none"
+      },
+      {
+        "class": "article-layout",
+        "width": 1320,
+        "grid": "212.859px 745.047px 266.094px"
+      },
+      {
+        "class": "ao-container",
+        "width": 1320,
+        "grid": "none"
+      }
+    ],
+    "sticky": [
+      {
+        "class": "ao-header",
+        "height": 80,
+        "top": "0px",
+        "overflow": "visible",
+        "max": "none"
+      },
+      {
+        "class": "article-toc",
+        "height": 741.25,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "864px"
+      },
+      {
+        "class": "article-sidebar",
+        "height": 446.9375,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "864px"
+      }
+    ]
+  },
+  {
+    "name": "staging",
+    "width": 1440,
+    "px": 720,
+    "ch": 55.38461538461539,
+    "chPx": 13,
+    "font": "20px / 35px \"Satoshi Variable\", system-ui, sans-serif",
+    "ancestors": [
+      {
+        "class": "post-content",
+        "width": 720,
+        "grid": "none"
+      },
+      {
+        "class": "post-layout",
+        "width": 1200,
+        "grid": "192px 720px 224px"
+      },
+      {
+        "class": "",
+        "width": 1440,
+        "grid": "none"
+      },
+      {
+        "class": "",
+        "width": 1440,
+        "grid": "none"
+      },
+      {
+        "class": "",
+        "width": 1440,
+        "grid": "none"
+      }
+    ],
+    "sticky": [
+      {
+        "class": "site-header",
+        "height": 72,
+        "top": "0px",
+        "overflow": "visible",
+        "max": "none"
+      },
+      {
+        "class": "sticky",
+        "height": 872,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "872px"
+      },
+      {
+        "class": "sticky",
+        "height": 720,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "872px"
+      }
+    ]
+  },
+  {
+    "name": "reference",
+    "width": 1280,
+    "px": 672,
+    "ch": 67.2,
+    "chPx": 10,
+    "font": "18px / 32.4px Switzer, Arial, sans-serif",
+    "ancestors": [
+      {
+        "class": "",
+        "width": 672,
+        "grid": "none"
+      },
+      {
+        "class": "article-richtext",
+        "width": 672,
+        "grid": "none"
+      },
+      {
+        "class": "article-center",
+        "width": 672,
+        "grid": "none"
+      },
+      {
+        "class": "article-layout",
+        "width": 1200,
+        "grid": "192px 672px 240px"
+      },
+      {
+        "class": "ao-container",
+        "width": 1200,
+        "grid": "none"
+      }
+    ],
+    "sticky": [
+      {
+        "class": "ao-header",
+        "height": 80,
+        "top": "0px",
+        "overflow": "visible",
+        "max": "none"
+      },
+      {
+        "class": "article-toc",
+        "height": 761.546875,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "864px"
+      },
+      {
+        "class": "article-sidebar",
+        "height": 467.078125,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "864px"
+      }
+    ]
+  },
+  {
+    "name": "staging",
+    "width": 1280,
+    "px": 722.4375,
+    "ch": 55.57211538461539,
+    "chPx": 13,
+    "font": "19.3904px / 33.9332px \"Satoshi Variable\", system-ui, sans-serif",
+    "ancestors": [
+      {
+        "class": "post-content",
+        "width": 722.4375,
+        "grid": "none"
+      },
+      {
+        "class": "post-layout",
+        "width": 1202.4375,
+        "grid": "192px 722.438px 224px"
+      },
+      {
+        "class": "",
+        "width": 1280,
+        "grid": "none"
+      },
+      {
+        "class": "",
+        "width": 1280,
+        "grid": "none"
+      },
+      {
+        "class": "",
+        "width": 1280,
+        "grid": "none"
+      }
+    ],
+    "sticky": [
+      {
+        "class": "site-header",
+        "height": 72,
+        "top": "0px",
+        "overflow": "visible",
+        "max": "none"
+      },
+      {
+        "class": "sticky",
+        "height": 872,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "872px"
+      },
+      {
+        "class": "sticky",
+        "height": 711.75,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "872px"
+      }
+    ]
+  },
+  {
+    "name": "reference",
+    "width": 1100,
+    "px": 810,
+    "ch": 81,
+    "chPx": 10,
+    "font": "18px / 32.4px Switzer, Arial, sans-serif",
+    "ancestors": [
+      {
+        "class": "",
+        "width": 810,
+        "grid": "none"
+      },
+      {
+        "class": "article-richtext",
+        "width": 810,
+        "grid": "none"
+      },
+      {
+        "class": "article-center",
+        "width": 810,
+        "grid": "none"
+      },
+      {
+        "class": "article-layout",
+        "width": 1020,
+        "grid": "170px 810px"
+      },
+      {
+        "class": "ao-container",
+        "width": 1020,
+        "grid": "none"
+      }
+    ],
+    "sticky": [
+      {
+        "class": "ao-header",
+        "height": 80,
+        "top": "0px",
+        "overflow": "visible",
+        "max": "none"
+      },
+      {
+        "class": "article-toc",
+        "height": 781.84375,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "864px"
+      }
+    ]
+  },
+  {
+    "name": "staging",
+    "width": 1100,
+    "px": 833.171875,
+    "ch": 69.43098958333333,
+    "chPx": 12,
+    "font": "18.7046px / 32.733px \"Satoshi Variable\", system-ui, sans-serif",
+    "ancestors": [
+      {
+        "class": "post-content",
+        "width": 833.171875,
+        "grid": "none"
+      },
+      {
+        "class": "post-layout",
+        "width": 1057.171875,
+        "grid": "192px 833.172px"
+      },
+      {
+        "class": "",
+        "width": 1100,
+        "grid": "none"
+      },
+      {
+        "class": "",
+        "width": 1100,
+        "grid": "none"
+      },
+      {
+        "class": "",
+        "width": 1100,
+        "grid": "none"
+      }
+    ],
+    "sticky": [
+      {
+        "class": "site-header",
+        "height": 72,
+        "top": "0px",
+        "overflow": "visible",
+        "max": "none"
+      },
+      {
+        "class": "sticky",
+        "height": 872,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "872px"
+      },
+      {
+        "class": "sticky",
+        "height": 213.5625,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "872px"
+      }
+    ]
+  },
+  {
+    "name": "reference",
+    "width": 900,
+    "px": 610,
+    "ch": 61,
+    "chPx": 10,
+    "font": "18px / 32.4px Switzer, Arial, sans-serif",
+    "ancestors": [
+      {
+        "class": "",
+        "width": 610,
+        "grid": "none"
+      },
+      {
+        "class": "article-richtext",
+        "width": 610,
+        "grid": "none"
+      },
+      {
+        "class": "article-center",
+        "width": 610,
+        "grid": "none"
+      },
+      {
+        "class": "article-layout",
+        "width": 820,
+        "grid": "170px 610px"
+      },
+      {
+        "class": "ao-container",
+        "width": 820,
+        "grid": "none"
+      }
+    ],
+    "sticky": [
+      {
+        "class": "ao-header",
+        "height": 80,
+        "top": "0px",
+        "overflow": "visible",
+        "max": "none"
+      },
+      {
+        "class": "article-toc",
+        "height": 781.84375,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "864px"
+      }
+    ]
+  },
+  {
+    "name": "staging",
+    "width": 900,
+    "px": 636.21875,
+    "ch": 53.018229166666664,
+    "chPx": 12,
+    "font": "17.9426px / 31.3996px \"Satoshi Variable\", system-ui, sans-serif",
+    "ancestors": [
+      {
+        "class": "post-content",
+        "width": 636.21875,
+        "grid": "none"
+      },
+      {
+        "class": "post-layout",
+        "width": 860.21875,
+        "grid": "192px 636.219px"
+      },
+      {
+        "class": "",
+        "width": 900,
+        "grid": "none"
+      },
+      {
+        "class": "",
+        "width": 900,
+        "grid": "none"
+      },
+      {
+        "class": "",
+        "width": 900,
+        "grid": "none"
+      }
+    ],
+    "sticky": [
+      {
+        "class": "site-header",
+        "height": 61,
+        "top": "0px",
+        "overflow": "visible",
+        "max": "none"
+      },
+      {
+        "class": "sticky",
+        "height": 872,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "872px"
+      },
+      {
+        "class": "sticky",
+        "height": 212.28125,
+        "top": "112px",
+        "overflow": "auto",
+        "max": "872px"
+      }
+    ]
+  },
+  {
+    "name": "reference",
+    "width": 390,
+    "px": 342,
+    "ch": 34.2,
+    "chPx": 10,
+    "font": "17px / 30.6px Switzer, Arial, sans-serif",
+    "ancestors": [
+      {
+        "class": "",
+        "width": 342,
+        "grid": "none"
+      },
+      {
+        "class": "article-richtext",
+        "width": 342,
+        "grid": "none"
+      },
+      {
+        "class": "article-center",
+        "width": 342,
+        "grid": "none"
+      },
+      {
+        "class": "article-layout",
+        "width": 342,
+        "grid": "170px minmax(0px, 1fr)"
+      },
+      {
+        "class": "ao-container",
+        "width": 342,
+        "grid": "none"
+      }
+    ],
+    "sticky": [
+      {
+        "class": "ao-header",
+        "height": 80,
+        "top": "0px",
+        "overflow": "visible",
+        "max": "none"
+      }
+    ]
+  },
+  {
+    "name": "staging",
+    "width": 390,
+    "px": 357.984375,
+    "ch": 32.54403409090909,
+    "chPx": 11,
+    "font": "16px / 28px \"Satoshi Variable\", system-ui, sans-serif",
+    "ancestors": [
+      {
+        "class": "post-content",
+        "width": 357.984375,
+        "grid": "none"
+      },
+      {
+        "class": "post-layout",
+        "width": 357.984375,
+        "grid": "357.984px"
+      },
+      {
+        "class": "",
+        "width": 390,
+        "grid": "none"
+      },
+      {
+        "class": "",
+        "width": 390,
+        "grid": "none"
+      },
+      {
+        "class": "",
+        "width": 390,
+        "grid": "none"
+      }
+    ],
+    "sticky": [
+      {
+        "class": "site-header",
+        "height": 61,
+        "top": "0px",
+        "overflow": "visible",
+        "max": "none"
+      }
+    ]
+  }
+]

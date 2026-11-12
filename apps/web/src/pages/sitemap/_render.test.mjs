@@ -131,8 +131,10 @@ test('llms.txt groups PL services, other pages and posts, and skips services wit
   );
 });
 
-test('robots.txt allows everything and points at the sitemap index', () => {
-  assert.equal(renderRobots(), 'User-agent: *\nAllow: /\n\nSitemap: https://www.zawlodzki.pl/sitemap.xml\n');
+test('robots.txt welcomes AI crawlers without exclusions and points at the sitemap index', () => {
+  assert.doesNotMatch(renderRobots(), /Disallow:|sitemap-index/);
+  assert.match(renderRobots(), /AI crawlers welcome.*llms\.txt.*\.md/);
+  assert.equal(renderRobots(), '# AI crawlers welcome. See /llms.txt and page URLs with .md appended.\nUser-agent: *\nAllow: /\n\nSitemap: https://www.zawlodzki.pl/sitemap.xml\n');
 });
 
 const raw = (doc) => ({

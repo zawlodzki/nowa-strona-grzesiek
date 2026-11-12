@@ -1,0 +1,59 @@
+[
+  {
+    "width": 390,
+    "columns": "357.984px",
+    "tocOpen": false,
+    "sidebarCta": "none",
+    "ctaCount": 1,
+    "transition": "all",
+    "overflow": false
+  },
+  {
+    "width": 895,
+    "columns": "855.297px",
+    "tocOpen": false,
+    "sidebarCta": "none",
+    "ctaCount": 1,
+    "transition": "all",
+    "overflow": false
+  },
+  {
+    "width": 896,
+    "columns": "160px 672.281px",
+    "tocOpen": true,
+    "sidebarCta": "none",
+    "ctaCount": 1,
+    "transition": "all",
+    "overflow": false
+  },
+  {
+    "width": 1279,
+    "columns": "160px 1049.44px",
+    "tocOpen": true,
+    "sidebarCta": "none",
+    "ctaCount": 1,
+    "transition": "all",
+    "overflow": false
+  },
+  {
+    "width": 1280,
+    "columns": "160px 802.438px 224px",
+    "tocOpen": true,
+    "sidebarCta": "grid",
+    "ctaCount": 2,
+    "transition": "opacity 0.24s cubic-bezier(0.23, 1, 0.32, 1), transform 0.24s cubic-bezier(0.23, 1, 0.32, 1)",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "columns": "160px 896px 224px",
+    "tocOpen": true,
+    "sidebarCta": "grid",
+    "ctaCount": 2,
+    "transition": "opacity 0.24s cubic-bezier(0.23, 1, 0.32, 1), transform 0.24s cubic-bezier(0.23, 1, 0.32, 1)",
+    "overflow": false
+  },
+  {
+    "reducedMotionTransition": "all"
+  }
+]

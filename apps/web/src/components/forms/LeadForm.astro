@@ -179,11 +179,21 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
     .dark .submit:hover { background: var(--surface-cyan-tint); color: var(--text-link-hover); }
   }
   @media (prefers-reduced-motion: no-preference) {
-    .submit { transition: background-color var(--motion-duration-base) var(--motion-easing-out), scale var(--motion-duration-fast) var(--motion-easing-out); }
+    .submit { transition: background-color var(--motion-duration-base) var(--motion-easing-out), scale var(--motion-duration-fast) var(--motion-easing-out), opacity var(--motion-duration-fast) var(--motion-easing-out); }
   }
   @container (width < 30rem) { .submit { justify-self: stretch; } }
 
   .status:empty { display: none; }
+  .status { transition: opacity var(--motion-duration-base) var(--motion-easing-out); }
+  @starting-style {
+    .status:not(:empty) { opacity: 0; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .status { transition: opacity var(--motion-duration-base) var(--motion-easing-out), translate var(--motion-duration-base) var(--motion-easing-out); }
+    @starting-style {
+      .status:not(:empty) { opacity: 0; translate: 0 -4px; }
+    }
+  }
   .status[data-state="error"] { color: var(--text-error); font-weight: var(--font-weight-medium); }
   .dark .status[data-state="error"] { color: var(--text-on-dark); }
 </style>

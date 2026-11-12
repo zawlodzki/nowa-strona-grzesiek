@@ -1,0 +1,12 @@
+✔ key response contains the stable configured key (2.616204ms)
+✔ built sitemap fixture selects rebuilt pages; dry run sends nothing (9.46147ms)
+✔ all unsafe environments refuse before HTTP (0.79872ms)
+✔ mock records POST and failures propagate without retry (23.728592ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 238.883776

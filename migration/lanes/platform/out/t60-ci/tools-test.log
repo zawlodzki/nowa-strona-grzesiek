@@ -1,0 +1,132 @@
+✔ canonical sitemap and page links are fetched only from the target origin (133.265033ms)
+✖ resolveChrome returns CHROME_BIN (9.154848ms)
+✔ empty CHROME_BIN does not invent a browser (0.432628ms)
+✔ non-executable CHROME_BIN is skipped (1.385967ms)
+✖ capturePath screenshots the fixture and leaves no chrome (350.718878ms)
+✔ a style fact that meets to while live does not is intended and exits 0 (2.147847ms)
+✔ the same pixel regions with no intended style verdict are defects and exit 1 (1.161466ms)
+✔ chrome differs while T27 is open, and the same fact is a defect once T27 is done (0.772547ms)
+✔ local-staging regions are lag and cannot be forced into a defect (1.3138ms)
+✔ an author rule with empty samples is missing-region, not intended (0.466961ms)
+✔ section padding is 48 at 390 and 64 at 1440 (0.751755ms)
+✔ shot widths reject an ends width and a break width (0.279918ms)
+✔ registry selectors omit box-pad and keep primary off cyan (0.613754ms)
+✔ a ledger missing one required key throws CoverageError for a small corpus (0.464711ms)
+✔ styleFact rejects a prop that still contains oklch or rgb( (0.266001ms)
+✔ a local intended verdict does not swallow a live-staging region (0.748005ms)
+✔ section-height swallows a height region and leaves an inner region (0.381961ms)
+✔ a shot box must cover at least 0.8 of the region (0.39921ms)
+✔ a forbid hit is style and a miss is a match (0.863089ms)
+✔ sales atlas fires only when live contains the whole word 250 (1.644927ms)
+✔ a full registry ledger that already meets every rule exits 0 (1.795011ms)
+✔ readKeepPaths returns keep paths in file order (4.235151ms)
+✔ readChromePolicy reads front matter and rejects a missing status (0.146918ms)
+✔ readReport rejects a missing file, an open report, and an unknown tag (12.313701ms)
+✔ exitCode rejects an empty list and an unbranded verdict (0.219335ms)
+✔ encodeSideBySide returns equal bytes for the same RGBA (3.735273ms)
+✔ decodePng returns the preview dimensions (4.253568ms)
+✔ decodePng reads an 8-bit RGBA PNG and rejects interlacing and 16-bit (2.257639ms)
+✔ columns wider than 480 scale down, and a wide noisy PNG retries at 240 (50.902732ms)
+✔ identical sections produce no regions (1.318342ms)
+✔ a rectangle past the slop is one region, and slop or a short run is none (4.412444ms)
+✔ a taller header does not mark a matching section, and section pairs align on their own (1.631343ms)
+✔ chrome strip hashes match within slop and differ above it (0.253251ms)
+✔ commit writes a content-addressed tree and a second image replaces it (9.124807ms)
+✔ a tree over the budget does not replace the report or the ledger (141.472709ms)
+✔ a live lock is reason lock and a dead lock is cleared (4.892447ms)
+parity: capture 1/1 /
+parity: retry / chrome exited SIGABRT
+✖ main publishes a report, reprojects without the server, and leaves it on worker-down (236.625297ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 34
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 487.738726
+
+✖ failing tests:
+
+test at migration/tools/design-parity/capture.test.mjs:73:1
+✖ resolveChrome returns CHROME_BIN (9.154848ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + '/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome'
+  - '/usr/local/bin/google-chrome'
+
+      at TestContext.<anonymous> (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T60-ci-tests-node/migration/tools/design-parity/capture.test.mjs:74:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome',
+    expected: '/usr/local/bin/google-chrome',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at migration/tools/design-parity/capture.test.mjs:111:1
+✖ capturePath screenshots the fixture and leaves no chrome (350.718878ms)
+  Error: chrome exited SIGABRT
+  [287036:287036:1112/125417.448667:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:144] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+  [1112/125417.458875:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+  [1112/125417.458901:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+  Received signal 6
+  #0 0xbadfedaa3fa8 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x86f3fa7)
+  #1 0xe1aeaf839a5c ([vdso]+0xa5b)
+  #2 0xe1aeae5974c0 (/usr/lib/aarch64-linux-gnu/libc.so.6+0x874bf)
+  #3 0xe1aeae54cb38 (/usr/lib/aarch64-linux-gnu/libc.so.6+0x3cb37)
+  #4 0xe1aeae537dfc (/usr/lib/aarch64-linux-gnu/libc.so.6+0x27dfb)
+  #5 0xbadfeda986e8 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x86e86e7)
+  #6 0xbadfeda47a34 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x8697a33)
+  #7 0xbadfeda4794c (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x869794b)
+  #8 0xbadfede240b4 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x8a740b3)
+  #9 0xbadfef8c9508 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0xa519507)
+  #10 0xbadff00ecb64 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0xad3cb63)
+  #11 0xbadfeda2a268 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x867a267)
+  #12 0xbadfeda28044 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x8678043)
+  #13 0xbadff03efc94 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0xb03fc93)
+  #14 0xe1aeae5384c0 (/usr/lib/aarch64-linux-gnu/libc.so.6+0x284bf)
+  #15 0xe1aeae538594 (/usr/lib/aarch64-linux-gnu/libc.so.6+0x28593)
+  #16 0xbadfe8380030 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x2fd002f)
+  [end of stack trace]
+
+      at ChildProcess.<anonymous> (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T60-ci-tests-node/migration/tools/design-parity/capture.mjs:272:14)
+      at ChildProcess.wrapper (node:events:639:12)
+      at ChildProcess.emit (node:events:514:28)
+      at ChildProcess._handle.onexit (node:internal/child_process:324:12)
+
+test at migration/tools/design-parity/run.test.mjs:55:1
+✖ main publishes a report, reprojects without the server, and leaves it on worker-down (236.625297ms)
+  Error: chrome exited SIGABRT
+  [287082:287082:1112/125417.561053:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:144] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.
+  [1112/125417.563740:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+  [1112/125417.563770:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+  Received signal 6
+  #0 0xc698e0aa3fa8 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x86f3fa7)
+  #1 0xf4f970f7ea5c ([vdso]+0xa5b)
+  #2 0xf4f96fce74c0 (/usr/lib/aarch64-linux-gnu/libc.so.6+0x874bf)
+  #3 0xf4f96fc9cb38 (/usr/lib/aarch64-linux-gnu/libc.so.6+0x3cb37)
+  #4 0xf4f96fc87dfc (/usr/lib/aarch64-linux-gnu/libc.so.6+0x27dfb)
+  #5 0xc698e0a986e8 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x86e86e7)
+  #6 0xc698e0a47a34 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x8697a33)
+  #7 0xc698e0a4794c (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x869794b)
+  #8 0xc698e0e240b4 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x8a740b3)
+  #9 0xc698e28c9508 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0xa519507)
+  #10 0xc698e30ecb64 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0xad3cb63)
+  #11 0xc698e0a2a268 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x867a267)
+  #12 0xc698e0a28044 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x8678043)
+  #13 0xc698e33efc94 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0xb03fc93)
+  #14 0xf4f96fc884c0 (/usr/lib/aarch64-linux-gnu/libc.so.6+0x284bf)
+  #15 0xf4f96fc88594 (/usr/lib/aarch64-linux-gnu/libc.so.6+0x28593)
+  #16 0xc698db380030 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x2fd002f)
+  [end of stack trace]
+
+      at ChildProcess.<anonymous> (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T60-ci-tests-node/migration/tools/design-parity/capture.mjs:272:14)
+      at ChildProcess.wrapper (node:events:639:12)
+      at ChildProcess.emit (node:events:514:28)
+      at ChildProcess._handle.onexit (node:internal/child_process:324:12)

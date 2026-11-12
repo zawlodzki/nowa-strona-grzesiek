@@ -1,0 +1,139 @@
+{
+  "rules": [
+    ".ao-breadcrumbs{color:var(--ao-muted);font-size:.8125rem}.ao-breadcrumbs ol{gap:var(--ao-space-12);flex-wrap:wrap;margin:0;padding:0;list-style:none;display:flex}.ao-breadcrumbs li+li:before{content:\"/\";margin-inline-end:var(--ao-space-12)}@media (hover:hover) and (pointer:fine){.ao-breadcrumbs a:hover{text-decoration:underline}}"
+  ],
+  "states": [
+    {
+      "height": 1000,
+      "scrollY": 751,
+      "panels": [
+        {
+          "class": "article-toc",
+          "top": 511.96875,
+          "height": 741,
+          "scrollHeight": 741,
+          "overflow": "auto",
+          "text": "się bierze?Jak objawia się PCOS?Jak zdiagnozować PCOS?Rodzaje PCOSPCOS a insulinoopornośćCo mówią wytyczne o leczeniu PCOSCzego nie widać w wynikachOd czego zacząć po diagnozie PCOSUdostępnijUdostępnij artykułKopiuj linkWyślij mailemUdostępnij na FacebookuPrześlij przez WhatsAppSkopiuj adres ręcznie"
+        },
+        {
+          "class": "article-sidebar",
+          "top": 511.96875,
+          "height": 447,
+          "scrollHeight": 447,
+          "overflow": "auto",
+          "text": "odziennych wyborach. Prosto do Twojej skrzynki.Chcę czytać więcejMożesz wypisać się w każdej chwili.Sprawdź równieżPMOS (PCOS)Hirsutyzm, czyli nadmierne owłosienie u kobiet: co je powoduje i jakie badania to pokażąPMOS (PCOS)Wysoki testosteron u kobiet: jak czytać wynik, co go podnosi i co go obniża"
+        }
+      ]
+    },
+    {
+      "height": 1000,
+      "scrollY": 3951,
+      "panels": [
+        {
+          "class": "article-toc",
+          "top": 112,
+          "height": 741,
+          "scrollHeight": 741,
+          "overflow": "auto",
+          "text": "się bierze?Jak objawia się PCOS?Jak zdiagnozować PCOS?Rodzaje PCOSPCOS a insulinoopornośćCo mówią wytyczne o leczeniu PCOSCzego nie widać w wynikachOd czego zacząć po diagnozie PCOSUdostępnijUdostępnij artykułKopiuj linkWyślij mailemUdostępnij na FacebookuPrześlij przez WhatsAppSkopiuj adres ręcznie"
+        },
+        {
+          "class": "article-sidebar",
+          "top": 112,
+          "height": 447,
+          "scrollHeight": 447,
+          "overflow": "auto",
+          "text": "odziennych wyborach. Prosto do Twojej skrzynki.Chcę czytać więcejMożesz wypisać się w każdej chwili.Sprawdź równieżPMOS (PCOS)Hirsutyzm, czyli nadmierne owłosienie u kobiet: co je powoduje i jakie badania to pokażąPMOS (PCOS)Wysoki testosteron u kobiet: jak czytać wynik, co go podnosi i co go obniża"
+        }
+      ]
+    },
+    {
+      "height": 600,
+      "scrollY": 1541,
+      "panels": [
+        {
+          "class": "article-toc",
+          "top": 112,
+          "height": 464,
+          "scrollHeight": 741,
+          "overflow": "auto",
+          "text": "się bierze?Jak objawia się PCOS?Jak zdiagnozować PCOS?Rodzaje PCOSPCOS a insulinoopornośćCo mówią wytyczne o leczeniu PCOSCzego nie widać w wynikachOd czego zacząć po diagnozie PCOSUdostępnijUdostępnij artykułKopiuj linkWyślij mailemUdostępnij na FacebookuPrześlij przez WhatsAppSkopiuj adres ręcznie"
+        },
+        {
+          "class": "article-sidebar",
+          "top": 112,
+          "height": 447,
+          "scrollHeight": 447,
+          "overflow": "auto",
+          "text": "odziennych wyborach. Prosto do Twojej skrzynki.Chcę czytać więcejMożesz wypisać się w każdej chwili.Sprawdź równieżPMOS (PCOS)Hirsutyzm, czyli nadmierne owłosienie u kobiet: co je powoduje i jakie badania to pokażąPMOS (PCOS)Wysoki testosteron u kobiet: jak czytać wynik, co go podnosi i co go obniża"
+        }
+      ]
+    },
+    {
+      "height": 600,
+      "scrollY": 4982,
+      "panels": [
+        {
+          "class": "article-toc",
+          "top": 112,
+          "height": 464,
+          "scrollHeight": 741,
+          "overflow": "auto",
+          "text": "się bierze?Jak objawia się PCOS?Jak zdiagnozować PCOS?Rodzaje PCOSPCOS a insulinoopornośćCo mówią wytyczne o leczeniu PCOSCzego nie widać w wynikachOd czego zacząć po diagnozie PCOSUdostępnijUdostępnij artykułKopiuj linkWyślij mailemUdostępnij na FacebookuPrześlij przez WhatsAppSkopiuj adres ręcznie"
+        },
+        {
+          "class": "article-sidebar",
+          "top": 112,
+          "height": 447,
+          "scrollHeight": 447,
+          "overflow": "auto",
+          "text": "odziennych wyborach. Prosto do Twojej skrzynki.Chcę czytać więcejMożesz wypisać się w każdej chwili.Sprawdź równieżPMOS (PCOS)Hirsutyzm, czyli nadmierne owłosienie u kobiet: co je powoduje i jakie badania to pokażąPMOS (PCOS)Wysoki testosteron u kobiet: jak czytać wynik, co go podnosi i co go obniża"
+        }
+      ]
+    }
+  ],
+  "breakpoints": [
+    {
+      "width": 1200,
+      "grid": "178.078px 623.312px 222.609px",
+      "display": "grid",
+      "right": "block",
+      "toc": "sticky"
+    },
+    {
+      "width": 1199,
+      "grid": "170px 909px",
+      "display": "grid",
+      "right": "block",
+      "toc": "sticky"
+    },
+    {
+      "width": 992,
+      "grid": "170px 702px",
+      "display": "grid",
+      "right": "block",
+      "toc": "sticky"
+    },
+    {
+      "width": 991,
+      "grid": "170px 701px",
+      "display": "grid",
+      "right": "block",
+      "toc": "sticky"
+    },
+    {
+      "width": 768,
+      "grid": "170px 510px",
+      "display": "grid",
+      "right": "block",
+      "toc": "sticky"
+    },
+    {
+      "width": 767,
+      "grid": "170px minmax(0px, 1fr)",
+      "display": "flex",
+      "right": "block",
+      "toc": "static"
+    }
+  ]
+}

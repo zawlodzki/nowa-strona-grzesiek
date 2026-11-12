@@ -1,0 +1,17 @@
+✔ caught up, empty dataset, grace period and exact threshold are ok (0.723215ms)
+✔ stale content alerts even if published seconds after the previous deploy (0.109459ms)
+✔ incident remains stable across edits until a new deployment (0.12946ms)
+✔ invalid API timestamps and future values cannot report ok (0.155584ms)
+✔ dry run prints the message and never calls the webhook (0.183459ms)
+✔ send posts only timestamps, incident and fixed worker name; fails on rejection (0.594213ms)
+✔ monitor reads public Sanity without auth and uses first active deployment (0.271502ms)
+✔ API failures and missing deployments fail closed (0.191544ms)
+✔ CLI dry run succeeds without webhook configuration (37.466825ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 85.077195

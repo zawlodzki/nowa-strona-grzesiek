@@ -1,5 +1,5 @@
 // One query per build loads every routed document plus what their blocks reference, parsed once at this boundary.
-import type { ContentImage, Logo, Organization, Page, Person, PortableText, Post, Seo, Service, Testimonial } from '../../../../studio/sanity.types';
+import type { ContentImage, Course, Logo, Organization, Page, Person, PortableText, Post, Seo, Service, Testimonial } from '../../../../studio/sanity.types';
 import type { ResolvedImage } from '../../components/portable-text/types';
 import type { Language, SitePath } from '../../seo/types.ts';
 import { sanityQuery } from './client.ts';
@@ -24,6 +24,8 @@ export interface Site {
   logos: Map<string, Logo>;
   testimonials: Map<string, Testimonial>;
   services: Service[];
+  /** A page with a course is a course page; a service pointing at the same page is ignored. */
+  courses: Course[];
   person?: Person;
   organization?: Organization;
   /** Document `_id` to the `_id`s of its translations, itself excluded. */
@@ -37,6 +39,7 @@ const QUERY = `{
   "logos": *[_type == "logo"],
   "testimonials": *[_type == "testimonial"],
   "services": *[_type == "service"],
+  "courses": *[_type == "course"],
   "person": *[_id == "person"][0],
   "organization": *[_id == "organization"][0],
   "translations": *[_type == "translation.metadata"]{"ids": translations[].value._ref}
@@ -51,6 +54,7 @@ interface Raw {
   logos: Logo[];
   testimonials: Testimonial[];
   services: Service[];
+  courses?: Course[];
   person: Person | null;
   organization: Organization | null;
   translations: { ids: string[] | null }[];
@@ -156,6 +160,7 @@ function parseSite(raw: Raw): Site {
     logos: new Map(raw.logos.map((logo) => [logo._id, logo])),
     testimonials: new Map(raw.testimonials.map((item) => [item._id, item])),
     services: raw.services,
+    courses: raw.courses ?? [],
     ...(raw.person && { person: raw.person }),
     ...(raw.organization && { organization: raw.organization }),
     translations,
