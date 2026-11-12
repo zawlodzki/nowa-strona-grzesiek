@@ -13,6 +13,12 @@ The archive goes to `~/sanity-backups/zawlodzki`. Pass a directory outside Git a
 
 Keep the summary with the archive. It records the content document count, draft count, image count, file count, and SHA-256. Drafts count toward the document total. Asset binaries have their own totals. If a count differs, check for concurrent editorial activity or inaccessible assets, then rerun. Sanity's exporter excludes internal documents apart from content releases in an authenticated draft export. [Sanity export documentation](https://www.sanity.io/docs/content-lake/exporting-data)
 
+## Retrieve a locked copy from Backblaze B2
+
+Download the `.restic.tar` object from the private Sanity backup bucket. Compare its SHA-256 with the recorded checksum. Extract the bundle in a private directory outside Git. The bundle contains a standalone Restic repository in `restic/`.
+
+Use the dedicated Sanity Restic password from 1Password. Run `restic -r restic check --read-data` to verify the repository. Run `restic -r restic restore latest --target restored` to recover the Sanity archive and its checksum. Verify the recovered archive before importing it.
+
 ## Restore into a fresh dataset
 
 1. Select the verified archive and compare its SHA-256 to the saved summary.
