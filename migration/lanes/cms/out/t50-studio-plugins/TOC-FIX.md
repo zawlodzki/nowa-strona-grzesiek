@@ -34,3 +34,20 @@ Studio started locally against the production dataset, but Chromium reached the 
 toc-inspector.png remains the original macOS failure screenshot; it was deliberately not replaced with fabricated or unrelated evidence. Both reported pages and a blog post still need authenticated live inspection after this fix. Save toc-inspector.png (Pipedrive), toc-inspector-asana.png and toc-inspector-post.png when verified. Confirm navigation via entries and absence of panel errors. No live success is claimed.
 
 T50 is blocked until that verification can run. No deploy, dataset mutation, typegen or schema extraction was performed. All servers/browser processes started during this fix were stopped.
+
+## Follow-up for the inline error
+
+The original guard stopped the crash in the Portable Text predicate, but the
+section renderer still showed its error row for nested text fields. Filter
+nested values by array type before handing them to the renderer. The section
+itself remains clickable. Configured Portable Text and ordinary arrays still
+reach the existing renderers.
+
+The new regression failed on the previous archive because the selector returned
+the Hero's text body. All 11 tests pass with the updated archive. Frozen-lockfile
+installation, Studio type checking, schema validation and Studio build passed.
+
+Verified in authenticated local Studio on the Pipedrive and Asana service
+pages and the blog post about Asana pricing. All three showed a populated TOC
+without the inline error. The Hero entries opened their section dialogs, and a
+heading in the post navigated to the corresponding Portable Text block.

@@ -136,6 +136,12 @@ The archive restores dataset content and asset binaries. Recreate webhooks, CORS
 
 ## Store verified copies
 
-Use the VPS backup settings as the model. Run the export daily at 04:15 Europe/Warsaw with up to 10 minutes of jitter. Take a fresh export before bulk production writes.
+The GitHub Actions workflow `Sanity backup` (`.github/workflows/backup-sanity.yml`) runs every Sunday at 04:15 Europe/Warsaw and can be started by hand from the Actions tab. Start it by hand before bulk production writes. It runs `migration/tools/backup-offsite.mjs`, which:
 
-Store each verified archive and its checksum in a dedicated encrypted Restic repository in private Backblaze B2. Keep 7 daily, 4 weekly, and 6 monthly snapshots. Use 30-day Compliance Object Lock for immutable copies. Keep the destination, credentials, and retention jobs separate from the VPS backup. Configure the scheduled job and verify a B2 restore as follow-up work.
+1. exports production with drafts and assets through `backup-sanity.mjs` and stops if drafts are missing;
+2. stores the archive and its `.sha256` file in a new standalone Restic repository, runs `check --read-data`, restores it and compares the SHA-256;
+3. uploads the repository as one `<archive-name>.restic.tar` object to the private Sanity backup bucket named in `SANITY_BACKUP_B2_BUCKET` with 30-day Compliance Object Lock, and checks the SHA-1 that B2 returns.
+
+The run log and job summary show counts, checksums, the object name and the lock date. Secrets live only in GitHub Actions: `SANITY_BACKUP_READ_TOKEN` (Sanity viewer token "T73 GitHub Actions weekly backup (read)"), `SANITY_BACKUP_B2_KEY_ID`, `SANITY_BACKUP_B2_KEY`, `SANITY_BACKUP_B2_BUCKET` and `SANITY_BACKUP_RESTIC_PASSWORD`. The B2 key and Restic password also live in 1Password. The B2 key is restricted to the backup bucket and cannot list or read files, so retrieve copies with an owner key from the Backblaze console.
+
+Every weekly bundle stays in the bucket. Object Lock blocks deletion for 30 days; nothing deletes older bundles automatically. A bundle is about 150 MB, so a year is about 8 GB. Keep the destination and credentials separate from the VPS backup.

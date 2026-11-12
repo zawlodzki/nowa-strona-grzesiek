@@ -1,0 +1,40 @@
+name: Sanity backup
+
+on:
+  schedule:
+    - cron: '15 4 * * 0'
+      timezone: Europe/Warsaw
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sanity-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    if: github.repository == 'zawlodzki/nowa-strona-grzesiek'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq restic
+      # The work directory sits outside the checkout. Logs show counts, checksums and the object name only.
+      - run: node migration/tools/backup-offsite.mjs "$RUNNER_TEMP/sanity-backup"
+        env:
+          SANITY_API_READ_TOKEN: ${{ secrets.SANITY_BACKUP_READ_TOKEN }}
+          RESTIC_PASSWORD: ${{ secrets.SANITY_BACKUP_RESTIC_PASSWORD }}
+          B2_APPLICATION_KEY_ID: ${{ secrets.SANITY_BACKUP_B2_KEY_ID }}
+          B2_APPLICATION_KEY: ${{ secrets.SANITY_BACKUP_B2_KEY }}
+          B2_BUCKET: ${{ secrets.SANITY_BACKUP_B2_BUCKET }}
+          B2_PREFIX: ${{ vars.SANITY_BACKUP_B2_PREFIX }}
+      - if: always()
+        run: rm -rf "$RUNNER_TEMP/sanity-backup"
