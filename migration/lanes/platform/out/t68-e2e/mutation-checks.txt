@@ -1,0 +1,16 @@
+## mutation 1: worker drops attribution field li_fat_id (renamed li_fat)
+[1/7] [chromium] › e2e/forms.spec.ts:24:3 › main-contact form delivers the Webflow envelope to n8n and lands on the thank-you page
+  1) [chromium] › e2e/forms.spec.ts:24:3 › main-contact form delivers the Webflow envelope to n8n and lands on the thank-you page 
+    Error: li_fat_id
+[4/7] [chromium] › e2e/forms.spec.ts:24:3 › newsletter form delivers the Webflow envelope to n8n and lands on the thank-you page
+  2) [chromium] › e2e/forms.spec.ts:24:3 › newsletter form delivers the Webflow envelope to n8n and lands on the thank-you page 
+    Error: li_fat_id
+  2 failed
+    [chromium] › e2e/forms.spec.ts:24:3 › main-contact form delivers the Webflow envelope to n8n and lands on the thank-you page 
+Updated 1 path from the index
+## mutation 2: built home page grants analytics_storage by default
+    -     "analytics_storage": "denied",
+    +     "analytics_storage": "granted",
+  1 failed
+  1 passed (3.0s)
+1
