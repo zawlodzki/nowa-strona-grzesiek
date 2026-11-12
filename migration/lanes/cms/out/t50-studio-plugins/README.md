@@ -1,4 +1,4 @@
-# T50 verification — blocked
+# T50 verification — macOS screenshots pending
 
 2026-11-12. Local Studio uses the existing production dataset configuration; no dataset writes were made.
 
@@ -10,4 +10,4 @@
 
 T3 preview_open failed: “This host blocks the sandbox T3's browser runs in (AppArmor on Ubuntu 23.10+).” Used installed Chromium through Playwright as fallback. It reached the real local Studio login screen. No authenticated browser profile was available.
 
-The implementation remains unverified in an authenticated Studio session. Resume with a logged-in session and capture all three required views before opening the PR. No deployment or type generation was run.
+The implementation remains unverified in an authenticated Studio session. Per the revised user instruction, the PR opens in review with this evidence gap disclosed. A separate agent will capture all three views on macOS following [MACOS-VERIFY.md](MACOS-VERIFY.md). No deployment or type generation was run. Check/build were rerun successfully before PR creation.

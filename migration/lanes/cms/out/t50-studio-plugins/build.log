@@ -1,5 +1,5 @@
 $ sanity build
 - Clean output folder
-✔ Clean output folder (1ms)
+✔ Clean output folder (9ms)
 - Build Sanity Studio
-✔ Build Sanity Studio (3073ms)
+✔ Build Sanity Studio (1959ms)
