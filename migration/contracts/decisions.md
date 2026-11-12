@@ -27,3 +27,5 @@ Written only by the coordinator. Newest at the bottom.
 | 2026-11-11 | T34 | Add opt-in Feature layout `article` (one prose flow, sticky right portrait), ContactForm `channels` variant without form; reuse channel groups. Testimonial adds optional contentImage `authorImage` and HTTPS `linkedinUrl`, independent of recommendation `image` / source `url`. Existing variants unchanged. |
 
 | 2026-11-11 | T37 | Feature gains optional mediaCaption for a caption under the diagram rather than in body prose. Contact forms drop marketing-emails; all 32 attribution fields and newsletter remain. Promo cards reuse the existing animated Sales Atlas badge for that target. |
+
+| 2026-11-12 | T75 | Record T53 fields: `contactForm.copy` and `newsletterSignup.copy` are optional objects of form texts (labels, placeholders, submit and wait labels, privacy note, newsletter heading and legal links). An empty field falls back to the copy in code. formId, `/api/form`, n8n and Turnstile stay in code. | T53, T75 | C, D |
