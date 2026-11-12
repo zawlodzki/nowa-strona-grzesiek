@@ -1,0 +1,54 @@
+
+ ⛅️ wrangler 4.151.2 (update available 4.160.1)
+───────────────────────────────────────────────
+Attaching additional modules:
+┌───────────────────────────────────────────────────────────┬──────┬─────────────┐
+│ Name                                                      │ Type │ Size        │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/_.._DP0-rkCi.mjs                                   │ esm  │ 236.16 KiB  │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/_astro_assets_DYKsBfpM.mjs                         │ esm  │ 49.73 KiB   │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/_virtual_astro_server-island-manifest_q0HM18kM.mjs │ esm  │ 0.27 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/_virtual_astro_session-driver_DIk1nzQP.mjs         │ esm  │ 0.22 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/browserUpload-BTQyjHMj_YffxZeRH.mjs                │ esm  │ 3.22 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/compiler_mba1CsjN.mjs                              │ esm  │ 276.94 KiB  │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/errors_CHiu2pJj.mjs                                │ esm  │ 41.01 KiB   │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/image-passthrough-endpoint_CfPxfXsu.mjs            │ esm  │ 2.52 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/isRecord-Kfmt-nk-_CwWmouxn.mjs                     │ esm  │ 0.37 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/noop-entrypoint_BYLrzUxc.mjs                       │ esm  │ 0.15 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/noop_Bkfy26KD.mjs                                  │ esm  │ 0.79 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/preview_Bfk4OUX_.mjs                               │ esm  │ 6.19 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/rolldown-runtime_D7vh-g_o.mjs                      │ esm  │ 0.41 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/security_D027CpN5.mjs                              │ esm  │ 6.21 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/service_BsMWVH5V.mjs                               │ esm  │ 58.17 KiB   │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/site_Ajz2cDW_.mjs                                  │ esm  │ 336.79 KiB  │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ chunks/stegaEncodeSourceMap-BuP-MslV_BFY7fAXz.mjs         │ esm  │ 6.66 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ virtual_astro_middleware.mjs                              │ esm  │ 0.15 KiB    │
+├───────────────────────────────────────────────────────────┼──────┼─────────────┤
+│ Total (18 modules)                                        │      │ 1025.96 KiB │
+└───────────────────────────────────────────────────────────┴──────┴─────────────┘
+✨ Read 26 files from the assets directory /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T65-worker-observability/apps/web/.wrangler/preview/client
+Total Upload: 1433.74 KiB / gzip: 320.86 KiB
+Your Worker has access to the following bindings:
+Binding                                                        Resource                  
+env.ASSETS                                                     Assets                    
+env.SANITY_DATASET ("production")                              Environment Variable      
+env.SANITY_STUDIO_URL ("https://zawlodzki.sanity.studio")      Environment Variable      
+
+--dry-run: exiting now.
