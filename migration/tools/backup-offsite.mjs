@@ -51,7 +51,10 @@ async function b2(url, token, body) {
     redirect: 'error',
     signal: AbortSignal.timeout(60_000),
   });
-  if (!response.ok) throw new Error(`B2 ${new URL(url).pathname} returned HTTP ${response.status}.`);
+  if (!response.ok) {
+    const {code, message} = await response.json().catch(() => ({}));
+    throw new Error(`B2 ${new URL(url).pathname} returned HTTP ${response.status} ${code ?? ''}: ${message ?? ''}`);
+  }
   return response.json();
 }
 
@@ -99,7 +102,10 @@ async function upload(bundle, name, sha1, sha256) {
     redirect: 'error',
     signal: AbortSignal.timeout(30 * 60_000),
   });
-  if (!response.ok) throw new Error(`B2 upload returned HTTP ${response.status}.`);
+  if (!response.ok) {
+    const {code, message} = await response.json().catch(() => ({}));
+    throw new Error(`B2 upload returned HTTP ${response.status} ${code ?? ''}: ${message ?? ''}`);
+  }
   const file = await response.json();
   if (file.contentSha1 !== sha1 || file.contentLength !== data.length) {
     throw new Error('B2 checksum or size does not match the local bundle.');
