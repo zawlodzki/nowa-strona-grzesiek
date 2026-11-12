@@ -1,0 +1,24 @@
+$ node --experimental-strip-types --test src/preview/*.test.ts
+✔ missing or invalid configuration fails closed before rendering (15.588803ms)
+✔ every unauthenticated URL including assets is rejected before rendering (6.626999ms)
+✔ robots disallows the entire site without authentication (0.514462ms)
+✔ successful, missing and failed pages keep private headers and allow only Studio framing (1.164633ms)
+✔ preview refuses form submissions before any side effect (0.372878ms)
+✔ hosted Studio also allows its Sanity application ancestor (0.315252ms)
+✔ session is signed, expires after one hour and cannot cross origin or dataset (20.040623ms)
+✔ tampered, malformed and duplicate sessions fail closed (1.782886ms)
+✔ cookie authorizes protected pages and assets and missing configuration still fails closed (2.890726ms)
+✔ only the exact GET enable endpoint reaches its own secret validation without Basic auth (0.627713ms)
+✔ redirect accepts local paths and rejects foreign, ambiguous and encoded boundaries (0.80588ms)
+✔ request readers fetch again and observe draft changes without a process restart (0.611962ms)
+✔ only display text receives visual editing metadata (0.108793ms)
+✔ an incomplete unrelated document does not break a valid preview (0.27921ms)
+✔ preview retains PL and EN routes and rejects uppercase slugs (0.361711ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 146.060016

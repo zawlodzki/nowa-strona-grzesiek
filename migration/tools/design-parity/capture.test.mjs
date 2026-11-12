@@ -8,8 +8,6 @@ import { capturePath, resolveChrome } from './capture.mjs';
 import { RULES } from './parity.mjs';
 import { diffPage } from './publish.mjs';
 
-process.env.CHROME_BIN = '/usr/local/bin/google-chrome';
-
 const HTML = `<!doctype html>
 <meta charset="utf-8">
 <title>parity</title>
@@ -71,7 +69,15 @@ function serve(html) {
 }
 
 test('resolveChrome returns CHROME_BIN', () => {
-  assert.equal(resolveChrome(process.env), '/usr/local/bin/google-chrome');
+  const home = mkdtempSync(join(tmpdir(), 'parity-explicit-chrome-'));
+  const binary = join(home, 'chrome');
+  try {
+    writeFileSync(binary, '#!/bin/sh\nexit 0\n');
+    chmodSync(binary, 0o755);
+    assert.equal(resolveChrome({ CHROME_BIN: binary }), binary);
+  } finally {
+    rmSync(home, { recursive: true, force: true });
+  }
 });
 
 test('empty CHROME_BIN does not invent a browser', () => {
