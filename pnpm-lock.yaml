@@ -5670,7 +5670,7 @@ packages:
       styled-components: ^6.1
 
   sanity-plugin-table-of-contents@file:migration/lanes/cms/out/t50-studio-plugins/sanity-plugin-table-of-contents-2.0.0-t50.tgz:
-    resolution: {integrity: sha512-XyDyklAF2WwKeYXDZidkMADqnFbtQh47zbo4RVoBp+02n5eHx3hPox4xFH1mW7bSF4JxCaIx9goPkgzdc8DsSw==, tarball: file:migration/lanes/cms/out/t50-studio-plugins/sanity-plugin-table-of-contents-2.0.0-t50.tgz}
+    resolution: {integrity: sha512-IU0J/bj3e+yggbL9Gu/Nq+lfo6mQhzp7b55LT0W06ldsnJfge/7QwHANw5/+061mmeQrUIy4EOdn030TWuGVjQ==, tarball: file:migration/lanes/cms/out/t50-studio-plugins/sanity-plugin-table-of-contents-2.0.0-t50.tgz}
     version: 2.0.0
     engines: {node: '>=22.12'}
     peerDependencies:
