@@ -7,7 +7,8 @@
     "build": "sanity build",
     "check": "tsc --noEmit && sanity schema validate",
     "typegen": "sanity schema extract --path schema.json --force && sanity typegen generate",
-    "verify": "pnpm typegen && node scripts/verify-schema.mjs"
+    "verify": "pnpm typegen && node scripts/verify-schema.mjs",
+    "test": "node --test ../../migration/lanes/cms/out/t50-studio-plugins/toc-array-guard.test.mjs"
   },
   "dependencies": {
     "sanity": "6.20.0",
@@ -15,7 +16,9 @@
     "sanity-plugin-internationalized-array": "5.3.6",
     "react": "19.3.1",
     "react-dom": "19.3.1",
-    "styled-components": "6.6.0"
+    "styled-components": "6.6.0",
+    "sanity-plugin-media": "^6.6.3",
+    "sanity-plugin-table-of-contents": "file:../../migration/lanes/cms/out/t50-studio-plugins/sanity-plugin-table-of-contents-2.0.0-t50.tgz"
   },
   "devDependencies": {
     "typescript": "7.0.2",

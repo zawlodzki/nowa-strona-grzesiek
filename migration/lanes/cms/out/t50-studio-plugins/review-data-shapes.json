@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "/szkolenie-i-wdrozenie-asana",
+    "sections": [
+      {
+        "type": "hero",
+        "bodyShape": "str"
+      },
+      {
+        "type": "logoStrip",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "contentSection",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "contentSection",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "contentSection",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "pricing",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "ctaBand",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "contentSection",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "testimonials",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "faq",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "contactForm",
+        "bodyShape": "NoneType"
+      }
+    ]
+  },
+  {
+    "slug": "/szkolenie-i-wdrozenie-pipedrive",
+    "sections": [
+      {
+        "type": "hero",
+        "bodyShape": "str"
+      },
+      {
+        "type": "logoStrip",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "contentSection",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "contentSection",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "feature",
+        "bodyShape": "list"
+      },
+      {
+        "type": "contentSection",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "pricing",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "ctaBand",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "contentSection",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "testimonials",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "promoCard",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "faq",
+        "bodyShape": "NoneType"
+      },
+      {
+        "type": "contactForm",
+        "bodyShape": "NoneType"
+      }
+    ]
+  }
+]

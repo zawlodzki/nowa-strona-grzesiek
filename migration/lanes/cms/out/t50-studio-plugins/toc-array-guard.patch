@@ -1,0 +1,25 @@
+--- a/src/utils/isPortableText.tsx
++++ b/src/utils/isPortableText.tsx
+@@ -9,9 +9,9 @@
+  *
+  */
+ export function isPortableTextNew<T = PortableTextSpan | PortableTextObject>(
+-  value: unknown[],
++  value: unknown,
+ ): value is PortableTextTextBlock<T>[] {
+-  return value.some((block) => {
++  return Array.isArray(value) && value.some((block) => {
+     return (
+       isRecord(block) &&
+       typeof block._type === 'string' && // block types can be named, so expect anything here.
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -19,7 +19,7 @@
+   return block._type === "block" && block.style?.startsWith("h") ? !isSectionPTE && block.style === firstHeading.style ? 0 : Number(block.style?.slice(1)) : findPreviousHeadingStyle(blockIndex);
+ };
+ function isPortableTextNew(value) {
+-  return value.some((block) => isRecord(block) && typeof block._type == "string" && // block types can be named, so expect anything here.
++  return Array.isArray(value) && value.some((block) => isRecord(block) && typeof block._type == "string" && // block types can be named, so expect anything here.
+   Array.isArray(block.children) && block.children.every((child) => isRecord(child)) && ("markDefs" in block ? Array.isArray(block.markDefs) && block.markDefs.every((def) => isRecord(def)) : !0) && ("style" in block ? typeof block.style == "string" : !0));
+ }
+ function getTitle(block, customBlockTitle) {

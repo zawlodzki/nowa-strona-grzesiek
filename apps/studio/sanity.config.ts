@@ -1,11 +1,19 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {documentInternationalization} from '@sanity/document-internationalization'
+import {media} from 'sanity-plugin-media'
+import {tableOfContentsPlugin} from 'sanity-plugin-table-of-contents'
 import {presentation} from './presentation'
 import {schemaTypes, singletonIds} from './schemaTypes'
 
 const localizedTypes = ['page', 'post', 'siteSettings']
 const singletonTypes = Object.keys(singletonIds)
+const legalSlugs = [
+  '/polityka-prywatnosci',
+  '/regulamin',
+  '/regulamin-newslettera',
+  '/lista-cookies-i-identyfikatorow',
+]
 
 export default defineConfig({
   name: 'zawlodzki',
@@ -14,14 +22,31 @@ export default defineConfig({
   dataset: process.env.SANITY_STUDIO_DATASET || 'production',
   plugins: [
     presentation,
+    media(),
+    tableOfContentsPlugin({
+      fieldNames: ['sections', 'body'],
+      documentTypes: ['page', 'post'],
+    }),
     structureTool({
       structure: (S) => S.list().title('Treści').items([
         ...singletonTypes.map((type) => S.listItem()
           .title(type === 'person' ? 'Grzegorz Zawłodzki' : 'Wellbiz')
           .id(type)
           .child(S.document().schemaType(type).documentId(type))),
+        S.documentTypeListItem('page')
+          .title('Strony')
+          .child(S.documentTypeList('page').title('Strony')
+            .filter('_type == "page" && !(slug.current in $legalSlugs)')
+            .params({legalSlugs})),
+        S.listItem()
+          .id('legalPages')
+          .title('Strony prawne')
+          .child(S.documentTypeList('page').title('Strony prawne')
+            .filter('_type == "page" && slug.current in $legalSlugs')
+            .params({legalSlugs})),
         ...S.documentTypeListItems().filter((item) =>
-          !singletonTypes.includes(item.getId() ?? '') && item.getId() !== 'translation.metadata'),
+          !singletonTypes.includes(item.getId() ?? '') &&
+          !['page', 'translation.metadata'].includes(item.getId() ?? '')),
       ]),
     }),
     documentInternationalization({
