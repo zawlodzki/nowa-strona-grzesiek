@@ -14,6 +14,7 @@ The migration of zawlodzki.pl from Webflow to Astro + Sanity, hosted on Cloudfla
 2. **Claim.** Make a single change to the task file's front matter: `status: claimed`, `claimed_by: <tool>-<model>-<4 chars>` (for example `codex-gpt-k3n9`), `claimed_at: <ISO date>`, `branch: task/<id>-<slug>`. Commit only that file on `main` with the message `claim <id>` and push.
    - If the push is rejected, run `git pull --rebase`. If someone else has claimed the task in the meantime, drop your change and pick another task.
    - Claim commits are the only direct commits to `main`.
+   - T61 protection is a proposal until the owner activates and verifies it. See `migration/lanes/platform/out/t61-branch-rules/README.md`. The proposed CI bypass covers repository administrators and is not limited to claim commits. It never permits agents to merge or push other changes directly to `main`.
 3. **Work.** Do all work on your branch and change only the paths listed in the task's `owns`. Read anything you like, but write nothing else. Before you start and before you open the PR, run `python3 -I migration/tools/tasks.py check`.
 4. **Hand off.** Fill in the task's `## Handoff` section with what changed and where, deviations from the steps, follow-ups, and evidence for each `Done when` item. Tick the boxes that pass. Set `status: review` and `pr: <url>`. Open a PR to `main` titled `<id>: <title>`.
 5. **Merge.** The user merges. Merging sets `status: done`. Agents never merge, force-push, or rewrite `main`.
