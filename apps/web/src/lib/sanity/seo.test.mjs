@@ -53,22 +53,22 @@ test('all visible text testimonials reach the single serialized graph', async ()
   }
 });
 
-test('a service with course fields becomes a Course with its instance, and the home stub points at it', async () => {
+test('a course document makes its page a Course with its instance, wins over a service on the same page, and the home stub points at it', async () => {
   const { serializeGraph } = await import('../../seo/graph.ts');
   const doc = { ...page, _id: 'page-course', path: '/kurs', sections: [{ _type: 'pricing', plans: [{ name: 'Access', price: 2200 }] }] };
   const home = { ...page, _id: 'page-home', path: '/' };
   const plain = { _id: 's1', name: 'Course', description: 'Eight modules.', page: { _ref: doc._id } };
   const course = { educationalLevel: 'Intermediate', audience: 'B2B companies', teaches: ['Process', 'CRM'], instance: { name: 'One year access', courseMode: 'online', courseWorkload: 'PT9H', startDate: '2026-10-01' } };
-  const build = (service, target) => {
-    const value = withEntities({ ...site(), pages: [doc, home], services: [service], byId: new Map([[doc._id, doc], [home._id, home]]) });
+  const build = (courses, target) => {
+    const value = withEntities({ ...site(), pages: [doc, home], services: [plain], courses, byId: new Map([[doc._id, doc], [home._id, home]]) });
     return JSON.parse(serializeGraph(seoPage(value, { kind: 'page', language: 'pl', path: target.path, page: target })))['@graph'];
   };
 
-  const before = build(plain, doc);
+  const before = build([], doc);
   assert.ok(before.some(n => n['@type'] === 'Service'));
   assert.ok(!before.some(n => n['@type'] === 'Course'));
 
-  const graph = build({ ...plain, course }, doc);
+  const graph = build([{ ...plain, _id: 'c1', ...course }], doc);
   assert.ok(!graph.some(n => n['@type'] === 'Service'));
   const node = graph.find(n => n['@type'] === 'Course');
   assert.equal(node['@id'], 'https://www.zawlodzki.pl/kurs#course');
@@ -80,6 +80,6 @@ test('a service with course fields becomes a Course with its instance, and the h
   assert.deepEqual(node.offers.map(o => o.price), ['2200']);
   assert.equal(graph.find(n => n['@id'] === 'https://www.zawlodzki.pl/kurs#webpage').mainEntity['@id'], node['@id']);
 
-  const stub = build({ ...plain, course }, home).find(n => n['@id'] === 'https://www.zawlodzki.pl/#webpage').mainEntity.itemListElement[0].itemOffered;
-  assert.deepEqual([stub['@type'], stub['@id']], ['Course', node['@id']]);
+  const items = build([{ ...plain, _id: 'c1', ...course }], home).find(n => n['@id'] === 'https://www.zawlodzki.pl/#webpage').mainEntity.itemListElement;
+  assert.deepEqual(items.map(i => [i.itemOffered['@type'], i.itemOffered['@id']]), [['Course', node['@id']]]);
 });

@@ -141,23 +141,27 @@ export const service = defineType({
     defineField({name: 'page', title: 'Strona usługi', type: 'reference', to: [{type: 'page'}]}),
     defineField({name: 'provider', type: 'reference', to: [{type: 'person'}, {type: 'organization'}]}),
     defineField({name: 'areaServed', type: 'string', initialValue: 'Polska'}),
+  ], preview: {select: {title: 'name'}},
+})
+export const course = defineType({
+  name: 'course', title: 'Kurs', type: 'document',
+  description: 'Strona kursu dostaje w danych strukturalnych typ Course zamiast Service.',
+  fields: [
+    defineField({name: 'name', title: 'Nazwa', type: 'string', validation: (rule) => rule.required()}),
+    defineField({name: 'description', title: 'Opis', type: 'text', validation: (rule) => rule.required()}),
+    defineField({name: 'page', title: 'Strona kursu', type: 'reference', to: [{type: 'page'}]}),
+    defineField({name: 'provider', type: 'reference', to: [{type: 'person'}, {type: 'organization'}]}),
+    defineField({name: 'educationalLevel', title: 'Poziom', type: 'string'}),
+    defineField({name: 'isAccessibleForFree', title: 'Bezpłatny', type: 'boolean', initialValue: false}),
+    defineField({name: 'audience', title: 'Dla kogo', type: 'string'}),
+    defineField({name: 'teaches', title: 'Czego uczy', type: 'array', of: [{type: 'string'}], validation: (rule) => rule.required().min(1)}),
     defineField({
-      name: 'course', title: 'Kurs', type: 'object',
-      description: 'Wypełnij tylko dla kursu. Strona dostaje wtedy w danych strukturalnych typ Course zamiast Service.',
+      name: 'instance', title: 'Edycja kursu', type: 'object',
       fields: [
-        defineField({name: 'educationalLevel', title: 'Poziom', type: 'string'}),
-        defineField({name: 'isAccessibleForFree', title: 'Bezpłatny', type: 'boolean', initialValue: false}),
-        defineField({name: 'audience', title: 'Dla kogo', type: 'string'}),
-        defineField({name: 'teaches', title: 'Czego uczy', type: 'array', of: [{type: 'string'}], validation: (rule) => rule.required().min(1)}),
-        defineField({
-          name: 'instance', title: 'Edycja kursu', type: 'object',
-          fields: [
-            defineField({name: 'name', title: 'Nazwa', type: 'string', validation: (rule) => rule.required()}),
-            defineField({name: 'courseMode', title: 'Tryb', type: 'string', options: {list: ['online', 'onsite', 'blended']}, validation: (rule) => rule.required()}),
-            defineField({name: 'courseWorkload', title: 'Nakład pracy', description: 'Czas w formacie ISO 8601, np. PT9H.', type: 'string', validation: (rule) => rule.regex(/^P(?!$)(\d+D)?(T(\d+H)?(\d+M)?)?$/)}),
-            defineField({name: 'startDate', title: 'Start', type: 'date'}),
-          ],
-        }),
+        defineField({name: 'name', title: 'Nazwa', type: 'string', validation: (rule) => rule.required()}),
+        defineField({name: 'courseMode', title: 'Tryb', type: 'string', options: {list: ['online', 'onsite', 'blended']}, validation: (rule) => rule.required()}),
+        defineField({name: 'courseWorkload', title: 'Nakład pracy', description: 'Czas w formacie ISO 8601, np. PT9H.', type: 'string', validation: (rule) => rule.regex(/^P(?!$)(\d+D)?(T(\d+H)?(\d+M)?)?$/)}),
+        defineField({name: 'startDate', title: 'Start', type: 'date'}),
       ],
     }),
   ], preview: {select: {title: 'name'}},
@@ -170,5 +174,5 @@ export const redirect = defineType({
     defineField({name: 'status', title: 'Kod HTTP', type: 'number', initialValue: 301, options: {list: [301]}, validation: (rule) => rule.required().custom((value) => value === undefined || [301].includes(value) || 'Wybierz dozwoloną wartość.')}),
   ], preview: {select: {title: 'from', subtitle: 'to'}},
 })
-export const documentTypes = [page, post, siteSettings, person, organization, testimonial, logo, service, redirect]
+export const documentTypes = [page, post, siteSettings, person, organization, testimonial, logo, service, course, redirect]
 export const singletonIds = {person: 'person', organization: 'organization'}

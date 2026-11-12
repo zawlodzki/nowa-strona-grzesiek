@@ -453,6 +453,28 @@ export type OrganizationReference = {
   [internalGroqTypeReferenceTo]?: "organization";
 };
 
+export type Course = {
+  _id: string;
+  _type: "course";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name?: string;
+  description?: string;
+  page?: PageReference;
+  provider?: PersonReference | OrganizationReference;
+  educationalLevel?: string;
+  isAccessibleForFree?: boolean;
+  audience?: string;
+  teaches?: Array<string>;
+  instance?: {
+    name?: string;
+    courseMode?: "online" | "onsite" | "blended";
+    courseWorkload?: string;
+    startDate?: string;
+  };
+};
+
 export type Service = {
   _id: string;
   _type: "service";
@@ -465,18 +487,6 @@ export type Service = {
   page?: PageReference;
   provider?: PersonReference | OrganizationReference;
   areaServed?: string;
-  course?: {
-    educationalLevel?: string;
-    isAccessibleForFree?: boolean;
-    audience?: string;
-    teaches?: Array<string>;
-    instance?: {
-      name?: string;
-      courseMode?: "online" | "onsite" | "blended";
-      courseWorkload?: string;
-      startDate?: string;
-    };
-  };
 };
 
 export type Logo = {
@@ -854,6 +864,7 @@ export type AllSanitySchemaTypes =
   | Redirect
   | PersonReference
   | OrganizationReference
+  | Course
   | Service
   | Logo
   | Testimonial
