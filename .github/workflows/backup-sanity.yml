@@ -5,6 +5,8 @@ on:
     - cron: '15 4 * * 0'
       timezone: Europe/Warsaw
   workflow_dispatch:
+  push:  # TEMP T73 verification, removed before PR
+    branches: [task/T73-weekly-sanity-backup]
 
 permissions:
   contents: read

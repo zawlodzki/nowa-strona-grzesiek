@@ -65,17 +65,20 @@ async function upload(bundle, name, sha1, sha256) {
   if (!authResponse.ok) throw new Error(`B2 authorization returned HTTP ${authResponse.status}.`);
   const auth = await authResponse.json();
   const api = auth.apiInfo.storageApi;
+  // The key is restricted to the backup bucket and can write but not read files.
   const bucketName = env('B2_BUCKET');
-  let bucket = api.allowed.buckets?.find(b => b.name === bucketName);
-  if (!bucket) {
+  let bucketId = api.bucketName === bucketName ? api.bucketId : undefined;
+  if (!bucketId) {
     const {buckets} = await b2(`${api.apiUrl}/b2api/v3/b2_list_buckets`, auth.authorizationToken, {
       accountId: auth.accountId,
       bucketName,
     });
-    bucket = buckets[0];
+    bucketId = buckets[0]?.bucketId;
   }
-  if (!bucket?.id && !bucket?.bucketId) throw new Error('The B2 key cannot see the backup bucket.');
-  const bucketId = bucket.id ?? bucket.bucketId;
+  if (!bucketId) throw new Error('The B2 key cannot see the backup bucket.');
+  if (!api.capabilities?.includes('writeFileRetentions')) {
+    throw new Error('The B2 key cannot set Object Lock retention.');
+  }
 
   const target = await b2(`${api.apiUrl}/b2api/v3/b2_get_upload_url`, auth.authorizationToken, {bucketId});
   const retainUntil = Date.now() + lockDays * 86_400_000;
@@ -101,9 +104,10 @@ async function upload(bundle, name, sha1, sha256) {
   if (file.contentSha1 !== sha1 || file.contentLength !== data.length) {
     throw new Error('B2 checksum or size does not match the local bundle.');
   }
-  const info = await b2(`${api.apiUrl}/b2api/v3/b2_get_file_info`, auth.authorizationToken, {fileId: file.fileId});
-  const retention = info.fileRetention?.value;
-  if (info.fileRetention?.isClientAuthorizedToRead && retention?.mode !== 'compliance') {
+  // B2 rejects retention headers on a bucket without Object Lock, so a successful upload is locked.
+  // When the key can read retention, also check what B2 stored.
+  const retention = file.fileRetention?.isClientAuthorizedToRead ? file.fileRetention.value : undefined;
+  if (retention && retention.mode !== 'compliance') {
     throw new Error('B2 did not apply Compliance Object Lock to the bundle.');
   }
   return {retainUntil: retention?.retainUntilTimestamp ?? retainUntil, size: data.length};
