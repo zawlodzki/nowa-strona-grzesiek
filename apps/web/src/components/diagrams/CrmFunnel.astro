@@ -11,61 +11,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="crm-funnel" aria-hidden="true" style="--dg-w: 760; --dg-h: 177;">
-  <div class="cf-stage dg-stage">
-    <div class="cf-fit dg-fit">
-      <div class="cf-lanes">
-        <div class="cf-lane" data-count="5">
-          <div class="cf-lane-head">
-            <span class="cf-lane-label">Lead</span>
-            <span class="cf-chip">5</span>
-          </div>
-          <div class="cf-ghost"><span></span><span></span></div>
-          <div class="cf-ghost"><span></span><span></span></div>
-        </div>
-        <div class="cf-lane" data-count="3">
-          <div class="cf-lane-head">
-            <span class="cf-lane-label">Qualified</span>
-            <span class="cf-chip">3</span>
-          </div>
-          <div class="cf-ghost"><span></span><span></span></div>
-          <div class="cf-ghost"><span></span><span></span></div>
-        </div>
-        <div class="cf-lane" data-count="2">
-          <div class="cf-lane-head">
-            <span class="cf-lane-label">Proposal</span>
-            <span class="cf-chip">2</span>
-          </div>
-          <div class="cf-ghost"><span></span><span></span></div>
-        </div>
-        <div class="cf-lane cf-lane--won" data-count="0">
-          <div class="cf-lane-head">
-            <span class="cf-lane-label">Won</span>
-            <span class="cf-chip">0</span>
-          </div>
-        </div>
-
-        <div class="cf-mover">
-          <div class="cf-deal">
-            <div class="cf-deal-top">
-              <span class="cf-avatar">A</span>
-              <span class="cf-deal-name">Acme</span>
-              <span class="cf-deal-check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-            </div>
-            <div class="cf-deal-value">&euro;24,000</div>
-            <div class="cf-deal-foot"><span class="cf-tag">New deal</span></div>
-          </div>
-        </div>
-
-        <div class="cf-confetti"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style is:global>
+<style is:inline>
 /* Scoped to [data-diagram="crm-funnel"] so nothing leaks into the Webflow page.
      Sizes are fixed px (design space); the .cf-fit wrapper scales the
      whole board to its container width. */
@@ -297,6 +243,60 @@ import './diagram.css';
     [data-diagram="crm-funnel"] .cf-avatar, [data-diagram="crm-funnel"] .cf-chip { transition: none; }
   }
 </style>
+
+<div class="dg" data-diagram="crm-funnel" aria-hidden="true" style="--dg-w: 760; --dg-h: 177;">
+  <div class="cf-stage dg-stage">
+    <div class="cf-fit dg-fit">
+      <div class="cf-lanes">
+        <div class="cf-lane" data-count="5">
+          <div class="cf-lane-head">
+            <span class="cf-lane-label">Lead</span>
+            <span class="cf-chip">5</span>
+          </div>
+          <div class="cf-ghost"><span></span><span></span></div>
+          <div class="cf-ghost"><span></span><span></span></div>
+        </div>
+        <div class="cf-lane" data-count="3">
+          <div class="cf-lane-head">
+            <span class="cf-lane-label">Qualified</span>
+            <span class="cf-chip">3</span>
+          </div>
+          <div class="cf-ghost"><span></span><span></span></div>
+          <div class="cf-ghost"><span></span><span></span></div>
+        </div>
+        <div class="cf-lane" data-count="2">
+          <div class="cf-lane-head">
+            <span class="cf-lane-label">Proposal</span>
+            <span class="cf-chip">2</span>
+          </div>
+          <div class="cf-ghost"><span></span><span></span></div>
+        </div>
+        <div class="cf-lane cf-lane--won" data-count="0">
+          <div class="cf-lane-head">
+            <span class="cf-lane-label">Won</span>
+            <span class="cf-chip">0</span>
+          </div>
+        </div>
+
+        <div class="cf-mover">
+          <div class="cf-deal">
+            <div class="cf-deal-top">
+              <span class="cf-avatar">A</span>
+              <span class="cf-deal-name">Acme</span>
+              <span class="cf-deal-check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+            <div class="cf-deal-value">&euro;24,000</div>
+            <div class="cf-deal-foot"><span class="cf-tag">New deal</span></div>
+          </div>
+        </div>
+
+        <div class="cf-confetti"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   // @ts-nocheck

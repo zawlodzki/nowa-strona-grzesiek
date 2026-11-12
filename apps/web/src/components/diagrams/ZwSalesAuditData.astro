@@ -3,12 +3,7 @@
 import './diagram.css';
 ---
 
-<div class="dg" data-diagram="zw-sales-audit-data" aria-hidden="true" style="--dg-w: 400; --dg-h: 240;"><div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
-  <div class="sad-record sad-r1"><i></i><span></span><span></span></div><div class="sad-record sad-r2"><i></i><span></span><span></span></div><div class="sad-record sad-r3"><i></i><span></span><span></span></div>
-  <div class="sad-panel"><span class="sad-title">Forecast</span><div class="sad-bars"><i></i><i></i><i></i><i></i></div><div class="sad-metrics"><b>42%</b><b>31d</b><b>1.8M</b></div><em><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg></em></div><span class="sad-ring"></span>
-</div></div></div></div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-sales-audit-data"]{--zw-primary:#3A48CC;--zw-primary-10:#EBEDFA;--zw-primary-30:#8991E0;--zw-secondary:#0ACFFE;--zw-success:#52C41A;--zw-bg-soft:#F9FAFB;--zw-border:#DDE1E6;--zw-border-soft:#EDF0F3;--zw-heading:#0E0F11;--zw-text:#1E2024;--zw-muted:#838D95;--zw-card:#FFFFFF;--zw-font:'Satoshi Variable','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;--zw-serif:'Erode Variable','Fraunces','Source Serif 4',Georgia,serif;--zw-radius-card:10px;--zw-radius-lane:14px;--zw-shadow-rest:0 1px 3px rgba(0,0,0,.08);--zw-shadow-lift:1px 8px 22px rgba(14,15,17,.14);font-family:var(--zw-font);width:100%;max-width:440px;margin:0 auto;box-sizing:border-box;-webkit-font-smoothing:antialiased}
 [data-diagram="zw-sales-audit-data"] *,[data-diagram="zw-sales-audit-data"] *::before,[data-diagram="zw-sales-audit-data"] *::after{box-sizing:border-box}[data-diagram="zw-sales-audit-data"] .zw-stage{width:100%;overflow:hidden}[data-diagram="zw-sales-audit-data"] .zw-fit{width:400px;transform-origin:top left}[data-diagram="zw-sales-audit-data"] .zw-scene{position:relative;width:400px;height:240px}
 [data-diagram="zw-sales-audit-data"] .sad-record{position:absolute;width:112px;height:58px;padding:11px;background:var(--zw-card);border:1px dashed var(--zw-border);border-radius:var(--zw-radius-card);box-shadow:var(--zw-shadow-rest);opacity:0;z-index:1}[data-diagram="zw-sales-audit-data"] .sad-r1{left:8px;top:20px;transform:rotate(-5deg)}[data-diagram="zw-sales-audit-data"] .sad-r2{right:8px;top:24px;transform:rotate(5deg)}[data-diagram="zw-sales-audit-data"] .sad-r3{left:16px;bottom:20px;transform:rotate(4deg)}
@@ -19,6 +14,11 @@ import './diagram.css';
 [data-diagram="zw-sales-audit-data"] .sad-ring{position:absolute;left:110px;top:44px;width:228px;height:168px;border:2px solid var(--zw-secondary);border-radius:18px;opacity:0;z-index:2}
 @media(prefers-reduced-motion:reduce){[data-diagram="zw-sales-audit-data"] .sad-record{opacity:.3}[data-diagram="zw-sales-audit-data"] .sad-panel{opacity:1}[data-diagram="zw-sales-audit-data"] .sad-bars i{transform:scaleY(1)}[data-diagram="zw-sales-audit-data"] .sad-panel em{transform:scale(1)}}
 </style>
+
+<div class="dg" data-diagram="zw-sales-audit-data" aria-hidden="true" style="--dg-w: 400; --dg-h: 240;"><div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
+  <div class="sad-record sad-r1"><i></i><span></span><span></span></div><div class="sad-record sad-r2"><i></i><span></span><span></span></div><div class="sad-record sad-r3"><i></i><span></span><span></span></div>
+  <div class="sad-panel"><span class="sad-title">Forecast</span><div class="sad-bars"><i></i><i></i><i></i><i></i></div><div class="sad-metrics"><b>42%</b><b>31d</b><b>1.8M</b></div><em><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg></em></div><span class="sad-ring"></span>
+</div></div></div></div>
 
 <script>
   // @ts-nocheck

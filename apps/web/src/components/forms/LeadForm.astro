@@ -39,25 +39,63 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
 </form>
 
 <script>
-  const TURNSTILE = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
-  type Turnstile = { reset(widget: Element): void };
+  // Turnstile is loaded on demand. The challenge downloads megabytes and its iframe can push content,
+  // so the script loads when someone starts using a form and the challenge runs only on submit.
+  const TURNSTILE = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+  type Turnstile = {
+    render(container: Element, options: Record<string, unknown>): string | undefined;
+    remove(widgetId: string): void;
+  };
 
-  if (!document.querySelector(`script[src="${TURNSTILE}"]`)) {
-    const script = Object.assign(document.createElement('script'), { src: TURNSTILE, async: true, defer: true });
-    document.head.appendChild(script);
+  let api: Promise<Turnstile | undefined> | undefined;
+  function loadTurnstile() {
+    api ??= new Promise((resolve) => {
+      const script = Object.assign(document.createElement('script'), { src: TURNSTILE, async: true });
+      script.addEventListener('load', () => resolve((window as { turnstile?: Turnstile }).turnstile));
+      script.addEventListener('error', () => resolve(undefined));
+      document.head.appendChild(script);
+    });
+    return api;
+  }
+
+  const widgets = new WeakMap<Element, string>();
+  // Renders a fresh widget and waits for its token. Turnstile also writes the token into a hidden
+  // `cf-turnstile-response` input inside the widget, so FormData picks it up.
+  async function verify(widget: HTMLElement): Promise<void> {
+    const turnstile = await loadTurnstile();
+    if (!turnstile) return;
+    const previous = widgets.get(widget);
+    if (previous) turnstile.remove(previous);
+    await new Promise<void>((resolve) => {
+      const id = turnstile.render(widget, {
+        sitekey: widget.dataset.sitekey,
+        language: widget.dataset.language,
+        theme: widget.dataset.theme,
+        size: widget.dataset.size,
+        appearance: widget.dataset.appearance,
+        callback: () => resolve(),
+        'error-callback': () => resolve(),
+        'unsupported-callback': () => resolve(),
+      });
+      if (id) widgets.set(widget, id);
+      else resolve();
+    });
   }
 
   // Without this script the form still posts and the Worker answers with a 303 to the thank-you page.
   for (const form of document.querySelectorAll<HTMLFormElement>('form[data-lead-form]')) {
     const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
     const status = form.querySelector<HTMLElement>('.status')!;
+    const widget = form.querySelector<HTMLElement>('.cf-turnstile');
     const label = button.textContent;
+    for (const type of ['focusin', 'pointerdown']) form.addEventListener(type, () => void loadTurnstile(), { once: true });
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       if (form.getAttribute('aria-busy') === 'true') return;
       form.setAttribute('aria-busy', 'true');
       button.textContent = button.dataset.wait ?? label;
       status.textContent = '';
+      if (widget) await verify(widget);
       const response = await fetch(form.action, { method: 'POST', body: new FormData(form) }).catch(() => null);
       if (response?.redirected) {
         location.assign(response.url);
@@ -69,9 +107,6 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
       status.dataset.state = 'error';
       button.textContent = label;
       form.removeAttribute('aria-busy');
-      const widget = form.querySelector('.cf-turnstile');
-      const turnstile = (window as { turnstile?: Turnstile }).turnstile;
-      if (widget && turnstile) turnstile.reset(widget);
     });
   }
 </script>

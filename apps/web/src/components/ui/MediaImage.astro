@@ -1,10 +1,10 @@
 ---
 import type { ResolvedImage } from './block-types';
-interface Props { image: ResolvedImage; eager?: boolean; portrait?: boolean; }
-const { image, eager = false, portrait = false } = Astro.props;
+interface Props { image: ResolvedImage; eager?: boolean; portrait?: boolean; /** Rendered width for srcset selection. Most media sit in a half-width column. */ sizes?: string; }
+const { image, eager = false, portrait = false, sizes = '(width < 48rem) 100vw, 50vw' } = Astro.props;
 ---
 <figure class:list={{ portrait }}>
-  <img src={image.src} alt={image.alt ?? ''} width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+  <img src={image.src} srcset={image.srcset} sizes={image.srcset && sizes} alt={image.alt ?? ''} width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" />
   {image.caption && <figcaption class="type-body-s">{image.caption}</figcaption>}
 </figure>
 <style>

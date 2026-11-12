@@ -3,26 +3,7 @@
 import './diagram.css';
 ---
 
-<div class="dg" data-diagram="zw-audit-priority-a5" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
-<div class="zw-stage dg-stage">
-<div class="zw-fit dg-fit">
-<div class="zw-scene">
-<div class="ap-panel">
-<span class="ap-eyebrow">Report</span>
-<div class="ap-find ap-find--1"><span class="ap-rank">01</span><i></i><i></i></div>
-<div class="ap-find ap-find--2"><span class="ap-rank">02</span><i></i><i></i></div>
-<div class="ap-find ap-find--3"><span class="ap-rank">03</span><i></i><i></i></div>
-<div class="ap-find ap-find--4"><span class="ap-rank">04</span><i></i><i></i></div>
-<span class="ap-done">
-<svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
-</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-audit-priority-a5"] {
 --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
 --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -86,6 +67,25 @@ background:var(--zw-success); color:#fff; transform:scale(0); transform-origin:c
 [data-diagram="zw-audit-priority-a5"] .ap-done { transform:scale(1); }
 }
 </style>
+
+<div class="dg" data-diagram="zw-audit-priority-a5" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+<div class="zw-stage dg-stage">
+<div class="zw-fit dg-fit">
+<div class="zw-scene">
+<div class="ap-panel">
+<span class="ap-eyebrow">Report</span>
+<div class="ap-find ap-find--1"><span class="ap-rank">01</span><i></i><i></i></div>
+<div class="ap-find ap-find--2"><span class="ap-rank">02</span><i></i><i></i></div>
+<div class="ap-find ap-find--3"><span class="ap-rank">03</span><i></i><i></i></div>
+<div class="ap-find ap-find--4"><span class="ap-rank">04</span><i></i><i></i></div>
+<span class="ap-done">
+<svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <script>
   // @ts-nocheck

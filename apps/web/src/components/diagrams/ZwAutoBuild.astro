@@ -8,44 +8,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-auto-build" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
-  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
-    <div class="ab-panel">
-      <span class="ab-eyebrow">Build &middot; test</span>
-
-      <span class="ab-wire ab-wire--1"><span class="ab-flow"></span></span>
-      <span class="ab-wire ab-wire--2"><span class="ab-flow"></span></span>
-
-      <div class="ab-node ab-node--1">
-        <span class="ab-ico">
-          <svg viewBox="0 0 24 24"><path d="M13 3L4 14h6l-1 7 9-11h-6z"/></svg>
-        </span>
-        <b>Trigger</b>
-      </div>
-      <div class="ab-node ab-node--2">
-        <span class="ab-ico">
-          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-        </span>
-        <b>Enrich</b>
-      </div>
-      <div class="ab-node ab-node--3">
-        <span class="ab-ico">
-          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-        </span>
-        <b>Sync</b>
-      </div>
-
-      <div class="ab-packet"><span></span><span></span></div>
-
-      <span class="ab-pass">
-        <span class="ab-pass-ico"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg></span>
-        <span class="ab-pass-txt">Test passed</span>
-      </span>
-    </div>
-  </div></div></div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-auto-build"] {
     --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
     --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -138,6 +101,43 @@ import './diagram.css';
     [data-diagram="zw-auto-build"] .ab-pass { opacity:1; transform:translateX(-50%) translateY(0); }
   }
 </style>
+
+<div class="dg" data-diagram="zw-auto-build" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
+    <div class="ab-panel">
+      <span class="ab-eyebrow">Build &middot; test</span>
+
+      <span class="ab-wire ab-wire--1"><span class="ab-flow"></span></span>
+      <span class="ab-wire ab-wire--2"><span class="ab-flow"></span></span>
+
+      <div class="ab-node ab-node--1">
+        <span class="ab-ico">
+          <svg viewBox="0 0 24 24"><path d="M13 3L4 14h6l-1 7 9-11h-6z"/></svg>
+        </span>
+        <b>Trigger</b>
+      </div>
+      <div class="ab-node ab-node--2">
+        <span class="ab-ico">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        </span>
+        <b>Enrich</b>
+      </div>
+      <div class="ab-node ab-node--3">
+        <span class="ab-ico">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </span>
+        <b>Sync</b>
+      </div>
+
+      <div class="ab-packet"><span></span><span></span></div>
+
+      <span class="ab-pass">
+        <span class="ab-pass-ico"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg></span>
+        <span class="ab-pass-txt">Test passed</span>
+      </span>
+    </div>
+  </div></div></div>
+</div>
 
 <script>
   // @ts-nocheck

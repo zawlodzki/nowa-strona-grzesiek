@@ -5,6 +5,8 @@ export type { PortableTextValue };
 // Same shape as T09's ResolvedImage in components/ui/block-types.ts. Switch to that import once T09 is on main.
 export type ResolvedImage = Pick<ContentImage, 'alt' | 'caption'> & {
   src: string;
+  /** Smaller renditions for `<img srcset>`; absent when the file is already small. */
+  srcset?: string;
   width: number;
   height: number;
 };

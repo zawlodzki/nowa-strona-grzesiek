@@ -8,45 +8,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-crm-process" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
-  <div class="zw-stage dg-stage">
-    <div class="zw-fit dg-fit">
-      <div class="zw-scene">
-        <div class="cp-panel">
-          <div class="cp-current">
-            <span class="cp-eyebrow">Current process</span>
-            <div class="cp-card cp-card--a"><b>Lead?</b><i></i><i></i><em>?</em></div>
-            <div class="cp-card cp-card--b"><b>Maybe</b><i></i><i></i><em>?</em></div>
-            <div class="cp-card cp-card--c"><b>Quote</b><i></i><i></i><em>?</em></div>
-            <span class="cp-scan"></span>
-          </div>
-          <div class="cp-final">
-            <span class="cp-eyebrow">Sales process</span>
-            <div class="cp-lane">
-              <span class="cp-label">Lead</span><span class="cp-chip">01</span>
-              <i></i><i></i><i></i>
-            </div>
-            <span class="cp-arrow cp-arrow--1">&rarr;</span>
-            <div class="cp-lane">
-              <span class="cp-label">Qualified</span><span class="cp-chip">02</span>
-              <i></i><i></i><i></i>
-            </div>
-            <span class="cp-arrow cp-arrow--2">&rarr;</span>
-            <div class="cp-lane">
-              <span class="cp-label">Proposal</span><span class="cp-chip">03</span>
-              <i></i><i></i><i></i>
-            </div>
-            <span class="cp-ready">
-              <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-crm-process"] {
     --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
     --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -147,6 +109,44 @@ import './diagram.css';
     [data-diagram="zw-crm-process"] .cp-ready { transform:scale(1); }
   }
 </style>
+
+<div class="dg" data-diagram="zw-crm-process" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="cp-panel">
+          <div class="cp-current">
+            <span class="cp-eyebrow">Current process</span>
+            <div class="cp-card cp-card--a"><b>Lead?</b><i></i><i></i><em>?</em></div>
+            <div class="cp-card cp-card--b"><b>Maybe</b><i></i><i></i><em>?</em></div>
+            <div class="cp-card cp-card--c"><b>Quote</b><i></i><i></i><em>?</em></div>
+            <span class="cp-scan"></span>
+          </div>
+          <div class="cp-final">
+            <span class="cp-eyebrow">Sales process</span>
+            <div class="cp-lane">
+              <span class="cp-label">Lead</span><span class="cp-chip">01</span>
+              <i></i><i></i><i></i>
+            </div>
+            <span class="cp-arrow cp-arrow--1">&rarr;</span>
+            <div class="cp-lane">
+              <span class="cp-label">Qualified</span><span class="cp-chip">02</span>
+              <i></i><i></i><i></i>
+            </div>
+            <span class="cp-arrow cp-arrow--2">&rarr;</span>
+            <div class="cp-lane">
+              <span class="cp-label">Proposal</span><span class="cp-chip">03</span>
+              <i></i><i></i><i></i>
+            </div>
+            <span class="cp-ready">
+              <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   // @ts-nocheck

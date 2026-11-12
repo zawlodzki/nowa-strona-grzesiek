@@ -34,3 +34,48 @@
   font-display: swap;
   unicode-range: U+0000-00FF, U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2000-206F, U+2020, U+20A0-20C0, U+2113, U+2122, U+2191, U+2193, U+2212, U+2215, U+2C60-2C7F, U+A720-A7FF, U+FEFF, U+FFFD;
 }
+
+/* Metric-matched fallbacks. Text paints in these until the web fonts arrive, and the swap then
+   keeps line breaks, so nothing below the text moves (CLS). Values come from canvas
+   measurements of a Polish copy sample in Chrome on macOS (T76): size-adjust is the average
+   advance ratio at the weight in use, ascent and descent are the web font's metrics divided by it.
+   A device without the local font skips the face and uses the next family in the stack. */
+@font-face {
+  font-family: 'Satoshi Fallback';
+  src: local('Arial'), local('ArialMT'), local('Helvetica');
+  font-weight: 300 500;
+  size-adjust: 96.87%;
+  ascent-override: 104.26%;
+  descent-override: 24.78%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Satoshi Fallback';
+  src: local('Arial Bold'), local('Arial-BoldMT'), local('Helvetica Bold');
+  font-weight: 600 900;
+  size-adjust: 94.97%;
+  ascent-override: 106.34%;
+  descent-override: 25.27%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Erode Fallback';
+  src: local('Georgia');
+  font-weight: 300 500;
+  size-adjust: 91.86%;
+  ascent-override: 101.25%;
+  descent-override: 23.95%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Erode Fallback';
+  src: local('Georgia Bold'), local('Georgia-Bold');
+  font-weight: 600 700;
+  size-adjust: 85%;
+  ascent-override: 109.41%;
+  descent-override: 25.88%;
+  line-gap-override: 0%;
+}

@@ -3,35 +3,7 @@
 import './diagram.css';
 ---
 
-<div class="dg" data-diagram="zw-asana-map" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
-<div class="zw-stage dg-stage">
-<div class="zw-fit dg-fit">
-<div class="zw-scene">
-<div class="am-panel">
-<span class="am-eyebrow am-eyebrow--top">As described</span>
-<div class="am-card am-card--top am-t1"><b>Intake</b><i></i><i></i></div>
-<div class="am-card am-card--top am-t2"><b>Scope</b><i></i><i></i></div>
-<div class="am-card am-card--top am-t3"><b>Handover</b><i></i><i></i></div>
-<span class="am-link am-link--1"></span>
-<span class="am-link am-link--2"></span>
-<span class="am-link am-link--3"></span>
-<span class="am-mark am-mark--1 am-mark--ok">
-<svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
-</span>
-<span class="am-mark am-mark--2">&ne;</span>
-<span class="am-mark am-mark--3">&ne;</span>
-<span class="am-eyebrow am-eyebrow--bottom">In Asana</span>
-<div class="am-card am-card--bot am-b1"><b>Intake</b><i></i><i></i></div>
-<div class="am-card am-card--bot am-b2"><b>Tasks</b><i></i><em>?</em></div>
-<div class="am-card am-card--bot am-b3"><b>&mdash;</b><i></i><em>?</em></div>
-<span class="am-chip"><b>2</b> gaps</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-asana-map"] {
 --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
 --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -118,6 +90,34 @@ transform:scale(0); transform-origin:center;
 [data-diagram="zw-asana-map"] .am-mark, [data-diagram="zw-asana-map"] .am-chip { transform:scale(1); }
 }
 </style>
+
+<div class="dg" data-diagram="zw-asana-map" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+<div class="zw-stage dg-stage">
+<div class="zw-fit dg-fit">
+<div class="zw-scene">
+<div class="am-panel">
+<span class="am-eyebrow am-eyebrow--top">As described</span>
+<div class="am-card am-card--top am-t1"><b>Intake</b><i></i><i></i></div>
+<div class="am-card am-card--top am-t2"><b>Scope</b><i></i><i></i></div>
+<div class="am-card am-card--top am-t3"><b>Handover</b><i></i><i></i></div>
+<span class="am-link am-link--1"></span>
+<span class="am-link am-link--2"></span>
+<span class="am-link am-link--3"></span>
+<span class="am-mark am-mark--1 am-mark--ok">
+<svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
+</span>
+<span class="am-mark am-mark--2">&ne;</span>
+<span class="am-mark am-mark--3">&ne;</span>
+<span class="am-eyebrow am-eyebrow--bottom">In Asana</span>
+<div class="am-card am-card--bot am-b1"><b>Intake</b><i></i><i></i></div>
+<div class="am-card am-card--bot am-b2"><b>Tasks</b><i></i><em>?</em></div>
+<div class="am-card am-card--bot am-b3"><b>&mdash;</b><i></i><em>?</em></div>
+<span class="am-chip"><b>2</b> gaps</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <script>
   // @ts-nocheck

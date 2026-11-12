@@ -9,45 +9,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-problem" aria-hidden="true" style="--dg-w: 640; --dg-h: 360;">
-  <div class="zw-stage dg-stage">
-    <div class="zw-fit dg-fit">
-      <div class="zw-scene">
-        <svg class="pr-svg" viewBox="0 0 640 360" width="100%" xmlns="http://www.w3.org/2000/svg">
-          <path class="pr-area" d="M64,250 C220,232 350,150 508,66 L520,244 C370,245 200,247 64,250 Z"/>
-
-          <g class="pr-axis">
-            <line x1="64" y1="24" x2="64" y2="300"/>
-            <line x1="64" y1="300" x2="606" y2="300"/>
-          </g>
-          <text class="pr-cap" x="604" y="328" text-anchor="end">Time since AI &rarr;</text>
-
-          <circle class="pr-origin" cx="64" cy="250" r="5"/>
-
-          <path class="pr-flat pr-line" d="M64,250 C200,247 370,245 520,244" pathLength="1"/>
-          <circle class="pr-flat-dot pr-enddot" cx="520" cy="244" r="5"/>
-          <text class="pr-lbl pr-lbl--flat" x="368" y="232" text-anchor="end">Business result</text>
-
-          <path class="pr-perc pr-line" d="M64,250 C220,232 350,150 508,66" pathLength="1"/>
-          <path class="pr-arrow" d="M-11,-7 L0,0 L-11,7" transform="translate(508,66) rotate(-28)"/>
-          <text class="pr-lbl pr-lbl--perc" x="150" y="120">Perceived speed</text>
-          <g class="pr-chip">
-            <rect x="524" y="34" width="66" height="30" rx="15"/>
-            <text x="557" y="54" text-anchor="middle">+40%</text>
-          </g>
-
-          <line class="pr-gapline" x1="514" y1="78" x2="514" y2="236"/>
-          <g class="pr-gaptag">
-            <rect x="522" y="142" width="86" height="30" rx="8"/>
-            <text x="565" y="162" text-anchor="middle">the gap</text>
-          </g>
-        </svg>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style is:global>
+<style is:inline>
 /* ---- Shared family layer: tokens + responsive shell ---- */
   [data-diagram="zw-problem"] {
     --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
@@ -108,6 +70,44 @@ import './diagram.css';
     [data-diagram="zw-problem"] .pr-line { stroke-dashoffset:0; }
   }
 </style>
+
+<div class="dg" data-diagram="zw-problem" aria-hidden="true" style="--dg-w: 640; --dg-h: 360;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <svg class="pr-svg" viewBox="0 0 640 360" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <path class="pr-area" d="M64,250 C220,232 350,150 508,66 L520,244 C370,245 200,247 64,250 Z"/>
+
+          <g class="pr-axis">
+            <line x1="64" y1="24" x2="64" y2="300"/>
+            <line x1="64" y1="300" x2="606" y2="300"/>
+          </g>
+          <text class="pr-cap" x="604" y="328" text-anchor="end">Time since AI &rarr;</text>
+
+          <circle class="pr-origin" cx="64" cy="250" r="5"/>
+
+          <path class="pr-flat pr-line" d="M64,250 C200,247 370,245 520,244" pathLength="1"/>
+          <circle class="pr-flat-dot pr-enddot" cx="520" cy="244" r="5"/>
+          <text class="pr-lbl pr-lbl--flat" x="368" y="232" text-anchor="end">Business result</text>
+
+          <path class="pr-perc pr-line" d="M64,250 C220,232 350,150 508,66" pathLength="1"/>
+          <path class="pr-arrow" d="M-11,-7 L0,0 L-11,7" transform="translate(508,66) rotate(-28)"/>
+          <text class="pr-lbl pr-lbl--perc" x="150" y="120">Perceived speed</text>
+          <g class="pr-chip">
+            <rect x="524" y="34" width="66" height="30" rx="15"/>
+            <text x="557" y="54" text-anchor="middle">+40%</text>
+          </g>
+
+          <line class="pr-gapline" x1="514" y1="78" x2="514" y2="236"/>
+          <g class="pr-gaptag">
+            <rect x="522" y="142" width="86" height="30" rx="8"/>
+            <text x="565" y="162" text-anchor="middle">the gap</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   // @ts-nocheck

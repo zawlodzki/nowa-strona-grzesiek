@@ -87,13 +87,15 @@ function port({ key, embed, pages }, sizes) {
     '---',
   ].join('\n');
 
+  // is:inline keeps each diagram's CSS on the pages that render it instead of one bundle on every page.
+  // The selectors are already scoped by [data-diagram]. The style sits above the markup so nothing paints unstyled.
   return `${front}
 
-${markup}
-
-<style is:global>
+<style is:inline>
 ${scopedCss}
 </style>
+
+${markup}
 
 <script>
   // @ts-nocheck

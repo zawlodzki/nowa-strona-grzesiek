@@ -50,7 +50,7 @@ const headingTags = { h2: 'h2', h3: 'h3', h4: 'h4', blockquote: 'blockquote', no
         if (!image) throw new Error(`Portable Text image "${item._key}" has no resolved asset. Pass it in the images map.`);
         return (
           <figure class="media">
-            <img src={image.src} width={image.width} height={image.height} alt={item.alt ?? ''} loading="lazy" decoding="async" />
+            <img src={image.src} srcset={image.srcset} sizes="(width < 48rem) 100vw, 47rem" width={image.width} height={image.height} alt={item.alt ?? ''} loading="lazy" decoding="async" />
             {item.caption && <figcaption class="type-body-s">{item.caption}</figcaption>}
           </figure>
         );

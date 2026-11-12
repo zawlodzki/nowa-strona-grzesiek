@@ -8,31 +8,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-crm-setup" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
-  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
-    <div class="cs-panel">
-      <span class="cs-line cs-line--1"></span><span class="cs-line cs-line--2"></span>
-      <span class="cs-line cs-line--3"></span><span class="cs-line cs-line--4"></span>
-      <span class="cs-line cs-line--5"></span><span class="cs-line cs-line--6"></span>
-      <div class="cs-node cs-node--1"><span>P</span><b>Pipeline</b></div>
-      <div class="cs-node cs-node--2"><span>A</span><b>Access</b></div>
-      <div class="cs-node cs-node--3"><span>R</span><b>Reports</b></div>
-      <div class="cs-node cs-node--4"><span>&#9889;</span><b>Automation</b></div>
-      <div class="cs-node cs-node--5"><span>M</span><b>Mail</b></div>
-      <div class="cs-node cs-node--6"><span>31</span><b>Calendar</b></div>
-      <div class="cs-core">
-        <span class="cs-core-mark">P</span>
-        <strong>Pipedrive</strong>
-        <span class="cs-core-check">
-          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
-        </span>
-        <i class="cs-pulse"></i>
-      </div>
-    </div>
-  </div></div></div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-crm-setup"] {
     --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
     --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -125,6 +101,30 @@ import './diagram.css';
     [data-diagram="zw-crm-setup"] .cs-core-check{transform:scale(1)}
   }
 </style>
+
+<div class="dg" data-diagram="zw-crm-setup" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
+    <div class="cs-panel">
+      <span class="cs-line cs-line--1"></span><span class="cs-line cs-line--2"></span>
+      <span class="cs-line cs-line--3"></span><span class="cs-line cs-line--4"></span>
+      <span class="cs-line cs-line--5"></span><span class="cs-line cs-line--6"></span>
+      <div class="cs-node cs-node--1"><span>P</span><b>Pipeline</b></div>
+      <div class="cs-node cs-node--2"><span>A</span><b>Access</b></div>
+      <div class="cs-node cs-node--3"><span>R</span><b>Reports</b></div>
+      <div class="cs-node cs-node--4"><span>&#9889;</span><b>Automation</b></div>
+      <div class="cs-node cs-node--5"><span>M</span><b>Mail</b></div>
+      <div class="cs-node cs-node--6"><span>31</span><b>Calendar</b></div>
+      <div class="cs-core">
+        <span class="cs-core-mark">P</span>
+        <strong>Pipedrive</strong>
+        <span class="cs-core-check">
+          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
+        </span>
+        <i class="cs-pulse"></i>
+      </div>
+    </div>
+  </div></div></div>
+</div>
 
 <script>
   // @ts-nocheck

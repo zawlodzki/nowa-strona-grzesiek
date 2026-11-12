@@ -29,3 +29,5 @@ Written only by the coordinator. Newest at the bottom.
 | 2026-11-11 | T37 | Feature gains optional mediaCaption for a caption under the diagram rather than in body prose. Contact forms drop marketing-emails; all 32 attribution fields and newsletter remain. Promo cards reuse the existing animated Sales Atlas badge for that target. |
 
 | 2026-11-12 | T75 | Record T53 fields: `contactForm.copy` and `newsletterSignup.copy` are optional objects of form texts (labels, placeholders, submit and wait labels, privacy note, newsletter heading and legal links). An empty field falls back to the copy in code. formId, `/api/form`, n8n and Turnstile stay in code. | T53, T75 | C, D |
+
+| 2026-11-12 | T76 | Font stacks gain metric-matched fallback families: heading `'Erode Variable', 'Erode Fallback', Georgia, serif`, body `'Satoshi Variable', 'Satoshi Fallback', system-ui, sans-serif`. The fallbacks are `local()` Georgia/Arial faces with size-adjust and ascent/descent overrides in `apps/web/src/styles/fonts.css`, so the font swap does not move layout once CSS stops blocking first paint. Web fonts unchanged. | T76 | D |

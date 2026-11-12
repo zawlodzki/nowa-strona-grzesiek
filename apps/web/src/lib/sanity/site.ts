@@ -46,6 +46,21 @@ const QUERY = `{
 }`;
 
 const MAX_IMAGE_WIDTH = 1600;
+// Candidate widths for srcset. Logos render near 128 px, cards near 380 px, post bodies near 750 px.
+const SRCSET_WIDTHS = [160, 320, 480, 640, 960, 1280];
+
+/** Sanity CDN URL at `width` px, plus a srcset of every smaller candidate width and the full one. */
+export function sanityImage(url: string, width: number, height: number): { src: string; srcset?: string; width: number; height: number } {
+  const scaled = Math.min(width, MAX_IMAGE_WIDTH);
+  const at = (w: number) => `${url}?w=${w}&fit=max&auto=format`;
+  const widths = [...SRCSET_WIDTHS.filter((w) => w < scaled), scaled];
+  return {
+    src: at(scaled),
+    ...(widths.length > 1 && { srcset: widths.map((w) => `${at(w)} ${w}w`).join(', ') }),
+    width: scaled,
+    height: Math.round((height * scaled) / width),
+  };
+}
 
 interface Raw {
   pages: Page[];
@@ -140,10 +155,7 @@ function parseSite(raw: Raw): Site {
   unlinkDangling([pages, posts], links, dropped);
   if (dropped.size) console.warn(`[sanity] ${dropped.size} internal link targets are not published; those links render as text: ${[...dropped].slice(0, 5).join(', ')}${dropped.size > 5 ? ', …' : ''}`);
 
-  const images = Object.fromEntries(raw.assets.map(({ _id, url, width, height }) => {
-    const scaled = Math.min(width, MAX_IMAGE_WIDTH);
-    return [_id, { src: `${url}?w=${scaled}&fit=max&auto=format`, width: scaled, height: Math.round((height * scaled) / width) }];
-  }));
+  const images = Object.fromEntries(raw.assets.map(({ _id, url, width, height }) => [_id, sanityImage(url, width, height)]));
 
   const translations = new Map<string, string[]>();
   for (const { ids } of raw.translations) {

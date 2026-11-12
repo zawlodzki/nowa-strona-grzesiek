@@ -8,33 +8,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-crm-handoff" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
-  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
-    <div class="ch-panel">
-      <span class="ch-line"></span>
-      <div class="ch-person ch-person--consultant">
-        <span class="ch-avatar">GZ</span><b>Consultant</b>
-      </div>
-      <div class="ch-system">
-        <div class="ch-system-head"><span class="ch-logo">P</span><b>System</b>
-          <span class="ch-check"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg></span>
-        </div>
-        <div class="ch-item"><span>01</span><b>Setup</b></div>
-        <div class="ch-item"><span>02</span><b>Guides</b></div>
-        <div class="ch-item"><span>03</span><b>Roadmap</b></div>
-      </div>
-      <div class="ch-person ch-person--admin">
-        <span class="ch-avatar">A</span><b>Admin</b><em class="ch-owner">Owner</em>
-        <i class="ch-ring"></i>
-      </div>
-      <span class="ch-key">
-        <svg viewBox="0 0 24 24"><path d="M14 8a5 5 0 1 1-2.1 4.1L21 3m-4 4 2 2m-5 1 2 2"/></svg>
-      </span>
-    </div>
-  </div></div></div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-crm-handoff"] {
     --zw-primary:#3A48CC;--zw-primary-10:#EBEDFA;--zw-primary-30:#8991E0;
     --zw-secondary:#0ACFFE;--zw-success:#52C41A;--zw-bg-soft:#F9FAFB;
@@ -132,6 +106,32 @@ import './diagram.css';
     [data-diagram="zw-crm-handoff"] .ch-owner,[data-diagram="zw-crm-handoff"] .ch-check{transform:scale(1)}
   }
 </style>
+
+<div class="dg" data-diagram="zw-crm-handoff" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
+    <div class="ch-panel">
+      <span class="ch-line"></span>
+      <div class="ch-person ch-person--consultant">
+        <span class="ch-avatar">GZ</span><b>Consultant</b>
+      </div>
+      <div class="ch-system">
+        <div class="ch-system-head"><span class="ch-logo">P</span><b>System</b>
+          <span class="ch-check"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg></span>
+        </div>
+        <div class="ch-item"><span>01</span><b>Setup</b></div>
+        <div class="ch-item"><span>02</span><b>Guides</b></div>
+        <div class="ch-item"><span>03</span><b>Roadmap</b></div>
+      </div>
+      <div class="ch-person ch-person--admin">
+        <span class="ch-avatar">A</span><b>Admin</b><em class="ch-owner">Owner</em>
+        <i class="ch-ring"></i>
+      </div>
+      <span class="ch-key">
+        <svg viewBox="0 0 24 24"><path d="M14 8a5 5 0 1 1-2.1 4.1L21 3m-4 4 2 2m-5 1 2 2"/></svg>
+      </span>
+    </div>
+  </div></div></div>
+</div>
 
 <script>
   // @ts-nocheck

@@ -44,7 +44,7 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
           )}
           {post.readingTime && <span>{post.readingTime} {pl ? 'min czytania' : 'min read'}</span>}
         </p>
-        {image && <MediaImage image={image} eager />}
+        {image && <MediaImage image={image} eager sizes="(width < 64rem) 100vw, 58rem" />}
       </div>
     </header>
     <div class="post-layout">
@@ -73,7 +73,7 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
         <div class="author">
           <p id="author-heading" class="type-body-s muted">{pl ? 'O autorze' : 'About the author'}</p>
           <div class="who">
-            {avatar && <img class="avatar" src={avatar.src} width={avatar.width} height={avatar.height} alt={avatar.alt || person.name} loading="lazy" decoding="async" />}
+            {avatar && <img class="avatar" src={avatar.src} srcset={avatar.srcset} sizes="5rem" width={avatar.width} height={avatar.height} alt={avatar.alt || person.name} loading="lazy" decoding="async" />}
             <p><strong>{person.name}</strong>{person.jobTitle && <span>{person.jobTitle}</span>}</p>
           </div>
           {pl && <p>Wdrażam CRM, AI w sprzedaży i automatyzacje w firmach.</p>}
