@@ -18,11 +18,12 @@ const href = safeHref(link.href);
   .primary:active { background: var(--text-link-active); color: var(--text-on-accent); }
   :is(.secondary, .on-dark):active { background: var(--surface-tint); color: var(--text-link-active); }
   .text:active { color: var(--text-link-active); }
+  .action:not(.text):active { scale: 0.97; }
   @media (hover: hover) and (pointer: fine) {
     .primary:hover { background: var(--text-link-hover); color: var(--text-on-accent); }
     :is(.secondary, .on-dark):hover { background: var(--surface-cyan-tint); color: var(--text-link-hover); }
     .text:hover { color: var(--text-link-hover); text-decoration-thickness: 3px; }
   }
-  @media (prefers-reduced-motion: no-preference) { .action { transition: background-color 250ms, color 250ms; } }
+  @media (prefers-reduced-motion: no-preference) { .action { transition: background-color var(--motion-duration-base) var(--motion-easing-out), color var(--motion-duration-base) var(--motion-easing-out), scale var(--motion-duration-fast) var(--motion-easing-out); } }
   @media (width < 30rem) { .action:not(.text) { inline-size: 100%; } }
 </style>

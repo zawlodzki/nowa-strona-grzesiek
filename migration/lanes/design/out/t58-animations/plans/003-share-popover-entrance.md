@@ -1,6 +1,6 @@
 # 003 — Scale the share popover in from its trigger
 
-- **Status**: TODO
+- **Status**: DONE — Chromium live proof at 390px and 1440px
 - **Commit**: 2522982
 - **Severity**: LOW
 - **Category**: Missed opportunity (spatial consistency)
@@ -96,3 +96,5 @@ Never use `scale: 0`. The starting scale is `0.97`.
   - Emulate `prefers-reduced-motion: reduce`: fade only, no scale.
   - In a browser without anchor positioning the panel is centred and scales from its centre.
 - **Done when**: open and all three close paths animate in Chromium, Safari shows at least the entrance, and a browser without `@starting-style` still opens and closes the panel instantly.
+
+Execution evidence and compatibility limits: [verification notes](../verification-notes.md).

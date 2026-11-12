@@ -1,6 +1,6 @@
 # 002 — Fade and slide the mobile nav panel open and closed
 
-- **Status**: TODO
+- **Status**: DONE — Chromium live proof at 390px and 1440px
 - **Commit**: 2522982
 - **Severity**: MEDIUM
 - **Category**: Missed opportunity (preventing a jarring change, spatial consistency)
@@ -152,3 +152,5 @@ Token values (`apps/web/src/styles/tokens.css:139-143`): `--motion-duration-fast
   - At 1440px the nav is a static row, always visible, with no fade on load or on resize across 992px.
   - With JavaScript disabled the panel stays closed on mobile, same as today.
 - **Done when**: the checks above hold in a Chromium browser and in Safari, and in a browser without `@starting-style` support the menu still opens and closes instantly.
+
+Execution evidence and compatibility limits: [verification notes](../verification-notes.md).
