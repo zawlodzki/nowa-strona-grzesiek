@@ -76,15 +76,27 @@ function text(status: number, body: string): Response {
   return new Response(body, { status, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' } });
 }
 
-async function turnstilePasses(token: string, secret: string, ip: string | null): Promise<boolean> {
+type FormFailure = {
+  form: FormKey | null;
+  branch: 'turnstile' | 'n8n' | 'bad-request';
+  upstreamStatus: number | null;
+  requestId: string;
+};
+
+async function verifyTurnstile(token: string, secret: string, ip: string | null): Promise<{ success: boolean; status: number | null }> {
   const body = new FormData();
   body.set('secret', secret);
   body.set('response', token);
   if (ip) body.set('remoteip', ip);
-  const response = await fetch(TURNSTILE_VERIFY_URL, { method: 'POST', body }).catch(() => null);
-  if (!response?.ok) return false;
-  const outcome: { success?: boolean } = await response.json();
-  return outcome.success === true;
+  let response: Response | null = null;
+  try {
+    response = await fetch(TURNSTILE_VERIFY_URL, { method: 'POST', body });
+    if (!response.ok) return { success: false, status: response.status };
+    const outcome: { success?: boolean } | null = await response.json();
+    return { success: outcome?.success === true, status: response.status };
+  } catch {
+    return { success: false, status: response?.status ?? null };
+  }
 }
 
 // Webflow sends every field of the form, hidden ones as "" when empty and checkboxes as "true"/"false".
@@ -109,31 +121,39 @@ export function webflowSubmission(key: FormKey, submitted: FormData, now: Date) 
 }
 
 export async function handleForm(request: Request, env: FormEnv): Promise<Response> {
-  if (request.method !== 'POST') return new Response(null, { status: 405, headers: { Allow: 'POST' } });
-  const key = new URL(request.url).searchParams.get('form');
-  if (!isFormKey(key)) return text(404, 'Nieznany formularz.');
+  const rawKey = new URL(request.url).searchParams.get('form');
+  const key = isFormKey(rawKey) ? rawKey : null;
+  const requestId = crypto.randomUUID();
+  const failure = (branch: FormFailure['branch'], response: Response, upstreamStatus: number | null = null): Response => {
+    const event: FormFailure = { form: key, branch, upstreamStatus, requestId };
+    console.error(JSON.stringify(event));
+    return response;
+  };
+  if (request.method !== 'POST') return failure('bad-request', new Response(null, { status: 405, headers: { Allow: 'POST' } }));
+  if (!isFormKey(key)) return failure('bad-request', text(404, 'Nieznany formularz.'));
 
   let submitted: FormData;
   try {
     submitted = await request.formData();
   } catch {
-    return text(400, 'Nieprawidłowe dane formularza.');
+    return failure('bad-request', text(400, 'Nieprawidłowe dane formularza.'));
   }
 
   const email = submitted.get('email');
-  if (typeof email !== 'string' || !/^[^\s@]+@[^\s@]+$/.test(email.trim())) return text(400, 'Podaj poprawny adres e-mail.');
+  if (typeof email !== 'string' || !/^[^\s@]+@[^\s@]+$/.test(email.trim())) return failure('bad-request', text(400, 'Podaj poprawny adres e-mail.'));
 
   const token = submitted.get(TURNSTILE_FIELD);
-  const human =
-    typeof token === 'string' && token !== '' && (await turnstilePasses(token, env.TURNSTILE_SECRET_KEY, request.headers.get('CF-Connecting-IP')));
-  if (!human) return text(403, 'Weryfikacja antyspamowa nie powiodła się. Odśwież stronę i spróbuj ponownie.');
+  const verification = typeof token === 'string' && token !== ''
+    ? await verifyTurnstile(token, env.TURNSTILE_SECRET_KEY, request.headers.get('CF-Connecting-IP'))
+    : { success: false, status: null };
+  if (!verification.success) return failure('turnstile', text(403, 'Weryfikacja antyspamowa nie powiodła się. Odśwież stronę i spróbuj ponownie.'), verification.status);
 
   const forwarded = await fetch(env.N8N_FORM_WEBHOOK, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(webflowSubmission(key, submitted, new Date())),
   }).catch(() => null);
-  if (!forwarded?.ok) return text(502, 'Nie udało się wysłać formularza. Spróbuj ponownie za chwilę.');
+  if (!forwarded?.ok) return failure('n8n', text(502, 'Nie udało się wysłać formularza. Spróbuj ponownie za chwilę.'), forwarded?.status ?? null);
 
   return new Response(null, { status: 303, headers: { Location: FORMS[key].redirect, 'Cache-Control': 'no-store' } });
 }
