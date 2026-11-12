@@ -1,0 +1,374 @@
+[
+  {
+    "url": "http://127.0.0.1:8790/",
+    "time": "2026-11-12T22:23:54.065Z",
+    "version": "12.6.1",
+    "categories": {
+      "performance": 0.65,
+      "accessibility": 1,
+      "best-practices": 0.96,
+      "seo": 0.69
+    },
+    "lcp": 3128.8553999999995,
+    "cls": 0,
+    "resources": [
+      {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 57,
+        "transferSize": 1007307
+      },
+      {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 6,
+        "transferSize": 659703
+      },
+      {
+        "resourceType": "image",
+        "label": "Image",
+        "requestCount": 36,
+        "transferSize": 232047
+      },
+      {
+        "resourceType": "font",
+        "label": "Font",
+        "requestCount": 2,
+        "transferSize": 65050
+      },
+      {
+        "resourceType": "document",
+        "label": "Document",
+        "requestCount": 1,
+        "transferSize": 48788
+      },
+      {
+        "resourceType": "other",
+        "label": "Other",
+        "requestCount": 12,
+        "transferSize": 1719
+      },
+      {
+        "resourceType": "stylesheet",
+        "label": "Stylesheet",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "media",
+        "label": "Media",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "third-party",
+        "label": "Third-party",
+        "requestCount": 51,
+        "transferSize": 888123
+      }
+    ],
+    "blockedIndexing": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "source",
+          "valueType": "code",
+          "label": "Blocking Directive Source"
+        }
+      ],
+      "items": [
+        {
+          "source": "X-Robots-Tag: noindex, nofollow"
+        },
+        {
+          "source": {
+            "type": "source-location",
+            "url": "http://127.0.0.1:8790/robots.txt",
+            "urlProvider": "network",
+            "line": 1,
+            "column": 0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "http://127.0.0.1:8790/",
+    "time": "2026-11-12T22:24:08.384Z",
+    "version": "12.6.1",
+    "categories": {
+      "performance": 0.9,
+      "accessibility": 1,
+      "best-practices": 0.96,
+      "seo": 0.69
+    },
+    "lcp": 1399.9768,
+    "cls": 0,
+    "resources": [
+      {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 56,
+        "transferSize": 1007303
+      },
+      {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 6,
+        "transferSize": 659713
+      },
+      {
+        "resourceType": "image",
+        "label": "Image",
+        "requestCount": 35,
+        "transferSize": 232033
+      },
+      {
+        "resourceType": "font",
+        "label": "Font",
+        "requestCount": 2,
+        "transferSize": 65050
+      },
+      {
+        "resourceType": "document",
+        "label": "Document",
+        "requestCount": 1,
+        "transferSize": 48788
+      },
+      {
+        "resourceType": "other",
+        "label": "Other",
+        "requestCount": 12,
+        "transferSize": 1719
+      },
+      {
+        "resourceType": "stylesheet",
+        "label": "Stylesheet",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "media",
+        "label": "Media",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "third-party",
+        "label": "Third-party",
+        "requestCount": 50,
+        "transferSize": 888119
+      }
+    ],
+    "blockedIndexing": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "source",
+          "valueType": "code",
+          "label": "Blocking Directive Source"
+        }
+      ],
+      "items": [
+        {
+          "source": "X-Robots-Tag: noindex, nofollow"
+        },
+        {
+          "source": {
+            "type": "source-location",
+            "url": "http://127.0.0.1:8790/robots.txt",
+            "urlProvider": "network",
+            "line": 1,
+            "column": 0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "http://127.0.0.1:8790/",
+    "time": "2026-11-12T22:24:21.555Z",
+    "version": "12.6.1",
+    "categories": {
+      "performance": 0.88,
+      "accessibility": 1,
+      "best-practices": 0.96,
+      "seo": 0.69
+    },
+    "lcp": 1691.8405,
+    "cls": 0,
+    "resources": [
+      {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 56,
+        "transferSize": 1007347
+      },
+      {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 6,
+        "transferSize": 659721
+      },
+      {
+        "resourceType": "image",
+        "label": "Image",
+        "requestCount": 35,
+        "transferSize": 232078
+      },
+      {
+        "resourceType": "font",
+        "label": "Font",
+        "requestCount": 2,
+        "transferSize": 65050
+      },
+      {
+        "resourceType": "document",
+        "label": "Document",
+        "requestCount": 1,
+        "transferSize": 48788
+      },
+      {
+        "resourceType": "other",
+        "label": "Other",
+        "requestCount": 12,
+        "transferSize": 1710
+      },
+      {
+        "resourceType": "stylesheet",
+        "label": "Stylesheet",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "media",
+        "label": "Media",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "third-party",
+        "label": "Third-party",
+        "requestCount": 50,
+        "transferSize": 888163
+      }
+    ],
+    "blockedIndexing": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "source",
+          "valueType": "code",
+          "label": "Blocking Directive Source"
+        }
+      ],
+      "items": [
+        {
+          "source": "X-Robots-Tag: noindex, nofollow"
+        },
+        {
+          "source": {
+            "type": "source-location",
+            "url": "http://127.0.0.1:8790/robots.txt",
+            "urlProvider": "network",
+            "line": 1,
+            "column": 0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "http://127.0.0.1:8790/blog",
+    "time": "2026-11-12T22:24:34.463Z",
+    "version": "12.6.1",
+    "categories": {
+      "performance": 0.91,
+      "accessibility": 1,
+      "best-practices": 0.96,
+      "seo": 0.69
+    },
+    "lcp": 1831.0457500000002,
+    "cls": 0,
+    "resources": [
+      {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 30,
+        "transferSize": 894772
+      },
+      {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 4,
+        "transferSize": 655517
+      },
+      {
+        "resourceType": "image",
+        "label": "Image",
+        "requestCount": 11,
+        "transferSize": 142742
+      },
+      {
+        "resourceType": "font",
+        "label": "Font",
+        "requestCount": 2,
+        "transferSize": 65050
+      },
+      {
+        "resourceType": "document",
+        "label": "Document",
+        "requestCount": 1,
+        "transferSize": 29744
+      },
+      {
+        "resourceType": "other",
+        "label": "Other",
+        "requestCount": 12,
+        "transferSize": 1719
+      },
+      {
+        "resourceType": "stylesheet",
+        "label": "Stylesheet",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "media",
+        "label": "Media",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "third-party",
+        "label": "Third-party",
+        "requestCount": 26,
+        "transferSize": 798815
+      }
+    ],
+    "blockedIndexing": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "source",
+          "valueType": "code",
+          "label": "Blocking Directive Source"
+        }
+      ],
+      "items": [
+        {
+          "source": "X-Robots-Tag: noindex, nofollow"
+        },
+        {
+          "source": {
+            "type": "source-location",
+            "url": "http://127.0.0.1:8790/robots.txt",
+            "urlProvider": "network",
+            "line": 1,
+            "column": 0
+          }
+        }
+      ]
+    }
+  }
+]
