@@ -1,0 +1,14 @@
+$ pnpm lint --quiet  (errors only; two temporary probe files with explicit any and debugger, deleted afterwards)
+$ eslint . --quiet
+
+apps/web/src/__t67probe.astro
+  2:10  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  6:12  error  Unexpected 'debugger' statement           no-debugger
+
+apps/web/src/__t67probe.ts
+  1:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 3 problems (3 errors, 0 warnings)
+
+[ELIFECYCLE] Command failed with exit code 1.
+exit=1

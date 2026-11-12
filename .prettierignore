@@ -1,0 +1,20 @@
+# Generated and vendored paths (same list as eslint.config.mjs).
+dist/
+.astro/
+.wrangler/
+.sanity/
+worker-configuration.d.ts
+sanity.types.ts
+pnpm-lock.yaml
+.agent/
+.agents/
+.claude/
+.codex/
+.cursor/
+.gemini/
+.grok/
+.hermes/
+.impeccable/
+.opencode/
+migration/00-inventory/
+migration/lanes/**/out/**

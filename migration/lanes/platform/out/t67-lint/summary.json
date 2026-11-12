@@ -1,0 +1,22 @@
+{
+  "eslint": {
+    "filesLinted": 216,
+    "filesWithFindings": 64,
+    "errors": 0,
+    "warnings": 979
+  },
+  "prettier": {
+    "config": ".prettierrc.json",
+    "unformattedFiles": 297,
+    "byArea": {
+      "apps/web": 194,
+      "migration/tasks": 57,
+      "migration/tools": 29,
+      "apps/studio": 10,
+      "migration/contracts": 4,
+      ".github/workflows": 1,
+      "DESIGN.md": 1,
+      "migration/PLAN.md": 1
+    }
+  }
+}

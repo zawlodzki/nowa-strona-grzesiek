@@ -1,0 +1,6 @@
+$ pnpm lint
+
+✖ 979 problems (0 errors, 979 warnings)
+  0 errors and 717 warnings potentially fixable with the `--fix` option.
+
+exit=0

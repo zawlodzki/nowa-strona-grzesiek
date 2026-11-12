@@ -1,0 +1,65 @@
+file,rules
+apps/web/src/components/diagrams/CrmFunnel.astro,@typescript-eslint/ban-ts-comment=1 no-var=38 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAiSales.astro,@typescript-eslint/ban-ts-comment=1 no-var=33 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAsana.astro,@typescript-eslint/ban-ts-comment=1 no-var=32 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAsanaAi.astro,@typescript-eslint/ban-ts-comment=1 no-var=14 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAsanaHandoff.astro,@typescript-eslint/ban-ts-comment=1 no-var=10 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAsanaMap.astro,@typescript-eslint/ban-ts-comment=1 no-var=7 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAsanaProblem.astro,@typescript-eslint/ban-ts-comment=1 no-var=9 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAsanaProcess.astro,@typescript-eslint/ban-ts-comment=1 no-var=11 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAsanaRealWork.astro,@typescript-eslint/ban-ts-comment=1 no-var=10 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAsanaTemplate.astro,@typescript-eslint/ban-ts-comment=1 no-var=8 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAsanaTpl.astro,@typescript-eslint/ban-ts-comment=1 no-var=12 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAsanaTraining.astro,@typescript-eslint/ban-ts-comment=1 no-var=8 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAsanaWork.astro,@typescript-eslint/ban-ts-comment=1 no-var=9 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAuditGapD1a.astro,@typescript-eslint/ban-ts-comment=1 no-var=7 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAuditGapD2a.astro,@typescript-eslint/ban-ts-comment=1 no-var=7 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAuditGapK1.astro,@typescript-eslint/ban-ts-comment=1 no-var=7 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAuditGapK3.astro,@typescript-eslint/ban-ts-comment=1 no-var=7 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAuditObserveD1b.astro,@typescript-eslint/ban-ts-comment=1 no-var=14 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAuditObserveK2.astro,@typescript-eslint/ban-ts-comment=1 no-var=14 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAuditObserveK4.astro,@typescript-eslint/ban-ts-comment=1 no-var=14 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAuditObservePre.astro,@typescript-eslint/ban-ts-comment=1 no-var=14 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAuditPriorityA5.astro,@typescript-eslint/ban-ts-comment=1 no-var=16 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAuditPriorityD2b.astro,@typescript-eslint/ban-ts-comment=1 no-var=16 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAuditPriorityK5.astro,@typescript-eslint/ban-ts-comment=1 no-var=16 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAutoBuild.astro,@typescript-eslint/ban-ts-comment=1 no-var=13 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwAutoGolive.astro,@typescript-eslint/ban-ts-comment=1 no-var=9 @typescript-eslint/no-unused-vars=4
+apps/web/src/components/diagrams/ZwAutoHandoff.astro,@typescript-eslint/ban-ts-comment=1 no-var=11 @typescript-eslint/no-unused-vars=4
+apps/web/src/components/diagrams/ZwAutoMap.astro,@typescript-eslint/ban-ts-comment=1 no-var=12 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwAutoProblem.astro,@typescript-eslint/ban-ts-comment=1 no-var=37 @typescript-eslint/no-unused-vars=5
+apps/web/src/components/diagrams/ZwAutomation.astro,@typescript-eslint/ban-ts-comment=1 no-var=31 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwCourseNext.astro,@typescript-eslint/ban-ts-comment=1 no-var=20 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwCrmData.astro,@typescript-eslint/ban-ts-comment=1 no-var=9 @typescript-eslint/no-unused-vars=5
+apps/web/src/components/diagrams/ZwCrmHandoff.astro,@typescript-eslint/ban-ts-comment=1 no-var=7 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwCrmProcess.astro,@typescript-eslint/ban-ts-comment=1 no-var=15 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwCrmSetup.astro,@typescript-eslint/ban-ts-comment=1 no-var=8 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwCrmTraining.astro,@typescript-eslint/ban-ts-comment=1 no-var=10 @typescript-eslint/no-unused-vars=4
+apps/web/src/components/diagrams/ZwManualRelay.astro,@typescript-eslint/ban-ts-comment=1 no-var=34 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwPipedriveProblem.astro,@typescript-eslint/ban-ts-comment=1 no-var=40 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwProblem.astro,@typescript-eslint/ban-ts-comment=1 no-var=16 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwSalesAuditData.astro,@typescript-eslint/ban-ts-comment=1 no-var=8 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwSalesAuditMotions.astro,@typescript-eslint/ban-ts-comment=1 no-var=8 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwSalesAuditProblem.astro,@typescript-eslint/ban-ts-comment=1 no-var=9 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwSalesAuditProcess.astro,@typescript-eslint/ban-ts-comment=1 no-var=9 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwSalesAuditStrategy.astro,@typescript-eslint/ban-ts-comment=1 no-var=7 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwSalesAuditTeam.astro,@typescript-eslint/ban-ts-comment=1 no-var=9 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwSfProblem.astro,@typescript-eslint/ban-ts-comment=1 no-var=34 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwSfSetup.astro,@typescript-eslint/ban-ts-comment=1 no-var=8 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwStep1.astro,@typescript-eslint/ban-ts-comment=1 no-var=13 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwStep2.astro,@typescript-eslint/ban-ts-comment=1 no-var=15 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwStep3.astro,@typescript-eslint/ban-ts-comment=1 no-var=16 @typescript-eslint/no-unused-vars=3
+apps/web/src/components/diagrams/ZwStep4.astro,@typescript-eslint/ban-ts-comment=1 no-var=14 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/ZwStep5.astro,@typescript-eslint/ban-ts-comment=1 no-var=15 @typescript-eslint/no-unused-vars=2
+apps/web/src/components/diagrams/port/cdp.mjs,@typescript-eslint/no-unused-expressions=1
+apps/web/src/components/site/disclosure.ts,@typescript-eslint/no-unused-vars=2
+apps/web/src/layouts/Base.astro,prefer-rest-params=1
+apps/web/src/preview/session.ts,no-control-regex=2
+apps/web/src/worker/cms-redirects.mjs,no-useless-escape=1 @typescript-eslint/no-unused-expressions=1
+apps/web/src/worker/redirects.gen.mjs,@typescript-eslint/no-unused-expressions=4
+migration/tools/crawl.mjs,@typescript-eslint/no-unused-vars=1
+migration/tools/design-parity/capture.mjs,no-useless-assignment=2
+migration/tools/design-parity/parity.mjs,preserve-caught-error=1
+migration/tools/design-parity/parity.test.mjs,preserve-caught-error=1
+migration/tools/import/pages-t40-verify.mjs,no-useless-escape=2
+migration/tools/import/pages-t45-browser-check.mjs,no-empty=1
