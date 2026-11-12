@@ -187,8 +187,8 @@ importers:
         specifier: ^6.6.3
         version: 6.6.3(@standard-schema/spec@1.1.0)(@types/react@19.3.0)(ajv@8.20.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(@noble/hashes@2.4.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.2.10)(jiti@2.7.0)(prismjs@1.30.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.14)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(typescript@7.0.2))(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(valibot@1.5.0(typescript@7.0.2))
       sanity-plugin-table-of-contents:
-        specifier: ^2.0.0
-        version: 2.0.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(@noble/hashes@2.4.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.2.10)(jiti@2.7.0)(prismjs@1.30.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.14)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(typescript@7.0.2))(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
+        specifier: file:../../migration/lanes/cms/out/t50-studio-plugins/sanity-plugin-table-of-contents-2.0.0-t50.tgz
+        version: file:migration/lanes/cms/out/t50-studio-plugins/sanity-plugin-table-of-contents-2.0.0-t50.tgz(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(@noble/hashes@2.4.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.2.10)(jiti@2.7.0)(prismjs@1.30.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.14)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(typescript@7.0.2))(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
       styled-components:
         specifier: 6.6.0
         version: 6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
@@ -5314,8 +5314,9 @@ packages:
       sanity: ^5 || ^6.0.0-0
       styled-components: ^6.1
 
-  sanity-plugin-table-of-contents@2.0.0:
-    resolution: {integrity: sha512-LVkjYIAc1mHHuBdbIYvwst5hQ1oPtcM7Bt+JXjQ9A6GEc3g9/GOLUQVW9UCL3yw3MKes2w1ShaSrEhbY2Y5b1A==}
+  sanity-plugin-table-of-contents@file:migration/lanes/cms/out/t50-studio-plugins/sanity-plugin-table-of-contents-2.0.0-t50.tgz:
+    resolution: {integrity: sha512-XyDyklAF2WwKeYXDZidkMADqnFbtQh47zbo4RVoBp+02n5eHx3hPox4xFH1mW7bSF4JxCaIx9goPkgzdc8DsSw==, tarball: file:migration/lanes/cms/out/t50-studio-plugins/sanity-plugin-table-of-contents-2.0.0-t50.tgz}
+    version: 2.0.0
     engines: {node: '>=22.12'}
     peerDependencies:
       react: ^19
@@ -8819,7 +8820,7 @@ snapshots:
   '@sanity/language-filter@5.0.23(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(@noble/hashes@2.4.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.2.10)(jiti@2.7.0)(prismjs@1.30.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.14)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(typescript@7.0.2))(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))':
     dependencies:
       '@sanity/icons': 5.2.3(react@19.3.1)
-      '@sanity/ui': 4.4.9(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
+      '@sanity/ui': 4.4.10(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
       react-rx: 7.1.0(react@19.3.1)(rxjs@7.8.2)
@@ -11787,7 +11788,7 @@ snapshots:
       - vitest
       - yup
 
-  sanity-plugin-table-of-contents@2.0.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(@noble/hashes@2.4.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.2.10)(jiti@2.7.0)(prismjs@1.30.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.14)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(typescript@7.0.2))(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)):
+  sanity-plugin-table-of-contents@file:migration/lanes/cms/out/t50-studio-plugins/sanity-plugin-table-of-contents-2.0.0-t50.tgz(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(@noble/hashes@2.4.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.10)(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.2.10)(jiti@2.7.0)(prismjs@1.30.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.14)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(typescript@7.0.2))(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)):
     dependencies:
       '@portabletext/toolkit': 5.0.2
       '@sanity/icons': 3.8.0(react@19.3.1)

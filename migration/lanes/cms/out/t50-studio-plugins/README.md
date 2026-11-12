@@ -11,3 +11,7 @@
 T3 preview_open failed: “This host blocks the sandbox T3's browser runs in (AppArmor on Ubuntu 23.10+).” Used installed Chromium through Playwright as fallback. It reached the real local Studio login screen. No authenticated browser profile was available.
 
 The implementation remains unverified in an authenticated Studio session. Per the revised user instruction, the PR opens in review with this evidence gap disclosed. A separate agent will capture all three views on macOS following [MACOS-VERIFY.md](MACOS-VERIFY.md). No deployment or type generation was run. Check/build were rerun successfully before PR creation.
+
+## TOC crash follow-up
+
+See [TOC-FIX.md](TOC-FIX.md) for the boundary fix, 10 passing regressions, CI checks and the current live-authentication blocker. T50 is blocked; toc-inspector.png is the original failure screenshot and has not been replaced by success evidence.

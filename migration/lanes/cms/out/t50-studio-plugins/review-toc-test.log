@@ -1,0 +1,19 @@
+$ node --test ../../migration/lanes/cms/out/t50-studio-plugins/toc-array-guard.test.mjs
+✔ non-array undefined is not Portable Text (0.386084ms)
+✔ non-array null is not Portable Text (0.047083ms)
+✔ non-array text body is not Portable Text (0.039167ms)
+✔ non-array object is not Portable Text (0.037458ms)
+✔ non-array array-like object is not Portable Text (0.058167ms)
+✔ non-array number is not Portable Text (0.047334ms)
+✔ non-array boolean is not Portable Text (0.050875ms)
+✔ empty and section arrays remain non-Portable Text (0.082459ms)
+✔ Portable Text headings remain recognized (0.0895ms)
+✔ malformed blocks do not crash or become Portable Text (0.123292ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34.777585
