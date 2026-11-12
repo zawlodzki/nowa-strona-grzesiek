@@ -2,6 +2,9 @@ import {defineArrayMember, defineField, defineType} from 'sanity'
 import {headingField, taglineField, titleField} from './objects'
 
 const optionalHeading = defineField({name: 'heading', title: 'Nagłówek', type: 'string', validation: (rule) => rule.max(200)})
+// Form copy: every field is optional, the placeholder shows the text the site uses when the field is empty.
+const copyText = (name: string, title: string, placeholder: string, rows?: number) => defineField({name, title, type: rows ? 'text' : 'string', rows, placeholder})
+const submitDescription = 'Nazwij niskoprogowy następny krok, np. „Wyślij zapytanie”.'
 
 export const hero = defineType({
   name: 'hero', title: 'Hero', type: 'object',
@@ -119,10 +122,35 @@ export const contactForm = defineType({
         ], preview: {select: {title: 'label', subtitle: 'kind'}}})]}),
       ], preview: {select: {title: 'title', subtitle: 'note'}}})]}),
     ]}),
+    defineField({name: 'copy', title: 'Teksty formularza', description: 'Puste pole oznacza tekst domyślny widoczny jako podpowiedź.', type: 'object', options: {collapsible: true, collapsed: true}, hidden: ({parent}) => parent?.variant === 'channels', fields: [
+      copyText('formHeading', 'Nagłówek formularza (wariant landing)', 'Formularz kontaktowy'),
+      copyText('emailLabel', 'E-mail: etykieta', 'E-mail'), copyText('emailPlaceholder', 'E-mail: podpowiedź w polu', 'E-mail'),
+      copyText('requiredMarker', 'Oznaczenie pola wymaganego', '(wymagane)'),
+      copyText('phoneLabel', 'Telefon: etykieta', 'Telefon'), copyText('phonePlaceholder', 'Telefon: podpowiedź w polu', 'Telefon'),
+      copyText('messageLabel', 'Wiadomość: etykieta', 'Temat rozmowy'), copyText('messagePlaceholder', 'Wiadomość: podpowiedź w polu', 'Temat rozmowy'),
+      copyText('privacyNote', 'Informacja o danych (przed odnośnikiem)', 'Twoich danych użyjemy tylko po to, żeby odpowiedzieć na zgłoszenie i umówić rozmowę. Administratorem danych jest Wellbiz sp. z o.o. Szczegóły:', 3),
+      defineField({name: 'privacyLink', title: 'Odnośnik do polityki prywatności', description: 'Pusty: „Polityka prywatności”, /polityka-prywatnosci.', type: 'link'}),
+      copyText('newsletterLabel', 'Zgoda na newsletter', 'Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.', 2),
+      defineField({...copyText('submitLabel', 'Przycisk wysyłki', 'Wyślij zapytanie'), description: submitDescription}),
+      copyText('waitLabel', 'Przycisk w trakcie wysyłki', 'Zaczekaj chwilę…'),
+    ]}),
     defineField({name: 'formId', type: 'string', hidden: ({parent}) => parent?.variant === 'channels', options: {list: ['landing-contact', 'main-contact']}, validation: (rule) => rule.custom((value, context) => (context.parent as {variant?: string})?.variant === 'channels' || !!value || 'Wybierz formularz.').custom((value) => value === undefined || ['landing-contact', 'main-contact'].includes(value) || 'Wybierz dozwoloną wartość.')}),
   ], preview: {select: {title: 'heading'}},
 })
-export const newsletterSignup = defineType({name: 'newsletterSignup', title: 'Newsletter', type: 'object', fields: [defineField({name: 'body', type: 'text'})]})
+export const newsletterSignup = defineType({
+  name: 'newsletterSignup', title: 'Newsletter', type: 'object',
+  fields: [
+    defineField({name: 'body', type: 'text'}),
+    defineField({name: 'copy', title: 'Teksty formularza', description: 'Puste pole oznacza tekst domyślny widoczny jako podpowiedź.', type: 'object', options: {collapsible: true, collapsed: true}, fields: [
+      copyText('heading', 'Nagłówek', 'Newsletter'), copyText('headingAccent', 'Wyróżniona część nagłówka', 'Sales Atlas'),
+      copyText('emailLabel', 'E-mail: etykieta', 'Adres e-mail'), copyText('emailPlaceholder', 'E-mail: podpowiedź w polu', 'Adres e-mail'),
+      defineField({...copyText('submitLabel', 'Przycisk zapisu', 'Zapisuję się'), description: submitDescription}),
+      copyText('waitLabel', 'Przycisk w trakcie wysyłki', 'Zaczekaj chwilę…'),
+      copyText('legal', 'Informacja prawna (przed odnośnikami)', 'Zapisując się, zamawiasz newsletter Wellbiz sp. z o.o. i zgadzasz się na otrzymywanie e-maili z poradami i ofertami. Wypiszesz się jednym kliknięciem. Link jest w każdej wiadomości.', 3),
+      defineField({name: 'legalLinks', title: 'Odnośniki prawne', description: 'Pusta lista: „Regulamin newslettera” (/regulamin-newslettera) i „Polityka prywatności” (/polityka-prywatnosci).', type: 'array', of: [defineArrayMember({type: 'link'})]}),
+    ]}),
+  ],
+})
 export const postList = defineType({
   name: 'postList', title: 'Ostatnie wpisy', type: 'object',
   fields: [

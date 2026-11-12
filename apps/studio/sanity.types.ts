@@ -53,6 +53,37 @@ export type Channels = {
   }>;
 };
 
+export type Copy = {
+  formHeading?: string;
+  emailLabel?: string;
+  emailPlaceholder?: string;
+  requiredMarker?: string;
+  phoneLabel?: string;
+  phonePlaceholder?: string;
+  messageLabel?: string;
+  messagePlaceholder?: string;
+  privacyNote?: string;
+  privacyLink?: Link;
+  newsletterLabel?: string;
+  submitLabel?: string;
+  waitLabel?: string;
+};
+
+export type NewsletterSignupCopy = {
+  heading?: string;
+  headingAccent?: string;
+  emailLabel?: string;
+  emailPlaceholder?: string;
+  submitLabel?: string;
+  waitLabel?: string;
+  legal?: string;
+  legalLinks?: Array<
+    {
+      _key: string;
+    } & Link
+  >;
+};
+
 export type PageReference = {
   _ref: string;
   _type: "reference";
@@ -308,6 +339,7 @@ export type PostList = {
 export type NewsletterSignup = {
   _type: "newsletterSignup";
   body?: string;
+  copy?: NewsletterSignupCopy;
 };
 
 export type ContactForm = {
@@ -320,6 +352,7 @@ export type ContactForm = {
   calendar?: Calendar;
   consultation?: Consultation;
   channels?: Channels;
+  copy?: Copy;
   formId?: "landing-contact" | "main-contact";
 };
 
@@ -895,6 +928,8 @@ export type AllSanitySchemaTypes =
   | Calendar
   | Consultation
   | Channels
+  | Copy
+  | NewsletterSignupCopy
   | PageReference
   | PostReference
   | SanityImageAssetReference

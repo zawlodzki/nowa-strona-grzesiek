@@ -21,6 +21,25 @@ const Heading = full ? 'h1' : 'h2';
 const FormHeading = data.heading ? 'h3' : 'h2';
 const f = (name: string) => `${id}-${name}`;
 
+// Editors override any of these in Studio; an empty field keeps the default.
+const defaults = {
+  formHeading: 'Formularz kontaktowy',
+  emailLabel: 'E-mail',
+  emailPlaceholder: 'E-mail',
+  requiredMarker: '(wymagane)',
+  phoneLabel: 'Telefon',
+  phonePlaceholder: 'Telefon',
+  messageLabel: 'Temat rozmowy',
+  messagePlaceholder: 'Temat rozmowy',
+  privacyNote: 'Twoich danych użyjemy tylko po to, żeby odpowiedzieć na zgłoszenie i umówić rozmowę. Administratorem danych jest Wellbiz sp. z o.o. Szczegóły:',
+  newsletterLabel: 'Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.',
+  submitLabel: 'Wyślij zapytanie',
+  waitLabel: 'Zaczekaj chwilę…',
+};
+const copy = Object.fromEntries(Object.entries(defaults).map(([key, value]) => [key, (data.copy?.[key as keyof typeof defaults] ?? '').trim() || value])) as typeof defaults;
+const privacyHref = safeHref(data.copy?.privacyLink?.href);
+const privacyLink = privacyHref && data.copy?.privacyLink?.label?.trim() ? { href: privacyHref, label: data.copy.privacyLink.label } : { href: '/polityka-prywatnosci', label: 'Polityka prywatności' };
+
 // Calendar, consultation and channels belong to the full variant only (/kontakt).
 const calendarHref = safeHref(data.calendar?.link?.href);
 const calendar = full && data.calendar?.heading && calendarHref ? { ...data.calendar, href: calendarHref } : undefined;
@@ -63,22 +82,22 @@ const icons: Record<string, string> = {
       </header>
     )}
     {!channelsOnly && <div class:list={['card', { split: side, full }]}>
-      <LeadForm form={form} id={f('form')} visible={['email', 'phone', 'message', 'newsletter']} submitLabel="Wyślij zapytanie">
-        {!full && <FormHeading id={pageHeadingId(Astro.locals, 'Formularz kontaktowy')} class="form-heading">Formularz kontaktowy</FormHeading>}
+      <LeadForm form={form} id={f('form')} visible={['email', 'phone', 'message', 'newsletter']} submitLabel={copy.submitLabel} waitLabel={copy.waitLabel}>
+        {!full && <FormHeading id={pageHeadingId(Astro.locals, copy.formHeading)} class="form-heading">{copy.formHeading}</FormHeading>}
         <div class="field">
-          <label class="visually-hidden" for={f('email')}>E-mail <span class="required">(wymagane)</span></label>
-          <input id={f('email')} name="email" placeholder="E-mail" type="email" autocomplete="email" maxlength="256" required />
+          <label class="visually-hidden" for={f('email')}>{copy.emailLabel}{' '}<span class="required">{copy.requiredMarker}</span></label>
+          <input id={f('email')} name="email" placeholder={copy.emailPlaceholder} type="email" autocomplete="email" maxlength="256" required />
         </div>
         <div class="field">
-          <label class="visually-hidden" for={f('phone')}>Telefon</label>
-          <input id={f('phone')} name="phone" placeholder="Telefon" type="tel" autocomplete="tel" maxlength="256" />
+          <label class="visually-hidden" for={f('phone')}>{copy.phoneLabel}</label>
+          <input id={f('phone')} name="phone" placeholder={copy.phonePlaceholder} type="tel" autocomplete="tel" maxlength="256" />
         </div>
         <div class="field">
-          <label class="visually-hidden" for={f('message')}>Temat rozmowy</label>
-          <textarea id={f('message')} name="message" placeholder="Temat rozmowy" maxlength="5000"></textarea>
+          <label class="visually-hidden" for={f('message')}>{copy.messageLabel}</label>
+          <textarea id={f('message')} name="message" placeholder={copy.messagePlaceholder} maxlength="5000"></textarea>
         </div>
-        <p class="note type-body-s">Twoich danych użyjemy tylko po to, żeby odpowiedzieć na zgłoszenie i umówić rozmowę. Administratorem danych jest Wellbiz sp. z o.o. Szczegóły: <a href="/polityka-prywatnosci">Polityka prywatności</a>.</p>
-        <label class="check type-body-s"><input type="checkbox" name="newsletter" /><span>Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.</span></label>
+        <p class="note type-body-s">{copy.privacyNote}{' '}<a href={privacyLink.href}>{privacyLink.label}</a>.</p>
+        <label class="check type-body-s"><input type="checkbox" name="newsletter" /><span>{copy.newsletterLabel}</span></label>
       </LeadForm>
       {side && (
         <div class="side">
