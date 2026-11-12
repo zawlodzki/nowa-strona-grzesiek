@@ -1,12 +1,13 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { cmsRedirects } from './src/worker/cms-redirects.mjs';
 
 export default defineConfig({
   site: 'https://www.zawlodzki.pl',
   output: 'static',
   trailingSlash: 'never',
   build: { format: 'file' },
-  integrations: [{
+  integrations: [cmsRedirects(), {
     name: 'block-catalog',
     hooks: {
       'astro:config:setup': ({ injectRoute }) => {
