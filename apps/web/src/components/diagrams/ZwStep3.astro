@@ -8,29 +8,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-step3" aria-hidden="true" style="--dg-w: 400; --dg-h: 200;">
-  <div class="zw-stage dg-stage">
-    <div class="zw-fit dg-fit">
-      <div class="zw-scene">
-        <div class="s3-wrap">
-          <svg class="s3-links" viewBox="0 0 380 200" width="380" height="200" fill="none">
-            <path class="s3-link" d="M124 31 C 190 31, 200 100, 256 100"/>
-            <path class="s3-link" d="M124 100 L 256 100"/>
-            <path class="s3-link" d="M124 169 C 190 169, 200 100, 256 100"/>
-          </svg>
-          <div class="s3-node" style="top:8px">CRM</div>
-          <div class="s3-node" style="top:77px">Mail</div>
-          <div class="s3-node" style="top:146px">Calendar</div>
-          <div class="s3-ring" aria-hidden="true"></div>
-          <div class="s3-hub">AI</div>
-          <div class="s3-pill" aria-hidden="true">Read-only</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-step3"] {
     --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
     --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -88,6 +66,28 @@ import './diagram.css';
     [data-diagram="zw-step3"] .s3-pill { opacity:1; }
   }
 </style>
+
+<div class="dg" data-diagram="zw-step3" aria-hidden="true" style="--dg-w: 400; --dg-h: 200;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="s3-wrap">
+          <svg class="s3-links" viewBox="0 0 380 200" width="380" height="200" fill="none">
+            <path class="s3-link" d="M124 31 C 190 31, 200 100, 256 100"/>
+            <path class="s3-link" d="M124 100 L 256 100"/>
+            <path class="s3-link" d="M124 169 C 190 169, 200 100, 256 100"/>
+          </svg>
+          <div class="s3-node" style="top:8px">CRM</div>
+          <div class="s3-node" style="top:77px">Mail</div>
+          <div class="s3-node" style="top:146px">Calendar</div>
+          <div class="s3-ring" aria-hidden="true"></div>
+          <div class="s3-hub">AI</div>
+          <div class="s3-pill" aria-hidden="true">Read-only</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   // @ts-nocheck

@@ -14,72 +14,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-auto-problem" aria-hidden="true" style="--dg-w: 720; --dg-h: 373;">
-  <div class="zw-stage dg-stage">
-    <div class="zw-fit dg-fit">
-      <div class="zw-scene">
-        <div class="ap-board">
-          <div class="ap-top">
-            <span class="ap-meter">
-              <span class="ap-meter-label">Manual entry</span>
-              <span class="ap-meter-val">0m</span>
-            </span>
-            <span class="ap-week">&asymp; 5h / week</span>
-          </div>
-
-          <div class="ap-body">
-            <div class="ap-rep">
-              <div class="ap-rep-head">
-                <span class="ap-avatar">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5.6 19.4a6.4 6.4 0 0 1 12.8 0"/></svg>
-                </span>
-                <b>Rep</b>
-              </div>
-              <div class="ap-deal">
-                <span class="ap-deal-bar"></span>
-                <span class="ap-deal-name">Acme</span>
-                <span class="ap-deal-val">&euro;24,000</span>
-                <span class="ap-deal-tag">New deal</span>
-              </div>
-              <div class="ap-sell">
-                <span class="ap-lock">
-                  <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-                </span>
-                <b>Sell</b>
-                <span class="ap-sell-note">Waiting</span>
-              </div>
-            </div>
-
-            <div class="ap-list">
-              <span class="ap-list-eyebrow">One deal, by hand</span>
-              <div class="ap-chore" data-min="8"><span class="ap-chore-ico">
-                <svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="4" height="16" rx="1"/><rect x="10" y="4" width="4" height="11" rx="1"/><rect x="16.5" y="4" width="4" height="13" rx="1"/></svg>
-              </span><b>CRM</b><span class="ap-state"><span class="ap-spin"></span></span></div>
-              <div class="ap-chore" data-min="5"><span class="ap-chore-ico">
-                <svg viewBox="0 0 24 24"><path d="M3.6 6.5A1.5 1.5 0 0 1 5 5h4l2 2.4h7A1.5 1.5 0 0 1 20.5 9v8A1.5 1.5 0 0 1 19 18.5H5A1.5 1.5 0 0 1 3.5 17z"/></svg>
-              </span><b>Folder</b><span class="ap-state"><span class="ap-spin"></span></span></div>
-              <div class="ap-chore" data-min="6"><span class="ap-chore-ico">
-                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.6 7l8.4 6 8.4-6"/></svg>
-              </span><b>Confirm</b><span class="ap-state"><span class="ap-spin"></span></span></div>
-              <div class="ap-chore" data-min="7"><span class="ap-chore-ico">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
-              </span><b>Follow-up</b><span class="ap-state"><span class="ap-spin"></span></span></div>
-              <div class="ap-chore" data-min="9"><span class="ap-chore-ico">
-                <svg viewBox="0 0 24 24"><path d="M4 6h6l1.6 2H20v10H4z"/></svg>
-              </span><b>Project</b><span class="ap-state"><span class="ap-spin"></span></span></div>
-
-              <span class="ap-cursor">
-                <svg viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.6L9.5 19z"/></svg>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style is:global>
+<style is:inline>
 /* ---- Shared family layer: tokens + responsive shell (verbatim). ---- */
   [data-diagram="zw-auto-problem"] {
     --zw-primary:    #3A48CC;
@@ -265,6 +200,71 @@ import './diagram.css';
     [data-diagram="zw-auto-problem"] .ap-cursor { display: none; }
   }
 </style>
+
+<div class="dg" data-diagram="zw-auto-problem" aria-hidden="true" style="--dg-w: 720; --dg-h: 373;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="ap-board">
+          <div class="ap-top">
+            <span class="ap-meter">
+              <span class="ap-meter-label">Manual entry</span>
+              <span class="ap-meter-val">0m</span>
+            </span>
+            <span class="ap-week">&asymp; 5h / week</span>
+          </div>
+
+          <div class="ap-body">
+            <div class="ap-rep">
+              <div class="ap-rep-head">
+                <span class="ap-avatar">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5.6 19.4a6.4 6.4 0 0 1 12.8 0"/></svg>
+                </span>
+                <b>Rep</b>
+              </div>
+              <div class="ap-deal">
+                <span class="ap-deal-bar"></span>
+                <span class="ap-deal-name">Acme</span>
+                <span class="ap-deal-val">&euro;24,000</span>
+                <span class="ap-deal-tag">New deal</span>
+              </div>
+              <div class="ap-sell">
+                <span class="ap-lock">
+                  <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                </span>
+                <b>Sell</b>
+                <span class="ap-sell-note">Waiting</span>
+              </div>
+            </div>
+
+            <div class="ap-list">
+              <span class="ap-list-eyebrow">One deal, by hand</span>
+              <div class="ap-chore" data-min="8"><span class="ap-chore-ico">
+                <svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="4" height="16" rx="1"/><rect x="10" y="4" width="4" height="11" rx="1"/><rect x="16.5" y="4" width="4" height="13" rx="1"/></svg>
+              </span><b>CRM</b><span class="ap-state"><span class="ap-spin"></span></span></div>
+              <div class="ap-chore" data-min="5"><span class="ap-chore-ico">
+                <svg viewBox="0 0 24 24"><path d="M3.6 6.5A1.5 1.5 0 0 1 5 5h4l2 2.4h7A1.5 1.5 0 0 1 20.5 9v8A1.5 1.5 0 0 1 19 18.5H5A1.5 1.5 0 0 1 3.5 17z"/></svg>
+              </span><b>Folder</b><span class="ap-state"><span class="ap-spin"></span></span></div>
+              <div class="ap-chore" data-min="6"><span class="ap-chore-ico">
+                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.6 7l8.4 6 8.4-6"/></svg>
+              </span><b>Confirm</b><span class="ap-state"><span class="ap-spin"></span></span></div>
+              <div class="ap-chore" data-min="7"><span class="ap-chore-ico">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+              </span><b>Follow-up</b><span class="ap-state"><span class="ap-spin"></span></span></div>
+              <div class="ap-chore" data-min="9"><span class="ap-chore-ico">
+                <svg viewBox="0 0 24 24"><path d="M4 6h6l1.6 2H20v10H4z"/></svg>
+              </span><b>Project</b><span class="ap-state"><span class="ap-spin"></span></span></div>
+
+              <span class="ap-cursor">
+                <svg viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.6L9.5 19z"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   // @ts-nocheck

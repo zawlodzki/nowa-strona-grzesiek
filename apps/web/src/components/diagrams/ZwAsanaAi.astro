@@ -3,32 +3,7 @@
 import './diagram.css';
 ---
 
-<div class="dg" data-diagram="zw-asana-ai" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
-<div class="zw-stage dg-stage">
-<div class="zw-fit dg-fit">
-<div class="zw-scene">
-<div class="aa-panel">
-<span class="aa-eyebrow">Automations</span>
-<span class="aa-wire aa-wire--1"></span>
-<span class="aa-wire aa-wire--2"></span>
-<span class="aa-wire aa-wire--down"></span>
-<div class="aa-node aa-n1"><b>Rules</b><i></i></div>
-<div class="aa-node aa-n2"><b>Report</b><i></i></div>
-<div class="aa-node aa-n3 aa-node--missing"><b>Sync</b><i></i></div>
-<div class="aa-node aa-node--ai aa-n4"><b>AI</b><i></i></div>
-<span class="aa-mark aa-mark--1 aa-mark--ok"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg></span>
-<span class="aa-mark aa-mark--2">&ne;</span>
-<span class="aa-mark aa-mark--3 aa-mark--none">&mdash;</span>
-<span class="aa-packet"></span>
-<span class="aa-ring"></span>
-<span class="aa-chip"><b>3</b> findings</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-asana-ai"] {
 --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
 --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -123,6 +98,31 @@ transform:scale(0); transform-origin:center;
 [data-diagram="zw-asana-ai"] .aa-node--ai { border-style:solid; }
 }
 </style>
+
+<div class="dg" data-diagram="zw-asana-ai" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+<div class="zw-stage dg-stage">
+<div class="zw-fit dg-fit">
+<div class="zw-scene">
+<div class="aa-panel">
+<span class="aa-eyebrow">Automations</span>
+<span class="aa-wire aa-wire--1"></span>
+<span class="aa-wire aa-wire--2"></span>
+<span class="aa-wire aa-wire--down"></span>
+<div class="aa-node aa-n1"><b>Rules</b><i></i></div>
+<div class="aa-node aa-n2"><b>Report</b><i></i></div>
+<div class="aa-node aa-n3 aa-node--missing"><b>Sync</b><i></i></div>
+<div class="aa-node aa-node--ai aa-n4"><b>AI</b><i></i></div>
+<span class="aa-mark aa-mark--1 aa-mark--ok"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg></span>
+<span class="aa-mark aa-mark--2">&ne;</span>
+<span class="aa-mark aa-mark--3 aa-mark--none">&mdash;</span>
+<span class="aa-packet"></span>
+<span class="aa-ring"></span>
+<span class="aa-chip"><b>3</b> findings</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <script>
   // @ts-nocheck

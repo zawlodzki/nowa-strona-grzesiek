@@ -8,31 +8,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-step4" aria-hidden="true" style="--dg-w: 400; --dg-h: 127.25;">
-  <div class="zw-stage dg-stage">
-    <div class="zw-fit dg-fit">
-      <div class="zw-scene">
-        <div class="s4-card">
-          <span class="s4-bar"></span>
-          <div class="s4-head">
-            <span class="s4-title">Offer</span>
-            <span class="s4-status">Draft</span>
-            <span class="s4-check" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="13" height="13"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-          <div class="s4-lines">
-            <div class="s4-line"><span style="width:100%"></span></div>
-            <div class="s4-line"><span style="width:100%"></span></div>
-            <div class="s4-line"><span style="width:58%"></span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-step4"] {
     --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
     --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -90,6 +66,30 @@ import './diagram.css';
     [data-diagram="zw-step4"] .s4-line span { transform:scaleX(1); }
   }
 </style>
+
+<div class="dg" data-diagram="zw-step4" aria-hidden="true" style="--dg-w: 400; --dg-h: 127.25;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="s4-card">
+          <span class="s4-bar"></span>
+          <div class="s4-head">
+            <span class="s4-title">Offer</span>
+            <span class="s4-status">Draft</span>
+            <span class="s4-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="13" height="13"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <div class="s4-lines">
+            <div class="s4-line"><span style="width:100%"></span></div>
+            <div class="s4-line"><span style="width:100%"></span></div>
+            <div class="s4-line"><span style="width:58%"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   // @ts-nocheck

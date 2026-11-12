@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { gzipSync } from 'node:zlib';
 import { checkDist } from './check-dist.mjs';
 
 const origin = 'https://www.zawlodzki.pl';
@@ -74,8 +75,22 @@ test('unpublished content is reported without failing, including quoted CSV', (t
   assert.deepEqual(result.errors, []);
   assert.deepEqual(result.reports, ['Unpublished-content keep route absent: /post']);
 });
-for (const ext of ['css', 'js']) test(`${ext} total gzip budget`, (t) => {
-  const run = fixture(t, { [`assets/a.${ext}`]: 'some asset', [`assets/b.${ext}`]: 'another asset' });
-  assert.match(run({ budgets: { css: 1000, js: 1000, [ext]: 1 } }).errors.join('\n'), /budget exceeded/);
+test('js total gzip budget', (t) => {
+  const run = fixture(t, { 'assets/a.js': 'some asset', 'assets/b.js': 'another asset' });
+  assert.match(run({ budgets: { css: 1000, js: 1 } }).errors.join('\n'), /js: gzip budget exceeded/);
   assert.deepEqual(run().errors, []);
+});
+test('css budget is the heaviest page: linked stylesheets plus inline style blocks', (t) => {
+  const about = html.replace(`href="${origin}"`, `href="${origin}/about"`);
+  const run = fixture(t, {
+    'index.html': html + '<link rel="stylesheet" href="/assets/a.css"><style>body{color:red}</style>',
+    'about.html': about + '<style>p{margin:0}</style>',
+    'assets/a.css': 'h1{font-size:2rem}',
+    'assets/unused.css': 'unused{display:none}',
+  });
+  const { sizes, errors } = run();
+  assert.deepEqual(errors, []);
+  assert.equal(sizes.css, gzipSync('h1{font-size:2rem}').length + gzipSync('body{color:red}').length);
+  assert.equal(sizes.cssPage, '/');
+  assert.match(run({ budgets: { css: 1, js: 1000 } }).errors.join('\n'), /css: gzip budget exceeded/);
 });

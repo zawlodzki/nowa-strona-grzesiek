@@ -3,36 +3,7 @@
 import './diagram.css';
 ---
 
-<div class="dg" data-diagram="zw-asana-work" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
-<div class="zw-stage dg-stage">
-<div class="zw-fit dg-fit">
-<div class="zw-scene">
-<div class="aw-panel">
-<span class="aw-eyebrow">Open project</span>
-<div class="aw-col aw-c1">
-<span class="aw-head">To do</span>
-<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
-<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
-<span class="aw-task"><i></i><u></u></span>
-<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
-</div>
-<div class="aw-col aw-c2">
-<span class="aw-head">Doing</span>
-<span class="aw-task"><i></i><u></u></span>
-<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
-</div>
-<div class="aw-col aw-c3">
-<span class="aw-head">Done</span>
-<span class="aw-task"><i></i><u></u></span>
-</div>
-<span class="aw-chip"><b>4</b> idle</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-asana-work"] {
 --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
 --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -104,6 +75,35 @@ transform:scale(0); transform-origin:center;
 [data-diagram="zw-asana-work"] .aw-idle { border-color:var(--zw-secondary); box-shadow:none; }
 }
 </style>
+
+<div class="dg" data-diagram="zw-asana-work" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+<div class="zw-stage dg-stage">
+<div class="zw-fit dg-fit">
+<div class="zw-scene">
+<div class="aw-panel">
+<span class="aw-eyebrow">Open project</span>
+<div class="aw-col aw-c1">
+<span class="aw-head">To do</span>
+<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
+<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
+<span class="aw-task"><i></i><u></u></span>
+<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
+</div>
+<div class="aw-col aw-c2">
+<span class="aw-head">Doing</span>
+<span class="aw-task"><i></i><u></u></span>
+<span class="aw-task aw-idle"><i></i><u class="aw-ghost"></u></span>
+</div>
+<div class="aw-col aw-c3">
+<span class="aw-head">Done</span>
+<span class="aw-task"><i></i><u></u></span>
+</div>
+<span class="aw-chip"><b>4</b> idle</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <script>
   // @ts-nocheck

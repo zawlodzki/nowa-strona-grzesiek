@@ -3,35 +3,7 @@
 import './diagram.css';
 ---
 
-<div class="dg" data-diagram="zw-audit-gap-k1" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
-<div class="zw-stage dg-stage">
-<div class="zw-fit dg-fit">
-<div class="zw-scene">
-<div class="ag-panel">
-<span class="ag-eyebrow ag-eyebrow--top">Declared</span>
-<div class="ag-card ag-card--top ag-t1"><b>Lead</b><i></i><i></i></div>
-<div class="ag-card ag-card--top ag-t2"><b>Qualified</b><i></i><i></i></div>
-<div class="ag-card ag-card--top ag-t3"><b>Proposal</b><i></i><i></i></div>
-<span class="ag-link ag-link--1"></span>
-<span class="ag-link ag-link--2"></span>
-<span class="ag-link ag-link--3"></span>
-<span class="ag-mark ag-mark--1">&ne;</span>
-<span class="ag-mark ag-mark--2 ag-mark--ok">
-<svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
-</span>
-<span class="ag-mark ag-mark--3">&ne;</span>
-<span class="ag-eyebrow ag-eyebrow--bottom">In system</span>
-<div class="ag-card ag-card--bot ag-b1"><b>Lead</b><i></i><em>?</em></div>
-<div class="ag-card ag-card--bot ag-b2"><b>Qualified</b><i></i><i></i></div>
-<div class="ag-card ag-card--bot ag-b3"><b>&mdash;</b><i></i><em>?</em></div>
-<span class="ag-chip"><b>2</b> gaps</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-audit-gap-k1"] {
 --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
 --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -120,6 +92,34 @@ transform:scale(0); transform-origin:center;
 [data-diagram="zw-audit-gap-k1"] .ag-mark, [data-diagram="zw-audit-gap-k1"] .ag-chip { transform:scale(1); }
 }
 </style>
+
+<div class="dg" data-diagram="zw-audit-gap-k1" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+<div class="zw-stage dg-stage">
+<div class="zw-fit dg-fit">
+<div class="zw-scene">
+<div class="ag-panel">
+<span class="ag-eyebrow ag-eyebrow--top">Declared</span>
+<div class="ag-card ag-card--top ag-t1"><b>Lead</b><i></i><i></i></div>
+<div class="ag-card ag-card--top ag-t2"><b>Qualified</b><i></i><i></i></div>
+<div class="ag-card ag-card--top ag-t3"><b>Proposal</b><i></i><i></i></div>
+<span class="ag-link ag-link--1"></span>
+<span class="ag-link ag-link--2"></span>
+<span class="ag-link ag-link--3"></span>
+<span class="ag-mark ag-mark--1">&ne;</span>
+<span class="ag-mark ag-mark--2 ag-mark--ok">
+<svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
+</span>
+<span class="ag-mark ag-mark--3">&ne;</span>
+<span class="ag-eyebrow ag-eyebrow--bottom">In system</span>
+<div class="ag-card ag-card--bot ag-b1"><b>Lead</b><i></i><em>?</em></div>
+<div class="ag-card ag-card--bot ag-b2"><b>Qualified</b><i></i><i></i></div>
+<div class="ag-card ag-card--bot ag-b3"><b>&mdash;</b><i></i><em>?</em></div>
+<span class="ag-chip"><b>2</b> gaps</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <script>
   // @ts-nocheck

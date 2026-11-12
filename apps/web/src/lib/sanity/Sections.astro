@@ -78,7 +78,7 @@ const postsOf = (kind: string | undefined) => site.posts
     case 'newsletterSignup':
       return <NewsletterSignup data={section} headingLevel={index === firstHeading ? headingLevel : 'h2'} />;
     case 'postList':
-      return <PostList data={section} posts={postsOf(section.kind)} />;
+      return <PostList data={section} posts={postsOf(section.kind)} eager={index < 2} />;
     case 'richText':
       return <RichText data={section} links={links} images={images} />;
   }

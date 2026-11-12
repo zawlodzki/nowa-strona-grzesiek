@@ -9,41 +9,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-auto-golive" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
-  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
-    <div class="ag-panel">
-      <div class="ag-switch">
-        <span class="ag-switch-txt">Live</span>
-        <span class="ag-switch-track"><span class="ag-switch-knob"></span></span>
-      </div>
-
-      <div class="ag-lane ag-lane--auto">
-        <span class="ag-lane-head">
-          <span class="ag-lane-ico"><svg viewBox="0 0 24 24"><path d="M13 3L4 14h6l-1 7 9-11h-6z"/></svg></span>
-          <b>Auto</b>
-        </span>
-        <span class="ag-row"><i></i><i></i><span class="ag-run"></span></span>
-        <span class="ag-row"><i></i><i></i><span class="ag-run"></span></span>
-      </div>
-
-      <div class="ag-lane ag-lane--team">
-        <span class="ag-lane-head">
-          <span class="ag-lane-ico ag-lane-ico--team"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5.6 19.4a6.4 6.4 0 0 1 12.8 0"/></svg></span>
-          <b>Team</b>
-        </span>
-        <span class="ag-row"><i></i><i></i><span class="ag-hand">You</span></span>
-        <span class="ag-row"><i></i><i></i><span class="ag-hand">You</span></span>
-      </div>
-
-      <span class="ag-live">
-        <span class="ag-live-dot"></span>Live
-        <i class="ag-live-ring"></i>
-      </span>
-    </div>
-  </div></div></div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-auto-golive"] {
     --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
     --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -145,6 +111,40 @@ import './diagram.css';
     [data-diagram="zw-auto-golive"] .ag-live { opacity:1; transform:translateX(-50%) translateY(0); }
   }
 </style>
+
+<div class="dg" data-diagram="zw-auto-golive" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
+    <div class="ag-panel">
+      <div class="ag-switch">
+        <span class="ag-switch-txt">Live</span>
+        <span class="ag-switch-track"><span class="ag-switch-knob"></span></span>
+      </div>
+
+      <div class="ag-lane ag-lane--auto">
+        <span class="ag-lane-head">
+          <span class="ag-lane-ico"><svg viewBox="0 0 24 24"><path d="M13 3L4 14h6l-1 7 9-11h-6z"/></svg></span>
+          <b>Auto</b>
+        </span>
+        <span class="ag-row"><i></i><i></i><span class="ag-run"></span></span>
+        <span class="ag-row"><i></i><i></i><span class="ag-run"></span></span>
+      </div>
+
+      <div class="ag-lane ag-lane--team">
+        <span class="ag-lane-head">
+          <span class="ag-lane-ico ag-lane-ico--team"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5.6 19.4a6.4 6.4 0 0 1 12.8 0"/></svg></span>
+          <b>Team</b>
+        </span>
+        <span class="ag-row"><i></i><i></i><span class="ag-hand">You</span></span>
+        <span class="ag-row"><i></i><i></i><span class="ag-hand">You</span></span>
+      </div>
+
+      <span class="ag-live">
+        <span class="ag-live-dot"></span>Live
+        <i class="ag-live-ring"></i>
+      </span>
+    </div>
+  </div></div></div>
+</div>
 
 <script>
   // @ts-nocheck

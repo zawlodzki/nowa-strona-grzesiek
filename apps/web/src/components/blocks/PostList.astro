@@ -14,8 +14,9 @@ export interface PostListItem {
   publishedAt?: string;
   image?: ResolvedImage;
 }
-interface Props { data: PostList; posts: PostListItem[]; id?: string; }
-const { data, posts, id } = Astro.props;
+// `eager` is set when the list sits near the top of the page, where its first thumbnail is the LCP image.
+interface Props { data: PostList; posts: PostListItem[]; id?: string; eager?: boolean; }
+const { data, posts, id, eager = false } = Astro.props;
 const limit = Math.min(Math.max(Math.trunc(data.limit ?? 3), 1), 12);
 const items = posts.filter((post) => post.title.trim() && post.href).slice(0, limit);
 const headingId = id ? `${id}-heading` : pageHeadingId(Astro.locals, data.heading ?? 'Ostatnie wpisy');
@@ -28,9 +29,9 @@ const headingId = id ? `${id}-heading` : pageHeadingId(Astro.locals, data.headin
     </header>
   )}
   <ul class="cards" role="list" aria-labelledby={data.heading ? headingId : undefined} aria-label={data.heading ? undefined : 'Ostatnie wpisy'}>
-    {items.map((post) => (
+    {items.map((post, index) => (
       <li class="card">
-        {post.image ? <img src={post.image.src} width={post.image.width} height={post.image.height} alt={post.image.alt || post.title} loading="lazy" decoding="async" /> : <span class="thumb-empty" />}
+        {post.image ? <img src={post.image.src} srcset={post.image.srcset} sizes="(width < 48rem) 100vw, 24rem" width={post.image.width} height={post.image.height} alt={post.image.alt || post.title} loading={eager && index === 0 ? 'eager' : 'lazy'} fetchpriority={eager && index === 0 ? 'high' : undefined} decoding="async" /> : <span class="thumb-empty" />}
         <h3 id={pageHeadingId(Astro.locals, post.title)} class="type-heading-xs"><a class="card-link" href={post.href}>{post.title}</a></h3>
         <span class="more with-icon type-body-s" aria-hidden="true">Czytaj więcej<Icon /></span>
       </li>

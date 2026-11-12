@@ -6,7 +6,8 @@ export default defineConfig({
   site: 'https://www.zawlodzki.pl',
   output: 'static',
   trailingSlash: 'never',
-  build: { format: 'file' },
+  // Inline CSS: about 15 KB gzipped per page, cheaper than four render-blocking requests on a first visit.
+  build: { format: 'file', inlineStylesheets: 'always' },
   integrations: [cmsRedirects(), {
     name: 'block-catalog',
     hooks: {

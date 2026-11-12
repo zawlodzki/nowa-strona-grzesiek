@@ -17,79 +17,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-ai-sales" aria-hidden="true" style="--dg-w: 760; --dg-h: 458.05;">
-  <div class="zw-stage dg-stage">
-    <div class="zw-fit dg-fit">
-      <div class="zw-scene">
-        <div class="zw-chat">
-
-          <div class="zw-chat-head">
-            <span class="zw-avatar">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                <path d="M12 4 L13.5 10.5 L20 12 L13.5 13.5 L12 20 L10.5 13.5 L4 12 L10.5 10.5 Z" fill="currentColor"/>
-              </svg>
-            </span>
-            <span class="zw-head-meta">
-              <span class="zw-head-name">Sales Agent</span>
-              <span class="zw-head-status"><i class="zw-dot"></i>Online</span>
-            </span>
-          </div>
-
-          <div class="zw-chat-body">
-
-            <div class="zw-msg zw-msg--agent" data-msg="brief">
-              <div class="zw-bubble zw-bubble--agent">
-                <span class="zw-eyebrow">Done today</span>
-                <ul class="zw-tasks">
-                  <li class="zw-task">
-                    <span class="zw-check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 l4 4 l9 -10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                    <span class="zw-task-label">Researched 12 leads</span>
-                  </li>
-                  <li class="zw-task">
-                    <span class="zw-check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 l4 4 l9 -10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                    <span class="zw-task-label">Drafted 4 follow-ups</span>
-                  </li>
-                  <li class="zw-task">
-                    <span class="zw-check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 l4 4 l9 -10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                    <span class="zw-task-label">Cleaned CRM</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="zw-msg zw-msg--user" data-msg="user">
-              <div class="zw-bubble zw-bubble--user">Draft offer for Acme</div>
-            </div>
-
-            <div class="zw-msg zw-msg--agent" data-msg="reply">
-              <div class="zw-bubble zw-bubble--agent zw-reply">
-                <div class="zw-typing" data-typing><i></i><i></i><i></i></div>
-                <div class="zw-done" data-done>
-                  <span class="zw-done-check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 l4 4 l9 -10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                  <span class="zw-done-meta">
-                    <span class="zw-done-title">Offer ready</span>
-                    <span class="zw-done-sub">Acme &middot; &euro;24,000</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="zw-chat-input">
-            <span class="zw-input-ph">Ask your agent&hellip;</span>
-            <span class="zw-send">
-              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 19 V6 M6 12 l6 -6 l6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style is:global>
+<style is:inline>
 /* ---- Shared family layer: tokens + responsive shell (identical across the set). ---- */
   [data-diagram="zw-ai-sales"] {
     --zw-primary:    #3A48CC;
@@ -258,6 +186,78 @@ import './diagram.css';
     [data-diagram="zw-ai-sales"] .zw-reply { border-color: var(--zw-success); background: rgba(82, 196, 26, .07); }
   }
 </style>
+
+<div class="dg" data-diagram="zw-ai-sales" aria-hidden="true" style="--dg-w: 760; --dg-h: 458.05;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="zw-chat">
+
+          <div class="zw-chat-head">
+            <span class="zw-avatar">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M12 4 L13.5 10.5 L20 12 L13.5 13.5 L12 20 L10.5 13.5 L4 12 L10.5 10.5 Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="zw-head-meta">
+              <span class="zw-head-name">Sales Agent</span>
+              <span class="zw-head-status"><i class="zw-dot"></i>Online</span>
+            </span>
+          </div>
+
+          <div class="zw-chat-body">
+
+            <div class="zw-msg zw-msg--agent" data-msg="brief">
+              <div class="zw-bubble zw-bubble--agent">
+                <span class="zw-eyebrow">Done today</span>
+                <ul class="zw-tasks">
+                  <li class="zw-task">
+                    <span class="zw-check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 l4 4 l9 -10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="zw-task-label">Researched 12 leads</span>
+                  </li>
+                  <li class="zw-task">
+                    <span class="zw-check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 l4 4 l9 -10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="zw-task-label">Drafted 4 follow-ups</span>
+                  </li>
+                  <li class="zw-task">
+                    <span class="zw-check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 l4 4 l9 -10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="zw-task-label">Cleaned CRM</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="zw-msg zw-msg--user" data-msg="user">
+              <div class="zw-bubble zw-bubble--user">Draft offer for Acme</div>
+            </div>
+
+            <div class="zw-msg zw-msg--agent" data-msg="reply">
+              <div class="zw-bubble zw-bubble--agent zw-reply">
+                <div class="zw-typing" data-typing><i></i><i></i><i></i></div>
+                <div class="zw-done" data-done>
+                  <span class="zw-done-check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 l4 4 l9 -10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <span class="zw-done-meta">
+                    <span class="zw-done-title">Offer ready</span>
+                    <span class="zw-done-sub">Acme &middot; &euro;24,000</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="zw-chat-input">
+            <span class="zw-input-ph">Ask your agent&hellip;</span>
+            <span class="zw-send">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 19 V6 M6 12 l6 -6 l6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   // @ts-nocheck

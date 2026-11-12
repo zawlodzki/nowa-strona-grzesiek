@@ -6,6 +6,9 @@ import { gzipSync } from 'node:zlib';
 
 // 2026-11-12 production dataset: CSS 37,646 B, JS 7,934 B, each file gzipped
 // separately and summed. Rounded limits allow approximately 10% growth.
+// CSS is measured per page since T76 inlined it: the heaviest page's linked stylesheets plus
+// its inline <style> blocks, each gzipped separately. Before T76 every page linked every CSS
+// file, so the same 42,000 B limit applies.
 export const BUDGETS = { css: 42_000, js: 8_800 };
 const ORIGIN = 'https://www.zawlodzki.pl';
 const ROOT = fileURLToPath(new URL('../../', import.meta.url));
@@ -41,6 +44,8 @@ export function checkDist(dist, { urlMap = join(ROOT, 'migration/contracts/url-m
   const files = new Map(walk(dist).map((f) => [relative(dist, f).replaceAll('\\', '/'), f]));
   const pages = new Map([...files].filter(([f]) => f.endsWith('.html')).map(([f, p]) => [route(f), p]));
   const errors = [], reports = [], sizes = { css: 0, js: 0 };
+  const gz = new Map();
+  const gzip = (text) => gz.get(text) ?? gz.set(text, gzipSync(text).length).get(text);
   const fail = (path, message) => errors.push(`${path}: ${message}`);
   function local(url) {
     try {
@@ -55,6 +60,13 @@ export function checkDist(dist, { urlMap = join(ROOT, 'migration/contracts/url-m
     const html = readFileSync(file, 'utf8').replace(/<!--[\s\S]*?-->/g, '');
     const structure = html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '');
     const links = [...structure.matchAll(/<link\b[^>]*>/gi)].map((m) => attrs(m[0]));
+    let css = 0;
+    for (const m of html.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style\s*>/gi)) css += gzip(m[1]);
+    for (const link of links.filter((a) => a.rel?.toLowerCase() === 'stylesheet' && a.href?.startsWith('/'))) {
+      const sheet = files.get(link.href.slice(1).split(/[?#]/)[0]);
+      if (sheet) css += gzip(readFileSync(sheet, 'utf8'));
+    }
+    if (css > sizes.css) { sizes.css = css; sizes.cssPage = path; }
     if ([...structure.matchAll(/<h1\b[^>]*>/gi)].length !== 1) fail(path, 'expected exactly one h1');
     const titles = [...structure.matchAll(/<title\b[^>]*>([\s\S]*?)<\/title>/gi)];
     if (titles.length !== 1 || !titles[0][1].trim()) fail(path, 'expected non-empty title');
@@ -109,9 +121,7 @@ export function checkDist(dist, { urlMap = join(ROOT, 'migration/contracts/url-m
     if (['/', '/blog', '/404'].includes(row.new_path_pl)) fail(row.new_path_pl, 'static keep route missing');
     else reports.push(`Unpublished-content keep route absent: ${row.new_path_pl}`);
   }
-  for (const [file, full] of files) {
-    for (const ext of ['css', 'js']) if (file.endsWith('.' + ext)) sizes[ext] += gzipSync(readFileSync(full)).length;
-  }
+  for (const [file, full] of files) if (file.endsWith('.js')) sizes.js += gzipSync(readFileSync(full)).length;
   for (const ext of ['css', 'js']) if (sizes[ext] > budgets[ext]) fail(ext, `gzip budget exceeded: ${sizes[ext]} > ${budgets[ext]} bytes`);
   if (!pages.size) fail(dist, 'no HTML pages');
   return { errors, reports, sizes, pages: pages.size };
@@ -121,7 +131,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   try {
     const result = checkDist(resolve(process.argv[2] || join(ROOT, 'apps/web/dist')));
     for (const report of result.reports) console.log(report);
-    console.log(`Checked ${result.pages} HTML pages; gzip CSS ${result.sizes.css}/${BUDGETS.css} B; JS ${result.sizes.js}/${BUDGETS.js} B`);
+    console.log(`Checked ${result.pages} HTML pages; gzip CSS ${result.sizes.css}/${BUDGETS.css} B (heaviest page ${result.sizes.cssPage ?? '-'}); JS ${result.sizes.js}/${BUDGETS.js} B`);
     for (const error of result.errors) console.error(error);
     console.log(result.errors.length ? `FAIL: ${result.errors.length} violation(s)` : 'PASS');
     process.exitCode = result.errors.length ? 1 : 0;

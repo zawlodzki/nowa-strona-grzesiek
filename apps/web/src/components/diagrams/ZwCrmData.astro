@@ -8,33 +8,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-crm-data" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
-  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
-    <div class="cd-panel">
-      <span class="cd-eyebrow">Data migration</span>
-      <div class="cd-source cd-source--sheet"><span class="cd-icon">X</span><b>Sheets</b></div>
-      <div class="cd-source cd-source--legacy"><span class="cd-icon">C</span><b>Legacy</b></div>
-      <div class="cd-filter">
-        <svg viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
-        <span>Clean</span>
-      </div>
-      <div class="cd-target">
-        <div class="cd-target-head"><span>CRM</span><span class="cd-check">
-          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
-        </span></div>
-        <div class="cd-field"><i></i><span>Name</span></div>
-        <div class="cd-field"><i></i><span>Company</span></div>
-        <div class="cd-field"><i></i><span>Value</span></div>
-      </div>
-      <span class="cd-path cd-path--a"></span><span class="cd-path cd-path--b"></span>
-      <div class="cd-record cd-record--1"><i></i><i></i></div>
-      <div class="cd-record cd-record--2"><i></i><i></i></div>
-      <div class="cd-record cd-record--3"><i></i><i></i></div>
-    </div>
-  </div></div></div>
-</div>
-
-<style is:global>
+<style is:inline>
 [data-diagram="zw-crm-data"] {
     --zw-primary:#3A48CC; --zw-primary-10:#EBEDFA; --zw-primary-30:#8991E0;
     --zw-secondary:#0ACFFE; --zw-success:#52C41A; --zw-bg-soft:#F9FAFB;
@@ -138,6 +112,32 @@ import './diagram.css';
     [data-diagram="zw-crm-data"] .cd-check { transform:scale(1); }
   }
 </style>
+
+<div class="dg" data-diagram="zw-crm-data" aria-hidden="true" style="--dg-w: 400; --dg-h: 220;">
+  <div class="zw-stage dg-stage"><div class="zw-fit dg-fit"><div class="zw-scene">
+    <div class="cd-panel">
+      <span class="cd-eyebrow">Data migration</span>
+      <div class="cd-source cd-source--sheet"><span class="cd-icon">X</span><b>Sheets</b></div>
+      <div class="cd-source cd-source--legacy"><span class="cd-icon">C</span><b>Legacy</b></div>
+      <div class="cd-filter">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+        <span>Clean</span>
+      </div>
+      <div class="cd-target">
+        <div class="cd-target-head"><span>CRM</span><span class="cd-check">
+          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></svg>
+        </span></div>
+        <div class="cd-field"><i></i><span>Name</span></div>
+        <div class="cd-field"><i></i><span>Company</span></div>
+        <div class="cd-field"><i></i><span>Value</span></div>
+      </div>
+      <span class="cd-path cd-path--a"></span><span class="cd-path cd-path--b"></span>
+      <div class="cd-record cd-record--1"><i></i><i></i></div>
+      <div class="cd-record cd-record--2"><i></i><i></i></div>
+      <div class="cd-record cd-record--3"><i></i><i></i></div>
+    </div>
+  </div></div></div>
+</div>
 
 <script>
   // @ts-nocheck

@@ -11,86 +11,7 @@ import './diagram.css';
 */
 ---
 
-<div class="dg" data-diagram="zw-pipedrive-problem" aria-hidden="true" style="--dg-w: 760; --dg-h: 364;">
-  <div class="zw-stage dg-stage">
-    <div class="zw-fit dg-fit">
-      <div class="zw-scene">
-        <div class="pp-board">
-
-          <div class="pp-pipe">
-            <div class="pp-lane">
-              <div class="pp-lane-head"><span class="pp-eyebrow">Lead</span><span class="pp-chip">0</span></div>
-              <div class="pp-empty"></div>
-            </div>
-            <div class="pp-lane">
-              <div class="pp-lane-head"><span class="pp-eyebrow">Qualified</span><span class="pp-chip">0</span></div>
-              <div class="pp-empty"></div>
-            </div>
-            <div class="pp-lane">
-              <div class="pp-lane-head"><span class="pp-eyebrow">Proposal</span><span class="pp-chip">0</span></div>
-              <div class="pp-empty"></div>
-            </div>
-          </div>
-
-          <svg class="pp-trail" viewBox="0 0 760 340" width="760" height="340" fill="none" aria-hidden="true">
-            <path class="pp-trail-line" d="" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 7" stroke-dashoffset="1" pathLength="1"/>
-          </svg>
-
-          <div class="pp-reality">
-            <div class="pp-chan pp-chan--email">
-              <div class="pp-chan-head">
-                <span class="pp-chan-ic" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 6 8-6"/></svg>
-                </span>
-                <span class="pp-eyebrow">Email</span>
-              </div>
-              <div class="pp-chan-body"></div>
-            </div>
-            <div class="pp-chan pp-chan--note">
-              <div class="pp-chan-head">
-                <span class="pp-chan-ic" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/><path d="M9 12h6M9 16h4"/></svg>
-                </span>
-                <span class="pp-eyebrow">Note</span>
-              </div>
-              <div class="pp-chan-body"><div class="pp-frag"><span></span><span></span></div><div class="pp-frag"><span></span><span></span></div></div>
-            </div>
-            <div class="pp-chan pp-chan--chat">
-              <div class="pp-chan-head">
-                <span class="pp-chan-ic" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-4 4z"/><path d="M8 10h8M8 13h5"/></svg>
-                </span>
-                <span class="pp-eyebrow">Chat</span>
-              </div>
-              <div class="pp-chan-body"><div class="pp-frag"><span></span><span></span></div><div class="pp-frag"><span></span><span></span></div></div>
-            </div>
-          </div>
-
-          <div class="pp-report">
-            <span class="pp-eyebrow pp-report-lbl">Reports</span>
-            <span class="pp-report-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-            <span class="pp-report-warn" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
-            </span>
-          </div>
-
-          <div class="pp-deal" aria-hidden="true">
-            <div class="pp-deal-top">
-              <span class="pp-avatar">A</span>
-              <span class="pp-deal-name">Acme</span>
-              <span class="pp-miss" aria-hidden="true">?</span>
-            </div>
-            <div class="pp-deal-value">&euro;24,000</div>
-            <div class="pp-deal-foot"><span class="pp-tag">New deal</span></div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style is:global>
+<style is:inline>
 /* ---- Shared family layer: tokens + responsive shell (verbatim). ---- */
   [data-diagram="zw-pipedrive-problem"] {
     --zw-primary:    #3A48CC;
@@ -289,6 +210,85 @@ import './diagram.css';
     [data-diagram="zw-pipedrive-problem"] .pp-miss { transform: scale(1); opacity: 1; }
   }
 </style>
+
+<div class="dg" data-diagram="zw-pipedrive-problem" aria-hidden="true" style="--dg-w: 760; --dg-h: 364;">
+  <div class="zw-stage dg-stage">
+    <div class="zw-fit dg-fit">
+      <div class="zw-scene">
+        <div class="pp-board">
+
+          <div class="pp-pipe">
+            <div class="pp-lane">
+              <div class="pp-lane-head"><span class="pp-eyebrow">Lead</span><span class="pp-chip">0</span></div>
+              <div class="pp-empty"></div>
+            </div>
+            <div class="pp-lane">
+              <div class="pp-lane-head"><span class="pp-eyebrow">Qualified</span><span class="pp-chip">0</span></div>
+              <div class="pp-empty"></div>
+            </div>
+            <div class="pp-lane">
+              <div class="pp-lane-head"><span class="pp-eyebrow">Proposal</span><span class="pp-chip">0</span></div>
+              <div class="pp-empty"></div>
+            </div>
+          </div>
+
+          <svg class="pp-trail" viewBox="0 0 760 340" width="760" height="340" fill="none" aria-hidden="true">
+            <path class="pp-trail-line" d="" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 7" stroke-dashoffset="1" pathLength="1"/>
+          </svg>
+
+          <div class="pp-reality">
+            <div class="pp-chan pp-chan--email">
+              <div class="pp-chan-head">
+                <span class="pp-chan-ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 6 8-6"/></svg>
+                </span>
+                <span class="pp-eyebrow">Email</span>
+              </div>
+              <div class="pp-chan-body"></div>
+            </div>
+            <div class="pp-chan pp-chan--note">
+              <div class="pp-chan-head">
+                <span class="pp-chan-ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/><path d="M9 12h6M9 16h4"/></svg>
+                </span>
+                <span class="pp-eyebrow">Note</span>
+              </div>
+              <div class="pp-chan-body"><div class="pp-frag"><span></span><span></span></div><div class="pp-frag"><span></span><span></span></div></div>
+            </div>
+            <div class="pp-chan pp-chan--chat">
+              <div class="pp-chan-head">
+                <span class="pp-chan-ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-4 4z"/><path d="M8 10h8M8 13h5"/></svg>
+                </span>
+                <span class="pp-eyebrow">Chat</span>
+              </div>
+              <div class="pp-chan-body"><div class="pp-frag"><span></span><span></span></div><div class="pp-frag"><span></span><span></span></div></div>
+            </div>
+          </div>
+
+          <div class="pp-report">
+            <span class="pp-eyebrow pp-report-lbl">Reports</span>
+            <span class="pp-report-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <span class="pp-report-warn" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
+            </span>
+          </div>
+
+          <div class="pp-deal" aria-hidden="true">
+            <div class="pp-deal-top">
+              <span class="pp-avatar">A</span>
+              <span class="pp-deal-name">Acme</span>
+              <span class="pp-miss" aria-hidden="true">?</span>
+            </div>
+            <div class="pp-deal-value">&euro;24,000</div>
+            <div class="pp-deal-foot"><span class="pp-tag">New deal</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   // @ts-nocheck

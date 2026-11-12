@@ -40,15 +40,15 @@ const byline = (item: ResolvedTestimonial) => [item.role, item.company].filter(B
             <li>
               <figure class:list={['quote', { short: quotes.length === 1 && (item.quote?.length ?? 0) <= 180 }]}>
                 {wall && item.image
-                  ? <img src={item.image.src} width={item.image.width} height={item.image.height} alt={item.image.alt || `Rekomendacja: ${item.name}`} loading="lazy" decoding="async" />
+                  ? <img src={item.image.src} srcset={item.image.srcset} sizes="(width < 48rem) 100vw, 33vw" width={item.image.width} height={item.image.height} alt={item.image.alt || `Rekomendacja: ${item.name}`} loading="lazy" decoding="async" />
                   : (
                     <>
-                      {item.image && <img class="logo" src={item.image.src} width={item.image.width} height={item.image.height} alt={item.image.alt ?? ''} loading="lazy" decoding="async" />}
+                      {item.image && <img class="logo" src={item.image.src} srcset={item.image.srcset} sizes="10rem" width={item.image.width} height={item.image.height} alt={item.image.alt ?? ''} loading="lazy" decoding="async" />}
                       <blockquote>{quoteText(item.quote).split(/\n{2,}/).map((paragraph) => <p>{paragraph}</p>)}</blockquote>
                     </>
                   )}
                 <figcaption>
-                  {item.authorImage && <img class="author-image" src={item.authorImage.src} width={item.authorImage.width} height={item.authorImage.height} alt={item.authorImage.alt} loading="lazy" decoding="async" />}
+                  {item.authorImage && <img class="author-image" src={item.authorImage.src} srcset={item.authorImage.srcset} sizes="3.5rem" width={item.authorImage.width} height={item.authorImage.height} alt={item.authorImage.alt} loading="lazy" decoding="async" />}
                   <div class="attribution">
                   <span class="name">{href ? <a href={href} rel="noopener">{item.name}</a> : item.name}</span>
                   {byline(item) && <span class="role type-body-s">{byline(item)}</span>}
