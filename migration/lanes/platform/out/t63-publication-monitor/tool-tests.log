@@ -1,0 +1,22 @@
+✔ canonical sitemap and page links are fetched only from the target origin (81.529663ms)
+✔ key response contains the stable configured key (1.68164ms)
+✔ built sitemap fixture selects rebuilt pages; dry run sends nothing (4.847458ms)
+✔ all unsafe environments refuse before HTTP (0.786382ms)
+✔ mock records POST and failures propagate without retry (14.33654ms)
+✔ caught up, empty dataset, grace period and exact threshold are ok (0.737589ms)
+✔ stale content alerts even if published seconds after the previous deploy (0.141043ms)
+✔ incident remains stable across edits until a new deployment (0.162168ms)
+✔ invalid API timestamps and future values cannot report ok (0.121501ms)
+✔ dry run prints the message and never calls the webhook (0.833799ms)
+✔ send posts only timestamps, incident and fixed worker name; fails on rejection (0.557254ms)
+✔ monitor reads public Sanity without auth and uses first active deployment (0.396337ms)
+✔ API failures and missing deployments fail closed (0.23771ms)
+✔ CLI dry run succeeds without webhook configuration (26.589188ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 121.853471

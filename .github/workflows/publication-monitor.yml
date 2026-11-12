@@ -1,0 +1,60 @@
+name: Publication monitor
+
+on:
+  schedule:
+    - cron: '17,47 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Print the alert without sending it
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publication-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    # Activation is a separate human-gated configuration step after merge.
+    if: vars.PUBLICATION_MONITOR_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - id: monitor
+        run: |
+          node migration/tools/publication-alert.mjs monitor > "$RUNNER_TEMP/publication-report.json"
+          cat "$RUNNER_TEMP/publication-report.json"
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.PUBLICATION_MONITOR_CF_TOKEN }}
+      - uses: actions/cache/restore@v4
+        if: steps.monitor.outputs.status == 'alert'
+        id: incident
+        with:
+          path: ${{ runner.temp }}/publication-incident
+          key: publication-monitor-v1-${{ steps.monitor.outputs.incident }}
+      - if: steps.monitor.outputs.status == 'alert' && (inputs.dry_run || steps.incident.outputs.cache-hit != 'true')
+        run: |
+          if [ "$DRY_RUN" = true ]; then
+            node migration/tools/publication-alert.mjs send "$RUNNER_TEMP/publication-report.json" --dry-run
+          else
+            node migration/tools/publication-alert.mjs send "$RUNNER_TEMP/publication-report.json"
+            mkdir -p "$RUNNER_TEMP/publication-incident"
+            touch "$RUNNER_TEMP/publication-incident/sent"
+          fi
+        env:
+          DRY_RUN: ${{ inputs.dry_run == true }}
+          PUBLICATION_ALERT_WEBHOOK: ${{ secrets.PUBLICATION_ALERT_WEBHOOK }}
+      - uses: actions/cache/save@v4
+        if: steps.monitor.outputs.status == 'alert' && !inputs.dry_run && steps.incident.outputs.cache-hit != 'true'
+        with:
+          path: ${{ runner.temp }}/publication-incident
+          key: publication-monitor-v1-${{ steps.monitor.outputs.incident }}
