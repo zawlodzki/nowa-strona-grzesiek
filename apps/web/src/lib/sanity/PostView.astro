@@ -139,7 +139,7 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
     .recommendations { grid-column: 2; }
     .sticky { position: sticky; inset-block-start: 7rem; padding: var(--space-3xs); }
   }
-  .sticky[data-page-scroll] { position: static; }
+  .recommendations .sticky[data-page-scroll] { position: static; }
   @media (min-width: 80rem) {
     .post-content { font-size: clamp(1.125rem, 0.125rem + 1.25vw, 1.25rem); }
     .post-layout { grid-template-columns: 10rem minmax(0, 1fr) 14rem; }
@@ -154,8 +154,8 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
 </style>
 
 <script>
-  // A tall side panel belongs to the page scroll, never an inner scroller.
-  const panels = [...document.querySelectorAll<HTMLElement>('.post-layout .sticky')];
+  // Tall recommendations use page scroll; article navigation stays sticky.
+  const panels = [...document.querySelectorAll<HTMLElement>('.post-layout .recommendations .sticky')];
   const fitPanels = () => {
     for (const panel of panels) {
       const offset = parseFloat(getComputedStyle(panel).insetBlockStart) || 0;
