@@ -1,0 +1,28 @@
+# pnpm --filter web e2e, local, 2026-11-12T18:56:29Z, rev f42c70c + working tree
+[WebServer] mock n8n listening on http://127.0.0.1:8794/webhook/mock
+[WebServer] ▲ [WARNING] Missing required secrets: N8N_FORM_WEBHOOK, TURNSTILE_SECRET_KEY. Add them to .dev.vars, .env, or set as environment variables.
+
+Running 20 tests using 2 workers
+
+  ✓   2 [chromium] › e2e/consent.spec.ts:14:1 › first visit: Consent Mode v2 denies analytics and ads before the loader, and only GTM is requested (1.6s)
+  ✓   1 [chromium] › e2e/consent.spec.ts:39:1 › rejecting optional consent keeps analytics and ads denied and requests nothing new (1.7s)
+  ✓   4 [chromium] › e2e/pages.spec.ts:42:3 › home: no axe violation outside the recorded baseline (2.1s)
+  ✓   3 [chromium] › e2e/forms.spec.ts:24:3 › main-contact form delivers the Webflow envelope to n8n and lands on the thank-you page (2.7s)
+  ✓   5 [chromium] › e2e/pages.spec.ts:48:3 › home: no horizontal overflow at 320 px (1.5s)
+  ✓   6 [chromium] › e2e/forms.spec.ts:44:5 › main-contact form with an empty e-mail posts nothing (1.9s)
+  ✓   7 [chromium] › e2e/pages.spec.ts:42:3 › service: no axe violation outside the recorded baseline (1.9s)
+  ✓   8 [chromium] › e2e/forms.spec.ts:44:5 › main-contact form with an invalid e-mail posts nothing (2.0s)
+  ✓   9 [chromium] › e2e/pages.spec.ts:48:3 › service: no horizontal overflow at 320 px (1.4s)
+  ✓  11 [chromium] › e2e/pages.spec.ts:42:3 › blog: no axe violation outside the recorded baseline (1.8s)
+  ✓  10 [chromium] › e2e/forms.spec.ts:24:3 › newsletter form delivers the Webflow envelope to n8n and lands on the thank-you page (2.4s)
+  ✓  12 [chromium] › e2e/pages.spec.ts:48:3 › blog: no horizontal overflow at 320 px (1.4s)
+  ✓  13 [chromium] › e2e/forms.spec.ts:44:5 › newsletter form with an empty e-mail posts nothing (2.0s)
+  ✓  14 [chromium] › e2e/pages.spec.ts:42:3 › post: no axe violation outside the recorded baseline (1.9s)
+  ✓  15 [chromium] › e2e/forms.spec.ts:44:5 › newsletter form with an invalid e-mail posts nothing (1.9s)
+  ✓  16 [chromium] › e2e/pages.spec.ts:48:3 › post: no horizontal overflow at 320 px (1.4s)
+  ✓  17 [chromium] › e2e/forms.spec.ts:63:1 › the outbound guard stops and reports a request to flows.zawlodzki.com (626ms)
+  ✓  19 [chromium] › e2e/pages.spec.ts:48:3 › contact: no horizontal overflow at 320 px (1.4s)
+  ✓  18 [chromium] › e2e/pages.spec.ts:42:3 › contact: no axe violation outside the recorded baseline (1.8s)
+  ✓  20 [chromium] › e2e/pages.spec.ts:57:1 › consent banner: axe violations stay within the recorded baseline (1.8s)
+
+  20 passed (19.8s)
