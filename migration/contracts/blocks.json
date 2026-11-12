@@ -86,7 +86,7 @@
       "type": "contactForm",
       "component": "ContactForm",
       "purpose": "Lead form posting to /api/form (Worker → n8n), with 32 attribution fields",
-      "fields": {"variant": "'landing'|'full'|'channels'", "tagline": "string?", "heading": "string?", "intro": "text? (newlines kept)", "showDetails": "boolean", "calendar": "{heading, text?, link}? (full only)", "consultation": "{heading, body:text}? (full only)", "channels": "{tagline?, heading?, groups: {title, note?, items: {kind:'linkedin'|'github'|'x'|'youtube'|'instagram'|'email'|'phone'|'signal'|'whatsapp', label, href:https|mailto|tel}[]}[]}? (full or channels; replaces the person-based details column)", "formId": "'landing-contact'|'main-contact'? (required unless channels)"},
+      "fields": {"variant": "'landing'|'full'|'channels'", "tagline": "string?", "heading": "string?", "intro": "text? (newlines kept)", "showDetails": "boolean", "calendar": "{heading, text?, link}? (full only)", "consultation": "{heading, body:text}? (full only)", "channels": "{tagline?, heading?, groups: {title, note?, items: {kind:'linkedin'|'github'|'x'|'youtube'|'instagram'|'email'|'phone'|'signal'|'whatsapp', label, href:https|mailto|tel}[]}[]}? (full or channels; replaces the person-based details column)", "formId": "'landing-contact'|'main-contact'? (required unless channels)", "copy": "{formHeading?, emailLabel?, emailPlaceholder?, requiredMarker?, phoneLabel?, phonePlaceholder?, messageLabel?, messagePlaceholder?, privacyNote?:text, privacyLink?:link, newsletterLabel?:text, submitLabel?, waitLabel?}? (empty field = code default; not for channels)"},
       "jsonld": "none (ContactPage comes from page type)",
       "match": [{"component": "kontakt zawlodzki"}, {"classes": "Contact Section"}, {"component": "Contact Section Details"}]
     },
@@ -94,7 +94,7 @@
       "type": "newsletterSignup",
       "component": "NewsletterSignup",
       "purpose": "Newsletter form",
-      "fields": {"body": "text?"},
+      "fields": {"body": "text?", "copy": "{heading?, headingAccent?, emailLabel?, emailPlaceholder?, submitLabel?, waitLabel?, legal?:text, legalLinks?:link[]}? (empty field = code default)"},
       "jsonld": "none",
       "match": [{"component": "newsletter zawlodzki"}]
     },
