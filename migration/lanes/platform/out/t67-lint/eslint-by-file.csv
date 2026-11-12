@@ -57,6 +57,7 @@ apps/web/src/layouts/Base.astro,prefer-rest-params=1
 apps/web/src/preview/session.ts,no-control-regex=2
 apps/web/src/worker/cms-redirects.mjs,no-useless-escape=1 @typescript-eslint/no-unused-expressions=1
 apps/web/src/worker/redirects.gen.mjs,@typescript-eslint/no-unused-expressions=4
+migration/tools/backup-sanity.mjs,preserve-caught-error=2
 migration/tools/crawl.mjs,@typescript-eslint/no-unused-vars=1
 migration/tools/design-parity/capture.mjs,no-useless-assignment=2
 migration/tools/design-parity/parity.mjs,preserve-caught-error=1

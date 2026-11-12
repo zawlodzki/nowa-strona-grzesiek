@@ -2,7 +2,7 @@ $ pnpm format:check
 [warn] migration/tools/publication-alert.mjs
 [warn] migration/tools/publication-alert.test.mjs
 [warn] migration/tools/redirects.mjs
-[warn] Code style issues found in 297 files. Run Prettier with --write to fix.
+[warn] Code style issues found in 299 files. Run Prettier with --write to fix.
 [ELIFECYCLE] Command failed with exit code 1.
 exit=1
 (full list: prettier-unformatted.txt)

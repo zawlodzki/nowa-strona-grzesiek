@@ -266,6 +266,8 @@ migration/tasks/T69.md
 migration/tasks/T70.md
 migration/tasks/T71.md
 migration/tasks/T72.md
+migration/tools/backup-sanity.mjs
+migration/tools/backup-sanity.test.mjs
 migration/tools/check-dist.mjs
 migration/tools/check-dist.test.mjs
 migration/tools/check-form-fields.mjs
