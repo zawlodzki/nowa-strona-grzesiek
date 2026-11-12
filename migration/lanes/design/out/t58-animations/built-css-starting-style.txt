@@ -1,0 +1,11 @@
+RouteView.B37ZnVZF.css
+@starting-style{[data-astro-cid-sktffk46][popover]:popover-open{opacity:0}}@media (prefers-reduced-motion:no-preference){[data-astro-cid-sktffk46][popover]{transition:opacity var(--motion-duration-fast) var(--motion-easing-out), scale var(--motion-duration-fast) var(--motion-easing-out), overlay var(--motion-duration-fast) allow
+
+RouteView.B37ZnVZF.css
+@starting-style{[data-astro-cid-sktffk46][popover]:popover-open{opacity:0;scale:.97}}}.share-heading[data-astro-cid-sktffk46]{justify-content:space-between;align-items:center;gap:var(--space-xs);margin-block-end:var(--space-s);display:flex}.share-close[data-astro-cid-sktffk46]{block-size:44px;inline-size:44px;padding:var(--space
+
+Base.C04NzeOu.css
+@starting-style{.nav-toggle[data-astro-cid-jr7posx5][aria-expanded=true]+.site-nav[data-astro-cid-jr7posx5]{opacity:0}}@media (prefers-reduced-motion:no-preference){.site-nav[data-astro-cid-jr7posx5]{transition:opacity var(--motion-duration-fast) var(--motion-easing-out), translate var(--motion-duration-fast) var(--motion-easing
+
+Base.C04NzeOu.css
+@starting-style{.nav-toggle[data-astro-cid-jr7posx5][aria-expanded=true]+.site-nav[data-astro-cid-jr7posx5]{opacity:0;translate:0 -8px}}}.site-nav[data-astro-cid-jr7posx5] ul[data-astro-cid-jr7posx5]{align-items:stretch;gap:var(--space-3xs);flex-direction:column;inline-size:100%;margin-block:0;margin-inline:0;padding-block:0;pad

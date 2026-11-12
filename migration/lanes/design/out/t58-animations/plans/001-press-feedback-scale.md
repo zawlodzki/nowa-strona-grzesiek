@@ -1,6 +1,6 @@
 # 001 — Add press feedback to pill buttons
 
-- **Status**: TODO
+- **Status**: DONE — Chromium live proof at 390px and 1440px
 - **Commit**: 2522982
 - **Severity**: MEDIUM
 - **Category**: Physicality & origin (press feedback), Cohesion & tokens
@@ -99,3 +99,5 @@ Token values, for reference (`apps/web/src/styles/tokens.css:139-143`): `--motio
   - A quick tap still shows the shrink. If it is invisible, the transition is too slow; if it looks like a jump, the transition is missing.
   - In DevTools Rendering, emulate `prefers-reduced-motion: reduce`: the button still snaps to `0.97` on press, without easing.
 - **Done when**: all four pill types shrink on press, the text variant does not, and the three commands pass.
+
+Execution evidence and compatibility limits: [verification notes](../verification-notes.md).

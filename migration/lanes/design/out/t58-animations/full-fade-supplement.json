@@ -1,0 +1,689 @@
+[
+  {
+    "width": 390,
+    "name": "tabs-load",
+    "events": [
+      {
+        "property": "opacity",
+        "target": "type-tagline panel-tagline"
+      },
+      {
+        "property": "opacity",
+        "target": "pt prose flow"
+      },
+      {
+        "property": "opacity",
+        "target": "positive"
+      },
+      {
+        "property": "opacity",
+        "target": "negative"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "name": "tabs-resize",
+    "events": []
+  },
+  {
+    "width": 390,
+    "name": "nav-overlap",
+    "value": {
+      "panelTop": 58.31718063354492,
+      "logoBottom": 52
+    }
+  },
+  {
+    "width": 390,
+    "name": "nav-close-hidden",
+    "display": "none"
+  },
+  {
+    "width": 390,
+    "name": "reduce-light-busy",
+    "value": {
+      "opacity": "0.8",
+      "animations": [],
+      "duration": "0s"
+    }
+  },
+  {
+    "width": 390,
+    "name": "reduce-dark-busy",
+    "value": {
+      "opacity": "0.8",
+      "animations": [],
+      "duration": "0s"
+    }
+  },
+  {
+    "width": 390,
+    "name": "no-js-nav",
+    "display": "none"
+  },
+  {
+    "width": 1440,
+    "name": "tabs-load",
+    "events": [
+      {
+        "property": "opacity",
+        "target": "pt prose flow"
+      },
+      {
+        "property": "opacity",
+        "target": "negative"
+      },
+      {
+        "property": "opacity",
+        "target": "positive"
+      },
+      {
+        "property": "opacity",
+        "target": "pt prose flow"
+      },
+      {
+        "property": "opacity",
+        "target": "positive"
+      },
+      {
+        "property": "opacity",
+        "target": "positive"
+      },
+      {
+        "property": "opacity",
+        "target": "negative"
+      },
+      {
+        "property": "opacity",
+        "target": "positive"
+      },
+      {
+        "property": "opacity",
+        "target": "negative"
+      },
+      {
+        "property": "opacity",
+        "target": "type-tagline panel-tagline"
+      },
+      {
+        "property": "opacity",
+        "target": "positive"
+      },
+      {
+        "property": "opacity",
+        "target": "negative"
+      },
+      {
+        "property": "opacity",
+        "target": "positive"
+      },
+      {
+        "property": "opacity",
+        "target": "type-tagline panel-tagline"
+      },
+      {
+        "property": "opacity",
+        "target": "type-tagline panel-tagline"
+      },
+      {
+        "property": "opacity",
+        "target": "negative"
+      },
+      {
+        "property": "opacity",
+        "target": "type-tagline panel-tagline"
+      },
+      {
+        "property": "opacity",
+        "target": "pt prose flow"
+      },
+      {
+        "property": "opacity",
+        "target": "type-tagline panel-tagline"
+      },
+      {
+        "property": "opacity",
+        "target": "positive"
+      },
+      {
+        "property": "opacity",
+        "target": "pt prose flow"
+      },
+      {
+        "property": "opacity",
+        "target": "pt prose flow"
+      },
+      {
+        "property": "opacity",
+        "target": "type-tagline panel-tagline"
+      },
+      {
+        "property": "opacity",
+        "target": "positive"
+      },
+      {
+        "property": "opacity",
+        "target": "negative"
+      },
+      {
+        "property": "opacity",
+        "target": "type-tagline panel-tagline"
+      },
+      {
+        "property": "opacity",
+        "target": "pt prose flow"
+      },
+      {
+        "property": "opacity",
+        "target": "type-tagline panel-tagline"
+      },
+      {
+        "property": "opacity",
+        "target": "negative"
+      },
+      {
+        "property": "opacity",
+        "target": "pt prose flow"
+      },
+      {
+        "property": "opacity",
+        "target": "pt prose flow"
+      },
+      {
+        "property": "opacity",
+        "target": "negative"
+      },
+      {
+        "property": "opacity",
+        "target": "pt prose flow"
+      },
+      {
+        "property": "opacity",
+        "target": "type-tagline panel-tagline"
+      },
+      {
+        "property": "opacity",
+        "target": "positive"
+      },
+      {
+        "property": "opacity",
+        "target": "negative"
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "name": "tabs-resize",
+    "events": [
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      },
+      {
+        "property": "background-color",
+        "target": ""
+      },
+      {
+        "property": "color",
+        "target": ""
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "name": "slow-scroll",
+    "selected": 2
+  },
+  {
+    "width": 1440,
+    "name": "reduce-light-busy",
+    "value": {
+      "opacity": "0.8",
+      "animations": [],
+      "duration": "0s"
+    }
+  },
+  {
+    "width": 1440,
+    "name": "reduce-dark-busy",
+    "value": {
+      "opacity": "0.8",
+      "animations": [],
+      "duration": "0s"
+    }
+  },
+  {
+    "width": 1440,
+    "name": "no-js-nav",
+    "display": "flex"
+  }
+]

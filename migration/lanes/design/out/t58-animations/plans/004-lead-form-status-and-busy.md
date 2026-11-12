@@ -1,6 +1,6 @@
 # 004 — Ease in the form error message and the busy state
 
-- **Status**: TODO
+- **Status**: DONE — Chromium live proof at 390px and 1440px
 - **Commit**: 2522982
 - **Severity**: MEDIUM
 - **Category**: Missed opportunity (feedback, preventing a jarring change)
@@ -89,3 +89,5 @@ There is no exit animation. The message is cleared when the user resubmits, and 
   - Emulate `prefers-reduced-motion: reduce`: the message fades with no movement and the button dims without easing.
   - Confirm the screen-reader behaviour is unchanged: the element keeps `role="status"` and `aria-live="polite"`.
 - **Done when**: both forms show the eased error and busy state, a successful submit still redirects to the thank-you page, and the three commands pass.
+
+Execution evidence and compatibility limits: [verification notes](../verification-notes.md).

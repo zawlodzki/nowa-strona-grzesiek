@@ -139,6 +139,9 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   .panels { flex: 1; min-inline-size: 0; }
   .panel { border: 1px solid var(--border-default); background: var(--surface-page); border-radius: var(--radius-lg); padding: clamp(24px, 3.125vw, 40px); box-shadow: var(--shadow-panel); overflow-wrap: anywhere; }
   .panel:not([hidden]) { display: grid; gap: var(--space-m); }
+  @media (prefers-reduced-motion: no-preference) {
+    .menu a { transition: background-color var(--motion-duration-fast) var(--motion-easing-out), color var(--motion-duration-fast) var(--motion-easing-out); }
+  }
   .actions { display: flex; flex-wrap: wrap; align-items: start; gap: var(--space-s); }
   .actions :global(.secondary) { color: var(--color-primary-60); border-color: var(--color-primary-60); }
   .actions :global(.secondary:focus-visible) { outline-color: var(--color-primary-60); }

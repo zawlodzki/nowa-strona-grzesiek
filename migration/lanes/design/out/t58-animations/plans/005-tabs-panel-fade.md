@@ -1,6 +1,6 @@
 # 005 — Fade tab panel content and ease the selected tab
 
-- **Status**: TODO
+- **Status**: DONE — colour-only fallback; verified on /sales-atlas-system
 - **Commit**: 2522982
 - **Severity**: LOW
 - **Category**: Missed opportunity (preventing a jarring change, state indication)
@@ -109,7 +109,7 @@ Token values (`apps/web/src/styles/tokens.css:139-143`): `--motion-duration-fast
 ## Verification
 
 - **Mechanical**: from the repo root run `pnpm --filter web check`, `pnpm --filter web test` and `pnpm --filter web build`. All must pass.
-- **Feel check**: open a page with the tabs block (home page, "Warstwy systemu") at 1440px and at 390px.
+- **Feel check**: open a page with the tabs block (`/sales-atlas-system`, owner-confirmed current render target) at 1440px and at 390px.
   - Click each tab: the blue background eases to the new tab and the panel content fades in. The card outline does not blink.
   - At 1440px scroll slowly through the pinned section: each layer change fades the content once.
   - Scroll fast through all layers: there is no visible strobing. **This cannot be judged from code.** If the fade reads as a blink during fast scrolling, remove the `.panel > :global(*)` rules and the `data-measuring` lines, keep only the `.menu a` transition, and say so in the handoff.
@@ -117,3 +117,5 @@ Token values (`apps/web/src/styles/tokens.css:139-143`): `--motion-duration-fast
   - Use ArrowUp, ArrowDown, Home and End on the tab list: selection follows the keys without lag.
   - Emulate `prefers-reduced-motion: reduce`: the content still fades, the tab colours change at once, and the section is not pinned (existing behaviour).
 - **Done when**: the checks above hold, the measured `--stage-size` value on the root is the same as before the change at 1440px, and the three commands pass.
+
+Execution evidence and compatibility limits: [verification notes](../verification-notes.md).

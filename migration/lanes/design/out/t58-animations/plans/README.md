@@ -6,11 +6,11 @@ Scope: `apps/web/src`. The product scenes in `components/diagrams/` and the FAQ 
 
 | # | Plan | Severity | Files | Status |
 | --- | --- | --- | --- | --- |
-| 001 | [Add press feedback to pill buttons](001-press-feedback-scale.md) | MEDIUM | `ui/Button.astro`, `blocks/Pricing.astro`, `site/Header.astro` | TODO |
-| 002 | [Fade and slide the mobile nav panel](002-mobile-nav-open-close.md) | MEDIUM | `site/Header.astro` | TODO |
-| 003 | [Scale the share popover in from its trigger](003-share-popover-entrance.md) | LOW | `post/SharePost.astro` | TODO |
-| 004 | [Ease in the form error message and busy state](004-lead-form-status-and-busy.md) | MEDIUM | `forms/LeadForm.astro` | TODO |
-| 005 | [Fade tab panel content and ease the selected tab](005-tabs-panel-fade.md) | LOW | `blocks/Tabs.astro` | TODO |
+| 001 | [Add press feedback to pill buttons](001-press-feedback-scale.md) | MEDIUM | `ui/Button.astro`, `blocks/Pricing.astro`, `site/Header.astro` | DONE; Chromium verified |
+| 002 | [Fade and slide the mobile nav panel](002-mobile-nav-open-close.md) | MEDIUM | `site/Header.astro` | DONE; Chromium verified |
+| 003 | [Scale the share popover in from its trigger](003-share-popover-entrance.md) | LOW | `post/SharePost.astro` | DONE; Chromium verified |
+| 004 | [Ease in the form error message and busy state](004-lead-form-status-and-busy.md) | MEDIUM | `forms/LeadForm.astro` | DONE; Chromium verified |
+| 005 | [Fade tab panel content and ease the selected tab](005-tabs-panel-fade.md) | LOW | `blocks/Tabs.astro` | DONE; Chromium verified |
 
 ## Recommended order
 
@@ -35,3 +35,5 @@ Scope: `apps/web/src`. The product scenes in `components/diagrams/` and the FAQ 
 ## Before executing
 
 This work is task T58 (`migration/tasks/T58.md`). Claim it and work on its branch, per `AGENTS.md`.
+
+Plan 005 uses the allowed colour-only fallback after the full panel fade pulsed during fast pinned scrolling on `/sales-atlas-system`. This page replaces the outdated home-page test target with owner authorization. See [verification notes](../verification-notes.md) for per-plan evidence, reduced motion and compatibility limits.

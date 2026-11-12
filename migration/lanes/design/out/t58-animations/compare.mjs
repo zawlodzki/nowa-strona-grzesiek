@@ -1,0 +1,3 @@
+import fs from 'node:fs';import {PNG} from 'pngjs';
+const dir=process.env.T58_OUT, frames=dir+'/frames';let count=0;
+for(const f of fs.readdirSync(frames).filter(f=>f.startsWith('local-')&&f.endsWith('-mid.png'))){const staging=frames+'/'+f.replace('local-','staging-');if(!fs.existsSync(staging))continue;const a=PNG.sync.read(fs.readFileSync(staging)),b=PNG.sync.read(fs.readFileSync(frames+'/'+f));const image=new PNG({width:a.width+b.width,height:Math.max(a.height,b.height)});PNG.bitblt(a,image,0,0,a.width,a.height,0,0);PNG.bitblt(b,image,0,0,b.width,b.height,a.width,0);fs.writeFileSync(dir+'/compare-'+f.slice(6),PNG.sync.write(image));count++}console.log(count+' comparisons: live staging left; new local right');
