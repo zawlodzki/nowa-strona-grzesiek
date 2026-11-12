@@ -34,7 +34,9 @@ const course = {
   instance: { name: 'Kurs AI w sprzedaży B2B — dostęp na rok', courseMode: 'online', courseWorkload: 'PT9H', startDate: '2026-10-01' },
 };
 
-const same = JSON.stringify(doc.course) === JSON.stringify(course);
+// Sanity returns object keys in its own order, so compare with sorted keys.
+const canonical = (value) => JSON.stringify(value, (_, v) => (v && typeof v === 'object' && !Array.isArray(v) ? Object.fromEntries(Object.entries(v).sort(([a], [b]) => a.localeCompare(b))) : v));
+const same = canonical(doc.course) === canonical(course);
 if (doc.course && !same) throw new Error('Existing course fields conflict with the proposal');
 const report = {
   dryRun: true, applied: false, document: doc._id, revision: doc._rev, serviceName: doc.name,
