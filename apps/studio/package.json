@@ -15,7 +15,9 @@
     "sanity-plugin-internationalized-array": "5.3.6",
     "react": "19.3.1",
     "react-dom": "19.3.1",
-    "styled-components": "6.6.0"
+    "styled-components": "6.6.0",
+    "sanity-plugin-media": "^6.6.3",
+    "sanity-plugin-table-of-contents": "^2.0.0"
   },
   "devDependencies": {
     "typescript": "7.0.2",
