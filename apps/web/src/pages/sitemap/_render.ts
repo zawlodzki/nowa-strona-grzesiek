@@ -134,5 +134,5 @@ export function renderLlms(discovery: Discovery): string {
 }
 
 export function renderRobots(): string {
-  return ['User-agent: *', 'Allow: /', '', `Sitemap: ${ORIGIN}/sitemap.xml`, ''].join('\n');
+  return ['# AI crawlers welcome. See /llms.txt and page URLs with .md appended.', 'User-agent: *', 'Allow: /', '', `Sitemap: ${ORIGIN}/sitemap.xml`, ''].join('\n');
 }
