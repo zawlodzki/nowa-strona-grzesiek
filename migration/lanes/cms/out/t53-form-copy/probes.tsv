@@ -1,0 +1,9 @@
+host	path	status	location	x-robots-tag	content-type	title
+127.0.0.1	/	200	-	noindex, nofollow	text/html; charset=utf-8	CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki
+127.0.0.1	/kontakt	200	-	noindex, nofollow	text/html; charset=utf-8	Kontakt | Grzegorz Zawłodzki
+127.0.0.1	/newsletter	200	-	noindex, nofollow	text/html; charset=utf-8	Newsletter Sales Atlas | Grzegorz Zawłodzki
+127.0.0.1	/blog	200	-	noindex, nofollow	text/html; charset=utf-8	Blog | Grzegorz Zawłodzki
+host	path	status	location	x-robots-tag	content-type	title
+127.0.0.1	/_ds/t53-override-check	404	-	noindex, nofollow	text/html; charset=utf-8	Nie znaleziono strony
+host	path	status	location	x-robots-tag	content-type	title
+127.0.0.1	/_ds/t53-override-check	200	-	noindex, nofollow	text/html; charset=utf-8	T53 override check

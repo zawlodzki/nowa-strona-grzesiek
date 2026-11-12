@@ -1,0 +1,4 @@
+TEXT: Kontakt CMS: nagłówek formularza CMS: e-mail (CMS: wymagane) CMS: telefon CMS: temat CMS: notka o danych. CMS: prywatność . CMS: zgoda na newsletter CMS: umów rozmowę
+ATTRS: ['CMS: twój e-mail', 'CMS: numer', 'CMS: o czym porozmawiamy?', '/polityka-prywatnosci', 'CMS: wysyłam…']
+TEXT: CMS: Biuletyn CMS: Atlas Treść CMS: adres CMS: zapisz mnie CMS: informacja prawna. CMS: regulamin .
+ATTRS: ['CMS: wpisz adres', 'CMS: chwilka…', '/regulamin-newslettera']

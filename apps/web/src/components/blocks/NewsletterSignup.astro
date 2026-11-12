@@ -1,23 +1,41 @@
 ---
 import type { NewsletterSignup } from '../../../../studio/sanity.types';
+import { safeHref } from '../portable-text/types';
 import LeadForm from '../forms/LeadForm.astro';
 
 interface Props { data: NewsletterSignup; id?: string; headingLevel?: 'h1' | 'h2'; }
 const { data, id = 'newsletter', headingLevel: Heading = 'h2' } = Astro.props;
 const f = (name: string) => `${id}-${name}`;
+
+// Editors override any of these in Studio; an empty field keeps the default.
+const defaults = {
+  heading: 'Newsletter',
+  headingAccent: 'Sales Atlas',
+  emailLabel: 'Adres e-mail',
+  emailPlaceholder: 'Adres e-mail',
+  submitLabel: 'Zapisuję się',
+  waitLabel: 'Zaczekaj chwilę…',
+  legal: 'Zapisując się, zamawiasz newsletter Wellbiz sp. z o.o. i zgadzasz się na otrzymywanie e-maili z poradami i ofertami. Wypiszesz się jednym kliknięciem. Link jest w każdej wiadomości.',
+};
+const copy = Object.fromEntries(Object.entries(defaults).map(([key, value]) => [key, (data.copy?.[key as keyof typeof defaults] ?? '').trim() || value])) as typeof defaults;
+const editedLinks = (data.copy?.legalLinks ?? []).flatMap((link) => {
+  const href = safeHref(link.href);
+  return href && link.label?.trim() ? [{ href, label: link.label }] : [];
+});
+const legalLinks = editedLinks.length > 0 ? editedLinks : [{ href: '/regulamin-newslettera', label: 'Regulamin newslettera' }, { href: '/polityka-prywatnosci', label: 'Polityka prywatności' }];
 ---
 <section id={id} class="content-grid section newsletter" aria-labelledby={f('heading')}>
   <div class="inner">
-    <Heading id={f('heading')} class="type-heading-l">Newsletter <span class="accent">Sales Atlas</span></Heading>
+    <Heading id={f('heading')} class="type-heading-l">{copy.heading}{' '}<span class="accent">{copy.headingAccent}</span></Heading>
     {data.body && <p class="body">{data.body}</p>}
-    <LeadForm form="newsletter" id={f('form')} visible={['email', 'newsletter']} submitLabel="Zapisuję się" tone="dark" class="signup">
+    <LeadForm form="newsletter" id={f('form')} visible={['email', 'newsletter']} submitLabel={copy.submitLabel} waitLabel={copy.waitLabel} tone="dark" class="signup">
       <div class="field">
-        <label class="visually-hidden" for={f('email')}>Adres e-mail</label>
-        <input id={f('email')} name="email" type="email" placeholder="Adres e-mail" autocomplete="email" maxlength="256" required />
+        <label class="visually-hidden" for={f('email')}>{copy.emailLabel}</label>
+        <input id={f('email')} name="email" type="email" placeholder={copy.emailPlaceholder} autocomplete="email" maxlength="256" required />
       </div>
       <input type="hidden" name="newsletter" value="on" />
     </LeadForm>
-    <p class="legal type-body-s">Zapisując się, zamawiasz newsletter Wellbiz sp. z o.o. i zgadzasz się na otrzymywanie e-maili z poradami i ofertami. Wypiszesz się jednym kliknięciem. Link jest w każdej wiadomości. <a href="/regulamin-newslettera">Regulamin newslettera</a>, <a href="/polityka-prywatnosci">Polityka prywatności</a>.</p>
+    <p class="legal type-body-s">{copy.legal}{' '}{legalLinks.map((link, index) => <>{index > 0 && ', '}<a href={link.href}>{link.label}</a></>)}.</p>
   </div>
 </section>
 

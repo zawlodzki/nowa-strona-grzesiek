@@ -1,0 +1,43 @@
+$ pnpm lint
+✖ 981 problems (0 errors, 981 warnings)
+  0 errors and 717 warnings potentially fixable with the `--fix` option.
+
+exit 0
+$ pnpm --filter studio check
+✖ Errors:   0 errors
+⚠ Warnings: 0 warnings
+
+
+$ pnpm --filter web exec tsc --noEmit
+exit 0
+$ pnpm test
+$ node apps/studio/scripts/verify-schema.mjs --schema-only
+PASS optional testimonial authorImage and linkedinUrl registered
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: contactForm
++ actual - expected
+
+  [
+    'calendar',
+    'channels',
+    'consultation',
+$ contract drift (schema.json block fields vs contracts/blocks.json)
+contactForm extra: ['copy'] missing: []
+newsletterSignup extra: ['copy'] missing: []
+other blocks: match
+$ pnpm test
+exit 0
+$ grep -niE "turnstile|n8n|webhook|formId|siteKey|/api/form" apps/studio/schemaTypes/blocks.ts (new copy fields)
+none in added schema lines
+$ where they live
+apps/web/src/worker/form.ts:6:  N8N_FORM_WEBHOOK: string;
+apps/web/src/worker/form.ts:15:const TURNSTILE_FIELD = 'cf-turnstile-response';
+apps/web/src/worker/form.ts:151:  const forwarded = await fetch(env.N8N_FORM_WEBHOOK, {
+apps/web/src/components/forms/LeadForm.astro:26:  action={`/api/form?form=${form}`}
+apps/web/src/components/forms/LeadForm.astro:33:  <div class="cf-turnstile" data-sitekey={siteKey} data-language="pl" data-theme={tone === '
+apps/web/src/components/forms/LeadForm.astro:72:      const widget = form.querySelector('.cf-turnstile');
+apps/web/src/components/forms/LeadForm.astro:147:  .cf-turnstile:empty { display: none; }
+apps/web/src/components/blocks/NewsletterSignup.astro:79:  .inner :global(.signup .cf-turnstile), .inner :global(.signup .status) { grid-col

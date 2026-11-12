@@ -8,10 +8,11 @@ interface Props {
   // Names of the fields the slot renders. Every other field of the form is rendered here as a hidden attribution input.
   visible: string[];
   submitLabel: string;
+  waitLabel?: string;
   tone?: 'light' | 'dark';
   class?: string;
 }
-const { form, id, visible, submitLabel, tone = 'light', class: className } = Astro.props;
+const { form, id, visible, submitLabel, waitLabel = 'Zaczekaj chwilę…', tone = 'light', class: className } = Astro.props;
 const names = FORMS[form].fields.map(([name]) => name);
 const unknown = visible.filter((name) => !names.includes(name));
 if (unknown.length) throw new Error(`LeadForm "${form}" has no field ${unknown.join(', ')}. Field names come from worker/form.ts.`);
@@ -30,7 +31,7 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
 >
   <slot />
   <div class="cf-turnstile" data-sitekey={siteKey} data-language="pl" data-theme={tone === 'dark' ? 'dark' : 'light'} data-size="flexible" data-appearance="interaction-only"></div>
-  <button type="submit" class="submit" data-wait="Zaczekaj chwilę…">{submitLabel}</button>
+  <button type="submit" class="submit" data-wait={waitLabel}>{submitLabel}</button>
   <p class="status type-body-s" role="status" aria-live="polite"></p>
   <div data-zaw-attribution-fields="v1" hidden>
     {hidden.map((name) => <input type="hidden" name={name} data-zaw-attribution={name} value="" />)}
