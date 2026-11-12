@@ -22,7 +22,7 @@ Keep the summary with the archive. It records the content document count, draft 
    shasum -a 256 "$archive"
    ```
 
-2. After approval, use a Sanity account with permission to create datasets and import content. Use a fresh name for each drill. Keep the scratch dataset private during the drill.
+2. After approval, use a Sanity account with permission to create datasets and import content. Use a fresh name for each drill. Keep the scratch dataset private during the drill. If Sanity rejects creation because the project has reached its quota, get approval for a private dataset in a separate project with available capacity before importing the archive.
 
    ```sh
    scratch=restore-drill-YYYYMMDD
@@ -130,4 +130,6 @@ The archive restores dataset content and asset binaries. Recreate webhooks, CORS
 
 ## Store verified copies
 
-The proposed schedule is a nightly backup and a fresh export before bulk production writes. Store encrypted copies and their checksums in a private Cloudflare R2 bucket with a retention rule. Keep 30 daily copies and rehearse a restore quarterly. Record the approved schedule and destination in T64.
+Use the VPS backup settings as the model. Run the export daily at 04:15 Europe/Warsaw with up to 10 minutes of jitter. Take a fresh export before bulk production writes.
+
+Store each verified archive and its checksum in a dedicated encrypted Restic repository in private Backblaze B2. Keep 7 daily, 4 weekly, and 6 monthly snapshots. Use 30-day Compliance Object Lock for immutable copies. Keep the destination, credentials, and retention jobs separate from the VPS backup. Configure the scheduled job and verify a B2 restore as follow-up work.
