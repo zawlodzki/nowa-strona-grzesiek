@@ -4,15 +4,21 @@ interface Props { entries: TocEntry[]; pl: boolean; }
 const { entries, pl } = Astro.props;
 ---
 {entries.length > 0 && <nav aria-labelledby="toc-heading" data-post-toc>
-  <h2 id="toc-heading" class="type-heading-xs">{pl ? 'Spis treści' : 'Contents'}</h2>
+  <details data-toc-disclosure open><summary id="toc-heading" class="type-heading-xs">{pl ? 'Spis treści' : 'Contents'}</summary>
   <ol role="list">{entries.map((heading) => <li>
     <a href={`#${heading.id}`}>{heading.text}</a>
     {heading.children.length > 0 && <ol role="list">{heading.children.map((child) => <li><a href={`#${child.id}`}>{child.text}</a></li>)}</ol>}
   </li>)}</ol>
-</nav>}
+</details></nav>}
 <script>
   const toc = document.querySelector<HTMLElement>('[data-post-toc]');
   if (toc) {
+    const disclosure = toc.querySelector<HTMLDetailsElement>('[data-toc-disclosure]')!;
+    const side = matchMedia('(min-width: 56rem)');
+    const syncDisclosure = () => { disclosure.open = side.matches; };
+    side.addEventListener('change', syncDisclosure);
+    disclosure.addEventListener('toggle', () => { if (side.matches) disclosure.open = true; });
+    syncDisclosure();
     const links = [...toc.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')];
     const targets = links.flatMap((link) => {
       const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
@@ -41,9 +47,13 @@ const { entries, pl } = Astro.props;
   }
 </script>
 <style>
+  summary { cursor: pointer; min-block-size: 44px; align-content: center; }
+  summary:focus-visible { outline: 2px solid var(--text-link); outline-offset: 3px; }
+  summary:active { color: var(--text-link-active); }
+  @media (min-width: 56rem) { summary { pointer-events: none; list-style: none; } summary::-webkit-details-marker { display: none; } }
   ol { list-style: none; padding: 0; margin-block: var(--space-s) 0; display: grid; gap: var(--space-xs); }
-  nav > ol { --toc-indent: var(--space-s); position: relative; padding-inline-start: var(--toc-indent); }
-  nav > ol::before { content: ''; position: absolute; inset-block: 0; inset-inline-start: 0; inline-size: 1px; background: var(--border-hairline); }
+  details > ol { --toc-indent: var(--space-s); position: relative; padding-inline-start: var(--toc-indent); }
+  details > ol::before { content: ''; position: absolute; inset-block: 0; inset-inline-start: 0; inline-size: 1px; background: var(--border-hairline); }
   ol ol { --toc-indent: calc(2 * var(--space-s)); margin-block: var(--space-2xs) 0; padding-inline-start: var(--space-s); }
   a { position: relative; display: block; padding: var(--space-3xs); text-decoration: none; border-radius: var(--radius-sm); }
   a[aria-current="location"] { color: var(--text-link-active); font-weight: var(--font-weight-medium); }

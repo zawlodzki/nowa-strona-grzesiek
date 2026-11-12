@@ -1,0 +1,233 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "header": {
+        "x": 120,
+        "width": 884,
+        "y": -832
+      },
+      "toc": {
+        "x": 120,
+        "width": 192,
+        "y": -0.375
+      },
+      "content": {
+        "x": 344,
+        "width": 720,
+        "y": -0.375
+      },
+      "right": {
+        "x": 1096,
+        "width": 224,
+        "y": -0.375
+      },
+      "cta": "grid",
+      "open": true,
+      "overflow": false
+    },
+    {
+      "width": 1100,
+      "header": {
+        "x": 21.40625,
+        "width": 816,
+        "y": -776.1875
+      },
+      "toc": {
+        "x": 21.40625,
+        "width": 192,
+        "y": -0.46875
+      },
+      "content": {
+        "x": 245.40625,
+        "width": 833.171875,
+        "y": -0.46875
+      },
+      "right": {
+        "x": 245.40625,
+        "width": 833.171875,
+        "y": 11140.375
+      },
+      "cta": "none",
+      "open": true,
+      "overflow": false
+    },
+    {
+      "width": 900,
+      "header": {
+        "x": 19.890625,
+        "width": 816,
+        "y": -764.234375
+      },
+      "toc": {
+        "x": 19.890625,
+        "width": 192,
+        "y": -0.375
+      },
+      "content": {
+        "x": 243.890625,
+        "width": 636.21875,
+        "y": -0.375
+      },
+      "right": {
+        "x": 243.890625,
+        "width": 636.21875,
+        "y": 12552
+      },
+      "cta": "none",
+      "open": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "header": {
+        "x": 16,
+        "width": 357.984375,
+        "y": -682
+      },
+      "toc": {
+        "x": 16,
+        "width": 357.984375,
+        "y": 0.34375
+      },
+      "content": {
+        "x": 16,
+        "width": 357.984375,
+        "y": 162.34375
+      },
+      "right": {
+        "x": 16,
+        "width": 357.984375,
+        "y": 14613.96875
+      },
+      "cta": "none",
+      "open": false,
+      "overflow": false
+    }
+  ],
+  "states": [
+    {
+      "inert": true,
+      "opacity": "0",
+      "transition": "0.24s, 0.24s",
+      "transform": "matrix(1, 0, 0, 1, 0, 8)",
+      "rect": {
+        "x": 1100,
+        "y": 516.25,
+        "width": 216,
+        "height": 319.75,
+        "top": 516.25,
+        "right": 1316,
+        "bottom": 836,
+        "left": 1100
+      }
+    },
+    {
+      "inert": false,
+      "opacity": "1",
+      "transition": "0.24s, 0.24s",
+      "transform": "none",
+      "rect": {
+        "x": 1100,
+        "y": 508.25,
+        "width": 216,
+        "height": 319.75,
+        "top": 508.25,
+        "right": 1316,
+        "bottom": 828,
+        "left": 1100
+      }
+    },
+    {
+      "inert": true,
+      "opacity": "0",
+      "transition": "0.24s, 0.24s",
+      "transform": "matrix(1, 0, 0, 1, 0, 8)",
+      "rect": {
+        "x": 1100,
+        "y": 516.25,
+        "width": 216,
+        "height": 319.75,
+        "top": 516.25,
+        "right": 1316,
+        "bottom": 836,
+        "left": 1100
+      }
+    },
+    {
+      "inert": true,
+      "opacity": "0",
+      "transition": "0s",
+      "transform": "none",
+      "rect": {
+        "x": 1100,
+        "y": 508.25,
+        "width": 216,
+        "height": 319.75,
+        "top": 508.25,
+        "right": 1316,
+        "bottom": 828,
+        "left": 1100
+      }
+    },
+    {
+      "inert": false,
+      "opacity": "1",
+      "transition": "0s",
+      "transform": "none",
+      "rect": {
+        "x": 1100,
+        "y": 508.25,
+        "width": 216,
+        "height": 319.75,
+        "top": 508.25,
+        "right": 1316,
+        "bottom": 828,
+        "left": 1100
+      }
+    },
+    {
+      "inert": true,
+      "opacity": "0",
+      "transition": "0s",
+      "transform": "none",
+      "rect": {
+        "x": 1100,
+        "y": 508.25,
+        "width": 216,
+        "height": 319.75,
+        "top": 508.25,
+        "right": 1316,
+        "bottom": 828,
+        "left": 1100
+      }
+    }
+  ],
+  "tiles": [
+    {
+      "width": 163,
+      "height": 96
+    },
+    {
+      "width": 163,
+      "height": 96
+    },
+    {
+      "width": 163,
+      "height": 96
+    },
+    {
+      "width": 163,
+      "height": 96
+    },
+    {
+      "width": 163,
+      "height": 96
+    },
+    {
+      "width": 163,
+      "height": 96
+    }
+  ],
+  "errors": []
+}

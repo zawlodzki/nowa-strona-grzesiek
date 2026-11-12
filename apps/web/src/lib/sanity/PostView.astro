@@ -61,7 +61,7 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
             <h2 class="type-heading-xs">{post.cta?.label ?? (pl ? 'Porozmawiajmy o Twojej firmie' : "Let's talk about your business")}</h2>
             <a class="post-button" href={contactHref}>{pl ? 'Umów konsultację' : 'Book a consultation'}</a>
           </div>
-          {related.length > 0 && <section aria-labelledby="related-heading">
+          {related.length > 0 && <section aria-labelledby="related-heading" data-related-posts inert aria-hidden="true">
             <h2 id="related-heading" class="type-heading-xs">{pl ? 'Sprawdź również' : 'Read also'}</h2>
             <ul role="list">{related.map((other) => <li><a href={localHref(other.language, other.path)}>{other.title}</a></li>)}</ul>
           </section>}
@@ -93,6 +93,7 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   {pl && <NewsletterSignup data={{ _type: 'newsletterSignup', body: 'Raz w tygodniu dostaniesz bezpłatnie, jedno gotowe rozwiązanie, jak skutecznie wykorzystać nowoczesne technologie w sprzedaży B2B.' }} />}
 </main>
 <style>
+  main { --text-link: oklch(from #3a48cc l c h); --text-link-active: oklch(from #3a48cc l c h); --surface-accent: oklch(from #3a48cc l c h); }
   .post-head .inner { display: grid; justify-items: start; gap: var(--space-m); max-inline-size: var(--measure-prose); }
   .post-head :global(figure) { justify-self: stretch; }
   .crumbs ol { display: flex; flex-wrap: wrap; gap: var(--space-3xs) var(--space-2xs); margin: 0; padding: 0; color: var(--text-muted); }
@@ -118,7 +119,7 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   .author a:active { color: var(--text-link-active); }
   .muted { color: var(--text-muted); }
   .meta { display: flex; flex-wrap: wrap; column-gap: var(--space-s); row-gap: var(--space-3xs); color: var(--text-muted); }
-  .post-layout { display: grid; gap: var(--space-xl); inline-size: min(100% - 2 * var(--space-m), 88rem); margin-inline: auto; padding-block-end: var(--space-3xl); }
+  .post-layout { display: grid; gap: var(--space-xl); inline-size: min(100% - 2 * var(--layout-gutter), calc(var(--layout-container-max) - 2 * var(--layout-gutter))); margin-inline: auto; padding-block-end: var(--space-3xl); }
   .post-content { min-inline-size: 0; }
   .sticky { display: grid; gap: var(--space-l); }
   .toc-column, .recommendations { min-inline-size: 0; font-size: var(--font-size-body-s, 1rem); }
@@ -131,8 +132,44 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   .post-button:active { background: var(--text-link-active); color: var(--text-on-accent) !important; }
   .recommendations li + li { border-block-start: 1px solid var(--border-hairline); padding-block-start: var(--space-xs); }
   @media (hover: hover) and (pointer: fine) { .post-layout a:hover { text-decoration: underline; text-underline-offset: .2em; } }
-  @media (min-width: 75rem) {
-    .post-layout { grid-template-columns: minmax(12rem, 1fr) minmax(0, 2.8fr) minmax(14rem, 1fr); gap: var(--space-l); }
+  .sidebar-cta { display: none; }
+  @media (min-width: 56rem) {
+    .post-layout { grid-template-columns: 12rem minmax(0, 1fr); gap: var(--space-l); }
+    .recommendations { grid-column: 2; }
     .sticky { position: sticky; inset-block-start: 7rem; max-block-size: calc(100dvh - 8rem); overflow-y: auto; overscroll-behavior: contain; padding: var(--space-3xs); }
   }
+  @media (min-width: 80rem) {
+    .post-layout { grid-template-columns: 12rem minmax(0, 1fr) 14rem; }
+    .recommendations { grid-column: 3; }
+    .sidebar-cta { display: grid; }
+    [data-related-posts][inert] { opacity: 0; pointer-events: none; }
+  }
+  @media (min-width: 80rem) and (prefers-reduced-motion: no-preference) {
+    [data-related-posts] { transition: opacity 240ms cubic-bezier(0.23, 1, 0.32, 1), transform 240ms cubic-bezier(0.23, 1, 0.32, 1); }
+    [data-related-posts][inert] { transform: translateY(.5rem); }
+  }
 </style>
+
+<script>
+  const related = document.querySelector<HTMLElement>('[data-related-posts]');
+  const content = document.querySelector<HTMLElement>('.post-content');
+  if (related && content) {
+    const wide = matchMedia('(min-width: 80rem)');
+    let scheduled = false;
+    const update = () => {
+      scheduled = false;
+      const rect = content.getBoundingClientRect();
+      const visible = !wide.matches || rect.top + rect.height / 2 <= innerHeight / 2;
+      related.inert = !visible;
+      related.setAttribute('aria-hidden', String(!visible));
+    };
+    const schedule = () => {
+      if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+    };
+    addEventListener('scroll', schedule, { passive: true });
+    addEventListener('resize', schedule, { passive: true });
+    new ResizeObserver(schedule).observe(content);
+    document.fonts.ready.then(schedule);
+    update();
+  }
+</script>
