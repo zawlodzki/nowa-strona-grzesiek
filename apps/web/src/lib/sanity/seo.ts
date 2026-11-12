@@ -37,7 +37,7 @@ function translation(site: Site, doc: PageDoc | PostDoc): SeoPage['translation']
 function serviceStubs(site: Site, language: Language): ServiceStub[] {
   return site.services.flatMap((service) => {
     const page = service.page?._ref ? site.byId.get(service.page._ref) : undefined;
-    return page && page.language === language && service.name && service.description ? [{ name: service.name, description: service.description, path: page.path }] : [];
+    return page && page.language === language && service.name && service.description ? [{ name: service.name, description: service.description, path: page.path, ...(service.course && { entity: 'course' as const }) }] : [];
   });
 }
 
@@ -51,6 +51,29 @@ function pageKind(site: Site, page: PageDoc): PageKind {
   if (page.path === '/kontakt') return { kind: 'contact' };
   if (page.path === '/o-mnie') return { kind: 'about', services: serviceStubs(site, page.language) };
   const service = site.services.find((item) => item.page?._ref === page._id);
+  if (service?.name && service.description && service.course) {
+    const { educationalLevel, isAccessibleForFree, audience, teaches, instance } = service.course;
+    return {
+      kind: 'course',
+      course: {
+        name: service.name,
+        description: service.description,
+        ...(educationalLevel && { educationalLevel }),
+        isAccessibleForFree: isAccessibleForFree ?? false,
+        ...(audience && { audience }),
+        teaches: teaches ?? [],
+        ...(instance?.name && instance.courseMode && {
+          instance: {
+            name: instance.name,
+            courseMode: instance.courseMode,
+            ...(instance.courseWorkload && { courseWorkload: instance.courseWorkload }),
+            ...(instance.startDate && { startDate: instance.startDate }),
+          },
+        }),
+        offers: offers(page),
+      },
+    };
+  }
   if (service?.name && service.description) {
     return {
       kind: 'service',

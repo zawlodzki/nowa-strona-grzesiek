@@ -357,6 +357,8 @@ export type Tabs = {
     positive?: PortableText;
     negative?: PortableText;
     body?: PortableText;
+    primaryCta?: Link;
+    secondaryCta?: Link;
     _type: "tabItem";
     _key: string;
   }>;
@@ -380,7 +382,6 @@ export type ContentSection = {
 };
 
 export type Feature = {
-  mediaCaption?: string;
   _type: "feature";
   tagline?: string;
   heading?: string;
@@ -388,6 +389,7 @@ export type Feature = {
   body?: PortableText;
   bullets?: Array<string>;
   media?: Media;
+  mediaCaption?: string;
   mediaSide?: "left" | "right";
   anchorId?: Slug;
   cta?: Link;
@@ -463,6 +465,18 @@ export type Service = {
   page?: PageReference;
   provider?: PersonReference | OrganizationReference;
   areaServed?: string;
+  course?: {
+    educationalLevel?: string;
+    isAccessibleForFree?: boolean;
+    audience?: string;
+    teaches?: Array<string>;
+    instance?: {
+      name?: string;
+      courseMode?: "online" | "onsite" | "blended";
+      courseWorkload?: string;
+      startDate?: string;
+    };
+  };
 };
 
 export type Logo = {

@@ -141,6 +141,25 @@ export const service = defineType({
     defineField({name: 'page', title: 'Strona usługi', type: 'reference', to: [{type: 'page'}]}),
     defineField({name: 'provider', type: 'reference', to: [{type: 'person'}, {type: 'organization'}]}),
     defineField({name: 'areaServed', type: 'string', initialValue: 'Polska'}),
+    defineField({
+      name: 'course', title: 'Kurs', type: 'object',
+      description: 'Wypełnij tylko dla kursu. Strona dostaje wtedy w danych strukturalnych typ Course zamiast Service.',
+      fields: [
+        defineField({name: 'educationalLevel', title: 'Poziom', type: 'string'}),
+        defineField({name: 'isAccessibleForFree', title: 'Bezpłatny', type: 'boolean', initialValue: false}),
+        defineField({name: 'audience', title: 'Dla kogo', type: 'string'}),
+        defineField({name: 'teaches', title: 'Czego uczy', type: 'array', of: [{type: 'string'}], validation: (rule) => rule.required().min(1)}),
+        defineField({
+          name: 'instance', title: 'Edycja kursu', type: 'object',
+          fields: [
+            defineField({name: 'name', title: 'Nazwa', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'courseMode', title: 'Tryb', type: 'string', options: {list: ['online', 'onsite', 'blended']}, validation: (rule) => rule.required()}),
+            defineField({name: 'courseWorkload', title: 'Nakład pracy', description: 'Czas w formacie ISO 8601, np. PT9H.', type: 'string', validation: (rule) => rule.regex(/^P(?!$)(\d+D)?(T(\d+H)?(\d+M)?)?$/)}),
+            defineField({name: 'startDate', title: 'Start', type: 'date'}),
+          ],
+        }),
+      ],
+    }),
   ], preview: {select: {title: 'name'}},
 })
 export const redirect = defineType({
