@@ -1,0 +1,35 @@
+Scope: all 3 workspace projects
+✓ Lockfile passes supply-chain policies (verified 2d ago)
+Lockfile is up to date, resolution step is skipped
+Packages are hard linked from the content-addressable store to the virtual store.
+  Content-addressable store is at: /home/admin/.local/share/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+Packages: +1069
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1069, reused 1069, downloaded 0, added 1069, done
+Done in 751ms using pnpm v12.14.0
+$ pnpm -r check
+apps/studio check$ tsc --noEmit && sanity schema validate
+apps/web check$ astro check
+apps/studio check: - Validating schema…
+apps/web check: 14:48:04 [types] Generated 186ms
+apps/web check: 14:48:04 [check] Getting diagnostics for Astro files in /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T61-branch-rules/apps/web...
+apps/web check: src/preview/worker.ts:5:3 - warning ts(80006): This may be converted to an async function.
+apps/web check: 
+apps/web check: 5   fetch(request: Request, env: Parameters<typeof handle>[1], context: Parameters<typeof handle>[2]): Promise<Response> {
+apps/web check:     ~~~~~
+apps/web check: 
+apps/web check: Result (179 files): 
+apps/web check: - 0 errors
+apps/web check: - 0 warnings
+apps/web check: - 1 hint
+apps/web check: 
+apps/web check: Done
+apps/studio check: ✔ Validated schema
+apps/studio check: 
+apps/studio check: Validation results:
+apps/studio check: ✖ Errors:   0 errors
+apps/studio check: ⚠ Warnings: 0 warnings
+apps/studio check: 
+apps/studio check: 
+apps/studio check: Done
