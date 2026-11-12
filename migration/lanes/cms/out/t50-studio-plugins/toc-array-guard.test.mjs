@@ -40,3 +40,22 @@ test('Portable Text headings remain recognized', () => {
 test('malformed blocks do not crash or become Portable Text', () => {
   assert.equal(isPortableText([null, undefined, 'text', {}, {_type: 'block', children: null}]), false)
 })
+
+test('section TOC includes only configured array fields', () => {
+  const start = runtime.indexOf('checkObjectForKeys = ')
+  const end = runtime.indexOf('\nfunction slugify(', start)
+  assert.ok(start >= 0 && end > start, 'find the shipped section field selector')
+  const getEmbeddedFields = vm.runInNewContext(
+    'const ' + runtime.slice(start, end) + '\ngetEmbeddedFields',
+  )
+  const heading = {_type: 'block', style: 'h2', children: [{_type: 'span', text: 'Heading'}]}
+  const fieldNames = ['sections', 'body']
+  const hero = {_type: 'hero', body: 'Service description'}
+  const feature = {_type: 'feature', body: [heading], extra: [heading]}
+
+  assert.equal(getEmbeddedFields(hero, fieldNames)?.length ?? 0, 0)
+  const fields = getEmbeddedFields(feature, fieldNames)
+  assert.equal(fields.length, 1)
+  assert.equal(fields[0].field, 'body')
+  assert.equal(fields[0].value, feature.body)
+})

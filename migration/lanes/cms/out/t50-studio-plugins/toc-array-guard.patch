@@ -12,6 +12,25 @@
      return (
        isRecord(block) &&
        typeof block._type === 'string' && // block types can be named, so expect anything here.
+--- a/src/utils/getEmbeddedFields.ts
++++ b/src/utils/getEmbeddedFields.ts
+@@ -14,12 +14,9 @@
+   }
+   return (
+     embeddedFields
+-      // Filter keys that exist in the object
+-      .filter((key) => key in section)
+-      // Map them to objects with a single key-value pair
+-      .map((key) => ({
+-        field: key,
+-        value: section[key] as unknown[] | PortableTextBlock[],
+-      }))
++      .flatMap((field) => {
++        const value = section[field]
++        return Array.isArray(value) ? [{ field, value }] : []
++      })
+   )
+ }
 --- a/dist/index.js
 +++ b/dist/index.js
 @@ -19,7 +19,7 @@
@@ -23,3 +42,18 @@
    Array.isArray(block.children) && block.children.every((child) => isRecord(child)) && ("markDefs" in block ? Array.isArray(block.markDefs) && block.markDefs.every((def) => isRecord(def)) : !0) && ("style" in block ? typeof block.style == "string" : !0));
  }
  function getTitle(block, customBlockTitle) {
+@@ -78,10 +78,10 @@
+ }, checkObjectForKeys = (object, fieldNames) => Object.keys(object).filter((key) => fieldNames.includes(key)), getEmbeddedFields = (section, fieldNames) => {
+   const embeddedFields = checkObjectForKeys(section, fieldNames);
+   if (embeddedFields.length !== 0)
+-    return embeddedFields.filter((key) => key in section).map((key) => ({
+-      field: key,
+-      value: section[key]
+-    }));
++    return embeddedFields.flatMap((field) => {
++      const value = section[field];
++      return Array.isArray(value) ? [{ field, value }] : [];
++    });
+ };
+ function slugify(str) {
+   return str.replace(/^\s+|\s+$/g, "").toLowerCase().replace(/[^a-z0-9 -]/g, "").replace(/\s+/g, "-").replace(/-+/g, "-");
