@@ -52,10 +52,10 @@ test at migration/tools/design-parity/capture.test.mjs:73:1
 ✖ resolveChrome returns CHROME_BIN (9.154848ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
   + actual - expected
-  
+
   + '/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome'
   - '/usr/local/bin/google-chrome'
-  
+
       at TestContext.<anonymous> (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T60-ci-tests-node/migration/tools/design-parity/capture.test.mjs:74:10)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -94,7 +94,7 @@ test at migration/tools/design-parity/capture.test.mjs:111:1
   #15 0xe1aeae538594 (/usr/lib/aarch64-linux-gnu/libc.so.6+0x28593)
   #16 0xbadfe8380030 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x2fd002f)
   [end of stack trace]
-  
+
       at ChildProcess.<anonymous> (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T60-ci-tests-node/migration/tools/design-parity/capture.mjs:272:14)
       at ChildProcess.wrapper (node:events:639:12)
       at ChildProcess.emit (node:events:514:28)
@@ -125,7 +125,7 @@ test at migration/tools/design-parity/run.test.mjs:55:1
   #15 0xf4f96fc88594 (/usr/lib/aarch64-linux-gnu/libc.so.6+0x28593)
   #16 0xc698db380030 (/home/admin/.cache/ms-playwright/chromium-1254/chrome-linux-arm64/chrome+0x2fd002f)
   [end of stack trace]
-  
+
       at ChildProcess.<anonymous> (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T60-ci-tests-node/migration/tools/design-parity/capture.mjs:272:14)
       at ChildProcess.wrapper (node:events:639:12)
       at ChildProcess.emit (node:events:514:28)

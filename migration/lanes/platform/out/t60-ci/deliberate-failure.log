@@ -120,9 +120,9 @@ $ node --test "src/**/*.test.{ts,mjs}" ../../migration/lanes/platform/out/t60-ci
 test at ../../migration/lanes/platform/out/t60-ci/deliberate-failure.test.mjs:4:1
 ✖ T60 deliberately broken gate proof (0.670338ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   1 !== 2
-  
+
       at TestContext.<anonymous> (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T60-ci-tests-node/migration/lanes/platform/out/t60-ci/deliberate-failure.test.mjs:4:57)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)

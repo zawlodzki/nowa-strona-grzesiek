@@ -27,7 +27,13 @@ jobs:
       - run: pnpm check
       - run: pnpm test
       - run: pnpm --filter web preview:test
-      - run: node --test migration/tools/crawl.test.mjs migration/tools/design-parity/parity.test.mjs migration/tools/design-parity/publish.test.mjs
+      - uses: browser-actions/setup-chrome@v2
+        id: chrome
+        with:
+          install-dependencies: true
+      - run: node --test "migration/tools/**/*.test.mjs"
+        env:
+          CHROME_BIN: ${{ steps.chrome.outputs.chrome-path }}
       - run: |
           python3 -I migration/tools/import/assets_test.py
           python3 -I migration/tools/import/bundle_test.py
