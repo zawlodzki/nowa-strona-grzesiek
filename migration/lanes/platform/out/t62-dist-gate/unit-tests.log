@@ -1,0 +1,41 @@
+✔ valid output, exclusions, and non-HTML content (6.26542ms)
+✔ missing h1 (0.839881ms)
+✔ two h1s (0.615505ms)
+✔ empty title (0.603296ms)
+✔ missing title (0.807297ms)
+✔ empty description (0.614547ms)
+✔ missing description (0.41717ms)
+✔ missing canonical (0.520337ms)
+✔ wrong host (0.710922ms)
+✔ trailing slash (0.534129ms)
+✔ uppercase path (0.409961ms)
+✔ duplicate canonical (0.462295ms)
+✔ missing JSON-LD (0.363961ms)
+✔ duplicate JSON-LD (0.355128ms)
+✔ invalid JSON (0.381419ms)
+✔ non-graph JSON (0.317335ms)
+✔ array JSON (0.405753ms)
+✔ nested graph (0.607838ms)
+✔ SearchAction (0.538254ms)
+✔ HowTo (0.962298ms)
+✔ https://schema.org/HowTo (1.037466ms)
+✔ missing alternate (0.544504ms)
+✔ valid language pair and script/comment text are accepted (0.564963ms)
+✔ missing sitemap (0.255877ms)
+✔ missing sitemap target (0.417836ms)
+✔ missing child sitemap (0.393086ms)
+✔ missing robots (0.379295ms)
+✔ wrong robots sitemap (0.364794ms)
+✔ missing static keep route (0.430087ms)
+✔ empty dist pages (0.215002ms)
+✔ unpublished content is reported without failing, including quoted CSV (0.541671ms)
+✔ css total gzip budget (1.704596ms)
+✔ js total gzip budget (1.302718ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 72.39382

@@ -1,0 +1,77 @@
+name: Deploy Studio
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      no_deploy:
+        description: Build only, without accessing the deploy token
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: studio-production
+  cancel-in-progress: false
+
+jobs:
+  studio:
+    if: >-
+      github.repository == 'zawlodzki/nowa-strona-grzesiek' &&
+      (github.event_name == 'workflow_dispatch' ||
+       (github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.event == 'push' &&
+        github.event.workflow_run.head_repository.full_name == github.repository))
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SANITY_STUDIO_DATASET: production
+      TARGET_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_SHA }}
+          persist-credentials: false
+      - name: Reject outdated commit
+        id: current
+        run: |
+          main_sha=$(git ls-remote origin refs/heads/main | cut -f1)
+          if [ "$TARGET_SHA" = "$main_sha" ]; then
+            echo 'current=true' >> "$GITHUB_OUTPUT"
+          else
+            echo "Skipping outdated commit $TARGET_SHA; main is $main_sha"
+          fi
+      - uses: pnpm/action-setup@v4
+        if: steps.current.outputs.current == 'true'
+      - uses: actions/setup-node@v4
+        if: steps.current.outputs.current == 'true'
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - if: steps.current.outputs.current == 'true'
+        run: pnpm install --frozen-lockfile
+      - if: steps.current.outputs.current == 'true'
+        run: pnpm --filter studio build
+      - name: Dry run
+        if: steps.current.outputs.current == 'true'
+        run: echo 'Studio built. Deploy stays disabled until Grzesiek approves and enables STUDIO_DEPLOY_ENABLED.'
+      - name: Deploy Studio and schema
+        if: >-
+          steps.current.outputs.current == 'true' &&
+          vars.STUDIO_DEPLOY_ENABLED == 'true' &&
+          (github.event_name == 'workflow_run' || inputs.no_deploy == false)
+        env:
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
+        run: |
+          main_sha=$(git ls-remote origin refs/heads/main | cut -f1)
+          if [ "$TARGET_SHA" != "$main_sha" ]; then
+            echo "Skipping outdated commit $TARGET_SHA; main is $main_sha"
+            exit 0
+          fi
+          test -n "$SANITY_AUTH_TOKEN"
+          pnpm --filter studio exec sanity deploy --no-build --yes --schema-required

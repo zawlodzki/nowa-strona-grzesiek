@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node ../../migration/tools/check-dist.mjs",
     "check": "astro check",
     "preview": "wrangler dev",
     "deploy": "astro build && wrangler deploy",

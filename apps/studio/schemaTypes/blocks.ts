@@ -1,6 +1,8 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 import {headingField, taglineField, titleField} from './objects'
 
+const optionalHeading = defineField({name: 'heading', title: 'Nagłówek', type: 'string', validation: (rule) => rule.max(200)})
+
 export const hero = defineType({
   name: 'hero', title: 'Hero', type: 'object',
   fields: [
@@ -39,11 +41,12 @@ export const feature = defineType({
 })
 export const contentSection = defineType({
   name: 'contentSection', title: 'Lista lub karty', type: 'object',
-  fields: [taglineField, headingField,
+  fields: [taglineField, optionalHeading,
     defineField({name: 'intro', type: 'portableText'}),
     defineField({name: 'layout', type: 'string', options: {list: ['list', 'cards', 'twoColumn', 'checklist']}, initialValue: 'list', validation: (rule) => rule.required().custom((value) => value === undefined || ['list', 'cards', 'twoColumn', 'checklist'].includes(value) || 'Wybierz dozwoloną wartość.')}),
     defineField({name: 'items', type: 'array', of: [defineArrayMember({name: 'contentItem', type: 'object', fields: [
-      titleField, defineField({name: 'text', type: 'text', validation: (rule) => rule.required()}),
+      defineField({...titleField, validation: (rule) => rule.required().min(1).max(200).regex(/\S/)}),
+      defineField({name: 'text', type: 'text'}),
       defineField({name: 'icon', type: 'string'}), defineField({name: 'link', type: 'link'}),
     ]})]}),
     defineField({name: 'media', type: 'media'}),
@@ -66,17 +69,17 @@ export const pricing = defineType({
   fields: [taglineField, headingField,
     defineField({name: 'plans', type: 'array', validation: (rule) => rule.required().min(1), of: [defineArrayMember({name: 'pricePlan', type: 'object', fields: [
       defineField({name: 'name', type: 'string', validation: (rule) => rule.required()}),
-      defineField({name: 'price', type: 'number', validation: (rule) => rule.required().min(0)}),
+      defineField({name: 'price', type: 'number', validation: (rule) => rule.min(0)}),
       defineField({name: 'currency', type: 'string', initialValue: 'PLN', options: {list: ['PLN']}, validation: (rule) => rule.required().custom((value) => value === undefined || ['PLN'].includes(value) || 'Wybierz dozwoloną wartość.')}),
       defineField({name: 'unit', type: 'string', validation: (rule) => rule.required()}),
       defineField({name: 'priceNote', type: 'string'}),
-      defineField({name: 'features', type: 'array', of: [defineArrayMember({type: 'string'})], validation: (rule) => rule.required().min(1)}),
+      defineField({name: 'features', type: 'array', of: [defineArrayMember({type: 'string'})]}),
       defineField({name: 'cta', type: 'link', validation: (rule) => rule.required()}),
       defineField({name: 'highlighted', type: 'boolean', initialValue: false}),
     ]})]}),
   ], preview: {select: {title: 'heading'}},
 })
-export const ctaBand = defineType({name: 'ctaBand', title: 'Wezwanie do działania', type: 'object', fields: [headingField, defineField({name: 'body', type: 'text'}), defineField({name: 'cta', type: 'link', validation: (rule) => rule.required()})], preview: {select: {title: 'heading'}}})
+export const ctaBand = defineType({name: 'ctaBand', title: 'Wezwanie do działania', type: 'object', fields: [optionalHeading, defineField({name: 'body', type: 'text'}), defineField({name: 'cta', type: 'link', validation: (rule) => rule.required()})], preview: {select: {title: 'heading'}}})
 export const testimonials = defineType({
   name: 'testimonials', title: 'Rekomendacje', type: 'object',
   fields: [
