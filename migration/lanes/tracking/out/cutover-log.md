@@ -50,3 +50,5 @@ Przed przełączeniem nie zmieniono DNS, domen Workera, sekretów, Webflow ani r
 - 22:21. Apex zwraca HTTPS 301 do www z niezmienioną ścieżką i parametrami. Końcowy crawl objął 111 stron HTTP 200, 104 adresy w sitemapie i 0 różnic względem pakietu testowego. Publiczny DNS nadal zwraca pięć rekordów MX Google Workspace. Brakuje testu wysyłki i odbioru poczty. Abonament Webflow nadal oczekuje na decyzję właściciela.
 
 Contract request: zapisać dwie Workers Routes w konfiguracji produkcji w repozytorium. Do tego czasu zachowuj aktualne trasy przy promocji wersji Workera i sprawdzaj je po każdym wdrożeniu.
+
+- 22:25. Właściciel potwierdził działanie poczty po przełączeniu. Crawl, przekierowania i poczta spełniają G4. T22 przekazano do przeglądu w PR #98.
