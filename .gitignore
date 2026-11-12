@@ -26,3 +26,8 @@ migration/00-inventory/
 
 # DNS zone with record values (T05): local only
 migration/lanes/tracking/private/
+
+# Sanity dataset archives and in-progress exports
+/sanity-backups/
+.sanity-export-*/
+8u2zjhvn-production-*.tar.gz
