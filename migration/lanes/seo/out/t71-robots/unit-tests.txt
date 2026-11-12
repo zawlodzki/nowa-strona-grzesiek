@@ -1,20 +1,20 @@
-✔ empty content still yields valid documents (4.880991ms)
-✔ sitemap index lists EN only when EN documents exist, with the newest lastmod per language (0.218044ms)
-✔ urlset is sorted, has no trailing slashes and adds /blog once posts exist (0.240585ms)
-✔ a /blog page document replaces the synthetic entry (0.139334ms)
-✔ XML output escapes markup in every text and URL (0.585754ms)
-✔ RSS lists PL posts only, newest first, with RFC 822 dates and media for images (0.279461ms)
-✔ llms.txt groups PL services, other pages and posts, and skips services without a page (0.223668ms)
-✔ robots.txt welcomes AI crawlers without exclusions and points at the sitemap index (0.117668ms)
-✔ parseDiscovery normalizes dates and drops null optionals (0.382294ms)
-✔ parseDiscovery fails on a bad shape instead of returning less (0.689087ms)
-✔ loadDiscovery fails the build when Sanity does not answer (58.270386ms)
-✔ Worker robots policy for Host www.zawlodzki.pl (34.425311ms)
-✔ Worker robots policy for Host localhost:8791 (0.566504ms)
-✔ Worker robots policy for Host zawlodzki.pl (2.394516ms)
-✔ Worker robots policy for Host zawlodzki-web.zawlodzki.workers.dev (0.349961ms)
-✔ Worker robots policy for Host preview.example.com (0.487711ms)
-✔ other routes still use assets and retain the staging header (3.336522ms)
+✔ empty content still yields valid documents (3.572399ms)
+✔ sitemap index lists EN only when EN documents exist, with the newest lastmod per language (0.328756ms)
+✔ urlset is sorted, has no trailing slashes and adds /blog once posts exist (2.035954ms)
+✔ a /blog page document replaces the synthetic entry (0.273588ms)
+✔ XML output escapes markup in every text and URL (0.581803ms)
+✔ RSS lists PL posts only, newest first, with RFC 822 dates and media for images (0.274588ms)
+✔ llms.txt groups PL services, other pages and posts, and skips services without a page (0.339798ms)
+✔ robots.txt welcomes AI crawlers without exclusions and points at the sitemap index (1.98887ms)
+✔ parseDiscovery normalizes dates and drops null optionals (2.473587ms)
+✔ parseDiscovery fails on a bad shape instead of returning less (5.416267ms)
+✔ loadDiscovery fails the build when Sanity does not answer (33.502994ms)
+✔ Worker robots policy for Host www.zawlodzki.pl (34.492345ms)
+✔ Worker robots policy for Host localhost:8791 (0.917642ms)
+✔ Worker robots policy for Host zawlodzki.pl (2.224707ms)
+✔ Worker robots policy for Host zawlodzki-web.zawlodzki.workers.dev (0.492259ms)
+✔ Worker robots policy for Host preview.example.com (1.306732ms)
+✔ other routes still use assets and retain the staging header (0.637595ms)
 ℹ tests 17
 ℹ suites 0
 ℹ pass 17
@@ -22,4 +22,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 230.199608
+ℹ duration_ms 233.414438

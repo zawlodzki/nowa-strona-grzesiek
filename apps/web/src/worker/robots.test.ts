@@ -11,8 +11,8 @@ for (const host of ['www.zawlodzki.pl', 'localhost:8791', 'zawlodzki.pl', 'zawlo
       return new Response(renderRobots(), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
     } } };
     // Wrangler maps the incoming Host header into the request URL.
-    const request = new Request(`http://${host}/robots.txt`, { headers: { Host: host } });
-    const response = await worker.fetch(request, env);
+    const request = new Request(`http://${host}/robots.txt`, { headers: { Host: host } }) as Parameters<typeof worker.fetch>[0];
+    const response = await worker.fetch(request, env as unknown as Parameters<typeof worker.fetch>[1]);
     assert.equal(response.status, 200);
     assert.equal(response.headers.get('Content-Type'), 'text/plain; charset=utf-8');
     if (host === 'www.zawlodzki.pl') {
@@ -30,9 +30,9 @@ for (const host of ['www.zawlodzki.pl', 'localhost:8791', 'zawlodzki.pl', 'zawlo
 }
 
 test('other routes still use assets and retain the staging header', async () => {
-  const response = await worker.fetch(new Request('http://localhost:8791/favicon.svg'), {
+  const response = await worker.fetch(new Request('http://localhost:8791/favicon.svg') as Parameters<typeof worker.fetch>[0], {
     ASSETS: { fetch: async () => new Response('asset') },
-  });
+  } as unknown as Parameters<typeof worker.fetch>[1]);
   assert.equal(await response.text(), 'asset');
   assert.equal(response.headers.get('X-Robots-Tag'), 'noindex, nofollow');
 });
