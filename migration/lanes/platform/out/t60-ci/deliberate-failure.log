@@ -1,0 +1,144 @@
+$ pnpm -r --if-present test
+Scope: 2 of 3 workspace projects
+$ node --test "src/**/*.test.{ts,mjs}" ../../migration/lanes/platform/out/t60-ci/deliberate-failure.test.mjs
+✖ T60 deliberately broken gate proof (0.670338ms)
+✔ h3 entries nest under the preceding h2 and both levels target the rendered headings (1.404842ms)
+✔ slug IDs survive insertion of unrelated headings and repeated titles have unique targets (0.262669ms)
+✔ an orphan h3 remains navigable and a body without headings retains its content (0.196668ms)
+✔ empty selection shows the three newest other posts in the same language (4.982364ms)
+✔ CMS selection preserves editorial order, excludes missing/self/other-language references and duplicates (0.121251ms)
+✔ openDisclosure open and closed are open (0.400836ms)
+✔ toggleDisclosure flips, and a second closeDisclosure closed stays closed (0.099584ms)
+✔ bindNavDisclosure toggles aria-expanded, closes on Escape, and binds once (0.276544ms)
+✔ null returns kind empty (0.954964ms)
+✔ a two-item nav puts the first in links and the second in pill, and on /kontakt only the pill is current (1.680219ms)
+✔ the same query function on / and /kontakt runs once, and the current flags differ (0.130959ms)
+✔ a pl document requested as en rejects and stays rejected (0.268418ms)
+✔ a footer without the consent label has added, and before holds every link (0.163959ms)
+✔ a footer with the label in the middle has on-link, the label is in neither array, and a later twin stays in after (0.20446ms)
+✔ mailto is not current (0.096251ms)
+✔ / is current only for pathname / (0.57567ms)
+✔ static build pathnames ending in .html match the public path (0.463253ms)
+✔ an absolute zawlodzki.pl URL is current for its pathname, and one trailing slash is ignored (0.744463ms)
+✔ english copy uses /en and an empty nav stays none (0.090625ms)
+✔ a malformed document rejects (0.256752ms)
+✔ a thrown query stays cached for that function and language (0.093001ms)
+✔ a different query function does not reuse another function cache (0.069125ms)
+✔ the query embeds the language literal and does not ask for defaultSeo (0.045126ms)
+✔ Polish text, punctuation, markup-free text and empty headings (0.858089ms)
+✔ page-wide deduplication handles natural numeric suffix collisions (0.374877ms)
+✔ page state is isolated and repeatable between builds (0.127126ms)
+✔ T39 postOutline contract preserves post prefix and duplicate block key (0.070667ms)
+✔ paths include home, nested and EN routes (0.424836ms)
+✔ Portable Text retains headings, marks, links, images, lists and quotes (0.411294ms)
+✔ tables escape pipes and code fences preserve embedded backticks (0.123793ms)
+✔ sections retain tab and pricing content and exclude form configuration (0.271127ms)
+✔ page output includes title, description and canonical HTML URL (0.115292ms)
+✔ the empty project can still build its synthetic blog index (0.525753ms)
+✔ real content cannot silently fall back to legacy entity images (0.30846ms)
+✔ an unmodified post uses its publication date as dateModified (0.087334ms)
+✔ all visible text testimonials reach the single serialized graph (2.810267ms)
+✔ empty content still yields valid documents (1.122715ms)
+✔ sitemap index lists EN only when EN documents exist, with the newest lastmod per language (0.208835ms)
+✔ urlset is sorted, has no trailing slashes and adds /blog once posts exist (0.953631ms)
+✔ a /blog page document replaces the synthetic entry (0.138667ms)
+✔ XML output escapes markup in every text and URL (0.338877ms)
+✔ RSS lists PL posts only, newest first, with RFC 822 dates and media for images (0.176668ms)
+✔ llms.txt groups PL services, other pages and posts, and skips services without a page (0.153792ms)
+✔ robots.txt allows everything and points at the sitemap index (0.053375ms)
+✔ parseDiscovery normalizes dates and drops null optionals (0.275835ms)
+✔ parseDiscovery fails on a bad shape instead of returning less (0.376169ms)
+✔ loadDiscovery fails the build when Sanity does not answer (14.063671ms)
+✔ missing or invalid configuration fails closed before rendering (16.152809ms)
+✔ every unauthenticated URL including assets is rejected before rendering (5.901495ms)
+✔ robots disallows the entire site without authentication (0.613379ms)
+✔ successful, missing and failed pages keep private headers and allow only Studio framing (2.450349ms)
+✔ preview refuses form submissions before any side effect (0.439003ms)
+✔ hosted Studio also allows its Sanity application ancestor (0.300085ms)
+✔ session is signed, expires after one hour and cannot cross origin or dataset (27.929841ms)
+✔ tampered, malformed and duplicate sessions fail closed (2.638975ms)
+✔ cookie authorizes protected pages and assets and missing configuration still fails closed (4.670779ms)
+✔ only the exact GET enable endpoint reaches its own secret validation without Basic auth (1.233466ms)
+✔ redirect accepts local paths and rejects foreign, ambiguous and encoded boundaries (0.207168ms)
+✔ request readers fetch again and observe draft changes without a process restart (0.816589ms)
+✔ only display text receives visual editing metadata (0.125001ms)
+✔ an incomplete unrelated document does not break a valid preview (0.361836ms)
+✔ preview retains PL and EN routes and rejects uppercase slugs (0.472295ms)
+✔ imported entity images replace legacy CDN URLs while preserving entity identities (1.389259ms)
+✔ home: graph matches snapshot (0.287544ms)
+✔ home: one @graph, site entities intact, every reference typed (0.377836ms)
+✔ service: graph matches snapshot (0.630879ms)
+✔ service: one @graph, site entities intact, every reference typed (0.241877ms)
+✔ course: graph matches snapshot (0.623546ms)
+✔ course: one @graph, site entities intact, every reference typed (0.749421ms)
+✔ post: graph matches snapshot (0.433669ms)
+✔ post: one @graph, site entities intact, every reference typed (0.41617ms)
+✔ contact: graph matches snapshot (0.493503ms)
+✔ contact: one @graph, site entities intact, every reference typed (0.180459ms)
+✔ about: graph matches snapshot (0.530461ms)
+✔ about: one @graph, site entities intact, every reference typed (0.550753ms)
+✔ FAQPage disappears when the page passes no visible FAQ (0.166543ms)
+✔ serialized graph cannot close its script tag (0.164751ms)
+✔ EN page ids live under /en and keep the shared entity ids (0.113126ms)
+﹣ parity: every difference from the live JSON-LD is listed as intended (0.0425ms) # needs migration/00-inventory
+✔ canonical is www, no trailing slash, home is the bare origin (0.719838ms)
+✔ exactly one og:type: article for posts, website otherwise (0.996172ms)
+✔ title, description and Twitter tags match the live head (1.101549ms)
+✔ no hreflang without a real translation (0.451711ms)
+✔ hreflang pairs both ways plus x-default to PL (0.157834ms)
+✔ noindex only when asked (0.114751ms)
+✔ a clean rule is kept and rendered as a 301 line (0.768005ms)
+✔ rules that would break a page, a contract redirect or the Worker are skipped with a reason (1.583635ms)
+✔ the first of two rules for one source wins, and a chain between CMS rules is dropped (0.17746ms)
+✔ no rules gives an empty file (0.071292ms)
+✔ contact form forwards every Webflow field and redirects to the thank-you page (20.787546ms)
+✔ newsletter form redirects to the newsletter thank-you page (7.006752ms)
+✔ failed or missing Turnstile is rejected and nothing reaches n8n (1.154215ms)
+✔ invalid requests are rejected before n8n (0.699254ms)
+✔ n8n failure is reported instead of the thank-you redirect (5.006031ms)
+✔ Markdown assets get content type and production noindex (14.176922ms)
+✔ slash normalization preserves query and bypasses asset canonicalization (0.223418ms)
+✔ HTML routing stays outside Markdown helper and unknown assets stay 404 (0.252876ms)
+✔ committed redirects.data.ts matches url-map.csv (rerun redirects.gen.mjs) (1.969637ms)
+✔ every redirect-301 row in url-map.csv answers 301 at its target (12.671495ms)
+✔ path rules keep the query string (0.144084ms)
+✔ pagination rule drops only its parameter (0.127417ms)
+✔ uppercase variants and unknown paths fall through (0.060167ms)
+✔ no redirect target is itself redirected (0.074209ms)
+✔ generator rejects shapes it does not understand (0.328919ms)
+ℹ tests 105
+ℹ suites 0
+ℹ pass 103
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 554.756495
+
+✖ failing tests:
+
+test at ../../migration/lanes/platform/out/t60-ci/deliberate-failure.test.mjs:4:1
+✖ T60 deliberately broken gate proof (0.670338ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 2
+  
+      at TestContext.<anonymous> (file:///home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T60-ci-tests-node/migration/lanes/platform/out/t60-ci/deliberate-failure.test.mjs:4:57)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+[ELIFECYCLE] Test failed. See above for more details.
+Error: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL
+
+  × "pnpm recursive run" failed in /home/admin/.t3/worktrees/nowa-strona-
+  │ grzesiek/task-T60-ci-tests-node/apps/web
+
+[ELIFECYCLE] Test failed. See above for more details.

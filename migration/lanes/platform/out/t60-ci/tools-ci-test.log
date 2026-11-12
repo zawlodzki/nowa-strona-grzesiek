@@ -1,0 +1,40 @@
+✔ canonical sitemap and page links are fetched only from the target origin (118.598659ms)
+✔ a style fact that meets to while live does not is intended and exits 0 (2.226014ms)
+✔ the same pixel regions with no intended style verdict are defects and exit 1 (1.452967ms)
+✔ chrome differs while T27 is open, and the same fact is a defect once T27 is done (0.743921ms)
+✔ local-staging regions are lag and cannot be forced into a defect (0.767713ms)
+✔ an author rule with empty samples is missing-region, not intended (0.458461ms)
+✔ section padding is 48 at 390 and 64 at 1440 (0.828005ms)
+✔ shot widths reject an ends width and a break width (0.269627ms)
+✔ registry selectors omit box-pad and keep primary off cyan (0.239626ms)
+✔ a ledger missing one required key throws CoverageError for a small corpus (0.677129ms)
+✔ styleFact rejects a prop that still contains oklch or rgb( (0.220918ms)
+✔ a local intended verdict does not swallow a live-staging region (1.622593ms)
+✔ section-height swallows a height region and leaves an inner region (0.396419ms)
+✔ a shot box must cover at least 0.8 of the region (0.442377ms)
+✔ a forbid hit is style and a miss is a match (0.93813ms)
+✔ sales atlas fires only when live contains the whole word 250 (1.667135ms)
+✔ a full registry ledger that already meets every rule exits 0 (2.322098ms)
+✔ readKeepPaths returns keep paths in file order (2.7611ms)
+✔ readChromePolicy reads front matter and rejects a missing status (0.123292ms)
+✔ readReport rejects a missing file, an open report, and an unknown tag (14.494132ms)
+✔ exitCode rejects an empty list and an unbranded verdict (0.254001ms)
+✔ encodeSideBySide returns equal bytes for the same RGBA (2.148972ms)
+✔ decodePng returns the preview dimensions (1.64001ms)
+✔ decodePng reads an 8-bit RGBA PNG and rejects interlacing and 16-bit (0.906714ms)
+✔ columns wider than 480 scale down, and a wide noisy PNG retries at 240 (42.403641ms)
+✔ identical sections produce no regions (2.752351ms)
+✔ a rectangle past the slop is one region, and slop or a short run is none (2.627308ms)
+✔ a taller header does not mark a matching section, and section pairs align on their own (0.552879ms)
+✔ chrome strip hashes match within slop and differ above it (0.397669ms)
+✔ commit writes a content-addressed tree and a second image replaces it (11.995575ms)
+✔ a tree over the budget does not replace the report or the ledger (121.091257ms)
+✔ a live lock is reason lock and a dead lock is cleared (2.482807ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 235.298763

@@ -16,7 +16,7 @@
     "preview:dev": "astro dev --config src/preview/astro.config.mjs",
     "preview:serve": "wrangler dev --config .wrangler/preview/server/wrangler.json",
     "preview:test": "node --experimental-strip-types --test src/preview/*.test.ts",
-    "test": "node --test \"src/**/*.test.{ts,mjs}\" ../../migration/lanes/platform/out/t60-ci/deliberate-failure.test.mjs"
+    "test": "node --test \"src/**/*.test.{ts,mjs}\""
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.4.2",
