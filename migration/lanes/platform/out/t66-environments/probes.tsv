@@ -1,0 +1,4 @@
+host	path	status	location	x-robots-tag	content-type	title
+zawlodzki-web.zawlodzki.workers.dev	/	200	-	noindex, nofollow	text/html; charset=utf-8	CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki
+www.zawlodzki.pl	/	200	-	-	text/html; charset=utf-8	CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki
+127.0.0.1	/NOPE	404	-	noindex, nofollow	text/html; charset=utf-8	Nie znaleziono strony
