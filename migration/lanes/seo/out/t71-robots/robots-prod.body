@@ -1,0 +1,5 @@
+# AI crawlers welcome. See /llms.txt and page URLs with .md appended.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.zawlodzki.pl/sitemap.xml
