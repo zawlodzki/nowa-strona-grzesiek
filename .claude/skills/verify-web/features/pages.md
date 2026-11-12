@@ -6,7 +6,7 @@ A visitor who opens a site URL gets a 200 HTML page in Polish (`<html lang="pl">
 
 - `home` means `/` returns 200 with the imported SEO title and exactly one H1. An empty dataset keeps the scaffold the imported SEO title.
 - `home-query` means `/?x=1` returns the same page with 200 and no redirect.
-- `favicon` means `/favicon.svg` (`image/svg+xml`) and `/favicon.ico` return 200.
+- `favicon` means `/favicon.png` (`image/png`) and `/favicon.ico` return 200.
 - `keep-urls` means every `keep` path in `url-map.csv` returns 200 with no redirect hop. This needs T18.
 - `mobile` means the page has no horizontal overflow at 375 px wide.
 
@@ -26,7 +26,7 @@ Preconditions:
 - **Home.** Open `/`. Run `web.sh probe / --port 8790 --label home`. The line reads `200`, location `-`, content type `text/html; charset=utf-8`, the imported SEO title.
 - **Home renders.** Look at it. Run `web.sh shot / --port 8790 --label home`. Open `home-w1280.png` with Read. It shows the imported hero heading. `home-w1280.dom.html` contains `<html lang="pl">` and exactly one `<h1>`.
 - **Query string.** Open with tracking params. Run `web.sh probe '/?x=1' --port 8790 --label home-query`. The status is `200` and location is `-`.
-- **Favicon.** Run `web.sh probe /favicon.svg --port 8790` and `web.sh probe /favicon.ico --port 8790`. Both return `200` with an image content type.
+- **Favicon.** Run `web.sh probe /favicon.png --port 8790` and `web.sh probe /favicon.ico --port 8790`. Both return `200` with an image content type.
 - **Mobile.** Run `web.sh shot / --port 8790 --width 375 --label home`. The PNG shows no clipped text or sideways scroll.
 - **Every keep URL** (T18+). Run:
   ```bash

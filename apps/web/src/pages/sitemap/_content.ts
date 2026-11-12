@@ -27,6 +27,8 @@ export interface Discovery {
   person: { name: string; description: string } | null;
   docs: DiscoveryDoc[];
   services: DiscoveryService[];
+  /** Same shape as services. A service that shares a course's page is dropped. */
+  courses: DiscoveryService[];
 }
 
 const QUERY = `{
@@ -41,7 +43,8 @@ const QUERY = `{
     publishedAt,
     "image": mainImage.asset->url
   },
-  "services": *[_type == "service"]{name, description, "path": page->slug.current, "language": coalesce(page->language, "pl")}
+  "services": *[_type == "service" && !(page._ref in *[_type == "course"].page._ref)]{name, description, "path": page->slug.current, "language": coalesce(page->language, "pl")},
+  "courses": *[_type == "course"]{name, description, "path": page->slug.current, "language": coalesce(page->language, "pl")}
 }`;
 
 class ShapeError extends Error {
@@ -107,6 +110,19 @@ function parseDoc(fields: Fields, i: number): DiscoveryDoc {
   throw new ShapeError(`${where}.kind`, fields.kind);
 }
 
+function offerings(value: unknown, name: string): DiscoveryService[] {
+  return list(value, name).map((fields, i) => {
+    const where = `${name}[${i}]`;
+    const path = optional(fields, 'path', sitePath, where);
+    return {
+      name: text(fields, 'name', where),
+      description: text(fields, 'description', where),
+      language: language(fields, 'language', where),
+      ...(path && { path }),
+    };
+  });
+}
+
 /** Parses the raw query result. Throws on any unexpected shape so a bad document fails the build. */
 export function parseDiscovery(result: unknown): Discovery {
   const root = record(result, 'result');
@@ -114,16 +130,8 @@ export function parseDiscovery(result: unknown): Discovery {
   return {
     person: person && { name: text(person, 'name', 'person'), description: text(person, 'description', 'person') },
     docs: list(root.docs, 'docs').map(parseDoc),
-    services: list(root.services, 'services').map((fields, i) => {
-      const where = `services[${i}]`;
-      const path = optional(fields, 'path', sitePath, where);
-      return {
-        name: text(fields, 'name', where),
-        description: text(fields, 'description', where),
-        language: language(fields, 'language', where),
-        ...(path && { path }),
-      };
-    }),
+    services: offerings(root.services, 'services'),
+    courses: root.courses == null ? [] : offerings(root.courses, 'courses'),
   };
 }
 
