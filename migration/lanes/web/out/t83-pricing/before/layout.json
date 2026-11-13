@@ -1,0 +1,742 @@
+[
+  {
+    "width": 1440,
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "cards": [
+      {
+        "tier": {
+          "text": "Audyt CRM",
+          "y": 5724.15625,
+          "height": 33.015625,
+          "width": 132,
+          "scroll": 132,
+          "font": "17.4987px",
+          "lines": 1
+        },
+        "price": {
+          "text": "3 900 zł zł netto jednorazowo",
+          "y": 5773.171875,
+          "height": 118,
+          "width": 320,
+          "scroll": 320,
+          "font": "20px",
+          "lines": 3
+        },
+        "note": {
+          "text": "Dla firm, które już pracują w Pipedrive, ale system nie daje tego, co miał dawać.",
+          "y": 5907.171875,
+          "height": 75.046875,
+          "width": 320,
+          "scroll": 320,
+          "font": "17.4987px",
+          "lines": 2
+        },
+        "action": {
+          "text": "Zobacz audyt CRM",
+          "y": 5998.21875,
+          "height": 86,
+          "width": 320,
+          "scroll": 320,
+          "font": "20px",
+          "lines": 2
+        },
+        "cta": {
+          "text": "Zobacz audyt CRM",
+          "y": 5998.21875,
+          "height": 51,
+          "width": 320,
+          "scroll": 320,
+          "font": "20px",
+          "lines": 1
+        }
+      },
+      {
+        "tier": {
+          "text": "Wdrożenie do 5 osób",
+          "y": 5724.15625,
+          "height": 33.015625,
+          "width": 241.609375,
+          "scroll": 242,
+          "font": "17.4987px",
+          "lines": 1
+        },
+        "price": {
+          "text": "6 000 zł zł netto / mies.",
+          "y": 5773.171875,
+          "height": 118,
+          "width": 320,
+          "scroll": 320,
+          "font": "20px",
+          "lines": 3
+        },
+        "note": {
+          "text": "Współpraca 3-miesięczna, łącznie 18 000 zł netto. Proces, dane, konfiguracja, warsztaty i treningi 1:1 z handlowcami.",
+          "y": 5907.171875,
+          "height": 75.046875,
+          "width": 320,
+          "scroll": 320,
+          "font": "17.4987px",
+          "lines": 3
+        },
+        "action": {
+          "text": "Umów rozmowę o wdrożeniu",
+          "y": 5998.21875,
+          "height": 86,
+          "width": 320,
+          "scroll": 320,
+          "font": "20px",
+          "lines": 2
+        },
+        "cta": {
+          "text": "Umów rozmowę o wdrożeniu",
+          "y": 5998.21875,
+          "height": 51,
+          "width": 320,
+          "scroll": 320,
+          "font": "20px",
+          "lines": 1
+        }
+      },
+      {
+        "tier": {
+          "text": "Wdrożenie 5+ handlowców",
+          "y": 5724.15625,
+          "height": 33.015625,
+          "width": 309.75,
+          "scroll": 310,
+          "font": "17.4987px",
+          "lines": 1
+        },
+        "price": {
+          "text": "Wycena indywidualna",
+          "y": 5773.171875,
+          "height": 118,
+          "width": 320,
+          "scroll": 320,
+          "font": "20px",
+          "lines": 2
+        },
+        "note": {
+          "text": "Wdrożenie Pipedrive od zera dla całej firmy lub kilku zespołów, plus integracja z systemami firmy.",
+          "y": 5907.171875,
+          "height": 75.046875,
+          "width": 320,
+          "scroll": 320,
+          "font": "17.4987px",
+          "lines": 3
+        },
+        "action": {
+          "text": "Porozmawiajmy o zakresie i cenie",
+          "y": 5998.21875,
+          "height": 86,
+          "width": 320,
+          "scroll": 320,
+          "font": "20px",
+          "lines": 3
+        },
+        "cta": {
+          "text": "Porozmawiajmy o zakresie i cenie",
+          "y": 5998.21875,
+          "height": 86,
+          "width": 320,
+          "scroll": 320,
+          "font": "20px",
+          "lines": 2
+        }
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "cards": [
+      {
+        "tier": {
+          "text": "Audyt CRM",
+          "y": 7408.15625,
+          "height": 29.828125,
+          "width": 118.203125,
+          "scroll": 118,
+          "font": "15.2589px",
+          "lines": 1
+        },
+        "price": {
+          "text": "3 900 zł zł netto jednorazowo",
+          "y": 7453.984375,
+          "height": 80.03125,
+          "width": 291.671875,
+          "scroll": 292,
+          "font": "17.4397px",
+          "lines": 3
+        },
+        "note": {
+          "text": "Dla firm, które już pracują w Pipedrive, ale system nie daje tego, co miał dawać.",
+          "y": 7550.015625,
+          "height": 65.484375,
+          "width": 291.671875,
+          "scroll": 292,
+          "font": "15.2589px",
+          "lines": 2
+        },
+        "action": {
+          "text": "Zobacz audyt CRM",
+          "y": 7631.5,
+          "height": 48,
+          "width": 291.671875,
+          "scroll": 292,
+          "font": "17.4397px",
+          "lines": 2
+        },
+        "cta": {
+          "text": "Zobacz audyt CRM",
+          "y": 7631.5,
+          "height": 48,
+          "width": 291.671875,
+          "scroll": 292,
+          "font": "17.4397px",
+          "lines": 1
+        }
+      },
+      {
+        "tier": {
+          "text": "Wdrożenie do 5 osób",
+          "y": 7408.15625,
+          "height": 29.828125,
+          "width": 213.796875,
+          "scroll": 214,
+          "font": "15.2589px",
+          "lines": 1
+        },
+        "price": {
+          "text": "6 000 zł zł netto / mies.",
+          "y": 7453.984375,
+          "height": 80.03125,
+          "width": 291.6875,
+          "scroll": 292,
+          "font": "17.4397px",
+          "lines": 2
+        },
+        "note": {
+          "text": "Współpraca 3-miesięczna, łącznie 18 000 zł netto. Proces, dane, konfiguracja, warsztaty i treningi 1:1 z handlowcami.",
+          "y": 7550.015625,
+          "height": 65.484375,
+          "width": 291.6875,
+          "scroll": 292,
+          "font": "15.2589px",
+          "lines": 3
+        },
+        "action": {
+          "text": "Umów rozmowę o wdrożeniu",
+          "y": 7631.5,
+          "height": 48,
+          "width": 291.6875,
+          "scroll": 292,
+          "font": "17.4397px",
+          "lines": 2
+        },
+        "cta": {
+          "text": "Umów rozmowę o wdrożeniu",
+          "y": 7631.5,
+          "height": 48,
+          "width": 291.6875,
+          "scroll": 292,
+          "font": "17.4397px",
+          "lines": 1
+        }
+      },
+      {
+        "tier": {
+          "text": "Wdrożenie 5+ handlowców",
+          "y": 8706.296875,
+          "height": 29.828125,
+          "width": 273.234375,
+          "scroll": 273,
+          "font": "15.2589px",
+          "lines": 1
+        },
+        "price": {
+          "text": "Wycena indywidualna",
+          "y": 8752.125,
+          "height": 99.03125,
+          "width": 291.671875,
+          "scroll": 292,
+          "font": "17.4397px",
+          "lines": 2
+        },
+        "note": {
+          "text": "Wdrożenie Pipedrive od zera dla całej firmy lub kilku zespołów, plus integracja z systemami firmy.",
+          "y": 8867.15625,
+          "height": 65.484375,
+          "width": 291.671875,
+          "scroll": 292,
+          "font": "15.2589px",
+          "lines": 3
+        },
+        "action": {
+          "text": "Porozmawiajmy o zakresie i cenie",
+          "y": 8948.640625,
+          "height": 77.03125,
+          "width": 291.671875,
+          "scroll": 292,
+          "font": "17.4397px",
+          "lines": 3
+        },
+        "cta": {
+          "text": "Porozmawiajmy o zakresie i cenie",
+          "y": 8948.640625,
+          "height": 77.03125,
+          "width": 291.671875,
+          "scroll": 292,
+          "font": "17.4397px",
+          "lines": 2
+        }
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "cards": [
+      {
+        "tier": {
+          "text": "Audyt CRM",
+          "y": 8623.40625,
+          "height": 28.015625,
+          "width": 110.484375,
+          "scroll": 110,
+          "font": "14px",
+          "lines": 1
+        },
+        "price": {
+          "text": "3 900 zł zł netto jednorazowo",
+          "y": 8667.421875,
+          "height": 74,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "16px",
+          "lines": 3
+        },
+        "note": {
+          "text": "Dla firm, które już pracują w Pipedrive, ale system nie daje tego, co miał dawać.",
+          "y": 8757.421875,
+          "height": 40.03125,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "14px",
+          "lines": 2
+        },
+        "action": {
+          "text": "Zobacz audyt CRM",
+          "y": 8813.453125,
+          "height": 48,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "16px",
+          "lines": 2
+        },
+        "cta": {
+          "text": "Zobacz audyt CRM",
+          "y": 8813.453125,
+          "height": 48,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "16px",
+          "lines": 1
+        }
+      },
+      {
+        "tier": {
+          "text": "Wdrożenie do 5 osób",
+          "y": 9413.453125,
+          "height": 28.015625,
+          "width": 198.234375,
+          "scroll": 198,
+          "font": "14px",
+          "lines": 1
+        },
+        "price": {
+          "text": "6 000 zł zł netto / mies.",
+          "y": 9457.46875,
+          "height": 46,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "16px",
+          "lines": 2
+        },
+        "note": {
+          "text": "Współpraca 3-miesięczna, łącznie 18 000 zł netto. Proces, dane, konfiguracja, warsztaty i treningi 1:1 z handlowcami.",
+          "y": 9519.46875,
+          "height": 60.046875,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "14px",
+          "lines": 3
+        },
+        "action": {
+          "text": "Umów rozmowę o wdrożeniu",
+          "y": 9595.515625,
+          "height": 48,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "16px",
+          "lines": 2
+        },
+        "cta": {
+          "text": "Umów rozmowę o wdrożeniu",
+          "y": 9595.515625,
+          "height": 48,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "16px",
+          "lines": 1
+        }
+      },
+      {
+        "tier": {
+          "text": "Wdrożenie 5+ handlowców",
+          "y": 10515.515625,
+          "height": 28.015625,
+          "width": 252.796875,
+          "scroll": 253,
+          "font": "14px",
+          "lines": 1
+        },
+        "price": {
+          "text": "Wycena indywidualna",
+          "y": 10559.53125,
+          "height": 92,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "16px",
+          "lines": 2
+        },
+        "note": {
+          "text": "Wdrożenie Pipedrive od zera dla całej firmy lub kilku zespołów, plus integracja z systemami firmy.",
+          "y": 10667.53125,
+          "height": 60.046875,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "14px",
+          "lines": 3
+        },
+        "action": {
+          "text": "Porozmawiajmy o zakresie i cenie",
+          "y": 10743.578125,
+          "height": 48,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "16px",
+          "lines": 2
+        },
+        "cta": {
+          "text": "Porozmawiajmy o zakresie i cenie",
+          "y": 10743.578125,
+          "height": 48,
+          "width": 293.984375,
+          "scroll": 294,
+          "font": "16px",
+          "lines": 1
+        }
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 375,
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "cards": [
+      {
+        "tier": {
+          "text": "Audyt CRM",
+          "y": 8705.765625,
+          "height": 28.015625,
+          "width": 110.484375,
+          "scroll": 110,
+          "font": "14px",
+          "lines": 1
+        },
+        "price": {
+          "text": "3 900 zł zł netto jednorazowo",
+          "y": 8749.78125,
+          "height": 74,
+          "width": 279,
+          "scroll": 279,
+          "font": "16px",
+          "lines": 3
+        },
+        "note": {
+          "text": "Dla firm, które już pracują w Pipedrive, ale system nie daje tego, co miał dawać.",
+          "y": 8839.78125,
+          "height": 40.03125,
+          "width": 279,
+          "scroll": 279,
+          "font": "14px",
+          "lines": 2
+        },
+        "action": {
+          "text": "Zobacz audyt CRM",
+          "y": 8895.8125,
+          "height": 48,
+          "width": 279,
+          "scroll": 279,
+          "font": "16px",
+          "lines": 2
+        },
+        "cta": {
+          "text": "Zobacz audyt CRM",
+          "y": 8895.8125,
+          "height": 48,
+          "width": 279,
+          "scroll": 279,
+          "font": "16px",
+          "lines": 1
+        }
+      },
+      {
+        "tier": {
+          "text": "Wdrożenie do 5 osób",
+          "y": 9523.8125,
+          "height": 28.015625,
+          "width": 198.234375,
+          "scroll": 198,
+          "font": "14px",
+          "lines": 1
+        },
+        "price": {
+          "text": "6 000 zł zł netto / mies.",
+          "y": 9567.828125,
+          "height": 46,
+          "width": 279,
+          "scroll": 279,
+          "font": "16px",
+          "lines": 2
+        },
+        "note": {
+          "text": "Współpraca 3-miesięczna, łącznie 18 000 zł netto. Proces, dane, konfiguracja, warsztaty i treningi 1:1 z handlowcami.",
+          "y": 9629.828125,
+          "height": 60.046875,
+          "width": 279,
+          "scroll": 279,
+          "font": "14px",
+          "lines": 3
+        },
+        "action": {
+          "text": "Umów rozmowę o wdrożeniu",
+          "y": 9705.875,
+          "height": 48,
+          "width": 279,
+          "scroll": 279,
+          "font": "16px",
+          "lines": 2
+        },
+        "cta": {
+          "text": "Umów rozmowę o wdrożeniu",
+          "y": 9705.875,
+          "height": 48,
+          "width": 279,
+          "scroll": 279,
+          "font": "16px",
+          "lines": 1
+        }
+      },
+      {
+        "tier": {
+          "text": "Wdrożenie 5+ handlowców",
+          "y": 10653.875,
+          "height": 28.015625,
+          "width": 252.796875,
+          "scroll": 253,
+          "font": "14px",
+          "lines": 1
+        },
+        "price": {
+          "text": "Wycena indywidualna",
+          "y": 10697.890625,
+          "height": 92,
+          "width": 279,
+          "scroll": 279,
+          "font": "16px",
+          "lines": 2
+        },
+        "note": {
+          "text": "Wdrożenie Pipedrive od zera dla całej firmy lub kilku zespołów, plus integracja z systemami firmy.",
+          "y": 10805.890625,
+          "height": 60.046875,
+          "width": 279,
+          "scroll": 279,
+          "font": "14px",
+          "lines": 3
+        },
+        "action": {
+          "text": "Porozmawiajmy o zakresie i cenie",
+          "y": 10881.9375,
+          "height": 72,
+          "width": 279,
+          "scroll": 279,
+          "font": "16px",
+          "lines": 3
+        },
+        "cta": {
+          "text": "Porozmawiajmy o zakresie i cenie",
+          "y": 10881.9375,
+          "height": 72,
+          "width": 279,
+          "scroll": 279,
+          "font": "16px",
+          "lines": 2
+        }
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "cards": [
+      {
+        "tier": {
+          "text": "Audyt CRM",
+          "y": 9000.703125,
+          "height": 28.015625,
+          "width": 110.484375,
+          "scroll": 110,
+          "font": "14px",
+          "lines": 1
+        },
+        "price": {
+          "text": "3 900 zł zł netto jednorazowo",
+          "y": 9044.71875,
+          "height": 74,
+          "width": 224,
+          "scroll": 224,
+          "font": "16px",
+          "lines": 3
+        },
+        "note": {
+          "text": "Dla firm, które już pracują w Pipedrive, ale system nie daje tego, co miał dawać.",
+          "y": 9134.71875,
+          "height": 60.046875,
+          "width": 224,
+          "scroll": 224,
+          "font": "14px",
+          "lines": 3
+        },
+        "action": {
+          "text": "Zobacz audyt CRM",
+          "y": 9210.765625,
+          "height": 48,
+          "width": 224,
+          "scroll": 224,
+          "font": "16px",
+          "lines": 2
+        },
+        "cta": {
+          "text": "Zobacz audyt CRM",
+          "y": 9210.765625,
+          "height": 48,
+          "width": 224,
+          "scroll": 224,
+          "font": "16px",
+          "lines": 1
+        }
+      },
+      {
+        "tier": {
+          "text": "Wdrożenie do 5 osób",
+          "y": 9894.765625,
+          "height": 28.015625,
+          "width": 198.234375,
+          "scroll": 198,
+          "font": "14px",
+          "lines": 1
+        },
+        "price": {
+          "text": "6 000 zł zł netto / mies.",
+          "y": 9938.78125,
+          "height": 74,
+          "width": 224,
+          "scroll": 224,
+          "font": "16px",
+          "lines": 3
+        },
+        "note": {
+          "text": "Współpraca 3-miesięczna, łącznie 18 000 zł netto. Proces, dane, konfiguracja, warsztaty i treningi 1:1 z handlowcami.",
+          "y": 10028.78125,
+          "height": 80.0625,
+          "width": 224,
+          "scroll": 224,
+          "font": "14px",
+          "lines": 4
+        },
+        "action": {
+          "text": "Umów rozmowę o wdrożeniu",
+          "y": 10124.84375,
+          "height": 72,
+          "width": 224,
+          "scroll": 224,
+          "font": "16px",
+          "lines": 3
+        },
+        "cta": {
+          "text": "Umów rozmowę o wdrożeniu",
+          "y": 10124.84375,
+          "height": 72,
+          "width": 224,
+          "scroll": 224,
+          "font": "16px",
+          "lines": 2
+        }
+      },
+      {
+        "tier": {
+          "text": "Wdrożenie 5+ handlowców",
+          "y": 11376.84375,
+          "height": 48.03125,
+          "width": 224,
+          "scroll": 224,
+          "font": "14px",
+          "lines": 2
+        },
+        "price": {
+          "text": "Wycena indywidualna",
+          "y": 11440.875,
+          "height": 92,
+          "width": 224,
+          "scroll": 256,
+          "font": "16px",
+          "lines": 2
+        },
+        "note": {
+          "text": "Wdrożenie Pipedrive od zera dla całej firmy lub kilku zespołów, plus integracja z systemami firmy.",
+          "y": 11548.875,
+          "height": 60.046875,
+          "width": 224,
+          "scroll": 224,
+          "font": "14px",
+          "lines": 3
+        },
+        "action": {
+          "text": "Porozmawiajmy o zakresie i cenie",
+          "y": 11624.921875,
+          "height": 72,
+          "width": 224,
+          "scroll": 224,
+          "font": "16px",
+          "lines": 3
+        },
+        "cta": {
+          "text": "Porozmawiajmy o zakresie i cenie",
+          "y": 11624.921875,
+          "height": 72,
+          "width": 224,
+          "scroll": 224,
+          "font": "16px",
+          "lines": 2
+        }
+      }
+    ],
+    "overflow": false
+  }
+]

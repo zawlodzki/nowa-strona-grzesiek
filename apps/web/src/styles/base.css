@@ -53,6 +53,23 @@
  * the outline level.
  */
 @layer base {
+  /* Section ids are anchor targets too. Match Header.astro's logo, bar
+   * padding and border; section padding supplies the breathing room.
+   * Target sections rather than the scroller so heading/TOC margins do
+   * not add to this offset. The promo bar, when present, scrolls away.
+   */
+  :root {
+    --anchor-header-size: calc(44px + 2 * var(--space-2xs) + var(--border-width-hairline));
+  }
+
+  @media (width >= 992px) {
+    :root {
+      --anchor-header-size: calc(55px + 2 * var(--space-2xs) + var(--border-width-hairline));
+    }
+  }
+
+  section[id] { scroll-margin-block-start: var(--anchor-header-size); }
+
   body {
     background: var(--surface-page);
     color: var(--text-body);
