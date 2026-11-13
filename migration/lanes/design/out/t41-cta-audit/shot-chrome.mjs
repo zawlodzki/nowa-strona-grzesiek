@@ -3,7 +3,7 @@
 // capture the entire document at the measured 1280x900 viewport, then mark proposals.
 import { writeFileSync } from 'node:fs';
 process.env.CHROME_BIN='/opt/agent-vm/chromium/chrome';
-const {launch}=await import('../../../../../apps/web/src/components/diagrams/port/cdp.mjs');
+const {launch}=await import('../../../../tools/cdp.mjs');
 const args=process.argv.slice(2), url=args.find(a=>a.startsWith('http://'));
 const output=args.find(a=>a.startsWith('--screenshot='))?.split('=').slice(1).join('=');
 const marks={
