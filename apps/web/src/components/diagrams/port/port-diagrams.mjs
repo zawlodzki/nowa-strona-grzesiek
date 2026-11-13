@@ -148,9 +148,16 @@ const Component = diagrams[Astro.props.diagram];
 `,
 );
 
-// Rebuilt by hand in the calm scene style (T92, T96, scene/). They stay in
-// registry.ts and Diagram.astro, but this port no longer writes or checks them.
-const rebuilt = new Set(['CrmFunnel.astro', 'ZwManualRelay.astro', 'ZwAiSales.astro', 'ZwAutomation.astro', 'ZwAsana.astro']);
+// Scenes rebuilt by hand in the calm scene style (T92 onward, scene/) say so in
+// their header. They stay in registry.ts and Diagram.astro, but this port no
+// longer writes or checks them.
+const REBUILT_MARK = 'port-diagrams.mjs no longer writes this file';
+const rebuilt = new Set(
+  [...files.keys()].filter((name) => {
+    const path = join(outDir, name);
+    return name.endsWith('.astro') && existsSync(path) && readFileSync(path, 'utf8').includes(REBUILT_MARK);
+  }),
+);
 
 const unsized = diagrams.filter((d) => !sizes[d.key] && !rebuilt.has(`${pascal(d.key)}.astro`)).map((d) => d.key);
 let stale = 0;
