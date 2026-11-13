@@ -8,6 +8,7 @@ import Button from '../ui/Button.astro';
 import MediaImage from '../ui/MediaImage.astro';
 interface Props { data: Hero; image?: ResolvedImage; badgeImage?: ResolvedImage; headingLevel?: 'h1' | 'h2'; }
 const { data, image, badgeImage, headingLevel: Heading = 'h1' } = Astro.props;
+const isWordmark = badgeImage && badgeImage.width >= 3 * badgeImage.height;
 ---
 <BlockSection kind="hero">
   <div class:list={['hero-layout', { 'has-image': image }]}>
@@ -19,7 +20,7 @@ const { data, image, badgeImage, headingLevel: Heading = 'h1' } = Astro.props;
         {(data.badges?.length ?? 0) > 0 && <ul class="badges type-body-s">{data.badges?.map((badge) => <li>{badge}</li>)}</ul>}
       </div>
     </div>
-    {image && <div class:list={["portrait", { wide: data.badgeSize === "wide" }]} style={`--portrait-ratio: ${image.width / image.height}`}><div class="portrait-image"><MediaImage image={image} eager portrait /></div>{badgeImage && <img class="image-badge" src={badgeImage.src} alt={badgeImage.alt} width={badgeImage.width} height={badgeImage.height} />}</div>}
+    {image && <div class:list={["portrait", { wide: data.badgeSize === "wide" }]} style={`--portrait-ratio: ${image.width / image.height}`}><div class="portrait-image"><MediaImage image={image} eager portrait /></div>{badgeImage && <img class:list={['image-badge', { wordmark: isWordmark }]} src={badgeImage.src} alt={badgeImage.alt} width={badgeImage.width} height={badgeImage.height} />}</div>}
   </div>
 </BlockSection>
 <style>
@@ -35,5 +36,15 @@ const { data, image, badgeImage, headingLevel: Heading = 'h1' } = Astro.props;
   /* Inset over the visible torso, inside the cut-out image’s transparent margins. */
   .image-badge { position: absolute; z-index: 2; inline-size: 34%; block-size: auto; inset-block-end: -8%; inset-inline-start: 3%; }
   .wide .image-badge { inline-size: 52%; }
+  .portrait .wordmark {
+    inline-size: min(38%, 9.5rem);
+    inset-block-end: 5%;
+    padding: min(8%, var(--space-l));
+    box-sizing: content-box;
+    border-radius: var(--radius-md);
+    background: var(--surface-page);
+    outline: 1px solid var(--color-neutral-30);
+  }
+  .wide .wordmark { inline-size: min(40%, 10rem); }
   @container (width >= 48rem) { .portrait { inline-size: min(100%, calc(32rem * var(--portrait-ratio))); } .has-image { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); } }
 </style>
