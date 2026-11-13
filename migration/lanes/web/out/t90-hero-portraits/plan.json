@@ -1,0 +1,47 @@
+{
+  "project": "8u2zjhvn",
+  "dataset": "production",
+  "portraitAlt": "Grzegorz Zawłodzki",
+  "portraitReference": "/szkolenie-i-wdrozenie-salesforce",
+  "badges": {
+    "Pipedrive": {
+      "size": "wide",
+      "source": "https://cdn.sanity.io/images/8u2zjhvn/production/08abec6acda387c2000c78d8753195f6249dc6ba-800x502.avif",
+      "alt": "Pipedrive Authorized Partner",
+      "asset": "image-08abec6acda387c2000c78d8753195f6249dc6ba-800x502-avif"
+    },
+    "Asana": {
+      "size": "wide",
+      "source": "https://asana.com/brand",
+      "asset": "image-fb27eac693a531a987af7de1e3b59f51174bd02f-1000x198-svg"
+    },
+    "Claude": {
+      "size": "wide",
+      "source": "https://claude.com/",
+      "localFile": "claude.svg"
+    },
+    "n8n": {
+      "size": "wide",
+      "source": "https://guidelines.n8n.design/downloads/logo/lockup/n8n-logo-black-accent.svg",
+      "localFile": "n8n.svg"
+    }
+  },
+  "pages": {
+    "/": {"keepPortrait": true},
+    "/audyt-ai-sprzedaz": {"badge": "Claude"},
+    "/audyt-crm-pipedrive": {"badge": "Pipedrive"},
+    "/audyt-procesow-asana": {"badge": "Asana"},
+    "/audyt-sprzedazy": {"keepPortrait": true},
+    "/automatyzacja-procesow-biznesowych-nocode": {"badge": "n8n"},
+    "/automatyzacje-dla-pipedrive": {"badge": "Pipedrive"},
+    "/kurs-ai-w-sprzedazy": {"badge": "Claude"},
+    "/program-ai-dla-zespolu-sprzedazy": {"badge": "Claude"},
+    "/program-partnerski": {},
+    "/sales-atlas-system": {"keepPortrait": true, "keepBadge": true},
+    "/szkolenie-i-wdrozenie-asana": {"badge": "Asana"},
+    "/szkolenie-i-wdrozenie-pipedrive": {"badge": "Pipedrive"},
+    "/szkolenie-i-wdrozenie-salesforce": {"keepPortrait": true, "keepBadge": true},
+    "/wdrozenie-ai-w-sprzedazy-b2b": {"badge": "Claude"},
+    "/wspolpraca": {}
+  }
+}
