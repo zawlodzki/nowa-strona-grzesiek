@@ -160,4 +160,14 @@ export const postList = defineType({
   ], preview: {select: {title: 'heading', subtitle: 'kind'}},
 })
 export const richText = defineType({name: 'richText', title: 'Treść artykułu', type: 'object', fields: [defineField({name: 'body', type: 'portableText', validation: (rule) => rule.required().min(1)})]})
-export const blockTypes = [hero, logoStrip, feature, contentSection, tabs, pricing, ctaBand, testimonials, promoCard, faq, contactForm, newsletterSignup, postList, richText]
+export const sectionRef = defineType({
+  name: 'sectionRef', title: 'Sekcja wspólna', type: 'object',
+  description: 'Wstawia sekcję z kategorii „Sekcje”. Treść edytujesz w tamtym dokumencie.',
+  fields: [defineField({
+    name: 'section', title: 'Sekcja', type: 'reference', to: [{type: 'reusableSection'}],
+    options: {filter: ({document}) => ({filter: 'language == $language', params: {language: document.language ?? 'pl'}})},
+    validation: (rule) => rule.required(),
+  })],
+  preview: {select: {title: 'section.name', type: 'section.section.0._type'}, prepare: ({title, type}) => ({title: title ?? 'Wybierz sekcję', subtitle: type ? `Sekcja wspólna · ${type}` : 'Sekcja wspólna'})},
+})
+export const blockTypes = [hero, logoStrip, feature, contentSection, tabs, pricing, ctaBand, testimonials, promoCard, faq, contactForm, newsletterSignup, postList, richText, sectionRef]

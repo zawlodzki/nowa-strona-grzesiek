@@ -1,5 +1,5 @@
 // One query per build loads every routed document plus what their blocks reference, parsed once at this boundary.
-import type { ContentImage, Course, Logo, Organization, Page, Person, PortableText, Post, Seo, Service, Testimonial } from '../../../../studio/sanity.types';
+import type { ContentImage, Course, Logo, Organization, Page, Person, PortableText, Post, ReusableSection, Seo, Service, Testimonial } from '../../../../studio/sanity.types';
 import type { ResolvedImage } from '../../components/portable-text/types';
 import type { Language, SitePath } from '../../seo/types.ts';
 import { sanityQuery } from './client.ts';
@@ -10,7 +10,10 @@ type Routed<T extends { seo?: Seo }> = Omit<T, 'language' | 'title' | 'seo'> & {
   title: string;
   seo: Seo & { title: string; description: string };
 };
-export type PageDoc = Routed<Page>;
+type RawSection = NonNullable<Page['sections']>[number];
+/** A page section after `sectionRef` is replaced by the block of the referenced reusable section. */
+export type PageSection = Exclude<RawSection, { _type: 'sectionRef' }>;
+export type PageDoc = Omit<Routed<Page>, 'sections'> & { sections?: PageSection[] };
 export type PostDoc = Routed<Post> & { publishedAt: string; body: PortableText };
 
 export interface Site {
@@ -40,6 +43,7 @@ const QUERY = `{
   "testimonials": *[_type == "testimonial"],
   "services": *[_type == "service"],
   "courses": *[_type == "course"],
+  "reusableSections": *[_type == "reusableSection"],
   "person": *[_id == "person"][0],
   "organization": *[_id == "organization"][0],
   "translations": *[_type == "translation.metadata"]{"ids": translations[].value._ref}
@@ -70,6 +74,7 @@ interface Raw {
   testimonials: Testimonial[];
   services: Service[];
   courses?: Course[];
+  reusableSections?: ReusableSection[];
   person: Person | null;
   organization: Organization | null;
   translations: { ids: string[] | null }[];
@@ -137,8 +142,33 @@ function unlinkDangling(value: unknown, links: Record<string, string>, dropped: 
   for (const child of Object.values(node)) unlinkDangling(child, links, dropped);
 }
 
+// A `sectionRef` renders exactly like the block it points at, so every reader of `sections` sees an inlined block.
+// It keeps its own `_key`, so two references to one section on a page stay distinct.
+function resolveSectionRefs(page: Page, blocks: Map<string, PageSection>, missing: Set<string>): Omit<Page, 'sections'> & { sections?: PageSection[] } {
+  if (!page.sections) return { ...page, sections: undefined };
+  return {
+    ...page,
+    sections: page.sections.flatMap((section): PageSection[] => {
+      if (section._type !== 'sectionRef') return [section];
+      const ref = section.section?._ref ?? '';
+      const block = blocks.get(ref);
+      if (!block) {
+        missing.add(`${page._id} → ${ref || '(empty)'}`);
+        return [];
+      }
+      return [{ ...structuredClone(block), _key: section._key }];
+    }),
+  };
+}
+
 function parseSite(raw: Raw): Site {
-  const pages = raw.pages.map(routed);
+  const reusable = new Map<string, PageSection>();
+  for (const doc of raw.reusableSections ?? []) {
+    if (doc.section?.length === 1) reusable.set(doc._id, doc.section[0]);
+  }
+  const missing = new Set<string>();
+  const pages = raw.pages.map((page) => routed(resolveSectionRefs(page, reusable, missing)));
+  if (missing.size) console.warn(`[sanity] ${missing.size} shared section references point at no published section; those sections are skipped: ${[...missing].slice(0, 5).join(', ')}${missing.size > 5 ? ', …' : ''}`);
   const posts = raw.posts.map(parsePost).sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
   const byId = new Map<string, PageDoc | PostDoc>();
   const hrefs = new Map<string, string>();

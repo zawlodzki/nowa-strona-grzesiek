@@ -44,9 +44,12 @@ export default defineConfig({
           .child(S.documentTypeList('page').title('Strony prawne')
             .filter('_type == "page" && slug.current in $legalSlugs')
             .params({legalSlugs})),
+        S.documentTypeListItem('reusableSection')
+          .title('Sekcje')
+          .child(S.documentTypeList('reusableSection').title('Sekcje')),
         ...S.documentTypeListItems().filter((item) =>
           !singletonTypes.includes(item.getId() ?? '') &&
-          !['page', 'translation.metadata'].includes(item.getId() ?? '')),
+          !['page', 'reusableSection', 'translation.metadata'].includes(item.getId() ?? '')),
       ]),
     }),
     documentInternationalization({
