@@ -1,0 +1,9 @@
+[
+  { "path": "/kurs-ai-w-sprzedazy", "block": "cta-band", "old": "Zapytaj, czy kurs pasuje do Twojego procesu", "new": "Sprawdź, czy kurs pasuje" },
+  { "path": "/sales-atlas-system", "block": "cta-band", "old": "Umów konsultację o swoim systemie sprzedaży", "new": "Omówmy Twój system sprzedaży" },
+  { "path": "/audyt-ai-sprzedaz", "block": "cta-band", "old": "Porozmawiajmy o audycie AI w Waszej firmie", "new": "Porozmawiajmy o audycie AI" },
+  { "path": "/wdrozenie-ai-w-sprzedazy-b2b", "block": "cta-band", "old": "Porozmawiajmy o pierwszym procesie dla AI", "new": "Wybierzmy proces dla AI" },
+  { "path": "/program-ai-dla-zespolu-sprzedazy", "block": "cta-band", "old": "Zapytaj o udział zespołu w programie", "new": "Zapytaj o udział zespołu" },
+  { "path": "/audyt-crm-pipedrive", "block": "cta-band", "old": "Umów rozmowę o audycie Pipedrive", "new": "Omówmy audyt Pipedrive" },
+  { "path": "/audyt-sprzedazy", "block": "cta-band", "old": "Umów rozmowę o audycie sprzedaży", "new": "Omówmy audyt sprzedaży" }
+]
