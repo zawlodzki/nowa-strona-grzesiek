@@ -11,20 +11,20 @@ const grouped = chrome.kind === 'ready' ? footerGroups([...chrome.footer.before,
 ---
 {chrome.kind === 'empty' && <footer></footer>}
 {chrome.kind === 'ready' && grouped && (
-  <footer class="site-footer content-grid">
+  <footer class="site-footer content-grid" aria-label={chrome.footerLabel}>
     <div class="footer-inner">
       <div class="brand-row">
         <a class="brand" href={chrome.home} aria-label={chrome.logoLabel}><LogoMark /></a>
         <a class="atlas-link" href="/sales-atlas-system" aria-label="Sales Atlas System"><SalesAtlasBadge /></a>
       </div>
-      <nav class="columns" aria-label={chrome.footerLabel}>
+      <div class="columns">
         {grouped.columns.filter((group) => group.links.length).map((group) => (
-          <div class="column">
-            <h2 class="column-title">{group.title}</h2>
+          <nav aria-label={group.title}>
+            <p class="column-title">{group.title}</p>
             <ul>{group.links.map((link) => <li><a class="footer-link" href={link.href}>{link.label}</a></li>)}</ul>
-          </div>
+          </nav>
         ))}
-      </nav>
+      </div>
       <div class="partner-row">
         <img class="partner" src="/brand/pipedrive-authorized-partner.avif" width="160" height="64" alt="Pipedrive Authorized Partner" loading="lazy" />
         <ul class="socials" aria-label="Media społecznościowe">{SOCIAL_LINKS.map((link) => (
@@ -44,17 +44,18 @@ const grouped = chrome.kind === 'ready' ? footerGroups([...chrome.footer.before,
 <style>
   .site-footer { --footer-type-size: clamp(1rem, .89640884rem + .44198895vw, 1.25rem); padding-block: var(--space-l); border-block-start: 1px solid var(--border-default); background: var(--surface-page); container-type: inline-size; }
   .footer-inner { display: grid; gap: var(--space-l); min-inline-size: 0; }
-  .brand-row, .partner-row, .bottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-m); }
+  .brand-row, .partner-row, .bottom { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-m); }
+  .partner-row, .bottom { justify-content: space-between; }
   .brand, .atlas-link { display: inline-flex; min-block-size: 44px; align-items: center; }
   .brand :global(svg) { inline-size: 9rem; block-size: auto; }
   .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: var(--space-m); }
-  .column-title { font-family: var(--font-family-body); font-size: var(--footer-type-size); font-weight: var(--font-weight-semibold); line-height: 1.75; color: var(--text-heading); margin-block-end: var(--space-xs); }
+  .column-title { font-family: var(--font-family-body); font-size: var(--footer-type-size); font-weight: var(--font-weight-semibold); line-height: 1.75; color: var(--text-heading); margin-block: 0 var(--space-xs); }
   ul { list-style: none; padding: 0; margin: 0; }
   .partner { inline-size: auto; block-size: 3.4rem; object-fit: contain; }
   .socials, .legal { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2xs) var(--space-s); }
   .social-link { display: grid; place-items: center; inline-size: 44px; block-size: 44px; }
   .social-link img { inline-size: 1.5rem; block-size: 1.5rem; }
-  .footer-link { display: inline-flex; align-items: center; max-inline-size: 100%; min-block-size: 44px; padding: 0; border: 0; background: transparent; color: var(--text-muted); font: inherit; font-size: var(--footer-type-size); font-weight: var(--font-weight-regular); line-height: 1.75; text-align: start; text-decoration: none; overflow-wrap: anywhere; cursor: pointer; }
+  .footer-link { display: inline-flex; align-items: center; justify-content: center; min-inline-size: 44px; max-inline-size: 100%; min-block-size: 44px; padding: 0; border: 0; background: transparent; color: var(--text-muted); font: inherit; font-size: var(--footer-type-size); font-weight: var(--font-weight-regular); line-height: 1.75; text-align: start; text-decoration: none; overflow-wrap: anywhere; cursor: pointer; }
   .legal .footer-link { padding-block: var(--space-2xs); padding-inline: var(--space-s); }
   .bottom { color: var(--text-muted); }
   :is(.footer-link, .brand, .atlas-link, .social-link):focus-visible { outline: 2px solid var(--border-focus); outline-offset: 3px; }
@@ -62,7 +63,8 @@ const grouped = chrome.kind === 'ready' ? footerGroups([...chrome.footer.before,
   @media (hover: hover) and (pointer: fine) { .footer-link:hover { color: var(--text-link); } .social-link:hover { opacity: .7; } }
   @container (width < 48rem) {
     .columns { grid-template-columns: 1fr; text-align: center; }
-    .brand-row, .partner-row { flex-direction: column; }
+    .brand-row { justify-content: safe center; }
+    .partner-row { flex-direction: column; }
     .legal { flex-direction: column; }
     .bottom { flex-direction: column; text-align: center; }
     .legal { justify-content: center; }
