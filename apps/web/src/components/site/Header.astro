@@ -1,5 +1,6 @@
 ---
 import { chromeView } from './settings.ts';
+import Button from '../ui/Button.astro';
 import LogoMark from './LogoMark.astro';
 
 interface Props {
@@ -34,7 +35,7 @@ const logoCurrent = chrome.kind === 'ready' && chrome.logoCurrent;
               {chrome.nav.links.map((link) => (
                 <li><a class="nav-link" href={link.href} aria-current={link.current ? 'page' : undefined}>{link.label}</a></li>
               ))}
-              <li class="pill"><a class="pill-link" href={chrome.nav.pill.href} aria-current={chrome.nav.pill.current ? 'page' : undefined}>{chrome.nav.pill.label}</a></li>
+              <li class="pill"><Button link={{ _type: 'link', href: chrome.nav.pill.href, label: chrome.nav.pill.label }} current={chrome.nav.pill.current} /></li>
             </ul>
           </nav>
         )}

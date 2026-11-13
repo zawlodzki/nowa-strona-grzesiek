@@ -2,28 +2,39 @@
 import type { Link } from '../../../../studio/sanity.types';
 import Icon from './Icon.astro';
 import { safeHref } from './block-types';
-interface Props { link: Link; variant?: 'primary' | 'secondary' | 'on-dark' | 'text'; }
-const { link, variant = 'primary' } = Astro.props;
+interface Props { link: Link; current?: boolean; variant?: 'primary' | 'secondary' | 'on-dark' | 'text'; }
+const { link, variant = 'primary', current = false } = Astro.props;
 const href = safeHref(link.href);
 ---
-{href && link.label && <a class:list={['action', variant]} href={href}><span>{link.label}</span><Icon /></a>}
-<style>
-  .action { display: inline-flex; align-items: start; gap: .6em; justify-content: safe center; min-block-size: 44px; max-inline-size: 100%; padding: var(--space-2xs) var(--space-m); border-radius: var(--radius-pill); font-weight: var(--font-weight-medium); line-height: 1.5; text-decoration: none; overflow-wrap: anywhere; }
-  .action span { align-self: center; }
-  .primary { background: var(--surface-accent); color: var(--text-on-accent); }
-  .secondary, .on-dark { background: var(--surface-page); color: var(--text-link); }
-  .secondary { border: 3px solid var(--border-accent); }
-  .text { padding-inline: 0; color: var(--text-link); border-radius: var(--radius-sm); justify-content: start; text-decoration: underline; text-underline-offset: .2em; }
-  .action:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; box-shadow: 0 0 0 2px var(--surface-page); }
-  .primary:active { background: var(--text-link-active); color: var(--text-on-accent); }
-  :is(.secondary, .on-dark):active { background: var(--surface-tint); color: var(--text-link-active); }
-  .text:active { color: var(--text-link-active); }
-  .action:not(.text):active { scale: 0.97; }
+{href && link.label && <a class:list={['action', variant]} href={href} aria-current={current ? 'page' : undefined}><span>{link.label}</span><Icon name="hover-arrow" /></a>}
+<style is:global>
+  /* Reuse .button-system on native submit buttons (T87). */
+  :is(.action, .button-system) { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; gap: .4em; block-size: 52px; min-block-size: 52px; max-inline-size: 100%; padding-block: 8px; padding-inline: 24px; border: 0; border-radius: 999px; font-family: var(--typography-body-family); font-size: var(--typography-body-size); font-weight: 500; line-height: 1.5; white-space: nowrap; text-decoration: none; }
+  .action span { flex: none; }
+  .action.primary { background: var(--surface-accent); color: var(--text-on-accent); }
+  .action:is(.secondary, .on-dark) { background: var(--surface-page); color: var(--text-link); }
+  .action.secondary { box-shadow: inset 0 0 0 3px var(--border-accent); }
+  .action.text { color: var(--text-link); justify-content: start; text-decoration: underline; text-underline-offset: .2em; }
+  :is(.action, .button-system):focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; box-shadow: 0 0 0 2px var(--surface-page); }
+  .action.primary:active { background: var(--text-link-active); }
+  .action:is(.secondary, .on-dark):active { background: var(--surface-tint); }
+  .action.text:active { color: var(--text-link-active); }
+  .action:focus-visible .arrow-head { transform: translateX(6px); }
+  .action:focus-visible .arrow-shaft { opacity: 1; }
   @media (hover: hover) and (pointer: fine) {
-    .primary:hover { background: var(--text-link-hover); color: var(--text-on-accent); }
-    :is(.secondary, .on-dark):hover { background: var(--surface-cyan-tint); color: var(--text-link-hover); }
-    .text:hover { color: var(--text-link-hover); text-decoration-thickness: 3px; }
+    .action.primary:hover { background: var(--text-link-hover); }
+    .action:is(.secondary, .on-dark):hover { background: var(--surface-tint); color: var(--text-link-hover); }
+    .action.text:hover { color: var(--text-link-hover); }
+    .action:hover .arrow-head { transform: translateX(6px); }
+    .action:hover .arrow-shaft { opacity: 1; }
   }
-  @media (prefers-reduced-motion: no-preference) { .action { transition: background-color var(--motion-duration-base) var(--motion-easing-out), color var(--motion-duration-base) var(--motion-easing-out), scale var(--motion-duration-fast) var(--motion-easing-out); } }
+  @media (prefers-reduced-motion: no-preference) {
+    .action .arrow-head { transition: transform var(--motion-duration-base) var(--motion-easing-out); }
+    .action .arrow-shaft { transition: opacity var(--motion-duration-base) var(--motion-easing-out); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .action .arrow-head { transform: translateX(6px); }
+    .action .arrow-shaft { opacity: 1; }
+  }
   @media (width < 30rem) { .action:not(.text) { inline-size: 100%; } }
 </style>

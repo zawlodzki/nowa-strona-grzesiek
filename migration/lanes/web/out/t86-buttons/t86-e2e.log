@@ -1,0 +1,198 @@
+$ playwright test
+[WebServer] (node:462737) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] mock n8n listening on http://127.0.0.1:8794/webhook/mock
+[WebServer] ▲ [WARNING] Missing required secrets: N8N_FORM_WEBHOOK, TURNSTILE_SECRET_KEY. Add them to .dev.vars, .env, or set as environment variables.
+[WebServer] 
+[WebServer] 
+
+Running 22 tests using 2 workers
+
+(node:462794) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:462795) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [chromium] › e2e/consent.spec.ts:14:1 › first visit: Consent Mode v2 denies analytics and ads before the loader, and only GTM is requested (1.8s)
+  ✓   1 [chromium] › e2e/consent.spec.ts:39:1 › rejecting optional consent keeps analytics and ads denied and requests nothing new (2.5s)
+  ✓   4 [chromium] › e2e/pages.spec.ts:42:3 › home: no axe violation outside the recorded baseline (2.1s)
+  ✓   3 [chromium] › e2e/forms.spec.ts:24:3 › main-contact form delivers the Webflow envelope to n8n and lands on the thank-you page (4.0s)
+  ✘   5 [chromium] › e2e/pages.spec.ts:48:3 › home: no horizontal overflow at 320 px (1.6s)
+(node:463169) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [chromium] › e2e/forms.spec.ts:46:5 › main-contact form with an empty e-mail posts nothing (1.8s)
+  ✓   7 [chromium] › e2e/pages.spec.ts:42:3 › service: no axe violation outside the recorded baseline (2.1s)
+  ✓   8 [chromium] › e2e/forms.spec.ts:46:5 › main-contact form with an invalid e-mail posts nothing (1.7s)
+  ✘   9 [chromium] › e2e/pages.spec.ts:48:3 › service: no horizontal overflow at 320 px (1.2s)
+(node:463340) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [chromium] › e2e/pages.spec.ts:42:3 › blog: no axe violation outside the recorded baseline (1.7s)
+  ✓  10 [chromium] › e2e/forms.spec.ts:24:3 › newsletter form delivers the Webflow envelope to n8n and lands on the thank-you page (3.1s)
+  ✓  12 [chromium] › e2e/pages.spec.ts:48:3 › blog: no horizontal overflow at 320 px (1.3s)
+  ✓  13 [chromium] › e2e/forms.spec.ts:46:5 › newsletter form with an empty e-mail posts nothing (1.9s)
+  ✓  14 [chromium] › e2e/pages.spec.ts:42:3 › post: no axe violation outside the recorded baseline (1.8s)
+  ✓  15 [chromium] › e2e/forms.spec.ts:46:5 › newsletter form with an invalid e-mail posts nothing (1.7s)
+  ✓  17 [chromium] › e2e/forms.spec.ts:65:1 › the outbound guard stops and reports a request to flows.zawlodzki.com (559ms)
+  ✓  16 [chromium] › e2e/pages.spec.ts:48:3 › post: no horizontal overflow at 320 px (1.2s)
+  ✓  19 [chromium] › e2e/pages.spec.ts:48:3 › contact: no horizontal overflow at 320 px (1.7s)
+  ✓  18 [chromium] › e2e/pages.spec.ts:42:3 › contact: no axe violation outside the recorded baseline (4.2s)
+  ✘  21 [chromium] › e2e/pages.spec.ts:65:3 › /szkolenie-i-wdrozenie-asana: testimonial logos invert exactly when the same artwork is inverted in the logo strip (269ms)
+(node:464103) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  22 [chromium] › e2e/pages.spec.ts:65:3 › /: testimonial logos invert exactly when the same artwork is inverted in the logo strip (504ms)
+  ✘  20 [chromium] › e2e/pages.spec.ts:57:1 › consent banner: axe violations stay within the recorded baseline (5.7s)
+
+
+  1) [chromium] › e2e/pages.spec.ts:48:3 › home: no horizontal overflow at 320 px ──────────────────
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 320
+    Received:    336
+
+      51 |     await rejectOptionalConsent(page);
+      52 |     const widths = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
+    > 53 |     expect(widths.scroll).toBeLessThanOrEqual(widths.client);
+         |                           ^
+      54 |   });
+      55 | }
+      56 |
+        at /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T86-button-system/apps/web/e2e/pages.spec.ts:53:27
+
+    Error Context: .wrangler/e2e/results/pages-home-no-horizontal-overflow-at-320-px-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    .wrangler/e2e/results/pages-home-no-horizontal-overflow-at-320-px-chromium/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace .wrangler/e2e/results/pages-home-no-horizontal-overflow-at-320-px-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › e2e/pages.spec.ts:48:3 › service: no horizontal overflow at 320 px ───────────────
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 320
+    Received:    404
+
+      51 |     await rejectOptionalConsent(page);
+      52 |     const widths = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
+    > 53 |     expect(widths.scroll).toBeLessThanOrEqual(widths.client);
+         |                           ^
+      54 |   });
+      55 | }
+      56 |
+        at /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T86-button-system/apps/web/e2e/pages.spec.ts:53:27
+
+    Error Context: .wrangler/e2e/results/pages-service-no-horizontal-overflow-at-320-px-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    .wrangler/e2e/results/pages-service-no-horizontal-overflow-at-320-px-chromium/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace .wrangler/e2e/results/pages-service-no-horizontal-overflow-at-320-px-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › e2e/pages.spec.ts:57:1 › consent banner: axe violations stay within the recorded baseline 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('consent-banner-card')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('consent-banner-card') with timeout 5000ms
+      - waiting for getByTestId('consent-banner-card')
+
+
+      57 | test('consent banner: axe violations stay within the recorded baseline', async ({ page }, testInfo) => {
+      58 |   await page.goto('/');
+    > 59 |   await expect(page.getByTestId('consent-banner-card')).toBeVisible();
+         |                                                         ^
+      60 |   await expectWithinBaseline('consent-banner', new AxeBuilder({ page }).include('[data-testid="consent-banner-card"]'), testInfo);
+      61 | });
+      62 |
+        at /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T86-button-system/apps/web/e2e/pages.spec.ts:59:57
+
+    Error Context: .wrangler/e2e/results/pages-consent-banner-axe-v-ab97e-ithin-the-recorded-baseline-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    .wrangler/e2e/results/pages-consent-banner-axe-v-ab97e-ithin-the-recorded-baseline-chromium/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace .wrangler/e2e/results/pages-consent-banner-axe-v-ab97e-ithin-the-recorded-baseline-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › e2e/pages.spec.ts:65:3 › /szkolenie-i-wdrozenie-asana: testimonial logos invert exactly when the same artwork is inverted in the logo strip 
+
+    Error: testimonial logos on the page
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      68 |     const inverted = new Set((await page.locator('.logo-strip li.difference img').evaluateAll((imgs) => imgs.map((img) => (img as HTMLImageElement).src))).map(assetOf));
+      69 |     const logos = await page.locator('.testimonials img.logo').evaluateAll((imgs) => imgs.map((img) => ({ src: (img as HTMLImageElement).src, filter: getComputedStyle(img).filter })));
+    > 70 |     expect(logos.length, 'testimonial logos on the page').toBeGreaterThan(0);
+         |                                                           ^
+      71 |     for (const logo of logos) expect(logo.filter, assetOf(logo.src)).toBe(inverted.has(assetOf(logo.src)) ? 'invert(1) grayscale(1)' : 'none');
+      72 |   });
+      73 | }
+        at /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T86-button-system/apps/web/e2e/pages.spec.ts:70:59
+
+    Error Context: .wrangler/e2e/results/pages--szkolenie-i-wdrozen-e3822--inverted-in-the-logo-strip-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    .wrangler/e2e/results/pages--szkolenie-i-wdrozen-e3822--inverted-in-the-logo-strip-chromium/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace .wrangler/e2e/results/pages--szkolenie-i-wdrozen-e3822--inverted-in-the-logo-strip-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › e2e/pages.spec.ts:65:3 › /: testimonial logos invert exactly when the same artwork is inverted in the logo strip 
+
+    Error: testimonial logos on the page
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      68 |     const inverted = new Set((await page.locator('.logo-strip li.difference img').evaluateAll((imgs) => imgs.map((img) => (img as HTMLImageElement).src))).map(assetOf));
+      69 |     const logos = await page.locator('.testimonials img.logo').evaluateAll((imgs) => imgs.map((img) => ({ src: (img as HTMLImageElement).src, filter: getComputedStyle(img).filter })));
+    > 70 |     expect(logos.length, 'testimonial logos on the page').toBeGreaterThan(0);
+         |                                                           ^
+      71 |     for (const logo of logos) expect(logo.filter, assetOf(logo.src)).toBe(inverted.has(assetOf(logo.src)) ? 'invert(1) grayscale(1)' : 'none');
+      72 |   });
+      73 | }
+        at /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T86-button-system/apps/web/e2e/pages.spec.ts:70:59
+
+    Error Context: .wrangler/e2e/results/pages--testimonial-logos-i-b314f--inverted-in-the-logo-strip-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    .wrangler/e2e/results/pages--testimonial-logos-i-b314f--inverted-in-the-logo-strip-chromium/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace .wrangler/e2e/results/pages--testimonial-logos-i-b314f--inverted-in-the-logo-strip-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5 failed
+    [chromium] › e2e/pages.spec.ts:48:3 › home: no horizontal overflow at 320 px ───────────────────
+    [chromium] › e2e/pages.spec.ts:48:3 › service: no horizontal overflow at 320 px ────────────────
+    [chromium] › e2e/pages.spec.ts:57:1 › consent banner: axe violations stay within the recorded baseline 
+    [chromium] › e2e/pages.spec.ts:65:3 › /szkolenie-i-wdrozenie-asana: testimonial logos invert exactly when the same artwork is inverted in the logo strip 
+    [chromium] › e2e/pages.spec.ts:65:3 › /: testimonial logos invert exactly when the same artwork is inverted in the logo strip 
+  17 passed (26.7s)
+[ELIFECYCLE] Command failed with exit code 1.
+Error: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL
+
+  × "pnpm recursive run" failed in /home/admin/.t3/worktrees/nowa-strona-
+  │ grzesiek/task-T86-button-system/apps/web
+
