@@ -18,6 +18,6 @@ Date: 2026-11-13. Local Studio (`SANITY_STUDIO_DATASET=development pnpm dev --po
 | The site renders the referenced section | `page-sectionref-rendered.jpg`: `SANITY_DATASET=development astro build`, page served from `dist/`. Heading "Sekcja wspólna T54" and body "T54: ten tekst pochodzi z dokumentu Sekcja, nie ze strony." come from the Sekcja document. |
 | Resolution rules | `section-ref.test.ts` (4 pass): order and page `_key` kept, two refs get separate copies, inlined sections untouched, missing target skipped with a warning, query result without `reusableSections` still parses. Run: `node --test migration/lanes/cms/out/t54-reusable-sections/section-ref.test.ts` |
 
-## Development dataset documents left for review
+## Development dataset cleanup
 
-`0b4778c5-dba9-4aaf-a6d3-2fb073062646` (reusableSection) and `t54-section-ref-proof` (page `/t54-sekcja-wspolna`). Both exist only in `development`. Delete them after review if not needed.
+The proof documents `0b4778c5-dba9-4aaf-a6d3-2fb073062646` (reusableSection) and `t54-section-ref-proof` (page `/t54-sekcja-wspolna`) were deleted from `development` on 2026-11-13 after the screenshots. To repeat the proof, create a Sekcja and a page with a "Sekcja wspólna" block in local Studio again.
