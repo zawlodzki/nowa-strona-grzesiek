@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=utf-8
+Cache-Control: public, max-age=0, must-revalidate
+ETag: "991a1ed8946ecc8059d155c31379ac84"
+Link: </blog/rss.xml>; rel="alternate"; type="application/rss+xml"
+Strict-Transport-Security: max-age=31536000
+Vary: Accept
+CF-Cache-Status: HIT
+X-Robots-Tag: noindex, nofollow
+content-security-policy: frame-ancestors 'self'
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+
