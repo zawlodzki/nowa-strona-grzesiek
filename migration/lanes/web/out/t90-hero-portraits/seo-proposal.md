@@ -1,6 +1,6 @@
 # Proponowane skróty SEO dla T90
 
-Sanity odrzuciło publikację 14 szkiców, ponieważ osiem stron ma istniejące tytuły lub opisy SEO powyżej limitu. Poniższe zmiany wymagają zatwierdzenia przed zapisem w Sanity.
+Sanity odrzuciło publikację 14 szkiców, ponieważ osiem stron ma istniejące tytuły lub opisy SEO powyżej limitu. Właściciel zatwierdził poniższe korekty i opublikowano je w Sanity 13 listopada 2026.
 
 | Strona | Pole | Obecna treść | Proponowana treść | Znaki / limit |
 | --- | --- | --- | --- | --- |
