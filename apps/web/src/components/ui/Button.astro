@@ -2,28 +2,74 @@
 import type { Link } from '../../../../studio/sanity.types';
 import Icon from './Icon.astro';
 import { safeHref } from './block-types';
-interface Props { link: Link; variant?: 'primary' | 'secondary' | 'on-dark' | 'text'; }
-const { link, variant = 'primary' } = Astro.props;
+interface Props { link: Link; current?: boolean; variant?: 'primary' | 'secondary' | 'on-dark' | 'text'; }
+const { link, variant = 'primary', current = false } = Astro.props;
 const href = safeHref(link.href);
 ---
-{href && link.label && <a class:list={['action', variant]} href={href}><span>{link.label}</span><Icon /></a>}
-<style>
-  .action { display: inline-flex; align-items: start; gap: .6em; justify-content: safe center; min-block-size: 44px; max-inline-size: 100%; padding: var(--space-2xs) var(--space-m); border-radius: var(--radius-pill); font-weight: var(--font-weight-medium); line-height: 1.5; text-decoration: none; overflow-wrap: anywhere; }
-  .action span { align-self: center; }
-  .primary { background: var(--surface-accent); color: var(--text-on-accent); }
-  .secondary, .on-dark { background: var(--surface-page); color: var(--text-link); }
-  .secondary { border: 3px solid var(--border-accent); }
-  .text { padding-inline: 0; color: var(--text-link); border-radius: var(--radius-sm); justify-content: start; text-decoration: underline; text-underline-offset: .2em; }
-  .action:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; box-shadow: 0 0 0 2px var(--surface-page); }
-  .primary:active { background: var(--text-link-active); color: var(--text-on-accent); }
-  :is(.secondary, .on-dark):active { background: var(--surface-tint); color: var(--text-link-active); }
-  .text:active { color: var(--text-link-active); }
-  .action:not(.text):active { scale: 0.97; }
+{href && link.label && <a class:list={['action', variant]} href={href} aria-current={current ? 'page' : undefined}><span>{link.label}</span><Icon name="hover-arrow" /></a>}
+<style is:global>
+  /* Reuse .button-system on native submit buttons (T87). */
+  :is(a.action, .button-system, .pricing a.cta) { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; gap: .4em; block-size: 52px; min-block-size: 52px; min-inline-size: 0; max-inline-size: 100%; padding-block: 8px; padding-inline: 24px; border: 0; border-radius: 999px; font-family: var(--typography-body-family); font-size: var(--typography-body-size); font-weight: 500; line-height: 1.5; white-space: nowrap; text-decoration: none; }
+  a.action span { flex: 0 1 auto; min-inline-size: 0; }
+  a.action.primary { background: var(--surface-accent); color: var(--text-on-accent); }
+  a.action:is(.secondary, .on-dark) { background: var(--surface-page); color: var(--text-link); }
+  a.action.secondary { box-shadow: inset 0 0 0 3px var(--border-accent); }
+  a.action.text { color: var(--text-link); justify-content: start; text-decoration: underline; text-underline-offset: .2em; }
+  :is(a.action, .button-system, .pricing a.cta):focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; box-shadow: 0 0 0 2px var(--surface-page); }
+  a.action.primary:active { background: var(--text-link-active); }
+  a.action:is(.secondary, .on-dark):active { background: var(--surface-tint); }
+  a.action.text:active { color: var(--text-link-active); }
+  a.action:focus-visible .arrow-head { transform: translateX(6px); }
+  a.action:focus-visible .arrow-shaft { opacity: 1; }
   @media (hover: hover) and (pointer: fine) {
-    .primary:hover { background: var(--text-link-hover); color: var(--text-on-accent); }
-    :is(.secondary, .on-dark):hover { background: var(--surface-cyan-tint); color: var(--text-link-hover); }
-    .text:hover { color: var(--text-link-hover); text-decoration-thickness: 3px; }
+    a.action.primary:hover { background: var(--text-link-hover); }
+    a.action:is(.secondary, .on-dark):hover { background: var(--surface-tint); color: var(--text-link-hover); }
+    a.action.text:hover { color: var(--text-link-hover); }
+    a.action:hover .arrow-head { transform: translateX(6px); }
+    a.action:hover .arrow-shaft { opacity: 1; }
   }
-  @media (prefers-reduced-motion: no-preference) { .action { transition: background-color var(--motion-duration-base) var(--motion-easing-out), color var(--motion-duration-base) var(--motion-easing-out), scale var(--motion-duration-fast) var(--motion-easing-out); } }
-  @media (width < 30rem) { .action:not(.text) { inline-size: 100%; } }
+  @media (prefers-reduced-motion: no-preference) {
+    a.action .arrow-head { transition: transform var(--motion-duration-base) var(--motion-easing-out); }
+    a.action .arrow-shaft { transition: opacity var(--motion-duration-base) var(--motion-easing-out); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    a.action .arrow-head { transform: translateX(6px); }
+    a.action .arrow-shaft { opacity: 1; }
+  }
+  @media (width < 30rem) { :is(a.action, .button-system, .pricing a.cta) { padding-inline: 12px; } a.action:not(.text) { inline-size: 100%; } }
 </style>
+
+<script>
+  // CMS labels stay complete and single-line. Measure real glyphs, not character counts.
+  // Only constrained labels shrink; button geometry and hover never depend on this value.
+  const buttons = document.querySelectorAll<HTMLAnchorElement>('a.action');
+  function fitLabel(button: HTMLAnchorElement) {
+    if (!button.clientWidth) return;
+    const label = button.querySelector<HTMLSpanElement>('span');
+    const icon = button.querySelector('svg');
+    if (!label || !icon) return;
+    label.style.removeProperty('font-size');
+    const style = getComputedStyle(button);
+    const range = document.createRange();
+    range.selectNodeContents(label);
+    const natural = range.getBoundingClientRect().width;
+    // Preserve intrinsic button width when the label font shrinks.
+    label.style.inlineSize = `${natural}px`;
+    const available = label.getBoundingClientRect().width;
+    if (natural > available + .5 && available > 2) {
+      let size = parseFloat(style.fontSize);
+      // Variable-font metrics need not scale linearly with font size.
+      for (let attempt = 0; attempt < 4; attempt++) {
+        const measured = range.getBoundingClientRect().width;
+        if (measured <= available) break;
+        size *= (available - 2) / measured;
+        label.style.fontSize = `${size}px`;
+      }
+    }
+  }
+  const observer = new ResizeObserver(entries => {
+    for (const entry of entries) fitLabel(entry.target as HTMLAnchorElement);
+  });
+  for (const button of buttons) observer.observe(button);
+  document.fonts.ready.then(() => buttons.forEach(fitLabel));
+</script>
