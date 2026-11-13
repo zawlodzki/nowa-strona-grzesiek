@@ -175,8 +175,7 @@ const logoCurrent = chrome.kind === 'ready' && chrome.logoCurrent;
     inline-size: 100%;
   }
 
-  .nav-link,
-  .pill-link {
+  .nav-link {
     display: flex;
     align-items: center;
     min-block-size: 44px;
@@ -198,37 +197,15 @@ const logoCurrent = chrome.kind === 'ready' && chrome.logoCurrent;
 
   .nav-link[aria-current='page'] { color: var(--text-heading); }
 
-  .pill-link {
-    justify-content: center;
-    border-radius: var(--radius-pill);
-    background: var(--surface-accent);
-    color: var(--text-on-accent);
-    font-weight: var(--font-weight-medium);
-  }
-
-  .site-nav .pill,
-  .site-nav .pill-link {
-    inline-size: 100%;
-  }
+  .site-nav .pill { inline-size: 100%; }
+  .site-nav .pill > :global(.action) { inline-size: 100%; }
 
   @media (hover: hover) and (pointer: fine) {
     .nav-link:hover { color: var(--text-link); }
-    .pill-link:hover {
-      background: var(--text-link-hover);
-      color: var(--text-on-accent);
-    }
     .nav-toggle:hover { color: color-mix(in oklch, var(--text-heading) 80%, black); }
   }
 
   .nav-link:active { color: var(--text-link-hover); }
-  .pill-link:active {
-    background: var(--text-link-active);
-    color: var(--text-on-accent);
-    scale: 0.97;
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .pill-link { transition: background-color var(--motion-duration-base) var(--motion-easing-out), scale var(--motion-duration-fast) var(--motion-easing-out); }
-  }
   .logo:active,
   .nav-toggle:active { color: color-mix(in oklch, var(--text-heading) 75%, black); }
 
@@ -274,7 +251,7 @@ const logoCurrent = chrome.kind === 'ready' && chrome.logoCurrent;
       inline-size: auto;
     }
 
-    .site-nav .pill-link,
-    .nav-toggle[aria-expanded='true'] + .site-nav .pill-link { inline-size: auto; }
+    .site-nav .pill > :global(.action),
+    .nav-toggle[aria-expanded='true'] + .site-nav .pill > :global(.action) { inline-size: auto; }
   }
 </style>

@@ -15,7 +15,8 @@ const { data, tone = 'accent' } = Astro.props;
   :is(h2, h3)[id] { scroll-margin-top: 7.5rem; }
   .band { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-l); padding: clamp(1.5rem, 5cqi, 4rem); border-radius: var(--radius-lg); background: var(--surface-accent); color: var(--text-on-accent); }
   .band h2 { color: inherit; }
-  .copy { flex: 1 1 24rem; display: grid; gap: var(--space-s); max-inline-size: 65ch; overflow-wrap: anywhere; }
+  .copy { min-inline-size: 0; flex: 1 1 24rem; display: grid; gap: var(--space-s); max-inline-size: 65ch; overflow-wrap: anywhere; }
   .soft { background: var(--surface-soft); color: var(--text-body); }
   .band > :global(.action) { flex: 0 0 auto; }
+  @media (width < 30rem) { .band { padding-inline: var(--space-xs); } }
 </style>

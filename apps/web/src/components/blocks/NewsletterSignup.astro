@@ -81,6 +81,7 @@ const legalLinks = editedLinks.length > 0 ? editedLinks : [{ href: '/regulamin-n
   .inner :global(.signup .cf-turnstile), .inner :global(.signup .status) { grid-column: 1 / -1; }
   @container (width < 30rem) { .inner > :global(.signup) { grid-template-columns: minmax(0, 1fr); } .inner :global(.signup .submit) { grid-column: 1; grid-row: 2; inline-size: 100%; } }
   @media (hover: hover) and (pointer: fine) { .inner :global(.signup .submit:hover) { background: var(--surface-tint); } }
+  @media (width < 30rem) { .inner :global(.signup .submit) { padding-inline: 12px; } }
   .legal { color: var(--text-on-dark-muted); max-inline-size: 60ch; }
   .legal a { color: var(--text-link-on-dark); }
   .legal a:active { color: var(--text-on-dark); }
