@@ -1,0 +1,70 @@
+/* Shared frame for the scenes rebuilt in the calm style (T92). Scenes are
+   drawn with hairlines and type on a Paper scene card, read every colour from
+   the site tokens and reflow to their slot instead of scaling a fixed board.
+   Signal Cyan only decorates; text is ink, slate, Atlas Blue or Error Red. */
+@layer components {
+  .sc {
+    container-type: inline-size;
+    color: var(--text-body);
+    font-family: var(--font-family-body);
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    letter-spacing: 0;
+    font-variant-numeric: tabular-nums;
+    background: var(--surface-page);
+    border: 1px solid var(--border-hairline);
+    border-radius: var(--radius-md);
+  }
+
+  .sc-body {
+    position: relative;
+    padding: clamp(1rem, 4cqi, 1.75rem);
+  }
+
+  @container (inline-size < 26rem) {
+    .sc-body {
+      font-size: 0.8125rem;
+    }
+  }
+
+  .sc :is(ul, ol) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sc li {
+    margin: 0;
+  }
+
+  .sc-pending {
+    opacity: 0;
+  }
+
+  .sc-total {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-block-start: var(--space-m);
+    padding-block-start: var(--space-xs);
+    border-block-start: 1px solid var(--text-heading);
+  }
+
+  .sc-total-label {
+    color: var(--text-muted);
+  }
+
+  .sc-total-value {
+    color: var(--text-link);
+    font-family: var(--font-family-heading);
+    font-size: clamp(1.75rem, 1.2rem + 4cqi, 2.6rem);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1;
+  }
+
+  .sc-total-value.is-loss {
+    color: var(--text-error);
+  }
+}
