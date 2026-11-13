@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=utf-8
+Cache-Control: public, max-age=0, must-revalidate
+ETag: "044ec0883f13d8e55aa1e8189fd4cd7b"
+Strict-Transport-Security: max-age=31536000
+Vary: Accept
+CF-Cache-Status: HIT
+X-Robots-Tag: noindex, nofollow
+content-security-policy: frame-ancestors 'self'
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+
