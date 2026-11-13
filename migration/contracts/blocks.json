@@ -115,6 +115,15 @@
       "jsonld": "none",
       "match": [{"classes": "blog-article"}]
     },
+    {
+      "type": "sectionRef",
+      "component": "SectionRef",
+      "purpose": "Places a shared section ('Sekcja wspólna') from a reusableSection document, so one contact form or newsletter block is edited once and reused on many pages",
+      "fields": {"section": "reference<reusableSection> (required; filtered to the page's language)"},
+      "jsonld": "none (the referenced block renders and emits as if inlined)",
+      "match": [],
+      "_note": "No match rule: new in T54, not imported from Webflow. reusableSection is a document type, not a page block. No Astro component: apps/web/src/lib/sanity/site.ts replaces each sectionRef with the referenced block before rendering."
+    },
 {
   "type": "tabs",
   "component": "Tabs",
