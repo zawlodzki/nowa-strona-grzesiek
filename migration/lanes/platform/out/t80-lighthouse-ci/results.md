@@ -1,36 +1,72 @@
-# T80 blocked baseline
+# T80 Lighthouse CI evidence
 
-2026-11-12, branch task/T80-lighthouse-ci, baseline c6cc236.
-Lighthouse CI 0.15.1 / Lighthouse 12.6.1, mobile defaults (simulated throttling),
-headless Chromium, no consent interaction. Turnstile default test key
-`1x00000000000000000000AA` from LeadForm. No production writes.
+## Approved configuration (2026-11-13)
 
-Used the repo verify-web skill: `web.sh up --port 8790`, then `doctor` (healthy),
-`probe /` (200, noindex/nofollow), and `lhci collect` against the static build
-served by Wrangler. First startup died between shell invocations; restarted in
-the same shell as collection. Collection stopped after the homepage's three runs
-and one blog run because the unchanged baseline is blocked. `web.sh down` ran.
+The owner revised the task after the initial blocked baseline. Performance >=85;
+accessibility, best practices and SEO >=95; LCP <=2500 ms; CLS <=0.1.
+Every assertion uses the independent median of three mobile runs per URL.
+Lighthouse CI 0.15.1 pins Lighthouse 12.6.1 via the lockfile. Chrome for Testing
+158.0.8127.18 is pinned in CI and was used locally (Linux ARM64).
+The final configuration uses default mobile simulated throttling.
 
-| Homepage median (3 runs) | Measured | Required |
-|---|---:|---:|
-| Performance | 88 | >=90 |
-| Accessibility | 100 | >=95 |
-| Best practices | 96 | >=95 |
-| SEO | 69 | >=95 |
-| LCP | 1692 ms | <=2500 ms |
-| CLS | 0 | <=0.1 |
+Only `is-crawlable` is skipped in collection and disabled in assertions; Lighthouse
+recalculates SEO with all remaining audits. This preserves meaningful SEO scoring
+rather than lowering its threshold to accommodate noindex. Local/staging noindex
+is intentional. Existing `src/worker/robots.test.ts` coverage passes (6 tests),
+including production headers. No Worker behavior changed.
 
-The three homepage SEO scores are all 69. Lighthouse `is-crawlable` identifies
-both the X-Robots-Tag header and page robots directive. The local Worker
-intentionally applies staging noindex behavior. Changing these implementations
-is outside T80 owns. No assertions were weakened or excluded to manufacture a pass.
+Initial real-time (`devtools`) throttling exploration had homepage median
+performance 80 on this machine; the final standardized mobile simulation is below.
+The local measurements still fail several performance/LCP thresholds. These failures
+are retained, not weakened or presented as passing. Hosted CI is separate evidence.
 
-First homepage run transferred 1007307 bytes total, 659703 bytes script and
-888123 bytes third-party (the latter also includes remote content assets).
-These are actual pre-consent measurements, not yet a suitable budget baseline.
-T76 measured about 1001 KiB total on the homepage and documented GTM contention.
-Setting a script budget above the existing ~644 KiB would accommodate a substantial
-pre-consent payload already; setting it below that immediately fails the unchanged
-site. Final budgets and margins are deferred until the baseline blockers are
-resolved. No final thresholds/config or CI job retained; no CI artifact or
-throwaway regression run exists. Raw extracted measurements are in measurements.json.
+## Local final medians
+
+Built static output served by `wrangler dev --local` on port 8790 via the repo's
+verify-web skill. `up`, `doctor` (healthy), `probe /` (200, noindex/nofollow) and
+`down` ran. All six URLs have three valid Lighthouse reports. The Turnstile test
+key is explicit; no consent was given and no forms were submitted.
+
+| Path | Perf | A11y | BP | SEO* | LCP ms | CLS |
+|---|---:|---:|---:|---:|---:|---:|
+| / | 83 | 100 | 96 | 100 | 2712 | 0.000 |
+| /blog | 84 | 100 | 96 | 100 | 2871 | 0.000 |
+| /blog/automatyzacja-sprzedazy | 83 | 100 | 96 | 100 | 1758 | 0.000 |
+| /audyt-ai-sprzedaz | 85 | 97 | 96 | 100 | 2614 | 0.000 |
+| /kontakt | 84 | 100 | 96 | 100 | 1260 | 0.000 |
+| /newsletter | 81 | 100 | 96 | 100 | 2714 | 0.000 |
+
+*SEO excludes only is-crawlable. Exact values and all individual runs are in
+`local-medians.json`; all 54 executed assertions are in `local-assertions.json`.
+The earlier pre-approval measurements remain in `measurements.json`.
+
+## Resource budget rationale
+
+Each limit is `ceil(median transfer bytes * 1.075 / 1024)` KiB: 7.5% plus at most
+1 KiB rounding. This leaves a small allowance for changing third-party responses
+while rejecting meaningful growth. Third-party weight includes remote images,
+not just scripts; lighter pages therefore have their own limits. Existing GTM
+before consent is explicitly accepted as baseline; reducing it is a future task.
+T76 measured about 1001 KiB total on the homepage and described GTM contention;
+this collection measures about 984 KiB. Budgets use current measurements rather
+than the historical production Turnstile challenge.
+
+| Path | Total median B / limit KiB | Script median B / limit KiB | Third-party median B / limit KiB |
+|---|---:|---:|---:|
+| / | 1007231 / 1058 | 659628 / 693 | 888047 / 933 |
+| /blog | 894487 / 940 | 655444 / 689 | 798530 / 839 |
+| /blog/automatyzacja-sprzedazy | 805344 / 846 | 654860 / 688 | 696211 / 731 |
+| /audyt-ai-sprzedaz | 997251 / 1047 | 655442 / 689 | 887881 / 933 |
+| /kontakt | 779497 / 819 | 655445 / 689 | 656001 / 689 |
+| /newsletter | 828510 / 870 | 655439 / 689 | 706227 / 742 |
+
+The LHCI assert matrix reads `apps/web/lighthouse-budget.json` and checks actual
+resource-summary transfer bytes using median aggregation. This avoids the
+performance-budget audit's per-run aggregation behavior. No third-party traffic
+is mocked or blocked. The job starts the static build with verify-web, probes all
+six paths, collects, emits a strict three-run summary, asserts and always exports
+HTML/JSON reports plus raw LHRs, assertions and HTTP evidence as an artifact.
+
+## Hosted CI and regression proof
+
+Pending the draft PR runs. No CI success or negative-control result claimed yet.

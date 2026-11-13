@@ -1,0 +1,104 @@
+[
+  {
+    "path": "/",
+    "resourceSizes": [
+      {
+        "resourceType": "total",
+        "budget": 1058
+      },
+      {
+        "resourceType": "script",
+        "budget": 693
+      },
+      {
+        "resourceType": "third-party",
+        "budget": 933
+      }
+    ]
+  },
+  {
+    "path": "/blog",
+    "resourceSizes": [
+      {
+        "resourceType": "total",
+        "budget": 940
+      },
+      {
+        "resourceType": "script",
+        "budget": 689
+      },
+      {
+        "resourceType": "third-party",
+        "budget": 839
+      }
+    ]
+  },
+  {
+    "path": "/blog/automatyzacja-sprzedazy",
+    "resourceSizes": [
+      {
+        "resourceType": "total",
+        "budget": 846
+      },
+      {
+        "resourceType": "script",
+        "budget": 688
+      },
+      {
+        "resourceType": "third-party",
+        "budget": 731
+      }
+    ]
+  },
+  {
+    "path": "/audyt-ai-sprzedaz",
+    "resourceSizes": [
+      {
+        "resourceType": "total",
+        "budget": 1047
+      },
+      {
+        "resourceType": "script",
+        "budget": 689
+      },
+      {
+        "resourceType": "third-party",
+        "budget": 933
+      }
+    ]
+  },
+  {
+    "path": "/kontakt",
+    "resourceSizes": [
+      {
+        "resourceType": "total",
+        "budget": 819
+      },
+      {
+        "resourceType": "script",
+        "budget": 689
+      },
+      {
+        "resourceType": "third-party",
+        "budget": 689
+      }
+    ]
+  },
+  {
+    "path": "/newsletter",
+    "resourceSizes": [
+      {
+        "resourceType": "total",
+        "budget": 870
+      },
+      {
+        "resourceType": "script",
+        "budget": 689
+      },
+      {
+        "resourceType": "third-party",
+        "budget": 742
+      }
+    ]
+  }
+]

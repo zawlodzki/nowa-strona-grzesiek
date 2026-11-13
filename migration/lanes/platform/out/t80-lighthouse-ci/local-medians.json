@@ -1,0 +1,332 @@
+[
+  {
+    "url": "http://127.0.0.1:8790/",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:04:55.557Z",
+      "2026-11-13T08:05:09.394Z",
+      "2026-11-13T08:05:22.319Z"
+    ],
+    "medians": {
+      "performance": 0.83,
+      "accessibility": 1,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 2711.7024499999998,
+      "cls": 0,
+      "totalBytes": 1007231,
+      "scriptBytes": 659628,
+      "third-partyBytes": 888047
+    },
+    "runs": [
+      {
+        "performance": 0.84,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2068.9171,
+        "cls": 0,
+        "totalBytes": 1007237,
+        "scriptBytes": 659655,
+        "third-partyBytes": 888053
+      },
+      {
+        "performance": 0.83,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2711.7024499999998,
+        "cls": 0,
+        "totalBytes": 1007220,
+        "scriptBytes": 659628,
+        "third-partyBytes": 888036
+      },
+      {
+        "performance": 0.81,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2841.4674999999997,
+        "cls": 0,
+        "totalBytes": 1007231,
+        "scriptBytes": 659625,
+        "third-partyBytes": 888047
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8790/blog",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:05:36.529Z",
+      "2026-11-13T08:05:48.870Z",
+      "2026-11-13T08:06:01.633Z"
+    ],
+    "medians": {
+      "performance": 0.84,
+      "accessibility": 1,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 2870.5972999999994,
+      "cls": 0,
+      "totalBytes": 894487,
+      "scriptBytes": 655444,
+      "third-partyBytes": 798530
+    },
+    "runs": [
+      {
+        "performance": 0.82,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2902.1628249999994,
+        "cls": 0,
+        "totalBytes": 893925,
+        "scriptBytes": 654858,
+        "third-partyBytes": 797968
+      },
+      {
+        "performance": 0.87,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2870.5972999999994,
+        "cls": 0,
+        "totalBytes": 894494,
+        "scriptBytes": 655444,
+        "third-partyBytes": 798537
+      },
+      {
+        "performance": 0.84,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2817.1677,
+        "cls": 0,
+        "totalBytes": 894487,
+        "scriptBytes": 655475,
+        "third-partyBytes": 798530
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8790/blog/automatyzacja-sprzedazy",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:06:14.310Z",
+      "2026-11-13T08:06:27.815Z",
+      "2026-11-13T08:06:40.295Z"
+    ],
+    "medians": {
+      "performance": 0.83,
+      "accessibility": 1,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 1758.0225,
+      "cls": 0,
+      "totalBytes": 805344,
+      "scriptBytes": 654860,
+      "third-partyBytes": 696211
+    },
+    "runs": [
+      {
+        "performance": 0.72,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1758.0225,
+        "cls": 0,
+        "totalBytes": 805947,
+        "scriptBytes": 655472,
+        "third-partyBytes": 696814
+      },
+      {
+        "performance": 0.83,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1717.5665,
+        "cls": 0,
+        "totalBytes": 805330,
+        "scriptBytes": 654846,
+        "third-partyBytes": 696197
+      },
+      {
+        "performance": 0.88,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2513.6168000000002,
+        "cls": 0,
+        "totalBytes": 805344,
+        "scriptBytes": 654860,
+        "third-partyBytes": 696211
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8790/audyt-ai-sprzedaz",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:06:52.640Z",
+      "2026-11-13T08:07:07.256Z",
+      "2026-11-13T08:07:20.608Z"
+    ],
+    "medians": {
+      "performance": 0.85,
+      "accessibility": 0.97,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 2613.786975,
+      "cls": 0,
+      "totalBytes": 997251,
+      "scriptBytes": 655442,
+      "third-partyBytes": 887881
+    },
+    "runs": [
+      {
+        "performance": 0.87,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2613.786975,
+        "cls": 0,
+        "totalBytes": 997488,
+        "scriptBytes": 655464,
+        "third-partyBytes": 888118
+      },
+      {
+        "performance": 0.85,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2735.3625,
+        "cls": 0,
+        "totalBytes": 997251,
+        "scriptBytes": 655442,
+        "third-partyBytes": 887881
+      },
+      {
+        "performance": 0.85,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2517.5699,
+        "cls": 0,
+        "totalBytes": 990846,
+        "scriptBytes": 654873,
+        "third-partyBytes": 881476
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8790/kontakt",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:07:34.144Z",
+      "2026-11-13T08:07:46.522Z",
+      "2026-11-13T08:08:00.407Z"
+    ],
+    "medians": {
+      "performance": 0.84,
+      "accessibility": 1,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 1260.4563,
+      "cls": 0,
+      "totalBytes": 779497,
+      "scriptBytes": 655445,
+      "third-partyBytes": 656001
+    },
+    "runs": [
+      {
+        "performance": 0.9,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1260.4563,
+        "cls": 0,
+        "totalBytes": 779497,
+        "scriptBytes": 655445,
+        "third-partyBytes": 656001
+      },
+      {
+        "performance": 0.84,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1245.5933,
+        "cls": 0,
+        "totalBytes": 779510,
+        "scriptBytes": 655458,
+        "third-partyBytes": 656014
+      },
+      {
+        "performance": 0.84,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1274.1777,
+        "cls": 0,
+        "totalBytes": 778892,
+        "scriptBytes": 654840,
+        "third-partyBytes": 655396
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8790/newsletter",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:08:13.201Z",
+      "2026-11-13T08:08:26.337Z",
+      "2026-11-13T08:08:39.351Z"
+    ],
+    "medians": {
+      "performance": 0.81,
+      "accessibility": 1,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 2713.9964500000006,
+      "cls": 0,
+      "totalBytes": 828510,
+      "scriptBytes": 655439,
+      "third-partyBytes": 706227
+    },
+    "runs": [
+      {
+        "performance": 0.68,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2850.2495000000004,
+        "cls": 0,
+        "totalBytes": 828405,
+        "scriptBytes": 655343,
+        "third-partyBytes": 706122
+      },
+      {
+        "performance": 0.81,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2713.9964500000006,
+        "cls": 0,
+        "totalBytes": 828510,
+        "scriptBytes": 655439,
+        "third-partyBytes": 706227
+      },
+      {
+        "performance": 0.87,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1740.7742500000002,
+        "cls": 0,
+        "totalBytes": 828532,
+        "scriptBytes": 655442,
+        "third-partyBytes": 706249
+      }
+    ]
+  }
+]

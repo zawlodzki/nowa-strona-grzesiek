@@ -1,0 +1,896 @@
+[
+  {
+    "name": "minScore",
+    "expected": 0.85,
+    "actual": 0.83,
+    "values": [
+      0.84,
+      0.83,
+      0.81
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 1,
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "accessibility",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 0.96,
+    "values": [
+      0.96,
+      0.96,
+      0.96
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "best-practices",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 1,
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "seo",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 0.1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditId": "cumulative-layout-shift",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/",
+    "auditTitle": "Cumulative Layout Shift",
+    "auditDocumentationLink": "https://web.dev/articles/cls"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 2500,
+    "actual": 2711.7024499999998,
+    "values": [
+      2068.9171,
+      2711.7024499999998,
+      2841.4674999999997
+    ],
+    "operator": "<=",
+    "passed": false,
+    "auditId": "largest-contentful-paint",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/",
+    "auditTitle": "Largest Contentful Paint",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 1083392,
+    "actual": 1007231,
+    "values": [
+      1007237,
+      1007220,
+      1007231
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "total.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 709632,
+    "actual": 659628,
+    "values": [
+      659655,
+      659628,
+      659625
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "script.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 955392,
+    "actual": 888047,
+    "values": [
+      888053,
+      888036,
+      888047
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "third-party.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.85,
+    "actual": 0.84,
+    "values": [
+      0.82,
+      0.87,
+      0.84
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 1,
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "accessibility",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 0.96,
+    "values": [
+      0.96,
+      0.96,
+      0.96
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "best-practices",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 1,
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "seo",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 0.1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditId": "cumulative-layout-shift",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog",
+    "auditTitle": "Cumulative Layout Shift",
+    "auditDocumentationLink": "https://web.dev/articles/cls"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 2500,
+    "actual": 2870.5972999999994,
+    "values": [
+      2902.1628249999994,
+      2870.5972999999994,
+      2817.1677
+    ],
+    "operator": "<=",
+    "passed": false,
+    "auditId": "largest-contentful-paint",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog",
+    "auditTitle": "Largest Contentful Paint",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 962560,
+    "actual": 894487,
+    "values": [
+      893925,
+      894494,
+      894487
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "total.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 705536,
+    "actual": 655444,
+    "values": [
+      654858,
+      655444,
+      655475
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "script.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 859136,
+    "actual": 798530,
+    "values": [
+      797968,
+      798537,
+      798530
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "third-party.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.85,
+    "actual": 0.83,
+    "values": [
+      0.72,
+      0.83,
+      0.88
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog/automatyzacja-sprzedazy"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 1,
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "accessibility",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog/automatyzacja-sprzedazy"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 0.96,
+    "values": [
+      0.96,
+      0.96,
+      0.96
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "best-practices",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog/automatyzacja-sprzedazy"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 1,
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "seo",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog/automatyzacja-sprzedazy"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 0.1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditId": "cumulative-layout-shift",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog/automatyzacja-sprzedazy",
+    "auditTitle": "Cumulative Layout Shift",
+    "auditDocumentationLink": "https://web.dev/articles/cls"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 2500,
+    "actual": 1758.0225,
+    "values": [
+      1758.0225,
+      1717.5665,
+      2513.6168000000002
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditId": "largest-contentful-paint",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog/automatyzacja-sprzedazy",
+    "auditTitle": "Largest Contentful Paint",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 866304,
+    "actual": 805344,
+    "values": [
+      805947,
+      805330,
+      805344
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "total.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog/automatyzacja-sprzedazy",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 704512,
+    "actual": 654860,
+    "values": [
+      655472,
+      654846,
+      654860
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "script.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog/automatyzacja-sprzedazy",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 748544,
+    "actual": 696211,
+    "values": [
+      696814,
+      696197,
+      696211
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "third-party.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/blog/automatyzacja-sprzedazy",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.85,
+    "actual": 0.85,
+    "values": [
+      0.87,
+      0.85,
+      0.85
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/audyt-ai-sprzedaz"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 0.97,
+    "values": [
+      0.97,
+      0.97,
+      0.97
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "accessibility",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/audyt-ai-sprzedaz"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 0.96,
+    "values": [
+      0.96,
+      0.96,
+      0.96
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "best-practices",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/audyt-ai-sprzedaz"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 1,
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "seo",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/audyt-ai-sprzedaz"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 0.1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditId": "cumulative-layout-shift",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/audyt-ai-sprzedaz",
+    "auditTitle": "Cumulative Layout Shift",
+    "auditDocumentationLink": "https://web.dev/articles/cls"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 2500,
+    "actual": 2613.786975,
+    "values": [
+      2613.786975,
+      2735.3625,
+      2517.5699
+    ],
+    "operator": "<=",
+    "passed": false,
+    "auditId": "largest-contentful-paint",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/audyt-ai-sprzedaz",
+    "auditTitle": "Largest Contentful Paint",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 1072128,
+    "actual": 997251,
+    "values": [
+      997488,
+      997251,
+      990846
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "total.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/audyt-ai-sprzedaz",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 705536,
+    "actual": 655442,
+    "values": [
+      655464,
+      655442,
+      654873
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "script.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/audyt-ai-sprzedaz",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 955392,
+    "actual": 887881,
+    "values": [
+      888118,
+      887881,
+      881476
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "third-party.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/audyt-ai-sprzedaz",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.85,
+    "actual": 0.84,
+    "values": [
+      0.9,
+      0.84,
+      0.84
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/kontakt"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 1,
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "accessibility",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/kontakt"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 0.96,
+    "values": [
+      0.96,
+      0.96,
+      0.96
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "best-practices",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/kontakt"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 1,
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "seo",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/kontakt"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 0.1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditId": "cumulative-layout-shift",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/kontakt",
+    "auditTitle": "Cumulative Layout Shift",
+    "auditDocumentationLink": "https://web.dev/articles/cls"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 2500,
+    "actual": 1260.4563,
+    "values": [
+      1260.4563,
+      1245.5933,
+      1274.1777
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditId": "largest-contentful-paint",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/kontakt",
+    "auditTitle": "Largest Contentful Paint",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 838656,
+    "actual": 779497,
+    "values": [
+      779497,
+      779510,
+      778892
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "total.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/kontakt",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 705536,
+    "actual": 655445,
+    "values": [
+      655445,
+      655458,
+      654840
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "script.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/kontakt",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 705536,
+    "actual": 656001,
+    "values": [
+      656001,
+      656014,
+      655396
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "third-party.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/kontakt",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.85,
+    "actual": 0.81,
+    "values": [
+      0.68,
+      0.81,
+      0.87
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/newsletter"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 1,
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "accessibility",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/newsletter"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 0.96,
+    "values": [
+      0.96,
+      0.96,
+      0.96
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "best-practices",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/newsletter"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.95,
+    "actual": 1,
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "operator": ">=",
+    "passed": true,
+    "auditProperty": "seo",
+    "auditId": "categories",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/newsletter"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 0.1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditId": "cumulative-layout-shift",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/newsletter",
+    "auditTitle": "Cumulative Layout Shift",
+    "auditDocumentationLink": "https://web.dev/articles/cls"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 2500,
+    "actual": 2713.9964500000006,
+    "values": [
+      2850.2495000000004,
+      2713.9964500000006,
+      1740.7742500000002
+    ],
+    "operator": "<=",
+    "passed": false,
+    "auditId": "largest-contentful-paint",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/newsletter",
+    "auditTitle": "Largest Contentful Paint",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 890880,
+    "actual": 828510,
+    "values": [
+      828405,
+      828510,
+      828532
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "total.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/newsletter",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 705536,
+    "actual": 655439,
+    "values": [
+      655343,
+      655439,
+      655442
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "script.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/newsletter",
+    "auditTitle": "Resources Summary"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 759808,
+    "actual": 706227,
+    "values": [
+      706122,
+      706227,
+      706249
+    ],
+    "operator": "<=",
+    "passed": true,
+    "auditProperty": "third-party.size",
+    "auditId": "resource-summary",
+    "level": "error",
+    "url": "http://127.0.0.1:8790/newsletter",
+    "auditTitle": "Resources Summary"
+  }
+]

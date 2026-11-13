@@ -68,3 +68,52 @@ jobs:
           path: apps/web/.wrangler/e2e/
           include-hidden-files: true
           retention-days: 14
+
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      PUBLIC_TURNSTILE_SITE_KEY: 1x00000000000000000000AA
+      VERIFY_WEB_HOME: ${{ runner.temp }}/t80-verify-web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - uses: browser-actions/setup-chrome@v2
+        id: chrome
+        with:
+          install-dependencies: true
+          chrome-version: 158.0.8127.18
+      - name: Audit static build through local Worker
+        env:
+          CHROME_PATH: ${{ steps.chrome.outputs.chrome-path }}
+        run: |
+          set -euo pipefail
+          web=.claude/skills/verify-web/scripts/web.sh
+          trap '"$web" down --port 8790' EXIT
+          "$web" up --port 8790
+          "$web" doctor --port 8790
+          for path in / /blog /blog/automatyzacja-sprzedazy /audyt-ai-sprzedaz /kontakt /newsletter; do
+            "$web" probe "$path" --port 8790
+          done
+          pnpm --filter web exec lhci collect
+          node apps/web/lighthouserc-summary.mjs
+          pnpm --filter web exec lhci assert --includePassedAssertions
+      - name: Export Lighthouse HTML and JSON reports
+        if: always()
+        run: pnpm --filter web exec lhci upload
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lighthouse-reports
+          path: |
+            apps/web/.lighthouseci/
+            apps/web/.wrangler/lighthouse/
+            ${{ runner.temp }}/t80-verify-web/evidence/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 14
