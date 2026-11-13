@@ -1,0 +1,36 @@
+{
+  "overflow": false,
+  "groups": [],
+  "sections": [
+    {
+      "heading": "Grzegorz Zawłodzki - konsultant CRM i automatyzacji sprzedaży B2B",
+      "gapToNext": 128,
+      "copyMedia": -3067.5
+    },
+    {
+      "heading": "Jak się ze mną skontaktować?",
+      "gapToNext": 128,
+      "copyMedia": null
+    },
+    {
+      "heading": "Opinie zadowolonych klientów",
+      "gapToNext": 128,
+      "copyMedia": null
+    },
+    {
+      "heading": "Dane firmy",
+      "gapToNext": 128,
+      "copyMedia": null
+    },
+    {
+      "heading": "Ostatnie wpisy",
+      "gapToNext": 128,
+      "copyMedia": null
+    },
+    {
+      "heading": "Newsletter Sales Atlas",
+      "gapToNext": null,
+      "copyMedia": null
+    }
+  ]
+}

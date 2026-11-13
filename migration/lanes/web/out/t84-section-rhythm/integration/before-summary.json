@@ -1,0 +1,50 @@
+[
+  {
+    "path": "/",
+    "width": 390,
+    "headings": 16,
+    "skips": []
+  },
+  {
+    "path": "/",
+    "width": 1440,
+    "headings": 16,
+    "skips": []
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "width": 390,
+    "headings": 26,
+    "skips": []
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "width": 1440,
+    "headings": 26,
+    "skips": []
+  },
+  {
+    "path": "/sales-atlas-system",
+    "width": 390,
+    "headings": 25,
+    "skips": []
+  },
+  {
+    "path": "/sales-atlas-system",
+    "width": 1440,
+    "headings": 25,
+    "skips": []
+  },
+  {
+    "path": "/o-mnie",
+    "width": 390,
+    "headings": 16,
+    "skips": []
+  },
+  {
+    "path": "/o-mnie",
+    "width": 1440,
+    "headings": 16,
+    "skips": []
+  }
+]

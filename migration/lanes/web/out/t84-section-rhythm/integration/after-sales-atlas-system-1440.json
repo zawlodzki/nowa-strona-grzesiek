@@ -1,0 +1,55 @@
+{
+  "overflow": false,
+  "groups": [
+    [
+      1,
+      2
+    ]
+  ],
+  "sections": [
+    {
+      "heading": "Sales Atlas System",
+      "gapToNext": 128,
+      "copyMedia": null
+    },
+    {
+      "heading": "Dziewięć warstw",
+      "gapToNext": 32,
+      "copyMedia": null
+    },
+    {
+      "heading": "Po czym poznać, że działa",
+      "gapToNext": 128,
+      "copyMedia": null
+    },
+    {
+      "heading": "Buduje się od dołu, czyta od góry",
+      "gapToNext": 128,
+      "copyMedia": -289.359375
+    },
+    {
+      "heading": "Czym Sales Atlas System nie jest",
+      "gapToNext": 128,
+      "copyMedia": null
+    },
+    {
+      "heading": "Sprawdź, czy masz już system",
+      "gapToNext": 128,
+      "copyMedia": null
+    },
+    {
+      "gapToNext": 128,
+      "copyMedia": null
+    },
+    {
+      "heading": "Skąd wziął się system sprzedaży",
+      "gapToNext": 128,
+      "copyMedia": null
+    },
+    {
+      "heading": "Najczęściej zadawane pytania",
+      "gapToNext": null,
+      "copyMedia": null
+    }
+  ]
+}

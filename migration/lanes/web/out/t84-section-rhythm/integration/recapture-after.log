@@ -1,0 +1,10 @@
+up: http://127.0.0.1:8790 (run 20261113-201425-p8790, rev 74d1769, log /tmp/verify-web/runs/8790/wrangler.log)
+evidence: /tmp/verify-web/evidence/20261113-201425-p8790
+ok       wrangler pid 458807 alive
+ok       port 8790 is owned by our wrangler
+ok       started at HEAD 74d1769
+ok       dist is newer than src
+ok       GET / -> 200
+ok       home page title is this site
+doctor: healthy (http://127.0.0.1:8790, run 20261113-201425-p8790)
+stopped run 20261113-201425-p8790 (pids 458839 458846 458851 458857 458827 458808 458807); evidence kept in /tmp/verify-web/evidence/20261113-201425-p8790

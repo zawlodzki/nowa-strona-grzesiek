@@ -12,6 +12,8 @@ try {
     for (const path of ['/', '/o-mnie']) {
       assert.equal((await page.goto(`http://127.0.0.1:8790${path}`)).status(), 200);
       await page.evaluate(() => document.fonts.ready);
+      await page.getByRole('button', { name: 'Odrzucam opcjonalne', exact: true }).click({ timeout: 2000 }).catch(() => {});
+      await page.evaluate(() => scrollTo(0, 0));
       const sections = path === '/' ? page.locator('section.feature:is(#crm,#ai,#automatyzacja,#asana)') : page.locator('section.feature').filter({ has: page.getByRole('heading', { name: 'W czym mogę Ci pomóc?', exact: true }) });
       assert.equal(await sections.count(), path === '/' ? 4 : 1);
       for (const section of await sections.all()) {

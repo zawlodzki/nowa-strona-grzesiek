@@ -1,5 +1,7 @@
 # T84: Section rhythm evidence
 
+**Current integrated evidence:** [main ba5712a versus T84](integration/README.md). T85 is integrated and all four requested page outlines now have no skipped levels. The captures below are historical.
+
 Capture of the same production Sanity data on the local Cloudflare Worker before and after the change. The browser used reduced motion so the screenshots show the settled layout. Each image covers the full page.
 
 | Page | 390 px | 1440 px |
