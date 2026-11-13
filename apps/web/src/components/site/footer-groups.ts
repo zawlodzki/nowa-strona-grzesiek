@@ -15,7 +15,7 @@ export function footerGroups(links: readonly FooterLink[]) {
   return {
     columns: [
       ...GROUPS.map((group) => ({ title: group.title, links: group.paths.flatMap((path) => corrected.filter((link) => link.href === path)) })),
-      { title: 'Materiały', links: corrected.filter((link) => !used.has(link.href)) },
+      { title: 'Informacje i blog', links: corrected.filter((link) => !used.has(link.href)) },
     ],
     legal: corrected.filter((link) => LEGAL.has(link.href)),
   };
