@@ -10,4 +10,4 @@ To reproduce, place claude.svg and n8n.svg in /tmp/t90-hero/assets. The plan lin
 
 Run prepare.py with /tmp/t90-hero as its argument to generate the overlay from the public Sanity API. Start the Worker with verify-web, then run capture.mjs with the Worker origin, before, and the output directory as arguments. Stop the Worker. Restart with T34_LOCAL_PROOF=1 and T34_LOCAL_DOCUMENTS=/tmp/t90-hero/overlay.json. Run capture.mjs again with after in place of before.
 
-Before a production write, obtain approval to upload the two SVGs and create the 14 drafts. Refresh the document revisions and check for existing drafts before applying the hero field changes. Publication requires a separate yes. Verify staging after publication.
+Both SVGs are uploaded and all 14 drafts are saved in Sanity production. The asset IDs match the preview. Before publishing, check the current draft revisions against the approved hero fields in changes.json. Publication requires a separate yes. Verify staging after publication.
