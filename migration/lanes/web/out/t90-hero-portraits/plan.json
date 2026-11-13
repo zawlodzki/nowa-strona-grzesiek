@@ -6,8 +6,9 @@
   "badges": {
     "Pipedrive": {
       "size": "wide",
-      "source": "https://www.pipedrive.com/en/newsroom/press-kit",
-      "asset": "image-95ea9fe7a941fdc2d0e313337f903ccaa7ead0a2-209x49-svg"
+      "source": "https://cdn.sanity.io/images/8u2zjhvn/production/08abec6acda387c2000c78d8753195f6249dc6ba-800x502.avif",
+      "alt": "Pipedrive Authorized Partner",
+      "asset": "image-08abec6acda387c2000c78d8753195f6249dc6ba-800x502-avif"
     },
     "Asana": {
       "size": "wide",

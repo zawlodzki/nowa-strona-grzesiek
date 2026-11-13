@@ -5,9 +5,9 @@ path	width	before_status	after_status	badge_alt	badge_inside_hero	badge_below_po
 /audyt-ai-sprzedaz	390	200	200	Claude logo	True	True	eager	True	True
 /audyt-ai-sprzedaz	768	200	200	Claude logo	True	True	eager	True	True
 /audyt-ai-sprzedaz	1440	200	200	Claude logo	True	True	eager	True	True
-/audyt-crm-pipedrive	390	200	200	Pipedrive logo	True	True	eager	True	True
-/audyt-crm-pipedrive	768	200	200	Pipedrive logo	True	True	eager	True	True
-/audyt-crm-pipedrive	1440	200	200	Pipedrive logo	True	True	eager	True	True
+/audyt-crm-pipedrive	390	200	200	Pipedrive Authorized Partner	True	True	eager	True	True
+/audyt-crm-pipedrive	768	200	200	Pipedrive Authorized Partner	True	True	eager	True	True
+/audyt-crm-pipedrive	1440	200	200	Pipedrive Authorized Partner	True	True	eager	True	True
 /audyt-procesow-asana	390	200	200	Asana logo	True	True	eager	True	True
 /audyt-procesow-asana	768	200	200	Asana logo	True	True	eager	True	True
 /audyt-procesow-asana	1440	200	200	Asana logo	True	True	eager	True	True
@@ -17,9 +17,9 @@ path	width	before_status	after_status	badge_alt	badge_inside_hero	badge_below_po
 /automatyzacja-procesow-biznesowych-nocode	390	200	200	n8n logo	True	True	eager	True	True
 /automatyzacja-procesow-biznesowych-nocode	768	200	200	n8n logo	True	True	eager	True	True
 /automatyzacja-procesow-biznesowych-nocode	1440	200	200	n8n logo	True	True	eager	True	True
-/automatyzacje-dla-pipedrive	390	200	200	Pipedrive logo	True	True	eager	True	True
-/automatyzacje-dla-pipedrive	768	200	200	Pipedrive logo	True	True	eager	True	True
-/automatyzacje-dla-pipedrive	1440	200	200	Pipedrive logo	True	True	eager	True	True
+/automatyzacje-dla-pipedrive	390	200	200	Pipedrive Authorized Partner	True	True	eager	True	True
+/automatyzacje-dla-pipedrive	768	200	200	Pipedrive Authorized Partner	True	True	eager	True	True
+/automatyzacje-dla-pipedrive	1440	200	200	Pipedrive Authorized Partner	True	True	eager	True	True
 /kurs-ai-w-sprzedazy	390	200	200	Claude logo	True	True	eager	True	True
 /kurs-ai-w-sprzedazy	768	200	200	Claude logo	True	True	eager	True	True
 /kurs-ai-w-sprzedazy	1440	200	200	Claude logo	True	True	eager	True	True
@@ -35,9 +35,9 @@ path	width	before_status	after_status	badge_alt	badge_inside_hero	badge_below_po
 /szkolenie-i-wdrozenie-asana	390	200	200	Asana logo	True	True	eager	True	True
 /szkolenie-i-wdrozenie-asana	768	200	200	Asana logo	True	True	eager	True	True
 /szkolenie-i-wdrozenie-asana	1440	200	200	Asana logo	True	True	eager	True	True
-/szkolenie-i-wdrozenie-pipedrive	390	200	200	Pipedrive logo	True	True	eager	True	True
-/szkolenie-i-wdrozenie-pipedrive	768	200	200	Pipedrive logo	True	True	eager	True	True
-/szkolenie-i-wdrozenie-pipedrive	1440	200	200	Pipedrive logo	True	True	eager	True	True
+/szkolenie-i-wdrozenie-pipedrive	390	200	200	Pipedrive Authorized Partner	True	True	eager	True	True
+/szkolenie-i-wdrozenie-pipedrive	768	200	200	Pipedrive Authorized Partner	True	True	eager	True	True
+/szkolenie-i-wdrozenie-pipedrive	1440	200	200	Pipedrive Authorized Partner	True	True	eager	True	True
 /szkolenie-i-wdrozenie-salesforce	390	200	200	Salesforce logo	True	True	eager	True	True
 /szkolenie-i-wdrozenie-salesforce	768	200	200	Salesforce logo	True	True	eager	True	True
 /szkolenie-i-wdrozenie-salesforce	1440	200	200	Salesforce logo	True	True	eager	True	True

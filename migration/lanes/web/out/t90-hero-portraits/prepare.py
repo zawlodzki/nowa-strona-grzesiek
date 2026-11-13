@@ -39,7 +39,7 @@ for path, target in plan['pages'].items():
     section['image'] = image(section['image']['asset']['_ref'] if target.get('keepPortrait') else portrait, plan['portraitAlt'])
     if name := target.get('badge'):
         badge = plan['badges'][name]
-        section['badgeImage'] = image(badge['asset'], f'{name} logo')
+        section['badgeImage'] = image(badge['asset'], badge.get('alt', f'{name} logo'))
         section['badgeSize'] = badge['size']
     elif not target.get('keepBadge'):
         assert 'badgeImage' not in section and 'badgeSize' not in section, path
