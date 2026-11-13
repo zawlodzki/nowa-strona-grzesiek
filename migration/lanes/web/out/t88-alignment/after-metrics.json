@@ -1,0 +1,274 @@
+[
+  {
+    "source": "after",
+    "kind": "home",
+    "width": 390,
+    "url": "http://127.0.0.1:8791/",
+    "status": 200,
+    "viewport": 390,
+    "scrollWidth": 390,
+    "header": {
+      "x": 122.984375,
+      "width": 144,
+      "height": 54.90625
+    },
+    "breadcrumbs": null,
+    "toc": null,
+    "column": null,
+    "strips": [
+      {
+        "section": {
+          "x": 0,
+          "width": 390,
+          "height": 778.78125
+        },
+        "heading": {
+          "x": 16,
+          "width": 357.984375,
+          "height": 182.78125
+        },
+        "grid": {
+          "x": 16,
+          "width": 357.984375,
+          "height": 468
+        },
+        "logos": 24,
+        "alts": [
+          "cnk logo",
+          "logo wsip",
+          "euroser logo",
+          "logo rentli",
+          "asmo solutions logo",
+          "eagle lasers logo",
+          "moovin logo",
+          "logo smmash",
+          "IAB Polska logo",
+          "logo american lens",
+          "asmo solutions logo",
+          "kpan logo",
+          "sovo development logo",
+          "4hfix logo",
+          "prngo logo",
+          "bosko agency logo",
+          "costa broker logo",
+          "optima home logo",
+          "Lex Capital logo",
+          "iimarbella logo",
+          "vadim eyewear logo",
+          "pro science logo",
+          "cash4car logo",
+          "deky expo logo"
+        ]
+      },
+      {
+        "section": {
+          "x": 0,
+          "width": 390,
+          "height": 324
+        },
+        "heading": {
+          "x": 16,
+          "width": 357.984375,
+          "height": 28
+        },
+        "grid": {
+          "x": 16,
+          "width": 357.984375,
+          "height": 168
+        },
+        "logos": 8,
+        "alts": [
+          "logo pipedrive",
+          "salesforce logo",
+          "attio logo",
+          "logo asana",
+          "clay logo",
+          "n8n logo",
+          "openai logo",
+          "anthropic logo"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "after",
+    "kind": "home",
+    "width": 1440,
+    "url": "http://127.0.0.1:8791/",
+    "status": 200,
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "header": {
+      "x": 120,
+      "width": 144,
+      "height": 54.90625
+    },
+    "breadcrumbs": null,
+    "toc": null,
+    "column": null,
+    "strips": [
+      {
+        "section": {
+          "x": 0,
+          "width": 1440,
+          "height": 622
+        },
+        "heading": {
+          "x": 120,
+          "width": 768,
+          "height": 142
+        },
+        "grid": {
+          "x": 120,
+          "width": 1200,
+          "height": 320
+        },
+        "logos": 24,
+        "alts": [
+          "cnk logo",
+          "logo wsip",
+          "euroser logo",
+          "logo rentli",
+          "asmo solutions logo",
+          "eagle lasers logo",
+          "moovin logo",
+          "logo smmash",
+          "IAB Polska logo",
+          "logo american lens",
+          "asmo solutions logo",
+          "kpan logo",
+          "sovo development logo",
+          "4hfix logo",
+          "prngo logo",
+          "bosko agency logo",
+          "costa broker logo",
+          "optima home logo",
+          "Lex Capital logo",
+          "iimarbella logo",
+          "vadim eyewear logo",
+          "pro science logo",
+          "cash4car logo",
+          "deky expo logo"
+        ]
+      },
+      {
+        "section": {
+          "x": 0,
+          "width": 1440,
+          "height": 291
+        },
+        "heading": {
+          "x": 120,
+          "width": 768,
+          "height": 35
+        },
+        "grid": {
+          "x": 120,
+          "width": 1200,
+          "height": 96
+        },
+        "logos": 8,
+        "alts": [
+          "logo pipedrive",
+          "salesforce logo",
+          "attio logo",
+          "logo asana",
+          "clay logo",
+          "n8n logo",
+          "openai logo",
+          "anthropic logo"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "after",
+    "kind": "article",
+    "width": 390,
+    "url": "http://127.0.0.1:8791/blog/wdrozenie-crm-krok-po-kroku",
+    "status": 200,
+    "viewport": 390,
+    "scrollWidth": 390,
+    "header": {
+      "x": 122.984375,
+      "width": 144,
+      "height": 54.90625
+    },
+    "breadcrumbs": {
+      "x": 16,
+      "width": 357.984375,
+      "height": 64.046875
+    },
+    "toc": {
+      "x": 16,
+      "width": 357.984375,
+      "height": 122
+    },
+    "column": {
+      "x": 16,
+      "width": 357.984375,
+      "height": 16580.96875
+    },
+    "strips": []
+  },
+  {
+    "source": "after",
+    "kind": "article",
+    "width": 1280,
+    "url": "http://127.0.0.1:8791/blog/wdrozenie-crm-krok-po-kroku",
+    "status": 200,
+    "viewport": 1280,
+    "scrollWidth": 1280,
+    "header": {
+      "x": 38.78125,
+      "width": 144,
+      "height": 54.90625
+    },
+    "breadcrumbs": {
+      "x": 38.78125,
+      "width": 759,
+      "height": 24.25
+    },
+    "toc": {
+      "x": 38.78125,
+      "width": 193.21875,
+      "height": 11592.90625
+    },
+    "column": {
+      "x": 260,
+      "width": 760,
+      "height": 11592.90625
+    },
+    "strips": []
+  },
+  {
+    "source": "after",
+    "kind": "article",
+    "width": 1440,
+    "url": "http://127.0.0.1:8791/blog/wdrozenie-crm-krok-po-kroku",
+    "status": 200,
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "header": {
+      "x": 120,
+      "width": 144,
+      "height": 54.90625
+    },
+    "breadcrumbs": {
+      "x": 120,
+      "width": 780,
+      "height": 25.015625
+    },
+    "toc": {
+      "x": 120,
+      "width": 192,
+      "height": 13702
+    },
+    "column": {
+      "x": 340,
+      "width": 760,
+      "height": 13702
+    },
+    "strips": []
+  }
+]
