@@ -59,3 +59,15 @@ test('consent banner: axe violations stay within the recorded baseline', async (
   await expect(page.getByTestId('consent-banner-card')).toBeVisible();
   await expectWithinBaseline('consent-banner', new AxeBuilder({ page }).include('[data-testid="consent-banner-card"]'), testInfo);
 });
+
+// A testimonial logo shares its Sanity asset with a logo document; the strip shows that document's invert flag as `.difference`.
+for (const path of ['/szkolenie-i-wdrozenie-asana', '/']) {
+  test(`${path}: testimonial logos invert exactly when the same artwork is inverted in the logo strip`, async ({ page }) => {
+    await page.goto(path);
+    const assetOf = (src: string) => new URL(src).pathname;
+    const inverted = new Set((await page.locator('.logo-strip li.difference img').evaluateAll((imgs) => imgs.map((img) => (img as HTMLImageElement).src))).map(assetOf));
+    const logos = await page.locator('.testimonials img.logo').evaluateAll((imgs) => imgs.map((img) => ({ src: (img as HTMLImageElement).src, filter: getComputedStyle(img).filter })));
+    expect(logos.length, 'testimonial logos on the page').toBeGreaterThan(0);
+    for (const logo of logos) expect(logo.filter, assetOf(logo.src)).toBe(inverted.has(assetOf(logo.src)) ? 'invert(1) grayscale(1)' : 'none');
+  });
+}
