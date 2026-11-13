@@ -1,0 +1,332 @@
+[
+  {
+    "url": "http://127.0.0.1:8790/",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:14:43.352Z",
+      "2026-11-13T08:14:58.523Z",
+      "2026-11-13T08:15:12.880Z"
+    ],
+    "medians": {
+      "performance": 0.88,
+      "accessibility": 1,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 1657.184,
+      "cls": 0,
+      "totalBytes": 1008314,
+      "scriptBytes": 660521,
+      "third-partyBytes": 889130
+    },
+    "runs": [
+      {
+        "performance": 0.89,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1544.1714,
+        "cls": 0,
+        "totalBytes": 1008581,
+        "scriptBytes": 660574,
+        "third-partyBytes": 889397
+      },
+      {
+        "performance": 0.88,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1657.184,
+        "cls": 0.007978498732464085,
+        "totalBytes": 1008146,
+        "scriptBytes": 660521,
+        "third-partyBytes": 888962
+      },
+      {
+        "performance": 0.83,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2742.6648999999998,
+        "cls": 0,
+        "totalBytes": 1008314,
+        "scriptBytes": 660513,
+        "third-partyBytes": 889130
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8790/blog",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:15:26.940Z",
+      "2026-11-13T08:15:39.695Z",
+      "2026-11-13T08:15:52.427Z"
+    ],
+    "medians": {
+      "performance": 0.86,
+      "accessibility": 1,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 2554.8817499999996,
+      "cls": 0,
+      "totalBytes": 895606,
+      "scriptBytes": 656324,
+      "third-partyBytes": 799649
+    },
+    "runs": [
+      {
+        "performance": 0.87,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2553.83745,
+        "cls": 0,
+        "totalBytes": 895606,
+        "scriptBytes": 656324,
+        "third-partyBytes": 799649
+      },
+      {
+        "performance": 0.86,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2629.63255,
+        "cls": 0,
+        "totalBytes": 894767,
+        "scriptBytes": 655741,
+        "third-partyBytes": 798810
+      },
+      {
+        "performance": 0.86,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2554.8817499999996,
+        "cls": 0,
+        "totalBytes": 895860,
+        "scriptBytes": 656824,
+        "third-partyBytes": 799903
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8790/blog/automatyzacja-sprzedazy",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:16:05.146Z",
+      "2026-11-13T08:16:17.918Z",
+      "2026-11-13T08:16:30.908Z"
+    ],
+    "medians": {
+      "performance": 0.87,
+      "accessibility": 1,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 1212.8265,
+      "cls": 0,
+      "totalBytes": 806813,
+      "scriptBytes": 656331,
+      "third-partyBytes": 697680
+    },
+    "runs": [
+      {
+        "performance": 0.88,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1212.8265,
+        "cls": 0,
+        "totalBytes": 806250,
+        "scriptBytes": 655714,
+        "third-partyBytes": 697117
+      },
+      {
+        "performance": 0.87,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1211.9609,
+        "cls": 0,
+        "totalBytes": 806833,
+        "scriptBytes": 656332,
+        "third-partyBytes": 697700
+      },
+      {
+        "performance": 0.86,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2573.21595,
+        "cls": 0,
+        "totalBytes": 806813,
+        "scriptBytes": 656331,
+        "third-partyBytes": 697680
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8790/audyt-ai-sprzedaz",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:16:43.661Z",
+      "2026-11-13T08:16:57.335Z",
+      "2026-11-13T08:17:10.973Z"
+    ],
+    "medians": {
+      "performance": 0.86,
+      "accessibility": 0.97,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 2587.4844000000003,
+      "cls": 0,
+      "totalBytes": 998375,
+      "scriptBytes": 656332,
+      "third-partyBytes": 889005
+    },
+    "runs": [
+      {
+        "performance": 0.89,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1214.4647,
+        "cls": 0,
+        "totalBytes": 998375,
+        "scriptBytes": 656332,
+        "third-partyBytes": 889005
+      },
+      {
+        "performance": 0.83,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2644.17115,
+        "cls": 0,
+        "totalBytes": 997710,
+        "scriptBytes": 655733,
+        "third-partyBytes": 888340
+      },
+      {
+        "performance": 0.86,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2587.4844000000003,
+        "cls": 0,
+        "totalBytes": 998803,
+        "scriptBytes": 656812,
+        "third-partyBytes": 889433
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8790/kontakt",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:17:24.575Z",
+      "2026-11-13T08:17:37.128Z",
+      "2026-11-13T08:17:49.671Z"
+    ],
+    "medians": {
+      "performance": 0.88,
+      "accessibility": 1,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 1219.4989,
+      "cls": 0,
+      "totalBytes": 780384,
+      "scriptBytes": 656335,
+      "third-partyBytes": 656888
+    },
+    "runs": [
+      {
+        "performance": 0.89,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1219.3179,
+        "cls": 0,
+        "totalBytes": 780384,
+        "scriptBytes": 656332,
+        "third-partyBytes": 656888
+      },
+      {
+        "performance": 0.88,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1219.4989,
+        "cls": 0,
+        "totalBytes": 780378,
+        "scriptBytes": 656335,
+        "third-partyBytes": 656882
+      },
+      {
+        "performance": 0.88,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 1294.2557,
+        "cls": 0,
+        "totalBytes": 780403,
+        "scriptBytes": 656340,
+        "third-partyBytes": 656907
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8790/newsletter",
+    "lighthouseVersion": "12.6.1",
+    "fetchTimes": [
+      "2026-11-13T08:18:02.275Z",
+      "2026-11-13T08:18:15.253Z",
+      "2026-11-13T08:18:27.817Z"
+    ],
+    "medians": {
+      "performance": 0.82,
+      "accessibility": 1,
+      "bestPractices": 0.96,
+      "seo": 1,
+      "lcpMs": 3245.5438,
+      "cls": 0,
+      "totalBytes": 829481,
+      "scriptBytes": 656344,
+      "third-partyBytes": 707198
+    },
+    "runs": [
+      {
+        "performance": 0.81,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 3274.3864000000003,
+        "cls": 0,
+        "totalBytes": 829481,
+        "scriptBytes": 656340,
+        "third-partyBytes": 707198
+      },
+      {
+        "performance": 0.82,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 3245.5438,
+        "cls": 0,
+        "totalBytes": 829510,
+        "scriptBytes": 656367,
+        "third-partyBytes": 707227
+      },
+      {
+        "performance": 0.84,
+        "accessibility": 1,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcpMs": 2895.9654499999997,
+        "cls": 0,
+        "totalBytes": 829404,
+        "scriptBytes": 656344,
+        "third-partyBytes": 707121
+      }
+    ]
+  }
+]
