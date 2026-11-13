@@ -1,0 +1,295 @@
+---
+// A reusable list scene (T100): each row gets its status one at a time via
+// sequence.ts. A row shows a pending mark that gives way to its value, or a
+// "before" value that is struck through with the "after" value beside it.
+// Optional bars are drawn to scale (0–100). The closing number counts the
+// rows marked `counts`. The markup is the end state.
+import "./scene/scene.css";
+
+type Tone = "ok" | "loss" | "muted";
+
+interface Row {
+  name: string;
+  value: string;
+  from?: string;
+  tone?: Tone;
+  pill?: boolean;
+  strike?: boolean;
+  bar?: number;
+  counts?: boolean;
+}
+
+interface Props {
+  diagram: string;
+  title?: string;
+  subtitle?: string;
+  head?: [string, string];
+  rows: Row[];
+  total: { label: string; of?: number; loss?: boolean };
+}
+
+const { diagram, title, subtitle, head, rows, total } = Astro.props;
+let count = 0;
+const steps = rows.map((row) => ({
+  ...row,
+  tone: row.tone ?? "ok",
+  count: (count += row.counts ? 1 : 0),
+}));
+const suffix = total.of === undefined ? "" : `\u00a0z\u00a0${total.of}`;
+---
+
+<div class="sc" data-diagram={diagram} data-scene="sequence" aria-hidden="true">
+  <div class="sc-body">
+    {title ? (
+      <div class="head titled">
+        <span class="title">{title}</span>
+        {subtitle && <span class="subtitle">{subtitle}</span>}
+      </div>
+    ) : (
+      head && (
+        <div class="head">
+          <span>{head[0]}</span>
+          <span>{head[1]}</span>
+        </div>
+      )
+    )}
+    <ul>
+      {steps.map((row) => (
+        <li
+          class:list={["row", "is-done", row.tone, { strike: row.strike }]}
+          data-step
+          data-value={row.count}
+        >
+          <span class="name">{row.name}</span>
+          {row.from ? (
+            <span class="cell flow">
+              <span class="from">{row.from}</span>
+              <span class="arrow">→</span>
+              <span class:list={["value", { pill: row.pill }]}>
+                {row.value}
+              </span>
+            </span>
+          ) : (
+            <span class="cell stack">
+              <span class="pending">…</span>
+              <span class:list={["value", { pill: row.pill }]}>
+                {row.value}
+              </span>
+            </span>
+          )}
+          {row.bar !== undefined && (
+            <span class="track">
+              <span class="bar" style={`--v: ${row.bar}`} />
+            </span>
+          )}
+        </li>
+      ))}
+    </ul>
+    <div class="sc-total">
+      <span class="sc-total-label">{total.label}</span>
+      <span
+        class:list={["sc-total-value", { "is-loss": total.loss }]}
+        data-total
+        data-suffix={suffix}
+      >{`${count}${suffix}`}</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+    justify-content: space-between;
+    padding-block-end: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    border-block-end: 1px solid var(--text-heading);
+  }
+
+  .titled {
+    align-items: baseline;
+    justify-content: flex-start;
+    padding-block-end: 0.75rem;
+  }
+
+  .title {
+    color: var(--text-heading);
+    font-family: var(--font-family-heading);
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.35rem 0.75rem;
+    align-items: baseline;
+    padding-block: 0.55rem;
+    border-block-end: 1px solid var(--border-hairline);
+  }
+
+  .name {
+    color: var(--text-heading);
+  }
+
+  .cell {
+    justify-self: end;
+    text-align: end;
+  }
+
+  .stack {
+    display: grid;
+    justify-items: end;
+  }
+
+  .stack > * {
+    grid-area: 1 / 1;
+  }
+
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: baseline;
+    justify-content: flex-end;
+  }
+
+  .pending {
+    color: var(--border-strong);
+  }
+
+  .from {
+    color: var(--text-muted);
+    text-decoration-color: var(--border-strong);
+  }
+
+  .arrow {
+    color: var(--text-muted);
+  }
+
+  .value {
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .ok .value {
+    color: var(--text-link);
+  }
+
+  .loss .value {
+    color: var(--text-error);
+  }
+
+  .muted .value {
+    color: var(--text-muted);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .pill {
+    padding: 0.1rem 0.6rem;
+    font-size: 0.8125rem;
+    font-weight: var(--font-weight-medium);
+    white-space: nowrap;
+    border-radius: var(--radius-pill);
+  }
+
+  .ok .pill {
+    background: var(--surface-tint);
+  }
+
+  .loss .pill {
+    border: 1px solid var(--color-status-error);
+  }
+
+  .muted .pill {
+    border: 1px solid var(--border-default);
+  }
+
+  .track {
+    grid-column: 1 / -1;
+    block-size: 6px;
+    background: var(--surface-alt);
+  }
+
+  .bar {
+    display: block;
+    inline-size: calc(var(--v) * 1%);
+    block-size: 100%;
+    background: var(--color-primary-20);
+    transform-origin: 0 50%;
+  }
+
+  .loss .bar {
+    background: var(--color-status-error);
+  }
+
+  .muted .bar {
+    background: var(--border-strong);
+  }
+
+  .strike.is-done .name {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    text-decoration-color: var(--border-strong);
+  }
+
+  .is-done .from {
+    text-decoration: line-through;
+  }
+
+  .row:not(.is-done) :is(.value, .arrow),
+  .is-done .pending {
+    opacity: 0;
+  }
+
+  .row:not(.is-done) .value {
+    transform: translateY(6px);
+  }
+
+  .row:not(.is-done) .bar {
+    transform: scaleX(0);
+  }
+
+  @container (inline-size < 26rem) {
+    .row {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.25rem;
+    }
+
+    .cell {
+      justify-self: start;
+      text-align: start;
+    }
+
+    .stack {
+      justify-items: start;
+    }
+
+    .flow {
+      justify-content: flex-start;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .value,
+    .arrow,
+    .pending {
+      transition:
+        opacity 630ms cubic-bezier(0.25, 1, 0.5, 1),
+        transform 630ms cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .bar {
+      transition: transform 900ms cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .name {
+      transition: color 630ms ease;
+    }
+  }
+</style>
+
+<script>
+  import "./sequence";
+</script>
