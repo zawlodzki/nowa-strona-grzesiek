@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "sanity dev --host localhost",
     "build": "sanity build",
-    "check": "tsc --noEmit && sanity schema validate",
+    "check": "tsc --noEmit && sanity schema validate && pnpm verify:contract",
+    "verify:contract": "sanity schema extract --path schema.json --force && node scripts/verify-schema.mjs --schema-only",
     "typegen": "sanity schema extract --path schema.json --force && sanity typegen generate",
     "verify": "pnpm typegen && node scripts/verify-schema.mjs",
     "test": "node --test ../../migration/lanes/cms/out/t50-studio-plugins/toc-array-guard.test.mjs"
