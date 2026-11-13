@@ -17,6 +17,7 @@ import type { Media } from '../../../../studio/sanity.types';
 import type { ResolvedLogo } from '../../components/ui/block-types';
 import type { Language } from '../../seo/types.ts';
 import { localHref, resolveImage, type PageDoc, type Site } from './site.ts';
+import { invertsLikeLogo } from './testimonial.ts';
 
 interface Props { site: Site; sections: NonNullable<PageDoc['sections']>; headingLevel: 'h1' | 'h2'; language?: Language; }
 const { site, sections, headingLevel, language = 'pl' } = Astro.props;
@@ -63,7 +64,7 @@ const postsOf = (kind: string | undefined) => site.posts
         if (!item) return [];
         const image = resolveImage(site, item.image);
         const authorImage = resolveImage(site, item.authorImage);
-        return [{ _id: item._id, name: item.name, role: item.role, company: item.company, quote: item.quote, url: item.url, linkedinUrl: item.linkedinUrl, ...(authorImage && { authorImage }), ...(image && { image }) }];
+        return [{ _id: item._id, name: item.name, role: item.role, company: item.company, quote: item.quote, url: item.url, linkedinUrl: item.linkedinUrl, ...(authorImage && { authorImage }), ...(image && { image, invert: invertsLikeLogo(site.logos.values(), item.image) }) }];
       });
       return <Testimonials data={section} items={items} />;
     }

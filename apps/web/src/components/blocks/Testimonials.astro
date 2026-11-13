@@ -3,7 +3,7 @@ import type { Testimonial, Testimonials } from '../../../../studio/sanity.types'
 import type { ResolvedImage } from '../portable-text/types';
 import { safeHref } from '../portable-text/types';
 
-export type ResolvedTestimonial = Pick<Testimonial, '_id' | 'name' | 'role' | 'company' | 'quote' | 'url' | 'linkedinUrl'> & { image?: ResolvedImage; authorImage?: ResolvedImage };
+export type ResolvedTestimonial = Pick<Testimonial, '_id' | 'name' | 'role' | 'company' | 'quote' | 'url' | 'linkedinUrl'> & { image?: ResolvedImage; invert?: boolean; authorImage?: ResolvedImage };
 
 interface Props {
   data: Testimonials;
@@ -43,7 +43,7 @@ const byline = (item: ResolvedTestimonial) => [item.role, item.company].filter(B
                   ? <img src={item.image.src} srcset={item.image.srcset} sizes="(width < 48rem) 100vw, 33vw" width={item.image.width} height={item.image.height} alt={item.image.alt || `Rekomendacja: ${item.name}`} loading="lazy" decoding="async" />
                   : (
                     <>
-                      {item.image && <img class="logo" src={item.image.src} srcset={item.image.srcset} sizes="10rem" width={item.image.width} height={item.image.height} alt={item.image.alt ?? ''} loading="lazy" decoding="async" />}
+                      {item.image && <img class:list={['logo', { invert: item.invert }]} src={item.image.src} srcset={item.image.srcset} sizes="10rem" width={item.image.width} height={item.image.height} alt={item.image.alt ?? ''} loading="lazy" decoding="async" />}
                       <blockquote>{quoteText(item.quote).split(/\n{2,}/).map((paragraph) => <p>{paragraph}</p>)}</blockquote>
                     </>
                   )}
@@ -91,6 +91,7 @@ const byline = (item: ResolvedTestimonial) => [item.role, item.company].filter(B
   .wall .quote { padding: var(--space-s); gap: var(--space-s); }
   .wall img { inline-size: 100%; border-radius: var(--radius-sm); }
   .logo { block-size: 2.5rem; inline-size: auto; max-inline-size: 10rem; object-fit: contain; }
+  .logo.invert { filter: invert(1) grayscale(1); }
 
   blockquote { display: grid; gap: 0.75em; color: var(--text-heading); max-inline-size: 65ch; }
   blockquote p:first-child::before { content: "„"; }
