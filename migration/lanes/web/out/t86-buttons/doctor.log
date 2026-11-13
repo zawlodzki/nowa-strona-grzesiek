@@ -1,0 +1,7 @@
+ok       wrangler pid 494695 alive
+ok       port 8790 is owned by our wrangler
+ok       started at HEAD 5a34e55
+ok       dist is newer than src
+ok       GET / -> 200
+ok       home page title is this site
+doctor: healthy (http://127.0.0.1:8790, run 20261113-211003-p8790)

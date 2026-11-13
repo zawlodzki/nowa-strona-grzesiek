@@ -1,0 +1,172 @@
+$ playwright test
+[WebServer] (node:474574) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] mock n8n listening on http://127.0.0.1:8794/webhook/mock
+[WebServer] ▲ [WARNING] Missing required secrets: N8N_FORM_WEBHOOK, TURNSTILE_SECRET_KEY. Add them to .dev.vars, .env, or set as environment variables.
+[WebServer] 
+[WebServer] 
+
+Running 22 tests using 2 workers
+
+(node:474631) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:474632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › e2e/consent.spec.ts:14:1 › first visit: Consent Mode v2 denies analytics and ads before the loader, and only GTM is requested (1.8s)
+  ✓   2 [chromium] › e2e/consent.spec.ts:39:1 › rejecting optional consent keeps analytics and ads denied and requests nothing new (2.9s)
+  ✓   4 [chromium] › e2e/pages.spec.ts:42:3 › home: no axe violation outside the recorded baseline (1.9s)
+  ✓   3 [chromium] › e2e/forms.spec.ts:24:3 › main-contact form delivers the Webflow envelope to n8n and lands on the thank-you page (3.3s)
+  ✘   5 [chromium] › e2e/pages.spec.ts:48:3 › home: no horizontal overflow at 320 px (1.4s)
+(node:475052) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [chromium] › e2e/forms.spec.ts:46:5 › main-contact form with an empty e-mail posts nothing (1.9s)
+  ✘   7 [chromium] › e2e/pages.spec.ts:42:3 › service: no axe violation outside the recorded baseline (30.1s)
+  ✘   8 [chromium] › e2e/forms.spec.ts:46:5 › main-contact form with an invalid e-mail posts nothing (30.1s)
+(node:475380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:475387) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 [chromium] › e2e/pages.spec.ts:48:3 › service: no horizontal overflow at 320 px (1.4s)
+(node:475569) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [chromium] › e2e/forms.spec.ts:24:3 › newsletter form delivers the Webflow envelope to n8n and lands on the thank-you page (3.3s)
+  ✓  11 [chromium] › e2e/pages.spec.ts:42:3 › blog: no axe violation outside the recorded baseline (1.8s)
+  ✓  13 [chromium] › e2e/pages.spec.ts:48:3 › blog: no horizontal overflow at 320 px (1.1s)
+  ✓  12 [chromium] › e2e/forms.spec.ts:46:5 › newsletter form with an empty e-mail posts nothing (1.6s)
+  ✓  14 [chromium] › e2e/pages.spec.ts:42:3 › post: no axe violation outside the recorded baseline (1.7s)
+  ✓  15 [chromium] › e2e/forms.spec.ts:46:5 › newsletter form with an invalid e-mail posts nothing (1.7s)
+  ✓  17 [chromium] › e2e/forms.spec.ts:65:1 › the outbound guard stops and reports a request to flows.zawlodzki.com (288ms)
+  ✓  16 [chromium] › e2e/pages.spec.ts:48:3 › post: no horizontal overflow at 320 px (1.2s)
+  ✓  18 [chromium] › e2e/pages.spec.ts:42:3 › contact: no axe violation outside the recorded baseline (1.5s)
+  ✓  19 [chromium] › e2e/pages.spec.ts:48:3 › contact: no horizontal overflow at 320 px (1.1s)
+  ✓  21 [chromium] › e2e/pages.spec.ts:65:3 › /szkolenie-i-wdrozenie-asana: testimonial logos invert exactly when the same artwork is inverted in the logo strip (259ms)
+  ✓  22 [chromium] › e2e/pages.spec.ts:65:3 › /: testimonial logos invert exactly when the same artwork is inverted in the logo strip (267ms)
+  ✓  20 [chromium] › e2e/pages.spec.ts:57:1 › consent banner: axe violations stay within the recorded baseline (1.4s)
+
+
+  1) [chromium] › e2e/forms.spec.ts:46:5 › main-contact form with an invalid e-mail posts nothing ──
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByTestId('consent-banner-reject-button')
+
+
+       at fixtures.ts:55
+
+      53 | // The c15t banner is a modal over the page. A visitor answers it first, so the tests do too, with the choice that keeps consent denied.
+      54 | export async function rejectOptionalConsent(page: Page) {
+    > 55 |   await page.getByTestId('consent-banner-reject-button').click();
+         |                                                          ^
+      56 |   await expect(page.getByTestId('consent-banner-card')).toBeHidden();
+      57 | }
+      58 |
+        at rejectOptionalConsent (/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T86-button-system/apps/web/e2e/fixtures.ts:55:58)
+        at /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T86-button-system/apps/web/e2e/forms.spec.ts:51:13
+
+    Error Context: .wrangler/e2e/results/forms-main-contact-form-with-an-invalid-e-mail-posts-nothing-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    .wrangler/e2e/results/forms-main-contact-form-with-an-invalid-e-mail-posts-nothing-chromium/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace .wrangler/e2e/results/forms-main-contact-form-with-an-invalid-e-mail-posts-nothing-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › e2e/pages.spec.ts:48:3 › home: no horizontal overflow at 320 px ──────────────────
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 320
+    Received:    336
+
+      51 |     await rejectOptionalConsent(page);
+      52 |     const widths = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
+    > 53 |     expect(widths.scroll).toBeLessThanOrEqual(widths.client);
+         |                           ^
+      54 |   });
+      55 | }
+      56 |
+        at /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T86-button-system/apps/web/e2e/pages.spec.ts:53:27
+
+    Error Context: .wrangler/e2e/results/pages-home-no-horizontal-overflow-at-320-px-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    .wrangler/e2e/results/pages-home-no-horizontal-overflow-at-320-px-chromium/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace .wrangler/e2e/results/pages-home-no-horizontal-overflow-at-320-px-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › e2e/pages.spec.ts:42:3 › service: no axe violation outside the recorded baseline ─
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByTestId('consent-banner-reject-button')
+
+
+       at fixtures.ts:55
+
+      53 | // The c15t banner is a modal over the page. A visitor answers it first, so the tests do too, with the choice that keeps consent denied.
+      54 | export async function rejectOptionalConsent(page: Page) {
+    > 55 |   await page.getByTestId('consent-banner-reject-button').click();
+         |                                                          ^
+      56 |   await expect(page.getByTestId('consent-banner-card')).toBeHidden();
+      57 | }
+      58 |
+        at rejectOptionalConsent (/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T86-button-system/apps/web/e2e/fixtures.ts:55:58)
+        at /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T86-button-system/apps/web/e2e/pages.spec.ts:44:11
+
+    Error Context: .wrangler/e2e/results/pages-service-no-axe-violation-outside-the-recorded-baseline-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    .wrangler/e2e/results/pages-service-no-axe-violation-outside-the-recorded-baseline-chromium/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace .wrangler/e2e/results/pages-service-no-axe-violation-outside-the-recorded-baseline-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › e2e/pages.spec.ts:48:3 › service: no horizontal overflow at 320 px ───────────────
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 320
+    Received:    404
+
+      51 |     await rejectOptionalConsent(page);
+      52 |     const widths = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
+    > 53 |     expect(widths.scroll).toBeLessThanOrEqual(widths.client);
+         |                           ^
+      54 |   });
+      55 | }
+      56 |
+        at /home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T86-button-system/apps/web/e2e/pages.spec.ts:53:27
+
+    Error Context: .wrangler/e2e/results/pages-service-no-horizontal-overflow-at-320-px-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    .wrangler/e2e/results/pages-service-no-horizontal-overflow-at-320-px-chromium/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace .wrangler/e2e/results/pages-service-no-horizontal-overflow-at-320-px-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    [chromium] › e2e/forms.spec.ts:46:5 › main-contact form with an invalid e-mail posts nothing ───
+    [chromium] › e2e/pages.spec.ts:48:3 › home: no horizontal overflow at 320 px ───────────────────
+    [chromium] › e2e/pages.spec.ts:42:3 › service: no axe violation outside the recorded baseline ──
+    [chromium] › e2e/pages.spec.ts:48:3 › service: no horizontal overflow at 320 px ────────────────
+  18 passed (48.9s)
+[ELIFECYCLE] Command failed with exit code 1.
+Error: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL
+
+  × "pnpm recursive run" failed in /home/admin/.t3/worktrees/nowa-strona-
+  │ grzesiek/task-T86-button-system/apps/web
+
