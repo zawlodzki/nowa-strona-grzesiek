@@ -1,0 +1,37 @@
+h1 Sales Atlas System
+h2 Dziewięć warstw
+h4 Po czym poznać, że działa
+h4 Po czym poznać, że nie działa
+h4 Po czym poznać, że działa
+h4 Po czym poznać, że nie działa
+h4 Po czym poznać, że działa
+h4 Po czym poznać, że nie działa
+h4 Po czym poznać, że działa
+h4 Po czym poznać, że nie działa
+h4 Po czym poznać, że działa
+h4 Po czym poznać, że nie działa
+h4 Po czym poznać, że działa
+h4 Po czym poznać, że nie działa
+h4 Po czym poznać, że działa
+h4 Po czym poznać, że nie działa
+h4 Po czym poznać, że działa
+h4 Po czym poznać, że nie działa
+h4 Po czym poznać, że działa
+h4 Po czym poznać, że nie działa
+h2 Buduje się od dołu, czyta od góry
+h2 Czym Sales Atlas System nie jest
+h3 Nie jest metodyką rozmowy handlowej. SPIN, Challenger i SPICED opisują samą rozmowę w szczegółowy sposób.
+h3 Nie jest zestawem kryteriów kwalifikacji. BANT czy MEDDIC pokrywają jeden element czwartej warstwy, nie cały system.
+h3 Nie jest szkoleniem sprzedażowym. Nie uczy domykania ani obrony ceny.
+h3 Nie jest oprogramowaniem. Instaluje się w narzędziach, które już masz albo właśnie wdrażasz.
+h3 Nie jest systemem dla firm powyżej 250 osób. Tam lepiej sprawdzają się metodyki zbudowane wokół managera sprzedaży.
+h3 Nie jest osobnym produktem, a frameworkiem do wprowadzania zmian do sprzedaży w uporządkowany sposób.
+h2 Sprawdź, czy masz już system
+h2 Skąd wziął się system sprzedaży
+h3 Ponad 50 wdrożeń w firmach B2B
+h3 Blisko 4 000 obserwacji z rozmów
+h2 Najczęściej zadawane pytania
+h2 CRM
+h2 AI
+h2 Asana
+h2 Materiały

@@ -1,0 +1,353 @@
+[
+  {
+    "width": 390,
+    "anchor": "kontakt",
+    "promo": false,
+    "heading": "Skontaktuj się ze mną",
+    "headingTop": 109.203125,
+    "headerBottom": 61,
+    "sectionTop": 61.203125
+  },
+  {
+    "width": 390,
+    "anchor": "crm",
+    "promo": false,
+    "heading": "CRM dla zespołu sprzedaży",
+    "headingTop": 109.046875,
+    "headerBottom": 61,
+    "sectionTop": 61.046875
+  },
+  {
+    "width": 390,
+    "anchor": "ai",
+    "promo": false,
+    "heading": "Wdrożenie AI oparte na procesie i danych firmy",
+    "headingTop": 109.203125,
+    "headerBottom": 61,
+    "sectionTop": 61.203125
+  },
+  {
+    "width": 390,
+    "anchor": "cennik",
+    "promo": false,
+    "heading": "Ile to kosztuje",
+    "headingTop": 108.78125,
+    "headerBottom": 61,
+    "sectionTop": 60.78125
+  },
+  {
+    "width": 390,
+    "anchor": "faq",
+    "promo": false,
+    "heading": "Najczęściej zadawane pytania",
+    "headingTop": 109.328125,
+    "headerBottom": 61,
+    "sectionTop": 61.328125
+  },
+  {
+    "width": 390,
+    "anchor": "opinie",
+    "promo": false,
+    "heading": "Opinie zadowolonych klientów",
+    "headingTop": 108.984375,
+    "headerBottom": 61,
+    "sectionTop": 60.984375
+  },
+  {
+    "width": 390,
+    "anchor": "kontakt",
+    "promo": true,
+    "heading": "Skontaktuj się ze mną",
+    "headingTop": 109.203125,
+    "headerBottom": 61,
+    "sectionTop": 61.203125
+  },
+  {
+    "width": 390,
+    "anchor": "crm",
+    "promo": true,
+    "heading": "CRM dla zespołu sprzedaży",
+    "headingTop": 109.046875,
+    "headerBottom": 61,
+    "sectionTop": 61.046875
+  },
+  {
+    "width": 390,
+    "anchor": "ai",
+    "promo": true,
+    "heading": "Wdrożenie AI oparte na procesie i danych firmy",
+    "headingTop": 109.203125,
+    "headerBottom": 61,
+    "sectionTop": 61.203125
+  },
+  {
+    "width": 390,
+    "anchor": "cennik",
+    "promo": true,
+    "heading": "Ile to kosztuje",
+    "headingTop": 108.78125,
+    "headerBottom": 61,
+    "sectionTop": 60.78125
+  },
+  {
+    "width": 390,
+    "anchor": "faq",
+    "promo": true,
+    "heading": "Najczęściej zadawane pytania",
+    "headingTop": 109.328125,
+    "headerBottom": 61,
+    "sectionTop": 61.328125
+  },
+  {
+    "width": 390,
+    "anchor": "opinie",
+    "promo": true,
+    "heading": "Opinie zadowolonych klientów",
+    "headingTop": 108.984375,
+    "headerBottom": 61,
+    "sectionTop": 60.984375
+  },
+  {
+    "width": 390,
+    "blog": "/blog/bezpieczne-przekazanie-danych",
+    "hash": "#post-baza-danych-np-eksport-z-obecnego-crm",
+    "headingTop": 120.140625,
+    "headerBottom": 61,
+    "gap": 59.140625,
+    "lineHeight": 39.6003
+  },
+  {
+    "width": 768,
+    "anchor": "kontakt",
+    "promo": false,
+    "heading": "Skontaktuj się ze mną",
+    "headingTop": 114.75,
+    "headerBottom": 61,
+    "sectionTop": 61
+  },
+  {
+    "width": 768,
+    "anchor": "crm",
+    "promo": false,
+    "heading": "CRM dla zespołu sprzedaży",
+    "headingTop": 114.4375,
+    "headerBottom": 61,
+    "sectionTop": 60.6875
+  },
+  {
+    "width": 768,
+    "anchor": "ai",
+    "promo": false,
+    "heading": "Wdrożenie AI oparte na procesie i danych firmy",
+    "headingTop": 114.609375,
+    "headerBottom": 61,
+    "sectionTop": 60.859375
+  },
+  {
+    "width": 768,
+    "anchor": "cennik",
+    "promo": false,
+    "heading": "Ile to kosztuje",
+    "headingTop": 114.84375,
+    "headerBottom": 61,
+    "sectionTop": 61.09375
+  },
+  {
+    "width": 768,
+    "anchor": "faq",
+    "promo": false,
+    "heading": "Najczęściej zadawane pytania",
+    "headingTop": 114.96875,
+    "headerBottom": 61,
+    "sectionTop": 61.21875
+  },
+  {
+    "width": 768,
+    "anchor": "opinie",
+    "promo": false,
+    "heading": "Opinie zadowolonych klientów",
+    "headingTop": 114.296875,
+    "headerBottom": 61,
+    "sectionTop": 60.546875
+  },
+  {
+    "width": 768,
+    "anchor": "kontakt",
+    "promo": true,
+    "heading": "Skontaktuj się ze mną",
+    "headingTop": 114.265625,
+    "headerBottom": 61,
+    "sectionTop": 60.515625
+  },
+  {
+    "width": 768,
+    "anchor": "crm",
+    "promo": true,
+    "heading": "CRM dla zespołu sprzedaży",
+    "headingTop": 114.46875,
+    "headerBottom": 61,
+    "sectionTop": 60.71875
+  },
+  {
+    "width": 768,
+    "anchor": "ai",
+    "promo": true,
+    "heading": "Wdrożenie AI oparte na procesie i danych firmy",
+    "headingTop": 115.15625,
+    "headerBottom": 61,
+    "sectionTop": 61.40625
+  },
+  {
+    "width": 768,
+    "anchor": "cennik",
+    "promo": true,
+    "heading": "Ile to kosztuje",
+    "headingTop": 114.359375,
+    "headerBottom": 61,
+    "sectionTop": 60.609375
+  },
+  {
+    "width": 768,
+    "anchor": "faq",
+    "promo": true,
+    "heading": "Najczęściej zadawane pytania",
+    "headingTop": 115,
+    "headerBottom": 61,
+    "sectionTop": 61.25
+  },
+  {
+    "width": 768,
+    "anchor": "opinie",
+    "promo": true,
+    "heading": "Opinie zadowolonych klientów",
+    "headingTop": 114.8125,
+    "headerBottom": 61,
+    "sectionTop": 61.0625
+  },
+  {
+    "width": 768,
+    "blog": "/blog/bezpieczne-przekazanie-danych",
+    "hash": "#post-baza-danych-np-eksport-z-obecnego-crm",
+    "headingTop": 119.703125,
+    "headerBottom": 61,
+    "gap": 58.703125,
+    "lineHeight": 43.1641
+  },
+  {
+    "width": 1440,
+    "anchor": "kontakt",
+    "promo": false,
+    "heading": "Skontaktuj się ze mną",
+    "headingTop": 136.171875,
+    "headerBottom": 72,
+    "sectionTop": 72.171875
+  },
+  {
+    "width": 1440,
+    "anchor": "crm",
+    "promo": false,
+    "heading": "CRM dla zespołu sprzedaży",
+    "headingTop": 210.734375,
+    "headerBottom": 72,
+    "sectionTop": 72.296875
+  },
+  {
+    "width": 1440,
+    "anchor": "ai",
+    "promo": false,
+    "heading": "Wdrożenie AI oparte na procesie i danych firmy",
+    "headingTop": 135.6875,
+    "headerBottom": 72,
+    "sectionTop": 71.6875
+  },
+  {
+    "width": 1440,
+    "anchor": "cennik",
+    "promo": false,
+    "heading": "Ile to kosztuje",
+    "headingTop": 136.46875,
+    "headerBottom": 72,
+    "sectionTop": 72.46875
+  },
+  {
+    "width": 1440,
+    "anchor": "faq",
+    "promo": false,
+    "heading": "Najczęściej zadawane pytania",
+    "headingTop": 136.03125,
+    "headerBottom": 72,
+    "sectionTop": 72.03125
+  },
+  {
+    "width": 1440,
+    "anchor": "opinie",
+    "promo": false,
+    "heading": "Opinie zadowolonych klientów",
+    "headingTop": 135.6875,
+    "headerBottom": 72,
+    "sectionTop": 71.6875
+  },
+  {
+    "width": 1440,
+    "anchor": "kontakt",
+    "promo": true,
+    "heading": "Skontaktuj się ze mną",
+    "headingTop": 136.171875,
+    "headerBottom": 72,
+    "sectionTop": 72.171875
+  },
+  {
+    "width": 1440,
+    "anchor": "crm",
+    "promo": true,
+    "heading": "CRM dla zespołu sprzedaży",
+    "headingTop": 210.734375,
+    "headerBottom": 72,
+    "sectionTop": 72.296875
+  },
+  {
+    "width": 1440,
+    "anchor": "ai",
+    "promo": true,
+    "heading": "Wdrożenie AI oparte na procesie i danych firmy",
+    "headingTop": 135.6875,
+    "headerBottom": 72,
+    "sectionTop": 71.6875
+  },
+  {
+    "width": 1440,
+    "anchor": "cennik",
+    "promo": true,
+    "heading": "Ile to kosztuje",
+    "headingTop": 136.46875,
+    "headerBottom": 72,
+    "sectionTop": 72.46875
+  },
+  {
+    "width": 1440,
+    "anchor": "faq",
+    "promo": true,
+    "heading": "Najczęściej zadawane pytania",
+    "headingTop": 136.03125,
+    "headerBottom": 72,
+    "sectionTop": 72.03125
+  },
+  {
+    "width": 1440,
+    "anchor": "opinie",
+    "promo": true,
+    "heading": "Opinie zadowolonych klientów",
+    "headingTop": 135.6875,
+    "headerBottom": 72,
+    "sectionTop": 71.6875
+  },
+  {
+    "width": 1440,
+    "blog": "/blog/bezpieczne-przekazanie-danych",
+    "hash": "#post-baza-danych-np-eksport-z-obecnego-crm",
+    "headingTop": 120.1875,
+    "headerBottom": 72,
+    "gap": 48.1875,
+    "lineHeight": 49.4998
+  }
+]
