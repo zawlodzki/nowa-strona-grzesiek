@@ -1,0 +1,538 @@
+[
+  {
+    "source": "live",
+    "width": 390,
+    "url": "https://www.zawlodzki.pl/",
+    "status": 200,
+    "links": [
+      {
+        "label": "logo Grzegorz Zaw\u0142odzki",
+        "href": "/",
+        "x": 122.984375,
+        "y": -312.421875,
+        "width": 144,
+        "height": 54.90625,
+        "right": 266.984375
+      },
+      {
+        "label": "Sales Atlas System",
+        "href": "/sales-atlas-system",
+        "x": 167.578125,
+        "y": -233.515625,
+        "width": 54.828125,
+        "height": 80.328125,
+        "right": 222.40625
+      },
+      {
+        "label": "Audyt Pipedrive",
+        "href": "/audyt-crm-pipedrive",
+        "x": 141.296875,
+        "y": -81.078125,
+        "width": 107.375,
+        "height": 44,
+        "right": 248.671875
+      },
+      {
+        "label": "Audyt sprzeda\u017cy B2B",
+        "href": "/audyt-sprzedazy",
+        "x": 121.65625,
+        "y": -37.078125,
+        "width": 146.65625,
+        "height": 44,
+        "right": 268.3125
+      },
+      {
+        "label": "Wdro\u017cenie Pipedrive",
+        "href": "/szkolenie-i-wdrozenie-pipedrive",
+        "x": 124.15625,
+        "y": 6.921875,
+        "width": 141.65625,
+        "height": 44,
+        "right": 265.8125
+      },
+      {
+        "label": "Automatyzacje dla Pipedrive",
+        "href": "/automatyzacje-dla-pipedrive",
+        "x": 98.359375,
+        "y": 50.921875,
+        "width": 193.25,
+        "height": 44,
+        "right": 291.609375
+      },
+      {
+        "label": "Wdro\u017cenie Salesforce",
+        "href": "/szkolenie-i-wdrozenie-salesforce",
+        "x": 119.25,
+        "y": 94.921875,
+        "width": 151.484375,
+        "height": 44,
+        "right": 270.734375
+      },
+      {
+        "label": "Kurs AI w sprzeda\u017cy",
+        "href": "/kurs-ai-w-sprzedazy",
+        "x": 127.15625,
+        "y": 203.03125,
+        "width": 135.65625,
+        "height": 44,
+        "right": 262.8125
+      },
+      {
+        "label": "Audyt AI w sprzeda\u017cy",
+        "href": "/audyt-ai-sprzedaz",
+        "x": 122.25,
+        "y": 247.03125,
+        "width": 145.484375,
+        "height": 44,
+        "right": 267.734375
+      },
+      {
+        "label": "Szkolenie grupowe AI w sprzeda\u017cy",
+        "href": "/program-ai-dla-zespolu-sprzedazy",
+        "x": 75.796875,
+        "y": 291.03125,
+        "width": 238.375,
+        "height": 44,
+        "right": 314.171875
+      },
+      {
+        "label": "Wdro\u017cenie AI w sprzeda\u017cy",
+        "href": "/wdrozenie-ai-w-sprzedazy-b2b",
+        "x": 105.09375,
+        "y": 335.03125,
+        "width": 179.78125,
+        "height": 44,
+        "right": 284.875
+      },
+      {
+        "label": "Audyt Asana",
+        "href": "/audyt-procesow-asana",
+        "x": 152.453125,
+        "y": 443.140625,
+        "width": 85.078125,
+        "height": 44,
+        "right": 237.53125
+      },
+      {
+        "label": "Wdro\u017cenie Asana",
+        "href": "/szkolenie-i-wdrozenie-asana",
+        "x": 135.296875,
+        "y": 487.140625,
+        "width": 119.375,
+        "height": 44,
+        "right": 254.671875
+      },
+      {
+        "label": "O mnie",
+        "href": "/o-mnie",
+        "x": 170.015625,
+        "y": 595.25,
+        "width": 49.953125,
+        "height": 44,
+        "right": 219.96875
+      },
+      {
+        "label": "Kontakt",
+        "href": "/kontakt",
+        "x": 169.09375,
+        "y": 639.25,
+        "width": 51.78125,
+        "height": 44,
+        "right": 220.875
+      },
+      {
+        "label": "Blog",
+        "href": "/blog",
+        "x": 178.34375,
+        "y": 683.25,
+        "width": 33.296875,
+        "height": 44,
+        "right": 211.640625
+      },
+      {
+        "label": "System sprzeda\u017cy",
+        "href": "/sales-atlas-system",
+        "x": 133.390625,
+        "y": 727.25,
+        "width": 123.1875,
+        "height": 44,
+        "right": 256.578125
+      },
+      {
+        "label": "Bezpieczne przesy\u0142anie danych",
+        "href": "/blog/bezpieczne-przekazanie-danych",
+        "x": 86.03125,
+        "y": 771.25,
+        "width": 217.90625,
+        "height": 44,
+        "right": 303.9375
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/zawlodzki",
+        "x": 112.984375,
+        "y": 925.640625,
+        "width": 44,
+        "height": 44,
+        "right": 156.984375
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/zawlodzki/",
+        "x": 172.984375,
+        "y": 925.640625,
+        "width": 44,
+        "height": 44,
+        "right": 216.984375
+      },
+      {
+        "label": "X",
+        "href": "https://x.com/zawlodzki",
+        "x": 232.984375,
+        "y": 925.640625,
+        "width": 44,
+        "height": 44,
+        "right": 276.984375
+      },
+      {
+        "label": "Zarz\u0105dzaj zgodami",
+        "href": null,
+        "x": 112.984375,
+        "y": 1065.671875,
+        "width": 164,
+        "height": 44.109375,
+        "right": 276.984375
+      },
+      {
+        "label": "Regulamin",
+        "href": "/regulamin",
+        "x": 142.78125,
+        "y": 1117.78125,
+        "width": 104.421875,
+        "height": 44.109375,
+        "right": 247.203125
+      },
+      {
+        "label": "Polityka prywatno\u015bci",
+        "href": "/polityka-prywatnosci",
+        "x": 109.25,
+        "y": 1169.890625,
+        "width": 171.484375,
+        "height": 44.109375,
+        "right": 280.734375
+      }
+    ],
+    "blog": [
+      {
+        "link": {
+          "x": 178.34375,
+          "y": 683.25,
+          "width": 33.296875,
+          "height": 44,
+          "right": 211.640625
+        },
+        "text": {
+          "x": 178.34375,
+          "y": 695.1875,
+          "width": 33.296875,
+          "height": 20,
+          "right": 211.640625
+        },
+        "justifyContent": "normal",
+        "padding": "0px",
+        "margin": "0px"
+      }
+    ],
+    "brand": {
+      "x": 122.984375,
+      "y": -312.421875,
+      "width": 144,
+      "height": 54.90625,
+      "right": 266.984375
+    },
+    "badge": {
+      "x": 167.578125,
+      "y": -233.515625,
+      "width": 54.828125,
+      "height": 80.328125,
+      "right": 222.40625
+    },
+    "row": {
+      "x": 16,
+      "y": -312.421875,
+      "width": 357.984375,
+      "height": 159.234375,
+      "right": 373.984375
+    },
+    "h2": 4,
+    "overflow": false
+  },
+  {
+    "source": "live",
+    "width": 1440,
+    "url": "https://www.zawlodzki.pl/",
+    "status": 200,
+    "links": [
+      {
+        "label": "logo Grzegorz Zaw\u0142odzki",
+        "href": "/",
+        "x": 120,
+        "y": 321.6875,
+        "width": 144,
+        "height": 54.90625,
+        "right": 264
+      },
+      {
+        "label": "Sales Atlas System",
+        "href": "/sales-atlas-system",
+        "x": 1251.734375,
+        "y": 299.140625,
+        "width": 68.265625,
+        "height": 100,
+        "right": 1320
+      },
+      {
+        "label": "Audyt Pipedrive",
+        "href": "/audyt-crm-pipedrive",
+        "x": 120,
+        "y": 478.140625,
+        "width": 138.703125,
+        "height": 44,
+        "right": 258.703125
+      },
+      {
+        "label": "Audyt sprzeda\u017cy B2B",
+        "href": "/audyt-sprzedazy",
+        "x": 120,
+        "y": 522.140625,
+        "width": 184.828125,
+        "height": 44,
+        "right": 304.828125
+      },
+      {
+        "label": "Wdro\u017cenie Pipedrive",
+        "href": "/szkolenie-i-wdrozenie-pipedrive",
+        "x": 120,
+        "y": 566.140625,
+        "width": 180.828125,
+        "height": 44,
+        "right": 300.828125
+      },
+      {
+        "label": "Automatyzacje dla Pipedrive",
+        "href": "/automatyzacje-dla-pipedrive",
+        "x": 120,
+        "y": 610.140625,
+        "width": 244.0625,
+        "height": 44,
+        "right": 364.0625
+      },
+      {
+        "label": "Wdro\u017cenie Salesforce",
+        "href": "/szkolenie-i-wdrozenie-salesforce",
+        "x": 120,
+        "y": 654.140625,
+        "width": 187.609375,
+        "height": 44,
+        "right": 307.609375
+      },
+      {
+        "label": "Kurs AI w sprzeda\u017cy",
+        "href": "/kurs-ai-w-sprzedazy",
+        "x": 426,
+        "y": 478.140625,
+        "width": 173.828125,
+        "height": 44,
+        "right": 599.828125
+      },
+      {
+        "label": "Audyt AI w sprzeda\u017cy",
+        "href": "/audyt-ai-sprzedaz",
+        "x": 426,
+        "y": 522.140625,
+        "width": 186.609375,
+        "height": 44,
+        "right": 612.609375
+      },
+      {
+        "label": "Szkolenie grupowe AI w sprzeda\u017cy",
+        "href": "/program-ai-dla-zespolu-sprzedazy",
+        "x": 426,
+        "y": 566.140625,
+        "width": 282,
+        "height": 70,
+        "right": 708
+      },
+      {
+        "label": "Wdro\u017cenie AI w sprzeda\u017cy",
+        "href": "/wdrozenie-ai-w-sprzedazy-b2b",
+        "x": 426,
+        "y": 636.140625,
+        "width": 228.734375,
+        "height": 44,
+        "right": 654.734375
+      },
+      {
+        "label": "Audyt Asana",
+        "href": "/audyt-procesow-asana",
+        "x": 732,
+        "y": 478.140625,
+        "width": 108.59375,
+        "height": 44,
+        "right": 840.59375
+      },
+      {
+        "label": "Wdro\u017cenie Asana",
+        "href": "/szkolenie-i-wdrozenie-asana",
+        "x": 732,
+        "y": 522.140625,
+        "width": 150.703125,
+        "height": 44,
+        "right": 882.703125
+      },
+      {
+        "label": "O mnie",
+        "href": "/o-mnie",
+        "x": 1038,
+        "y": 478.140625,
+        "width": 61.6875,
+        "height": 44,
+        "right": 1099.6875
+      },
+      {
+        "label": "Kontakt",
+        "href": "/kontakt",
+        "x": 1038,
+        "y": 522.140625,
+        "width": 63.46875,
+        "height": 44,
+        "right": 1101.46875
+      },
+      {
+        "label": "Blog",
+        "href": "/blog",
+        "x": 1038,
+        "y": 566.140625,
+        "width": 40.125,
+        "height": 44,
+        "right": 1078.125
+      },
+      {
+        "label": "System sprzeda\u017cy",
+        "href": "/sales-atlas-system",
+        "x": 1038,
+        "y": 610.140625,
+        "width": 152.484375,
+        "height": 44,
+        "right": 1190.484375
+      },
+      {
+        "label": "Bezpieczne przesy\u0142anie danych",
+        "href": "/blog/bezpieczne-przekazanie-danych",
+        "x": 1038,
+        "y": 654.140625,
+        "width": 267.625,
+        "height": 44,
+        "right": 1305.625
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/zawlodzki",
+        "x": 1156,
+        "y": 735.328125,
+        "width": 44,
+        "height": 44,
+        "right": 1200
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/zawlodzki/",
+        "x": 1216,
+        "y": 735.328125,
+        "width": 44,
+        "height": 44,
+        "right": 1260
+      },
+      {
+        "label": "X",
+        "href": "https://x.com/zawlodzki",
+        "x": 1276,
+        "y": 735.328125,
+        "width": 44,
+        "height": 44,
+        "right": 1320
+      },
+      {
+        "label": "Zarz\u0105dzaj zgodami",
+        "href": null,
+        "x": 764.359375,
+        "y": 816.53125,
+        "width": 195,
+        "height": 51,
+        "right": 959.359375
+      },
+      {
+        "label": "Regulamin",
+        "href": "/regulamin",
+        "x": 975.359375,
+        "y": 816.53125,
+        "width": 123.03125,
+        "height": 51,
+        "right": 1098.390625
+      },
+      {
+        "label": "Polityka prywatno\u015bci",
+        "href": "/polityka-prywatnosci",
+        "x": 1114.390625,
+        "y": 816.53125,
+        "width": 205.609375,
+        "height": 51,
+        "right": 1320
+      }
+    ],
+    "blog": [
+      {
+        "link": {
+          "x": 1038,
+          "y": 566.140625,
+          "width": 40.125,
+          "height": 44,
+          "right": 1078.125
+        },
+        "text": {
+          "x": 1038,
+          "y": 575.640625,
+          "width": 40.125,
+          "height": 25,
+          "right": 1078.125
+        },
+        "justifyContent": "normal",
+        "padding": "0px",
+        "margin": "0px"
+      }
+    ],
+    "brand": {
+      "x": 120,
+      "y": 321.6875,
+      "width": 144,
+      "height": 54.90625,
+      "right": 264
+    },
+    "badge": {
+      "x": 1251.734375,
+      "y": 299.140625,
+      "width": 68.265625,
+      "height": 100,
+      "right": 1320
+    },
+    "row": {
+      "x": 120,
+      "y": 299.140625,
+      "width": 1200,
+      "height": 100,
+      "right": 1320
+    },
+    "h2": 4,
+    "overflow": false
+  }
+]
