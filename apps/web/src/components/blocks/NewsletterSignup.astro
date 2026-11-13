@@ -40,7 +40,7 @@ const legalLinks = editedLinks.length > 0 ? editedLinks : [{ href: '/regulamin-n
 </section>
 
 <style>
-  .newsletter { background: linear-gradient(45deg, var(--surface-dark) 50%, var(--color-primary-60)); color: var(--text-on-dark); }
+  .newsletter { background: var(--surface-dark); color: var(--text-on-dark); }
   .inner {
     container-type: inline-size;
     display: grid;
@@ -52,10 +52,10 @@ const legalLinks = editedLinks.length > 0 ? editedLinks : [{ href: '/regulamin-n
     max-inline-size: 44rem;
   }
   :is(h1, h2) { color: var(--text-on-dark); }
-  .accent { background: linear-gradient(315deg, var(--color-secondary-60), var(--text-on-dark) 84%); background-clip: text; -webkit-text-fill-color: transparent; }
+  .accent { color: var(--text-link-on-dark); }
   .body { color: var(--text-on-dark-muted); max-inline-size: 60ch; }
   .inner > :global(.signup) {
-    --newsletter-control-height: clamp(3.125rem, 2.9437rem + .7735vw, 3.5625rem);
+    --newsletter-control-height: 52px;
     inline-size: 100%;
     max-inline-size: 30rem;
     grid-template-columns: minmax(0, 1fr) max-content;
@@ -68,16 +68,20 @@ const legalLinks = editedLinks.length > 0 ? editedLinks : [{ href: '/regulamin-n
     grid-column: 2;
     grid-row: 1;
     justify-self: stretch;
-    border: var(--border-width-button) solid var(--border-accent);
+    border: 0;
+    border-radius: 999px;
+    white-space: nowrap;
     padding: var(--space-2xs) var(--space-m);
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--font-weight-medium);
   }
   .inner :global(.signup :is(.field > input, .submit)) {
     block-size: var(--newsletter-control-height);
     min-block-size: var(--newsletter-control-height);
   }
   .inner :global(.signup .cf-turnstile), .inner :global(.signup .status) { grid-column: 1 / -1; }
-  @container (width < 30rem) { .inner > :global(.signup) { column-gap: 0; } }
+  @container (width < 30rem) { .inner > :global(.signup) { grid-template-columns: minmax(0, 1fr); } .inner :global(.signup .submit) { grid-column: 1; grid-row: 2; inline-size: 100%; } }
+  @media (hover: hover) and (pointer: fine) { .inner :global(.signup .submit:hover) { background: var(--surface-tint); } }
+  @media (width < 30rem) { .inner :global(.signup .submit) { padding-inline: 12px; } }
   .legal { color: var(--text-on-dark-muted); max-inline-size: 60ch; }
   .legal a { color: var(--text-link-on-dark); }
   .legal a:active { color: var(--text-on-dark); }
