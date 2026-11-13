@@ -26,6 +26,9 @@ module.exports = {
       numberOfRuns: 3,
       settings: {
         formFactor: "mobile",
+        // T76: apply mobile throttling directly instead of Lantern's bandwidth model.
+        // Keep Lighthouse's default mobile network and CPU throttling parameters.
+        throttlingMethod: "devtools",
         chromeFlags: "--no-sandbox --disable-dev-shm-usage",
         // Intentional local/staging noindex; all other SEO audits still contribute.
         skipAudits: ["is-crawlable"],

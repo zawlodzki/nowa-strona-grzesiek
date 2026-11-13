@@ -77,3 +77,17 @@ The first implementation run (43391156128) failed before creating jobs because
 `runner.temp` was referenced in job-level `env`, where GitHub's runner context is
 unavailable. Moved VERIFY_WEB_HOME assignment into the audit shell step using
 RUNNER_TEMP. The push/pull_request triggers and all approved thresholds are unchanged.
+
+### Hosted simulation result and T76 throttling follow-up
+
+Run https://github.com/zawlodzki/nowa-strona-grzesiek/actions/runs/43391614094
+completed all 18 reports and uploaded artifact `lighthouse-reports` (14021940379).
+The four failures are /blog LCP 2554.88 ms, /audyt-ai-sprzedaz LCP 2587.48 ms,
+and /newsletter performance 82 and LCP 3245.54 ms. All resource budgets pass.
+Raw /blog report records observed unthrottled LCP about 136 ms versus modeled
+2554 ms; the image is eager, high priority, and discoverable in the initial HTML.
+T76 explicitly documents simulated bandwidth contention and uses devtools mobile
+throttling for its reliable LCP comparison. Follow-up uses devtools throttling
+with unchanged default mobile network/CPU parameters and unchanged assertions.
+This measures the throttled navigation directly rather than scoring an
+unthrottled observation. Local and hosted follow-up results remain pending.
