@@ -9,22 +9,26 @@ type TabsWithCtas = Omit<Tabs, 'items'> & {
   _key?: string;
   items?: (NonNullable<Tabs['items']>[number] & { primaryCta?: Link; secondaryCta?: Link })[];
 };
-interface Props extends Resolved { data: TabsWithCtas; }
-const { data, links, images } = Astro.props;
+interface Props extends Resolved { data: TabsWithCtas; headingLevel?: 'h2' | 'h3'; }
+const { data, links, images, headingLevel = 'h2' } = Astro.props;
+const Heading = headingLevel;
+// A headingless Tabs follows its parent H2. Otherwise panel headings descend from its own heading.
+const panelLevel = data.heading ? Number(headingLevel.slice(1)) + 1 : 3;
+const panelHeadings = (value: import('../portable-text/types').PortableTextValue = []) => value.map((block) => block._type === 'block' && /^h[234]$/.test(block.style ?? '') ? { ...block, style: `h${panelLevel}` as 'h2' | 'h3' | 'h4' } : block);
 const id = `tabs-${data._key ?? crypto.randomUUID()}`;
 ---
 <BlockSection kind="tabs">
-  <header>{data.tagline && <p class="type-tagline">{data.tagline}</p>}{data.heading && <h2>{data.heading}</h2>}<PortableText value={data.intro} links={links} images={images} /></header>
+  <header>{data.tagline && <p class="type-tagline">{data.tagline}</p>}{data.heading && <Heading>{data.heading}</Heading>}<PortableText value={data.intro} links={links} images={images} /></header>
   <div class="tabs" data-tabs style={`--layers: ${data.items?.length ?? 0}`}>
     <div class="stage">
       <div class="menu" aria-label={data.heading || "Warstwy systemu"}>
         {data.items?.map((item, i) => <a id={`${id}-tab-${i}`} href={`#${id}-panel-${i}`}><span class="type-heading-xs">{item.title}</span><span>{item.summary}</span></a>)}
       </div>
       <div class="panels">{data.items?.map((item, i) => <section class="panel" id={`${id}-panel-${i}`} aria-labelledby={`${id}-tab-${i}`}>
-        <div class="positive"><PortableText value={item.positive} links={links} images={images} /></div>
-        <div class="negative"><PortableText value={item.negative} links={links} images={images} /></div>
+        <div class="positive"><PortableText value={panelHeadings(item.positive)} links={links} images={images} /></div>
+        <div class="negative"><PortableText value={panelHeadings(item.negative)} links={links} images={images} /></div>
         {item.tagline && <p class="type-tagline panel-tagline">{item.tagline}</p>}
-        <PortableText value={item.body} links={links} images={images} />
+        <PortableText value={panelHeadings(item.body)} links={links} images={images} />
         {((item.primaryCta?.label && safeHref(item.primaryCta.href)) || (item.secondaryCta?.label && safeHref(item.secondaryCta.href))) && <div class="actions">
           {item.primaryCta && <Button link={item.primaryCta} />}
           {item.secondaryCta && <Button link={item.secondaryCta} variant="secondary" />}
@@ -149,10 +153,11 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   @media (hover: hover) and (pointer: fine) {
     .actions :global(.secondary:hover) { color: var(--color-primary-60); background: var(--surface-tint); }
   }
-  .positive, .negative { padding: var(--space-m); border: 1px solid var(--border-default); border-radius: var(--radius-sm); }
-  .positive { background: var(--surface-tint); border-color: var(--color-primary-20); }
-  .positive :global(h4), .negative :global(h4) { font-family: var(--typography-heading-xs-family); font-size: var(--typography-heading-xs-size); font-weight: var(--typography-heading-xs-weight); line-height: var(--typography-heading-xs-leading); letter-spacing: var(--typography-heading-xs-tracking); }
-  .panel-tagline { justify-self: start; padding-inline: var(--space-2xs); background: var(--surface-soft); color: var(--color-neutral-80); border-radius: var(--radius-sm); }
-  .negative { background: var(--surface-alt); }
+  .positive, .negative { max-inline-size: 68ch; }
+  .negative { padding-block-start: var(--space-m); border-block-start: 1px solid var(--border-default); }
+  .panel :global(.prose) { max-inline-size: 68ch; }
+  .panel :global(:is(h3, h4)) { font-family: var(--typography-heading-xs-family); font-size: var(--typography-heading-xs-size); font-weight: var(--typography-heading-xs-weight); line-height: var(--typography-heading-xs-leading); }
+  .panel-tagline { white-space: nowrap; justify-self: start; padding-inline: var(--space-2xs); background: var(--surface-soft); color: var(--color-neutral-80); border-radius: var(--radius-sm); }
+
   @media (max-width: 991px) { .stage { flex-direction: column; align-items: stretch; } .menu { flex-basis: auto; } .panels { order: -1; } }
 </style>

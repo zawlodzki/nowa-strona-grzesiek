@@ -63,6 +63,7 @@ The cutover gate: crawl staging, diff it against `migration/00-inventory/live-si
 - **Webflow workarounds.** Do not port `json-ld-extra`, the FAQ stored as seven field pairs, the ISO-date text copies, the duplicate `og:type`, or the global "Custom Code" component. Replace each one with a typed model.
 - **Consent.** Keep the self-hosted c15t loader `consent.zawlodzki.com/assets/cmp-v1.js` and the inline Consent Mode v2 defaults. The c15t backend returns 403 to origins that are not allow-listed. GTM tags fire on the `consent-update` event.
 - **Forms.** Forms post to the existing n8n webhook, which is stored only as the Worker secret `N8N_FORM_WEBHOOK`. They keep all 32 hidden attribution fields and stay behind Turnstile.
+- **Production Worker deploys.** Before running `pnpm --filter web deploy:production`, export `PUBLIC_TURNSTILE_SITE_KEY` with the public site key for **zawlodzki.pl formularze** in Cloudflare → Turnstile. Astro embeds the key at build time and falls back to a test key when the variable is unset. Deploy only with the confirmed production site key. Keep the matching private key in the production Worker's `TURNSTILE_SECRET_KEY` secret. After deploying, check that the `data-sitekey` in the live `/kontakt` and `/newsletter` HTML matches the Cloudflare widget. Get the owner's explicit approval for any test submission that reaches production n8n.
 
 ## Rules
 
