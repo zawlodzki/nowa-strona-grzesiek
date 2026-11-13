@@ -1,0 +1,13 @@
+✔ currency in unit (1.987171ms)
+✔ currency absent from unit (0.283584ms)
+✔ no amount (0.071875ms)
+✔ null amount (0.326751ms)
+✔ zero amount (0.152292ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 766.087751
