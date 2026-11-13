@@ -1,0 +1,528 @@
+[
+  {
+    "path": "/",
+    "document": "page-634daaa2c8ceab0fea939fe6",
+    "key": "29f60c7ce478",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grafika: Frame 28 compressed",
+        "asset": {
+          "_ref": "image-03b455b6fade22fcfc90e03d554d67ec31921bb3-800x800-webp",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-03b455b6fade22fcfc90e03d554d67ec31921bb3-800x800-webp"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      }
+    }
+  },
+  {
+    "path": "/audyt-ai-sprzedaz",
+    "document": "page-6a6525137109a67a895f5e80",
+    "key": "c85e4b2bb918",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grafika: Frame 51",
+        "asset": {
+          "_ref": "image-b27f6e99123abe859e133a01e1d348d2e2d30f3d-800x800-avif",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-8118569eace4dd31ea333adb42b1e9138741d4f3-573x125-svg"
+        },
+        "alt": "Claude logo"
+      },
+      "badgeSize": "wide"
+    }
+  },
+  {
+    "path": "/audyt-crm-pipedrive",
+    "document": "page-6a659c9d68d93d23daef5822",
+    "key": "8c0622e03138",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grzegorz Zawłodzki konsultant pipedrive.com",
+        "asset": {
+          "_ref": "image-57ba5d4e529f7a5a60b3f4fdb2ec7a234dea5b72-800x800-webp",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-95ea9fe7a941fdc2d0e313337f903ccaa7ead0a2-209x49-svg"
+        },
+        "alt": "Pipedrive logo"
+      },
+      "badgeSize": "wide"
+    }
+  },
+  {
+    "path": "/audyt-procesow-asana",
+    "document": "page-6a6650c971f470cf8a5110d4",
+    "key": "3da351d67a9b",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grzegorz Zawłodzki konsultant asana.com",
+        "asset": {
+          "_ref": "image-e1cdee338868228a60708789abe832dd742354d6-800x800-webp",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-fb27eac693a531a987af7de1e3b59f51174bd02f-1000x198-svg"
+        },
+        "alt": "Asana logo"
+      },
+      "badgeSize": "wide"
+    }
+  },
+  {
+    "path": "/audyt-sprzedazy",
+    "document": "page-6a93c20ca47c5a15d5c2fce7",
+    "key": "5051521e88c7",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grzegorz Zawłodzki zdjęcie profilowe",
+        "asset": {
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      }
+    }
+  },
+  {
+    "path": "/automatyzacja-procesow-biznesowych-nocode",
+    "document": "page-65364c7d554535d3e4141668",
+    "key": "4142f0f179d4",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "grzegorz zawłodzki logo make.com n8n.io zapier.com",
+        "asset": {
+          "_ref": "image-46c2621169b3d8738d81b3253d9b03f3231fed40-800x800-webp",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-75beff2bdf93205ef23ea8d2fcf5daeb50a1ea90-480x96-svg"
+        },
+        "alt": "n8n logo"
+      },
+      "badgeSize": "wide"
+    }
+  },
+  {
+    "path": "/automatyzacje-dla-pipedrive",
+    "document": "page-64aae5153be5dab60a907e5c",
+    "key": "2614db9ab138",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "grzegorz zawłodzki logo make.com n8n.io zapier.com",
+        "asset": {
+          "_ref": "image-46c2621169b3d8738d81b3253d9b03f3231fed40-800x800-webp",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-95ea9fe7a941fdc2d0e313337f903ccaa7ead0a2-209x49-svg"
+        },
+        "alt": "Pipedrive logo"
+      },
+      "badgeSize": "wide"
+    }
+  },
+  {
+    "path": "/kurs-ai-w-sprzedazy",
+    "document": "page-6a65a09038ad0c6d6d0a1aa3",
+    "key": "0f936d6bbfcc",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grafika: Frame 51",
+        "asset": {
+          "_ref": "image-b27f6e99123abe859e133a01e1d348d2e2d30f3d-800x800-avif",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-8118569eace4dd31ea333adb42b1e9138741d4f3-573x125-svg"
+        },
+        "alt": "Claude logo"
+      },
+      "badgeSize": "wide"
+    }
+  },
+  {
+    "path": "/program-ai-dla-zespolu-sprzedazy",
+    "document": "page-6a6524cc429bff76b57cc347",
+    "key": "112a72884d90",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grafika: Frame 51",
+        "asset": {
+          "_ref": "image-b27f6e99123abe859e133a01e1d348d2e2d30f3d-800x800-avif",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-8118569eace4dd31ea333adb42b1e9138741d4f3-573x125-svg"
+        },
+        "alt": "Claude logo"
+      },
+      "badgeSize": "wide"
+    }
+  },
+  {
+    "path": "/program-partnerski",
+    "document": "page-65369078d23fa9556206c3cb",
+    "key": "f458099bf565",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grafika: Frame 28 compressed",
+        "asset": {
+          "_ref": "image-03b455b6fade22fcfc90e03d554d67ec31921bb3-800x800-webp",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      }
+    }
+  },
+  {
+    "path": "/sales-atlas-system",
+    "document": "page-6a82cef512f2263890a42ee2",
+    "key": "ead9e66bbfe7",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grzegorz Zawłodzki",
+        "asset": {
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif",
+          "_type": "reference"
+        }
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "alt": "Sales Atlas System badge",
+        "asset": {
+          "_ref": "image-2c88e5145801e7f2598d1228a8a1dcdd6a47d660-355x520-svg",
+          "_type": "reference"
+        }
+      },
+      "badgeSize": "standard"
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "alt": "Sales Atlas System badge",
+        "asset": {
+          "_ref": "image-2c88e5145801e7f2598d1228a8a1dcdd6a47d660-355x520-svg",
+          "_type": "reference"
+        }
+      },
+      "badgeSize": "standard"
+    }
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-asana",
+    "document": "page-64a7d3814f84e9058b6f6dad",
+    "key": "903aa71256c5",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grzegorz Zawłodzki konsultant asana.com",
+        "asset": {
+          "_ref": "image-e1cdee338868228a60708789abe832dd742354d6-800x800-webp",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-fb27eac693a531a987af7de1e3b59f51174bd02f-1000x198-svg"
+        },
+        "alt": "Asana logo"
+      },
+      "badgeSize": "wide"
+    }
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-pipedrive",
+    "document": "page-64a963565ffd73e869eafd91",
+    "key": "177d8b527eb2",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grzegorz Zawłodzki konsultant pipedrive.com",
+        "asset": {
+          "_ref": "image-57ba5d4e529f7a5a60b3f4fdb2ec7a234dea5b72-800x800-webp",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-95ea9fe7a941fdc2d0e313337f903ccaa7ead0a2-209x49-svg"
+        },
+        "alt": "Pipedrive logo"
+      },
+      "badgeSize": "wide"
+    }
+  },
+  {
+    "path": "/szkolenie-i-wdrozenie-salesforce",
+    "document": "page-6abac9e3fe23660c83e62014",
+    "key": "d22cc7aaac06",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grzegorz Zawłodzki",
+        "asset": {
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif",
+          "_type": "reference"
+        }
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "alt": "Salesforce logo",
+        "asset": {
+          "_ref": "image-f25f052a658c224cb9ff487ee617d07de9627468-960x672-webp",
+          "_type": "reference"
+        }
+      },
+      "badgeSize": "wide"
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "alt": "Salesforce logo",
+        "asset": {
+          "_ref": "image-f25f052a658c224cb9ff487ee617d07de9627468-960x672-webp",
+          "_type": "reference"
+        }
+      },
+      "badgeSize": "wide"
+    }
+  },
+  {
+    "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+    "document": "page-6a4e60735114259a5cd425c5",
+    "key": "9fd9685abae2",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grafika: Frame 51",
+        "asset": {
+          "_ref": "image-b27f6e99123abe859e133a01e1d348d2e2d30f3d-800x800-avif",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      },
+      "badgeImage": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-8118569eace4dd31ea333adb42b1e9138741d4f3-573x125-svg"
+        },
+        "alt": "Claude logo"
+      },
+      "badgeSize": "wide"
+    }
+  },
+  {
+    "path": "/wspolpraca",
+    "document": "page-634daaa2c8ceab408393a043",
+    "key": "3a7e9d24c1be",
+    "before": {
+      "image": {
+        "_type": "contentImage",
+        "alt": "Grzegorz Zawłodzki",
+        "asset": {
+          "_ref": "image-8213611a5070243a2dd7f3006b1af2962f6d39db-400x600-webp",
+          "_type": "reference"
+        }
+      }
+    },
+    "after": {
+      "image": {
+        "_type": "contentImage",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-743f000b6306622a1a32bca730654ee937f8a7fe-800x800-avif"
+        },
+        "alt": "Grzegorz Zawłodzki"
+      }
+    }
+  }
+]
