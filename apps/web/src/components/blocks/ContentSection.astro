@@ -5,7 +5,7 @@ import { safeHref } from '../ui/block-types';
 import type { ResolvedImage } from '../ui/block-types';
 import BlockSection from '../ui/BlockSection.astro';
 import PortableText from '../portable-text/PortableText.astro';
-import type { Resolved } from '../portable-text/types';
+import type { PortableTextValue, Resolved } from '../portable-text/types';
 import Diagram from '../diagrams/Diagram.astro';
 import Button from '../ui/Button.astro';
 import Icon from '../ui/Icon.astro';
@@ -15,13 +15,31 @@ const { data, image, links, images } = Astro.props;
 const { layout = 'list' } = data;
 const metrics = layout === 'cards' && Boolean(data.items?.length) && data.items!.every((item) => /^\d+\s+/.test(item.title ?? ''));
 const linkOnly = layout === 'list' && Boolean(data.items?.length) && data.items!.every((item) => item.link?.label && safeHref(item.link.href) && !item.text && !item.icon);
+function paragraphs(value: PortableTextValue = []): PortableTextValue {
+  return value.flatMap((block) => {
+    if (block._type !== 'block' || (block.style && block.style !== 'normal') || block.listItem) return [block];
+    const lines: NonNullable<typeof block.children>[] = [[]];
+    for (const span of block.children ?? []) {
+      (span.text ?? '').split(/\r?\n/).forEach((text, index) => {
+        if (index) lines.push([]);
+        lines.at(-1)!.push({ ...span, text });
+      });
+    }
+    return lines.filter((line) => line.some((span) => span.text?.trim())).map((children, index) => {
+      const first = children.find((span) => span.text?.trim());
+      const bullet = first && /^\s*(?:→|-)\s+/.test(first.text ?? '');
+      return { ...block, _key: `${block._key}-${index}`, children: children.map((span) => span === first && bullet ? { ...span, text: span.text?.replace(/^\s*(?:→|-)\s+/, '') } : span), ...(bullet ? { listItem: 'bullet' as const, level: 1 } : {}) };
+    });
+  });
+}
+
 ---
 <BlockSection kind="content-section">
   <div class="content-layout">
     <header class="intro">
       {data.tagline && <p class="type-tagline">{data.tagline}</p>}
       {data.heading && <h2 id={pageHeadingId(Astro.locals, data.heading)}>{data.heading}</h2>}
-      <slot name="intro"><PortableText value={data.intro} links={links} images={images} /></slot>
+      <slot name="intro"><PortableText value={paragraphs(data.intro)} links={links} images={images} /></slot>
       {linkOnly && <nav class="inline-links" aria-label={data.heading || 'Usługi'}>{data.items?.map((item) => <a href={safeHref(item.link?.href)}>{item.link?.label}</a>)}</nav>}
     </header>
     {!linkOnly && (data.items?.length ?? 0) > 0 && <ul class:list={['items', layout, { metrics }]}>{data.items?.map((item) => {
@@ -30,8 +48,8 @@ const linkOnly = layout === 'list' && Boolean(data.items?.length) && data.items!
       return <li class:list={{ negative: item.icon === 'close' }}>
       {layout === 'checklist' && <Icon name={item.icon === 'close' ? 'close' : 'check'} />}
       <div class="item-copy">
-        {metric ? <><p class="metric-value">{metric[1]}{plus && '+'}</p><h3 id={pageHeadingId(Astro.locals, metric[2])} class="metric-label">{metric[2]}</h3></> : item.title && <h3 id={pageHeadingId(Astro.locals, item.title)} class="type-heading-xs">{item.title}</h3>}
-        {item.text && <p class:list={{ 'metric-text': metrics }}>{plus ? item.text.replace(/^\+\s+/, '') : item.text}</p>}
+        {metric ? <><h3 id={pageHeadingId(Astro.locals, metric[2])} class="metric-label">{metric[2]}</h3></> : layout === 'checklist' ? item.title && <p class="checklist-title">{item.title}</p> : item.title && <h3 id={pageHeadingId(Astro.locals, item.title)} class="type-heading-xs">{item.title}</h3>}
+        {item.text && <p class:list={{ 'metric-text': metrics }}>{(plus ? item.text.replace(/^\+\s+/, '') : item.text).split(/\n+/).map((line) => <span class="text-paragraph">{line}</span>)}</p>}
         {item.link && <Button link={item.link} variant="text" />}
       </div>
     </li>; })}</ul>}
@@ -52,14 +70,9 @@ const linkOnly = layout === 'list' && Boolean(data.items?.length) && data.items!
   .cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
   .cards > li { background: var(--surface-soft); border-radius: var(--radius-lg); padding: var(--space-m); }
   .cards h3 { color: var(--text-link); }
-  .metrics { gap: var(--space-m); }
-  .metrics > li { background: var(--surface-soft); border-radius: var(--radius-sm); text-align: center; }
-  .metrics .item-copy { gap: 0; color: var(--text-body); }
-  .metric-value { font-family: var(--font-family-body); font-size: clamp(2.25rem, 1.60714286rem + 1.3392857vw, 2.8125rem); font-weight: var(--font-weight-semibold); line-height: 1.25; color: var(--text-link); margin-block-end: .111111em; }
-  .metrics .metric-label { font-family: var(--font-family-body); font-size: clamp(1rem, .7142857rem + .595238vw, 1.25rem); font-weight: var(--font-weight-semibold); line-height: 1.75; color: var(--text-body); letter-spacing: var(--typography-body-tracking); margin-block-end: .5em; }
-  .metric-text { font-size: clamp(.875rem, .625rem + .5208333vw, 1.09375rem); line-height: 1.4285; letter-spacing: normal; }
-  @media (width >= 768px) { .metrics { max-inline-size: calc(100vw - 3rem); inline-size: 100%; margin-inline: auto; } }
-  @media (width < 768px) { .metrics { gap: var(--space-s); } }
+  .checklist-title { font-family: var(--font-family-body); font-size: var(--typography-body-size); font-weight: var(--font-weight-medium); line-height: var(--typography-body-leading); }
+  .text-paragraph { display: block; }
+  .text-paragraph + .text-paragraph { margin-block-start: var(--space-s); }
   .twoColumn { grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); }
   .checklist > li { display: flex; align-items: start; gap: var(--space-xs); }
   .checklist :global(svg) { color: var(--text-link); }
