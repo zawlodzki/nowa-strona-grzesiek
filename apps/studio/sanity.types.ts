@@ -323,6 +323,18 @@ export type ContentImage = {
   caption?: string;
 };
 
+export type ReusableSectionReference = {
+  _ref: string;
+  _type: "reference";
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: "reusableSection";
+};
+
+export type SectionRef = {
+  _type: "sectionRef";
+  section?: ReusableSectionReference;
+};
+
 export type RichText = {
   _type: "richText";
   body?: PortableText;
@@ -500,6 +512,27 @@ export type Hero = {
   badgeSize?: "standard" | "wide";
   badges?: Array<string>;
   cta?: Link;
+};
+
+export type ReusableSection = {
+  _id: string;
+  _type: "reusableSection";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name?: string;
+  language?: "pl" | "en";
+  section?: Array<
+    | ({
+        _key: string;
+      } & ContactForm)
+    | ({
+        _key: string;
+      } & NewsletterSignup)
+    | ({
+        _key: string;
+      } & CtaBand)
+  >;
 };
 
 export type Redirect = {
@@ -743,6 +776,9 @@ export type Page = {
     | ({
         _key: string;
       } & RichText)
+    | ({
+        _key: string;
+      } & SectionRef)
   >;
 };
 
@@ -948,6 +984,8 @@ export type AllSanitySchemaTypes =
   | Seo
   | Link
   | ContentImage
+  | ReusableSectionReference
+  | SectionRef
   | RichText
   | PostList
   | NewsletterSignup
@@ -964,6 +1002,7 @@ export type AllSanitySchemaTypes =
   | LogoReference
   | LogoStrip
   | Hero
+  | ReusableSection
   | Redirect
   | PersonReference
   | OrganizationReference

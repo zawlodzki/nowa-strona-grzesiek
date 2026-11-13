@@ -175,5 +175,16 @@ export const redirect = defineType({
     defineField({name: 'status', title: 'Kod HTTP', type: 'number', initialValue: 301, options: {list: [301]}, validation: (rule) => rule.required().custom((value) => value === undefined || [301].includes(value) || 'Wybierz dozwoloną wartość.')}),
   ], preview: {select: {title: 'from', subtitle: 'to'}},
 })
-export const documentTypes = [page, post, siteSettings, person, organization, testimonial, logo, service, course, redirect]
+// One block edited once and attached to many pages through `sectionRef`.
+export const reusableSectionBlocks = ['contactForm', 'newsletterSignup', 'ctaBand']
+export const reusableSection = defineType({
+  name: 'reusableSection', title: 'Sekcja', type: 'document',
+  fields: [
+    defineField({name: 'name', title: 'Nazwa w Studio', description: 'Widoczna tylko w Studio, np. „Formularz kontaktowy: landing”.', type: 'string', validation: (rule) => rule.required().regex(/\S/)}),
+    defineField({name: 'language', title: 'Język', type: 'string', initialValue: 'pl', options: {list: [{title: 'Polski', value: 'pl'}, {title: 'English', value: 'en'}], layout: 'radio', direction: 'horizontal'}, validation: (rule) => rule.required().custom((value) => value === undefined || ['pl', 'en'].includes(value) || 'Wybierz dozwoloną wartość.')}),
+    defineField({name: 'section', title: 'Blok', description: 'Dokładnie jeden blok. Zmiana tutaj zmienia go na każdej stronie, która go używa.', type: 'array', of: reusableSectionBlocks.map((type) => defineArrayMember({type})), validation: (rule) => rule.required().length(1)}),
+  ],
+  preview: {select: {title: 'name', type: 'section.0._type', language: 'language'}, prepare: ({title, type, language}) => ({title, subtitle: [type, language].filter(Boolean).join(' · ')})},
+})
+export const documentTypes = [page, post, siteSettings, person, organization, testimonial, logo, service, course, redirect, reusableSection]
 export const singletonIds = {person: 'person', organization: 'organization'}
