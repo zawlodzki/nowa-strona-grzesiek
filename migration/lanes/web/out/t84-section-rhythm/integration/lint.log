@@ -1,0 +1,52 @@
+$ eslint .
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/apps/web/src/components/diagrams/port/cdp.mjs
+  43:7  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/apps/web/src/components/site/disclosure.ts
+  3:32  warning  '_state' is defined but never used  @typescript-eslint/no-unused-vars
+  7:33  warning  '_state' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/apps/web/src/layouts/Base.astro
+  29:27  warning  Use the rest parameters instead of 'arguments'  prefer-rest-params
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/apps/web/src/preview/session.ts
+  37:59  warning  Unexpected control character(s) in regular expression: \x00  no-control-regex
+  40:35  warning  Unexpected control character(s) in regular expression: \x00  no-control-regex
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/apps/web/src/worker/cms-redirects.mjs
+   7:43  warning  Unnecessary escape character: \/                                       no-useless-escape
+  32:10  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/apps/web/src/worker/redirects.gen.mjs
+  21:45  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  25:25  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  28:7   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  32:28  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/migration/tools/backup-sanity.mjs
+  122:5  warning  There is no `cause` attached to the symptom error being thrown  preserve-caught-error
+  147:7  warning  There is no `cause` attached to the symptom error being thrown  preserve-caught-error
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/migration/tools/crawl.mjs
+  234:73  warning  'jsonld' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/migration/tools/design-parity/capture.mjs
+  774:13  warning  The value assigned to 'ok' is not used in subsequent statements       no-useless-assignment
+  837:11  warning  The value assigned to 'matched' is not used in subsequent statements  no-useless-assignment
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/migration/tools/design-parity/parity.mjs
+  983:43  warning  There is no `cause` attached to the symptom error being thrown  preserve-caught-error
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/migration/tools/design-parity/parity.test.mjs
+  126:9  warning  There is no `cause` attached to the symptom error being thrown  preserve-caught-error
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/migration/tools/import/pages-t40-verify.mjs
+  4:141  warning  Unnecessary escape character: \"  no-useless-escape
+  4:147  warning  Unnecessary escape character: \"  no-useless-escape
+
+/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T84-section-rhythm/migration/tools/import/pages-t45-browser-check.mjs
+  10:136  warning  Empty block statement  no-empty
+
+✖ 22 problems (0 errors, 22 warnings)
+

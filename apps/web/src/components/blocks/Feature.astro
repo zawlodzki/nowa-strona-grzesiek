@@ -4,7 +4,7 @@ import type { Feature } from '../../../../studio/sanity.types';
 import type { ResolvedImage } from '../ui/block-types';
 import BlockSection from '../ui/BlockSection.astro';
 import PortableText from '../portable-text/PortableText.astro';
-import type { Resolved } from '../portable-text/types';
+import type { PortableTextValue, Resolved } from '../portable-text/types';
 import Diagram from '../diagrams/Diagram.astro';
 import Button from '../ui/Button.astro';
 import Icon from '../ui/Icon.astro';
@@ -14,13 +14,30 @@ const { data, image, links, images, headingLevel: Heading = 'h2' } = Astro.props
 const article = data.layout === 'article';
 const portrait = Boolean(image?.width && image?.height && image.height > image.width * 1.5 && data.media?.kind !== 'diagram');
 const hasMedia = Astro.slots.has('media') || image || (data.media?.kind === 'diagram' && data.media.key);
+function paragraphs(value: PortableTextValue = []): PortableTextValue {
+  return value.flatMap((block) => {
+    if (block._type !== 'block' || (block.style && block.style !== 'normal') || block.listItem) return [block];
+    const lines: NonNullable<typeof block.children>[] = [[]];
+    for (const span of block.children ?? []) {
+      (span.text ?? '').split(/\r?\n/).forEach((text, index) => {
+        if (index) lines.push([]);
+        lines.at(-1)!.push({ ...span, text });
+      });
+    }
+    return lines.filter((line) => line.some((span) => span.text?.trim())).map((children, index) => {
+      const first = children.find((span) => span.text?.trim());
+      const bullet = first && /^\s*(?:→|-)\s+/.test(first.text ?? '');
+      return { ...block, _key: `${block._key}-${index}`, children: children.map((span) => span === first && bullet ? { ...span, text: span.text?.replace(/^\s*(?:→|-)\s+/, '') } : span), ...(bullet ? { listItem: 'bullet' as const, level: 1 } : {}) };
+    });
+  });
+}
 ---
 <BlockSection id={data.anchorId?.current} kind="feature">
   <div class:list={['feature-layout', { article, 'has-media': hasMedia, 'article-media': article && hasMedia, 'media-left': !article && data.mediaSide === 'left', 'has-portrait': portrait }]}>
     <div class="copy">
       {data.tagline && <p class="type-tagline">{data.tagline}</p>}
       {data.heading && <Heading id={pageHeadingId(Astro.locals, data.heading)}>{data.heading}</Heading>}
-      <slot name="body"><PortableText value={data.body} links={links} images={images} /></slot>
+      <slot name="body"><PortableText value={paragraphs(data.body)} links={links} images={images} /></slot>
       {(data.bullets?.length ?? 0) > 0 && <ul class="bullets">{data.bullets?.map((text) => <li><Icon name="check" /><span>{text}</span></li>)}</ul>}
       {data.cta && <Button link={data.cta} variant={article ? 'primary' : 'text'} />}
     </div>
@@ -33,8 +50,13 @@ const hasMedia = Astro.slots.has('media') || image || (data.media?.kind === 'dia
   figcaption { margin-block-start: var(--space-s); color: var(--text-muted); white-space: pre-line; }
   .feature-layout { display: grid; gap: var(--space-2xl); align-items: center; }
   .copy { display: flex; flex-direction: column; align-items: start; gap: var(--space-m); max-inline-size: 65ch; overflow-wrap: anywhere; }
+  .copy :global(.prose) { max-inline-size: 68ch; }
+  .copy :global(.prose > * + *) { margin-block-start: var(--space-s); }
   .has-portrait .media { inline-size: min(100%, 240px); justify-self: center; }
-  @container (width < 48rem) { .has-portrait .media { display: none; } }
+  @container (width < 48rem) {
+    .has-media { gap: var(--space-m); }
+    .has-portrait .media { display: none; }
+  }
   .feature-layout.article { align-items: start; grid-template-columns: minmax(0, 1fr); }
   .article .copy { max-inline-size: 45rem; gap: clamp(1.25rem, 1.12rem + .55vw, 1.5625rem); }
   .article :global(.pt > *) { margin-block: 0; }
