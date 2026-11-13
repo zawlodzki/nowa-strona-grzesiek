@@ -105,7 +105,7 @@ const postsOf = (kind: string | undefined) => site.posts
       case 'contentSection':
         return <ContentSection data={section} image={mediaImage(section.media)} links={links} images={images} />;
       case 'tabs':
-        return <Tabs data={section} links={links} images={images} />;
+        return <Tabs data={section} links={links} images={images} headingLevel={group.kind === 'intro' && offset > 0 ? 'h3' : 'h2'} />;
       case 'pricing':
         return <Pricing data={section} />;
       case 'ctaBand':
