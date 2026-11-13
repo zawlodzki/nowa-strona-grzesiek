@@ -74,7 +74,6 @@ jobs:
     timeout-minutes: 25
     env:
       PUBLIC_TURNSTILE_SITE_KEY: 1x00000000000000000000AA
-      VERIFY_WEB_HOME: ${{ runner.temp }}/t80-verify-web
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -93,6 +92,7 @@ jobs:
           CHROME_PATH: ${{ steps.chrome.outputs.chrome-path }}
         run: |
           set -euo pipefail
+          export VERIFY_WEB_HOME="$RUNNER_TEMP/t80-verify-web"
           web=.claude/skills/verify-web/scripts/web.sh
           trap '"$web" down --port 8790' EXIT
           "$web" up --port 8790

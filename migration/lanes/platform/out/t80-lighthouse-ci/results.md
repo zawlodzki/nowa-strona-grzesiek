@@ -70,3 +70,10 @@ HTML/JSON reports plus raw LHRs, assertions and HTTP evidence as an artifact.
 ## Hosted CI and regression proof
 
 Pending the draft PR runs. No CI success or negative-control result claimed yet.
+
+### Workflow validation repair
+
+The first implementation run (43391156128) failed before creating jobs because
+`runner.temp` was referenced in job-level `env`, where GitHub's runner context is
+unavailable. Moved VERIFY_WEB_HOME assignment into the audit shell step using
+RUNNER_TEMP. The push/pull_request triggers and all approved thresholds are unchanged.
