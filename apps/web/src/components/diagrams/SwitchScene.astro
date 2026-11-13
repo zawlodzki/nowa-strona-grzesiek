@@ -1,0 +1,110 @@
+---
+// A reusable scene for "set up the system" steps (T98): modules listed in two
+// columns, switched on one by one by sequence.ts. The markup is the end state
+// (every switch on). Used by zw-sf-setup; zw-crm-setup can move onto it later.
+import "./scene/scene.css";
+
+interface Props {
+  diagram: string;
+  modules: string[];
+  label: string;
+}
+
+const { diagram, modules, label } = Astro.props;
+const count = modules.length;
+---
+
+<div class="sc" data-diagram={diagram} data-scene="sequence" aria-hidden="true">
+  <div class="sc-body">
+    <ul>
+      {modules.map((name, i) => (
+        <li class="is-done" data-step data-value={i + 1}>
+          <span class="name">{name}</span>
+          <span class="switch" />
+        </li>
+      ))}
+    </ul>
+    <div class="sc-total">
+      <span class="sc-total-label">{label}</span>
+      <span
+        class="sc-total-value"
+        data-total
+        data-suffix={`\u00a0z\u00a0${count}`}
+      >{`${count}\u00a0z\u00a0${count}`}</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(1rem, 5cqi, 2.5rem);
+  }
+
+  li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.65rem;
+    border-block-end: 1px solid var(--border-hairline);
+  }
+
+  .name {
+    color: var(--text-heading);
+  }
+
+  .switch {
+    position: relative;
+    flex: none;
+    inline-size: 2.25rem;
+    block-size: 1.25rem;
+    background: var(--surface-alt);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-pill);
+  }
+
+  .switch::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 2px;
+    inset-inline-start: 2px;
+    inline-size: calc(1.25rem - 6px);
+    block-size: calc(1.25rem - 6px);
+    background: var(--surface-page);
+    border-radius: 50%;
+    box-shadow: var(--shadow-input);
+  }
+
+  .is-done .switch {
+    background: var(--text-link);
+    border-color: var(--text-link);
+  }
+
+  .is-done .switch::after {
+    transform: translateX(1rem);
+  }
+
+  @container (inline-size < 30rem) {
+    ul {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .switch {
+      transition:
+        background-color 400ms ease,
+        border-color 400ms ease;
+    }
+
+    .switch::after {
+      transition: transform 400ms cubic-bezier(0.65, 0, 0.35, 1);
+    }
+  }
+</style>
+
+<script>
+  import "./sequence";
+</script>
