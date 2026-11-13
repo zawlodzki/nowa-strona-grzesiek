@@ -1,0 +1,50 @@
+/tmp/t88-test.log
+apps/web test: ✔ Worker robots policy for Host www.zawlodzki.pl (28.674942ms)
+apps/web test: ✔ Worker robots policy for Host localhost:8791 (0.44196ms)
+apps/web test: ✔ Worker robots policy for Host zawlodzki.pl (0.279418ms)
+apps/web test: ✔ Worker robots policy for Host zawlodzki-web.zawlodzki.workers.dev (0.205043ms)
+apps/web test: ✔ Worker robots policy for Host preview.example.com (0.212043ms)
+apps/web test: ✔ other routes still use assets and retain the staging header (1.389174ms)
+apps/web test: ℹ tests 136
+apps/web test: ℹ suites 0
+apps/web test: ℹ pass 135
+apps/web test: ℹ fail 0
+apps/web test: ℹ cancelled 0
+apps/web test: ℹ skipped 1
+apps/web test: ℹ todo 0
+apps/web test: ℹ duration_ms 1298.686541
+apps/web test: Done
+
+/tmp/t88-build.log
+apps/web build: 20:47:13   ├─ /blog/strona/4.html (+6ms) 
+apps/web build: 20:47:13   ├─ /blog/strona/5.html (+8ms) 
+apps/web build: 20:47:13   ├─ /blog/strona/6.html (+10ms) 
+apps/web build: 20:47:13   ├─ /blog/strona/7.html (+7ms) 
+apps/web build: 20:47:13 ✓ Completed in 6.07s.
+apps/web build: 
+apps/web build: 20:47:13 [build] ✓ Completed in 6.94s.
+apps/web build: 20:47:13 [cms-redirects] 0 redirect(s) from Sanity, checked against 117 pages
+apps/web build: 20:47:13 [build] 117 page(s) built in 7.17s
+apps/web build: 20:47:13 [build] Complete!
+apps/web build: Checked 117 HTML pages; gzip CSS 17979/42000 B (heaviest page /audyt-ai-sprzedaz); JS 4277/8800 B
+apps/web build: PASS
+apps/web build: Done
+apps/studio build: ✔ Build Sanity Studio (6776ms)
+apps/studio build: Done
+
+/tmp/t88-e2e-final.log
+  ✓   9 [chromium] › e2e/forms.spec.ts:24:3 › newsletter form delivers the Webflow envelope to n8n and lands on the thank-you page (3.8s)
+  ✓  12 [chromium] › e2e/forms.spec.ts:46:5 › newsletter form with an empty e-mail posts nothing (1.8s)
+  ✓  11 [chromium] › e2e/pages.spec.ts:42:3 › blog: no axe violation outside the recorded baseline (2.0s)
+  ✓  14 [chromium] › e2e/pages.spec.ts:48:3 › blog: no horizontal overflow at 320 px (1.2s)
+  ✓  13 [chromium] › e2e/forms.spec.ts:46:5 › newsletter form with an invalid e-mail posts nothing (1.8s)
+  ✓  16 [chromium] › e2e/forms.spec.ts:65:1 › the outbound guard stops and reports a request to flows.zawlodzki.com (316ms)
+  ✓  15 [chromium] › e2e/pages.spec.ts:42:3 › post: no axe violation outside the recorded baseline (1.7s)
+  ✓  17 [chromium] › e2e/pages.spec.ts:48:3 › post: no horizontal overflow at 320 px (1.2s)
+  ✓  19 [chromium] › e2e/pages.spec.ts:48:3 › contact: no horizontal overflow at 320 px (1.1s)
+  ✓  18 [chromium] › e2e/pages.spec.ts:42:3 › contact: no axe violation outside the recorded baseline (1.7s)
+  ✓  21 [chromium] › e2e/pages.spec.ts:65:3 › /szkolenie-i-wdrozenie-asana: testimonial logos invert exactly when the same artwork is inverted in the logo strip (370ms)
+  ✓  22 [chromium] › e2e/pages.spec.ts:65:3 › /: testimonial logos invert exactly when the same artwork is inverted in the logo strip (290ms)
+  ✓  20 [chromium] › e2e/pages.spec.ts:57:1 › consent banner: axe violations stay within the recorded baseline (1.6s)
+
+  22 passed (29.9s)
