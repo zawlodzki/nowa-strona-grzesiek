@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { writeFileSync } from 'node:fs';
 process.env.CHROME_BIN = '/opt/agent-vm/chromium/chrome';
-const { launch } = await import('../../../../../apps/web/src/components/diagrams/port/cdp.mjs');
+const { launch } = await import('../../../../tools/cdp.mjs');
 const args = process.argv.slice(2);
 const url = args.find(a => /^(https?|file):/.test(a));
 const output = args.find(a => a.startsWith('--screenshot='))?.slice(13);

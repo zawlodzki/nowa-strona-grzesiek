@@ -1,4 +1,4 @@
-import { launch } from '../../../../../apps/web/src/components/diagrams/port/cdp.mjs';
+import { launch } from '../../../../tools/cdp.mjs';
 import { writeFileSync } from 'node:fs';
 const out = new URL('./', import.meta.url);
 const base='https://zawlodzki-web.zawlodzki.workers.dev';

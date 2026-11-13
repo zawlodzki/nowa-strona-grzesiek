@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 process.env.CHROME_BIN = '/opt/agent-vm/chromium/chrome';
-const { launch } = await import('../../../../../apps/web/src/components/diagrams/port/cdp.mjs');
+const { launch } = await import('../../../../tools/cdp.mjs');
 const [scratch, evidence] = process.argv.slice(2);
 if (!scratch || !evidence) throw new Error('Usage: node compare.mjs scratch-dir web-sh-evidence-dir');
 const browser = await launch();
