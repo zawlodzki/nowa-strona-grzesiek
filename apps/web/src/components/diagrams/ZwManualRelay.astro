@@ -21,17 +21,17 @@ const last = apps.length - 1;
 
 <div class="sc" data-diagram="zw-manual-relay" aria-hidden="true">
   <div class="sc-body">
-    <ol class="track">
+    <ol class="sc-track">
       {apps.map((app, i) => (
         <>
-          <li class="app">
-            <span class:list={["ring", { "is-here": i === last }]} />
-            <span class="name">{app.name}</span>
-            <span class="what">{app.what}</span>
+          <li class="sc-step">
+            <span class:list={["sc-ring", { "is-here": i === last }]} />
+            <span class="sc-step-name">{app.name}</span>
+            <span class="sc-step-what">{app.what}</span>
           </li>
           {gaps[i] && (
-            <li class="gap is-slow" data-sum={gaps[i].sum}>
-              <span class="wait">{gaps[i].wait}</span>
+            <li class="sc-link is-slow" data-sum={gaps[i].sum}>
+              <span class="sc-link-label">{gaps[i].wait}</span>
             </li>
           )}
         </>
@@ -48,78 +48,22 @@ const last = apps.length - 1;
 </div>
 
 <style>
-  .track {
-    display: flex;
-    align-items: flex-start;
-    isolation: isolate;
+  .sc-link {
+    --sc-link-style: dashed;
   }
 
-  .app {
-    display: grid;
-    flex: none;
-    gap: 0.6rem;
-    justify-items: center;
-    inline-size: clamp(3.25rem, 17cqi, 7rem);
-    text-align: center;
+  .sc-link.is-slow {
+    --sc-link-color: var(--color-status-error);
   }
 
-  .ring {
-    position: relative;
-    inline-size: 1.125rem;
-    block-size: 1.125rem;
-    margin-block-start: 1.9rem;
-    background: var(--surface-page);
-    border: 1.5px solid var(--text-heading);
-    border-radius: 50%;
-  }
-
-  .ring.is-here::after {
-    content: "";
-    position: absolute;
-    inset: 3px;
-    background: var(--text-link);
-    border-radius: 50%;
-  }
-
-  .name {
-    color: var(--text-heading);
-    font-weight: var(--font-weight-semibold);
-  }
-
-  .what {
-    color: var(--text-muted);
-    font-size: 0.8125rem;
-    text-wrap: balance;
-  }
-
-  .gap {
-    position: relative;
-    flex: 1;
-    min-inline-size: 1.5rem;
-    block-size: 3.1rem;
-  }
-
-  .gap::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset-inline: -1.6rem;
-    inset-block-start: calc(1.9rem + 0.5625rem);
-    border-block-start: 1.5px dashed var(--border-default);
-  }
-
-  .gap.is-slow::after {
-    border-color: var(--color-status-error);
-  }
-
-  .wait {
-    position: absolute;
-    inset-inline: -2rem;
-    inset-block-start: 0;
+  .sc-link-label {
     color: var(--text-error);
-    font-weight: var(--font-weight-semibold);
-    text-align: center;
-    white-space: nowrap;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sc-link::after {
+      transition: border-color 630ms ease;
+    }
   }
 
   .carrier {
@@ -133,18 +77,6 @@ const last = apps.length - 1;
     background: var(--text-link);
     border-radius: 50%;
   }
-
-  @container (inline-size < 30rem) {
-    .what {
-      display: none;
-    }
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .gap::after {
-      transition: border-color 630ms ease;
-    }
-  }
 </style>
 
 <script>
@@ -152,9 +84,11 @@ const last = apps.length - 1;
 
   stage("zw-manual-relay", (root, t) => {
     const body = root.querySelector<HTMLElement>(".sc-body")!;
-    const rings = [...root.querySelectorAll<HTMLElement>(".ring")];
-    const gaps = [...root.querySelectorAll<HTMLElement>(".gap")];
-    const waits = gaps.map((gap) => gap.querySelector<HTMLElement>(".wait")!);
+    const rings = [...root.querySelectorAll<HTMLElement>(".sc-ring")];
+    const gaps = [...root.querySelectorAll<HTMLElement>(".sc-link")];
+    const waits = gaps.map((gap) =>
+      gap.querySelector<HTMLElement>(".sc-link-label")!,
+    );
     const carrier = root.querySelector<HTMLElement>(".carrier")!;
     const total = root.querySelector<HTMLElement>("[data-total]")!;
 

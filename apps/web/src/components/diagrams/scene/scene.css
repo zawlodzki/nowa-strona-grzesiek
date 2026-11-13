@@ -67,4 +67,97 @@
   .sc-total-value.is-loss {
     color: var(--text-error);
   }
+
+  /* Step track: systems in a row joined by links. The relay draws the links
+     dashed, the automation scene fills them with Signal Cyan. */
+  .sc-track {
+    --sc-step: clamp(3.25rem, 17cqi, 7rem);
+
+    display: flex;
+    align-items: flex-start;
+    isolation: isolate;
+  }
+
+  .sc-step {
+    display: grid;
+    flex: none;
+    gap: 0.6rem;
+    justify-items: center;
+    inline-size: var(--sc-step);
+    text-align: center;
+  }
+
+  .sc-ring {
+    position: relative;
+    inline-size: 1.125rem;
+    block-size: 1.125rem;
+    margin-block-start: 1.9rem;
+    background: var(--surface-page);
+    border: 1.5px solid var(--text-heading);
+    border-radius: 50%;
+  }
+
+  .sc-ring.is-here::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: var(--text-link);
+    border-radius: 50%;
+  }
+
+  .sc-step-name {
+    color: var(--text-heading);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .sc-step-what {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    text-wrap: balance;
+  }
+
+  .sc-link {
+    --sc-link-color: var(--border-default);
+    --sc-link-style: solid;
+
+    position: relative;
+    flex: 1;
+    min-inline-size: 1.5rem;
+    block-size: 3.1rem;
+  }
+
+  .sc-link::after,
+  .sc-link-fill {
+    position: absolute;
+    z-index: -1;
+    inset-inline: calc(var(--sc-step) / -2);
+    inset-block-start: calc(1.9rem + 0.5625rem - 0.75px);
+  }
+
+  .sc-link::after {
+    content: "";
+    border-block-start: 1.5px var(--sc-link-style) var(--sc-link-color);
+  }
+
+  .sc-link-fill {
+    block-size: 2px;
+    background: var(--color-secondary-60);
+    transform-origin: 0 50%;
+  }
+
+  .sc-link-label {
+    position: absolute;
+    inset-inline: -2rem;
+    inset-block-start: 0;
+    color: var(--text-muted);
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  @container (inline-size < 30rem) {
+    .sc-step-what {
+      display: none;
+    }
+  }
 }

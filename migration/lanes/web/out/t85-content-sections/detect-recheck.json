@@ -1,0 +1,36 @@
+[
+  {
+    "antipattern": "ai-color-palette",
+    "name": "AI color palette",
+    "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. A gradient in one of those hues is the tell on its own; flat neon ink on a dark ground is charged once a second tell hue joins it. Choose a distinctive, intentional palette.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://127.0.0.1:8791/sales-atlas-system",
+    "line": 0,
+    "snippet": "Cyan gradient background",
+    "selector": "span.glow > span.ring > i"
+  },
+  {
+    "antipattern": "ai-color-palette",
+    "name": "AI color palette",
+    "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. A gradient in one of those hues is the tell on its own; flat neon ink on a dark ground is charged once a second tell hue joins it. Choose a distinctive, intentional palette.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://127.0.0.1:8791/sales-atlas-system",
+    "line": 0,
+    "snippet": "Cyan gradient background",
+    "selector": "span.sas-beam > span.ring > i"
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "http://127.0.0.1:8791/sales-atlas-system",
+    "line": 0,
+    "snippet": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+    "advisory": true,
+    "selector": "div.c15t-ui-root-hE9Kz.c15t-ui-bottomLeft-CbyqH"
+  }
+]
