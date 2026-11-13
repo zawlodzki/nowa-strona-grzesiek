@@ -1,0 +1,11 @@
+- `/audyt-ai-sprzedaz`: `6 000 zł netto`
+- `/audyt-crm-pipedrive`: `3 900 zł netto jednorazowo`; `6 000 zł netto / mies.`; `Wycena indywidualna`
+- `/audyt-procesow-asana`: `3 900 zł netto`; `6 000 zł netto / mies.`; `Wycena indywidualna`
+- `/audyt-sprzedazy`: `3 900 zł netto`; `6 900 zł netto`; `Wycena osobna`
+- `/automatyzacja-procesow-biznesowych-nocode`: `3 500 zł netto / m-c`; `5 500 zł netto / m-c`; `Dowiedz się więcej`; `Polecaj i zarabiaj co miesiąc`
+- `/kurs-ai-w-sprzedazy`: `2 200 zł netto`; `6 900 zł netto`; `24 000 zł netto`
+- `/program-ai-dla-zespolu-sprzedazy`: `2 200 zł netto`; `6 900 zł netto`; `24 000 zł netto`
+- `/szkolenie-i-wdrozenie-asana`: `3 900 zł netto`; `6 000 zł netto / mies.`; `Wycena indywidualna`
+- `/szkolenie-i-wdrozenie-pipedrive`: `3 900 zł netto jednorazowo`; `6 000 zł netto / mies.`; `Wycena indywidualna`
+- `/szkolenie-i-wdrozenie-salesforce`: `4 900 zł netto jednorazowo`; `9 000 zł netto / mies.`; `Wycena indywidualna`
+- `/wdrozenie-ai-w-sprzedazy-b2b`: `6 000 zł netto jednorazowo`; `8 000 zł netto / mies.`; `Wycena indywidualna`
