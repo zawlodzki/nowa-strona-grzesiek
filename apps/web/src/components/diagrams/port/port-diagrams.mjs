@@ -148,9 +148,9 @@ const Component = diagrams[Astro.props.diagram];
 `,
 );
 
-// Rebuilt by hand in the calm scene style (T92, scene/). They stay in
+// Rebuilt by hand in the calm scene style (T92, T96, scene/). They stay in
 // registry.ts and Diagram.astro, but this port no longer writes or checks them.
-const rebuilt = new Set(['CrmFunnel.astro', 'ZwManualRelay.astro', 'ZwAiSales.astro']);
+const rebuilt = new Set(['CrmFunnel.astro', 'ZwManualRelay.astro', 'ZwAiSales.astro', 'ZwAutomation.astro', 'ZwAsana.astro']);
 
 const unsized = diagrams.filter((d) => !sizes[d.key] && !rebuilt.has(`${pascal(d.key)}.astro`)).map((d) => d.key);
 let stale = 0;
