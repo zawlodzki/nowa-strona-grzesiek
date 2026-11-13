@@ -14,9 +14,9 @@ import PromoCard from '../../components/blocks/PromoCard.astro';
 import RichText from '../../components/blocks/RichText.astro';
 import Testimonials from '../../components/blocks/Testimonials.astro';
 import type { Media } from '../../../../studio/sanity.types';
-import type { ResolvedLogo } from '../../components/ui/block-types';
+import { safeHref, type ResolvedLogo } from '../../components/ui/block-types';
 import type { Language } from '../../seo/types.ts';
-import { localHref, resolveImage, type PageDoc, type Site } from './site.ts';
+import { localHref, resolveImage, type PageDoc, type PageSection, type Site } from './site.ts';
 import { invertsLikeLogo } from './testimonial.ts';
 
 interface Props { site: Site; sections: NonNullable<PageDoc['sections']>; headingLevel: 'h1' | 'h2'; language?: Language; }
@@ -24,6 +24,55 @@ const { site, sections, headingLevel, language = 'pl' } = Astro.props;
 const { links, images } = site;
 const mediaImage = (media: Media | undefined) => (media?.kind === 'image' ? resolveImage(site, media.image) : undefined);
 const firstHeading = sections.findIndex((section) => section._type === 'hero' || section._type === 'feature' || section._type === 'newsletterSignup' || section._type === 'contactForm');
+type SectionGroup = { kind: 'single' | 'intro' | 'steps'; start: number; sections: PageSection[] };
+
+const canGroupFeature = (section: PageSection | undefined): section is Extract<PageSection, { _type: 'feature' }> =>
+  section?._type === 'feature' && section.layout !== 'article';
+const isStep = (section: PageSection | undefined) =>
+  canGroupFeature(section) && /^krok\s+\d+$/i.test(section.tagline?.trim() ?? '');
+
+function introGroupEnd(start: number) {
+  const intro = sections[start];
+  const firstChild = sections[start + 1];
+
+  if (intro._type === 'feature' && firstChild?._type === 'tabs' && !firstChild.heading?.trim()
+      && intro.heading?.trim() && intro.layout !== 'article' && !isStep(intro)
+      && !intro.media && !intro.bullets?.length && !intro.cta
+      && !(start === firstHeading && headingLevel === 'h1')) return start + 2;
+
+  if (intro._type !== 'contentSection' || !intro.heading?.trim() || intro.media) return start + 1;
+  const items = intro.items ?? [];
+  if (firstChild?._type === 'tabs' && !items.length) return start + 2;
+  if (items.length && (intro.layout ?? 'list') !== 'list') return start + 1;
+
+  const anchors = new Set<string>();
+  for (const item of items) {
+    const href = safeHref(item.link?.href);
+    if (!href?.startsWith('#') || !item.link?.label || item.text || item.icon) return start + 1;
+    anchors.add(href);
+  }
+
+  let end = start + 1;
+  for (const section of sections.slice(end)) {
+    if (!canGroupFeature(section) || (end === firstHeading && headingLevel === 'h1')) break;
+    if (anchors.size && !anchors.has(`#${section.anchorId?.current ?? ''}`)) break;
+    end++;
+  }
+  return end;
+}
+
+const groups: SectionGroup[] = [];
+for (let start = 0; start < sections.length;) {
+  let end = introGroupEnd(start);
+  let kind: SectionGroup['kind'] = end > start + 1 ? 'intro' : 'single';
+  if (kind === 'single' && isStep(sections[start])) {
+    while (isStep(sections[end])) end++;
+    if (end > start + 1) kind = 'steps';
+  }
+  groups.push({ kind, start, sections: sections.slice(start, end) });
+  start = end;
+}
+
 const person = site.person;
 const contact = {
   ...(person?.email && { email: person.email }),
@@ -36,51 +85,61 @@ const postsOf = (kind: string | undefined) => site.posts
   .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.title.localeCompare(b.title, 'pl'))
   .map((post) => ({ _id: post._id, title: post.title, href: localHref(post.language, post.path), publishedAt: post.publishedAt, image: resolveImage(site, post.thumbnail ?? post.mainImage) }));
 ---
-{sections.map((section, index) => {
-  switch (section._type) {
-    case 'hero':
-      return <Hero data={section} image={resolveImage(site, section.image)} badgeImage={resolveImage(site, section.badgeImage)} headingLevel={index === firstHeading ? headingLevel : 'h2'} />;
-    case 'logoStrip': {
-      const logos = (section.logos ?? []).flatMap((ref): ResolvedLogo[] => {
-        const logo = site.logos.get(ref._ref);
-        const image = resolveImage(site, logo?.image);
-        return logo && image ? [{ _id: logo._id, name: logo.name, url: logo.url, invert: logo.invert, image }] : [];
-      });
-      return <LogoStrip data={{ ...section, intro: section.intro === section.title ? undefined : section.intro }} logos={logos} />;
+{groups.map((group) => {
+  const children = group.sections.map((section, offset) => {
+    const index = group.start + offset;
+    const level = index === firstHeading ? headingLevel : 'h2';
+    switch (section._type) {
+      case 'hero':
+        return <Hero data={section} image={resolveImage(site, section.image)} badgeImage={resolveImage(site, section.badgeImage)} headingLevel={level} />;
+      case 'logoStrip': {
+        const logos = (section.logos ?? []).flatMap((ref): ResolvedLogo[] => {
+          const logo = site.logos.get(ref._ref);
+          const image = resolveImage(site, logo?.image);
+          return logo && image ? [{ _id: logo._id, name: logo.name, url: logo.url, invert: logo.invert, image }] : [];
+        });
+        return <LogoStrip data={{ ...section, intro: section.intro === section.title ? undefined : section.intro }} logos={logos} />;
+      }
+      case 'feature':
+        return <Feature data={section} image={mediaImage(section.media)} links={links} images={images} headingLevel={group.kind === 'intro' && offset > 0 ? 'h3' : level} />;
+      case 'contentSection':
+        return <ContentSection data={section} image={mediaImage(section.media)} links={links} images={images} />;
+      case 'tabs':
+        return <Tabs data={section} links={links} images={images} />;
+      case 'pricing':
+        return <Pricing data={section} />;
+      case 'ctaBand':
+        return <CtaBand data={section} />;
+      case 'testimonials': {
+        const items = (section.items ?? []).flatMap((ref) => {
+          const item = site.testimonials.get(ref._ref);
+          if (!item) return [];
+          const image = resolveImage(site, item.image);
+          const authorImage = resolveImage(site, item.authorImage);
+          return [{ _id: item._id, name: item.name, role: item.role, company: item.company, quote: item.quote, url: item.url, linkedinUrl: item.linkedinUrl, ...(authorImage && { authorImage }), ...(image && { image, invert: invertsLikeLogo(site.logos.values(), item.image) }) }];
+        });
+        return <Testimonials data={section} items={items} />;
+      }
+      case 'promoCard': {
+        const target = section.target?._ref ? site.byId.get(section.target._ref) : undefined;
+        return <PromoCard data={section} target={target && { _id: target._id, language: target.language, slug: target.slug, title: target.title }} />;
+      }
+      case 'faq':
+        return <Faq data={section} links={links} images={images} />;
+      case 'contactForm':
+        return <ContactForm data={section} contact={contact} />;
+      case 'newsletterSignup':
+        return <NewsletterSignup data={section} headingLevel={level} />;
+      case 'postList':
+        return <PostList data={section} posts={postsOf(section.kind)} eager={index < 2} />;
+      case 'richText':
+        return <RichText data={section} links={links} images={images} />;
     }
-    case 'feature':
-      return <Feature data={section} image={mediaImage(section.media)} links={links} images={images} headingLevel={index === firstHeading ? headingLevel : 'h2'} />;
-    case 'contentSection':
-      return <ContentSection data={section} image={mediaImage(section.media)} links={links} images={images} />;
-    case 'tabs':
-      return <Tabs data={section} links={links} images={images} />;
-    case 'pricing':
-      return <Pricing data={section} />;
-    case 'ctaBand':
-      return <CtaBand data={section} />;
-    case 'testimonials': {
-      const items = (section.items ?? []).flatMap((ref) => {
-        const item = site.testimonials.get(ref._ref);
-        if (!item) return [];
-        const image = resolveImage(site, item.image);
-        const authorImage = resolveImage(site, item.authorImage);
-        return [{ _id: item._id, name: item.name, role: item.role, company: item.company, quote: item.quote, url: item.url, linkedinUrl: item.linkedinUrl, ...(authorImage && { authorImage }), ...(image && { image, invert: invertsLikeLogo(site.logos.values(), item.image) }) }];
-      });
-      return <Testimonials data={section} items={items} />;
-    }
-    case 'promoCard': {
-      const target = section.target?._ref ? site.byId.get(section.target._ref) : undefined;
-      return <PromoCard data={section} target={target && { _id: target._id, language: target.language, slug: target.slug, title: target.title }} />;
-    }
-    case 'faq':
-      return <Faq data={section} links={links} images={images} />;
-    case 'contactForm':
-      return <ContactForm data={section} contact={contact} />;
-    case 'newsletterSignup':
-      return <NewsletterSignup data={section} headingLevel={index === firstHeading ? headingLevel : 'h2'} />;
-    case 'postList':
-      return <PostList data={section} posts={postsOf(section.kind)} eager={index < 2} />;
-    case 'richText':
-      return <RichText data={section} links={links} images={images} />;
-  }
+  });
+  return group.kind === 'single' ? children : (
+    <div class:list={['section-group', { 'section-group--intro': group.kind === 'intro' }]}>{children}</div>
+  );
 })}
+<style is:global>
+  .section-group > .section.tabs > .block-inner > header:has(> .pt:only-child:empty) { display: none; }
+</style>

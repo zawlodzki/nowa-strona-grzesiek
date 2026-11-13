@@ -27,6 +27,11 @@
 
   .section { padding-block: var(--layout-section-y); }
 
+  .section-group > .section:has(+ .section) { padding-block-end: var(--space-m); }
+  .section-group > .section + .section { padding-block-start: var(--space-m); }
+  .section-group--intro > .section:first-child { padding-block-end: var(--space-s); }
+  .section-group--intro > .section:nth-child(2) { padding-block-start: var(--space-s); }
+
   .flow > * { margin-block: 0; }
   .flow > * + * { margin-block-start: var(--flow-space, 1em); }
 

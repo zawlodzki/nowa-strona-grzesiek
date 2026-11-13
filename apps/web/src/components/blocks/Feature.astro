@@ -34,7 +34,10 @@ const hasMedia = Astro.slots.has('media') || image || (data.media?.kind === 'dia
   .feature-layout { display: grid; gap: var(--space-2xl); align-items: center; }
   .copy { display: flex; flex-direction: column; align-items: start; gap: var(--space-m); max-inline-size: 65ch; overflow-wrap: anywhere; }
   .has-portrait .media { inline-size: min(100%, 240px); justify-self: center; }
-  @container (width < 48rem) { .has-portrait .media { display: none; } }
+  @container (width < 48rem) {
+    .has-media { gap: var(--space-m); }
+    .has-portrait .media { display: none; }
+  }
   .feature-layout.article { align-items: start; grid-template-columns: minmax(0, 1fr); }
   .article .copy { max-inline-size: 45rem; gap: clamp(1.25rem, 1.12rem + .55vw, 1.5625rem); }
   .article :global(.pt > *) { margin-block: 0; }
