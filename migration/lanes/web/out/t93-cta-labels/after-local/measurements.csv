@@ -1,0 +1,439 @@
+path,status,width,context,label,chars,buttonWidth,lines
+/,200,390,hero,Umów bezpłatną konsultację,26,358,1
+/,200,390,cta-band,Porozmawiajmy o współpracy,26,334,1
+/,200,390,form-submit,Wyślij zapytanie,16,310,1
+/,200,390,form-submit,Zapisuję się,12,358,1
+/audyt-ai-sprzedaz,200,390,hero,Umów rozmowę o audycie,22,358,1
+/audyt-ai-sprzedaz,200,390,cta-band,Porozmawiajmy o audycie AI,26,334,1
+/audyt-ai-sprzedaz,200,390,pricing,Umów rozmowę,12,138,1
+/audyt-ai-sprzedaz,200,390,cta-band,Umów rozmowę o audycie AI,25,334,1
+/audyt-ai-sprzedaz,200,390,form-submit,Wyślij zapytanie,16,310,1
+/audyt-crm-pipedrive,200,390,hero,Umów rozmowę o audycie Pipedrive,32,358,1
+/audyt-crm-pipedrive,200,390,pricing,Umów rozmowę,12,138,1
+/audyt-crm-pipedrive,200,390,pricing,Zobacz wdrożenie Pipedrive,26,221,1
+/audyt-crm-pipedrive,200,390,pricing,Omówmy zakres,13,141,1
+/audyt-crm-pipedrive,200,390,cta-band,Omówmy audyt Pipedrive,22,334,1
+/audyt-crm-pipedrive,200,390,form-submit,Wyślij zapytanie,16,310,1
+/audyt-procesow-asana,200,390,hero,Umów rozmowę o audycie Asany,28,358,1
+/audyt-procesow-asana,200,390,pricing,Umów rozmowę,12,138,1
+/audyt-procesow-asana,200,390,pricing,Zobacz wdrożenie Asany,22,198,1
+/audyt-procesow-asana,200,390,pricing,Omówmy zakres,13,141,1
+/audyt-procesow-asana,200,390,cta-band,Umów rozmowę o audycie Asany,28,334,1
+/audyt-procesow-asana,200,390,form-submit,Wyślij zapytanie,16,310,1
+/audyt-sprzedazy,200,390,hero,Umów audyt sprzedaży,20,358,1
+/audyt-sprzedazy,200,390,pricing,Zobacz audyt CRM,16,158,1
+/audyt-sprzedazy,200,390,pricing,Umów rozmowę,12,138,1
+/audyt-sprzedazy,200,390,pricing,Porozmawiajmy o wdrożeniu,25,224,1
+/audyt-sprzedazy,200,390,cta-band,Omówmy audyt sprzedaży,22,334,1
+/audyt-sprzedazy,200,390,form-submit,Wyślij zapytanie,16,310,1
+/automatyzacja-procesow-biznesowych-nocode,200,390,hero,Porozmawiajmy o automatyzacji,29,358,1
+/automatyzacja-procesow-biznesowych-nocode,200,390,pricing,Zapytaj o pakiet Standard,25,203,1
+/automatyzacja-procesow-biznesowych-nocode,200,390,pricing,Zapytaj o pakiet PRO,20,172,1
+/automatyzacja-procesow-biznesowych-nocode,200,390,pricing,Sprawdź Newsletter,18,163,1
+/automatyzacja-procesow-biznesowych-nocode,200,390,pricing,Program partnerski,18,160,1
+/automatyzacja-procesow-biznesowych-nocode,200,390,cta-band,Opisz swój proces,17,334,1
+/automatyzacja-procesow-biznesowych-nocode,200,390,form-submit,Wyślij zapytanie,16,310,1
+/automatyzacje-dla-pipedrive,200,390,hero,Porozmawiajmy o automatyzacjach,31,358,1
+/automatyzacje-dla-pipedrive,200,390,cta-band,Opisz swój proces,17,334,1
+/automatyzacje-dla-pipedrive,200,390,form-submit,Wyślij zapytanie,16,310,1
+/blog,200,390,other,Następne wpisy,14,358,1
+/blog,200,390,form-submit,Zapisuję się,12,358,1
+/darmowe-materialy-dla-biznesow-uslugowych,200,390,form-submit,Zapisuję się,12,358,1
+/kontakt,200,390,form-submit,Wyślij zapytanie,16,310,1
+/kontakt,200,390,form-submit,Zapisuję się,12,358,1
+/kurs-ai-w-sprzedazy,200,390,hero,Kup w przedsprzedaży,20,358,1
+/kurs-ai-w-sprzedazy,200,390,cta-band,"Sprawdź, czy kurs pasuje",24,334,1
+/kurs-ai-w-sprzedazy,200,390,pricing,Kup w przedsprzedaży,20,183,1
+/kurs-ai-w-sprzedazy,200,390,pricing,Zobacz program grupowy,22,206,1
+/kurs-ai-w-sprzedazy,200,390,pricing,Zobacz ofertę wdrożenia AI,26,216,1
+/kurs-ai-w-sprzedazy,200,390,cta-band,Zadaj pytanie o kurs,20,334,1
+/kurs-ai-w-sprzedazy,200,390,form-submit,Wyślij zapytanie,16,310,1
+/newsletter,200,390,form-submit,Zapisuję się,12,358,1
+/o-mnie,200,390,feature,Porozmawiajmy o wdrożeniu,25,358,1
+/o-mnie,200,390,form-submit,Zapisuję się,12,358,1
+/program-ai-dla-zespolu-sprzedazy,200,390,hero,Zapytaj o udział w programie,28,358,1
+/program-ai-dla-zespolu-sprzedazy,200,390,cta-band,Zapytaj o udział zespołu,24,334,1
+/program-ai-dla-zespolu-sprzedazy,200,390,pricing,Zobacz kurs,11,109,1
+/program-ai-dla-zespolu-sprzedazy,200,390,pricing,Zapytaj o udział w programie,28,227,1
+/program-ai-dla-zespolu-sprzedazy,200,390,pricing,Zobacz ofertę wdrożenia AI,26,216,1
+/program-ai-dla-zespolu-sprzedazy,200,390,cta-band,Zapytaj o udział w programie,28,334,1
+/program-ai-dla-zespolu-sprzedazy,200,390,form-submit,Wyślij zapytanie,16,310,1
+/program-partnerski,200,390,hero,Zapytaj o polecenie klienta,27,358,1
+/program-partnerski,200,390,form-submit,Wyślij zapytanie,16,310,1
+/sales-atlas-system,200,390,hero,Umów bezpłatną konsultację,26,358,1
+/sales-atlas-system,200,390,cta-band,Omówmy Twój system sprzedaży,28,334,1
+/szkolenie-i-wdrozenie-asana,200,390,hero,Umów rozmowę o wdrożeniu,24,358,1
+/szkolenie-i-wdrozenie-asana,200,390,pricing,Zobacz audyt Asany,18,165,1
+/szkolenie-i-wdrozenie-asana,200,390,pricing,Umów rozmowę,12,138,1
+/szkolenie-i-wdrozenie-asana,200,390,pricing,Omówmy zakres,13,141,1
+/szkolenie-i-wdrozenie-asana,200,390,cta-band,Umów rozmowę o wdrożeniu,24,334,1
+/szkolenie-i-wdrozenie-asana,200,390,form-submit,Wyślij zapytanie,16,310,1
+/szkolenie-i-wdrozenie-pipedrive,200,390,hero,Umów rozmowę o wdrożeniu,24,358,1
+/szkolenie-i-wdrozenie-pipedrive,200,390,pricing,Zobacz audyt CRM,16,158,1
+/szkolenie-i-wdrozenie-pipedrive,200,390,pricing,Umów rozmowę,12,138,1
+/szkolenie-i-wdrozenie-pipedrive,200,390,pricing,Omówmy zakres,13,141,1
+/szkolenie-i-wdrozenie-pipedrive,200,390,cta-band,Umów rozmowę o wdrożeniu,24,334,1
+/szkolenie-i-wdrozenie-pipedrive,200,390,form-submit,Wyślij zapytanie,16,310,1
+/szkolenie-i-wdrozenie-salesforce,200,390,hero,Umów rozmowę o wdrożeniu,24,358,1
+/szkolenie-i-wdrozenie-salesforce,200,390,pricing,Umów rozmowę,12,138,1
+/szkolenie-i-wdrozenie-salesforce,200,390,pricing,Umów rozmowę,12,138,1
+/szkolenie-i-wdrozenie-salesforce,200,390,pricing,Omówmy zakres,13,141,1
+/szkolenie-i-wdrozenie-salesforce,200,390,cta-band,Umów rozmowę o wdrożeniu,24,334,1
+/szkolenie-i-wdrozenie-salesforce,200,390,form-submit,Wyślij zapytanie,16,310,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,390,hero,Umów rozmowę o wdrożeniu AI,27,358,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,390,cta-band,Wybierzmy proces dla AI,23,334,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,390,pricing,Zobacz audyt AI,15,137,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,390,pricing,Umów rozmowę,12,138,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,390,pricing,Omówmy zakres,13,141,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,390,cta-band,Umów bezpłatną konsultację,26,334,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,390,form-submit,Wyślij zapytanie,16,310,1
+/wspolpraca,200,390,hero,Umów wstępną rozmowę,20,358,1
+/wspolpraca,200,390,form-submit,Wyślij zapytanie,16,310,1
+/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut,200,390,cta-band,Umów konsultację,16,334,1
+/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut,200,390,form-submit,Zapisuję się,12,358,1
+/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana,200,390,cta-band,Umów konsultację,16,334,1
+/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana,200,390,form-submit,Zapisuję się,12,358,1
+/blog/agent-ai-co-to-jest,200,390,cta-band,Umów konsultację,16,334,1
+/blog/agent-ai-co-to-jest,200,390,form-submit,Zapisuję się,12,358,1
+/,200,768,hero,Umów bezpłatną konsultację,26,292,1
+/,200,768,cta-band,Porozmawiajmy o współpracy,26,299,1
+/,200,768,form-submit,Wyślij zapytanie,16,653,1
+/,200,768,form-submit,Zapisuję się,12,139,1
+/audyt-ai-sprzedaz,200,768,hero,Umów rozmowę o audycie,22,275,1
+/audyt-ai-sprzedaz,200,768,cta-band,Porozmawiajmy o audycie AI,26,292,1
+/audyt-ai-sprzedaz,200,768,pricing,Umów rozmowę,12,172,1
+/audyt-ai-sprzedaz,200,768,cta-band,Umów rozmowę o audycie AI,25,295,1
+/audyt-ai-sprzedaz,200,768,form-submit,Wyślij zapytanie,16,653,1
+/audyt-crm-pipedrive,200,768,hero,Umów rozmowę o audycie Pipedrive,32,351,1
+/audyt-crm-pipedrive,200,768,pricing,Umów rozmowę,12,172,1
+/audyt-crm-pipedrive,200,768,pricing,Zobacz wdrożenie Pipedrive,26,263,1
+/audyt-crm-pipedrive,200,768,pricing,Omówmy zakres,13,175,1
+/audyt-crm-pipedrive,200,768,cta-band,Omówmy audyt Pipedrive,22,270,1
+/audyt-crm-pipedrive,200,768,form-submit,Wyślij zapytanie,16,653,1
+/audyt-procesow-asana,200,768,hero,Umów rozmowę o audycie Asany,28,326,1
+/audyt-procesow-asana,200,768,pricing,Umów rozmowę,12,172,1
+/audyt-procesow-asana,200,768,pricing,Zobacz wdrożenie Asany,22,237,1
+/audyt-procesow-asana,200,768,pricing,Omówmy zakres,13,175,1
+/audyt-procesow-asana,200,768,cta-band,Umów rozmowę o audycie Asany,28,326,1
+/audyt-procesow-asana,200,768,form-submit,Wyślij zapytanie,16,653,1
+/audyt-sprzedazy,200,768,hero,Umów audyt sprzedaży,20,251,1
+/audyt-sprzedazy,200,768,pricing,Zobacz audyt CRM,16,194,1
+/audyt-sprzedazy,200,768,pricing,Umów rozmowę,12,172,1
+/audyt-sprzedazy,200,768,pricing,Porozmawiajmy o wdrożeniu,25,266,1
+/audyt-sprzedazy,200,768,cta-band,Omówmy audyt sprzedaży,22,275,1
+/audyt-sprzedazy,200,768,form-submit,Wyślij zapytanie,16,653,1
+/automatyzacja-procesow-biznesowych-nocode,200,768,hero,Porozmawiajmy o automatyzacji,29,317,1
+/automatyzacja-procesow-biznesowych-nocode,200,768,pricing,Zapytaj o pakiet Standard,25,244,1
+/automatyzacja-procesow-biznesowych-nocode,200,768,pricing,Zapytaj o pakiet PRO,20,209,1
+/automatyzacja-procesow-biznesowych-nocode,200,768,pricing,Sprawdź Newsletter,18,200,1
+/automatyzacja-procesow-biznesowych-nocode,200,768,pricing,Program partnerski,18,196,1
+/automatyzacja-procesow-biznesowych-nocode,200,768,cta-band,Opisz swój proces,17,210,1
+/automatyzacja-procesow-biznesowych-nocode,200,768,form-submit,Wyślij zapytanie,16,653,1
+/automatyzacje-dla-pipedrive,200,768,hero,Porozmawiajmy o automatyzacjach,31,342,1
+/automatyzacje-dla-pipedrive,200,768,cta-band,Opisz swój proces,17,210,1
+/automatyzacje-dla-pipedrive,200,768,form-submit,Wyślij zapytanie,16,653,1
+/blog,200,768,other,Następne wpisy,14,193,1
+/blog,200,768,form-submit,Zapisuję się,12,139,1
+/darmowe-materialy-dla-biznesow-uslugowych,200,768,form-submit,Zapisuję się,12,139,1
+/kontakt,200,768,form-submit,Wyślij zapytanie,16,653,1
+/kontakt,200,768,form-submit,Zapisuję się,12,139,1
+/kurs-ai-w-sprzedazy,200,768,hero,Kup w przedsprzedaży,20,246,1
+/kurs-ai-w-sprzedazy,200,768,cta-band,"Sprawdź, czy kurs pasuje",24,263,1
+/kurs-ai-w-sprzedazy,200,768,pricing,Kup w przedsprzedaży,20,221,1
+/kurs-ai-w-sprzedazy,200,768,pricing,Zobacz program grupowy,22,247,1
+/kurs-ai-w-sprzedazy,200,768,pricing,Zobacz ofertę wdrożenia AI,26,257,1
+/kurs-ai-w-sprzedazy,200,768,cta-band,Zadaj pytanie o kurs,20,226,1
+/kurs-ai-w-sprzedazy,200,768,form-submit,Wyślij zapytanie,16,653,1
+/newsletter,200,768,form-submit,Zapisuję się,12,139,1
+/o-mnie,200,768,feature,Porozmawiajmy o wdrożeniu,25,290,1
+/o-mnie,200,768,form-submit,Zapisuję się,12,139,1
+/program-ai-dla-zespolu-sprzedazy,200,768,hero,Zapytaj o udział w programie,28,293,1
+/program-ai-dla-zespolu-sprzedazy,200,768,cta-band,Zapytaj o udział zespołu,24,255,1
+/program-ai-dla-zespolu-sprzedazy,200,768,pricing,Zobacz kurs,11,140,1
+/program-ai-dla-zespolu-sprzedazy,200,768,pricing,Zapytaj o udział w programie,28,269,1
+/program-ai-dla-zespolu-sprzedazy,200,768,pricing,Zobacz ofertę wdrożenia AI,26,257,1
+/program-ai-dla-zespolu-sprzedazy,200,768,cta-band,Zapytaj o udział w programie,28,293,1
+/program-ai-dla-zespolu-sprzedazy,200,768,form-submit,Wyślij zapytanie,16,653,1
+/program-partnerski,200,768,hero,Zapytaj o polecenie klienta,27,276,1
+/program-partnerski,200,768,form-submit,Wyślij zapytanie,16,653,1
+/sales-atlas-system,200,768,hero,Umów bezpłatną konsultację,26,292,1
+/sales-atlas-system,200,768,cta-band,Omówmy Twój system sprzedaży,28,325,1
+/szkolenie-i-wdrozenie-asana,200,768,hero,Umów rozmowę o wdrożeniu,24,294,1
+/szkolenie-i-wdrozenie-asana,200,768,pricing,Zobacz audyt Asany,18,202,1
+/szkolenie-i-wdrozenie-asana,200,768,pricing,Umów rozmowę,12,172,1
+/szkolenie-i-wdrozenie-asana,200,768,pricing,Omówmy zakres,13,175,1
+/szkolenie-i-wdrozenie-asana,200,768,cta-band,Umów rozmowę o wdrożeniu,24,294,1
+/szkolenie-i-wdrozenie-asana,200,768,form-submit,Wyślij zapytanie,16,653,1
+/szkolenie-i-wdrozenie-pipedrive,200,768,hero,Umów rozmowę o wdrożeniu,24,294,1
+/szkolenie-i-wdrozenie-pipedrive,200,768,pricing,Zobacz audyt CRM,16,194,1
+/szkolenie-i-wdrozenie-pipedrive,200,768,pricing,Umów rozmowę,12,172,1
+/szkolenie-i-wdrozenie-pipedrive,200,768,pricing,Omówmy zakres,13,175,1
+/szkolenie-i-wdrozenie-pipedrive,200,768,cta-band,Umów rozmowę o wdrożeniu,24,294,1
+/szkolenie-i-wdrozenie-pipedrive,200,768,form-submit,Wyślij zapytanie,16,653,1
+/szkolenie-i-wdrozenie-salesforce,200,768,hero,Umów rozmowę o wdrożeniu,24,294,1
+/szkolenie-i-wdrozenie-salesforce,200,768,pricing,Umów rozmowę,12,172,1
+/szkolenie-i-wdrozenie-salesforce,200,768,pricing,Umów rozmowę,12,172,1
+/szkolenie-i-wdrozenie-salesforce,200,768,pricing,Omówmy zakres,13,175,1
+/szkolenie-i-wdrozenie-salesforce,200,768,cta-band,Umów rozmowę o wdrożeniu,24,294,1
+/szkolenie-i-wdrozenie-salesforce,200,768,form-submit,Wyślij zapytanie,16,653,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,768,hero,Umów rozmowę o wdrożeniu AI,27,314,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,768,cta-band,Wybierzmy proces dla AI,23,263,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,768,pricing,Zobacz audyt AI,15,171,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,768,pricing,Umów rozmowę,12,172,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,768,pricing,Omówmy zakres,13,175,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,768,cta-band,Umów bezpłatną konsultację,26,292,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,768,form-submit,Wyślij zapytanie,16,653,1
+/wspolpraca,200,768,hero,Umów wstępną rozmowę,20,266,1
+/wspolpraca,200,768,form-submit,Wyślij zapytanie,16,653,1
+/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut,200,768,cta-band,Umów konsultację,16,213,1
+/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut,200,768,form-submit,Zapisuję się,12,139,1
+/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana,200,768,cta-band,Umów konsultację,16,213,1
+/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana,200,768,form-submit,Zapisuję się,12,139,1
+/blog/agent-ai-co-to-jest,200,768,cta-band,Umów konsultację,16,213,1
+/blog/agent-ai-co-to-jest,200,768,form-submit,Zapisuję się,12,139,1
+/,200,1024,other,Bezpłatna konsultacja,21,248,1
+/,200,1024,hero,Umów bezpłatną konsultację,26,305,1
+/,200,1024,cta-band,Porozmawiajmy o współpracy,26,314,1
+/,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/,200,1024,form-submit,Zapisuję się,12,144,1
+/audyt-ai-sprzedaz,200,1024,other,Bezpłatna konsultacja,21,248,1
+/audyt-ai-sprzedaz,200,1024,hero,Umów rozmowę o audycie,22,288,1
+/audyt-ai-sprzedaz,200,1024,cta-band,Porozmawiajmy o audycie AI,26,305,1
+/audyt-ai-sprzedaz,200,1024,pricing,Umów rozmowę,12,179,1
+/audyt-ai-sprzedaz,200,1024,cta-band,Umów rozmowę o audycie AI,25,309,1
+/audyt-ai-sprzedaz,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/audyt-crm-pipedrive,200,1024,other,Bezpłatna konsultacja,21,248,1
+/audyt-crm-pipedrive,200,1024,hero,Umów rozmowę o audycie Pipedrive,32,368,1
+/audyt-crm-pipedrive,200,1024,pricing,Umów rozmowę,12,179,1
+/audyt-crm-pipedrive,200,1024,pricing,Zobacz wdrożenie Pipedrive,26,250,1
+/audyt-crm-pipedrive,200,1024,pricing,Omówmy zakres,13,182,1
+/audyt-crm-pipedrive,200,1024,cta-band,Omówmy audyt Pipedrive,22,283,1
+/audyt-crm-pipedrive,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/audyt-procesow-asana,200,1024,other,Bezpłatna konsultacja,21,248,1
+/audyt-procesow-asana,200,1024,hero,Umów rozmowę o audycie Asany,28,341,1
+/audyt-procesow-asana,200,1024,pricing,Umów rozmowę,12,179,1
+/audyt-procesow-asana,200,1024,pricing,Zobacz wdrożenie Asany,22,248,1
+/audyt-procesow-asana,200,1024,pricing,Omówmy zakres,13,182,1
+/audyt-procesow-asana,200,1024,cta-band,Umów rozmowę o audycie Asany,28,341,1
+/audyt-procesow-asana,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/audyt-sprzedazy,200,1024,other,Bezpłatna konsultacja,21,248,1
+/audyt-sprzedazy,200,1024,hero,Umów audyt sprzedaży,20,262,1
+/audyt-sprzedazy,200,1024,pricing,Zobacz audyt CRM,16,203,1
+/audyt-sprzedazy,200,1024,pricing,Umów rozmowę,12,179,1
+/audyt-sprzedazy,200,1024,pricing,Porozmawiajmy o wdrożeniu,25,250,1
+/audyt-sprzedazy,200,1024,cta-band,Omówmy audyt sprzedaży,22,288,1
+/audyt-sprzedazy,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/automatyzacja-procesow-biznesowych-nocode,200,1024,other,Bezpłatna konsultacja,21,248,1
+/automatyzacja-procesow-biznesowych-nocode,200,1024,hero,Porozmawiajmy o automatyzacji,29,332,1
+/automatyzacja-procesow-biznesowych-nocode,200,1024,pricing,Zapytaj o pakiet Standard,25,250,1
+/automatyzacja-procesow-biznesowych-nocode,200,1024,pricing,Zapytaj o pakiet PRO,20,218,1
+/automatyzacja-procesow-biznesowych-nocode,200,1024,pricing,Sprawdź Newsletter,18,208,1
+/automatyzacja-procesow-biznesowych-nocode,200,1024,pricing,Program partnerski,18,204,1
+/automatyzacja-procesow-biznesowych-nocode,200,1024,cta-band,Opisz swój proces,17,219,1
+/automatyzacja-procesow-biznesowych-nocode,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/automatyzacje-dla-pipedrive,200,1024,other,Bezpłatna konsultacja,21,248,1
+/automatyzacje-dla-pipedrive,200,1024,hero,Porozmawiajmy o automatyzacjach,31,358,1
+/automatyzacje-dla-pipedrive,200,1024,cta-band,Opisz swój proces,17,219,1
+/automatyzacje-dla-pipedrive,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/blog,200,1024,other,Bezpłatna konsultacja,21,248,1
+/blog,200,1024,other,Następne wpisy,14,202,1
+/blog,200,1024,form-submit,Zapisuję się,12,144,1
+/darmowe-materialy-dla-biznesow-uslugowych,200,1024,other,Bezpłatna konsultacja,21,248,1
+/darmowe-materialy-dla-biznesow-uslugowych,200,1024,form-submit,Zapisuję się,12,144,1
+/kontakt,200,1024,other,Bezpłatna konsultacja,21,248,1
+/kontakt,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/kontakt,200,1024,form-submit,Zapisuję się,12,144,1
+/kurs-ai-w-sprzedazy,200,1024,other,Bezpłatna konsultacja,21,248,1
+/kurs-ai-w-sprzedazy,200,1024,hero,Kup w przedsprzedaży,20,257,1
+/kurs-ai-w-sprzedazy,200,1024,cta-band,"Sprawdź, czy kurs pasuje",24,275,1
+/kurs-ai-w-sprzedazy,200,1024,pricing,Kup w przedsprzedaży,20,231,1
+/kurs-ai-w-sprzedazy,200,1024,pricing,Zobacz program grupowy,22,250,1
+/kurs-ai-w-sprzedazy,200,1024,pricing,Zobacz ofertę wdrożenia AI,26,250,1
+/kurs-ai-w-sprzedazy,200,1024,cta-band,Zadaj pytanie o kurs,20,236,1
+/kurs-ai-w-sprzedazy,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/newsletter,200,1024,other,Bezpłatna konsultacja,21,248,1
+/newsletter,200,1024,form-submit,Zapisuję się,12,144,1
+/o-mnie,200,1024,other,Bezpłatna konsultacja,21,248,1
+/o-mnie,200,1024,feature,Porozmawiajmy o wdrożeniu,25,304,1
+/o-mnie,200,1024,form-submit,Zapisuję się,12,144,1
+/polityka-prywatnosci,200,1024,other,Bezpłatna konsultacja,21,248,1
+/program-ai-dla-zespolu-sprzedazy,200,1024,other,Bezpłatna konsultacja,21,248,1
+/program-ai-dla-zespolu-sprzedazy,200,1024,hero,Zapytaj o udział w programie,28,307,1
+/program-ai-dla-zespolu-sprzedazy,200,1024,cta-band,Zapytaj o udział zespołu,24,266,1
+/program-ai-dla-zespolu-sprzedazy,200,1024,pricing,Zobacz kurs,11,146,1
+/program-ai-dla-zespolu-sprzedazy,200,1024,pricing,Zapytaj o udział w programie,28,250,1
+/program-ai-dla-zespolu-sprzedazy,200,1024,pricing,Zobacz ofertę wdrożenia AI,26,250,1
+/program-ai-dla-zespolu-sprzedazy,200,1024,cta-band,Zapytaj o udział w programie,28,307,1
+/program-ai-dla-zespolu-sprzedazy,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/program-partnerski,200,1024,other,Bezpłatna konsultacja,21,248,1
+/program-partnerski,200,1024,hero,Zapytaj o polecenie klienta,27,289,1
+/program-partnerski,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/regulamin,200,1024,other,Bezpłatna konsultacja,21,248,1
+/regulamin-newslettera,200,1024,other,Bezpłatna konsultacja,21,248,1
+/sales-atlas-system,200,1024,other,Bezpłatna konsultacja,21,248,1
+/sales-atlas-system,200,1024,hero,Umów bezpłatną konsultację,26,305,1
+/sales-atlas-system,200,1024,cta-band,Omówmy Twój system sprzedaży,28,341,1
+/szkolenie-i-wdrozenie-asana,200,1024,other,Bezpłatna konsultacja,21,248,1
+/szkolenie-i-wdrozenie-asana,200,1024,hero,Umów rozmowę o wdrożeniu,24,308,1
+/szkolenie-i-wdrozenie-asana,200,1024,pricing,Zobacz audyt Asany,18,210,1
+/szkolenie-i-wdrozenie-asana,200,1024,pricing,Umów rozmowę,12,179,1
+/szkolenie-i-wdrozenie-asana,200,1024,pricing,Omówmy zakres,13,182,1
+/szkolenie-i-wdrozenie-asana,200,1024,cta-band,Umów rozmowę o wdrożeniu,24,308,1
+/szkolenie-i-wdrozenie-asana,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/szkolenie-i-wdrozenie-pipedrive,200,1024,other,Bezpłatna konsultacja,21,248,1
+/szkolenie-i-wdrozenie-pipedrive,200,1024,hero,Umów rozmowę o wdrożeniu,24,308,1
+/szkolenie-i-wdrozenie-pipedrive,200,1024,pricing,Zobacz audyt CRM,16,203,1
+/szkolenie-i-wdrozenie-pipedrive,200,1024,pricing,Umów rozmowę,12,179,1
+/szkolenie-i-wdrozenie-pipedrive,200,1024,pricing,Omówmy zakres,13,182,1
+/szkolenie-i-wdrozenie-pipedrive,200,1024,cta-band,Umów rozmowę o wdrożeniu,24,308,1
+/szkolenie-i-wdrozenie-pipedrive,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/szkolenie-i-wdrozenie-salesforce,200,1024,other,Bezpłatna konsultacja,21,248,1
+/szkolenie-i-wdrozenie-salesforce,200,1024,hero,Umów rozmowę o wdrożeniu,24,308,1
+/szkolenie-i-wdrozenie-salesforce,200,1024,pricing,Umów rozmowę,12,179,1
+/szkolenie-i-wdrozenie-salesforce,200,1024,pricing,Umów rozmowę,12,179,1
+/szkolenie-i-wdrozenie-salesforce,200,1024,pricing,Omówmy zakres,13,182,1
+/szkolenie-i-wdrozenie-salesforce,200,1024,cta-band,Umów rozmowę o wdrożeniu,24,308,1
+/szkolenie-i-wdrozenie-salesforce,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1024,other,Bezpłatna konsultacja,21,248,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1024,hero,Umów rozmowę o wdrożeniu AI,27,329,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1024,cta-band,Wybierzmy proces dla AI,23,275,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1024,pricing,Zobacz audyt AI,15,178,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1024,pricing,Umów rozmowę,12,179,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1024,pricing,Omówmy zakres,13,182,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1024,cta-band,Umów bezpłatną konsultację,26,305,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1024,form-submit,Wyślij zapytanie,16,489,1
+/wspolpraca,200,1024,other,Bezpłatna konsultacja,21,248,1
+/wspolpraca,200,1024,hero,Umów wstępną rozmowę,20,278,1
+/wspolpraca,200,1024,form-submit,Wyślij zapytanie,16,886,1
+/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut,200,1024,other,Bezpłatna konsultacja,21,248,1
+/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut,200,1024,cta-band,Umów konsultację,16,222,1
+/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut,200,1024,form-submit,Zapisuję się,12,144,1
+/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana,200,1024,other,Bezpłatna konsultacja,21,248,1
+/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana,200,1024,cta-band,Umów konsultację,16,222,1
+/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana,200,1024,form-submit,Zapisuję się,12,144,1
+/blog/agent-ai-co-to-jest,200,1024,other,Bezpłatna konsultacja,21,248,1
+/blog/agent-ai-co-to-jest,200,1024,cta-band,Umów konsultację,16,222,1
+/blog/agent-ai-co-to-jest,200,1024,form-submit,Zapisuję się,12,144,1
+/,200,1440,other,Bezpłatna konsultacja,21,266,1
+/,200,1440,hero,Umów bezpłatną konsultację,26,328,1
+/,200,1440,cta-band,Porozmawiajmy o współpracy,26,337,1
+/,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/,200,1440,form-submit,Zapisuję się,12,152,1
+/audyt-ai-sprzedaz,200,1440,other,Bezpłatna konsultacja,21,266,1
+/audyt-ai-sprzedaz,200,1440,hero,Umów rozmowę o audycie,22,308,1
+/audyt-ai-sprzedaz,200,1440,cta-band,Porozmawiajmy o audycie AI,26,328,1
+/audyt-ai-sprzedaz,200,1440,pricing,Umów rozmowę,12,191,1
+/audyt-ai-sprzedaz,200,1440,cta-band,Umów rozmowę o audycie AI,25,332,1
+/audyt-ai-sprzedaz,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/audyt-crm-pipedrive,200,1440,other,Bezpłatna konsultacja,21,266,1
+/audyt-crm-pipedrive,200,1440,hero,Umów rozmowę o audycie Pipedrive,32,396,1
+/audyt-crm-pipedrive,200,1440,pricing,Umów rozmowę,12,191,1
+/audyt-crm-pipedrive,200,1440,pricing,Zobacz wdrożenie Pipedrive,26,295,1
+/audyt-crm-pipedrive,200,1440,pricing,Omówmy zakres,13,194,1
+/audyt-crm-pipedrive,200,1440,cta-band,Omówmy audyt Pipedrive,22,303,1
+/audyt-crm-pipedrive,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/audyt-procesow-asana,200,1440,other,Bezpłatna konsultacja,21,266,1
+/audyt-procesow-asana,200,1440,hero,Umów rozmowę o audycie Asany,28,367,1
+/audyt-procesow-asana,200,1440,pricing,Umów rozmowę,12,191,1
+/audyt-procesow-asana,200,1440,pricing,Zobacz wdrożenie Asany,22,265,1
+/audyt-procesow-asana,200,1440,pricing,Omówmy zakres,13,194,1
+/audyt-procesow-asana,200,1440,cta-band,Umów rozmowę o audycie Asany,28,367,1
+/audyt-procesow-asana,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/audyt-sprzedazy,200,1440,other,Bezpłatna konsultacja,21,266,1
+/audyt-sprzedazy,200,1440,hero,Umów audyt sprzedaży,20,281,1
+/audyt-sprzedazy,200,1440,pricing,Zobacz audyt CRM,16,216,1
+/audyt-sprzedazy,200,1440,pricing,Umów rozmowę,12,191,1
+/audyt-sprzedazy,200,1440,pricing,Porozmawiajmy o wdrożeniu,25,298,1
+/audyt-sprzedazy,200,1440,cta-band,Omówmy audyt sprzedaży,22,309,1
+/audyt-sprzedazy,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/automatyzacja-procesow-biznesowych-nocode,200,1440,other,Bezpłatna konsultacja,21,266,1
+/automatyzacja-procesow-biznesowych-nocode,200,1440,hero,Porozmawiajmy o automatyzacji,29,357,1
+/automatyzacja-procesow-biznesowych-nocode,200,1440,pricing,Zapytaj o pakiet Standard,25,272,1
+/automatyzacja-procesow-biznesowych-nocode,200,1440,pricing,Zapytaj o pakiet PRO,20,233,1
+/automatyzacja-procesow-biznesowych-nocode,200,1440,pricing,Sprawdź Newsletter,18,222,1
+/automatyzacja-procesow-biznesowych-nocode,200,1440,pricing,Program partnerski,18,218,1
+/automatyzacja-procesow-biznesowych-nocode,200,1440,cta-band,Opisz swój proces,17,234,1
+/automatyzacja-procesow-biznesowych-nocode,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/automatyzacje-dla-pipedrive,200,1440,other,Bezpłatna konsultacja,21,266,1
+/automatyzacje-dla-pipedrive,200,1440,hero,Porozmawiajmy o automatyzacjach,31,385,1
+/automatyzacje-dla-pipedrive,200,1440,cta-band,Opisz swój proces,17,234,1
+/automatyzacje-dla-pipedrive,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/blog,200,1440,other,Bezpłatna konsultacja,21,266,1
+/blog,200,1440,other,Następne wpisy,14,215,1
+/blog,200,1440,form-submit,Zapisuję się,12,152,1
+/darmowe-materialy-dla-biznesow-uslugowych,200,1440,other,Bezpłatna konsultacja,21,266,1
+/darmowe-materialy-dla-biznesow-uslugowych,200,1440,form-submit,Zapisuję się,12,152,1
+/kontakt,200,1440,other,Bezpłatna konsultacja,21,266,1
+/kontakt,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/kontakt,200,1440,form-submit,Zapisuję się,12,152,1
+/kurs-ai-w-sprzedazy,200,1440,other,Bezpłatna konsultacja,21,266,1
+/kurs-ai-w-sprzedazy,200,1440,hero,Kup w przedsprzedaży,20,275,1
+/kurs-ai-w-sprzedazy,200,1440,cta-band,"Sprawdź, czy kurs pasuje",24,295,1
+/kurs-ai-w-sprzedazy,200,1440,pricing,Kup w przedsprzedaży,20,247,1
+/kurs-ai-w-sprzedazy,200,1440,pricing,Zobacz program grupowy,22,276,1
+/kurs-ai-w-sprzedazy,200,1440,pricing,Zobacz ofertę wdrożenia AI,26,288,1
+/kurs-ai-w-sprzedazy,200,1440,cta-band,Zadaj pytanie o kurs,20,253,1
+/kurs-ai-w-sprzedazy,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/newsletter,200,1440,other,Bezpłatna konsultacja,21,266,1
+/newsletter,200,1440,form-submit,Zapisuję się,12,152,1
+/o-mnie,200,1440,other,Bezpłatna konsultacja,21,266,1
+/o-mnie,200,1440,feature,Porozmawiajmy o wdrożeniu,25,326,1
+/o-mnie,200,1440,form-submit,Zapisuję się,12,152,1
+/polityka-prywatnosci,200,1440,other,Bezpłatna konsultacja,21,266,1
+/program-ai-dla-zespolu-sprzedazy,200,1440,other,Bezpłatna konsultacja,21,266,1
+/program-ai-dla-zespolu-sprzedazy,200,1440,hero,Zapytaj o udział w programie,28,329,1
+/program-ai-dla-zespolu-sprzedazy,200,1440,cta-band,Zapytaj o udział zespołu,24,285,1
+/program-ai-dla-zespolu-sprzedazy,200,1440,pricing,Zobacz kurs,11,154,1
+/program-ai-dla-zespolu-sprzedazy,200,1440,pricing,Zapytaj o udział w programie,28,301,1
+/program-ai-dla-zespolu-sprzedazy,200,1440,pricing,Zobacz ofertę wdrożenia AI,26,288,1
+/program-ai-dla-zespolu-sprzedazy,200,1440,cta-band,Zapytaj o udział w programie,28,329,1
+/program-ai-dla-zespolu-sprzedazy,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/program-partnerski,200,1440,other,Bezpłatna konsultacja,21,266,1
+/program-partnerski,200,1440,hero,Zapytaj o polecenie klienta,27,310,1
+/program-partnerski,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/regulamin,200,1440,other,Bezpłatna konsultacja,21,266,1
+/regulamin-newslettera,200,1440,other,Bezpłatna konsultacja,21,266,1
+/sales-atlas-system,200,1440,other,Bezpłatna konsultacja,21,266,1
+/sales-atlas-system,200,1440,hero,Umów bezpłatną konsultację,26,328,1
+/sales-atlas-system,200,1440,cta-band,Omówmy Twój system sprzedaży,28,366,1
+/szkolenie-i-wdrozenie-asana,200,1440,other,Bezpłatna konsultacja,21,266,1
+/szkolenie-i-wdrozenie-asana,200,1440,hero,Umów rozmowę o wdrożeniu,24,330,1
+/szkolenie-i-wdrozenie-asana,200,1440,pricing,Zobacz audyt Asany,18,224,1
+/szkolenie-i-wdrozenie-asana,200,1440,pricing,Umów rozmowę,12,191,1
+/szkolenie-i-wdrozenie-asana,200,1440,pricing,Omówmy zakres,13,194,1
+/szkolenie-i-wdrozenie-asana,200,1440,cta-band,Umów rozmowę o wdrożeniu,24,330,1
+/szkolenie-i-wdrozenie-asana,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/szkolenie-i-wdrozenie-pipedrive,200,1440,other,Bezpłatna konsultacja,21,266,1
+/szkolenie-i-wdrozenie-pipedrive,200,1440,hero,Umów rozmowę o wdrożeniu,24,330,1
+/szkolenie-i-wdrozenie-pipedrive,200,1440,pricing,Zobacz audyt CRM,16,216,1
+/szkolenie-i-wdrozenie-pipedrive,200,1440,pricing,Umów rozmowę,12,191,1
+/szkolenie-i-wdrozenie-pipedrive,200,1440,pricing,Omówmy zakres,13,194,1
+/szkolenie-i-wdrozenie-pipedrive,200,1440,cta-band,Umów rozmowę o wdrożeniu,24,330,1
+/szkolenie-i-wdrozenie-pipedrive,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/szkolenie-i-wdrozenie-salesforce,200,1440,other,Bezpłatna konsultacja,21,266,1
+/szkolenie-i-wdrozenie-salesforce,200,1440,hero,Umów rozmowę o wdrożeniu,24,330,1
+/szkolenie-i-wdrozenie-salesforce,200,1440,pricing,Umów rozmowę,12,191,1
+/szkolenie-i-wdrozenie-salesforce,200,1440,pricing,Umów rozmowę,12,191,1
+/szkolenie-i-wdrozenie-salesforce,200,1440,pricing,Omówmy zakres,13,194,1
+/szkolenie-i-wdrozenie-salesforce,200,1440,cta-band,Umów rozmowę o wdrożeniu,24,330,1
+/szkolenie-i-wdrozenie-salesforce,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1440,other,Bezpłatna konsultacja,21,266,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1440,hero,Umów rozmowę o wdrożeniu AI,27,354,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1440,cta-band,Wybierzmy proces dla AI,23,295,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1440,pricing,Zobacz audyt AI,15,190,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1440,pricing,Umów rozmowę,12,191,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1440,pricing,Omówmy zakres,13,194,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1440,cta-band,Umów bezpłatną konsultację,26,328,1
+/wdrozenie-ai-w-sprzedazy-b2b,200,1440,form-submit,Wyślij zapytanie,16,597,1
+/wspolpraca,200,1440,other,Bezpłatna konsultacja,21,266,1
+/wspolpraca,200,1440,hero,Umów wstępną rozmowę,20,298,1
+/wspolpraca,200,1440,form-submit,Wyślij zapytanie,16,1072,1
+/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut,200,1440,other,Bezpłatna konsultacja,21,266,1
+/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut,200,1440,cta-band,Umów konsultację,16,237,1
+/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut,200,1440,form-submit,Zapisuję się,12,152,1
+/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana,200,1440,other,Bezpłatna konsultacja,21,266,1
+/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana,200,1440,cta-band,Umów konsultację,16,237,1
+/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana,200,1440,form-submit,Zapisuję się,12,152,1
+/blog/agent-ai-co-to-jest,200,1440,other,Bezpłatna konsultacja,21,266,1
+/blog/agent-ai-co-to-jest,200,1440,cta-band,Umów konsultację,16,237,1
+/blog/agent-ai-co-to-jest,200,1440,form-submit,Zapisuję się,12,152,1

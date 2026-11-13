@@ -1,0 +1,147 @@
+{
+  "origin": "http://127.0.0.1:8795",
+  "measuredAt": "2026-11-13T21:57:37.056Z",
+  "pages": 27,
+  "buttonsPerViewport": {
+    "390": 96,
+    "768": 96,
+    "1024": 123,
+    "1440": 123
+  },
+  "wrappedInstances": 0,
+  "wrappedLabels": 0,
+  "budget": {
+    "hero": {
+      "390": {
+        "longestOneLine": 32,
+        "shortestWrapped": null,
+        "minButtonWidth": 358
+      },
+      "768": {
+        "longestOneLine": 32,
+        "shortestWrapped": null,
+        "minButtonWidth": 246
+      },
+      "1024": {
+        "longestOneLine": 32,
+        "shortestWrapped": null,
+        "minButtonWidth": 257
+      },
+      "1440": {
+        "longestOneLine": 32,
+        "shortestWrapped": null,
+        "minButtonWidth": 275
+      }
+    },
+    "cta-band": {
+      "390": {
+        "longestOneLine": 28,
+        "shortestWrapped": null,
+        "minButtonWidth": 334
+      },
+      "768": {
+        "longestOneLine": 28,
+        "shortestWrapped": null,
+        "minButtonWidth": 210
+      },
+      "1024": {
+        "longestOneLine": 28,
+        "shortestWrapped": null,
+        "minButtonWidth": 219
+      },
+      "1440": {
+        "longestOneLine": 28,
+        "shortestWrapped": null,
+        "minButtonWidth": 234
+      }
+    },
+    "form-submit": {
+      "390": {
+        "longestOneLine": 16,
+        "shortestWrapped": null,
+        "minButtonWidth": 310
+      },
+      "768": {
+        "longestOneLine": 16,
+        "shortestWrapped": null,
+        "minButtonWidth": 139
+      },
+      "1024": {
+        "longestOneLine": 16,
+        "shortestWrapped": null,
+        "minButtonWidth": 144
+      },
+      "1440": {
+        "longestOneLine": 16,
+        "shortestWrapped": null,
+        "minButtonWidth": 152
+      }
+    },
+    "pricing": {
+      "390": {
+        "longestOneLine": 28,
+        "shortestWrapped": null,
+        "minButtonWidth": 109
+      },
+      "768": {
+        "longestOneLine": 28,
+        "shortestWrapped": null,
+        "minButtonWidth": 140
+      },
+      "1024": {
+        "longestOneLine": 28,
+        "shortestWrapped": null,
+        "minButtonWidth": 146
+      },
+      "1440": {
+        "longestOneLine": 28,
+        "shortestWrapped": null,
+        "minButtonWidth": 154
+      }
+    },
+    "other": {
+      "390": {
+        "longestOneLine": 14,
+        "shortestWrapped": null,
+        "minButtonWidth": 358
+      },
+      "768": {
+        "longestOneLine": 14,
+        "shortestWrapped": null,
+        "minButtonWidth": 193
+      },
+      "1024": {
+        "longestOneLine": 21,
+        "shortestWrapped": null,
+        "minButtonWidth": 202
+      },
+      "1440": {
+        "longestOneLine": 21,
+        "shortestWrapped": null,
+        "minButtonWidth": 215
+      }
+    },
+    "feature": {
+      "390": {
+        "longestOneLine": 25,
+        "shortestWrapped": null,
+        "minButtonWidth": 358
+      },
+      "768": {
+        "longestOneLine": 25,
+        "shortestWrapped": null,
+        "minButtonWidth": 290
+      },
+      "1024": {
+        "longestOneLine": 25,
+        "shortestWrapped": null,
+        "minButtonWidth": 304
+      },
+      "1440": {
+        "longestOneLine": 25,
+        "shortestWrapped": null,
+        "minButtonWidth": 326
+      }
+    }
+  }
+}

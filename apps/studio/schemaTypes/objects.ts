@@ -1,5 +1,6 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 import registry from '../../../migration/contracts/blocks.json'
+import {isSlugUnique} from './slugUnique'
 
 export const languageField = defineField({
   name: 'language', type: 'string', hidden: true, readOnly: true,
@@ -18,15 +19,7 @@ export const taglineField = defineField({name: 'tagline', title: 'Nadtytuł', ty
 export const slugField = defineField({
   name: 'slug', type: 'slug', title: 'Ścieżka bez prefiksu języka',
   description: 'Pełna ścieżka, np. /, /o-mnie lub /blog/tytul. EN dostaje prefiks /en w witrynie.',
-  options: {source: 'title', isUnique: async (slug, context) => {
-    const document = context.document
-    if (!document) return false
-    const id = document._id.replace(/^drafts\./, '')
-    return context.getClient({apiVersion: '2026-10-21'}).fetch<boolean>(
-      '!defined(*[_type in ["page", "post"] && language == $language && slug.current == $slug && !(_id in [$id, $draftId])][0]._id)',
-      {slug, language: document.language, id, draftId: `drafts.${id}`},
-    )
-  }, slugify: (input) => `/${input.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ł/g, 'l').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`},
+  options: {source: 'title', isUnique: isSlugUnique, slugify: (input) => `/${input.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ł/g, 'l').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`},
   validation: (rule) => rule.required().custom((value) => {
     if (!value?.current) return true
     return /^(\/|\/[a-z0-9]+(?:[a-z0-9/-]*[a-z0-9])?)$/.test(value.current) && !value.current.includes('//') && !/^\/en(?:\/|$)/.test(value.current)

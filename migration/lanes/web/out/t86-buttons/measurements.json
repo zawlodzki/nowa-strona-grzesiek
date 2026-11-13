@@ -1,0 +1,4482 @@
+{
+  "capturedAt": "2026-11-13T21:10:23.286Z",
+  "origins": {
+    "new": "http://127.0.0.1:8790",
+    "live": "https://www.zawlodzki.pl"
+  },
+  "captures": [
+    {
+      "origin": "live",
+      "width": 320,
+      "path": "/",
+      "kind": "hero",
+      "status": 200,
+      "rest": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 288,
+        "height": 44,
+        "x": 16,
+        "labelX": 43.484375,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 288,
+        "clientWidth": 288,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 288,
+        "height": 44,
+        "x": 16,
+        "labelX": 43.484375,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 288,
+        "clientWidth": 288,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 320,
+      "path": "/",
+      "kind": "text",
+      "status": 200,
+      "rest": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 278.796875,
+        "height": 44,
+        "x": 16,
+        "labelX": 16,
+        "padding": [
+          "8px",
+          "0px"
+        ],
+        "radius": "6px",
+        "weight": "500",
+        "scrollWidth": 279,
+        "clientWidth": 279,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 278.796875,
+        "height": 44,
+        "x": 16,
+        "labelX": 16,
+        "padding": [
+          "8px",
+          "0px"
+        ],
+        "radius": "6px",
+        "weight": "500",
+        "scrollWidth": 279,
+        "clientWidth": 279,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 320,
+      "path": "/",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 240,
+        "height": 64,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 240,
+        "clientWidth": 240,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 240,
+        "height": 64,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 240,
+        "clientWidth": 240,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 320,
+      "path": "/sales-atlas-system",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 240,
+        "height": 88,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 240,
+        "clientWidth": 240,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 240,
+        "height": 88,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 240,
+        "clientWidth": 240,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 320,
+      "path": "/kurs-ai-w-sprzedazy",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 240,
+        "height": 88,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 240,
+        "clientWidth": 240,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 240,
+        "height": 88,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 240,
+        "clientWidth": 240,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 320,
+      "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 240,
+        "height": 88,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 240,
+        "clientWidth": 240,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 240,
+        "height": 88,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 240,
+        "clientWidth": 240,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 390,
+      "path": "/",
+      "kind": "hero",
+      "status": 200,
+      "rest": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 357.984375,
+        "height": 44,
+        "x": 16,
+        "labelX": 78.46875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 358,
+        "clientWidth": 358,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 357.984375,
+        "height": 44,
+        "x": 16,
+        "labelX": 78.46875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 358,
+        "clientWidth": 358,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 390,
+      "path": "/",
+      "kind": "text",
+      "status": 200,
+      "rest": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 278.796875,
+        "height": 44,
+        "x": 16,
+        "labelX": 16,
+        "padding": [
+          "8px",
+          "0px"
+        ],
+        "radius": "6px",
+        "weight": "500",
+        "scrollWidth": 279,
+        "clientWidth": 279,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 278.796875,
+        "height": 44,
+        "x": 16,
+        "labelX": 16,
+        "padding": [
+          "8px",
+          "0px"
+        ],
+        "radius": "6px",
+        "weight": "500",
+        "scrollWidth": 279,
+        "clientWidth": 279,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 390,
+      "path": "/",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 309.984375,
+        "height": 44,
+        "x": 40,
+        "labelX": 73.46875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 310,
+        "clientWidth": 310,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 309.984375,
+        "height": 44,
+        "x": 40,
+        "labelX": 73.46875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 310,
+        "clientWidth": 310,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 390,
+      "path": "/sales-atlas-system",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 309.984375,
+        "height": 64,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 310,
+        "clientWidth": 310,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 309.984375,
+        "height": 64,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 310,
+        "clientWidth": 310,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 390,
+      "path": "/kurs-ai-w-sprzedazy",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 309.984375,
+        "height": 64,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 310,
+        "clientWidth": 310,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 309.984375,
+        "height": 64,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 310,
+        "clientWidth": 310,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 390,
+      "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 309.984375,
+        "height": 64,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 310,
+        "clientWidth": 310,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 309.984375,
+        "height": 64,
+        "x": 40,
+        "labelX": 64,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 310,
+        "clientWidth": 310,
+        "labelFont": "16px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 1440,
+      "path": "/",
+      "kind": "hero",
+      "status": 200,
+      "rest": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 337.28125,
+        "height": 46,
+        "x": 120,
+        "labelX": 144,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 337,
+        "clientWidth": 337,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 337.28125,
+        "height": 46,
+        "x": 120,
+        "labelX": 144,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 337,
+        "clientWidth": 337,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 1440,
+      "path": "/",
+      "kind": "text",
+      "status": 200,
+      "rest": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 340.75,
+        "height": 46,
+        "x": 120,
+        "labelX": 120,
+        "padding": [
+          "8px",
+          "0px"
+        ],
+        "radius": "6px",
+        "weight": "500",
+        "scrollWidth": 341,
+        "clientWidth": 341,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 340.75,
+        "height": 46,
+        "x": 120,
+        "labelX": 120,
+        "padding": [
+          "8px",
+          "0px"
+        ],
+        "radius": "6px",
+        "weight": "500",
+        "scrollWidth": 341,
+        "clientWidth": 341,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 1440,
+      "path": "/",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 465.78125,
+        "height": 46,
+        "x": 794.21875,
+        "labelX": 879.46875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 466,
+        "clientWidth": 466,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 465.78125,
+        "height": 46,
+        "x": 794.21875,
+        "labelX": 879.46875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 466,
+        "clientWidth": 466,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 1440,
+      "path": "/sales-atlas-system",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 465.78125,
+        "height": 76,
+        "x": 794.21875,
+        "labelX": 818.21875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 466,
+        "clientWidth": 466,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 465.78125,
+        "height": 76,
+        "x": 794.21875,
+        "labelX": 818.21875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 466,
+        "clientWidth": 466,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 1440,
+      "path": "/kurs-ai-w-sprzedazy",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 465.78125,
+        "height": 76,
+        "x": 794.21875,
+        "labelX": 818.21875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 466,
+        "clientWidth": 466,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 465.78125,
+        "height": 76,
+        "x": 794.21875,
+        "labelX": 818.21875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 466,
+        "clientWidth": 466,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "live",
+      "width": 1440,
+      "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 465.78125,
+        "height": 76,
+        "x": 794.21875,
+        "labelX": 818.21875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 466,
+        "clientWidth": 466,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 465.78125,
+        "height": 76,
+        "x": 794.21875,
+        "labelX": 818.21875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 466,
+        "clientWidth": 466,
+        "labelFont": "20px",
+        "whiteSpace": "normal",
+        "head": null,
+        "shaft": null,
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 320,
+      "path": "/",
+      "kind": "hero",
+      "status": 200,
+      "rest": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 288,
+        "height": 52,
+        "x": 16,
+        "labelX": 45.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 288,
+        "clientWidth": 288,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 288,
+        "height": 52,
+        "x": 16,
+        "labelX": 45.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 288,
+        "clientWidth": 288,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 320,
+      "path": "/",
+      "kind": "text",
+      "status": 200,
+      "rest": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 288,
+        "height": 52,
+        "x": 16,
+        "labelX": 28,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 288,
+        "clientWidth": 288,
+        "labelFont": "15.141px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 288,
+        "height": 52,
+        "x": 16,
+        "labelX": 28,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 288,
+        "clientWidth": 288,
+        "labelFont": "15.141px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 320,
+      "path": "/",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 320,
+      "path": "/sales-atlas-system",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "10.0741px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "10.0741px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 320,
+      "path": "/kurs-ai-w-sprzedazy",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "9.90582px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "9.90582px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 320,
+      "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "10.2049px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "10.2049px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 390,
+      "path": "/",
+      "kind": "hero",
+      "status": 200,
+      "rest": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 357.984375,
+        "height": 52,
+        "x": 16,
+        "labelX": 80.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 358,
+        "clientWidth": 358,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 357.984375,
+        "height": 52,
+        "x": 16,
+        "labelX": 80.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 358,
+        "clientWidth": 358,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 390,
+      "path": "/",
+      "kind": "text",
+      "status": 200,
+      "rest": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 299.59375,
+        "height": 52,
+        "x": 16,
+        "labelX": 28,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 300,
+        "clientWidth": 300,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 299.59375,
+        "height": 52,
+        "x": 16,
+        "labelX": 28,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 300,
+        "clientWidth": 300,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 390,
+      "path": "/",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 75.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 75.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 390,
+      "path": "/sales-atlas-system",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "13.0318px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "13.0318px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 390,
+      "path": "/kurs-ai-w-sprzedazy",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "13.7603px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "13.7603px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 390,
+      "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "14.156px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "14.156px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 1440,
+      "path": "/",
+      "kind": "hero",
+      "status": 200,
+      "rest": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 333.28125,
+        "height": 52,
+        "x": 120,
+        "labelX": 144,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 333,
+        "clientWidth": 333,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 333.28125,
+        "height": 52,
+        "x": 120,
+        "labelX": 144,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 333,
+        "clientWidth": 333,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 1440,
+      "path": "/",
+      "kind": "text",
+      "status": 200,
+      "rest": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 384.75,
+        "height": 52,
+        "x": 120,
+        "labelX": 144,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 385,
+        "clientWidth": 385,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 384.75,
+        "height": 52,
+        "x": 120,
+        "labelX": 144,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 385,
+        "clientWidth": 385,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 1440,
+      "path": "/",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 339.28125,
+        "height": 52,
+        "x": 920.71875,
+        "labelX": 944.71875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 339,
+        "clientWidth": 339,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 339.28125,
+        "height": 52,
+        "x": 920.71875,
+        "labelX": 944.71875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 339,
+        "clientWidth": 339,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 1440,
+      "path": "/sales-atlas-system",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 494.546875,
+        "height": 52,
+        "x": 765.453125,
+        "labelX": 789.453125,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 495,
+        "clientWidth": 495,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 494.546875,
+        "height": 52,
+        "x": 765.453125,
+        "labelX": 789.453125,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 495,
+        "clientWidth": 495,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 1440,
+      "path": "/kurs-ai-w-sprzedazy",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 471.546875,
+        "height": 52,
+        "x": 788.453125,
+        "labelX": 812.453125,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 472,
+        "clientWidth": 472,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 471.546875,
+        "height": 52,
+        "x": 788.453125,
+        "labelX": 812.453125,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 472,
+        "clientWidth": 472,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "origin": "new",
+      "width": 1440,
+      "path": "/wdrozenie-ai-w-sprzedazy-b2b",
+      "kind": "band",
+      "status": 200,
+      "rest": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 463.984375,
+        "height": 52,
+        "x": 796.015625,
+        "labelX": 820.015625,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 464,
+        "clientWidth": 464,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      },
+      "hover": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 463.984375,
+        "height": 52,
+        "x": 796.015625,
+        "labelX": 820.015625,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 464,
+        "clientWidth": 464,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "new-home-hero-w320: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Umów bezpłatną konsultację",
+          "width": 288,
+          "height": 52,
+          "x": 16,
+          "labelX": 45.078125,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 288,
+          "clientWidth": 288,
+          "labelFont": "16px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Umów bezpłatną konsultację",
+          "width": 288,
+          "height": 52,
+          "x": 16,
+          "labelX": 45.078125,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 288,
+          "clientWidth": 288,
+          "labelFont": "16px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-home-hero-w320: label fits",
+      "pass": true,
+      "details": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 288,
+        "height": 52,
+        "x": 16,
+        "labelX": 45.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 288,
+        "clientWidth": 288,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-hero-w320: arrow",
+      "pass": true,
+      "details": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 288,
+        "height": 52,
+        "x": 16,
+        "labelX": 45.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 288,
+        "clientWidth": 288,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-text-w320: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Zobacz ofertę wdrożenia Pipedrive",
+          "width": 288,
+          "height": 52,
+          "x": 16,
+          "labelX": 28,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 288,
+          "clientWidth": 288,
+          "labelFont": "15.141px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Zobacz ofertę wdrożenia Pipedrive",
+          "width": 288,
+          "height": 52,
+          "x": 16,
+          "labelX": 28,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 288,
+          "clientWidth": 288,
+          "labelFont": "15.141px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-home-text-w320: label fits",
+      "pass": true,
+      "details": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 288,
+        "height": 52,
+        "x": 16,
+        "labelX": 28,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 288,
+        "clientWidth": 288,
+        "labelFont": "15.141px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-text-w320: arrow",
+      "pass": true,
+      "details": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 288,
+        "height": 52,
+        "x": 16,
+        "labelX": 28,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 288,
+        "clientWidth": 288,
+        "labelFont": "15.141px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-band-w320: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Porozmawiajmy o współpracy",
+          "width": 264,
+          "height": 52,
+          "x": 28,
+          "labelX": 40.078125,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 264,
+          "clientWidth": 264,
+          "labelFont": "16px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Porozmawiajmy o współpracy",
+          "width": 264,
+          "height": 52,
+          "x": 28,
+          "labelX": 40.078125,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 264,
+          "clientWidth": 264,
+          "labelFont": "16px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-home-band-w320: label fits",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-band-w320: arrow",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "home-w320: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 320,
+        "client": 320
+      }
+    },
+    {
+      "name": "home-w320: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Umów bezpłatną konsultację",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz ofertę wdrożenia Pipedrive",
+          "font": "15.141px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Dowiedz się więcej o AI dla sprzedaży",
+          "font": "14.0174px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Dowiedz się więcej o automatyzacji",
+          "font": "15.0325px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz ofertę wdrożenia Asany",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Porozmawiajmy o współpracy",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Dowiedz się o mnie więcej",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "new-sales-atlas-band-w320: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Umów konsultację o swoim systemie sprzedaży",
+          "width": 264,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 264,
+          "clientWidth": 264,
+          "labelFont": "10.0741px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Umów konsultację o swoim systemie sprzedaży",
+          "width": 264,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 264,
+          "clientWidth": 264,
+          "labelFont": "10.0741px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-sales-atlas-band-w320: label fits",
+      "pass": true,
+      "details": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "10.0741px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-sales-atlas-band-w320: arrow",
+      "pass": true,
+      "details": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "10.0741px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "sales-atlas-w320: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 320,
+        "client": 320
+      }
+    },
+    {
+      "name": "sales-atlas-w320: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Umów bezpłatną konsultację",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Umów konsultację o swoim systemie sprzedaży",
+          "font": "10.0741px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "new-course-band-w320: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+          "width": 264,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 264,
+          "clientWidth": 264,
+          "labelFont": "9.90582px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+          "width": 264,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 264,
+          "clientWidth": 264,
+          "labelFont": "9.90582px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-course-band-w320: label fits",
+      "pass": true,
+      "details": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "9.90582px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-course-band-w320: arrow",
+      "pass": true,
+      "details": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "9.90582px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "course-w320: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 320,
+        "client": 320
+      }
+    },
+    {
+      "name": "course-w320: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Kup w przedsprzedaży",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+          "font": "9.90582px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zadaj pytanie o kurs",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz Sales Atlas System",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "new-ai-band-w320: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Porozmawiajmy o pierwszym procesie dla AI",
+          "width": 264,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 264,
+          "clientWidth": 264,
+          "labelFont": "10.2049px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Porozmawiajmy o pierwszym procesie dla AI",
+          "width": 264,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 264,
+          "clientWidth": 264,
+          "labelFont": "10.2049px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-ai-band-w320: label fits",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "10.2049px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-ai-band-w320: arrow",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 264,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 264,
+        "clientWidth": 264,
+        "labelFont": "10.2049px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "ai-w320: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 320,
+        "client": 320
+      }
+    },
+    {
+      "name": "ai-w320: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Umów rozmowę o wdrożeniu AI",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Porozmawiajmy o pierwszym procesie dla AI",
+          "font": "10.2049px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Umów bezpłatną konsultację",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz Sales Atlas System",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "new-home-hero-w390: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Umów bezpłatną konsultację",
+          "width": 357.984375,
+          "height": 52,
+          "x": 16,
+          "labelX": 80.078125,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 358,
+          "clientWidth": 358,
+          "labelFont": "16px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Umów bezpłatną konsultację",
+          "width": 357.984375,
+          "height": 52,
+          "x": 16,
+          "labelX": 80.078125,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 358,
+          "clientWidth": 358,
+          "labelFont": "16px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-home-hero-w390: label fits",
+      "pass": true,
+      "details": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 357.984375,
+        "height": 52,
+        "x": 16,
+        "labelX": 80.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 358,
+        "clientWidth": 358,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-hero-w390: arrow",
+      "pass": true,
+      "details": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 357.984375,
+        "height": 52,
+        "x": 16,
+        "labelX": 80.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 358,
+        "clientWidth": 358,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-text-w390: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Zobacz ofertę wdrożenia Pipedrive",
+          "width": 299.59375,
+          "height": 52,
+          "x": 16,
+          "labelX": 28,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 300,
+          "clientWidth": 300,
+          "labelFont": "16px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Zobacz ofertę wdrożenia Pipedrive",
+          "width": 299.59375,
+          "height": 52,
+          "x": 16,
+          "labelX": 28,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 300,
+          "clientWidth": 300,
+          "labelFont": "16px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-home-text-w390: label fits",
+      "pass": true,
+      "details": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 299.59375,
+        "height": 52,
+        "x": 16,
+        "labelX": 28,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 300,
+        "clientWidth": 300,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-text-w390: arrow",
+      "pass": true,
+      "details": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 299.59375,
+        "height": 52,
+        "x": 16,
+        "labelX": 28,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 300,
+        "clientWidth": 300,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-band-w390: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Porozmawiajmy o współpracy",
+          "width": 333.984375,
+          "height": 52,
+          "x": 28,
+          "labelX": 75.078125,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 334,
+          "clientWidth": 334,
+          "labelFont": "16px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Porozmawiajmy o współpracy",
+          "width": 333.984375,
+          "height": 52,
+          "x": 28,
+          "labelX": 75.078125,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 334,
+          "clientWidth": 334,
+          "labelFont": "16px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-home-band-w390: label fits",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 75.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-band-w390: arrow",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 75.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "home-w390: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 390,
+        "client": 390
+      }
+    },
+    {
+      "name": "home-w390: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Umów bezpłatną konsultację",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz ofertę wdrożenia Pipedrive",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Dowiedz się więcej o AI dla sprzedaży",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Dowiedz się więcej o automatyzacji",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz ofertę wdrożenia Asany",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Porozmawiajmy o współpracy",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Dowiedz się o mnie więcej",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "new-sales-atlas-band-w390: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Umów konsultację o swoim systemie sprzedaży",
+          "width": 333.984375,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 334,
+          "clientWidth": 334,
+          "labelFont": "13.0318px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Umów konsultację o swoim systemie sprzedaży",
+          "width": 333.984375,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 334,
+          "clientWidth": 334,
+          "labelFont": "13.0318px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-sales-atlas-band-w390: label fits",
+      "pass": true,
+      "details": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "13.0318px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-sales-atlas-band-w390: arrow",
+      "pass": true,
+      "details": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "13.0318px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "sales-atlas-w390: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 390,
+        "client": 390
+      }
+    },
+    {
+      "name": "sales-atlas-w390: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Umów bezpłatną konsultację",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Umów konsultację o swoim systemie sprzedaży",
+          "font": "13.0318px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "new-course-band-w390: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+          "width": 333.984375,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 334,
+          "clientWidth": 334,
+          "labelFont": "13.7603px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+          "width": 333.984375,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 334,
+          "clientWidth": 334,
+          "labelFont": "13.7603px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-course-band-w390: label fits",
+      "pass": true,
+      "details": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "13.7603px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-course-band-w390: arrow",
+      "pass": true,
+      "details": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "13.7603px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "course-w390: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 390,
+        "client": 390
+      }
+    },
+    {
+      "name": "course-w390: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Kup w przedsprzedaży",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+          "font": "13.7603px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zadaj pytanie o kurs",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz Sales Atlas System",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "new-ai-band-w390: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Porozmawiajmy o pierwszym procesie dla AI",
+          "width": 333.984375,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 334,
+          "clientWidth": 334,
+          "labelFont": "14.156px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Porozmawiajmy o pierwszym procesie dla AI",
+          "width": 333.984375,
+          "height": 52,
+          "x": 28,
+          "labelX": 40,
+          "padding": [
+            "8px",
+            "12px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 334,
+          "clientWidth": 334,
+          "labelFont": "14.156px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-ai-band-w390: label fits",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "14.156px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-ai-band-w390: arrow",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 333.984375,
+        "height": 52,
+        "x": 28,
+        "labelX": 40,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 334,
+        "clientWidth": 334,
+        "labelFont": "14.156px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "ai-w390: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 390,
+        "client": 390
+      }
+    },
+    {
+      "name": "ai-w390: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Umów rozmowę o wdrożeniu AI",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Porozmawiajmy o pierwszym procesie dla AI",
+          "font": "14.156px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Umów bezpłatną konsultację",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz Sales Atlas System",
+          "font": "16px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "new-home-hero-w1440: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Umów bezpłatną konsultację",
+          "width": 333.28125,
+          "height": 52,
+          "x": 120,
+          "labelX": 144,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 333,
+          "clientWidth": 333,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Umów bezpłatną konsultację",
+          "width": 333.28125,
+          "height": 52,
+          "x": 120,
+          "labelX": 144,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 333,
+          "clientWidth": 333,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-home-hero-w1440: label fits",
+      "pass": true,
+      "details": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 333.28125,
+        "height": 52,
+        "x": 120,
+        "labelX": 144,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 333,
+        "clientWidth": 333,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-hero-w1440: arrow",
+      "pass": true,
+      "details": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 333.28125,
+        "height": 52,
+        "x": 120,
+        "labelX": 144,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 333,
+        "clientWidth": 333,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-text-w1440: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Zobacz ofertę wdrożenia Pipedrive",
+          "width": 384.75,
+          "height": 52,
+          "x": 120,
+          "labelX": 144,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 385,
+          "clientWidth": 385,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Zobacz ofertę wdrożenia Pipedrive",
+          "width": 384.75,
+          "height": 52,
+          "x": 120,
+          "labelX": 144,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 385,
+          "clientWidth": 385,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-home-text-w1440: label fits",
+      "pass": true,
+      "details": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 384.75,
+        "height": 52,
+        "x": 120,
+        "labelX": 144,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 385,
+        "clientWidth": 385,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-text-w1440: arrow",
+      "pass": true,
+      "details": {
+        "label": "Zobacz ofertę wdrożenia Pipedrive",
+        "width": 384.75,
+        "height": 52,
+        "x": 120,
+        "labelX": 144,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 385,
+        "clientWidth": 385,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-band-w1440: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Porozmawiajmy o współpracy",
+          "width": 339.28125,
+          "height": 52,
+          "x": 920.71875,
+          "labelX": 944.71875,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 339,
+          "clientWidth": 339,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Porozmawiajmy o współpracy",
+          "width": 339.28125,
+          "height": 52,
+          "x": 920.71875,
+          "labelX": 944.71875,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 339,
+          "clientWidth": 339,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-home-band-w1440: label fits",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 339.28125,
+        "height": 52,
+        "x": 920.71875,
+        "labelX": 944.71875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 339,
+        "clientWidth": 339,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-home-band-w1440: arrow",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o współpracy",
+        "width": 339.28125,
+        "height": 52,
+        "x": 920.71875,
+        "labelX": 944.71875,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 339,
+        "clientWidth": 339,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "home-w1440: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 1440,
+        "client": 1440
+      }
+    },
+    {
+      "name": "home-w1440: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Bezpłatna konsultacja",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Umów bezpłatną konsultację",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz ofertę wdrożenia Pipedrive",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Dowiedz się więcej o AI dla sprzedaży",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Dowiedz się więcej o automatyzacji",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz ofertę wdrożenia Asany",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Porozmawiajmy o współpracy",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Dowiedz się o mnie więcej",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "new-sales-atlas-band-w1440: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Umów konsultację o swoim systemie sprzedaży",
+          "width": 494.546875,
+          "height": 52,
+          "x": 765.453125,
+          "labelX": 789.453125,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 495,
+          "clientWidth": 495,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Umów konsultację o swoim systemie sprzedaży",
+          "width": 494.546875,
+          "height": 52,
+          "x": 765.453125,
+          "labelX": 789.453125,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 495,
+          "clientWidth": 495,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-sales-atlas-band-w1440: label fits",
+      "pass": true,
+      "details": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 494.546875,
+        "height": 52,
+        "x": 765.453125,
+        "labelX": 789.453125,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 495,
+        "clientWidth": 495,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-sales-atlas-band-w1440: arrow",
+      "pass": true,
+      "details": {
+        "label": "Umów konsultację o swoim systemie sprzedaży",
+        "width": 494.546875,
+        "height": 52,
+        "x": 765.453125,
+        "labelX": 789.453125,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 495,
+        "clientWidth": 495,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "sales-atlas-w1440: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 1440,
+        "client": 1440
+      }
+    },
+    {
+      "name": "sales-atlas-w1440: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Bezpłatna konsultacja",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Umów bezpłatną konsultację",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Umów konsultację o swoim systemie sprzedaży",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "new-course-band-w1440: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+          "width": 471.546875,
+          "height": 52,
+          "x": 788.453125,
+          "labelX": 812.453125,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 472,
+          "clientWidth": 472,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+          "width": 471.546875,
+          "height": 52,
+          "x": 788.453125,
+          "labelX": 812.453125,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 472,
+          "clientWidth": 472,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-course-band-w1440: label fits",
+      "pass": true,
+      "details": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 471.546875,
+        "height": 52,
+        "x": 788.453125,
+        "labelX": 812.453125,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 472,
+        "clientWidth": 472,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-course-band-w1440: arrow",
+      "pass": true,
+      "details": {
+        "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+        "width": 471.546875,
+        "height": 52,
+        "x": 788.453125,
+        "labelX": 812.453125,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 472,
+        "clientWidth": 472,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "course-w1440: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 1440,
+        "client": 1440
+      }
+    },
+    {
+      "name": "course-w1440: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Bezpłatna konsultacja",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Kup w przedsprzedaży",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zapytaj, czy kurs pasuje do Twojego procesu",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zadaj pytanie o kurs",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz Sales Atlas System",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "new-ai-band-w1440: stable geometry",
+      "pass": true,
+      "details": {
+        "rest": {
+          "label": "Porozmawiajmy o pierwszym procesie dla AI",
+          "width": 463.984375,
+          "height": 52,
+          "x": 796.015625,
+          "labelX": 820.015625,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 464,
+          "clientWidth": 464,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "none",
+          "shaft": "0",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "hover": {
+          "label": "Porozmawiajmy o pierwszym procesie dla AI",
+          "width": 463.984375,
+          "height": 52,
+          "x": 796.015625,
+          "labelX": 820.015625,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 464,
+          "clientWidth": 464,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "new-ai-band-w1440: label fits",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 463.984375,
+        "height": 52,
+        "x": 796.015625,
+        "labelX": 820.015625,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 464,
+        "clientWidth": 464,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "new-ai-band-w1440: arrow",
+      "pass": true,
+      "details": {
+        "label": "Porozmawiajmy o pierwszym procesie dla AI",
+        "width": 463.984375,
+        "height": 52,
+        "x": 796.015625,
+        "labelX": 820.015625,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 464,
+        "clientWidth": 464,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "ai-w1440: document fits",
+      "pass": true,
+      "details": {
+        "scroll": 1440,
+        "client": 1440
+      }
+    },
+    {
+      "name": "ai-w1440: all CTA labels single-line and complete",
+      "pass": true,
+      "details": [
+        {
+          "label": "Bezpłatna konsultacja",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Umów rozmowę o wdrożeniu AI",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Porozmawiajmy o pierwszym procesie dla AI",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Umów bezpłatną konsultację",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "label": "Zobacz Sales Atlas System",
+          "font": "20px",
+          "fits": true,
+          "whiteSpace": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "keyboard focus ring and arrow",
+      "pass": true,
+      "details": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 333.28125,
+        "height": 52,
+        "x": 120,
+        "labelX": 144,
+        "padding": [
+          "8px",
+          "24px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 333,
+        "clientWidth": 333,
+        "labelFont": "20px",
+        "whiteSpace": "nowrap",
+        "head": "matrix(1, 0, 0, 1, 6, 0)",
+        "shaft": "1",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "reduced motion stays static",
+      "pass": true,
+      "details": {
+        "reducedRest": {
+          "label": "Umów bezpłatną konsultację",
+          "width": 333.28125,
+          "height": 52,
+          "x": 120,
+          "labelX": 144,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 333,
+          "clientWidth": 333,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        },
+        "reducedHover": {
+          "label": "Umów bezpłatną konsultację",
+          "width": 333.28125,
+          "height": 52,
+          "x": 120,
+          "labelX": 144,
+          "padding": [
+            "8px",
+            "24px"
+          ],
+          "radius": "999px",
+          "weight": "500",
+          "scrollWidth": 333,
+          "clientWidth": 333,
+          "labelFont": "20px",
+          "whiteSpace": "nowrap",
+          "head": "matrix(1, 0, 0, 1, 6, 0)",
+          "shaft": "1",
+          "outline": "none",
+          "outlineWidth": "3px"
+        }
+      }
+    },
+    {
+      "name": "touch keeps chevron",
+      "pass": true,
+      "details": {
+        "label": "Umów bezpłatną konsultację",
+        "width": 357.984375,
+        "height": 52,
+        "x": 16,
+        "labelX": 80.078125,
+        "padding": [
+          "8px",
+          "12px"
+        ],
+        "radius": "999px",
+        "weight": "500",
+        "scrollWidth": 358,
+        "clientWidth": 358,
+        "labelFont": "16px",
+        "whiteSpace": "nowrap",
+        "head": "none",
+        "shaft": "0",
+        "outline": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "name": "home has no gradient text",
+      "pass": true,
+      "details": {}
+    }
+  ],
+  "table": [
+    {
+      "path": "/",
+      "selector": ".site-header .action",
+      "label": "Bezpłatna konsultacja",
+      "width": 272.390625,
+      "height": 52,
+      "x": 1047.609375,
+      "labelX": 1071.609375,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 272,
+      "clientWidth": 272,
+      "labelFont": "20px",
+      "whiteSpace": "nowrap",
+      "head": "none",
+      "shaft": "0",
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/",
+      "selector": "main .action.primary",
+      "label": "Umów bezpłatną konsultację",
+      "width": 333.28125,
+      "height": 52,
+      "x": 120,
+      "labelX": 144,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 333,
+      "clientWidth": 333,
+      "labelFont": "20px",
+      "whiteSpace": "nowrap",
+      "head": "none",
+      "shaft": "0",
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/",
+      "selector": "main .action.text",
+      "label": "Zobacz ofertę wdrożenia Pipedrive",
+      "width": 384.75,
+      "height": 52,
+      "x": 120,
+      "labelX": 144,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 385,
+      "clientWidth": 385,
+      "labelFont": "20px",
+      "whiteSpace": "nowrap",
+      "head": "none",
+      "shaft": "0",
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/",
+      "selector": "main .action.text",
+      "label": "Dowiedz się więcej o AI dla sprzedaży",
+      "width": 408.875,
+      "height": 52,
+      "x": 120,
+      "labelX": 144,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 409,
+      "clientWidth": 409,
+      "labelFont": "20px",
+      "whiteSpace": "nowrap",
+      "head": "none",
+      "shaft": "0",
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/",
+      "selector": "main .action.text",
+      "label": "Dowiedz się więcej o automatyzacji",
+      "width": 387.53125,
+      "height": 52,
+      "x": 120,
+      "labelX": 144,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 388,
+      "clientWidth": 388,
+      "labelFont": "20px",
+      "whiteSpace": "nowrap",
+      "head": "none",
+      "shaft": "0",
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/",
+      "selector": "main .action.text",
+      "label": "Zobacz ofertę wdrożenia Asany",
+      "width": 356.625,
+      "height": 52,
+      "x": 120,
+      "labelX": 144,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 357,
+      "clientWidth": 357,
+      "labelFont": "20px",
+      "whiteSpace": "nowrap",
+      "head": "none",
+      "shaft": "0",
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/",
+      "selector": "main .action.text",
+      "label": "Dowiedz się o mnie więcej",
+      "width": 304.515625,
+      "height": 52,
+      "x": 120,
+      "labelX": 144,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 305,
+      "clientWidth": 305,
+      "labelFont": "20px",
+      "whiteSpace": "nowrap",
+      "head": "none",
+      "shaft": "0",
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/",
+      "selector": ".band .action",
+      "label": "Porozmawiajmy o współpracy",
+      "width": 339.28125,
+      "height": 52,
+      "x": 920.71875,
+      "labelX": 944.71875,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 339,
+      "clientWidth": 339,
+      "labelFont": "20px",
+      "whiteSpace": "nowrap",
+      "head": "none",
+      "shaft": "0",
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/",
+      "selector": ".newsletter .submit",
+      "label": "Zapisuję się",
+      "width": 152,
+      "height": 52,
+      "x": 808,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 152,
+      "clientWidth": 152,
+      "labelFont": null,
+      "whiteSpace": "nowrap",
+      "head": null,
+      "shaft": null,
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/kurs-ai-w-sprzedazy",
+      "selector": ".pricing a.cta",
+      "label": "Kup w przedsprzedaży",
+      "width": 248.609375,
+      "height": 52,
+      "x": 152,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 249,
+      "clientWidth": 249,
+      "labelFont": null,
+      "whiteSpace": "nowrap",
+      "head": null,
+      "shaft": null,
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/kurs-ai-w-sprzedazy",
+      "selector": ".pricing a.cta",
+      "label": "Zobacz program grupowy",
+      "width": 277.171875,
+      "height": 52,
+      "x": 560,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 277,
+      "clientWidth": 277,
+      "labelFont": null,
+      "whiteSpace": "nowrap",
+      "head": null,
+      "shaft": null,
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/kurs-ai-w-sprzedazy",
+      "selector": ".pricing a.cta",
+      "label": "Zobacz ofertę wdrożenia AI",
+      "width": 293.28125,
+      "height": 52,
+      "x": 968,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 293,
+      "clientWidth": 293,
+      "labelFont": null,
+      "whiteSpace": "nowrap",
+      "head": null,
+      "shaft": null,
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/blog",
+      "selector": ".pagination a.action",
+      "label": "Następne wpisy",
+      "width": 217.921875,
+      "height": 52,
+      "x": 611.03125,
+      "labelX": 635.03125,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 218,
+      "clientWidth": 218,
+      "labelFont": "20px",
+      "whiteSpace": "nowrap",
+      "head": "none",
+      "shaft": "0",
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/kontakt",
+      "selector": ".lead-form .submit",
+      "label": "Wyślij zapytanie",
+      "width": 597.34375,
+      "height": 51,
+      "x": 183.984375,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "50px",
+      "weight": "400",
+      "scrollWidth": 597,
+      "clientWidth": 597,
+      "labelFont": null,
+      "whiteSpace": "normal",
+      "head": null,
+      "shaft": null,
+      "outline": "none",
+      "outlineWidth": "3px"
+    },
+    {
+      "path": "/kontakt",
+      "selector": ".lead-form .submit",
+      "label": "Zapisuję się",
+      "width": 152,
+      "height": 52,
+      "x": 808,
+      "padding": [
+        "8px",
+        "24px"
+      ],
+      "radius": "999px",
+      "weight": "500",
+      "scrollWidth": 152,
+      "clientWidth": 152,
+      "labelFont": null,
+      "whiteSpace": "nowrap",
+      "head": null,
+      "shaft": null,
+      "outline": "none",
+      "outlineWidth": "3px"
+    }
+  ],
+  "liveCapturedAt": "2026-11-13T21:07:46.324Z"
+}
