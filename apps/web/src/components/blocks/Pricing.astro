@@ -108,15 +108,17 @@ const ctaLabel = (label = '') => ({
   }
   .price { color: var(--text-heading); align-self: start; display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.25em; font-variant-numeric: tabular-nums; }
   .type-price { white-space: nowrap; }
-  @media (min-width: 1280px) {
-    .price-label { white-space: nowrap; }
-  }
+  .price-label { min-inline-size: 0; font-family: var(--typography-price-family); overflow-wrap: break-word; }
   .unit { color: var(--text-muted); }
   .note { color: var(--text-muted); }
   .note:empty { min-block-size: 0; }
 
-  .pricing-action { display: grid; justify-items: center; align-items: start; }
-  .pricing-action > :global(.action) { inline-size: fit-content; }
+  .pricing-action {
+    --action-padding-inline: var(--space-m);
+    display: grid;
+    justify-items: center;
+    align-items: start;
+  }
 
   .features { display: grid; gap: var(--space-2xs); align-content: start; margin: 0; padding: 0; list-style: none; }
   .features li { display: flex; }
