@@ -8,4 +8,20 @@ const paths = {
 };
 ---
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">{name === 'hover-arrow' ? <><path class="arrow-shaft" d="M4 12h12" opacity="0" /><path class="arrow-head" d="m9 7 5 5-5 5" /></> : <path d={paths[name]} />}</svg>
-<style>svg { flex: none; inline-size: 1em; block-size: 1lh; }</style>
+<style>
+  svg { flex: none; inline-size: 1em; block-size: 1lh; }
+  :global(.arrow-trigger:is(:focus-visible, :active, :has(.card-link:focus-visible))) .arrow-head { transform: translateX(6px); }
+  :global(.arrow-trigger:is(:focus-visible, :active, :has(.card-link:focus-visible))) .arrow-shaft { opacity: 1; }
+  @media (hover: hover) and (pointer: fine) {
+    :global(.arrow-trigger:hover) .arrow-head { transform: translateX(6px); }
+    :global(.arrow-trigger:hover) .arrow-shaft { opacity: 1; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .arrow-head { transition: transform var(--motion-duration-base) var(--motion-easing-out); }
+    .arrow-shaft { transition: opacity var(--motion-duration-base) var(--motion-easing-out); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .arrow-head { transform: translateX(6px); }
+    .arrow-shaft { opacity: 1; }
+  }
+</style>

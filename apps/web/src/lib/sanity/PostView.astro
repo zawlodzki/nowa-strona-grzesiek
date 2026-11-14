@@ -7,6 +7,7 @@ import { postOutline } from '../../components/post/outline';
 import SharePost from '../../components/post/SharePost.astro';
 import { relatedPosts } from '../../components/post/related';
 import NewsletterSignup from '../../components/blocks/NewsletterSignup.astro';
+import Button from '../../components/ui/Button.astro';
 import MediaImage from '../../components/ui/MediaImage.astro';
 import { BLOG_PATH } from './routes.ts';
 import { localHref, resolveImage, type PostDoc, type Site } from './site.ts';
@@ -59,7 +60,7 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
         <div class="sticky">
           <div class="sidebar-cta">
             <h2 class="type-heading-xs">{post.cta?.label ?? (pl ? 'Porozmawiajmy o Twojej firmie' : "Let's talk about your business")}</h2>
-            <a class="post-button" href={contactHref}>{pl ? 'Umów konsultację' : 'Book a consultation'}</a>
+            <Button link={{ _type: 'link', href: contactHref, label: pl ? 'Umów konsultację' : 'Book a consultation' }} />
           </div>
           {related.length > 0 && <section aria-labelledby="related-heading" data-related-posts inert aria-hidden="true">
             <h2 id="related-heading" class="type-heading-xs">{pl ? 'Sprawdź również' : 'Read also'}</h2>
@@ -126,14 +127,12 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   .toc-column, .recommendations { min-inline-size: 0; font-size: var(--font-size-body-s, 1rem); }
   .recommendations ul { list-style: none; padding: 0; margin-block: var(--space-s) 0; display: grid; gap: var(--space-xs); }
   .recommendations li a { display: block; padding-block: var(--space-3xs); text-decoration: none; }
-  .post-layout a:focus-visible { outline: 2px solid var(--text-link); outline-offset: 3px; }
-  .post-layout a:active { color: var(--text-link-active); }
+  .post-layout a:not(:global(.action)):focus-visible { outline: 2px solid var(--text-link); outline-offset: 3px; }
+  .post-layout a:not(:global(.action)):active { color: var(--text-link-active); }
   .sidebar-cta { display: grid; gap: var(--space-m); padding: var(--space-m); border-radius: var(--radius-lg); background: var(--surface-tint); }
-  .post-button { display: inline-flex; justify-content: center; align-items: center; min-block-size: 44px; padding: var(--space-xs) var(--space-s); border-radius: var(--radius-pill); background: var(--surface-accent); color: var(--text-on-accent); text-decoration: none; }
-  .post-button:active { background: var(--text-link-active); color: var(--text-on-accent) !important; }
   .recommendations li + li { border-block-start: 1px solid var(--border-hairline); padding-block-start: var(--space-xs); }
-  @media (hover: hover) and (pointer: fine) { .post-layout a:hover { text-decoration: underline; text-underline-offset: .2em; } }
-  .sidebar-cta { display: none; }
+  @media (hover: hover) and (pointer: fine) { .post-layout a:not(:global(.action)):hover { text-decoration: underline; text-underline-offset: .2em; } }
+  .sidebar-cta { display: none; --action-padding-inline: var(--space-2xs); }
   @media (min-width: 56rem) {
     .post-layout { grid-template-columns: 10.625rem minmax(0, 1fr); column-gap: 2.5rem; row-gap: var(--space-m); }
     .recommendations { grid-column: 2; }

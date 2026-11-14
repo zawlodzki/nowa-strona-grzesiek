@@ -1,5 +1,6 @@
 ---
 import { FORMS } from '../../worker/form';
+import Button from '../ui/Button.astro';
 
 type FormKey = keyof typeof FORMS;
 interface Props {
@@ -31,7 +32,7 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
 >
   <slot />
   <div class="cf-turnstile" data-sitekey={siteKey} data-language="pl" data-theme={tone === 'dark' ? 'dark' : 'light'} data-size="flexible" data-appearance="interaction-only"></div>
-  <button type="submit" class="submit" data-wait={waitLabel}>{submitLabel}</button>
+  <Button type="submit" class="submit" label={submitLabel} waitLabel={waitLabel} variant={tone === 'dark' ? 'on-dark' : 'primary'} />
   <p class="status type-body-s" role="status" aria-live="polite"></p>
   <div data-zaw-attribution-fields="v1" hidden>
     {hidden.map((name) => <input type="hidden" name={name} data-zaw-attribution={name} value="" />)}
@@ -87,13 +88,14 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
     const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
     const status = form.querySelector<HTMLElement>('.status')!;
     const widget = form.querySelector<HTMLElement>('.cf-turnstile');
-    const label = button.textContent;
+    const label = button.querySelector<HTMLElement>('.action-label')!;
+    const originalLabel = label.textContent;
     for (const type of ['focusin', 'pointerdown']) form.addEventListener(type, () => void loadTurnstile(), { once: true });
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       if (form.getAttribute('aria-busy') === 'true') return;
       form.setAttribute('aria-busy', 'true');
-      button.textContent = button.dataset.wait ?? label;
+      label.textContent = button.dataset.wait ?? originalLabel;
       status.textContent = '';
       if (widget) await verify(widget);
       const response = await fetch(form.action, { method: 'POST', body: new FormData(form) }).catch(() => null);
@@ -105,7 +107,7 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
         ? (await response.text()) || 'Nie udało się wysłać formularza. Spróbuj ponownie.'
         : 'Brak połączenia. Sprawdź internet i spróbuj ponownie.';
       status.dataset.state = 'error';
-      button.textContent = label;
+      label.textContent = originalLabel;
       form.removeAttribute('aria-busy');
     });
   }
@@ -181,43 +183,10 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
 
   .cf-turnstile:empty { display: none; }
 
-  .submit {
-    justify-self: start;
-    min-block-size: 48px;
-    max-inline-size: 100%;
-    padding: var(--space-2xs) var(--space-l);
-    border: 0;
-    border-radius: var(--radius-pill);
-    background: var(--surface-accent);
-    color: var(--text-on-accent);
-    font: inherit;
-    font-weight: var(--font-weight-medium);
-    cursor: pointer;
-  }
-  /* Both contact form contracts use live's full-width form-button treatment. */
-  .lead-form[data-form$="-contact"] > .submit {
-    justify-self: stretch;
-    inline-size: 100%;
-    min-block-size: 44px;
-    padding: var(--space-2xs) var(--space-m);
-    border-radius: 50px;
-    font-size: var(--form-field-size);
-    font-weight: var(--font-weight-regular);
-    line-height: 1.75;
-  }
-  .dark .submit { background: var(--surface-page); color: var(--text-link); }
-  .submit:focus-visible { outline: var(--border-width-button) solid var(--border-focus); outline-offset: 3px; }
-  .dark .submit:focus-visible { outline-color: var(--border-accent); }
-  .submit:active { scale: 0.97; }
-  [aria-busy="true"] .submit { cursor: progress; opacity: 0.8; }
-  @media (hover: hover) and (pointer: fine) {
-    .submit:hover { background: var(--text-link-hover); }
-    .dark .submit:hover { background: var(--surface-cyan-tint); color: var(--text-link-hover); }
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .submit { transition: background-color var(--motion-duration-base) var(--motion-easing-out), scale var(--motion-duration-fast) var(--motion-easing-out), opacity var(--motion-duration-fast) var(--motion-easing-out); }
-  }
-  @container (width < 30rem) { .submit { justify-self: stretch; } }
+  .lead-form > :global(.submit) { justify-self: start; }
+  .lead-form[data-form$="-contact"] > :global(.submit) { justify-self: stretch; }
+  .dark > :global(.submit:focus-visible) { outline-color: var(--border-accent); }
+  [aria-busy="true"] > :global(.submit) { cursor: progress; opacity: 0.8; }
 
   .status:empty { display: none; }
   .status { transition: opacity var(--motion-duration-base) var(--motion-easing-out); }
