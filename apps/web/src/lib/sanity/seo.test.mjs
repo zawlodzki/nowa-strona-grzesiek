@@ -83,3 +83,24 @@ test('a course document makes its page a Course with its instance, wins over a s
   const items = build([{ ...plain, _id: 'c1', ...course }], home).find(n => n['@id'] === 'https://www.zawlodzki.pl/#webpage').mainEntity.itemListElement;
   assert.deepEqual(items.map(i => [i.itemOffered['@type'], i.itemOffered['@id']]), [['Course', node['@id']]]);
 });
+
+test('the homepage keeps its offer catalog without reviews from text testimonials', async () => {
+  const { serializeGraph } = await import('../../seo/graph.ts');
+  const home = { ...page, _id: 'page-home', path: '/', sections: [
+    { _type: 'testimonials', items: [{ _ref: 'a' }] },
+  ] };
+  const servicePage = { ...page, _id: 'page-service', path: '/service' };
+  const value = withEntities({ ...site(), pages: [home, servicePage],
+    services: [{ _id: 's1', name: 'Consulting', description: 'Advice.', page: { _ref: servicePage._id } }],
+    byId: new Map([[home._id, home], [servicePage._id, servicePage]]),
+    testimonials: new Map([['a', { _id: 'a', name: 'Anna', quote: 'Helpful advice.' }]]),
+  });
+  const seo = seoPage(value, { kind: 'page', language: 'pl', path: '/', page: home });
+  assert.equal(seo.reviews.length, 1);
+  const graph = JSON.parse(serializeGraph(seo))['@graph'];
+  assert.ok(!graph.some(node => node['@type'] === 'Review'));
+  const catalog = graph.find(node => node['@id'] === 'https://www.zawlodzki.pl/#webpage').mainEntity;
+  assert.equal(catalog['@type'], 'OfferCatalog');
+  assert.equal(catalog.itemListElement.length, 1);
+  assert.equal(catalog.itemListElement[0].itemOffered.name, 'Consulting');
+});
