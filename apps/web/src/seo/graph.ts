@@ -231,6 +231,8 @@ function faqNode(page: SeoPage, about: Ref | undefined): Node | undefined {
 export function buildGraph(page: SeoPage): { '@context': 'https://schema.org'; '@graph': Node[] } {
   const part = kindPart(page);
   const breadcrumb = breadcrumbNode(page);
+  // The homepage's offer catalog is not a supported subject for Google review snippets.
+  const reviews = page.kind === 'home' ? [] : page.reviews ?? [];
   const webPage = compact({
     '@type': part.webPageType,
     '@id': nodeId(page.language, page.path, 'webpage'),
@@ -249,7 +251,7 @@ export function buildGraph(page: SeoPage): { '@context': 'https://schema.org'; '
   const graph = [
     webPage,
     ...part.nodes,
-    ...Array.from(new Map((page.reviews ?? []).map((review) => [review.id, review])).values()).map((review) => ({
+    ...Array.from(new Map(reviews.map((review) => [review.id, review])).values()).map((review) => ({
       '@type': 'Review',
       '@id': nodeId(page.language, page.path, `review-${review.id}`),
       author: { '@type': 'Person', name: review.author },
