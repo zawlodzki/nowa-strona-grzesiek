@@ -27,8 +27,9 @@
 
   .section { padding-block: var(--layout-section-y); }
 
-  .section-group > .section:has(+ .section) { padding-block-end: var(--space-m); }
-  .section-group > .section + .section { padding-block-start: var(--space-m); }
+  .section-group { --section-group-padding: calc(var(--layout-section-y) - var(--space-s)); }
+  .section-group > .section:has(+ .section) { padding-block-end: var(--section-group-padding); }
+  .section-group > .section + .section { padding-block-start: var(--section-group-padding); }
   .section-group--intro > .section:first-child { padding-block-end: var(--space-s); }
   .section-group--intro > .section:nth-child(2) { padding-block-start: var(--space-s); }
 
