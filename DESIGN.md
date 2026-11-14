@@ -117,7 +117,7 @@ components:
     padding: "8px 24px"
     height: "44px"
   button-secondary-hover:
-    backgroundColor: "{colors.cyan-tint}"
+    backgroundColor: "{colors.atlas-blue-tint}"
     textColor: "{colors.atlas-blue-hover}"
   button-on-dark:
     backgroundColor: "{colors.paper}"
@@ -195,7 +195,7 @@ A cool, near-monochrome ramp with one saturated blue and a cyan kept for ornamen
 - **Atlas Blue Tint** (atlas-blue-tint): tinted surfaces ("works" box on Sales Atlas) and muted text on dark (15.69:1).
 
 ### Secondary
-- **Signal Cyan** (signal-cyan): the secondary button border, the custom-plan ring, scene accents, the "Atlas" word in the newsletter heading on navy (9.90:1). It is 1.85:1 on paper.
+- **Signal Cyan** (signal-cyan): the custom-plan ring, scene accents, the "Atlas" word in the newsletter heading on navy (9.90:1). It is 1.85:1 on paper.
 - **Cyan Tint** (cyan-tint): the feature-icon tile and tag background. Tag text on it is Atlas Blue (6.55:1). The live tag is cyan on cyan tint at 1.72:1 (audit finding 11).
 
 ### Tertiary
@@ -291,7 +291,7 @@ The live site mixes 6px and 20px across sibling surfaces (testimonial boxes 6px 
 Confident and round.
 - **Shape:** full pill (999px), minimum height 44px.
 - **Primary:** Atlas Blue fill, Paper text in Satoshi 500 at Body size, 8px × 24px padding. Hover Atlas Blue Hover. Pressed Atlas Blue Pressed. Transition background-color 250ms. Refine: drop the live hover gradient (`linear-gradient(270deg, black, #3a48cc)`) and the #e7faff hover text.
-- **Secondary:** Paper fill, Atlas Blue text, 3px Signal Cyan border. Hover Cyan Tint fill with the border turning Atlas Blue Hover. Refine: the pressed state uses Atlas Blue Tint, because the live #08a6cb puts blue text at 2.46:1.
+- **Secondary:** Paper fill, Atlas Blue text and a 3px border in the text color. Hover uses Atlas Blue Tint with Atlas Blue Hover for the text and border. Pressed uses Atlas Blue Tint.
 - **On dark:** solid Paper fill with Atlas Blue text and no cyan ring (newsletter and CTA bands).
 - **Icons:** inline SVG arrows with `aria-hidden="true"`. They replace Material Icons ligatures, which leak "arrow_forward" into accessible names (audit finding 13).
 - **Full width** below 480px.

@@ -43,10 +43,10 @@ const href = props.type !== 'submit' && safeHref(props.link.href);
   .action > svg { align-self: start; margin-block-start: max(0px, calc((52px - 16px - 1lh) / 2)); }
   .action.primary { background: var(--surface-accent); color: var(--text-on-accent); }
   .action:is(.secondary, .on-dark) { background: var(--surface-page); color: var(--text-link); }
-  .action.secondary { box-shadow: inset 0 0 0 var(--border-width-button) var(--border-accent); }
+  .action.secondary { box-shadow: inset 0 0 0 var(--border-width-button) currentColor; }
   .action.text { color: var(--text-link); justify-content: start; padding-inline: 0; text-align: start; text-decoration: underline; text-underline-offset: .2em; }
   .action:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; box-shadow: 0 0 0 2px var(--surface-page); }
-  .action.secondary:focus-visible { box-shadow: inset 0 0 0 var(--border-width-button) var(--border-accent), 0 0 0 2px var(--surface-page); }
+  .action.secondary:focus-visible { box-shadow: inset 0 0 0 var(--border-width-button) currentColor, 0 0 0 2px var(--surface-page); }
   .action.primary:active { background: var(--text-link-active); }
   .action:is(.secondary, .on-dark):active { background: var(--surface-tint); }
   .action.text:active { color: var(--text-link-active); }
