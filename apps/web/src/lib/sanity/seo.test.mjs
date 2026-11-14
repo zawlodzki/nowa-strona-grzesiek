@@ -53,6 +53,20 @@ test('all visible text testimonials reach the single serialized graph', async ()
   }
 });
 
+test('homepage testimonials do not mark up the offer catalog as a reviewed item', async () => {
+  const { serializeGraph } = await import('../../seo/graph.ts');
+  const home = { ...page, path: '/', sections: [{ _type: 'testimonials', items: [{ _ref: 'a' }, { _ref: 'b' }] }] };
+  const value = withEntities({ ...site(), pages: [home], testimonials: new Map([
+    ['a', { _id: 'a', name: 'Anna', quote: 'First quote.' }],
+    ['b', { _id: 'b', name: 'Bart', quote: 'Second quote.' }],
+  ]) });
+  const result = seoPage(value, { kind: 'page', language: 'pl', path: '/', page: home });
+  assert.equal(result.kind, 'home');
+  const graph = JSON.parse(serializeGraph(result))['@graph'];
+  assert.equal(graph.find(n => n['@type'] === 'WebPage').mainEntity['@type'], 'OfferCatalog');
+  assert.equal(graph.filter(n => n['@type'] === 'Review').length, 0);
+});
+
 test('a course document makes its page a Course with its instance, wins over a service on the same page, and the home stub points at it', async () => {
   const { serializeGraph } = await import('../../seo/graph.ts');
   const doc = { ...page, _id: 'page-course', path: '/kurs', sections: [{ _type: 'pricing', plans: [{ name: 'Access', price: 2200 }] }] };
