@@ -30,10 +30,10 @@ const headingId = id ? `${id}-heading` : pageHeadingId(Astro.locals, data.headin
   )}
   <ul class="cards" role="list" aria-labelledby={data.heading ? headingId : undefined} aria-label={data.heading ? undefined : 'Ostatnie wpisy'}>
     {items.map((post, index) => (
-      <li class="card">
+      <li class="card arrow-trigger">
         {post.image ? <img src={post.image.src} srcset={post.image.srcset} sizes="(width < 48rem) 100vw, 24rem" width={post.image.width} height={post.image.height} alt={post.image.alt || post.title} loading={eager && index === 0 ? 'eager' : 'lazy'} fetchpriority={eager && index === 0 ? 'high' : undefined} decoding="async" /> : <span class="thumb-empty" />}
         <h3 id={pageHeadingId(Astro.locals, post.title)} class="type-heading-xs"><a class="card-link" href={post.href}>{post.title}</a></h3>
-        <span class="more with-icon type-body-s" aria-hidden="true">Czytaj więcej<Icon /></span>
+        <span class="more with-icon type-body-s" aria-hidden="true">Czytaj więcej<Icon name="hover-arrow" /></span>
       </li>
     ))}
   </ul>
