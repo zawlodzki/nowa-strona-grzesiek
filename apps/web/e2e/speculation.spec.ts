@@ -48,9 +48,10 @@ test('Chrome hover prefetches HTML and excludes unsafe links', async ({ page, co
       a.textContent = 'T120 probe ' + i;
       a.id = 't120-' + i;
       for (const [key, value] of Object.entries(attrs)) a.setAttribute(key, value);
-      box.append(a, document.createElement('br'));
+      box.appendChild(a);
+      box.appendChild(document.createElement('br'));
     });
-    document.body.append(box);
+    document.body.appendChild(box);
   });
   const prefetches = () => requests.filter((r) => Object.entries(r.headers).some(([key, value]) => key.toLowerCase() === 'sec-purpose' && String(value).includes('prefetch')));
   await page.locator('#t120-0').hover();
