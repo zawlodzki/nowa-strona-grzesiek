@@ -36,6 +36,25 @@ const pathname = Astro.url.pathname;
     ad_personalization: 'denied'
   });
     </script>
+    <!-- Prefetch HTML only: never execute consent, analytics or forms speculatively. -->
+    <script is:inline type="speculationrules">
+      {
+        "tag": "zawlodzki-prefetch",
+        "prefetch": [{
+          "where": {
+            "and": [
+              { "href_matches": "/*" },
+              { "not": { "href_matches": [
+                "/api", "/api/*", "/preview", "/preview/*", "/_preview", "/_preview/*",
+                "/_astro/*", "/*.md", "/*.md/", "/*.txt", "/*.xml"
+              ] } },
+              { "not": { "selector_matches": "a[rel~=nofollow], a[target='_blank' i], a[download]" } }
+            ]
+          },
+          "eagerness": "moderate"
+        }]
+      }
+    </script>
     <link rel="preconnect" href="https://consent.zawlodzki.com" crossorigin>
     <script is:inline defer src="https://consent.zawlodzki.com/assets/cmp-v1.js?v=20261113-1"></script>
     <link rel="preload" href={satoshi} as="font" type="font/woff2" crossorigin />
