@@ -1,4 +1,5 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
+import {editorialMarkerMessage} from '../lib/editorial-markers'
 import entities from '../../../migration/contracts/entities.json'
 import {blockTypes} from './blocks'
 import {languageField, slugField, titleField} from './objects'
@@ -7,10 +8,10 @@ export const page = defineType({
   name: 'page', title: 'Strona', type: 'document',
   fields: [languageField, titleField, slugField,
     defineField({name: 'seo', type: 'seo', validation: (rule) => rule.required()}),
-    defineField({name: 'sections', title: 'Sekcje', type: 'array', of: blockTypes.map(({name}) => defineArrayMember({type: name})), validation: (rule) => rule.required().min(1).custom((sections) => {
+    defineField({name: 'sections', title: 'Sekcje', type: 'array', of: blockTypes.map(({name}) => defineArrayMember({type: name})), validation: (rule) => [rule.custom(editorialMarkerMessage).warning(), rule.required().min(1).custom((sections) => {
       const emittingFaqs = sections?.filter((section) => typeof section === 'object' && section !== null && '_type' in section && section._type === 'faq' && (!('emitSchema' in section) || section.emitSchema !== false)) ?? []
       return emittingFaqs.length <= 1 || 'Tylko jeden blok FAQ na stronie może emitować dane strukturalne.'
-    })}),
+    })]}),
   ],
   preview: {select: {title: 'title', subtitle: 'language'}},
 })
@@ -18,7 +19,7 @@ export const post = defineType({
   name: 'post', title: 'Wpis', type: 'document',
   fields: [languageField, titleField, slugField,
     defineField({name: 'excerpt', title: 'Zajawka', type: 'text', validation: (rule) => rule.required().max(320)}),
-    defineField({name: 'body', title: 'Treść', type: 'portableText', validation: (rule) => rule.required().min(1)}),
+    defineField({name: 'body', title: 'Treść', type: 'portableText', validation: (rule) => [rule.required().min(1), rule.custom(editorialMarkerMessage).warning()]}),
     defineField({name: 'mainImage', title: 'Obraz główny', type: 'contentImage'}),
     defineField({name: 'thumbnail', title: 'Miniatura', type: 'contentImage'}),
     defineField({name: 'publishedAt', title: 'Data publikacji', type: 'datetime', validation: (rule) => rule.required()}),
@@ -45,7 +46,7 @@ export const post = defineType({
     }),
     defineField({name: 'faq', title: 'FAQ', type: 'array', of: [defineArrayMember({name: 'postFaqItem', type: 'object', fields: [
       defineField({name: 'q', title: 'Pytanie', type: 'string', validation: (rule) => rule.required().regex(/\S/)}),
-      defineField({name: 'a', title: 'Odpowiedź', type: 'portableText', validation: (rule) => rule.required().min(1)}),
+      defineField({name: 'a', title: 'Odpowiedź', type: 'portableText', validation: (rule) => [rule.required().min(1), rule.custom(editorialMarkerMessage).warning()]}),
     ]})]}),
     defineField({name: 'schemaExtras', type: 'schemaExtras'}),
     defineField({name: 'seo', type: 'seo', validation: (rule) => rule.required()}),
