@@ -63,7 +63,8 @@ const items = visibleFaqItems(data);
   details[open]::details-content { block-size: auto; }
   @media (prefers-reduced-motion: no-preference) {
     details::details-content {
-      transition: block-size var(--motion-duration-slow) var(--motion-easing-out), content-visibility var(--motion-duration-slow) allow-discrete;
+      transition: block-size var(--motion-duration-slow) var(--motion-easing-out), content-visibility var(--motion-duration-slow);
+      transition-behavior: allow-discrete;
     }
     .chevron { transition: rotate var(--motion-duration-base) var(--motion-easing-out); }
   }
