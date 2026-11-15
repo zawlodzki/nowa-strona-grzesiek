@@ -242,6 +242,12 @@
       "computedHash": "2141766c0a370128cbee3dc004d3f254a411e54f8352e154e73b040e52070e38",
       "installMode": "copy"
     },
+    "modern-web-guidance": {
+      "source": "GoogleChrome/modern-web-guidance",
+      "sourceType": "github",
+      "skillPath": "skills/modern-web-guidance/SKILL.md",
+      "computedHash": "9e69ce00dc314b64f6664031b70295ea46c7de93ac682c624808df6e48e08b66"
+    },
     "no-comments": {
       "source": "cursor/plugins",
       "ref": "main",
