@@ -16,10 +16,12 @@ const locations = defineLocations({
   },
 })
 
+export const presentationResolve = {locations: {page: locations, post: locations}}
+
 export const presentation = presentationTool({
   previewUrl: {
     initial: process.env.SANITY_STUDIO_PREVIEW_URL || 'https://preview.zawlodzki.pl',
     previewMode: {enable: '/api/preview'},
   },
-  resolve: {locations: {page: locations, post: locations}},
+  resolve: presentationResolve,
 })

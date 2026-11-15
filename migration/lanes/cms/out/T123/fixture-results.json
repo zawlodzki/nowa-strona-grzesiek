@@ -1,0 +1,47 @@
+[
+  {
+    "documentType": "post",
+    "language": "pl",
+    "path": "/blog/test",
+    "title": "Otwórz podgląd",
+    "intent": [
+      "edit",
+      {
+        "id": "fixture",
+        "type": "post",
+        "mode": "presentation",
+        "preview": "/blog/test"
+      }
+    ]
+  },
+  {
+    "documentType": "page",
+    "language": "en",
+    "path": "/kontakt",
+    "title": "Otwórz podgląd",
+    "intent": [
+      "edit",
+      {
+        "id": "fixture",
+        "type": "page",
+        "mode": "presentation",
+        "preview": "/en/kontakt"
+      }
+    ]
+  },
+  {
+    "documentType": "page",
+    "language": "pl",
+    "path": "/",
+    "title": "Otwórz podgląd",
+    "intent": [
+      "edit",
+      {
+        "id": "fixture",
+        "type": "page",
+        "mode": "presentation",
+        "preview": "/"
+      }
+    ]
+  }
+]
