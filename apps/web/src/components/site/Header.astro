@@ -190,7 +190,23 @@ const logoCurrent = chrome.kind === 'ready' && chrome.logoCurrent;
     color: var(--text-muted);
   }
 
-  .nav-link[aria-current='page'] { color: var(--text-heading); }
+  .nav-link[aria-current='page'] {
+    color: var(--text-heading);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25em;
+  }
+
+  @media (forced-colors: active) {
+    .nav-link[aria-current='page'] { color: LinkText; }
+    .site-header, .site-nav ul { border-block-end-color: CanvasText; }
+    .site-nav .pill > :global(.action) { border: 1px solid LinkText; }
+    :is(.logo, .nav-toggle, .nav-link):focus-visible,
+    .site-nav .pill > :global(.action:focus-visible) {
+      outline: 3px solid Highlight;
+      outline-offset: 3px;
+    }
+  }
 
   .site-nav .pill { inline-size: 100%; }
   .site-nav .pill > :global(.action) { inline-size: 100%; }
