@@ -1,0 +1,426 @@
+{
+  "phase": "before",
+  "shots": [
+    "before-contact-home-w390.png",
+    "before-contact-home-w768.png",
+    "before-contact-home-w1440.png",
+    "before-contact-kontakt-w390.png",
+    "before-contact-kontakt-w768.png",
+    "before-contact-kontakt-w1440.png",
+    "before-contact-service-w390.png",
+    "before-contact-service-w768.png",
+    "before-contact-service-w1440.png",
+    "before-newsletter-home-band-w390.png",
+    "before-newsletter-home-band-w1440.png",
+    "before-newsletter-newsletter-w390.png",
+    "before-newsletter-newsletter-w1440.png",
+    "before-contact-error-w390.png"
+  ],
+  "measures": {
+    "contact-home-w390": {
+      "headLeft": 16,
+      "headTextAlign": "center",
+      "cardLeft": 16,
+      "checkRowHeight": 80,
+      "checkboxSize": "20x20",
+      "portrait": {
+        "size": "61x61",
+        "radius": "0px",
+        "besideHeading": false
+      },
+      "visibleLabels": [
+        {
+          "text": "E-mail (wymagane)",
+          "visible": false
+        },
+        {
+          "text": "Telefon",
+          "visible": false
+        },
+        {
+          "text": "Temat rozmowy",
+          "visible": false
+        }
+      ],
+      "placeholders": [
+        "E-mail",
+        "Telefon",
+        "Temat rozmowy"
+      ],
+      "submit": {
+        "height": 52,
+        "weight": "500",
+        "radius": "999px",
+        "arrow": true
+      },
+      "pageEdgeLeft": 16
+    },
+    "contact-home-w768": {
+      "headLeft": 84,
+      "headTextAlign": "center",
+      "cardLeft": 19,
+      "checkRowHeight": 44,
+      "checkboxSize": "20x20",
+      "portrait": {
+        "size": "107x107",
+        "radius": "0px",
+        "besideHeading": false
+      },
+      "visibleLabels": [
+        {
+          "text": "E-mail (wymagane)",
+          "visible": false
+        },
+        {
+          "text": "Telefon",
+          "visible": false
+        },
+        {
+          "text": "Temat rozmowy",
+          "visible": false
+        }
+      ],
+      "placeholders": [
+        "E-mail",
+        "Telefon",
+        "Temat rozmowy"
+      ],
+      "submit": {
+        "height": 52,
+        "weight": "500",
+        "radius": "999px",
+        "arrow": true
+      },
+      "pageEdgeLeft": 19
+    },
+    "contact-home-w1440": {
+      "headLeft": 420,
+      "headTextAlign": "center",
+      "cardLeft": 120,
+      "checkRowHeight": 75,
+      "checkboxSize": "20x20",
+      "portrait": {
+        "size": "169x169",
+        "radius": "0px",
+        "besideHeading": false
+      },
+      "visibleLabels": [
+        {
+          "text": "E-mail (wymagane)",
+          "visible": false
+        },
+        {
+          "text": "Telefon",
+          "visible": false
+        },
+        {
+          "text": "Temat rozmowy",
+          "visible": false
+        }
+      ],
+      "placeholders": [
+        "E-mail",
+        "Telefon",
+        "Temat rozmowy"
+      ],
+      "submit": {
+        "height": 52,
+        "weight": "500",
+        "radius": "999px",
+        "arrow": true
+      },
+      "pageEdgeLeft": 120
+    },
+    "contact-kontakt-w390": {
+      "headLeft": 16,
+      "headTextAlign": "start",
+      "cardLeft": 16,
+      "checkRowHeight": 80,
+      "checkboxSize": "20x20",
+      "portrait": null,
+      "visibleLabels": [
+        {
+          "text": "E-mail (wymagane)",
+          "visible": false
+        },
+        {
+          "text": "Telefon",
+          "visible": false
+        },
+        {
+          "text": "Temat rozmowy",
+          "visible": false
+        }
+      ],
+      "placeholders": [
+        "E-mail",
+        "Telefon",
+        "Temat rozmowy"
+      ],
+      "submit": {
+        "height": 52,
+        "weight": "500",
+        "radius": "999px",
+        "arrow": true
+      },
+      "pageEdgeLeft": 16
+    },
+    "contact-kontakt-w768": {
+      "headLeft": 19,
+      "headTextAlign": "start",
+      "cardLeft": 19,
+      "checkRowHeight": 44,
+      "checkboxSize": "20x20",
+      "portrait": null,
+      "visibleLabels": [
+        {
+          "text": "E-mail (wymagane)",
+          "visible": false
+        },
+        {
+          "text": "Telefon",
+          "visible": false
+        },
+        {
+          "text": "Temat rozmowy",
+          "visible": false
+        }
+      ],
+      "placeholders": [
+        "E-mail",
+        "Telefon",
+        "Temat rozmowy"
+      ],
+      "submit": {
+        "height": 52,
+        "weight": "500",
+        "radius": "999px",
+        "arrow": true
+      },
+      "pageEdgeLeft": 19
+    },
+    "contact-kontakt-w1440": {
+      "headLeft": 120,
+      "headTextAlign": "start",
+      "cardLeft": 120,
+      "checkRowHeight": 75,
+      "checkboxSize": "20x20",
+      "portrait": null,
+      "visibleLabels": [
+        {
+          "text": "E-mail (wymagane)",
+          "visible": false
+        },
+        {
+          "text": "Telefon",
+          "visible": false
+        },
+        {
+          "text": "Temat rozmowy",
+          "visible": false
+        }
+      ],
+      "placeholders": [
+        "E-mail",
+        "Telefon",
+        "Temat rozmowy"
+      ],
+      "submit": {
+        "height": 52,
+        "weight": "500",
+        "radius": "999px",
+        "arrow": true
+      },
+      "pageEdgeLeft": 120
+    },
+    "contact-service-w390": {
+      "headLeft": 16,
+      "headTextAlign": "center",
+      "cardLeft": 16,
+      "checkRowHeight": 80,
+      "checkboxSize": "20x20",
+      "portrait": {
+        "size": "61x61",
+        "radius": "0px",
+        "besideHeading": false
+      },
+      "visibleLabels": [
+        {
+          "text": "E-mail (wymagane)",
+          "visible": false
+        },
+        {
+          "text": "Telefon",
+          "visible": false
+        },
+        {
+          "text": "Temat rozmowy",
+          "visible": false
+        }
+      ],
+      "placeholders": [
+        "E-mail",
+        "Telefon",
+        "Temat rozmowy"
+      ],
+      "submit": {
+        "height": 52,
+        "weight": "500",
+        "radius": "999px",
+        "arrow": true
+      },
+      "pageEdgeLeft": 16
+    },
+    "contact-service-w768": {
+      "headLeft": 84,
+      "headTextAlign": "center",
+      "cardLeft": 19,
+      "checkRowHeight": 44,
+      "checkboxSize": "20x20",
+      "portrait": {
+        "size": "107x107",
+        "radius": "0px",
+        "besideHeading": false
+      },
+      "visibleLabels": [
+        {
+          "text": "E-mail (wymagane)",
+          "visible": false
+        },
+        {
+          "text": "Telefon",
+          "visible": false
+        },
+        {
+          "text": "Temat rozmowy",
+          "visible": false
+        }
+      ],
+      "placeholders": [
+        "E-mail",
+        "Telefon",
+        "Temat rozmowy"
+      ],
+      "submit": {
+        "height": 52,
+        "weight": "500",
+        "radius": "999px",
+        "arrow": true
+      },
+      "pageEdgeLeft": 19
+    },
+    "contact-service-w1440": {
+      "headLeft": 420,
+      "headTextAlign": "center",
+      "cardLeft": 120,
+      "checkRowHeight": 75,
+      "checkboxSize": "20x20",
+      "portrait": {
+        "size": "169x169",
+        "radius": "0px",
+        "besideHeading": false
+      },
+      "visibleLabels": [
+        {
+          "text": "E-mail (wymagane)",
+          "visible": false
+        },
+        {
+          "text": "Telefon",
+          "visible": false
+        },
+        {
+          "text": "Temat rozmowy",
+          "visible": false
+        }
+      ],
+      "placeholders": [
+        "E-mail",
+        "Telefon",
+        "Temat rozmowy"
+      ],
+      "submit": {
+        "height": 52,
+        "weight": "500",
+        "radius": "999px",
+        "arrow": true
+      },
+      "pageEdgeLeft": 120
+    }
+  },
+  "keyboard": [
+    {
+      "control": "email",
+      "tag": "input",
+      "type": "email",
+      "accessibleLabel": "E-mail (wymagane)",
+      "focusVisible": true,
+      "outline": "solid 3px"
+    },
+    {
+      "control": "phone",
+      "tag": "input",
+      "type": "tel",
+      "accessibleLabel": "Telefon",
+      "focusVisible": true,
+      "outline": "solid 3px"
+    },
+    {
+      "control": "message",
+      "tag": "textarea",
+      "type": null,
+      "accessibleLabel": "Temat rozmowy",
+      "focusVisible": true,
+      "outline": "solid 3px"
+    },
+    {
+      "control": "Polityka prywatności",
+      "tag": "a",
+      "type": null,
+      "accessibleLabel": null,
+      "focusVisible": true,
+      "outline": "solid 3px"
+    },
+    {
+      "control": "newsletter",
+      "tag": "input",
+      "type": "checkbox",
+      "accessibleLabel": "Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.",
+      "focusVisible": true,
+      "outline": "solid 3px"
+    },
+    {
+      "control": "Wyślij zapytanie",
+      "tag": "button",
+      "type": "submit",
+      "accessibleLabel": null,
+      "focusVisible": true,
+      "outline": "solid 3px"
+    },
+    {
+      "control": "przejdź do mojego kalendarza ↗︎",
+      "tag": "a",
+      "type": null,
+      "accessibleLabel": null,
+      "focusVisible": true,
+      "outline": "solid 3px"
+    },
+    {
+      "control": "",
+      "tag": "a",
+      "type": null,
+      "accessibleLabel": "GitHub",
+      "focusVisible": true,
+      "outline": "solid 3px"
+    }
+  ],
+  "error": {
+    "focused": true,
+    "ariaInvalid": null,
+    "describedBy": [],
+    "borderColor": "oklch(0.58635 0.17599 28.239)"
+  },
+  "submit": {
+    "landed": "/podziekowanie-konsultacja"
+  }
+}
