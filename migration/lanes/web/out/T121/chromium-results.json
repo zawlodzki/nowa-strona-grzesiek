@@ -1,0 +1,99 @@
+[
+  {
+    "width": 375,
+    "links": [
+      {
+        "text": "O mnie",
+        "href": "/o-mnie"
+      },
+      {
+        "text": "AI w sprzedaży",
+        "href": "/wdrozenie-ai-w-sprzedazy-b2b"
+      },
+      {
+        "text": "Pipedrive",
+        "href": "/szkolenie-i-wdrozenie-pipedrive"
+      },
+      {
+        "text": "Asana",
+        "href": "/szkolenie-i-wdrozenie-asana"
+      },
+      {
+        "text": "Newsletter",
+        "href": "/newsletter"
+      }
+    ],
+    "anchors": [
+      "#crm",
+      "#ai",
+      "#automatyzacja",
+      "#asana"
+    ]
+  },
+  {
+    "menuOpen": true
+  },
+  {
+    "width": 375,
+    "url": "http://127.0.0.1:8790/o-mnie",
+    "transition": "true",
+    "animations": "[{\"name\":\"sas-iskra\",\"duration\":6700},{\"name\":\"sas-obieg\",\"duration\":11000},{\"name\":\"sas-oddech\",\"duration\":4400},{\"name\":\"sas-iskra\",\"duration\":6700},{\"name\":\"sas-obieg\",\"duration\":11000},{\"name\":\"sas-oddech\",\"duration\":4400},{\"name\":\"-ua-view-transition-group-anim-site-header\",\"duration\":150},{\"name\":\"-ua-view-transition-group-anim-root\",\"duration\":150},{\"name\":\"-ua-view-transition-fade-in\",\"duration\":150},{\"name\":\"-ua-mix-blend-mode-plus-lighter\",\"duration\":150},{\"name\":\"-ua-view-transition-fade-out\",\"duration\":150},{\"name\":\"-ua-mix-blend-mode-plus-lighter\",\"duration\":150}]"
+  },
+  {
+    "back": "http://127.0.0.1:8790/"
+  },
+  {
+    "forward": "http://127.0.0.1:8790/o-mnie"
+  },
+  {
+    "width": 375,
+    "reducedTransition": "false"
+  },
+  {
+    "width": 1280,
+    "links": [
+      {
+        "text": "O mnie",
+        "href": "/o-mnie"
+      },
+      {
+        "text": "AI w sprzedaży",
+        "href": "/wdrozenie-ai-w-sprzedazy-b2b"
+      },
+      {
+        "text": "Pipedrive",
+        "href": "/szkolenie-i-wdrozenie-pipedrive"
+      },
+      {
+        "text": "Asana",
+        "href": "/szkolenie-i-wdrozenie-asana"
+      },
+      {
+        "text": "Newsletter",
+        "href": "/newsletter"
+      }
+    ],
+    "anchors": [
+      "#crm",
+      "#ai",
+      "#automatyzacja",
+      "#asana"
+    ]
+  },
+  {
+    "width": 1280,
+    "url": "http://127.0.0.1:8790/o-mnie",
+    "transition": "true",
+    "animations": "[{\"name\":\"sas-iskra\",\"duration\":6700},{\"name\":\"sas-obieg\",\"duration\":11000},{\"name\":\"sas-oddech\",\"duration\":4400},{\"name\":\"sas-iskra\",\"duration\":6700},{\"name\":\"sas-obieg\",\"duration\":11000},{\"name\":\"sas-oddech\",\"duration\":4400},{\"name\":\"-ua-view-transition-group-anim-site-header\",\"duration\":150},{\"name\":\"-ua-view-transition-group-anim-root\",\"duration\":150},{\"name\":\"-ua-view-transition-fade-in\",\"duration\":150},{\"name\":\"-ua-mix-blend-mode-plus-lighter\",\"duration\":150},{\"name\":\"-ua-view-transition-fade-out\",\"duration\":150},{\"name\":\"-ua-mix-blend-mode-plus-lighter\",\"duration\":150}]"
+  },
+  {
+    "back": "http://127.0.0.1:8790/"
+  },
+  {
+    "forward": "http://127.0.0.1:8790/o-mnie"
+  },
+  {
+    "width": 1280,
+    "reducedTransition": "false"
+  }
+]

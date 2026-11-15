@@ -61,6 +61,10 @@ const logoCurrent = chrome.kind === 'ready' && chrome.logoCurrent;
     box-shadow: var(--shadow-nav);
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    .site-header { view-transition-name: site-header; }
+  }
+
   .bar {
     display: flex;
     align-items: center;

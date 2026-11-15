@@ -180,3 +180,24 @@
     color: var(--text-heading);
   }
 }
+
+/* Native same-origin navigation; unsupported browsers retain normal page loads. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+
+  ::view-transition-group(root),
+  ::view-transition-group(site-header) {
+    animation-duration: var(--motion-duration-fast);
+    animation-timing-function: var(--motion-easing-out);
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: var(--motion-duration-fast);
+    animation-timing-function: var(--motion-easing-out);
+  }
+
+  /* One opaque header snapshot avoids doubled logo/nav text during the fade. */
+  ::view-transition-old(site-header) { animation: none; opacity: 0; }
+  ::view-transition-new(site-header) { animation: none; }
+}
