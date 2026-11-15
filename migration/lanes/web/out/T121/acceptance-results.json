@@ -1,0 +1,165 @@
+[
+  {
+    "width": 375,
+    "bannerOpened": true,
+    "rejectedAndClosed": true,
+    "anchors": [
+      {
+        "id": "crm",
+        "hash": "#crm",
+        "top": 61.453125,
+        "headerBottom": 61,
+        "viewport": 800
+      },
+      {
+        "id": "ai",
+        "hash": "#ai",
+        "top": 61.046875,
+        "headerBottom": 61,
+        "viewport": 800
+      },
+      {
+        "id": "automatyzacja",
+        "hash": "#automatyzacja",
+        "top": 61.328125,
+        "headerBottom": 61,
+        "viewport": 800
+      },
+      {
+        "id": "asana",
+        "hash": "#asana",
+        "top": 61.34375,
+        "headerBottom": 61,
+        "viewport": 800
+      }
+    ],
+    "menuOpenEscapeReopen": true,
+    "navigationVideoOffsetSeconds": 6.606,
+    "navigation": {
+      "url": "/o-mnie",
+      "transition": {
+        "present": true,
+        "animations": [
+          {
+            "name": "-ua-view-transition-group-anim-root",
+            "duration": 150
+          },
+          {
+            "name": "-ua-view-transition-group-anim-site-header",
+            "duration": 150
+          },
+          {
+            "name": "-ua-view-transition-fade-in",
+            "duration": 150
+          },
+          {
+            "name": "-ua-view-transition-fade-out",
+            "duration": 150
+          }
+        ]
+      },
+      "bannerVisible": false,
+      "width": 375,
+      "scrollWidth": 375
+    },
+    "back": {
+      "path": "/",
+      "persisted": true,
+      "type": "navigate",
+      "stuckTransition": false
+    },
+    "forward": {
+      "path": "/o-mnie",
+      "persisted": true,
+      "type": "navigate",
+      "stuckTransition": false
+    },
+    "reducedMotion": {
+      "reduce": true,
+      "transition": {
+        "present": false
+      }
+    }
+  },
+  {
+    "width": 1280,
+    "bannerOpened": true,
+    "rejectedAndClosed": true,
+    "anchors": [
+      {
+        "id": "crm",
+        "hash": "#crm",
+        "top": 71.640625,
+        "headerBottom": 72,
+        "viewport": 800
+      },
+      {
+        "id": "ai",
+        "hash": "#ai",
+        "top": 71.9375,
+        "headerBottom": 72,
+        "viewport": 800
+      },
+      {
+        "id": "automatyzacja",
+        "hash": "#automatyzacja",
+        "top": 71.6875,
+        "headerBottom": 72,
+        "viewport": 800
+      },
+      {
+        "id": "asana",
+        "hash": "#asana",
+        "top": 72.046875,
+        "headerBottom": 72,
+        "viewport": 800
+      }
+    ],
+    "navigationVideoOffsetSeconds": 8.034,
+    "navigation": {
+      "url": "/o-mnie",
+      "transition": {
+        "present": true,
+        "animations": [
+          {
+            "name": "-ua-view-transition-group-anim-site-header",
+            "duration": 150
+          },
+          {
+            "name": "-ua-view-transition-group-anim-root",
+            "duration": 150
+          },
+          {
+            "name": "-ua-view-transition-fade-in",
+            "duration": 150
+          },
+          {
+            "name": "-ua-view-transition-fade-out",
+            "duration": 150
+          }
+        ]
+      },
+      "bannerVisible": false,
+      "width": 1280,
+      "scrollWidth": 1280
+    },
+    "back": {
+      "path": "/",
+      "persisted": true,
+      "type": "navigate",
+      "stuckTransition": false
+    },
+    "forward": {
+      "path": "/o-mnie",
+      "persisted": true,
+      "type": "navigate",
+      "stuckTransition": false
+    },
+    "reducedMotion": {
+      "reduce": true,
+      "transition": {
+        "present": false
+      }
+    }
+  }
+]
