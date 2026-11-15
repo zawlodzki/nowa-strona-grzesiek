@@ -1,0 +1,22 @@
+[
+  {
+    "origin": "https://zawlodzki-web.zawlodzki.workers.dev",
+    "width": 375,
+    "bannerOpen": true,
+    "hit": {
+      "target": "DIV",
+      "insideBanner": true,
+      "anchorReceivesClick": false
+    }
+  },
+  {
+    "origin": "https://zawlodzki-web.zawlodzki.workers.dev",
+    "width": 1280,
+    "bannerOpen": true,
+    "hit": {
+      "target": "A",
+      "insideBanner": false,
+      "anchorReceivesClick": true
+    }
+  }
+]

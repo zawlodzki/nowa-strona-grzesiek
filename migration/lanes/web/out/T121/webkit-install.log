@@ -1,0 +1,55 @@
+Downloading WebKit 27.2 (playwright webkit v2388) from https://cdn.playwright.dev/dbazure/download/playwright/builds/webkit/2388/webkit-ubuntu-24.04-arm64.zip
+|                                                                                |   0% of 97.9 MiB
+|■■■■■■■■                                                                        |  10% of 97.9 MiB
+|■■■■■■■■■■■■■■■■                                                                |  20% of 97.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 97.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 97.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 97.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 97.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 97.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 97.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 97.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 97.9 MiB
+WebKit 27.2 (playwright webkit v2388) downloaded to /home/admin/.cache/ms-playwright/webkit-2388
+Playwright Host validation warning:
+╔══════════════════════════════════════════════════════╗
+║ Host system is missing dependencies to run browsers. ║
+║ Missing libraries:                                   ║
+║     libgtk-4.so.1                                    ║
+║     libpangocairo-1.0.so.0                           ║
+║     libgdk_pixbuf-2.0.so.0                           ║
+║     libcairo-gobject.so.2                            ║
+║     libgraphene-1.0.so.0                             ║
+║     liblcms2.so.2                                    ║
+║     libevent-2.1.so.7                                ║
+║     libopus.so.0                                     ║
+║     libgstallocators-1.0.so.0                        ║
+║     libgstapp-1.0.so.0                               ║
+║     libgstpbutils-1.0.so.0                           ║
+║     libgstaudio-1.0.so.0                             ║
+║     libgsttag-1.0.so.0                               ║
+║     libgstvideo-1.0.so.0                             ║
+║     libgstgl-1.0.so.0                                ║
+║     libgstcodecparsers-1.0.so.0                      ║
+║     libgstfft-1.0.so.0                               ║
+║     libwebpdemux.so.2                                ║
+║     libavif.so.16                                    ║
+║     libharfbuzz-icu.so.0                             ║
+║     libepoxy.so.0                                    ║
+║     libwebpmux.so.3                                  ║
+║     libwayland-server.so.0                           ║
+║     libwayland-egl.so.1                              ║
+║     libwayland-client.so.0                           ║
+║     libmanette-0.2.so.0                              ║
+║     libenchant-2.so.2                                ║
+║     libsecret-1.so.0                                 ║
+║     libhyphen.so.0                                   ║
+║     libGLESv2.so.2                                   ║
+║     libx264.so                                       ║
+╚══════════════════════════════════════════════════════╝
+    at validateDependenciesLinux (/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T121-view-transitions/node_modules/.pnpm/playwright-core@1.65.0/node_modules/playwright-core/lib/coreBundle.js:33958:9)
+    at async Registry._validateHostRequirements (/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T121-view-transitions/node_modules/.pnpm/playwright-core@1.65.0/node_modules/playwright-core/lib/coreBundle.js:35219:18)
+    at async Registry._validateHostRequirementsForExecutableIfNeeded (/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T121-view-transitions/node_modules/.pnpm/playwright-core@1.65.0/node_modules/playwright-core/lib/coreBundle.js:35353:11)
+    at async Registry.validateHostRequirementsForExecutablesIfNeeded (/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T121-view-transitions/node_modules/.pnpm/playwright-core@1.65.0/node_modules/playwright-core/lib/coreBundle.js:35334:13)
+    at async installBrowsers (/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T121-view-transitions/node_modules/.pnpm/playwright-core@1.65.0/node_modules/playwright-core/lib/coreBundle.js:72905:5)
+    at async _Command.<anonymous> (/home/admin/.t3/worktrees/nowa-strona-grzesiek/task-T121-view-transitions/node_modules/.pnpm/playwright-core@1.65.0/node_modules/playwright-core/lib/coreBundle.js:76603:7)
