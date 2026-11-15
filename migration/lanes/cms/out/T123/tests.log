@@ -1,0 +1,43 @@
+$ node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test ../../migration/lanes/cms/out/t50-studio-plugins/toc-array-guard.test.mjs schemaTypes/slugUnique.test.mjs lib/editorial-markers.test.mjs presentation-intent.test.mjs open-in-presentation.test.mjs
+✔ non-array undefined is not Portable Text (0.732178ms)
+✔ non-array null is not Portable Text (0.09221ms)
+✔ non-array text body is not Portable Text (0.064584ms)
+✔ non-array object is not Portable Text (0.065543ms)
+✔ non-array array-like object is not Portable Text (0.08171ms)
+✔ non-array number is not Portable Text (0.059334ms)
+✔ non-array boolean is not Portable Text (0.049459ms)
+✔ empty and section arrays remain non-Portable Text (0.093126ms)
+✔ Portable Text headings remain recognized (0.136086ms)
+✔ malformed blocks do not crash or become Portable Text (0.157461ms)
+✔ section TOC includes only configured array fields (0.617802ms)
+✔ canonical, multiline, repeated and legacy markers preserve order and keyed block paths (1.235645ms)
+✔ generic nested fields include captions, table cells and links, excluding metadata (0.246462ms)
+✔ empty, invalid, plain and incomplete inputs do not warn (0.16042ms)
+✔ unkeyed block uses index and scanner does not mutate input (0.129002ms)
+✔ post covers body and FAQ answers only with complete navigation paths (0.161169ms)
+✔ pages including legal pages scan all section shapes and open the section (0.10346ms)
+✔ warning counts all markers and bounds its example (0.138794ms)
+✔ pane header renders within budget, navigates post/page, follows edits and hides invalid/nested actions (4.163651ms)
+✔ negative control: identical resolver rejects unstable onAction (9.521446ms)
+✔ first location, normalized IDs and missing inputs (0.81018ms)
+✔ published id does not conflict with its own published, draft or release copies (2.749794ms)
+✔ published id still conflicts with another document's slug (0.714178ms)
+✔ draft id does not conflict with its own published, draft or release copies (0.431757ms)
+✔ draft id still conflicts with another document's slug (0.403507ms)
+✔ release version id does not conflict with its own published, draft or release copies (0.335505ms)
+✔ release version id still conflicts with another document's slug (0.301213ms)
+✔ version id in another release does not conflict with its own published, draft or release copies (0.506133ms)
+✔ version id in another release still conflicts with another document's slug (0.386048ms)
+✔ a new document in a release conflicts with a published slug (0.749804ms)
+✔ the same slug in another language is not a conflict (0.611593ms)
+✔ an unused slug is unique (0.324047ms)
+✔ no document means not unique (0.035001ms)
+✔ the query excludes every version of the document (0.058084ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1345.265023

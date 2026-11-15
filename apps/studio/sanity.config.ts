@@ -4,6 +4,7 @@ import {documentInternationalization} from '@sanity/document-internationalizatio
 import {media} from 'sanity-plugin-media'
 import {tableOfContentsPlugin} from 'sanity-plugin-table-of-contents'
 import {editorialMarkersPlugin} from './components/editorial-markers'
+import {openInPresentationPlugin} from './components/open-in-presentation'
 import {presentation} from './presentation'
 import {schemaTypes, singletonIds} from './schemaTypes'
 
@@ -23,6 +24,7 @@ export default defineConfig({
   dataset: process.env.SANITY_STUDIO_DATASET || 'production',
   plugins: [
     presentation,
+    openInPresentationPlugin(),
     media(),
     tableOfContentsPlugin({
       fieldNames: ['sections', 'body'],
