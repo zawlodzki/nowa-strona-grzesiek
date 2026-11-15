@@ -25,14 +25,16 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
         {data.items?.map((item, i) => <a id={`${id}-tab-${i}`} href={`#${id}-panel-${i}`}><span class="type-heading-xs">{item.title}</span><span>{item.summary}</span></a>)}
       </div>
       <div class="panels">{data.items?.map((item, i) => <section class="panel" id={`${id}-panel-${i}`} aria-labelledby={`${id}-tab-${i}`}>
-        <div class="positive"><PortableText value={panelHeadings(item.positive)} links={links} images={images} /></div>
-        <div class="negative"><PortableText value={panelHeadings(item.negative)} links={links} images={images} /></div>
-        {item.tagline && <p class="type-tagline panel-tagline">{item.tagline}</p>}
-        <PortableText value={panelHeadings(item.body)} links={links} images={images} />
-        {((item.primaryCta?.label && safeHref(item.primaryCta.href)) || (item.secondaryCta?.label && safeHref(item.secondaryCta.href))) && <div class="actions">
-          {item.primaryCta && <Button link={item.primaryCta} />}
-          {item.secondaryCta && <Button link={item.secondaryCta} variant="secondary" />}
-        </div>}
+        <div class="panel-content">
+          <div class="positive"><PortableText value={panelHeadings(item.positive)} links={links} images={images} /></div>
+          <div class="negative"><PortableText value={panelHeadings(item.negative)} links={links} images={images} /></div>
+          {item.tagline && <p class="type-tagline panel-tagline">{item.tagline}</p>}
+          <PortableText value={panelHeadings(item.body)} links={links} images={images} />
+          {((item.primaryCta?.label && safeHref(item.primaryCta.href)) || (item.secondaryCta?.label && safeHref(item.secondaryCta.href))) && <div class="actions">
+            {item.primaryCta && <Button link={item.primaryCta} />}
+            {item.secondaryCta && <Button link={item.secondaryCta} variant="secondary" />}
+          </div>}
+        </div>
       </section>)}</div>
     </div>
   </div>
@@ -41,33 +43,44 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   function initTabs() {
     document.querySelectorAll<HTMLElement>('[data-tabs]:not([data-ready])').forEach((root) => {
       const menu = root.querySelector<HTMLElement>('.menu')!;
-      const tabs = Array.from(menu.querySelectorAll<HTMLAnchorElement>('a'));
+      const tabs = Array.from(menu.querySelectorAll<HTMLAnchorElement>(':scope > a'));
       const panels = Array.from(root.querySelectorAll<HTMLElement>('.panel'));
+      const panelList = root.querySelector<HTMLElement>('.panels')!;
       const stage = root.querySelector<HTMLElement>('.stage')!;
       if (!tabs.length || tabs.length !== panels.length) return;
       const wide = matchMedia('(min-width: 992px)');
       const still = matchMedia('(prefers-reduced-motion: reduce)');
       const slack = 0;
+      const searchable = 'onbeforematch' in document.body;
       const live = new AbortController();
       let current = 0;
       let pinned = false;
       let offset = 0;
       let frame = 0;
       let resized = false;
-      menu.setAttribute('role', 'tablist');
-      menu.setAttribute('aria-orientation', 'vertical');
+
       function activate(index: number) {
+        // Reveal and lay out the incoming contents before retiring the old panel.
+        // until-found content is otherwise eligible for deferred rendering.
+        panels[index].removeAttribute('hidden');
+        void panels[index].offsetHeight;
         current = index;
         tabs.forEach((tab, i) => {
-          tab.setAttribute('aria-selected', String(i === index));
-          tab.tabIndex = i === index ? 0 : -1;
-          panels[i].hidden = i !== index;
+          tab.setAttribute(wide.matches ? 'aria-selected' : 'aria-expanded', String(i === index));
+          tab.tabIndex = !wide.matches || i === index ? 0 : -1;
+          if (i === index) panels[i].removeAttribute('hidden');
+          else panels[i].setAttribute('hidden', searchable ? 'until-found' : '');
         });
       }
       const step = () => (root.offsetHeight - stage.offsetHeight) / Math.max(1, panels.length - 1);
       const layerFromScroll = () => Math.min(panels.length - 1, Math.max(0, Math.round((offset - root.getBoundingClientRect().top) / step())));
       function select(index: number, focus = false) {
+        const nameTop = tabs[index].getBoundingClientRect().top;
         activate(index);
+        if (!wide.matches) {
+          // Collapsing a panel above the tapped name must not move it off screen.
+          window.scrollBy({ top: tabs[index].getBoundingClientRect().top - nameTop, behavior: 'instant' });
+        }
         // Keep explicit selection aligned with the scroll position.
         if (pinned && layerFromScroll() !== index) window.scrollTo({ top: scrollY + root.getBoundingClientRect().top - offset + index * step(), behavior: 'instant' });
         if (focus) tabs[index].focus({ preventScroll: pinned });
@@ -82,8 +95,29 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
         root.style.setProperty('--stage-size', `${tallest}px`);
         return tallest <= innerHeight - offset + slack;
       }
+      function arrange() {
+        if (wide.matches) {
+          menu.setAttribute('role', 'tablist');
+          menu.setAttribute('aria-orientation', 'vertical');
+        } else {
+          menu.removeAttribute('role');
+          menu.removeAttribute('aria-orientation');
+        }
+        tabs.forEach((tab, i) => {
+          tab.setAttribute('role', wide.matches ? 'tab' : 'button');
+          tab.removeAttribute(wide.matches ? 'aria-expanded' : 'aria-selected');
+          // Only accordion buttons need aria-controls; desktop tabs do not.
+          if (wide.matches) tab.removeAttribute('aria-controls');
+          else tab.setAttribute('aria-controls', panels[i].id);
+          panels[i].setAttribute('role', wide.matches ? 'tabpanel' : 'region');
+          if (wide.matches && panels[i].parentElement !== panelList) panelList.appendChild(panels[i]);
+          else if (!wide.matches && tab.nextElementSibling !== panels[i]) menu.insertBefore(panels[i], tab.nextSibling);
+        });
+      }
       function evaluate() {
         if (!root.isConnected) { live.abort(); return; }
+        arrange();
+        activate(current);
         pinned = panels.length > 1 && wide.matches && !still.matches;
         if (pinned) { root.dataset.scroll = 'true'; offset = parseFloat(getComputedStyle(stage).insetBlockStart); pinned = fitsViewport(); }
         if (!pinned) delete root.dataset.scroll;
@@ -93,10 +127,8 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
       function tick() { frame = 0; if (resized) evaluate(); resized = false; follow(); }
       function queue(resize = false) { resized ||= resize; if (!frame) frame = requestAnimationFrame(tick); }
       tabs.forEach((tab, index) => {
-        tab.setAttribute('role', 'tab');
-        tab.setAttribute('aria-controls', panels[index].id);
-        panels[index].setAttribute('role', 'tabpanel');
         panels[index].tabIndex = 0;
+        panels[index].addEventListener('beforematch', () => select(index), { signal: live.signal });
         tab.addEventListener('click', (event) => { event.preventDefault(); select(index); });
         tab.addEventListener('keydown', (event) => {
           let next: number;
@@ -130,29 +162,27 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   [data-scroll] { min-block-size: calc(var(--stage-size) + (var(--layers) - 1) * var(--tabs-step)); }
   [data-scroll] .stage { position: sticky; inset-block-start: var(--tabs-top); min-block-size: var(--stage-size); }
   [data-scroll] .menu { gap: 8px; }
-  [data-scroll] .menu a { padding-block: 12px; }
+  [data-scroll] .menu > a { padding-block: 12px; }
   .menu { flex: 0 0 calc(35% - 12px); display: flex; flex-direction: column; gap: 16px; }
-  .menu a { position: relative; display: grid; gap: var(--space-xs); padding: 16px 24px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-body); }
-  .menu a[aria-selected="true"] { background: var(--surface-accent); color: var(--text-on-accent); }
-  .menu a[aria-selected="true"]::after {
+  .menu > a { position: relative; display: grid; gap: var(--space-xs); padding: 16px 24px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-body); }
+  .menu > a:is([aria-selected="true"], [aria-expanded="true"]) { background: var(--surface-accent); color: var(--text-on-accent); }
+  .menu > a:is([aria-selected="true"], [aria-expanded="true"])::after {
     content: "";
     position: absolute;
     inset-inline-start: 8px;
     inset-block: 16px;
     border-inline-start: 3px solid currentColor;
   }
-  .menu a[aria-selected="true"] > span { color: inherit; }
-  [data-ready] .menu a:not([aria-selected="true"]) > span:last-child { display: none; }
-  .menu a:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; box-shadow: 0 0 0 3px var(--surface-page); }
-  .menu a:active { background: var(--surface-tint); }
-  .menu a[aria-selected="true"]:active { background: var(--color-primary-70); }
-  @media (hover: hover) and (pointer: fine) { .menu a:not([aria-selected="true"]):hover { background: var(--surface-soft); } }
+  .menu > a:is([aria-selected="true"], [aria-expanded="true"]) > span { color: inherit; }
+  [data-ready] .menu > a:not([aria-selected="true"], [aria-expanded="true"]) > span:last-child { display: none; }
+  .menu > a:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; box-shadow: 0 0 0 3px var(--surface-page); }
+  .menu > a:active { background: var(--surface-tint); }
+  .menu > a:is([aria-selected="true"], [aria-expanded="true"]):active { background: var(--color-primary-70); }
+  @media (hover: hover) and (pointer: fine) { .menu > a:not([aria-selected="true"], [aria-expanded="true"]):hover { background: var(--surface-soft); } }
   .panels { flex: 1; min-inline-size: 0; }
-  .panel { border: 1px solid var(--border-default); background: var(--surface-page); border-radius: var(--radius-lg); padding: clamp(24px, 3.125vw, 40px); box-shadow: var(--shadow-panel); overflow-wrap: anywhere; }
-  .panel:not([hidden]) { display: grid; gap: var(--space-m); }
-  @media (prefers-reduced-motion: no-preference) {
-    .menu a { transition: background-color var(--motion-duration-fast) var(--motion-easing-out), color var(--motion-duration-fast) var(--motion-easing-out); }
-  }
+  .panel-content { display: grid; gap: var(--space-m); border: 1px solid var(--border-default); background: var(--surface-page); border-radius: var(--radius-lg); padding: clamp(24px, 3.125vw, 40px); box-shadow: var(--shadow-panel); overflow-wrap: anywhere; }
+  /* Scroll and keyboard selection are frequent: switch atomically, without fades. */
+  .panel:not([hidden]) { content-visibility: visible; }
   .actions { display: flex; flex-wrap: wrap; align-items: start; gap: var(--space-s); }
   .actions :global(.secondary) { color: var(--color-primary-60); border-color: var(--color-primary-60); }
   .actions :global(.secondary:focus-visible) { outline-color: var(--color-primary-60); }
@@ -166,13 +196,18 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   .panel :global(:is(h3, h4)) { font-family: var(--typography-heading-xs-family); font-size: var(--typography-heading-xs-size); font-weight: var(--typography-heading-xs-weight); line-height: var(--typography-heading-xs-leading); }
   .panel-tagline { white-space: nowrap; justify-self: start; padding-inline: var(--space-2xs); background: var(--surface-soft); color: var(--color-neutral-80); border-radius: var(--radius-sm); }
 
-  @media (max-width: 991px) { .stage { flex-direction: column; align-items: stretch; } .menu { flex-basis: auto; } .panels { order: -1; } }
+  @media (max-width: 991px) {
+    [data-ready] .menu { display: block; overflow-anchor: none; }
+    [data-ready] .menu > a { margin-block-start: 16px; scroll-margin-block-start: 5rem; }
+    [data-ready] .menu .panel-content { margin-block: 16px; }
+    [data-ready] .panels { display: none; }
+    .stage { flex-direction: column; align-items: stretch; } .menu { flex-basis: auto; } .panels { order: -1; } }
   @media (forced-colors: active) {
-    .menu a[aria-selected="true"] { color: LinkText; }
-    .menu a[aria-selected="true"]::after { border-color: LinkText; }
-    .panel { border-color: CanvasText; }
+    .menu > a:is([aria-selected="true"], [aria-expanded="true"]) { color: LinkText; }
+    .menu > a:is([aria-selected="true"], [aria-expanded="true"])::after { border-color: LinkText; }
+    .panel-content { border-color: CanvasText; }
     .actions :global(.action) { border: 1px solid LinkText; }
-    .menu a:focus-visible,
+    .menu > a:focus-visible,
     .actions :global(.action:focus-visible) {
       outline: 3px solid Highlight;
       outline-offset: 3px;
