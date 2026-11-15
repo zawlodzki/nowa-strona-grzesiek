@@ -110,8 +110,8 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
           if (wide.matches) tab.removeAttribute('aria-controls');
           else tab.setAttribute('aria-controls', panels[i].id);
           panels[i].setAttribute('role', wide.matches ? 'tabpanel' : 'region');
-          if (wide.matches && panels[i].parentElement !== panelList) panelList.append(panels[i]);
-          else if (!wide.matches && tab.nextElementSibling !== panels[i]) tab.after(panels[i]);
+          if (wide.matches && panels[i].parentElement !== panelList) panelList.appendChild(panels[i]);
+          else if (!wide.matches && tab.nextElementSibling !== panels[i]) menu.insertBefore(panels[i], tab.nextSibling);
         });
       }
       function evaluate() {
