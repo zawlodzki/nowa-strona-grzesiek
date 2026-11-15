@@ -132,8 +132,15 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   [data-scroll] .menu { gap: 8px; }
   [data-scroll] .menu a { padding-block: 12px; }
   .menu { flex: 0 0 calc(35% - 12px); display: flex; flex-direction: column; gap: 16px; }
-  .menu a { display: grid; gap: var(--space-xs); padding: 16px 24px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-body); }
+  .menu a { position: relative; display: grid; gap: var(--space-xs); padding: 16px 24px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-body); }
   .menu a[aria-selected="true"] { background: var(--surface-accent); color: var(--text-on-accent); }
+  .menu a[aria-selected="true"]::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 8px;
+    inset-block: 16px;
+    border-inline-start: 3px solid currentColor;
+  }
   .menu a[aria-selected="true"] > span { color: inherit; }
   [data-ready] .menu a:not([aria-selected="true"]) > span:last-child { display: none; }
   .menu a:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; box-shadow: 0 0 0 3px var(--surface-page); }
@@ -160,4 +167,15 @@ const id = `tabs-${data._key ?? crypto.randomUUID()}`;
   .panel-tagline { white-space: nowrap; justify-self: start; padding-inline: var(--space-2xs); background: var(--surface-soft); color: var(--color-neutral-80); border-radius: var(--radius-sm); }
 
   @media (max-width: 991px) { .stage { flex-direction: column; align-items: stretch; } .menu { flex-basis: auto; } .panels { order: -1; } }
+  @media (forced-colors: active) {
+    .menu a[aria-selected="true"] { color: LinkText; }
+    .menu a[aria-selected="true"]::after { border-color: LinkText; }
+    .panel { border-color: CanvasText; }
+    .actions :global(.action) { border: 1px solid LinkText; }
+    .menu a:focus-visible,
+    .actions :global(.action:focus-visible) {
+      outline: 3px solid Highlight;
+      outline-offset: 3px;
+    }
+  }
 </style>
