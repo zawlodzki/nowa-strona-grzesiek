@@ -3,6 +3,7 @@ import {structureTool} from 'sanity/structure'
 import {documentInternationalization} from '@sanity/document-internationalization'
 import {media} from 'sanity-plugin-media'
 import {tableOfContentsPlugin} from 'sanity-plugin-table-of-contents'
+import {editorialMarkersPlugin} from './components/editorial-markers'
 import {presentation} from './presentation'
 import {schemaTypes, singletonIds} from './schemaTypes'
 
@@ -27,6 +28,7 @@ export default defineConfig({
       fieldNames: ['sections', 'body'],
       documentTypes: ['page', 'post'],
     }),
+    editorialMarkersPlugin(),
     structureTool({
       structure: (S) => S.list().title('Treści').items([
         ...singletonTypes.map((type) => S.listItem()
