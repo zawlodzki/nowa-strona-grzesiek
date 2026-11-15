@@ -1,0 +1,264 @@
+{
+  "live": [
+    {
+      "layer": 1,
+      "before": {
+        "x": 16,
+        "y": 344.15625,
+        "width": 343,
+        "height": 211
+      },
+      "after": {
+        "x": 16,
+        "y": 344.15625,
+        "width": 343,
+        "height": 211
+      },
+      "adjacent": false,
+      "expanded": null,
+      "hidden": null,
+      "name": {
+        "x": 16,
+        "y": 344.15625,
+        "width": 343,
+        "height": 211,
+        "top": 344.15625,
+        "right": 359,
+        "bottom": 555.15625,
+        "left": 16
+      },
+      "panel": {
+        "x": 16,
+        "y": -387.234375,
+        "width": 343,
+        "height": 707.390625,
+        "top": -387.234375,
+        "right": 359,
+        "bottom": 320.15625,
+        "left": 16
+      },
+      "visiblePanels": 1
+    },
+    {
+      "layer": 3,
+      "before": {
+        "x": 16,
+        "y": 646.15625,
+        "width": 343,
+        "height": 59
+      },
+      "after": {
+        "x": 16,
+        "y": 494.15625,
+        "width": 343,
+        "height": 211
+      },
+      "adjacent": false,
+      "expanded": null,
+      "hidden": null,
+      "name": {
+        "x": 16,
+        "y": 494.15625,
+        "width": 343,
+        "height": 211,
+        "top": 494.15625,
+        "right": 359,
+        "bottom": 705.15625,
+        "left": 16
+      },
+      "panel": {
+        "x": 16,
+        "y": -215.234375,
+        "width": 343,
+        "height": 535.390625,
+        "top": -215.234375,
+        "right": 359,
+        "bottom": 320.15625,
+        "left": 16
+      },
+      "visiblePanels": 1
+    },
+    {
+      "layer": 7,
+      "before": {
+        "x": 16,
+        "y": 420.15625,
+        "width": 343,
+        "height": 59
+      },
+      "after": {
+        "x": 16,
+        "y": 268.15625,
+        "width": 343,
+        "height": 211
+      },
+      "adjacent": false,
+      "expanded": null,
+      "hidden": null,
+      "name": {
+        "x": 16,
+        "y": 268.15625,
+        "width": 343,
+        "height": 211,
+        "top": 268.15625,
+        "right": 359,
+        "bottom": 479.15625,
+        "left": 16
+      },
+      "panel": {
+        "x": 16,
+        "y": -913.234375,
+        "width": 343,
+        "height": 707.390625,
+        "top": -913.234375,
+        "right": 359,
+        "bottom": -205.84375,
+        "left": 16
+      },
+      "visiblePanels": 1
+    }
+  ],
+  "new": [
+    {
+      "layer": 1,
+      "before": {
+        "x": 16,
+        "y": 384.765625,
+        "width": 343,
+        "height": 211
+      },
+      "after": {
+        "x": 16,
+        "y": 384.765625,
+        "width": 343,
+        "height": 211
+      },
+      "adjacent": true,
+      "expanded": "true",
+      "hidden": null,
+      "name": {
+        "x": 16,
+        "y": 384.765625,
+        "width": 343,
+        "height": 211,
+        "top": 384.765625,
+        "right": 359,
+        "bottom": 595.765625,
+        "left": 16
+      },
+      "panel": {
+        "x": 16,
+        "y": 611.765625,
+        "width": 343,
+        "height": 707.390625,
+        "top": 611.765625,
+        "right": 359,
+        "bottom": 1319.15625,
+        "left": 16
+      },
+      "visiblePanels": 1
+    },
+    {
+      "layer": 3,
+      "before": {
+        "x": 16,
+        "y": 460.15625,
+        "width": 343,
+        "height": 59
+      },
+      "after": {
+        "x": 16,
+        "y": 459.765625,
+        "width": 343,
+        "height": 211
+      },
+      "adjacent": true,
+      "expanded": "true",
+      "hidden": null,
+      "name": {
+        "x": 16,
+        "y": 459.765625,
+        "width": 343,
+        "height": 211,
+        "top": 459.765625,
+        "right": 359,
+        "bottom": 670.765625,
+        "left": 16
+      },
+      "panel": {
+        "x": 16,
+        "y": 686.765625,
+        "width": 343,
+        "height": 535.390625,
+        "top": 686.765625,
+        "right": 359,
+        "bottom": 1222.15625,
+        "left": 16
+      },
+      "visiblePanels": 1
+    },
+    {
+      "layer": 7,
+      "before": {
+        "x": 16,
+        "y": 460.15625,
+        "width": 343,
+        "height": 59
+      },
+      "after": {
+        "x": 16,
+        "y": 459.765625,
+        "width": 343,
+        "height": 211
+      },
+      "adjacent": true,
+      "expanded": "true",
+      "hidden": null,
+      "name": {
+        "x": 16,
+        "y": 459.765625,
+        "width": 343,
+        "height": 211,
+        "top": 459.765625,
+        "right": 359,
+        "bottom": 670.765625,
+        "left": 16
+      },
+      "panel": {
+        "x": 16,
+        "y": 686.765625,
+        "width": 343,
+        "height": 707.390625,
+        "top": 686.765625,
+        "right": 359,
+        "bottom": 1394.15625,
+        "left": 16
+      },
+      "visiblePanels": 1
+    }
+  ],
+  "keyboard": "true",
+  "resize": {
+    "tabs": 9,
+    "panels": 9,
+    "controls": 0
+  },
+  "reduced": {
+    "pinned": false,
+    "selected": "03 Pozycjonowanie i przekazDlaczego klient ma Cię wybrać, czym różnisz się od alternatyw i jakimi słowami to komunikujesz na stronie oraz w ofercie. Efekt to jedna wersja przekazu, która ma być klarowna dla grupy docelowej.",
+    "animations": 0
+  },
+  "fallback": {
+    "supported": false,
+    "hidden": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  }
+}
