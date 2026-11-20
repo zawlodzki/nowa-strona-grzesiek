@@ -44,6 +44,7 @@ function submit(form, fields, webhook = n8n.url, method = 'POST') {
 test('contact form forwards every Webflow field and redirects to the thank-you page', async () => {
   const response = await submit('landing-contact', {
     email: ' ola@example.com ',
+    phone: '600 100 200',
     message: 'Wdrożenie Pipedrive',
     newsletter: 'on',
     gclid: 'abc123',
@@ -77,22 +78,24 @@ test('newsletter form redirects to the newsletter thank-you page', async () => {
 });
 
 test('failed or missing Turnstile is rejected and nothing reaches n8n', async () => {
-  assert.equal((await submit('main-contact', { email: 'ola@example.com', 'cf-turnstile-response': 'bot' })).status, 403);
-  assert.equal((await submit('main-contact', { email: 'ola@example.com' })).status, 403);
+  assert.equal((await submit('main-contact', { email: 'ola@example.com', phone: '600100200', 'cf-turnstile-response': 'bot' })).status, 403);
+  assert.equal((await submit('main-contact', { email: 'ola@example.com', phone: '600100200' })).status, 403);
   assert.equal(n8n.received.length, 0);
 });
 
 test('invalid requests are rejected before n8n', async () => {
   assert.equal((await submit('main-contact', { email: 'not-an-email', 'cf-turnstile-response': PASS_TOKEN })).status, 400);
+  assert.equal((await submit('main-contact', { email: 'ola@example.com', 'cf-turnstile-response': PASS_TOKEN })).status, 400);
+  assert.equal((await submit('landing-contact', { email: 'ola@example.com', phone: '  ', 'cf-turnstile-response': PASS_TOKEN })).status, 400);
   assert.equal((await submit('unknown', { email: 'ola@example.com', 'cf-turnstile-response': PASS_TOKEN })).status, 404);
   assert.equal((await submit('main-contact', {}, n8n.url, 'GET')).status, 405);
   assert.equal(n8n.received.length, 0);
 });
 
 test('n8n failure is reported instead of the thank-you redirect', async () => {
-  const response = await submit('main-contact', { email: 'ola@example.com', 'cf-turnstile-response': PASS_TOKEN }, failingN8n.url);
+  const response = await submit('main-contact', { email: 'ola@example.com', phone: '600100200', 'cf-turnstile-response': PASS_TOKEN }, failingN8n.url);
   assert.equal(response.status, 502);
-  const unreachable = await submit('main-contact', { email: 'ola@example.com', 'cf-turnstile-response': PASS_TOKEN }, 'http://127.0.0.1:9/');
+  const unreachable = await submit('main-contact', { email: 'ola@example.com', phone: '600100200', 'cf-turnstile-response': PASS_TOKEN }, 'http://127.0.0.1:9/');
   assert.equal(unreachable.status, 502);
 });
 

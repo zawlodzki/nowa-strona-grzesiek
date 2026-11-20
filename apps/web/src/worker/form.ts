@@ -141,6 +141,8 @@ export async function handleForm(request: Request, env: FormEnv): Promise<Respon
 
   const email = submitted.get('email');
   if (typeof email !== 'string' || !/^[^\s@]+@[^\s@]+$/.test(email.trim())) return failure('bad-request', text(400, 'Podaj poprawny adres e-mail.'));
+  const phone = submitted.get('phone');
+  if (FORMS[key].fields.some(([name]) => name === 'phone') && (typeof phone !== 'string' || phone.trim() === '')) return failure('bad-request', text(400, 'Podaj numer telefonu.'));
 
   const token = submitted.get(TURNSTILE_FIELD);
   const verification = typeof token === 'string' && token !== ''

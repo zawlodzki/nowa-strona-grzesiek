@@ -26,9 +26,9 @@ const defaults = {
   formHeading: 'Formularz kontaktowy',
   emailLabel: 'E-mail',
   emailPlaceholder: 'nazwa@firma.pl',
-  requiredMarker: '(wymagane)',
+  optionalMarker: '(opcjonalnie)',
   phoneLabel: 'Telefon',
-  phonePlaceholder: 'Jeśli wolisz, żebym zadzwonił',
+  phonePlaceholder: '600 100 200',
   messageLabel: 'Temat rozmowy',
   messagePlaceholder: 'W czym mogę pomóc? Wystarczy jedno zdanie.',
   privacyNote: 'Twoich danych użyjemy tylko po to, żeby odpowiedzieć na zgłoszenie i umówić rozmowę. Administratorem danych jest Wellbiz sp. z o.o. Szczegóły:',
@@ -38,6 +38,7 @@ const defaults = {
 };
 const copy = Object.fromEntries(Object.entries(defaults).map(([key, value]) => [key, (data.copy?.[key as keyof typeof defaults] ?? '').trim() || value])) as typeof defaults;
 const emailError = 'Wpisz adres e-mail, na który mam odpowiedzieć, np. nazwa@firma.pl.';
+const phoneError = 'Wpisz numer telefonu, pod który mogę oddzwonić.';
 const privacyHref = safeHref(data.copy?.privacyLink?.href);
 const privacyLink = privacyHref && data.copy?.privacyLink?.label?.trim() ? { href: privacyHref, label: data.copy.privacyLink.label } : { href: '/polityka-prywatnosci', label: 'Polityka prywatności' };
 
@@ -87,16 +88,17 @@ const icons: Record<string, string> = {
         {!full && <FormHeading id={pageHeadingId(Astro.locals, copy.formHeading)} class="form-heading">{copy.formHeading}</FormHeading>}
         <div class="fields">
           <div class="field">
-            <label class="type-body-s" for={f('email')}>{copy.emailLabel}{' '}<span class="required">{copy.requiredMarker}</span></label>
+            <label class="type-body-s" for={f('email')}>{copy.emailLabel}</label>
             <input id={f('email')} name="email" placeholder={copy.emailPlaceholder} type="email" autocomplete="email" maxlength="256" required aria-describedby={f('email-error')} data-error={emailError} />
             <p id={f('email-error')} class="field-error type-body-s"></p>
           </div>
           <div class="field">
             <label class="type-body-s" for={f('phone')}>{copy.phoneLabel}</label>
-            <input id={f('phone')} name="phone" placeholder={copy.phonePlaceholder} type="tel" autocomplete="tel" maxlength="256" />
+            <input id={f('phone')} name="phone" placeholder={copy.phonePlaceholder} type="tel" autocomplete="tel" maxlength="256" required aria-describedby={f('phone-error')} data-error={phoneError} />
+            <p id={f('phone-error')} class="field-error type-body-s"></p>
           </div>
           <div class="field">
-            <label class="type-body-s" for={f('message')}>{copy.messageLabel}</label>
+            <label class="type-body-s" for={f('message')}>{copy.messageLabel}{' '}<span class="optional">{copy.optionalMarker}</span></label>
             <textarea id={f('message')} name="message" placeholder={copy.messagePlaceholder} maxlength="5000"></textarea>
           </div>
         </div>
