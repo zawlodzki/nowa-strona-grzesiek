@@ -1,0 +1,1295 @@
+{
+  "signatures": {
+    "375": {
+      "box": {
+        "left": 40,
+        "top": 719,
+        "width": 138,
+        "height": 45
+      },
+      "rgb": [
+        58,
+        72,
+        204
+      ],
+      "positive": 0.867
+    },
+    "1280": {
+      "box": {
+        "left": 48,
+        "top": 716,
+        "width": 236,
+        "height": 40
+      },
+      "rgb": [
+        58,
+        72,
+        204
+      ],
+      "positive": 0.919
+    }
+  },
+  "runs": [
+    {
+      "label": "before-local-reject-375",
+      "origin": "http://127.0.0.1:8790",
+      "width": 375,
+      "choice": "reject",
+      "documents": [
+        {
+          "path": "/",
+          "mountedAt": 1044,
+          "maxOpacity": 1,
+          "atSwap": 1,
+          "atReveal": 0,
+          "transition": {
+            "present": false
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        },
+        {
+          "path": "/o-mnie",
+          "mountedAt": 924,
+          "maxOpacity": 1,
+          "atSwap": null,
+          "atReveal": 0,
+          "transition": {
+            "present": true,
+            "animations": [
+              {
+                "pseudo": "::view-transition-group(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-group(site-header)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              }
+            ]
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        }
+      ],
+      "frames": 39,
+      "framesWithBanner": [
+        "017.png",
+        "018.png",
+        "019.png",
+        "020.png",
+        "021.png",
+        "022.png",
+        "023.png",
+        "036.png",
+        "037.png",
+        "038.png",
+        "039.png"
+      ],
+      "medianFrameGapMs": 17,
+      "windowMs": [
+        -151,
+        1304
+      ],
+      "blockedThirdParty": [
+        "www.googletagmanager.com"
+      ],
+      "scores": [
+        {
+          "frame": "001.png",
+          "ms": -151,
+          "bannerScore": 0
+        },
+        {
+          "frame": "002.png",
+          "ms": -129,
+          "bannerScore": 0
+        },
+        {
+          "frame": "003.png",
+          "ms": -112,
+          "bannerScore": 0
+        },
+        {
+          "frame": "004.png",
+          "ms": -95,
+          "bannerScore": 0
+        },
+        {
+          "frame": "005.png",
+          "ms": -79,
+          "bannerScore": 0
+        },
+        {
+          "frame": "006.png",
+          "ms": -62,
+          "bannerScore": 0
+        },
+        {
+          "frame": "007.png",
+          "ms": -46,
+          "bannerScore": 0
+        },
+        {
+          "frame": "008.png",
+          "ms": -29,
+          "bannerScore": 0
+        },
+        {
+          "frame": "009.png",
+          "ms": -12,
+          "bannerScore": 0
+        },
+        {
+          "frame": "010.png",
+          "ms": 4,
+          "bannerScore": 0
+        },
+        {
+          "frame": "011.png",
+          "ms": 21,
+          "bannerScore": 0
+        },
+        {
+          "frame": "012.png",
+          "ms": 38,
+          "bannerScore": 0
+        },
+        {
+          "frame": "013.png",
+          "ms": 54,
+          "bannerScore": 0
+        },
+        {
+          "frame": "014.png",
+          "ms": 71,
+          "bannerScore": 0
+        },
+        {
+          "frame": "015.png",
+          "ms": 88,
+          "bannerScore": 0
+        },
+        {
+          "frame": "016.png",
+          "ms": 104,
+          "bannerScore": 0
+        },
+        {
+          "frame": "017.png",
+          "ms": 121,
+          "bannerScore": 0.778
+        },
+        {
+          "frame": "018.png",
+          "ms": 138,
+          "bannerScore": 0.839
+        },
+        {
+          "frame": "019.png",
+          "ms": 154,
+          "bannerScore": 0.867
+        },
+        {
+          "frame": "020.png",
+          "ms": 171,
+          "bannerScore": 0.867
+        },
+        {
+          "frame": "021.png",
+          "ms": 271,
+          "bannerScore": 0.867
+        },
+        {
+          "frame": "022.png",
+          "ms": 288,
+          "bannerScore": 0.867
+        },
+        {
+          "frame": "023.png",
+          "ms": 338,
+          "bannerScore": 0.867
+        },
+        {
+          "frame": "024.png",
+          "ms": 354,
+          "bannerScore": 0.022
+        },
+        {
+          "frame": "025.png",
+          "ms": 371,
+          "bannerScore": 0.01
+        },
+        {
+          "frame": "026.png",
+          "ms": 388,
+          "bannerScore": 0.007
+        },
+        {
+          "frame": "027.png",
+          "ms": 404,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "028.png",
+          "ms": 421,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "029.png",
+          "ms": 438,
+          "bannerScore": 0
+        },
+        {
+          "frame": "030.png",
+          "ms": 454,
+          "bannerScore": 0
+        },
+        {
+          "frame": "031.png",
+          "ms": 471,
+          "bannerScore": 0
+        },
+        {
+          "frame": "032.png",
+          "ms": 488,
+          "bannerScore": 0
+        },
+        {
+          "frame": "033.png",
+          "ms": 504,
+          "bannerScore": 0
+        },
+        {
+          "frame": "034.png",
+          "ms": 1221,
+          "bannerScore": 0.005
+        },
+        {
+          "frame": "035.png",
+          "ms": 1238,
+          "bannerScore": 0.025
+        },
+        {
+          "frame": "036.png",
+          "ms": 1254,
+          "bannerScore": 0.783
+        },
+        {
+          "frame": "037.png",
+          "ms": 1271,
+          "bannerScore": 0.839
+        },
+        {
+          "frame": "038.png",
+          "ms": 1288,
+          "bannerScore": 0.867
+        },
+        {
+          "frame": "039.png",
+          "ms": 1304,
+          "bannerScore": 0.867
+        }
+      ]
+    },
+    {
+      "label": "after-reject-375",
+      "origin": "https://zawlodzki-web.zawlodzki.workers.dev",
+      "width": 375,
+      "choice": "reject",
+      "documents": [
+        {
+          "path": "/",
+          "mountedAt": null,
+          "maxOpacity": 0,
+          "atSwap": 0,
+          "atReveal": 0,
+          "transition": {
+            "present": false
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        },
+        {
+          "path": "/o-mnie",
+          "mountedAt": null,
+          "maxOpacity": 0,
+          "atSwap": null,
+          "atReveal": 0,
+          "transition": {
+            "present": true,
+            "animations": [
+              {
+                "pseudo": "::view-transition-group(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-group(site-header)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              }
+            ]
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        }
+      ],
+      "frames": 30,
+      "framesWithBanner": [],
+      "medianFrameGapMs": 17,
+      "windowMs": [
+        -150,
+        570
+      ],
+      "blockedThirdParty": [
+        "www.googletagmanager.com"
+      ],
+      "scores": [
+        {
+          "frame": "001.png",
+          "ms": -150,
+          "bannerScore": 0
+        },
+        {
+          "frame": "002.png",
+          "ms": -130,
+          "bannerScore": 0
+        },
+        {
+          "frame": "003.png",
+          "ms": -113,
+          "bannerScore": 0
+        },
+        {
+          "frame": "004.png",
+          "ms": -96,
+          "bannerScore": 0
+        },
+        {
+          "frame": "005.png",
+          "ms": -80,
+          "bannerScore": 0
+        },
+        {
+          "frame": "006.png",
+          "ms": -63,
+          "bannerScore": 0
+        },
+        {
+          "frame": "007.png",
+          "ms": -46,
+          "bannerScore": 0
+        },
+        {
+          "frame": "008.png",
+          "ms": -30,
+          "bannerScore": 0
+        },
+        {
+          "frame": "009.png",
+          "ms": -13,
+          "bannerScore": 0
+        },
+        {
+          "frame": "010.png",
+          "ms": 4,
+          "bannerScore": 0
+        },
+        {
+          "frame": "011.png",
+          "ms": 20,
+          "bannerScore": 0
+        },
+        {
+          "frame": "012.png",
+          "ms": 37,
+          "bannerScore": 0
+        },
+        {
+          "frame": "013.png",
+          "ms": 54,
+          "bannerScore": 0
+        },
+        {
+          "frame": "014.png",
+          "ms": 70,
+          "bannerScore": 0
+        },
+        {
+          "frame": "015.png",
+          "ms": 87,
+          "bannerScore": 0
+        },
+        {
+          "frame": "016.png",
+          "ms": 104,
+          "bannerScore": 0
+        },
+        {
+          "frame": "017.png",
+          "ms": 120,
+          "bannerScore": 0
+        },
+        {
+          "frame": "018.png",
+          "ms": 270,
+          "bannerScore": 0
+        },
+        {
+          "frame": "019.png",
+          "ms": 370,
+          "bannerScore": 0
+        },
+        {
+          "frame": "020.png",
+          "ms": 387,
+          "bannerScore": 0
+        },
+        {
+          "frame": "021.png",
+          "ms": 404,
+          "bannerScore": 0
+        },
+        {
+          "frame": "022.png",
+          "ms": 420,
+          "bannerScore": 0
+        },
+        {
+          "frame": "023.png",
+          "ms": 437,
+          "bannerScore": 0
+        },
+        {
+          "frame": "024.png",
+          "ms": 454,
+          "bannerScore": 0
+        },
+        {
+          "frame": "025.png",
+          "ms": 470,
+          "bannerScore": 0
+        },
+        {
+          "frame": "026.png",
+          "ms": 487,
+          "bannerScore": 0
+        },
+        {
+          "frame": "027.png",
+          "ms": 504,
+          "bannerScore": 0
+        },
+        {
+          "frame": "028.png",
+          "ms": 520,
+          "bannerScore": 0
+        },
+        {
+          "frame": "029.png",
+          "ms": 537,
+          "bannerScore": 0
+        },
+        {
+          "frame": "030.png",
+          "ms": 570,
+          "bannerScore": 0
+        }
+      ],
+      "anchors": [
+        {
+          "id": "crm",
+          "hash": "#crm",
+          "top": 61,
+          "headerBottom": 61
+        },
+        {
+          "id": "ai",
+          "hash": "#ai",
+          "top": 61,
+          "headerBottom": 61
+        },
+        {
+          "id": "automatyzacja",
+          "hash": "#automatyzacja",
+          "top": 61,
+          "headerBottom": 61
+        },
+        {
+          "id": "asana",
+          "hash": "#asana",
+          "top": 61,
+          "headerBottom": 61
+        }
+      ],
+      "back": {
+        "path": "/",
+        "persisted": true,
+        "stuckTransition": false,
+        "bannerVisible": false
+      },
+      "forward": {
+        "path": "/o-mnie",
+        "persisted": true,
+        "stuckTransition": false,
+        "bannerVisible": false
+      },
+      "menu": "open, Escape closes, navigated via first link (frames above)",
+      "reducedMotion": {
+        "matches": true,
+        "present": false
+      }
+    },
+    {
+      "label": "after-accept-375",
+      "origin": "https://zawlodzki-web.zawlodzki.workers.dev",
+      "width": 375,
+      "choice": "accept",
+      "documents": [
+        {
+          "path": "/",
+          "mountedAt": null,
+          "maxOpacity": 0,
+          "atSwap": 0,
+          "atReveal": 0,
+          "transition": {
+            "present": false
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        },
+        {
+          "path": "/o-mnie",
+          "mountedAt": null,
+          "maxOpacity": 0,
+          "atSwap": null,
+          "atReveal": 0,
+          "transition": {
+            "present": true,
+            "animations": [
+              {
+                "pseudo": "::view-transition-group(site-header)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-group(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              }
+            ]
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        }
+      ],
+      "frames": 31,
+      "framesWithBanner": [],
+      "medianFrameGapMs": 17,
+      "windowMs": [
+        -151,
+        505
+      ],
+      "blockedThirdParty": [
+        "www.googletagmanager.com"
+      ],
+      "scores": [
+        {
+          "frame": "001.png",
+          "ms": -151,
+          "bannerScore": 0
+        },
+        {
+          "frame": "002.png",
+          "ms": -128,
+          "bannerScore": 0
+        },
+        {
+          "frame": "003.png",
+          "ms": -111,
+          "bannerScore": 0
+        },
+        {
+          "frame": "004.png",
+          "ms": -95,
+          "bannerScore": 0
+        },
+        {
+          "frame": "005.png",
+          "ms": -78,
+          "bannerScore": 0
+        },
+        {
+          "frame": "006.png",
+          "ms": -61,
+          "bannerScore": 0
+        },
+        {
+          "frame": "007.png",
+          "ms": -45,
+          "bannerScore": 0
+        },
+        {
+          "frame": "008.png",
+          "ms": -28,
+          "bannerScore": 0
+        },
+        {
+          "frame": "009.png",
+          "ms": -11,
+          "bannerScore": 0
+        },
+        {
+          "frame": "010.png",
+          "ms": 5,
+          "bannerScore": 0
+        },
+        {
+          "frame": "011.png",
+          "ms": 22,
+          "bannerScore": 0
+        },
+        {
+          "frame": "012.png",
+          "ms": 39,
+          "bannerScore": 0
+        },
+        {
+          "frame": "013.png",
+          "ms": 55,
+          "bannerScore": 0
+        },
+        {
+          "frame": "014.png",
+          "ms": 72,
+          "bannerScore": 0
+        },
+        {
+          "frame": "015.png",
+          "ms": 89,
+          "bannerScore": 0
+        },
+        {
+          "frame": "016.png",
+          "ms": 105,
+          "bannerScore": 0
+        },
+        {
+          "frame": "017.png",
+          "ms": 122,
+          "bannerScore": 0
+        },
+        {
+          "frame": "018.png",
+          "ms": 139,
+          "bannerScore": 0
+        },
+        {
+          "frame": "019.png",
+          "ms": 272,
+          "bannerScore": 0
+        },
+        {
+          "frame": "020.png",
+          "ms": 289,
+          "bannerScore": 0
+        },
+        {
+          "frame": "021.png",
+          "ms": 339,
+          "bannerScore": 0
+        },
+        {
+          "frame": "022.png",
+          "ms": 355,
+          "bannerScore": 0
+        },
+        {
+          "frame": "023.png",
+          "ms": 372,
+          "bannerScore": 0
+        },
+        {
+          "frame": "024.png",
+          "ms": 389,
+          "bannerScore": 0
+        },
+        {
+          "frame": "025.png",
+          "ms": 405,
+          "bannerScore": 0
+        },
+        {
+          "frame": "026.png",
+          "ms": 422,
+          "bannerScore": 0
+        },
+        {
+          "frame": "027.png",
+          "ms": 439,
+          "bannerScore": 0
+        },
+        {
+          "frame": "028.png",
+          "ms": 455,
+          "bannerScore": 0
+        },
+        {
+          "frame": "029.png",
+          "ms": 472,
+          "bannerScore": 0
+        },
+        {
+          "frame": "030.png",
+          "ms": 489,
+          "bannerScore": 0
+        },
+        {
+          "frame": "031.png",
+          "ms": 505,
+          "bannerScore": 0
+        }
+      ]
+    },
+    {
+      "label": "before-local-reject-1280",
+      "origin": "http://127.0.0.1:8790",
+      "width": 1280,
+      "choice": "reject",
+      "documents": [
+        {
+          "path": "/",
+          "mountedAt": null,
+          "maxOpacity": 0,
+          "atSwap": 0,
+          "atReveal": 0,
+          "transition": {
+            "present": false
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        },
+        {
+          "path": "/o-mnie",
+          "mountedAt": 976,
+          "maxOpacity": 1,
+          "atSwap": null,
+          "atReveal": 0,
+          "transition": {
+            "present": true,
+            "animations": [
+              {
+                "pseudo": "::view-transition-group(site-header)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-group(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              }
+            ]
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        }
+      ],
+      "frames": 19,
+      "framesWithBanner": [],
+      "medianFrameGapMs": 17,
+      "windowMs": [
+        -155,
+        1150
+      ],
+      "blockedThirdParty": [
+        "www.googletagmanager.com"
+      ],
+      "scores": [
+        {
+          "frame": "001.png",
+          "ms": -155,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "002.png",
+          "ms": 83,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "003.png",
+          "ms": 150,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "004.png",
+          "ms": 167,
+          "bannerScore": 0
+        },
+        {
+          "frame": "005.png",
+          "ms": 183,
+          "bannerScore": 0
+        },
+        {
+          "frame": "006.png",
+          "ms": 200,
+          "bannerScore": 0
+        },
+        {
+          "frame": "007.png",
+          "ms": 217,
+          "bannerScore": 0
+        },
+        {
+          "frame": "008.png",
+          "ms": 233,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "009.png",
+          "ms": 250,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "010.png",
+          "ms": 267,
+          "bannerScore": 0.003
+        },
+        {
+          "frame": "011.png",
+          "ms": 283,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "012.png",
+          "ms": 300,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "013.png",
+          "ms": 317,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "014.png",
+          "ms": 333,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "015.png",
+          "ms": 1083,
+          "bannerScore": 0.005
+        },
+        {
+          "frame": "016.png",
+          "ms": 1100,
+          "bannerScore": 0.016
+        },
+        {
+          "frame": "017.png",
+          "ms": 1117,
+          "bannerScore": 0.388
+        },
+        {
+          "frame": "018.png",
+          "ms": 1133,
+          "bannerScore": 0.418
+        },
+        {
+          "frame": "019.png",
+          "ms": 1150,
+          "bannerScore": 0.429
+        }
+      ]
+    },
+    {
+      "label": "after-reject-1280",
+      "origin": "https://zawlodzki-web.zawlodzki.workers.dev",
+      "width": 1280,
+      "choice": "reject",
+      "documents": [
+        {
+          "path": "/",
+          "mountedAt": null,
+          "maxOpacity": 0,
+          "atSwap": 0,
+          "atReveal": 0,
+          "transition": {
+            "present": false
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        },
+        {
+          "path": "/o-mnie",
+          "mountedAt": null,
+          "maxOpacity": 0,
+          "atSwap": null,
+          "atReveal": 0,
+          "transition": {
+            "present": true,
+            "animations": [
+              {
+                "pseudo": "::view-transition-group(site-header)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-group(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              }
+            ]
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        }
+      ],
+      "frames": 13,
+      "framesWithBanner": [],
+      "medianFrameGapMs": 33,
+      "windowMs": [
+        -150,
+        416
+      ],
+      "blockedThirdParty": [
+        "www.googletagmanager.com"
+      ],
+      "scores": [
+        {
+          "frame": "001.png",
+          "ms": -150,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "002.png",
+          "ms": 83,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "003.png",
+          "ms": 116,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "004.png",
+          "ms": 216,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "005.png",
+          "ms": 250,
+          "bannerScore": 0
+        },
+        {
+          "frame": "006.png",
+          "ms": 283,
+          "bannerScore": 0
+        },
+        {
+          "frame": "007.png",
+          "ms": 316,
+          "bannerScore": 0
+        },
+        {
+          "frame": "008.png",
+          "ms": 333,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "009.png",
+          "ms": 350,
+          "bannerScore": 0.003
+        },
+        {
+          "frame": "010.png",
+          "ms": 366,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "011.png",
+          "ms": 383,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "012.png",
+          "ms": 400,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "013.png",
+          "ms": 416,
+          "bannerScore": 0.002
+        }
+      ],
+      "anchors": [
+        {
+          "id": "crm",
+          "hash": "#crm",
+          "top": 72,
+          "headerBottom": 72
+        },
+        {
+          "id": "ai",
+          "hash": "#ai",
+          "top": 72,
+          "headerBottom": 72
+        },
+        {
+          "id": "automatyzacja",
+          "hash": "#automatyzacja",
+          "top": 72,
+          "headerBottom": 72
+        },
+        {
+          "id": "asana",
+          "hash": "#asana",
+          "top": 72,
+          "headerBottom": 72
+        }
+      ],
+      "back": {
+        "path": "/",
+        "persisted": true,
+        "stuckTransition": false,
+        "bannerVisible": false
+      },
+      "forward": {
+        "path": "/o-mnie",
+        "persisted": true,
+        "stuckTransition": false,
+        "bannerVisible": false
+      },
+      "reducedMotion": {
+        "matches": true,
+        "present": false
+      }
+    },
+    {
+      "label": "after-accept-1280",
+      "origin": "https://zawlodzki-web.zawlodzki.workers.dev",
+      "width": 1280,
+      "choice": "accept",
+      "documents": [
+        {
+          "path": "/",
+          "mountedAt": null,
+          "maxOpacity": 0,
+          "atSwap": 0,
+          "atReveal": 0,
+          "transition": {
+            "present": false
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        },
+        {
+          "path": "/o-mnie",
+          "mountedAt": null,
+          "maxOpacity": 0,
+          "atSwap": null,
+          "atReveal": 0,
+          "transition": {
+            "present": true,
+            "animations": [
+              {
+                "pseudo": "::view-transition-group(site-header)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-group(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-new(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              },
+              {
+                "pseudo": "::view-transition-old(root)",
+                "duration": 150
+              }
+            ]
+          },
+          "show": {
+            "persisted": false,
+            "type": "navigate"
+          }
+        }
+      ],
+      "frames": 12,
+      "framesWithBanner": [],
+      "medianFrameGapMs": 17,
+      "windowMs": [
+        -150,
+        448
+      ],
+      "blockedThirdParty": [
+        "www.googletagmanager.com"
+      ],
+      "scores": [
+        {
+          "frame": "001.png",
+          "ms": -150,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "002.png",
+          "ms": 98,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "003.png",
+          "ms": 248,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "004.png",
+          "ms": 264,
+          "bannerScore": 0
+        },
+        {
+          "frame": "005.png",
+          "ms": 281,
+          "bannerScore": 0
+        },
+        {
+          "frame": "006.png",
+          "ms": 314,
+          "bannerScore": 0
+        },
+        {
+          "frame": "007.png",
+          "ms": 331,
+          "bannerScore": 0.001
+        },
+        {
+          "frame": "008.png",
+          "ms": 364,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "009.png",
+          "ms": 381,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "010.png",
+          "ms": 398,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "011.png",
+          "ms": 431,
+          "bannerScore": 0.002
+        },
+        {
+          "frame": "012.png",
+          "ms": 448,
+          "bannerScore": 0.002
+        }
+      ]
+    }
+  ]
+}

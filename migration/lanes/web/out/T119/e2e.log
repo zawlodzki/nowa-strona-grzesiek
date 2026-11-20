@@ -1,0 +1,43 @@
+$ playwright test
+[WebServer] (node:543736) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] mock n8n listening on http://127.0.0.1:8794/webhook/mock
+[WebServer] ▲ [WARNING] Missing required secrets: N8N_FORM_WEBHOOK, TURNSTILE_SECRET_KEY. Add them to .dev.vars, .env, or set as environment variables.
+[WebServer] 
+[WebServer] 
+
+Running 27 tests using 2 workers
+
+(node:543793) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:543794) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › e2e/consent.spec.ts:14:1 › first visit: Consent Mode v2 denies analytics and ads before the loader, and only GTM is requested (2.0s)
+  ✓   2 [chromium] › e2e/consent.spec.ts:39:1 › rejecting optional consent keeps analytics and ads denied and requests nothing new (3.0s)
+  ✓   3 [chromium] › e2e/forms.spec.ts:24:3 › main-contact form delivers the Webflow envelope to n8n and lands on the thank-you page (3.3s)
+  ✓   4 [chromium] › e2e/nav.spec.ts:3:1 › mobile native dismissal, focus return and resize (3.1s)
+  ✓   6 [chromium] › e2e/nav.spec.ts:38:3 › without JavaScript › mobile menu opens and dismisses natively (1.1s)
+  ✓   5 [chromium] › e2e/forms.spec.ts:46:5 › main-contact form with an empty e-mail posts nothing (2.1s)
+  ✓   7 [chromium] › e2e/nav.spec.ts:55:1 › desktop links render inline (712ms)
+  ✓   8 [chromium] › e2e/forms.spec.ts:46:5 › main-contact form with an invalid e-mail posts nothing (1.9s)
+  ✓   9 [chromium] › e2e/pages.spec.ts:42:3 › home: no axe violation outside the recorded baseline (2.1s)
+  ✓  11 [chromium] › e2e/pages.spec.ts:48:3 › home: no horizontal overflow at 320 px (1.1s)
+  ✓  10 [chromium] › e2e/forms.spec.ts:24:3 › newsletter form delivers the Webflow envelope to n8n and lands on the thank-you page (3.1s)
+  ✓  12 [chromium] › e2e/pages.spec.ts:42:3 › service: no axe violation outside the recorded baseline (1.9s)
+  ✓  13 [chromium] › e2e/forms.spec.ts:46:5 › newsletter form with an empty e-mail posts nothing (1.7s)
+  ✓  14 [chromium] › e2e/pages.spec.ts:48:3 › service: no horizontal overflow at 320 px (1.2s)
+  ✓  15 [chromium] › e2e/forms.spec.ts:46:5 › newsletter form with an invalid e-mail posts nothing (1.8s)
+  ✓  16 [chromium] › e2e/pages.spec.ts:42:3 › blog: no axe violation outside the recorded baseline (2.0s)
+  ✓  17 [chromium] › e2e/forms.spec.ts:65:1 › the outbound guard stops and reports a request to flows.zawlodzki.com (597ms)
+  ✓  18 [chromium] › e2e/pages.spec.ts:48:3 › blog: no horizontal overflow at 320 px (1.2s)
+  ✓  19 [chromium] › e2e/pages.spec.ts:42:3 › post: no axe violation outside the recorded baseline (2.0s)
+  ✓  20 [chromium] › e2e/pages.spec.ts:48:3 › post: no horizontal overflow at 320 px (1.2s)
+  ✓  22 [chromium] › e2e/pages.spec.ts:48:3 › contact: no horizontal overflow at 320 px (1.2s)
+  ✓  21 [chromium] › e2e/pages.spec.ts:42:3 › contact: no axe violation outside the recorded baseline (2.0s)
+  ✓  24 [chromium] › e2e/pages.spec.ts:65:3 › /szkolenie-i-wdrozenie-asana: testimonial logos invert exactly when the same artwork is inverted in the logo strip (516ms)
+  ✓  25 [chromium] › e2e/pages.spec.ts:65:3 › /: testimonial logos invert exactly when the same artwork is inverted in the logo strip (712ms)
+  ✓  23 [chromium] › e2e/pages.spec.ts:57:1 › consent banner: axe violations stay within the recorded baseline (2.8s)
+  ✓  26 [chromium] › e2e/speculation.spec.ts:6:1 › document rule is valid and consent defaults remain first (866ms)
+  ✓  27 [chromium] › e2e/speculation.spec.ts:23:1 › Chrome hover prefetches HTML and excludes unsafe links (7.3s)
+
+  27 passed (32.7s)

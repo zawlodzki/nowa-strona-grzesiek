@@ -1,0 +1,194 @@
+[
+  {
+    "width": 375,
+    "mode": "normal",
+    "navStable": true,
+    "nav": {
+      "label": "O mnie",
+      "decoration": "underline",
+      "color": "oklch(0.16817 0.00448 264.447)",
+      "background": "oklch(1 0 none)"
+    }
+  },
+  {
+    "width": 375,
+    "mode": "normal",
+    "tab": {
+      "color": "oklch(1 0 none)",
+      "background": "oklch(0.47807 0.20192 271.544)",
+      "border": "3px",
+      "indicatorColor": "oklch(1 0 none)",
+      "position": "absolute",
+      "deltaWidth": 0,
+      "deltaX": 0
+    }
+  },
+  {
+    "width": 375,
+    "mode": "normal",
+    "metrics": {
+      "contrast": 7.049864343691391,
+      "noIndicatorLayoutShift": true
+    }
+  },
+  {
+    "width": 375,
+    "mode": "grayscale",
+    "navStable": true,
+    "nav": {
+      "label": "O mnie",
+      "decoration": "underline",
+      "color": "oklch(0.16817 0.00448 264.447)",
+      "background": "oklch(1 0 none)"
+    }
+  },
+  {
+    "width": 375,
+    "mode": "grayscale",
+    "tab": {
+      "color": "oklch(1 0 none)",
+      "background": "oklch(0.47807 0.20192 271.544)",
+      "border": "3px",
+      "indicatorColor": "oklch(1 0 none)",
+      "position": "absolute",
+      "deltaWidth": 0,
+      "deltaX": 0
+    }
+  },
+  {
+    "width": 375,
+    "mode": "grayscale",
+    "metrics": {
+      "contrast": 7.049864343691391,
+      "noIndicatorLayoutShift": true
+    }
+  },
+  {
+    "width": 375,
+    "mode": "forced",
+    "navStable": true,
+    "nav": {
+      "label": "O mnie",
+      "decoration": "underline",
+      "color": "rgb(0, 0, 159)",
+      "background": "rgb(255, 255, 255)"
+    }
+  },
+  {
+    "width": 375,
+    "mode": "forced",
+    "tab": {
+      "color": "rgb(0, 0, 159)",
+      "background": "rgb(255, 255, 255)",
+      "border": "3px",
+      "indicatorColor": "rgb(0, 0, 159)",
+      "position": "absolute",
+      "deltaWidth": 0,
+      "deltaX": 0
+    }
+  },
+  {
+    "width": 375,
+    "mode": "forced",
+    "metrics": {
+      "contrast": 13.994023083921398,
+      "noIndicatorLayoutShift": true
+    }
+  },
+  {
+    "width": 1280,
+    "mode": "normal",
+    "navStable": true,
+    "nav": {
+      "label": "O mnie",
+      "decoration": "underline",
+      "color": "oklch(0.16817 0.00448 264.447)",
+      "background": "oklch(1 0 none)"
+    }
+  },
+  {
+    "width": 1280,
+    "mode": "normal",
+    "tab": {
+      "color": "oklch(1 0 none)",
+      "background": "oklch(0.47807 0.20192 271.544)",
+      "border": "3px",
+      "indicatorColor": "oklch(1 0 none)",
+      "position": "absolute",
+      "deltaWidth": 0,
+      "deltaX": 0
+    }
+  },
+  {
+    "width": 1280,
+    "mode": "normal",
+    "metrics": {
+      "contrast": 7.049864343691391,
+      "noIndicatorLayoutShift": true
+    }
+  },
+  {
+    "width": 1280,
+    "mode": "grayscale",
+    "navStable": true,
+    "nav": {
+      "label": "O mnie",
+      "decoration": "underline",
+      "color": "oklch(0.16817 0.00448 264.447)",
+      "background": "oklch(1 0 none)"
+    }
+  },
+  {
+    "width": 1280,
+    "mode": "grayscale",
+    "tab": {
+      "color": "oklch(1 0 none)",
+      "background": "oklch(0.47807 0.20192 271.544)",
+      "border": "3px",
+      "indicatorColor": "oklch(1 0 none)",
+      "position": "absolute",
+      "deltaWidth": 0,
+      "deltaX": 0
+    }
+  },
+  {
+    "width": 1280,
+    "mode": "grayscale",
+    "metrics": {
+      "contrast": 7.049864343691391,
+      "noIndicatorLayoutShift": true
+    }
+  },
+  {
+    "width": 1280,
+    "mode": "forced",
+    "navStable": true,
+    "nav": {
+      "label": "O mnie",
+      "decoration": "underline",
+      "color": "rgb(0, 0, 159)",
+      "background": "rgb(255, 255, 255)"
+    }
+  },
+  {
+    "width": 1280,
+    "mode": "forced",
+    "tab": {
+      "color": "rgb(0, 0, 159)",
+      "background": "rgb(255, 255, 255)",
+      "border": "3px",
+      "indicatorColor": "rgb(0, 0, 159)",
+      "position": "absolute",
+      "deltaWidth": 0,
+      "deltaX": 0
+    }
+  },
+  {
+    "width": 1280,
+    "mode": "forced",
+    "metrics": {
+      "contrast": 13.994023083921398,
+      "noIndicatorLayoutShift": true
+    }
+  }
+]

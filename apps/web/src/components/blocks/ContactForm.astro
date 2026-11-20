@@ -25,18 +25,20 @@ const f = (name: string) => `${id}-${name}`;
 const defaults = {
   formHeading: 'Formularz kontaktowy',
   emailLabel: 'E-mail',
-  emailPlaceholder: 'E-mail',
+  emailPlaceholder: 'nazwa@firma.pl',
   optionalMarker: '(opcjonalnie)',
   phoneLabel: 'Telefon',
-  phonePlaceholder: 'Telefon',
+  phonePlaceholder: '600 100 200',
   messageLabel: 'Temat rozmowy',
-  messagePlaceholder: 'Temat rozmowy',
+  messagePlaceholder: 'W czym mogę pomóc? Wystarczy jedno zdanie.',
   privacyNote: 'Twoich danych użyjemy tylko po to, żeby odpowiedzieć na zgłoszenie i umówić rozmowę. Administratorem danych jest Wellbiz sp. z o.o. Szczegóły:',
   newsletterLabel: 'Przy okazji wyślij mi raz w tygodniu nowości dotyczące nowych technologii w sprzedaży B2B. Bez spamu, wypiszesz się jednym kliknięciem.',
   submitLabel: 'Wyślij zapytanie',
   waitLabel: 'Zaczekaj chwilę…',
 };
 const copy = Object.fromEntries(Object.entries(defaults).map(([key, value]) => [key, (data.copy?.[key as keyof typeof defaults] ?? '').trim() || value])) as typeof defaults;
+const emailError = 'Wpisz adres e-mail, na który mam odpowiedzieć, np. nazwa@firma.pl.';
+const phoneError = 'Wpisz numer telefonu, pod który mogę oddzwonić.';
 const privacyHref = safeHref(data.copy?.privacyLink?.href);
 const privacyLink = privacyHref && data.copy?.privacyLink?.label?.trim() ? { href: privacyHref, label: data.copy.privacyLink.label } : { href: '/polityka-prywatnosci', label: 'Polityka prywatności' };
 
@@ -84,20 +86,26 @@ const icons: Record<string, string> = {
     {!channelsOnly && <div class:list={['card', { split: side, full }]}>
       <LeadForm form={form} id={f('form')} visible={['email', 'phone', 'message', 'newsletter']} submitLabel={copy.submitLabel} waitLabel={copy.waitLabel}>
         {!full && <FormHeading id={pageHeadingId(Astro.locals, copy.formHeading)} class="form-heading">{copy.formHeading}</FormHeading>}
-        <div class="field">
-          <label class="visually-hidden" for={f('email')}>{copy.emailLabel}</label>
-          <input id={f('email')} name="email" placeholder={copy.emailPlaceholder} type="email" autocomplete="email" maxlength="256" required />
+        <div class="fields">
+          <div class="field">
+            <label class="type-body-s" for={f('email')}>{copy.emailLabel}</label>
+            <input id={f('email')} name="email" placeholder={copy.emailPlaceholder} type="email" autocomplete="email" maxlength="256" required aria-describedby={f('email-error')} data-error={emailError} />
+            <p id={f('email-error')} class="field-error type-body-s"></p>
+          </div>
+          <div class="field">
+            <label class="type-body-s" for={f('phone')}>{copy.phoneLabel}</label>
+            <input id={f('phone')} name="phone" placeholder={copy.phonePlaceholder} type="tel" autocomplete="tel" maxlength="256" required aria-describedby={f('phone-error')} data-error={phoneError} />
+            <p id={f('phone-error')} class="field-error type-body-s"></p>
+          </div>
+          <div class="field">
+            <label class="type-body-s" for={f('message')}>{copy.messageLabel}{' '}<span class="optional">{copy.optionalMarker}</span></label>
+            <textarea id={f('message')} name="message" placeholder={copy.messagePlaceholder} maxlength="5000"></textarea>
+          </div>
         </div>
-        <div class="field">
-          <label class="visually-hidden" for={f('phone')}>{copy.phoneLabel}</label>
-          <input id={f('phone')} name="phone" placeholder={copy.phonePlaceholder} type="tel" autocomplete="tel" maxlength="256" required />
+        <div class="legal">
+          <p class="note type-body-s">{copy.privacyNote}{' '}<a href={privacyLink.href}>{privacyLink.label}</a>.</p>
+          <label class="check type-body-s"><input type="checkbox" name="newsletter" /><span>{copy.newsletterLabel}</span></label>
         </div>
-        <div class="field">
-          <label class="visually-hidden" for={f('message')}>{copy.messageLabel} {copy.optionalMarker}</label>
-          <textarea id={f('message')} name="message" placeholder={`${copy.messagePlaceholder} ${copy.optionalMarker}`} maxlength="5000"></textarea>
-        </div>
-        <p class="note type-body-s">{copy.privacyNote}{' '}<a href={privacyLink.href}>{privacyLink.label}</a>.</p>
-        <label class="check type-body-s"><input type="checkbox" name="newsletter" /><span>{copy.newsletterLabel}</span></label>
       </LeadForm>
       {side && (
         <div class="side">
@@ -178,14 +186,7 @@ const icons: Record<string, string> = {
   .inner { container-type: inline-size; display: grid; gap: var(--space-l); }
   .head { display: grid; gap: var(--space-2xs); max-inline-size: 40rem; }
   .inner.landing { gap: clamp(2rem, 1.58564rem + 1.76796vw, 3rem); }
-  .inner.landing > .head {
-    inline-size: 100%;
-    max-inline-size: 37.5rem;
-    margin-inline: auto;
-    justify-items: center;
-    text-align: center;
-    gap: clamp(1.25rem, 1.12051rem + .552486vw, 1.5625rem);
-  }
+  .inner.landing > .head { gap: clamp(1.25rem, 1.12051rem + .552486vw, 1.5625rem); }
   .form-heading {
     font-size: clamp(1.5rem, 1.344613rem + .662983vw, 1.875rem);
     font-weight: var(--font-weight-semibold);
@@ -194,7 +195,7 @@ const icons: Record<string, string> = {
   }
   .lines { white-space: pre-line; }
   .card {
-    --lead-form-gap: clamp(.5rem, .39640884rem + .44198895vw, .75rem);
+    --lead-form-gap: var(--space-xl);
     display: grid;
     gap: var(--space-xl);
     padding: var(--layout-box-pad);
@@ -204,13 +205,26 @@ const icons: Record<string, string> = {
   @container (width >= 48rem) {
     .split { grid-template-columns: 1.4fr 1fr; gap: var(--space-2xl); }
   }
-  .card.full { --lead-form-gap: var(--space-2xs); }
+  .fields { display: grid; gap: var(--space-m); }
+  .legal { display: grid; gap: var(--space-s); }
   .side { display: grid; gap: var(--space-xl); align-content: start; }
   .note-block { display: grid; gap: var(--space-2xs); }
   .strong-link { font-weight: var(--font-weight-medium); }
-  .details { display: grid; gap: var(--space-xs); align-content: start; }
-  /* Live renders 169px at 1280 and 59px at 375; preserve our existing columns. */
-  .portrait { inline-size: clamp(3.6875rem, .84rem + 12.15vw, 10.56rem); max-inline-size: 100%; border-radius: 0; block-size: auto; aspect-ratio: 1; object-fit: cover; margin-block-end: var(--space-xs); }
+  .details { display: grid; grid-template-columns: auto 1fr; gap: var(--space-3xs) var(--space-s); align-content: start; align-items: center; }
+  .details > :not(.portrait) { grid-column: 2; }
+  .details > .channel-rows { grid-column: 1 / -1; margin-block-start: var(--space-xs); }
+  .portrait {
+    grid-row: 1 / span 2;
+    inline-size: clamp(4rem, 3.5rem + 2vw, 5.5rem);
+    block-size: auto;
+    aspect-ratio: 1;
+    border-radius: var(--radius-round);
+    object-fit: cover;
+    outline: var(--border-width-hairline) solid var(--border-hairline);
+    outline-offset: calc(-1 * var(--border-width-hairline));
+  }
+  .details h3 { align-self: end; }
+  .details h3 + p { align-self: start; }
   .channel-rows { display: grid; gap: var(--space-3xs); margin: 0; padding: 0; list-style: none; }
   .channel-rows a { min-block-size: 44px; align-items: center; font-weight: var(--font-weight-medium); overflow-wrap: anywhere; }
   .channel-rows a { color: var(--text-link); text-decoration: none; }

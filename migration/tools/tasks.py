@@ -13,7 +13,7 @@ import re
 import sys
 
 TASKS = pathlib.Path(__file__).resolve().parents[1] / "tasks"
-STATUSES = ("todo", "claimed", "review", "done", "blocked")
+STATUSES = ("todo", "claimed", "review", "done", "blocked", "cancelled")
 ACTIVE = ("claimed", "review")
 
 

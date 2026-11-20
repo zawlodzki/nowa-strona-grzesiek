@@ -1,0 +1,204 @@
+{
+  "375": {
+    "selected": [],
+    "hidden": [
+      null,
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found"
+    ],
+    "controls": 0,
+    "hiddenRects": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "1280": {
+    "scroll": "true",
+    "selected": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "hidden": [
+      null,
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found"
+    ],
+    "controls": 0,
+    "hiddenRects": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "before": {
+    "scroll": "true",
+    "selected": 0,
+    "hidden": [
+      null,
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found"
+    ],
+    "matches": [],
+    "scrollY": 810
+  },
+  "after": {
+    "scroll": "true",
+    "selected": 1,
+    "hidden": [
+      "until-found",
+      null,
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found"
+    ],
+    "matches": [
+      {
+        "trusted": true,
+        "id": "tabs-75b27b3ccc48-panel-1"
+      }
+    ],
+    "scrollY": 1080
+  },
+  "end": {
+    "scroll": "true",
+    "selected": 8,
+    "hidden": [
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      null
+    ],
+    "matches": [
+      {
+        "trusted": true,
+        "id": "tabs-75b27b3ccc48-panel-1"
+      }
+    ],
+    "scrollY": 2970
+  },
+  "home": {
+    "scroll": "true",
+    "selected": 0,
+    "hidden": [
+      null,
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found"
+    ],
+    "matches": [
+      {
+        "trusted": true,
+        "id": "tabs-75b27b3ccc48-panel-1"
+      }
+    ],
+    "scrollY": 810
+  },
+  "down": {
+    "scroll": "true",
+    "selected": 1,
+    "hidden": [
+      "until-found",
+      null,
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found"
+    ],
+    "matches": [
+      {
+        "trusted": true,
+        "id": "tabs-75b27b3ccc48-panel-1"
+      }
+    ],
+    "scrollY": 1080
+  },
+  "up": {
+    "scroll": "true",
+    "selected": 0,
+    "hidden": [
+      null,
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found",
+      "until-found"
+    ],
+    "matches": [
+      {
+        "trusted": true,
+        "id": "tabs-75b27b3ccc48-panel-1"
+      }
+    ],
+    "scrollY": 810
+  },
+  "noJS": {
+    "anchors": 9,
+    "hidden": 0,
+    "panels": 9
+  },
+  "mobileFind": {
+    "expanded": 1,
+    "matches": [
+      {
+        "trusted": true,
+        "id": "tabs-75b27b3ccc48-panel-1"
+      }
+    ]
+  }
+}

@@ -83,6 +83,15 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
     });
   }
 
+  // A control with data-error shows that message under itself instead of the browser bubble. Without this script
+  // the bubble stays, so the form is never left without feedback.
+  function setError(control: HTMLInputElement | HTMLTextAreaElement, invalid: boolean) {
+    const message = document.getElementById(control.getAttribute('aria-describedby') ?? '');
+    if (invalid) control.setAttribute('aria-invalid', 'true');
+    else control.removeAttribute('aria-invalid');
+    if (message) message.textContent = invalid ? control.dataset.error ?? '' : '';
+  }
+
   // Without this script the form still posts and the Worker answers with a 303 to the thank-you page.
   for (const form of document.querySelectorAll<HTMLFormElement>('form[data-lead-form]')) {
     const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
@@ -90,6 +99,21 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
     const widget = form.querySelector<HTMLElement>('.cf-turnstile');
     const label = button.querySelector<HTMLElement>('.action-label')!;
     const originalLabel = label.textContent;
+    form.addEventListener('invalid', (event) => {
+      const control = event.target as HTMLInputElement;
+      if (!control.dataset.error) return;
+      event.preventDefault();
+      setError(control, true);
+      if (form.querySelector(':invalid') === control) control.focus();
+    }, true);
+    form.addEventListener('input', (event) => {
+      const control = event.target as HTMLInputElement;
+      if (control.hasAttribute('aria-invalid') && control.validity.valid) setError(control, false);
+    });
+    form.addEventListener('focusout', (event) => {
+      const control = event.target as HTMLInputElement;
+      if (control.dataset.error && control.value !== '') setError(control, !control.validity.valid);
+    });
     for (const type of ['focusin', 'pointerdown']) form.addEventListener(type, () => void loadTurnstile(), { once: true });
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
@@ -116,7 +140,8 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
 <style>
   .lead-form {
     --form-field-size: clamp(1rem, .89640884rem + .44198895vw, 1.25rem);
-    --field-label: var(--text-heading);
+    --field-label: var(--text-body);
+    --field-error: var(--text-error);
     --field-note: var(--text-muted);
     display: grid;
     gap: var(--lead-form-gap, var(--space-s));
@@ -125,9 +150,10 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
   .dark {
     --field-label: var(--text-on-dark);
     --field-note: var(--text-on-dark-muted);
+    --field-error: var(--text-on-dark);
   }
 
-  .lead-form :global(.field) { display: grid; gap: var(--space-3xs); }
+  .lead-form :global(.field) { display: grid; gap: var(--space-2xs); }
   .lead-form :global(.field > label) { color: var(--field-label); font-weight: var(--font-weight-medium); }
   /* Same screen-reader-only pattern as Header; shared by both form sections. */
   .lead-form :global(.visually-hidden) {
@@ -162,7 +188,9 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x0000000000000000
   .lead-form :global(::placeholder) { color: var(--text-muted); opacity: 1; }
   .lead-form :global(:is(input, textarea):focus-visible) { outline: var(--border-width-button) solid var(--border-focus); outline-offset: 2px; }
   .dark :global(:is(input, textarea):focus-visible) { outline-color: var(--border-accent); }
-  .lead-form :global(:is(input, textarea):user-invalid) { border-color: var(--border-error); }
+  .lead-form :global(:is(input, textarea):is(:user-invalid, [aria-invalid="true"])) { border-color: var(--border-error); }
+  .lead-form :global(.field-error) { color: var(--field-error); font-weight: var(--font-weight-medium); }
+  .lead-form :global(.field-error:empty) { display: none; }
   @media (hover: hover) and (pointer: fine) {
     .lead-form :global(:is(input:not([type="checkbox"]):not([type="hidden"]), textarea):hover) { border-color: var(--border-hover); }
   }
