@@ -49,7 +49,14 @@ export const link = defineType({
 export const seo = defineType({
   name: 'seo', title: 'SEO', type: 'object',
   fields: [
-    defineField({name: 'title', title: 'Tytuł SEO', type: 'string', validation: (rule) => rule.required().min(1).max(60).regex(/\S/)}),
+    defineField({
+      name: 'title', title: 'Tytuł SEO', type: 'string',
+      description: 'Bez „| Grzegorz Zawłodzki”. Strona dopisuje go sama do tytułu w wynikach wyszukiwania i przy udostępnianiu.',
+      validation: (rule) => [
+        rule.required().min(1).max(60).regex(/\S/),
+        rule.custom((value) => typeof value !== 'string' || !/Zawłodzki\s*$|^\s*Grzegorz Zawłodzki\s*[|–—-]/.test(value) || 'Usuń nazwisko z tytułu. „ | Grzegorz Zawłodzki” dopisujemy automatycznie.').warning(),
+      ],
+    }),
     defineField({name: 'description', title: 'Opis SEO', type: 'text', rows: 3, validation: (rule) => rule.required().min(1).max(160).regex(/\S/)}),
     defineField({name: 'ogImage', title: 'Obraz udostępniania', type: 'contentImage'}),
     defineField({name: 'noindex', title: 'Wyklucz z indeksowania', type: 'boolean', initialValue: false}),

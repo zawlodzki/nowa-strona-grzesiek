@@ -6,8 +6,8 @@ import { resolveImage, type PageDoc, type PostDoc, type Site } from './site.ts';
 
 const HOME_NAME: Record<Language, string> = { pl: 'Strona główna', en: 'Home' };
 const BLOG = {
-  pl: { name: 'Blog Grzegorza Zawłodzkiego', crumb: 'Blog', pageLabel: 'strona', title: 'Blog | Grzegorz Zawłodzki', description: 'Artykuły o CRM, automatyzacji i AI w sprzedaży B2B: procesy, wdrożenia, narzędzia i praca zespołów handlowych.' },
-  en: { name: "Grzegorz Zawłodzki's blog", crumb: 'Blog', pageLabel: 'page', title: 'Blog | Grzegorz Zawłodzki', description: 'Articles on CRM, automation and AI in B2B sales.' },
+  pl: { name: 'Blog Grzegorza Zawłodzkiego', crumb: 'Blog', pageLabel: 'strona', title: 'Blog', description: 'Artykuły o CRM, automatyzacji i AI w sprzedaży B2B: procesy, wdrożenia, narzędzia i praca zespołów handlowych.' },
+  en: { name: "Grzegorz Zawłodzki's blog", crumb: 'Blog', pageLabel: 'page', title: 'Blog', description: 'Articles on CRM, automation and AI in B2B sales.' },
 } as const;
 
 /** Plain text of Portable Text blocks, for JSON-LD answers. */
@@ -166,7 +166,7 @@ function routeSeoPage(site: Site, route: Route): SeoPage {
   const base = route.page ? seoOf(site, route.page) : { title: blog.title, description: blog.description };
   const first = route.pageNumber === 1;
   const seo: Seo = first ? base : {
-    title: `${blog.crumb}, ${blog.pageLabel} ${route.pageNumber} | Grzegorz Zawłodzki`,
+    title: `${blog.crumb}, ${blog.pageLabel} ${route.pageNumber}`,
     description: base.description,
     ...(base.ogImage && { ogImage: base.ogImage }),
     noindex: true,

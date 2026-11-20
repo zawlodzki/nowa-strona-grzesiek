@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { buildMeta } from './meta.ts';
+import { brandTitle } from './title.ts';
 
 const fixture = (name) => JSON.parse(readFileSync(fileURLToPath(new URL(`./fixtures/${name}.json`, import.meta.url)), 'utf8'));
 const prop = (meta, key) => meta.properties.filter(([k]) => k === key).map(([, v]) => v);
@@ -24,11 +25,24 @@ test('title, description and Twitter tags match the live head', () => {
   assert.equal(meta.title, 'AI w sprzedaży: od czego zacząć | Grzegorz Zawłodzki');
   assert.deepEqual(Object.fromEntries(meta.names), {
     'twitter:card': 'summary_large_image',
-    'twitter:title': page.seo.title,
+    'twitter:title': meta.title,
     'twitter:description': page.seo.description,
     'twitter:image': page.seo.ogImage.url,
   });
   assert.deepEqual(prop(meta, 'article:published_time'), ['2026-09-01']);
+  assert.deepEqual(prop(meta, 'og:title'), [meta.title]);
+});
+
+test('the build appends the brand suffix once to the stored bare title', () => {
+  assert.equal(brandTitle('Kontakt'), 'Kontakt | Grzegorz Zawłodzki');
+  assert.equal(brandTitle(' Kontakt '), 'Kontakt | Grzegorz Zawłodzki');
+  assert.equal(brandTitle('Kontakt | Grzegorz Zawłodzki'), 'Kontakt | Grzegorz Zawłodzki');
+  assert.equal(brandTitle('Grzegorz Zawłodzki'), 'Grzegorz Zawłodzki');
+  for (const name of ['home', 'service', 'course', 'post', 'contact', 'about']) {
+    const meta = buildMeta(fixture(name));
+    assert.equal(meta.title.match(/\| Grzegorz Zawłodzki/g)?.length, 1, name);
+    assert.ok(meta.title.endsWith(' | Grzegorz Zawłodzki'), name);
+  }
 });
 
 test('no hreflang without a real translation', () => {

@@ -4,6 +4,7 @@ import '../styles/consent.css';
 import erode from '../styles/fonts/Erode-Variable.woff2?url';
 import satoshi from '../styles/fonts/Satoshi-Variable.woff2?url';
 import Seo from '../seo/Seo.astro';
+import { brandTitle } from '../seo/title.ts';
 import type { Language, SeoPage } from '../seo/types.ts';
 import Header from '../components/site/Header.astro';
 import Footer from '../components/site/Footer.astro';
@@ -81,7 +82,7 @@ const speculationRules = {
     <link rel="preload" href={erode} as="font" type="font/woff2" crossorigin />
     {props.seo ? <Seo page={props.seo} /> : (
       <>
-        <title>{props.title}</title>
+        <title>{brandTitle(props.title)}</title>
         {props.description && <meta name="description" content={props.description} />}
         {props.noindex && <meta name="robots" content="noindex" />}
       </>
