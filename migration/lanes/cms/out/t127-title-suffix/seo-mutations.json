@@ -1,0 +1,688 @@
+{
+  "mutations": [
+    {
+      "patch": {
+        "id": "page-634daaa2c8ceab0fea939fe6",
+        "ifRevisionID": "1qyPYQSEDVHtpwb6uBCCxR",
+        "set": {
+          "seo.title": "CRM, automatyzacja i AI w sprzedaży B2B"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-634daaa2c8ceab10fa93a044",
+        "ifRevisionID": "Wxh00JcLN6cQgy9skuMf8z",
+        "set": {
+          "seo.title": "Kontakt"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-634daaa2c8ceab1df293a051",
+        "ifRevisionID": "Wxh00JcLN6cQgy9skuMf8z",
+        "set": {
+          "seo.title": "O mnie"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-634daaa2c8ceab408393a043",
+        "ifRevisionID": "1qyPYQSEDVHtpwb6uBCCxR",
+        "set": {
+          "seo.title": "Współpraca Way Forward"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-634daaa2c8ceab668a93a057",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Olsfw",
+        "set": {
+          "seo.title": "Regulamin"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-634daaa2c8ceab75e793a055",
+        "ifRevisionID": "CTyFX3i20RiZBqzaqvd6Tm",
+        "set": {
+          "seo.title": "Polityka prywatności"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-634daaa2c8ceab761a93a050",
+        "ifRevisionID": "Wxh00JcLN6cQgy9skuMf8z",
+        "set": {
+          "seo.title": "Newsletter Sales Atlas"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-64a7d3814f84e9058b6f6dad",
+        "ifRevisionID": "1qyPYQSEDVHtpwb6uBCCxR",
+        "set": {
+          "seo.title": "Szkolenie i wdrożenie Asany na projektach"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-64a963565ffd73e869eafd91",
+        "ifRevisionID": "1qyPYQSEDVHtpwb6uBCCxR",
+        "set": {
+          "seo.title": "Wdrożenie Pipedrive CRM z procesem i szkoleniem"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-64aae5153be5dab60a907e5c",
+        "ifRevisionID": "1qyPYQSEDVHtpwb6uBCCxR",
+        "set": {
+          "seo.title": "Automatyzacje dla Pipedrive"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-65364c7d554535d3e4141668",
+        "ifRevisionID": "1qyPYQSEDVHtpwb6uBCCxR",
+        "set": {
+          "seo.title": "Automatyzacja procesów no-code"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-65369078d23fa9556206c3cb",
+        "ifRevisionID": "1qyPYQSEDVHtpwb6uBCCxR",
+        "set": {
+          "seo.title": "Program partnerski automatyzacji"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a4e60735114259a5cd425c5",
+        "ifRevisionID": "Nh2W8yZQ3nSwI3blijblww",
+        "set": {
+          "seo.title": "Wdrożenie AI w sprzedaży B2B"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a5e981dbb5b85f2e70aa1fd",
+        "ifRevisionID": "Wxh00JcLN6cQgy9skuMf8z",
+        "set": {
+          "seo.title": "Blog"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a60d9ec87a190a51d263896",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Olsfw",
+        "set": {
+          "seo.title": "Regulamin newslettera"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a659c9d68d93d23daef5822",
+        "ifRevisionID": "Nh2W8yZQ3nSwI3blijblww",
+        "set": {
+          "seo.title": "Audyt CRM Pipedrive i procesu sprzedaży"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a662ce1aaab25ed183324c4",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Olsfw",
+        "set": {
+          "seo.title": "Lista cookies i identyfikatorów"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a6650c971f470cf8a5110d4",
+        "ifRevisionID": "1qyPYQSEDVHtpwb6uBCCxR",
+        "set": {
+          "seo.title": "Audyt procesów w Asanie"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "page-6a93c20ca47c5a15d5c2fce7",
+        "ifRevisionID": "Nh2W8yZQ3nSwI3blijblww",
+        "set": {
+          "seo.title": "Audyt sprzedaży B2B — zakres i cena"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8ac4e1b74f8f2c2e54ad",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Raporty sprzedażowe: 6 widoków w CRM"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a5e8adb2fb3d8d905e93494",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Asana: co to jest i jak działa"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a7170bdf59d4b10356c06cb",
+        "ifRevisionID": "5SKco6bOuTjdxpILK4lDM5",
+        "set": {
+          "seo.title": "Który CRM pod agenta AI? Porównanie API"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a816394b4c5ee8b67c1a42f",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.title": "Wdrożenie CRM krok po kroku: 5 etapów"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a886636c64f3c28c2dd9be5",
+        "ifRevisionID": "5SKco6bOuTjdxpILK4lDM5",
+        "set": {
+          "seo.title": "Ile kosztuje wdrożenie CRM w 2026 roku"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a886647c64f3c28c2dda33d",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Pipedrive CRM: dla kogo i kiedy nie"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a8c3438247427bdc5cdd7aa",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.title": "Cennik Pipedrive: ile wyjdzie za rok"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a9024e5d986e63fb7264476",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Handlowcy omijają CRM: 7 przyczyn"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a9186e1b2436b7921d8cf15",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Systemy CRM 2026: ranking 8 opcji"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a91de7c49dd4a89b2aa54da",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Proces sprzedaży: 7 etapów, 3 fikcje"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a92db5512f236c0e86f5391",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Program do projektów: 7 kryteriów"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a92db68460f61f772b92765",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi03ZGy",
+        "set": {
+          "seo.title": "Asana cennik 2026: plany i ceny"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a92db792b0ef7af46cd146a",
+        "ifRevisionID": "5SKco6bOuTjdxpILK4lDM5",
+        "set": {
+          "seo.title": "Asana AI: funkcje i integracje"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a945517664227b25ddaf30c",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Prognoza sprzedaży: co ją zawyża"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a9466737bf805f51dfda9ee",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.title": "Jak zwiększyć sprzedaż B2B: 6 miejsc"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a96002bf019c2eff8865e67",
+        "ifRevisionID": "qvVg1luYRxJZnxaWi03ZGy",
+        "set": {
+          "seo.title": "AI w sprzedaży: od czego zacząć"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a960044b110678f98322513",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Agent AI: co to jest i co robi w CRM"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a960059531e964e909024b4",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Agent AI w sprzedaży: 7 przykładów"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a960072240d627e186673e9",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "ChatGPT Work czy Codex? Porównanie"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a97f6ae0946fa8f45943593",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Transkrypcje spotkań handlowych"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a99cd44eccb478753f29bd6",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Kontekst firmy dla AI: co zebrać"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a9aa7ae1d242e40a2018676",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.title": "Etapy lejka: kryteria przejścia"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a9c56d01e7dbe41ace8bf6d",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "CRM dla firmy: od czego zacząć"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a9d5fdaa7122d6b7a0f1726",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Darmowy CRM 2026: limity 8 planów"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6a9d8774a02953dfdee850e2",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Jaki system do zarządzania sprzedażą"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6aa15961e112fcbe18a7b4ab",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "CRM dla firmy handlowej i produkcji"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6aa2a928bb62c4189c73e7a8",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "CRM dla firmy usługowej i projektowej"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6aa30cce9ddbae94d8d121c6",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Pipedrive i Asana bez przepisywania"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6aa3de8a01d3ce3023aafd92",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Szkolenie CRM: demo nie uczy pracy"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6aa44bea5de4de5f1b026b02",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Jakość danych w CRM: co sprawdzić"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6aa45cec4e8432a156e82ba1",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "CRM dla biura rachunkowego: sprzedaż"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6aa45cf994952c6756ed7815",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "CRM dla deweloperów: który wybrać"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6ab27387bd8375af21357ffb",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Hurtownia danych w małej firmie"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6ab3c23497031b75cdaed71d",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Asana opinie: komu pomaga, komu nie"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6ab62044ea25c199065c8f32",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Wdrożenie AI w firmie: etapy i koszty"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6ab620e4f61260151fd0148f",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Od czego zacząć wdrożenie Asany?"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abba4a98205cc6997a812fd",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Salesforce: co to jest, ile kosztuje"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abba4b562250c0e81af7537",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.title": "Sales Cloud: Starter, Pro czy Core?"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abbfa951ffbf47d406b6601",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.title": "Service Cloud w małej firmie"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abbfa991129cb4d194d3c88",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.title": "Agentforce po polsku: co działa"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abbfa9d81238c34496658bb",
+        "ifRevisionID": "5SKco6bOuTjdxpILK4lDM5",
+        "set": {
+          "seo.title": "CRM dla średniej firmy"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abd4f279a00d78440714467",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Jak przekonać zespół do Asany"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abd4f2c2099271c8a8cb6c5",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Asana z Outlookiem, Teams i OneDrive"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abd4f31e6b84746616e2481",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Zarządzanie wieloma projektami w Asanie"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abe0c956d01eb579186feb0",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Kiedy firma wyrasta z Pipedrive'a"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abe0c99bb4b07fd5f64a342",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Pipedrive czy Salesforce? Porównanie"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abe0c9ebf6f507235600ee1",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Salesforce cena 2026: koszt roku"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abf62aa02a659b6037e4637",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Fałszywa wartość w lejku: dane z CRM"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abf736609e91b58526fed94",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Automatyzacja sprzedaży: co się opłaca"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abf9155e7989caa7b39d409",
+        "ifRevisionID": "iMqswYIFtax4pBtAvNhcLY",
+        "set": {
+          "seo.title": "Salesforce po polsku: język i Setup"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abf915a781d6cb4bf4a939d",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Migracja Pipedrive → Salesforce"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6abf915fbfeead08ba338877",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Salesforce Starter czy Pro Suite?"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6ac240a6ced6a74ae96ee9d5",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Asana vs Jira: projekty, AI i ceny"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6ac240ac18149e4a688bf83f",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Asana vs Trello: kiedy zmienić?"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6ac240b274f1099f0cd3f349",
+        "ifRevisionID": "E65Ig8tOfLomYYQb3Oo7wm",
+        "set": {
+          "seo.title": "Asana vs monday: projekty, AI i ceny"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "post-6ac240b9d0dc07775e39d10a",
+        "ifRevisionID": "gde7O1u1Viqt0S8cNbE2Jm",
+        "set": {
+          "seo.title": "Asana vs ClickUp: wybór, AI i ceny"
+        }
+      }
+    },
+    {
+      "patch": {
+        "id": "siteSettings-pl",
+        "ifRevisionID": "5SKco6bOuTjdxpILK4lDM5",
+        "set": {
+          "defaultSeo.title": "CRM, automatyzacja i AI w sprzedaży B2B"
+        }
+      }
+    }
+  ]
+}

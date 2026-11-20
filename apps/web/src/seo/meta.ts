@@ -1,5 +1,6 @@
 import entities from '../../../../migration/contracts/entities.json' with { type: 'json' };
 import type { Language, SeoPage } from './types.ts';
+import { brandTitle } from './title.ts';
 import { pageUrl } from './url.ts';
 
 const OG_LOCALE: Record<Language, string> = { pl: 'pl_PL', en: 'en_US' };
@@ -21,6 +22,7 @@ export function buildMeta(page: SeoPage): Meta {
   const { seo } = page;
   const canonical = seo.canonicalOverride ?? pageUrl(page.language, page.path);
   const image = seo.ogImage ?? page.primaryImage;
+  const title = brandTitle(seo.title);
 
   const alternates: Meta['alternates'] = [];
   if (page.translation) {
@@ -30,7 +32,7 @@ export function buildMeta(page: SeoPage): Meta {
 
   const properties: [string, string][] = [
     ['og:type', page.kind === 'post' ? 'article' : 'website'],
-    ['og:title', seo.title],
+    ['og:title', title],
     ['og:description', seo.description],
     ['og:url', canonical],
     ['og:site_name', entities.website.alternateName],
@@ -49,13 +51,13 @@ export function buildMeta(page: SeoPage): Meta {
 
   const names: [string, string][] = [
     ['twitter:card', image ? 'summary_large_image' : 'summary'],
-    ['twitter:title', seo.title],
+    ['twitter:title', title],
     ['twitter:description', seo.description],
   ];
   if (image) names.push(['twitter:image', image.url]);
 
   return {
-    title: seo.title,
+    title,
     description: seo.description,
     canonical,
     robots: seo.noindex ? 'noindex' : undefined,

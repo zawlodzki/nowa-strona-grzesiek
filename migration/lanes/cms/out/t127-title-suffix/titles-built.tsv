@@ -1,0 +1,118 @@
+path	ok	title	len	og_equal	live_title	same_as_live
+/404	True	Nie znaleziono strony | Grzegorz Zawłodzki	42			
+/_ds/blocks-a	True	Bloki A | Katalog komponentów | Grzegorz Zawłodzki	50			
+/_ds/blocks-b	True	Bloki B: katalog | Grzegorz Zawłodzki	37			
+/_ds/diagrams	True	Diagramy · design system | Grzegorz Zawłodzki	45			
+/audyt-ai-sprzedaz	True	Audyt AI w sprzedaży — 2 tygodnie, konkretny plan wdrożenia | Grzegorz Zawłodzki	80	True	Audyt AI w sprzedaży — 2 tygodnie, konkretny plan wdrożenia	False
+/audyt-crm-pipedrive	True	Audyt CRM Pipedrive i procesu sprzedaży | Grzegorz Zawłodzki	60	True	Audyt CRM Pipedrive i procesu sprzedaży | Grzegorz Zawłodzki	True
+/audyt-procesow-asana	True	Audyt procesów w Asanie | Grzegorz Zawłodzki	44	True	Audyt procesów w Asanie | Grzegorz Zawłodzki	True
+/audyt-sprzedazy	True	Audyt sprzedaży B2B — zakres i cena | Grzegorz Zawłodzki	56	True	Audyt sprzedaży B2B — zakres i cena | Grzegorz Zawłodzki	True
+/automatyzacja-procesow-biznesowych-nocode	True	Automatyzacja procesów no-code | Grzegorz Zawłodzki	51	True	Automatyzacja procesów biznesowych no-code | Grzegorz Zawłodzki	False
+/automatyzacje-dla-pipedrive	True	Automatyzacje dla Pipedrive | Grzegorz Zawłodzki	48	True	Automatyzacje dla Pipedrive | Grzegorz Zawłodzki	True
+/blog/5-krokow-do-obslugi-kazdego-leada-w-5-minut	True	5 kroków do obsługi każdego leada w 5 minut | Grzegorz Zawłodzki	64	True	5 kroków do obsługi każdego leada w 5 minut | Grzegorz Zawłodzki	True
+/blog/7-wskazowek-jak-korzystac-z-widoku-moja-zadania-w-asana	True	Widok „Moje zadania” w Asanie: 7 wskazówek | Grzegorz Zawłodzki	63	True	"7 wskazówek jak korzystać z widoku ""Moja zadania"" w Asana | Grzegorz Zawłodzki"	False
+/blog/agent-ai-co-to-jest	True	Agent AI: co to jest i co robi w CRM | Grzegorz Zawłodzki	57	True	Agent AI: co to jest i co robi w CRM | Grzegorz Zawłodzki	True
+/blog/agent-ai-w-sprzedazy-przyklady	True	Agent AI w sprzedaży: 7 przykładów | Grzegorz Zawłodzki	55	True	Agent AI w sprzedaży: 7 przykładów | Grzegorz Zawłodzki	True
+/blog/ai-w-sprzedazy	True	AI w sprzedaży: od czego zacząć | Grzegorz Zawłodzki	52	True	AI w sprzedaży: od czego zacząć | Grzegorz Zawłodzki	True
+/blog/aplikacje-ktore-sprawdzilem-w-4-biznesach	True	22 aplikacje, które sprawdziłem w 4 biznesach | Grzegorz Zawłodzki	66	True	22 aplikacje, które sprawdziłem w 4 biznesach | Grzegorz Zawłodzki	True
+/blog/asana-ai	True	Asana AI: funkcje i integracje | Grzegorz Zawłodzki	51	True	Asana AI: funkcje i integracje | Grzegorz Zawłodzki	True
+/blog/asana-cennik	True	Asana cennik 2026: plany i ceny | Grzegorz Zawłodzki	52	True	Asana cennik 2026: plany i ceny | Grzegorz Zawłodzki	True
+/blog/asana-microsoft-365	True	Asana z Outlookiem, Teams i OneDrive | Grzegorz Zawłodzki	57	True	Asana z Outlookiem, Teams i OneDrive | Grzegorz Zawłodzki	True
+/blog/asana-opinie	True	Asana opinie: komu pomaga, komu nie | Grzegorz Zawłodzki	56	True	Asana opinie: komu pomaga, komu nie | Grzegorz Zawłodzki	True
+/blog/asana-vs-clickup	True	Asana vs ClickUp: wybór, AI i ceny | Grzegorz Zawłodzki	55	True	Asana vs ClickUp: wybór, AI i ceny | Grzegorz Zawłodzki	True
+/blog/asana-vs-jira	True	Asana vs Jira: projekty, AI i ceny | Grzegorz Zawłodzki	55	True	Asana vs Jira: projekty, AI i ceny | Grzegorz Zawłodzki	True
+/blog/asana-vs-monday	True	Asana vs monday: projekty, AI i ceny | Grzegorz Zawłodzki	57	True	Asana vs monday: projekty, AI i ceny | Grzegorz Zawłodzki	True
+/blog/asana-vs-trello	True	Asana vs Trello: kiedy zmienić? | Grzegorz Zawłodzki	52	True	Asana vs Trello: kiedy zmienić? | Grzegorz Zawłodzki	True
+/blog/audyt-crm-wnioski-z-danych	True	Audyt CRM: jakie wnioski wyciągniesz z danych | Grzegorz Zawłodzki	66	True	Audyt CRM: jakie wnioski wyciągniesz z danych | Grzegorz Zawłodzki	True
+/blog/audyt-wdrozonego-crm	True	Audyt wdrożonego CRM: 9 rzeczy do sprawdzenia | Grzegorz Zawłodzki	66	True	Audyt wdrożonego CRM: 9 rzeczy do sprawdzenia | Grzegorz Zawłodzki	True
+/blog/automatyczne-przydzielanie-leadow-wedlug-specjalizacji-handlowca-dzieki-ai	True	AI przydziela leady według specjalizacji handlowca | Grzegorz Zawłodzki	71	True	Automatyczne przydzielanie leadów według specjalizacji handlowca dzięki AI | Grzegorz Zawłodzki	False
+/blog/automatyzacja-sprzedazy	True	Automatyzacja sprzedaży: co się opłaca | Grzegorz Zawłodzki	59	True	Automatyzacja sprzedaży: co się opłaca | Grzegorz Zawłodzki	True
+/blog/bezpieczne-przekazanie-danych	True	Bezpieczne przekazywanie poufnych danych i haseł | Grzegorz Zawłodzki	69	True	Bezpieczne przekazywanie poufnych danych i haseł | Grzegorz Zawłodzki	True
+/blog/cennik-pipedrive	True	Cennik Pipedrive: ile wyjdzie za rok | Grzegorz Zawłodzki	57	True	Cennik Pipedrive: ile wyjdzie za rok | Grzegorz Zawłodzki	True
+/blog/chatgpt-work-czy-codex	True	ChatGPT Work czy Codex? Porównanie | Grzegorz Zawłodzki	55	True	ChatGPT Work czy Codex? Porównanie | Grzegorz Zawłodzki	True
+/blog/co-zrobic-zeby-twoje-maile-nie-ladowaly-w-spamie	True	Co zrobić, żeby twoje maile nie lądowały w spamie? | Grzegorz Zawłodzki	71	True	Co zrobić żeby Twoje maile nie lądowały w spamie? | Grzegorz Zawłodzki	False
+/blog/crm-a-erp	True	CRM a ERP: różnice i kiedy potrzebujesz obu | Grzegorz Zawłodzki	64	True	CRM a ERP: różnice i kiedy potrzebujesz obu | Grzegorz Zawłodzki	True
+/blog/crm-dla-biura-rachunkowego	True	CRM dla biura rachunkowego: sprzedaż | Grzegorz Zawłodzki	57	True	CRM dla biura rachunkowego: sprzedaż | Grzegorz Zawłodzki	True
+/blog/crm-dla-deweloperow	True	CRM dla deweloperów: który wybrać | Grzegorz Zawłodzki	54	True	CRM dla deweloperów: który wybrać | Grzegorz Zawłodzki	True
+/blog/crm-dla-firmy-handlowej	True	CRM dla firmy handlowej i produkcji | Grzegorz Zawłodzki	56	True	CRM dla firmy handlowej i produkcji | Grzegorz Zawłodzki	True
+/blog/crm-dla-firmy-od-czego-zaczac	True	CRM dla firmy: od czego zacząć | Grzegorz Zawłodzki	51	True	CRM dla firmy: od czego zacząć | Grzegorz Zawłodzki	True
+/blog/crm-dla-firmy-uslugowej	True	CRM dla firmy usługowej i projektowej | Grzegorz Zawłodzki	58	True	CRM dla firmy usługowej i projektowej | Grzegorz Zawłodzki	True
+/blog/crm-dla-sredniej-firmy	True	CRM dla średniej firmy | Grzegorz Zawłodzki	43	True	CRM dla średniej firmy | Grzegorz Zawłodzki	True
+/blog/darmowy-crm	True	Darmowy CRM 2026: limity 8 planów | Grzegorz Zawłodzki	54	True	Darmowy CRM 2026: limity 8 planów | Grzegorz Zawłodzki	True
+/blog/dlaczego-handlowcy-nie-korzystaja-z-crm	True	Handlowcy omijają CRM: 7 przyczyn | Grzegorz Zawłodzki	54	True	Handlowcy omijają CRM: 7 przyczyn | Grzegorz Zawłodzki	True
+/blog/falszywa-wartosc-w-lejku-sprzedazowym	True	Fałszywa wartość w lejku: dane z CRM | Grzegorz Zawłodzki	57	True	Fałszywa wartość w lejku: dane z CRM | Grzegorz Zawłodzki	True
+/blog/hurtownia-danych-w-malej-firmie	True	Hurtownia danych w małej firmie | Grzegorz Zawłodzki	52	True	Hurtownia danych w małej firmie | Grzegorz Zawłodzki	True
+/blog/ile-kosztuje-wdrozenie-crm	True	Ile kosztuje wdrożenie CRM w 2026 roku | Grzegorz Zawłodzki	59	True	Ile kosztuje wdrożenie CRM w 2026 roku | Grzegorz Zawłodzki	True
+/blog/inbox-zero-5-krokow-do-odzyskania-kontroli-nad-twoja-skrzynka-pocztowa	True	Inbox Zero: 5 kroków do odzyskania kontroli nad pocztą | Grzegorz Zawłodzki	75	True	Inbox Zero - 5 kroków do odzyskania kontroli nad Twoją skrzynką pocztową. | Grzegorz Zawłodzki	False
+/blog/jak-automatycznie-przydzielac-leady-handlowcom-wedlug-branzy-klienta	True	Jak automatycznie rozdzielać leady według branży klienta? | Grzegorz Zawłodzki	78	True	Jak automatycznie przydzielać leady handlowcom według branży klienta | Grzegorz Zawłodzki	False
+/blog/jak-odsiac-leady-z-nieprawdziwymi-danymi-weryfikacja-adresu-email-i-numeru-telefonu	True	Jak odsiać fałszywe leady? Weryfikacja e-maila i telefonu | Grzegorz Zawłodzki	78	True	Jak odsiać leady z nieprawdziwymi danymi weryfikacja adresu email i numeru telefonu | Grzegorz Zawłodzki	False
+/blog/jak-przekonac-zespol-do-asany	True	Jak przekonać zespół do Asany | Grzegorz Zawłodzki	50	True	Jak przekonać zespół do Asany | Grzegorz Zawłodzki	True
+/blog/jak-robic-lepsze-reklamy-dzieki-konwersjom-offline	True	Jak robić lepsze reklamy dzięki konwersjom offline | Grzegorz Zawłodzki	71	True	Jak robić lepsze reklamy dzięki konwersjom offline | Grzegorz Zawłodzki	True
+/blog/jak-zwiekszyc-sprzedaz-b2b	True	Jak zwiększyć sprzedaż B2B: 6 miejsc | Grzegorz Zawłodzki	57	True	Jak zwiększyć sprzedaż B2B: 6 miejsc | Grzegorz Zawłodzki	True
+/blog/jaki-crm-dla-malej-firmy	True	Jaki CRM dla małej firmy? Tabela decyzyjna | Grzegorz Zawłodzki	63	True	Jaki CRM dla małej firmy? Tabela decyzyjna | Grzegorz Zawłodzki	True
+/blog/jakosc-danych-w-crm	True	Jakość danych w CRM: co sprawdzić | Grzegorz Zawłodzki	54	True	Jakość danych w CRM: co sprawdzić | Grzegorz Zawłodzki	True
+/blog/kiedy-firma-wyrasta-z-pipedrive	True	Kiedy firma wyrasta z Pipedrive'a | Grzegorz Zawłodzki	54	True	Kiedy firma wyrasta z Pipedrive'a | Grzegorz Zawłodzki	True
+/blog/kontekst-firmy-dla-ai	True	Kontekst firmy dla AI: co zebrać | Grzegorz Zawłodzki	53	True	Kontekst firmy dla AI: co zebrać | Grzegorz Zawłodzki	True
+/blog/kryteria-etapow-lejka-sprzedazy	True	Etapy lejka: kryteria przejścia | Grzegorz Zawłodzki	52	True	Etapy lejka: kryteria przejścia | Grzegorz Zawłodzki	True
+/blog/lista-wskazowek-podstawowego-wdrozenia-crm-pipedrive-com	True	Konfiguracja Pipedrive: checklista i najczęstsze błędy | Grzegorz Zawłodzki	75	True	Konfiguracja Pipedrive: checklista i najczęstsze błędy | Grzegorz Zawłodzki	True
+/blog/migracja-z-excela-do-crm	True	Migracja z Excela do CRM: czego nie przenosić | Grzegorz Zawłodzki	66	True	Migracja z Excela do CRM: czego nie przenosić | Grzegorz Zawłodzki	True
+/blog/migracja-z-pipedrive-do-salesforce	True	Migracja Pipedrive → Salesforce | Grzegorz Zawłodzki	52	True	Migracja Pipedrive → Salesforce | Grzegorz Zawłodzki	True
+/blog/od-czego-zaczac-wdrozenie-asany	True	Od czego zacząć wdrożenie Asany? | Grzegorz Zawłodzki	53	True	Od czego zacząć wdrożenie Asany? | Grzegorz Zawłodzki	True
+/blog/pipedrive-asana-przekazanie	True	Pipedrive i Asana bez przepisywania | Grzegorz Zawłodzki	56	True	Pipedrive i Asana bez przepisywania | Grzegorz Zawłodzki	True
+/blog/pipedrive-crm	True	Pipedrive CRM: dla kogo i kiedy nie | Grzegorz Zawłodzki	56	True	Pipedrive CRM: dla kogo i kiedy nie | Grzegorz Zawłodzki	True
+/blog/pipedrive-czy-salesforce	True	Pipedrive czy Salesforce? Porównanie | Grzegorz Zawłodzki	57	True	Pipedrive czy Salesforce? Porównanie | Grzegorz Zawłodzki	True
+/blog/pisz-bloga-2x-szybciej-robiac-automatyczny-research-z-chatgpt	True	Pisz bloga 2× szybciej: automatyczny research z ChatGPT | Grzegorz Zawłodzki	76	True	Pisz bloga 2x szybciej robiąc automatyczny research z ChatGPT | Grzegorz Zawłodzki	False
+/blog/podstawowe-zasady-jak-korzystac-z-asana-com	True	Asana: co to jest i jak działa | Grzegorz Zawłodzki	51	True	Asana: co to jest i jak działa | Grzegorz Zawłodzki	True
+/blog/porownanie-4-aplikacji-do-sledzenia-wyslanych-ofert-smart-docs-pandadoc-sellizer-docsend	True	Śledzenie ofert: Smart Docs, PandaDoc, Sellizer i DocSend | Grzegorz Zawłodzki	78	True	Porównanie 4 aplikacji do śledzenia wysłanych ofert Smart Docs, PandaDoc, Sellizer, DocSend | Grzegorz Zawłodzki	False
+/blog/porownanie-api-crm-agent-ai	True	Który CRM pod agenta AI? Porównanie API | Grzegorz Zawłodzki	60	True	Który CRM pod agenta AI? Porównanie API | Grzegorz Zawłodzki	True
+/blog/proces-sprzedazy	True	Proces sprzedaży: 7 etapów, 3 fikcje | Grzegorz Zawłodzki	57	True	Proces sprzedaży: 7 etapów, 3 fikcje | Grzegorz Zawłodzki	True
+/blog/prognoza-sprzedazy	True	Prognoza sprzedaży: co ją zawyża | Grzegorz Zawłodzki	53	True	Prognoza sprzedaży: co ją zawyża | Grzegorz Zawłodzki	True
+/blog/program-do-zarzadzania-projektami	True	Program do projektów: 7 kryteriów | Grzegorz Zawłodzki	54	True	Program do projektów: 7 kryteriów | Grzegorz Zawłodzki	True
+/blog/prosty-system-do-elektronicznych-wnioskow-urlopowych-ktory-stworzysz-w-45-minut	True	Elektroniczne wnioski urlopowe: prosty system w 45 minut | Grzegorz Zawłodzki	77	True	Prosty system do elektronicznych wniosków urlopowych, który stworzysz w 45 minut | Grzegorz Zawłodzki	False
+/blog/raporty-sprzedazowe	True	Raporty sprzedażowe: 6 widoków w CRM | Grzegorz Zawłodzki	57	True	Raporty sprzedażowe: 6 widoków w CRM | Grzegorz Zawłodzki	True
+/blog/salesforce-agentforce	True	Agentforce po polsku: co działa | Grzegorz Zawłodzki	52	True	Agentforce po polsku: co działa | Grzegorz Zawłodzki	True
+/blog/salesforce-cena	True	Salesforce cena 2026: koszt roku | Grzegorz Zawłodzki	53	True	Salesforce cena 2026: koszt roku | Grzegorz Zawłodzki	True
+/blog/salesforce-co-to-jest	True	Salesforce: co to jest, ile kosztuje | Grzegorz Zawłodzki	57	True	Salesforce: co to jest, ile kosztuje | Grzegorz Zawłodzki	True
+/blog/salesforce-po-polsku	True	Salesforce po polsku: język i Setup | Grzegorz Zawłodzki	56	True	Salesforce po polsku: język i Setup | Grzegorz Zawłodzki	True
+/blog/salesforce-sales-cloud-edycje	True	Sales Cloud: Starter, Pro czy Core? | Grzegorz Zawłodzki	56	True	Sales Cloud: Starter, Pro czy Core? | Grzegorz Zawłodzki	True
+/blog/salesforce-service-cloud	True	Service Cloud w małej firmie | Grzegorz Zawłodzki	49	True	Service Cloud w małej firmie | Grzegorz Zawłodzki	True
+/blog/salesforce-starter-czy-pro-suite	True	Salesforce Starter czy Pro Suite? | Grzegorz Zawłodzki	54	True	Salesforce Starter czy Pro Suite? | Grzegorz Zawłodzki	True
+/blog/skroc-o-50-cotygodniowe-spotkania-w-dziale-marketingu	True	Skróć o 50% cotygodniowe spotkania w dziale marketingu | Grzegorz Zawłodzki	75	True	Skróć o 50% cotygodniowe spotkania w dziale marketingu | Grzegorz Zawłodzki	True
+/blog/skuteczne-instrukcje-dla-pracownikow-w-5-krokach	True	Skuteczne instrukcje dla pracowników w 5 krokach | Grzegorz Zawłodzki	69	True	Skuteczne instrukcje dla pracowników w 5 krokach | Grzegorz Zawłodzki	True
+/blog/spotkania-z-handlowcami	True	Spotkania z handlowcami: jak je poukładać | Grzegorz Zawłodzki	62	True	Spotkania z handlowcami: jak je poukładać | Grzegorz Zawłodzki	True
+/blog/strona/2	True	Blog, strona 2 | Grzegorz Zawłodzki	35	True		
+/blog/strona/3	True	Blog, strona 3 | Grzegorz Zawłodzki	35	True		
+/blog/strona/4	True	Blog, strona 4 | Grzegorz Zawłodzki	35	True		
+/blog/strona/5	True	Blog, strona 5 | Grzegorz Zawłodzki	35	True		
+/blog/strona/6	True	Blog, strona 6 | Grzegorz Zawłodzki	35	True		
+/blog/strona/7	True	Blog, strona 7 | Grzegorz Zawłodzki	35	True		
+/blog/system-do-zarzadzania-sprzedaza	True	Jaki system do zarządzania sprzedażą | Grzegorz Zawłodzki	57	True	Jaki system do zarządzania sprzedażą | Grzegorz Zawłodzki	True
+/blog/system-premiowy-dla-handlowcow	True	Jak zbudować system premiowy dla handlowców | Grzegorz Zawłodzki	64	True	Jak zbudować system premiowy dla handlowców | Grzegorz Zawłodzki	True
+/blog/systemy-crm	True	Systemy CRM 2026: ranking 8 opcji | Grzegorz Zawłodzki	54	True	Systemy CRM 2026: ranking 8 opcji | Grzegorz Zawłodzki	True
+/blog/szkolenie-crm	True	Szkolenie CRM: demo nie uczy pracy | Grzegorz Zawłodzki	55	True	Szkolenie CRM: demo nie uczy pracy | Grzegorz Zawłodzki	True
+/blog/transkrypcje-spotkan-handlowych	True	Transkrypcje spotkań handlowych | Grzegorz Zawłodzki	52	True	Transkrypcje spotkań handlowych | Grzegorz Zawłodzki	True
+/blog/wdrozenie-agenta-ai-w-firmie	True	Wdrożenie agenta AI w firmie: od czego zacząć | Grzegorz Zawłodzki	66	True	Wdrożenie agenta AI w firmie: od czego zacząć | Grzegorz Zawłodzki	True
+/blog/wdrozenie-ai-w-firmie	True	Wdrożenie AI w firmie: etapy i koszty | Grzegorz Zawłodzki	58	True	Wdrożenie AI w firmie: etapy i koszty | Grzegorz Zawłodzki	True
+/blog/wdrozenie-crm-krok-po-kroku	True	Wdrożenie CRM krok po kroku: 5 etapów | Grzegorz Zawłodzki	58	True	Wdrożenie CRM krok po kroku: 5 etapów | Grzegorz Zawłodzki	True
+/blog/zarzadzanie-wieloma-projektami-asana	True	Zarządzanie wieloma projektami w Asanie | Grzegorz Zawłodzki	60	True	Zarządzanie wieloma projektami w Asanie | Grzegorz Zawłodzki	True
+/blog	True	Blog | Grzegorz Zawłodzki	25	True	Blog | Grzegorz Zawłodzki	True
+/darmowe-materialy-dla-biznesow-uslugowych	True	Darmowe materiały dla biznesów usługowych | Grzegorz Zawłodzki	62	True	Darmowe materiały dla biznesów usługowych | Grzegorz Zawłodzki	True
+/	True	CRM, automatyzacja i AI w sprzedaży B2B | Grzegorz Zawłodzki	60	True	CRM, automatyzacja i AI dla sprzedaży B2B | Grzegorz Zawłodzki	False
+/kontakt	True	Kontakt | Grzegorz Zawłodzki	28	True	Kontakt | Grzegorz Zawłodzki	True
+/kurs-ai-w-sprzedazy	True	AI w sprzedaży B2B — osiem modułów na waszych danych z CRM | Grzegorz Zawłodzki	79	True	AI w sprzedaży B2B — osiem modułów na waszych danych z CRM	False
+/lista-cookies-i-identyfikatorow	True	Lista cookies i identyfikatorów | Grzegorz Zawłodzki	52	True	Lista cookies i identyfikatorów | Grzegorz Zawłodzki	True
+/newsletter	True	Newsletter Sales Atlas | Grzegorz Zawłodzki	43	True	Newsletter Sales Atlas | Grzegorz Zawłodzki	True
+/o-mnie	True	O mnie | Grzegorz Zawłodzki	27	True	O mnie | Grzegorz Zawłodzki	True
+/podziekowanie-konsultacja	True	Podziekowanie bezpłatna konsultacja | Grzegorz Zawłodzki	56	True		
+/podziekowanie-newsletter	True	Podziekowanie newsletter | Grzegorz Zawłodzki	45	True		
+/polityka-prywatnosci	True	Polityka prywatności | Grzegorz Zawłodzki	41	True	Polityka prywatności - Grzegorz Zawłodzki	False
+/program-ai-dla-zespolu-sprzedazy	True	Sztuczna inteligencja w sprzedaży - program dla zespołów B2B | Grzegorz Zawłodzki	81	True	Sztuczna inteligencja w sprzedaży - program dla zespołów B2B	False
+/program-partnerski	True	Program partnerski automatyzacji | Grzegorz Zawłodzki	53	True	Program partnerski - automatyzacja procesów biznesowych | Grzegorz Zawłodzki	False
+/regulamin-newslettera	True	Regulamin newslettera | Grzegorz Zawłodzki	42	True	Regulamin newslettera | Grzegorz Zawłodzki	True
+/regulamin	True	Regulamin | Grzegorz Zawłodzki	30	True	Regulamin | Grzegorz Zawłodzki	True
+/sales-atlas-system	True	Sales Atlas System - system sprzedaży dla firm B2B | Grzegorz Zawłodzki	71	True	Sales Atlas System - system sprzedaży dla firm B2B | Grzegorz Zawłodzki	True
+/szkolenie-i-wdrozenie-asana	True	Szkolenie i wdrożenie Asany na projektach | Grzegorz Zawłodzki	62	True	Szkolenie i wdrożenie Asany na Waszych projektach | Zawłodzki	False
+/szkolenie-i-wdrozenie-pipedrive	True	Wdrożenie Pipedrive CRM z procesem i szkoleniem | Grzegorz Zawłodzki	68	True	Wdrożenie Pipedrive CRM z procesem i szkoleniem | Zawłodzki	False
+/szkolenie-i-wdrozenie-salesforce	True	Wdrożenie Salesforce i szkolenie zespołu handlowego | Grzegorz Zawłodzki	72	True	Wdrożenie Salesforce i szkolenie zespołu handlowego	False
+/wdrozenie-ai-w-sprzedazy-b2b	True	Wdrożenie AI w sprzedaży B2B | Grzegorz Zawłodzki	49	True	Wdrożenie AI w sprzedaży B2B | Grzegorz Zawłodzki	True
+/wspolpraca	True	Współpraca Way Forward | Grzegorz Zawłodzki	43	True	Grzegorz Zawłodzki | Współpraca Way Forward	False
