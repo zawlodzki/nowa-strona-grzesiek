@@ -1,3 +1,5 @@
+import { WarningOutlineIcon } from "@sanity/icons/WarningOutline";
+import { Box, Card, Flex, Stack, Text } from "@sanity/ui";
 import { useMemo } from "react";
 import {
   defineDocumentInspector,
@@ -6,7 +8,7 @@ import {
   type DocumentInspectorProps,
   type Path,
 } from "sanity";
-import { useDocumentPane } from "sanity/structure";
+import { DocumentInspectorHeader, useDocumentPane } from "sanity/structure";
 
 import {
   scanDocumentEditorialMarkers,
@@ -38,6 +40,7 @@ function useMenuItem(): DocumentInspectorMenuItem {
   return {
     showAsAction: true,
     title: "Do uzupełnienia",
+    icon: WarningOutlineIcon,
     tone: count > 0 ? "caution" : undefined,
   };
 }
@@ -52,24 +55,52 @@ function EditorialMarkersPane(props: DocumentInspectorProps) {
   };
 
   return (
-    <section aria-label="Do uzupełnienia">
-      <header>
-        <h1>Do uzupełnienia ({markers.length})</h1>
-        <button type="button" aria-label="Zamknij panel znaczników" onClick={props.onClose}>Zamknij</button>
-      </header>
-      {markers.length === 0 ? <p>W tej treści nie ma znaczników do uzupełnienia.</p> : (
-        <ul>
-          {markers.map((marker, index) => (
-            <li key={markerKey(marker, index)}>
-              <button type="button" onClick={() => open(marker.path)}>
-                <strong>{marker.label}</strong>
-                {marker.text ? <p>{snippet(marker.text)}</p> : null}
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </section>
+    <Flex direction="column" height="fill" overflow="hidden">
+      <DocumentInspectorHeader
+        closeButtonLabel="Zamknij panel znaczników"
+        flex="none"
+        onClose={props.onClose}
+        title={`Do uzupełnienia (${markers.length})`}
+      />
+      <Box flex={1} overflow="auto" padding={3}>
+        {markers.length === 0 ? (
+          <Box padding={2}>
+            <Text muted size={1}>
+              W tej treści nie ma znaczników do uzupełnienia.
+            </Text>
+          </Box>
+        ) : (
+          <Stack as="ul" gap={2}>
+            {markers.map((marker, index) => (
+              <Card
+                as="li"
+                key={markerKey(marker, index)}
+                tone="caution"
+                radius={2}
+                border
+              >
+                <Card
+                  as="button"
+                  type="button"
+                  tone="inherit"
+                  radius={2}
+                  padding={3}
+                  style={{ width: "100%", textAlign: "left" }}
+                  onClick={() => open(marker.path)}
+                >
+                  <Stack gap={2}>
+                    <Text size={1} weight="semibold">
+                      {marker.label}
+                    </Text>
+                    {marker.text ? <Text size={1}>{snippet(marker.text)}</Text> : null}
+                  </Stack>
+                </Card>
+              </Card>
+            ))}
+          </Stack>
+        )}
+      </Box>
+    </Flex>
   );
 }
 

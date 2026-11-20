@@ -1,3 +1,4 @@
+import { EyeOpenIcon } from "@sanity/icons/EyeOpen";
 import { useCallback } from "react";
 import { defineDocumentFieldAction, definePlugin } from "sanity";
 import type { DocumentFieldActionItem, DocumentFieldActionProps } from "sanity";
@@ -61,8 +62,8 @@ function useOpenInPresentation(
 
   return {
     type: "action",
-
     title: "Otwórz podgląd",
+    icon: EyeOpenIcon,
     renderAsButton: true,
     hidden: intent === null,
     onAction,
