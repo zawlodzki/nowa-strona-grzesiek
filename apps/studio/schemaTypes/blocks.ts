@@ -125,7 +125,7 @@ export const contactForm = defineType({
     defineField({name: 'copy', title: 'Teksty formularza', description: 'Puste pole oznacza tekst domyślny widoczny jako podpowiedź.', type: 'object', options: {collapsible: true, collapsed: true}, hidden: ({parent}) => parent?.variant === 'channels', fields: [
       copyText('formHeading', 'Nagłówek formularza (wariant landing)', 'Formularz kontaktowy'),
       copyText('emailLabel', 'E-mail: etykieta', 'E-mail'), copyText('emailPlaceholder', 'E-mail: podpowiedź w polu', 'E-mail'),
-      copyText('requiredMarker', 'Oznaczenie pola wymaganego', '(wymagane)'),
+      copyText('optionalMarker', 'Oznaczenie pola nieobowiązkowego (temat rozmowy)', '(opcjonalnie)'),
       copyText('phoneLabel', 'Telefon: etykieta', 'Telefon'), copyText('phonePlaceholder', 'Telefon: podpowiedź w polu', 'Telefon'),
       copyText('messageLabel', 'Wiadomość: etykieta', 'Temat rozmowy'), copyText('messagePlaceholder', 'Wiadomość: podpowiedź w polu', 'Temat rozmowy'),
       copyText('privacyNote', 'Informacja o danych (przed odnośnikiem)', 'Twoich danych użyjemy tylko po to, żeby odpowiedzieć na zgłoszenie i umówić rozmowę. Administratorem danych jest Wellbiz sp. z o.o. Szczegóły:', 3),

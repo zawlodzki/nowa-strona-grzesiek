@@ -57,7 +57,7 @@ export type Copy = {
   formHeading?: string;
   emailLabel?: string;
   emailPlaceholder?: string;
-  requiredMarker?: string;
+  optionalMarker?: string;
   phoneLabel?: string;
   phonePlaceholder?: string;
   messageLabel?: string;

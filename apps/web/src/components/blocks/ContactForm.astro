@@ -26,7 +26,7 @@ const defaults = {
   formHeading: 'Formularz kontaktowy',
   emailLabel: 'E-mail',
   emailPlaceholder: 'E-mail',
-  requiredMarker: '(wymagane)',
+  optionalMarker: '(opcjonalnie)',
   phoneLabel: 'Telefon',
   phonePlaceholder: 'Telefon',
   messageLabel: 'Temat rozmowy',
@@ -85,16 +85,16 @@ const icons: Record<string, string> = {
       <LeadForm form={form} id={f('form')} visible={['email', 'phone', 'message', 'newsletter']} submitLabel={copy.submitLabel} waitLabel={copy.waitLabel}>
         {!full && <FormHeading id={pageHeadingId(Astro.locals, copy.formHeading)} class="form-heading">{copy.formHeading}</FormHeading>}
         <div class="field">
-          <label class="visually-hidden" for={f('email')}>{copy.emailLabel}{' '}<span class="required">{copy.requiredMarker}</span></label>
+          <label class="visually-hidden" for={f('email')}>{copy.emailLabel}</label>
           <input id={f('email')} name="email" placeholder={copy.emailPlaceholder} type="email" autocomplete="email" maxlength="256" required />
         </div>
         <div class="field">
           <label class="visually-hidden" for={f('phone')}>{copy.phoneLabel}</label>
-          <input id={f('phone')} name="phone" placeholder={copy.phonePlaceholder} type="tel" autocomplete="tel" maxlength="256" />
+          <input id={f('phone')} name="phone" placeholder={copy.phonePlaceholder} type="tel" autocomplete="tel" maxlength="256" required />
         </div>
         <div class="field">
-          <label class="visually-hidden" for={f('message')}>{copy.messageLabel}</label>
-          <textarea id={f('message')} name="message" placeholder={copy.messagePlaceholder} maxlength="5000"></textarea>
+          <label class="visually-hidden" for={f('message')}>{copy.messageLabel} {copy.optionalMarker}</label>
+          <textarea id={f('message')} name="message" placeholder={`${copy.messagePlaceholder} ${copy.optionalMarker}`} maxlength="5000"></textarea>
         </div>
         <p class="note type-body-s">{copy.privacyNote}{' '}<a href={privacyLink.href}>{privacyLink.label}</a>.</p>
         <label class="check type-body-s"><input type="checkbox" name="newsletter" /><span>{copy.newsletterLabel}</span></label>
