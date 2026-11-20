@@ -16,7 +16,7 @@ const ATTRIBUTION_FIELDS = [
 
 // Webflow form names and thank-you paths the n8n flow and the live site already use.
 const FORMS = [
-  { key: 'main-contact', page: '/kontakt', webflowName: 'main-contact-form', thanks: '/podziekowanie-konsultacja' },
+  { key: 'main-contact', page: '/kontakt', webflowName: 'main-contact-form', thanks: '/podziekowanie-konsultacja', phone: '600 100 200' },
   { key: 'newsletter', page: '/kontakt', webflowName: 'Newsletter bottom CTA form', thanks: '/podziekowanie-newsletter' },
 ];
 
@@ -27,6 +27,7 @@ for (const form of FORMS) {
     await rejectOptionalConsent(page);
     const el = page.locator(`form[data-form="${form.key}"]`);
     await el.locator('input[name="email"]').fill(email);
+    if (form.phone) await el.locator('input[name="phone"]').fill(form.phone);
     // T76 renders Turnstile on submit; verify the token in the actual POST.
     const submission = page.waitForRequest((request) => new URL(request.url()).pathname === '/api/form');
     await el.locator('button[type="submit"]').click();
@@ -38,6 +39,7 @@ for (const form of FORMS) {
     expect(contentType).toBe('application/json');
     expect(body.triggerType).toBe('form_submission');
     expect(body.payload.name).toBe(form.webflowName);
+    if (form.phone) expect(body.payload.data.phone).toBe(form.phone);
     for (const field of ATTRIBUTION_FIELDS) expect(typeof body.payload.data[field], field).toBe('string');
     expect(body.payload.schema.map((f) => f.fieldName)).toEqual(Object.keys(body.payload.data));
   });
@@ -61,6 +63,23 @@ for (const form of FORMS) {
     });
   }
 }
+
+test('main-contact form without a phone posts nothing', async ({ page }) => {
+  const posts: string[] = [];
+  page.on('request', (request) => new URL(request.url()).pathname === '/api/form' && posts.push(request.url()));
+  const before = deliveries().length;
+  await page.goto('/kontakt');
+  await rejectOptionalConsent(page);
+  const el = page.locator('form[data-form="main-contact"]');
+  await el.locator('input[name="email"]').fill(`e2e-no-phone-${Date.now()}@example.com`);
+  await el.locator('button[type="submit"]').click();
+
+  await expect(el.locator('input[name="phone"]:invalid')).toHaveCount(1);
+  await expect(el.locator('input[name="phone"]')).toBeFocused();
+  await page.waitForTimeout(500);
+  expect(posts).toEqual([]);
+  expect(deliveries().length).toBe(before);
+});
 
 test(`the outbound guard stops and reports a request to ${PRODUCTION_N8N_HOST}`, async ({ browser }) => {
   const context = await browser.newContext();
