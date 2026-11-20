@@ -6,7 +6,7 @@ import ts from '../../node_modules/typescript/lib/typescript.js'
 import React, {useState} from 'react'
 import {renderToString} from 'react-dom/server'
 
-let unstable = false
+let unstable = null
 const calls = []
 const evidence = []
 globalThis.__T123 = {value: null, navigateIntent: (...args) => calls.push(args)}
@@ -22,7 +22,8 @@ const hooks = registerHooks({
     if (url.startsWith('mock:')) return {format: 'module', shortCircuit: true, source: `export const defineDocumentFieldAction=x=>x, definePlugin=x=>()=>x, defineLocations=x=>x, presentationTool=x=>x; export const useRouter=()=>({navigateIntent:globalThis.__T123.navigateIntent}); export const useDocumentPane=()=>({value:globalThis.__T123.value});`}
     if (url.includes('/open-in-presentation.tsx')) {
       let source = readFileSync(new URL(url.split('?')[0]), 'utf8')
-      if (unstable) source = source.replace('    onAction,', '    onAction: () => onAction(),')
+      if (unstable === 'onAction') source = source.replace('    onAction,', '    onAction: () => onAction(),')
+      if (unstable === 'icon') source = source.replace('    icon: EyeOpenIcon,', '    icon: () => EyeOpenIcon({}),')
       return {format: 'module', shortCircuit: true, source: ts.transpileModule(source, {compilerOptions: {module: ts.ModuleKind.ESNext, jsx: ts.JsxEmit.ReactJSX}}).outputText}
     }
     return next(url, context)
@@ -53,6 +54,7 @@ test('pane header renders within budget, navigates post/page, follows edits and 
     const item = render(openInPresentation, props)
     assert.equal(item.hidden, false)
     assert.equal(item.renderAsButton, true)
+    assert.ok(item.icon, 'header button needs an icon or it renders 0 px wide')
     item.onAction()
     if (process.env.T123_EVIDENCE) evidence.push({documentType, language, path, title: item.title, intent: calls.at(-1)})
     assert.deepEqual(calls.pop(), ['edit', {id: 'fixture', type: documentType, mode: 'presentation', preview}])
@@ -68,8 +70,11 @@ test('pane header renders within budget, navigates post/page, follows edits and 
   assert.equal(resolve([], {documentType: 'person'}).length, 0)
   assert.equal(resolve([openInPresentation], {documentType: 'post'}).length, 1)
 })
-test('negative control: identical resolver rejects unstable onAction', async () => {
-  unstable = true
-  const {openInPresentation: broken} = await import('./components/open-in-presentation.tsx?unstable')
-  assert.throws(() => render(broken, {documentType: 'post', documentId: 'fixture', path: []}), /render budget exceeded/)
-})
+for (const variant of ['onAction', 'icon']) {
+  test(`negative control: identical resolver rejects unstable ${variant}`, async () => {
+    unstable = variant
+    globalThis.__T123.value = {title: 'Fixture', language: 'pl', slug: {current: '/blog/test'}}
+    const {openInPresentation: broken} = await import(`./components/open-in-presentation.tsx?unstable=${variant}`)
+    assert.throws(() => render(broken, {documentType: 'post', documentId: 'fixture', path: []}), /render budget exceeded/)
+  })
+}

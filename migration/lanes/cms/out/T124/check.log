@@ -1,0 +1,15 @@
+$ tsc --noEmit && sanity schema validate && pnpm verify:contract
+- Validating schema…
+✔ Validated schema
+
+Validation results:
+✖ Errors:   0 errors
+⚠ Warnings: 0 warnings
+
+
+$ sanity schema extract --path schema.json --force && node scripts/verify-schema.mjs --schema-only
+- Extracting schema
+✔ Extracted schema to <repo>/apps/studio/schema.json
+PASS optional testimonial authorImage and linkedinUrl registered
+PASS contract blocks, fields, Portable Text members and styles
+SKIP document validation: Sanity login required; coordinator requested schema-only checks
