@@ -39,7 +39,18 @@ The source map grows slightly after the change, because the conditional projecti
 
 `previewQuery` in `apps/web/src/preview/site.ts` rewrites the production site query for one route. Pages other than the route's page lose `sections`. Posts other than the route's post keep their first body block and no FAQ. Routing fields, cards, related posts, entity data, assets and every other key stay as `fetchSite` defines them. The first body block keeps `selectPreviewDocuments` treating an empty-bodied post as incomplete.
 
-## Still to measure after deploy (needs owner approval)
+## Deployed preview, after (2026-11-21)
 
-- CPU time of one post render, from `wrangler tail zawlodzki-web-preview` (target under 500 ms). Locally, stega and parsing fell from about 1050 ms to about 75 ms, and the client now decodes about 1.4 MB of JSON instead of 4 MB.
-- Presentation iframe `load` time for one post and one page (target under 3 s).
+The owner approved the deploy. Version `c68a7ac9-fa4d-4c9a-9aa7-45cf3716654d` of `zawlodzki-web-preview` is serving `preview.zawlodzki.pl` with the `production` dataset and the drafts perspective. Timings come from `wrangler tail zawlodzki-web-preview --format json` (`cpuTime`, `wallTime` and `eventTimestamp` per request) while the routes were opened in Presentation in hosted Studio (`sanity.io` dashboard), signed in as the owner.
+
+| Route | Request | CPU | Wall | Handshake start to last resource done |
+|---|---|---|---|---|
+| post `/blog/aplikacje-ktore-sprawdzilem-w-4-biznesach` | first open | 220 ms | 865 ms | 1404 ms (8 requests) |
+| page `/` | first open | 196 ms | 1032 ms | 1615 ms (13 requests) |
+| page `/` | iframe reload button | 220 ms | 955 ms | n/a (assets cached) |
+
+The last column runs from the `/api/preview` request start to the end of the last resource the iframe requested. The browser fires the iframe `load` event right after that. The Presentation iframe is a cross-origin frame inside the cross-origin Studio frame, so the hosted dashboard page cannot read its `load` time directly, and the server-side timeline stands in for it. Both routes finish well under the 3 s target. The post had taken about 7 s before.
+
+`presentation-home-deployed.jpg` shows the home page rendered in Presentation with Edit on, from the same session.
+
+Before versus after for the post, deployed: CPU 3.7 s to 220 ms, wall time 6.3 s to 0.87 s.

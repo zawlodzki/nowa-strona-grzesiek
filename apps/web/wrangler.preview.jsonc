@@ -31,8 +31,6 @@
   },
   "secrets": {
     "required": [
-      "N8N_FORM_WEBHOOK",
-      "TURNSTILE_SECRET_KEY",
       "SANITY_API_READ_TOKEN",
       "PREVIEW_AUTH_USER",
       "PREVIEW_AUTH_PASSWORD"
