@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { fetchSite } from '../lib/sanity/site.ts';
-import { encodeDisplayField } from './site.ts';
+import { encodeDisplayField, previewQuery, routeDocument } from './site.ts';
 import { selectPreviewDocuments } from './selection.ts';
 
 function page(title = 'First draft', slug = '/') {
@@ -44,4 +44,26 @@ test('preview retains PL and EN routes and rejects uppercase slugs', async () =>
   const site = await fetchSite(async () => selectPreviewDocuments(raw, '/en'));
   assert.deepEqual(site.pages.map((doc) => site.links[doc._id]), ['/', '/en']);
   assert.throws(() => selectPreviewDocuments(raw, '/Uppercase'), /incomplete required fields/);
+});
+
+test('preview routes map to the document they render', () => {
+  assert.deepEqual(routeDocument('/'), {language: 'pl', path: '/'});
+  assert.deepEqual(routeDocument('/en'), {language: 'en', path: '/'});
+  assert.deepEqual(routeDocument('/en/o-mnie'), {language: 'en', path: '/o-mnie'});
+  assert.deepEqual(routeDocument('/blog/wpis'), {language: 'pl', path: '/blog/wpis'});
+  assert.deepEqual(routeDocument('/blog/strona/3'), {language: 'pl', path: '/blog'});
+  assert.deepEqual(routeDocument('/en/blog/strona/2'), {language: 'en', path: '/blog'});
+  assert.deepEqual(routeDocument('/enigma'), {language: 'pl', path: '/enigma'});
+});
+
+test('the preview query trims only page sections and post bodies outside the route', async () => {
+  let siteQuery = '';
+  await fetchSite(async (query) => { siteQuery = query; return fixture(); });
+  const query = previewQuery(siteQuery);
+  const elsewhere = '!(language == $language && slug.current == $path)';
+  assert.ok(query.includes(`"pages": *[_type == "page"]{..., ${elsewhere} => {"sections": []}}`));
+  assert.ok(query.includes(`"posts": *[_type == "post"]{..., ${elsewhere} => {"body": body[0...1], "faq": []}}`));
+  const rest = (text: string) => text.split('\n').filter((line) => !/"(pages|posts)":/.test(line));
+  assert.deepEqual(rest(query), rest(siteQuery));
+  assert.throws(() => previewQuery('*[_type == "page"]'), /no longer selects pages and posts/);
 });
