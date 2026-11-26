@@ -56,35 +56,35 @@ The entrypoint rejects non-GET/HEAD requests. Preview cannot submit the producti
 
 ## Published-content rebuild hook
 
-The proposed destination remains the static staging Worker `zawlodzki-web`, selected with `--env staging`. Production uses `zawlodzki-web-production` with `--env production`. This split awaits owner approval. No external setup is authorized by this document. See `migration/lanes/platform/out/t66-environments/proposal.md` for the gated rollout. The preview Worker reads drafts on requests and does not need a rebuild when drafts change.
+Since 2026-11-25 a publish rebuilds both static Workers in parallel: staging `zawlodzki-web` (`--env staging`) and production `zawlodzki-web-production` (`--env production`, serving www). The manual promotion from the T66 proposal is superseded (T128). Current operations: `migration/lanes/platform/out/OPERATIONS.md`. The preview Worker reads drafts on requests and does not need a rebuild when drafts change.
 
-Workers Builds connects this repository to `zawlodzki-web` on `main`. Preview branch builds are disabled. The build environment sets `NODE_VERSION=24`. The deployment token has only Workers Scripts Edit for the selected account. For a replacement installation, connect the repository and deployment branch after owner approval. Configure the repository root as the build root, `pnpm --filter web build` as the build command, and `pnpm --filter web exec wrangler deploy --env staging` as the deployment command. Build from the selected published dataset. Treat the Workers Builds hook URL as a secret.
+Workers Builds has one connection per Worker, both to this repository on `main`. Both use the repository root as the build root, `pnpm --filter web build` as the build command and `NODE_VERSION=24`, with preview branch builds disabled. The deployment commands are `pnpm --filter web exec wrangler deploy --env staging` and `pnpm --filter web exec wrangler deploy --env production`. The production build also sets `PUBLIC_TURNSTILE_SITE_KEY`; without it Astro embeds the test key and forms answer 403. The deployment token has only Workers Scripts Edit for the account. Each connection has its own deploy hook. Treat both hook URLs as secrets. Changing a connection, a hook or a webhook is owner-only.
 
-After separate owner approval, create a Workers Builds deploy hook for that staging branch. Production has no automatic build or Sanity hook in this proposal. Promote the verified staging commit manually with `pnpm --filter web deploy:production` only after approval. Before T22 this creates no public production address because workers.dev is disabled and routes are empty. T22 alone activates the commented custom domains.
+Two Sanity GROQ webhooks in dataset `production` call those hooks: "Cloudflare staging on published content" and "Cloudflare production on published content". They are identical except for the target URL and description: POST, API version `v2025-02-19`, create, update and delete enabled, draft events and content-release version events disabled. That uses both webhooks the current Sanity plan allows. There is no deploy-hook handler in this repository. The webhook's HTTP request is the rebuild.
 
-Create the staging hook only after approval. Create a Sanity GROQ webhook in the same dataset, with POST as the method and the hook URL as its target. There is no deploy-hook handler in this repository. The webhook's HTTP request is the rebuild. Enable create, update, and delete. Leave draft events and content-release version events disabled. Sanity already ignores `drafts.` and `versions.` documents while those two settings are off.
-
-On a delete, `after()` is null. Read the type from `before()` first, and test the id that Sanity still exposes as `_id`.
+On a delete, `after()` is null, so the filter reads the type and id from `before()` as a fallback. This is the filter both live webhooks use:
 
 ```groq
-!(_id in path("drafts.**"))
-&& !(_id in path("versions.**"))
-&& coalesce(before()._type, _type) in [
+coalesce(after()._type, before()._type) in [
   "page", "post", "person", "organization", "siteSettings",
   "service", "course", "redirect", "logo", "testimonial", "translation.metadata", "sanity.imageAsset"
 ]
+&& !(coalesce(after()._id, before()._id) in path("drafts.**"))
+&& !(coalesce(after()._id, before()._id) in path("versions.**"))
 ```
 
-The Workers Builds hook ignores the body. The projection only has to evaluate, including when `after()` is null. Do not call `delta::operation()`.
+The Workers Builds hook ignores the body. The projection only has to evaluate, including when `after()` is null. The live webhooks send:
 
 ```groq
-{"_id": _id, "_type": coalesce(before()._type, _type)}
+{"documentId": coalesce(after()._id, before()._id), "operation": delta::operation()}
 ```
+
+An earlier version of this README advised against `delta::operation()`. The staging webhook has delivered with it, so it evaluates in practice. If a delete ever shows a projection error in the attempts log, switch both webhooks to `{"_id": coalesce(after()._id, before()._id)}`. The body is not used, so nothing else changes.
 
 In the webhook preview, a published page create, update, and delete match. A draft edit and a `versions.` document do not. Keep the hook URL only in the Sanity webhook configuration, never in source, screenshots or handoff text. A direct Workers Builds hook uses its unguessable URL for authorization. If signature verification is required later, add a separately reviewed relay that verifies Sanity signatures before forwarding to the secret URL.
 
-The staging Worker serves the last deployed asset set. It does not read Sanity on the request. A delete that does not produce a later successful build leaves the old HTML in place. Cloudflare also folds a second POST into the current build while that build is still queued or initializing, and Sanity treats the HTTP 200 as delivered. The attempts log for the webhook is the record of whether a delete was sent. The build history for `zawlodzki-web` is the record of whether a new deploy happened.
+Each static Worker serves its last deployed asset set. It does not read Sanity on the request. A delete that does not produce a later successful build leaves the old HTML in place. Cloudflare also folds a second POST into the current build while that build is still queued or initializing, and Sanity treats the HTTP 200 as delivered. The attempts log of each webhook is the record of whether a delete was sent. The build history of each Worker is the record of whether a new deploy happened. The two are independent: one Worker can be current while the other is not. The publication monitor (T63, T128) checks both.
 
 The static build queries `api.sanity.io`, not `apicdn.sanity.io` (`apps/web/src/lib/sanity/client.ts`). A webhook build starts within seconds of the change. The API CDN caches each query separately and can still return the result from before a publish or delete. A build that reads it then deploys the old content and reports success. That happened on 2026-10-23: the delete at 09:04:44Z was delivered, build `4e6a09d2` ran at 09:05:08Z, and it still generated the deleted page. When a deploy succeeds but the content is old, check the build log for the generated routes before changing the webhook.
 
-After setup, publish a harmless approved content change, record its Sanity timestamp and the Cloudflare build result, then fetch the staging page until the new text appears. Record the elapsed time and confirm it is below five minutes. Repeat with one referenced dependency. Editing only a draft must not create a production build. These are live acceptance checks. This code and local tests do not establish that the hook exists or that the five-minute target has passed.
+After setup, publish a harmless approved content change, record its Sanity timestamp and the Cloudflare build result, then fetch the page on www and on staging until the new text appears. Record the elapsed time and confirm it is below five minutes. Repeat with one referenced dependency. Editing only a draft must not create a build. These are live acceptance checks. This code and local tests do not establish that the hook exists or that the five-minute target has passed.

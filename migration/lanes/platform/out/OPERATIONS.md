@@ -45,7 +45,7 @@ Check the latest Studio deploys:
 gh run list --workflow deploy-studio.yml --limit 5
 ```
 
-**Content.** Editor publishes in Studio → two Sanity GROQ webhooks with the same filter (published documents of the 12 page-building types; drafts and release versions ignored) → one Workers Builds deploy hook per Worker → fresh builds of `zawlodzki-web` and `zawlodzki-web-production` from `main` reading `api.sanity.io` → deploy. The webhooks are "Cloudflare staging on published content" and "Cloudflare production on published content" in Sanity Manage → API → Webhooks. That uses both webhooks the current Sanity plan allows. Target: live on www within 5 minutes. Drafts never trigger a build; preview reads them live. Filter and details: `apps/web/src/preview/README.md`, section "Published-content rebuild hook". That section still describes the staging hook only; the production webhook copies its settings.
+**Content.** Editor publishes in Studio → two Sanity GROQ webhooks with the same filter (published documents of the 12 page-building types; drafts and release versions ignored) → one Workers Builds deploy hook per Worker → fresh builds of `zawlodzki-web` and `zawlodzki-web-production` from `main` reading `api.sanity.io` → deploy. The webhooks are "Cloudflare staging on published content" and "Cloudflare production on published content" in Sanity Manage → API → Webhooks. That uses both webhooks the current Sanity plan allows. Target: live on www within 5 minutes. Drafts never trigger a build; preview reads them live. Filter and details: `apps/web/src/preview/README.md`, section "Published-content rebuild hook".
 
 ## Secrets: names and where they live
 
