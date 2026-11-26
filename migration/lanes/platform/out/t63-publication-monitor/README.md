@@ -2,6 +2,16 @@
 
 Prepared on 2026-11-12. No production configuration or alert was sent.
 
+**Update 2026-11-26 (T128).** Production `zawlodzki-web-production` now builds from
+`main` and from its own Sanity webhook, in parallel with staging. The monitor
+reads the active deployment of both `zawlodzki-web` and `zawlodzki-web-production`
+and alerts when either one has no deployment after the last publish. The report
+lists each Worker's status and deployment time, and the alert names the stale
+Worker or Workers. The incident ID is unchanged when only staging is stale, so an
+incident alerted before the upgrade is not sent again. The same token must be
+able to read deployments of both Workers; a token scoped to `zawlodzki-web`
+alone makes every run fail closed.
+
 ## Sources and model
 
 The [deployment endpoint](https://developers.cloudflare.com/api/resources/workers/subresources/scripts/subresources/deployments/methods/list/)
@@ -36,7 +46,7 @@ publishes made seconds after a deploy forever. A 30-minute schedule normally
 notices an incident in 20–50 minutes; GitHub schedules can be delayed further.
 
 The state is `ok` or `alert`, plus a SHA-256 incident ID derived from the active
-deployment ID. Further edits do not open another incident until a deploy occurs.
+deployment ID of the stale Worker (or of all stale Workers combined). Further edits do not open another incident until a deploy occurs.
 The workflow serializes runs and saves the incident cache only after delivery.
 Dry runs neither send nor save the incident. HTTP failures fail the job and
 remain retryable. No document content, IDs, titles or personal data is posted.
