@@ -1,5 +1,7 @@
 # Separate static Worker environments
 
+> **Superseded in part (recorded in T128).** On 2026-11-25 the owner replaced the manual production promotion described below with automatic builds. `zawlodzki-web-production` now has its own Workers Builds connection to `main` (deploy `wrangler deploy --env production`, `NODE_VERSION=24`, `PUBLIC_TURNSTILE_SITE_KEY` in the build settings) and its own deploy hook. A second Sanity webhook, "Cloudflare production on published content", copies the staging one and calls that hook. Merges and content publishes now reach staging and production in parallel, so staging is no longer a gate. The rest of this proposal is kept as the record of the original design. Current state: `migration/lanes/platform/out/OPERATIONS.md`.
+
 Proposed on 2026-11-12. Grzesiek approved START only. Environment approval is pending. No Worker, Builds setting, webhook, secret, domain, DNS, GSC or deployment was changed during this task. Only local execution and dry-run deployment took place.
 
 ## Environment choices
