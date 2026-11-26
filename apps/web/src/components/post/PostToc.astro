@@ -35,6 +35,12 @@ const { entries, pl } = Astro.props;
       active?.removeAttribute('aria-current');
       current?.setAttribute('aria-current', 'location');
       active = current;
+      // When the outline scrolls inside its column, keep the current entry in view.
+      if (current && toc.scrollHeight > toc.clientHeight) {
+        const box = toc.getBoundingClientRect();
+        const item = current.getBoundingClientRect();
+        if (item.top < box.top || item.bottom > box.bottom) toc.scrollTop += item.top - box.top - box.height / 3;
+      }
     };
     const schedule = () => {
       if (!scheduled) { scheduled = true; requestAnimationFrame(update); }

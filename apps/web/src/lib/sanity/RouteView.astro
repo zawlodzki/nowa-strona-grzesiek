@@ -16,7 +16,7 @@ const titled = route.kind === 'page' && !['hero', 'feature', 'newsletterSignup',
 ---
 <Base seo={seo}>
   {route.kind === 'page' && (
-    <main>
+    <main id="tresc">
       {titled && <header class="content-grid section page-title"><h1>{route.page.title}</h1></header>}
       <Sections site={site} sections={route.page.sections ?? []} headingLevel={titled ? 'h2' : 'h1'} language={route.language} />
     </main>

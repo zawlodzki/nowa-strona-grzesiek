@@ -26,7 +26,7 @@ const outline = postOutline(post.body);
 const contactHref = post.cta?.href ?? localHref(post.language, '/kontakt');
 const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _type: 'faqItem' as const, _key, question: q, answer: a }] : []);
 ---
-<main>
+<main id="tresc">
   <article>
     <header class="content-grid section post-head">
       <div class="inner">
@@ -59,7 +59,7 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
       <aside class="recommendations" aria-label={pl ? 'Polecane' : 'Recommended'}>
         <div class="sticky">
           <div class="sidebar-cta">
-            <h2 class="type-heading-xs">{post.cta?.label ?? (pl ? 'Porozmawiajmy o Twojej firmie' : "Let's talk about your business")}</h2>
+            <p class="sidebar-cta-text">{post.cta?.label ?? (pl ? 'Porozmawiajmy o Twojej firmie' : "Let's talk about your business")}</p>
             <Button link={{ _type: 'link', href: contactHref, label: pl ? 'Umów konsultację' : 'Book a consultation' }} />
           </div>
           {related.length > 0 && <section aria-labelledby="related-heading" data-related-posts inert aria-hidden="true">
@@ -94,12 +94,13 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   {pl && <NewsletterSignup data={{ _type: 'newsletterSignup', body: 'Raz w tygodniu dostaniesz bezpłatnie, jedno gotowe rozwiązanie, jak skutecznie wykorzystać nowoczesne technologie w sprzedaży B2B.' }} />}
 </main>
 <style>
-  main { --text-link: oklch(from #3a48cc l c h); --text-link-active: oklch(from #3a48cc l c h); --surface-accent: oklch(from #3a48cc l c h); }
+  main { --text-link-active: var(--text-link); }
   article { --post-gutter: var(--layout-gutter); --post-max: calc(var(--layout-container-max) - 2 * var(--post-gutter)); }
   .post-head .inner { display: grid; justify-items: start; gap: var(--space-m); max-inline-size: var(--measure-prose); }
   .post-head :global(figure) { justify-self: stretch; }
   .crumbs ol { display: flex; flex-wrap: wrap; gap: var(--space-3xs) var(--space-2xs); margin: 0; padding: 0; color: var(--text-muted); }
-  .crumbs li { display: flex; gap: var(--space-2xs); min-inline-size: 0; }
+  .crumbs li { display: flex; align-items: center; gap: var(--space-2xs); min-inline-size: 0; }
+  .crumbs a { padding-block: var(--space-3xs); }
   .crumbs li + li::before { content: "/"; color: var(--text-muted); }
   .crumbs [aria-current] { overflow-wrap: anywhere; }
   .crumbs a:active { color: var(--text-link-active); }
@@ -129,19 +130,27 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
   .recommendations li a { display: block; padding-block: var(--space-3xs); text-decoration: none; }
   .post-layout a:not(:global(.action)):focus-visible { outline: 2px solid var(--text-link); outline-offset: 3px; }
   .post-layout a:not(:global(.action)):active { color: var(--text-link-active); }
-  .sidebar-cta { display: grid; gap: var(--space-m); padding: var(--space-m); border-radius: var(--radius-lg); background: var(--surface-tint); }
+  .sidebar-cta { display: grid; gap: var(--space-s); padding: var(--space-m); border-radius: var(--radius-lg); background: var(--surface-tint); }
+  .sidebar-cta-text { margin: 0; color: var(--text-heading); font-size: 1.0625rem; font-weight: var(--font-weight-semibold); line-height: 1.45; letter-spacing: -0.01em; text-wrap: pretty; overflow-wrap: break-word; }
+  .sidebar-cta :global(.action) { inline-size: 100%; font-size: var(--typography-body-s-size); }
   .recommendations li + li { border-block-start: 1px solid var(--border-hairline); padding-block-start: var(--space-xs); }
   @media (hover: hover) and (pointer: fine) { .post-layout a:not(:global(.action)):hover { text-decoration: underline; text-underline-offset: .2em; } }
-  .sidebar-cta { display: none; --action-padding-inline: var(--space-2xs); }
+  .sidebar-cta { display: none; --action-padding-inline: var(--space-s); }
   @media (min-width: 56rem) {
     .post-layout { grid-template-columns: 10.625rem minmax(0, 1fr); column-gap: 2.5rem; row-gap: var(--space-m); }
     .recommendations { grid-column: 2; }
     .sticky { position: sticky; inset-block-start: 7rem; padding-block: var(--space-3xs); }
+    /* A long outline scrolls inside its column; the share button stays in view. */
+    /* A panel taller than the window scrolls inside its column, so the share button and the CTA stay in view. */
+    .sticky { max-block-size: calc(100dvb - 7rem - var(--space-m)); }
+    .toc-column .sticky { grid-template-rows: minmax(0, 1fr) auto; }
+    .recommendations .sticky { grid-template-rows: auto minmax(0, 1fr); }
+    .toc-column :global([data-post-toc]), [data-related-posts] { min-block-size: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding-inline-end: var(--space-3xs); padding-block-end: var(--space-3xs); }
   }
-  .recommendations .sticky[data-page-scroll] { position: static; }
   @media (min-width: 80rem) {
     .post-content { font-size: clamp(1.125rem, 0.125rem + 1.25vw, 1.25rem); }
-    .post-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 47.5rem) minmax(0, 1fr); column-gap: 1.75rem; }
+    /* The CTA rail gets a fixed width that fits its button on one line; the prose gives up the difference. */
+    .post-layout { grid-template-columns: 11.25rem minmax(0, 47.5rem) 16.5rem; column-gap: var(--space-l); }
     .recommendations { grid-column: 3; }
     .sidebar-cta { display: grid; }
     [data-related-posts][inert] { opacity: 0; pointer-events: none; }
@@ -153,19 +162,6 @@ const faq = (post.faq ?? []).flatMap(({ _key, q, a }) => q && a?.length ? [{ _ty
 </style>
 
 <script>
-  // Tall recommendations use page scroll; article navigation stays sticky.
-  const panels = [...document.querySelectorAll<HTMLElement>('.post-layout .recommendations .sticky')];
-  const fitPanels = () => {
-    for (const panel of panels) {
-      const offset = parseFloat(getComputedStyle(panel).insetBlockStart) || 0;
-      panel.toggleAttribute('data-page-scroll', panel.offsetHeight > innerHeight - offset - 16);
-    }
-  };
-  const panelObserver = new ResizeObserver(fitPanels);
-  panels.forEach((panel) => panelObserver.observe(panel));
-  addEventListener('resize', fitPanels, { passive: true });
-  fitPanels();
-
   const related = document.querySelector<HTMLElement>('[data-related-posts]');
   const content = document.querySelector<HTMLElement>('.post-content');
   if (related && content) {
