@@ -68,7 +68,23 @@
     }
   }
 
-  section[id] { scroll-margin-block-start: var(--anchor-header-size); }
+  section[id], main[id] { scroll-margin-block-start: var(--anchor-header-size); }
+
+  .skip-link {
+    position: fixed;
+    inset-block-start: var(--space-2xs);
+    inset-inline-start: var(--space-2xs);
+    z-index: 10;
+    padding: var(--space-2xs) var(--space-s);
+    border-radius: var(--radius-pill);
+    background: var(--surface-accent);
+    color: var(--text-on-accent);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    translate: 0 calc(-100% - var(--space-s));
+  }
+  .skip-link:focus-visible { translate: none; outline: 3px solid var(--border-focus); outline-offset: 3px; }
+  .skip-link:active { background: var(--text-link-active); }
 
   body {
     background: var(--surface-page);

@@ -11,7 +11,7 @@ const { language, pageNumber, pageCount, posts } = route;
 const pl = language === 'pl';
 const pageHref = (n: number) => localHref(language, blogPagePath(n));
 ---
-<main>
+<main id="tresc">
   <header class="content-grid section blog-head">
     <div class="inner">
       <h1>Blog</h1>
